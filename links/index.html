@@ -10,8 +10,10 @@
         /* Estilos base: Fundo Escuro */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #1a1a1a; /* Fundo muito escuro */
-            color: #f0f0f0; /* Cor do texto clara */
+            background-color: #1a1a1a;
+            /* Fundo muito escuro */
+            color: #f0f0f0;
+            /* Cor do texto clara */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,12 +27,14 @@
         /* Container principal */
         .container {
             width: 100%;
-            max-width: 960px; /* Largura máxima, para não ficar exagerado em monitores grandes */
+            max-width: 960px;
+            /* Largura máxima, para não ficar exagerado em monitores grandes */
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 50px; /* Espaço para a foto/nome no topo */
+            padding-top: 50px;
+            /* Espaço para a foto/nome no topo */
         }
 
         /* Foto de Perfil (Manter o teu estilo) */
@@ -39,7 +43,8 @@
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #3b82f6; /* Borda da cor que usas */
+            border: 4px solid #3b82f6;
+            /* Borda da cor que usas */
             margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
@@ -59,7 +64,8 @@
 
         .social-links {
             display: flex;
-            flex-wrap: wrap; /* Para quebrarem em mobile */
+            flex-wrap: wrap;
+            /* Para quebrarem em mobile */
             gap: 15px;
             justify-content: center;
             margin-top: 30px;
@@ -71,13 +77,16 @@
             width: 60px;
             height: 60px;
             background-color: transparent;
-            border: 2px solid #f0f0f0; /* Borda branca/clara inicial */
-            border-radius: 8px; /* Cantos ligeiramente arredondados */
+            border: 2px solid #f0f0f0;
+            /* Borda branca/clara inicial */
+            border-radius: 8px;
+            /* Cantos ligeiramente arredondados */
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição suave */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            /* Transição suave */
             position: relative;
             overflow: hidden;
             text-decoration: none;
@@ -86,16 +95,20 @@
         /* Icone dentro do quadrado */
         .social-link-item i {
             font-size: 24px;
-            color: #f0f0f0; /* Cor do ícone inicial (clara) */
-            z-index: 2; /* Para o ícone ficar por cima do efeito de fundo */
-            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição suave */
+            color: #f0f0f0;
+            /* Cor do ícone inicial (clara) */
+            z-index: 2;
+            /* Para o ícone ficar por cima do efeito de fundo */
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            /* Transição suave */
         }
 
         /* Efeito Hover (Cor Contrária - Estilo Lo-Fi Girl) */
         .social-link-item:hover {
-            border-color: #1a1a1a; /* Borda fica da cor do fundo do corpo (escura) */
+            border-color: #1a1a1a;
+            /* Borda fica da cor do fundo do corpo (escura) */
         }
-        
+
         /* A cor de fundo "contrária" (clara) vai ser um overlay */
         .social-link-item::before {
             content: '';
@@ -104,41 +117,48 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #f0f0f0; /* Cor contrária ao fundo (claro) */
-            transform: scale(0); /* Começa invisível */
+            background-color: #f0f0f0;
+            /* Cor contrária ao fundo (claro) */
+            transform: scale(0);
+            /* Começa invisível */
             border-radius: 6px;
             transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             z-index: 1;
         }
 
         .social-link-item:hover::before {
-            transform: scale(1); /* Expande e cobre o quadrado */
+            transform: scale(1);
+            /* Expande e cobre o quadrado */
         }
-        
+
         /* O ÍCONE deve mudar para a cor escura (contrária ao overlay claro) no hover */
         .social-link-item:hover i {
-            color: #1a1a1a; /* Cor contrária ao overlay (escura) */
+            color: #1a1a1a;
+            /* Cor contrária ao overlay (escura) */
             transform: scale(1.1);
         }
-        
+
         /* --- Links de Ações Principais (Botões maiores) --- */
         .main-links {
             width: 100%;
-            max-width: 400px; /* Limitar largura dos botões longos */
+            max-width: 400px;
+            /* Limitar largura dos botões longos */
             margin-top: 40px;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-        
+
         .main-link-btn {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             padding: 14px 25px;
-            background-color: #3b82f6; /* Cor de destaque */
-            color: #1a1a1a; /* Texto escuro */
+            background-color: #3b82f6;
+            /* Cor de destaque */
+            color: #1a1a1a;
+            /* Texto escuro */
             text-decoration: none;
             border-radius: 10px;
             font-weight: 600;
@@ -148,7 +168,8 @@
         }
 
         .main-link-btn:hover {
-            background-color: #60a5fa; /* Cor de destaque mais clara */
+            background-color: #60a5fa;
+            /* Cor de destaque mais clara */
             transform: translateY(-3px) scale(1.01);
             box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
         }
@@ -271,23 +292,25 @@
                 <i class="fab fa-github"></i>
             </a>
 
-            <a href="youtube" target="_blank" class="social-link-item" title="Instagram">
-                <i class="fab fa-youtube"></i>
+            <a href="../contacto" target="_blank" class="social-link-item" title="Instagram">
+                <i class="fa-solid fa-envelope"></i>
             </a>
         </div>
 
         <footer style="margin-top: 40px; font-size: 0.8em; color: #a0a0a0; text-align: center;">
-            <p>© & ℗ 2024 - <span class="year"></span> Tomás Mota Studios Unipessoal, Lda. Todos os direitos reservados.</p>
+            <p>© & ℗ 2024 - <span class="year"></span> Tomás Mota Studios Unipessoal, Lda. Todos os direitos reservados.
+            </p>
         </footer>
 
     </div>
 
-        <script>
+    <script>
         // Dynamic year
         document.querySelectorAll(".year").forEach(span => {
             span.textContent = new Date().getFullYear();
         });
-        </script>
+    </script>
 
 </body>
+
 </html>
