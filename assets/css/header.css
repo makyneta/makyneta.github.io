@@ -5,7 +5,7 @@ header {
   right: 0;
   z-index: 999;
   background-color: rgba(15, 22, 32, 0.356); /* mesmo fundo */
-  backdrop-filter: blur(30px);              /* mesmo blur */
+  backdrop-filter: blur(20px);              /* mesmo blur */
   color: var(--c-white);
 }
 
@@ -59,7 +59,7 @@ header > a:hover:first-child {
 .dropdown-content {
   /* Não adicione display: none aqui */
   position: absolute;
-  background-color: rgba(15, 22, 32, 0.103) !important;
+  background-color: rgba(55, 55, 55, 0.853) !important;
   backdrop-filter: blur(10px) !important;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2) !important;
@@ -75,6 +75,7 @@ header > a:hover:first-child {
 
 .dropdown-content a {
   color: var(--c-white);
+  backdrop-filter: blur(10px) !important;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -83,13 +84,14 @@ header > a:hover:first-child {
 
 .dropdown-content a:hover {
   background-color: rgba(15, 22, 32, 0.45);
+  backdrop-filter: blur(10px) !important;
 }
 
 /* =====================
  * Menu Mobile Fullscreen
  * ===================== */
 #mobile-menu {
-  background-color: rgba(15, 22, 32, 0.712); /* mesmo fundo */
+  background-color: rgba(18, 22, 28, 0.712); /* mesmo fundo */
   backdrop-filter: blur(10px);              /* mesmo blur */
   position: fixed;
   top: 0;
@@ -119,7 +121,7 @@ header > a:hover:first-child {
  */
 #mobile-menu a,
 .mobile-dropdown-btn {
-  background-color: rgba(15, 22, 32, 0.349);
+  background-color: rgba(18, 21, 24, 0.349);
   backdrop-filter: blur(10px);
   color: var(--c-white);
   margin-bottom: 0.5rem;
@@ -153,7 +155,7 @@ header > a:hover:first-child {
 
 /* Links dentro do dropdown: mesmo estilo dos outros */
 .mobile-dropdown-content a {
-  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
+  background-color: rgba(32, 36, 41, 0.349); /* mesmo fundo */
   backdrop-filter: blur(10px);              /* mesmo blur */
   color: var(--c-white);
   padding: 0.75rem 1rem;

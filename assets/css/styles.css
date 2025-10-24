@@ -27,29 +27,36 @@ body {
 /* Background Animado do Site */
 /* ===================== */
 body {
-  background: 
-    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.81), transparent 50%),
-    radial-gradient(circle at 85% 80%,  #f7f7f7a9, transparent 50%),
-    linear-gradient(180deg, #afb1b5 0%, #8d8e92 100%);
-  background-size: 200% 200%;
-  background-position: 0% 0%;
-  color: var(--c-white);
-  min-height: 100vh;
-  animation: moveBackground 30s ease infinite;
+  background-color: #0d0d0d; /* fundo base escuro */
+  background-image: 
+    radial-gradient(circle at center, rgba(255,255,255,0.03) 1px, transparent 1px),
+    radial-gradient(circle at center, rgba(255,255,255,0.02) 2px, transparent 2px),
+    radial-gradient(circle at center, rgba(255,255,255,0.01) 4px, transparent 4px);
+  background-size: 20px 20px, 40px 40px, 80px 80px; /* círculos concêntricos */
+  background-position: center;
+  background-repeat: repeat;
+  color: white; /* texto padrão branco para contraste */
 }
 
-/* Animação suave do background */
-@keyframes moveBackground {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+/* Opcional: animação leve de rotação do vinil */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at center, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.05;
+  z-index: 0;
+  animation: spin 300s linear infinite; /* rotação lenta */
+    /* ADICIONE ESTA LINHA */
+  pointer-events: none; /* permite clicar em tudo acima */
 }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 
 /*
  * =====================
@@ -58,7 +65,7 @@ body {
  */
 
  h2 {
-  color: var(--c-gray);
+  color: var(--c-white2);
   font-size: 2.2rem;
 }
 
@@ -111,7 +118,7 @@ body {
 }
 
 .card h3 {
-  color: var(--c-gray);
+  color: var(--c-white);
 }
 
 /* Alteração específica: descrição dos certificados */
