@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Me An Angel | Tomás Mota</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/release.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/release.js"></script>
+  <script src="../assets/js/script.js"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+  <main class="flex-grow">
+
+    <!-- Header do site -->
+    <div id="header"></div>
+
+    <!-- Página do Álbum -->
+    <section class="album-page container mx-auto px-4 pt-8 pb-8"> <!-- espaçamento topo/baixo -->
+
+      <!-- Título do álbum -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-white">Send Me An Angel</h1>
+        <p class="text-gray-300 mt-2">21.11.2025</p>
+      </div>
+
+      <!-- Capa e detalhes -->
+      <div class="flex flex-col md:flex-row md:gap-10 justify-center">
+
+        <!-- LADO ESQUERDO: Capa + Ícones -->
+        <div class="w-full md:w-1/3 mb-6 md:mb-0 text-center md:sticky md:top-20 self-start">
+          <div class="relative group cursor-pointer inline-block"
+            data-video="../src/vid/Send Me An Angel by Tomás Mota.mp4" id="album-cover">
+            <img src="/src/img/1010022046618.jpg" alt="Disco 1"
+              class="w-full rounded-2xl shadow-lg transition-transform transform group-hover:scale-105">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
+              <span class="text-white font-bold text-lg">PLAY</span>
+            </div>
+          </div>
+
+          <!-- Ícones das plataformas -->
+          <div class="flex justify-center gap-6 mt-4">
+            <a href="https://lnkfi.re/send-me-an-angel/spotify" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-green-500 transition">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify"
+                class="w-5 h-5">
+            </a>
+
+            <a href="https://lnkfi.re/send-me-an-angel/apple-music" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-gray-800 transition">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applemusic.svg" alt="Apple Music"
+                class="w-5 h-5">
+            </a>
+
+            <a href="https://lnkfi.re/send-me-an-angel/youtube-music" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-red-500 transition">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubemusic.svg"
+                alt="YouTube Music" class="w-5 h-5">
+            </a>
+
+            <a href="https://lnkfi.re/send-me-an-angel" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-purple-500 transition">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkfire.svg"
+                alt="Outras Plataformas" class="w-5 h-5">
+            </a>
+          </div>
+        </div>
+
+        <!-- Modal do YouTube -->
+        <div id="yt-modal"
+          class="fixed inset-0 bg-black/80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity z-50">
+          <div class="relative w-[90%] max-w-3xl">
+            <button id="close-modal" class="absolute top-2 right-2 text-white text-2xl font-bold z-50">&times;</button>
+            <iframe id="yt-video" class="w-full h-64 sm:h-96 rounded-xl" src="" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+        <!-- LADO DIREITO: Texto e Faixas -->
+        <div class="w-full md:w-2/3 text-white md:max-h-[80vh] md:overflow-y-auto md:pr-4">
+          <!-- <h2 class="text-2xl font-semibold mb-4">Sobre o Álbum</h2>
+          <p class="text-gray-300 mb-6">
+            Aqui podes colocar a descrição do álbum, curiosidades, processo de criação, ou qualquer outra informação que
+            queiras partilhar.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo dolor quis felis aliquam, non
+            blandit arcu commodo.
+            Integer a sem ac libero porta pulvinar. Donec porttitor euismod nulla, a malesuada nisl luctus eget.
+          </p> -->
+
+          <!-- <h2 class="text-2xl font-semibold mb-4">Faixas</h2>
+        <ol class="list-decimal list-inside text-gray-200 space-y-2">
+          <li>Faixa 1 – 3:45</li>
+          <li>Faixa 2 – 4:12</li>
+          <li>Faixa 3 – 5:01</li>
+          <li>Faixa 4 – 2:58</li>
+        </ol> -->
+
+          <h2 class="text-2xl font-semibold mb-4">LETRA | LYRICS</h2>
+          <p class="list-decimal list-inside text-gray-200 space-y-2">
+            Wise man said just walk this way <br>
+            To the dawn of the light <br>
+            Wind will blow into your face <br>
+            As the years pass you by <br>
+            Hear this voice from deep inside <br>
+            It's the call of your heart <br>
+            Close your eyes and you will find <br>
+            Passage out of the dark <br> <br>
+            Here I am (Here I am) <br>
+            Will you send me an angel? <br>
+            Here I am (Here I am) <br>
+            In the land of the morning star <br> <br>
+            Wise man said just find your place <br>
+            In the eye of the storm <br>
+            Seek the roses along the way <br>
+            Just beware of the thorns <br> <br>
+            Here I am (Here I am) <br>
+            Will you send me an angel? <br>
+            Here I am (Here I am) <br>
+            In the land of the morning star <br> <br>
+            Wise man said just raise your hand <br>
+            And reach out for the spell <br>
+            Find the door to the promised land <br>
+            Just believe in yourself <br>
+            Hear this voice from deep inside <br>
+            It's the call of your heart <br>
+            Close your eyes and you will find <br>
+            The way out of the dark <br> <br>
+            Here I am (Here I am) <br>
+            Will you send me an angel? <br>
+            Here I am (Here I am) <br>
+            In the land of the morning star (Here I am) <br>
+            Will you send me an angel? <br>
+            Here I am (Here I am) <br>
+            In the land of the morning star (Here I am) <br> <br>
+            Will you send me an angel? <br>
+            Here I am (Here I am) <br>
+            In the land of the morning star (Here I am) <br>
+            Will you send me an angel? <br>
+            Here I am (Here I am) <br>
+            In the land of the morning star
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Botão para voltar -->
+      <!-- <div class="text-center mt-12">
+      <a href="../musica.html" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition">
+        ← Voltar à Discografia
+      </a>
+    </div> -->
+
+    </section>
+  </main>
+
+  <!-- Footer do site -->
+  <div id="footer"></div>
+
+</body>
+
+</html>
