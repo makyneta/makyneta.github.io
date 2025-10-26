@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="icon" href="/src/img/favicon.jpg" type="image/jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferramentas | Tomás Mota</title>
+  <title>Ferramentas | Admin | Tomás Mota</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script src="/assets/js/script.js"></script>
@@ -14,7 +14,7 @@
     <main class="flex-grow">
   
   <!-- Header global -->
-  <div id="header"></div>
+  <!-- <div id="header"></div> -->
 
   <main class="container mx-auto px-6 py-20">
     <div class="text-center mb-16">
@@ -41,6 +41,14 @@
 
     <!-- Grid de ferramentas -->
     <section id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></section>
+
+      <!-- Botão voltar -->
+    <div class="text-center mt-12">
+      <a href="/admin/dashboard" class="px-6 py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-gray-300 font-medium transition">
+        ← Voltar ao Painel
+      </a>
+    </div>
+
   </main>
   </main>
 
@@ -48,6 +56,10 @@
   <div id="footer"></div>
 
 <script>
+        // Proteção simples
+    const isLoggedIn = sessionStorage.getItem('isAdmin') === 'true';
+    if (!isLoggedIn) window.location.href = '/admin';
+
   const grid = document.getElementById('grid');
   const search = document.getElementById('search');
   const filter = document.getElementById('filterCategory');
