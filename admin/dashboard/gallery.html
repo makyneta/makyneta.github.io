@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/src/img/favicon.jpg" type="image/jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria | Admin | Tomás Mota</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/script.js"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <main class="flex-grow">
+
+        <!-- ===================== -->
+        <!-- Header / Navegação -->
+        <!-- ===================== -->
+        <!-- <div id="header"></div> -->
+
+
+        <!-- ===================== -->
+        <!-- Photoshoot Gallery -->
+        <!-- ===================== -->
+        <section id="photoshoot" class="px-6 py-12">
+            <!-- <h2 class="text-3xl font-bold mb-8 text-center">TMPP</h2> -->
+
+            <div class="grid grid-cols-3 lg:grid-cols-7 gap-4">
+
+                <!-- Fotos -->
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022021819.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022024854.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+                
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022029009.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022023743.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022036936.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022046618.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022036339.png"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022031105.png"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/511177532_1367998734500197_8645148948487050866_n.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/510801241_1367998861166851_5484017021674793722_n.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022025296.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                    <img src="../../src/img/1010022031035.jpg"
+                        class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                </div>
+
+                    <!-- <div class="overflow-hidden rounded-xl shadow-lg flex items-center justify-center bg-black">
+                        <img src="../../src/img/1010022021475.jpg"
+                            class="w-full object-contain cursor-pointer hover:scale-105 transition-transform duration-500">
+                    </div> -->
+
+            </div>
+
+      <!-- Botão voltar -->
+    <div class="text-center mt-12">
+      <a href="/admin/dashboard" class="px-6 py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-gray-300 font-medium transition">
+        ← Voltar ao Painel
+      </a>
+    </div>
+        </section>
+    </main>
+
+    <!-- ===================== -->
+    <!-- Footer -->
+    <!-- ===================== -->
+    <!-- Footer Desktop -->
+    <div id="footer"></div>
+
+<script>
+        // Proteção simples
+    const isLoggedIn = sessionStorage.getItem('isAdmin') === 'true';
+    if (!isLoggedIn) window.location.href = '/admin';
+</script>
+</body>
+
+</html>
