@@ -1,12 +1,12 @@
 //
 // Favicon
 //
-  fetch("/includes/favicon.html")
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("favicon").innerHTML = html;
-    })
-    .catch(err => console.error('Erro ao carregar favicon:', err));
+  // fetch("/includes/favicon.html")
+  //   .then(response => response.text())
+  //   .then(html => {
+  //     document.getElementById("favicon").innerHTML = html;
+  //   })
+  //   .catch(err => console.error('Erro ao carregar favicon:', err));
 
 //
 // Footer
