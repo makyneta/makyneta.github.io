@@ -37,7 +37,7 @@
   </style>
 </head>
 
-<body class="min-h-screen flex flex-col bg-slate-900 text-slate-100">
+<body class="min-h-screen flex flex-col text-slate-100">
   <main class="flex-grow">
 
     <!-- Preloader Profissional -->
@@ -61,19 +61,22 @@
       <!-- ===================== -->
       <!-- Bloco de vídeo + botão de download (RESPONSIVO) -->
       <!-- ===================== -->
-      <div class="card p-6 md:p-8 mb-8 bg-slate-800 rounded-lg shadow-lg">
+      <div class="card p-6 md:p-8 bg-slate-800 rounded-lg shadow-lg">
         <!-- <h2 class="text-2xl font-bold mb-4">🎬 Vídeo</h2> -->
 
         <!-- Video wrapper responsivo (16:9) -->
         <div class="video-wrapper mb-4">
           <!-- Substitui SRC_DO_VIDEO pelo caminho do teu ficheiro .mp4 (ou por um link público)
                Ex.: src="src/videos/meu_video.mp4"  -->
-          <video controls playsinline preload="metadata" aria-label="Vídeo de apresentação">
-            <source src="../vid/como-baixar-instalar-e-usar-a-fonte-holbeader-credit-no-premiere-pro.mp4" type="video/mp4">
-            <!-- Alternativa para navegadores que não suportam <video> -->
-            O teu navegador não suporta o elemento de vídeo. Podes visualizar o ficheiro diretamente aqui:
-            <a href="../vid/como-baixar-instalar-e-usar-a-fonte-holbeader-credit-no-premiere-pro.mp4" target="_blank" rel="noopener noreferrer">Abrir vídeo</a>
-          </video>
+
+          <iframe
+          src="https://www.youtube.com/embed/8pHCuVGmC1o"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+          </iframe>
         </div>
 
         <!-- Botão de download - Google Drive -->
