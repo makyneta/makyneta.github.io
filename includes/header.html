@@ -7,17 +7,22 @@
 
     <!-- Navegação Desktop -->
     <nav class="hidden md:flex space-x-3">
-        <a href="/sobre" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-            style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-            Sobre
+        <a href="/sobre" class="px-4 py-2 rounded-lg text-white transition 
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        Sobre
         </a>
 
         <div class="dropdown group relative">
-            <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                Programação <span class="arrow-down">▾</span>
+            <a href="#" class="px-4 py-2 rounded-lg text-white transition dropdown-toggle
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+            Programação <span class="arrow-down">▾</span>
             </a>
-            <div class="dropdown-content absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+            <div
+                class="dropdown-content absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
                 <a href="/programacao/destaques" class="block px-4 py-2 text-white hover:underline">Destaques
                 </a>
                 <a href="/programacao/frontend" class="block px-4 py-2 text-white hover:underline">Front-end
@@ -28,9 +33,11 @@
         </div>
 
         <div class="dropdown group relative">
-            <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle"
-                style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-                Fotografia <span class="arrow-down">▾</span>
+            <a href="#" class="px-4 py-2 rounded-lg text-white transition hover:no-underline dropdown-toggle
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+            Fotografia <span class="arrow-down">▾</span>
             </a>
             <div
                 class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
@@ -40,19 +47,23 @@
             </div>
         </div>
 
-        <a href="/cv" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-            style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-            CV
+        <a href="/cv" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        CV
         </a>
 
-        <a href="/contacto" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-            style="background-color: rgba(15, 22, 32, 0.103); backdrop-filter: blur(10px);">
-            Contacto
+        <a href="/contacto" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        Contacto
         </a>
 
-        <a href="/en" class="px-4 py-2 rounded-lg text-white transition hover:no-underline"
-            style="background-color: rgba(15, 22, 32, 0)!important; backdrop-filter: blur(10px);">
-            <img src="https://flagcdn.com/gb.svg" alt="GN" width="32" height="24" style="border-radius: 4px;">
+        <a href="/en" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */ bg-white/[0]"">
+            <img src=" https://flagcdn.com/gb.svg" alt="GN" width="32" height="24" style="border-radius: 4px;">
         </a>
     </nav>
 
