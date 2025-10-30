@@ -91,7 +91,7 @@ header > a:hover:first-child {
  * Menu Mobile Fullscreen
  * ===================== */
 #mobile-menu {
-  background-color: rgba(18, 22, 28, 0.712); /* mesmo fundo */
+  background-color: rgba(85, 85, 85, 0.712); /* mesmo fundo */
   backdrop-filter: blur(10px);              /* mesmo blur */
   position: fixed;
   top: 0;
@@ -121,7 +121,7 @@ header > a:hover:first-child {
  */
 #mobile-menu a,
 .mobile-dropdown-btn {
-  background-color: rgba(18, 21, 24, 0.349);
+  background-color: rgba(0, 0, 0, 0.519);
   backdrop-filter: blur(10px);
   color: var(--c-white);
   margin-bottom: 0.5rem;
