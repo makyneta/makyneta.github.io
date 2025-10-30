@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        /* * ESTILOS DE HOVER (DEGRADÊ MAIS ESCURO) 
+ * O !important garante que sobrescreve o estilo inline no botão. */
+        #lang-pt:hover {
+            background-image: linear-gradient(to right, #004F3E, #9C0C23) !important;
+            /* Verde e Vermelho mais escuros */
+        }
+
+        #lang-en:hover {
+            background-image: linear-gradient(to right, #011B55, #9C0C23, #011B55) !important;
+            /* Azul e Vermelho mais escuros */
+        }
+
+        #lang-es:hover {
+            background-image: linear-gradient(to right, #800C12, #A07A00, #800C12) !important;
+            /* Vermelho e Amarelo Dourado mais escuros */
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/fotografia.js"></script>
     <script src="/assets/js/certificados.js"></script>
@@ -34,11 +52,10 @@
         <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">A carregar...</p>
     </div>
 
-<div id="language-popup"
-        class="fixed inset-0 flex items-center justify-center 
+    <div id="language-popup" class="fixed inset-0 flex items-center justify-center 
                bg-black/75 backdrop-blur-sm
                opacity-0 pointer-events-none transition-opacity duration-500 z-[99999]">
-        
+
         <div
             class="bg-gray-900 border border-blue-500/50 rounded-2xl shadow-2xl w-11/12 max-w-sm p-6 sm:p-8 relative text-center animate-fadeIn">
 
@@ -50,17 +67,26 @@
                 Please select your preferred language.
             </p> -->
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col space-y-4">
                 <button id="lang-pt"
-                    class="w-full px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg transition flex items-center justify-center">
+                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
+                    style="background-image: linear-gradient(to right, #00664F, #C8102E);">
                     🇵🇹 Português (PT)
                 </button>
+
                 <button id="lang-en"
-                    class="w-full px-6 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 text-white font-semibold shadow-lg transition flex items-center justify-center">
+                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
+                    style="background-image: linear-gradient(to right, #012169, #C8102E, #012169);">
                     🇬🇧 English (EN)
                 </button>
+
+                <button id="lang-es"
+                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
+                    style="background-image: linear-gradient(to right, #AA151B, #CC9900, #AA151B);">
+                    🇪🇸 Español (ES)
+                </button>
             </div>
-            
+
             <!-- <p class="mt-4 text-xs text-gray-500">
                 A sua escolha será lembrada.
             </p> -->
@@ -150,11 +176,11 @@
             </h1>
             <!-- Descrição / Subtítulo secundário -->
             <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                Eu sou <span class="font-semibold text-[var(--c-white)]">desenvolvedor fullstack</span>, 
-                <span class="font-semibold text-[var(--c-white)]">fotógrafo</span>, 
+                Eu sou <span class="font-semibold text-[var(--c-white)]">desenvolvedor fullstack</span>,
+                <span class="font-semibold text-[var(--c-white)]">fotógrafo</span>,
                 <span class="font-semibold text-[var(--c-white)]">músico</span> e
-                <span class="font-semibold text-[var(--c-white)]">técnico de TI</span> 
-                — Transformo ideias em experiências digitais. 
+                <span class="font-semibold text-[var(--c-white)]">técnico de TI</span>
+                — Transformo ideias em experiências digitais.
                 Contruo websites modernos e apps com interfaces organizadas e engajadas.
             </p>
 
@@ -464,4 +490,5 @@
     <div id="footer"></div>
 
 </body>
+
 </html>
