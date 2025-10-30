@@ -103,52 +103,52 @@ window.addEventListener("load", () => {
     }, 700);
 });
 
-// ============================
-// Cookie Banner Logic
-// ============================
-document.addEventListener("DOMContentLoaded", () => {
-    const cookieBanner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
-    const declineBtn = document.getElementById("decline-cookies");
-    const closeBtn = document.getElementById("close-cookies");
+// // ============================
+// // Cookie Banner Logic
+// // ============================
+// document.addEventListener("DOMContentLoaded", () => {
+//     const cookieBanner = document.getElementById("cookie-banner");
+//     const acceptBtn = document.getElementById("accept-cookies");
+//     const declineBtn = document.getElementById("decline-cookies");
+//     const closeBtn = document.getElementById("close-cookies");
 
-    // Função para mostrar o banner com fade-in
-    const showBanner = () => {
-        cookieBanner.classList.remove("opacity-0", "pointer-events-none");
-        cookieBanner.classList.add("opacity-100");
-    };
+//     // Função para mostrar o banner com fade-in
+//     const showBanner = () => {
+//         cookieBanner.classList.remove("opacity-0", "pointer-events-none");
+//         cookieBanner.classList.add("opacity-100");
+//     };
 
-    // Função para esconder o banner com fade-out
-    const hideBanner = () => {
-        cookieBanner.classList.add("opacity-0", "pointer-events-none");
-        cookieBanner.classList.remove("opacity-100");
-    };
+//     // Função para esconder o banner com fade-out
+//     const hideBanner = () => {
+//         cookieBanner.classList.add("opacity-0", "pointer-events-none");
+//         cookieBanner.classList.remove("opacity-100");
+//     };
 
-    // Mostrar banner se não houver consentimento
-    if (!localStorage.getItem("cookieConsent") && cookieBanner) {
-        setTimeout(showBanner, 300); // pequeno delay para animação suave
-    }
+//     // Mostrar banner se não houver consentimento
+//     if (!localStorage.getItem("cookieConsent") && cookieBanner) {
+//         setTimeout(showBanner, 300); // pequeno delay para animação suave
+//     }
 
-    // Aceitar cookies
-    if (acceptBtn) {
-        acceptBtn.addEventListener("click", () => {
-            localStorage.setItem("cookieConsent", "accepted");
-            hideBanner();
-        });
-    }
+//     // Aceitar cookies
+//     if (acceptBtn) {
+//         acceptBtn.addEventListener("click", () => {
+//             localStorage.setItem("cookieConsent", "accepted");
+//             hideBanner();
+//         });
+//     }
 
-    // Recusar cookies
-    if (declineBtn) {
-        declineBtn.addEventListener("click", () => {
-            localStorage.setItem("cookieConsent", "declined");
-            hideBanner();
-        });
-    }
+//     // Recusar cookies
+//     if (declineBtn) {
+//         declineBtn.addEventListener("click", () => {
+//             localStorage.setItem("cookieConsent", "declined");
+//             hideBanner();
+//         });
+//     }
 
-    // Fechar temporariamente
-    if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            hideBanner(); // apenas esconde, sem gravar no localStorage
-        });
-    }
-});
+//     // Fechar temporariamente
+//     if (closeBtn) {
+//         closeBtn.addEventListener("click", () => {
+//             hideBanner(); // apenas esconde, sem gravar no localStorage
+//         });
+//     }
+// });
