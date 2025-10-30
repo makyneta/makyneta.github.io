@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/src/img/favicon.jpg" type="image/jpg" />
   <title>Blog | Tomás Mota</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/blog.css">
-  <script src="assets/js/script.js"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/blog.css">
+  <script src="../assets/js/script.js"></script>
 </head>
 
 <body class="min-h-screen flex flex-col bg-neutral-950 text-gray-100">
   <!-- Header global -->
-  <div id="header"></div>
+  <div id="headeres"></div>
 
   <main class="flex-grow container mx-auto px-6 py-20">
     <div class="text-center mb-16">
       <h1 class="text-4xl font-extrabold tracking-tight text-white">Blog</h1>
       <p class="mt-3 text-gray-400 max-w-2xl mx-auto">
-        Artigos, reflexões e atualizações sobre os meus projetos, música e tecnologia.
+        Artículos, reflexiones y novedades sobre mis proyectos, música y tecnología.
       </p>
     </div>
 
@@ -28,15 +28,15 @@
   </main>
 
   <!-- Footer global -->
-  <div id="footer"></div>
+  <div id="footeres"></div>
 
   <script>
     const posts = [
       {
-        title: "Obrigado u13",
+        title: "Gracias u13",
         date: "2025-06-29",
-        desc: "Carta de agradeciemnto aos u13 de ACM.",
-        link: "/post/obrigado-u13",
+        desc: "Carta de agradecimiento a U13 de la ACM.",
+        link: "/post/gracias-u13",
         image: "/src/img/510801241_1367998861166851_5484017021674793722_n.jpg"
       },
     ];
@@ -48,9 +48,9 @@
         <img src="${p.image}" alt="${p.title}" class="w-full h-48 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-white mb-2">${p.title}</h3>
-          <p class="text-gray-400 text-sm mb-3">${new Date(p.date).toLocaleDateString("pt-PT", {year: 'numeric', month: 'long', day: 'numeric'})}</p>
+          <p class="text-gray-400 text-sm mb-3">${new Date(p.date).toLocaleDateString("es-ES", {year: 'numeric', month: 'long', day: 'numeric'})}</p>
           <p class="text-gray-300 text-sm mb-4">${p.desc}</p>
-          <a href="${p.link}" class="text-blue-500 hover:text-blue-400 font-medium text-sm">Ler mais →</a>
+          <a href="${p.link}" class="text-blue-500 hover:text-blue-400 font-medium text-sm">Leer más →</a>
         </div>
       </article>
     `).join('');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en-GB">
 
 <head>
     <!-- Metadados da Página -->
@@ -9,32 +9,14 @@
     <title>Tomás Mota</title>
 
     <!-- CSS & JavaScript -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <style>
-        /* * ESTILOS DE HOVER (DEGRADÊ MAIS ESCURO) 
- * O !important garante que sobrescreve o estilo inline no botão. */
-        #lang-pt:hover {
-            background-image: linear-gradient(to right, #004F3E, #9C0C23) !important;
-            /* Verde e Vermelho mais escuros */
-        }
-
-        #lang-en:hover {
-            background-image: linear-gradient(to right, #011B55, #9C0C23, #011B55) !important;
-            /* Azul e Vermelho mais escuros */
-        }
-
-        #lang-es:hover {
-            background-image: linear-gradient(to right, #800C12, #A07A00, #800C12) !important;
-            /* Vermelho e Amarelo Dourado mais escuros */
-        }
-    </style>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/fotografia.js"></script>
-    <script src="/assets/js/certificados.js"></script>
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/home.js"></script>
+    <script src="../assets/js/fotografia.js"></script>
+    <script src="../assets/js/certificados.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/home.js"></script>
 </head>
 
 <body>
@@ -49,112 +31,31 @@
         <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
 
         <!-- Texto Loading -->
-        <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">A carregar...</p>
+        <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Cargando...</p>
     </div>
 
-    <div id="language-popup" class="fixed inset-0 flex items-center justify-center 
-               bg-black/75 backdrop-blur-sm
-               opacity-0 pointer-events-none transition-opacity duration-500 z-[99999]">
-
-        <div
-            class="bg-gray-900 border border-blue-500/50 rounded-2xl shadow-2xl w-11/12 max-w-sm p-6 sm:p-8 relative text-center animate-fadeIn">
-
-            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-white">Idioma 🌍 Language</h2>
-
-            <!-- <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                Escolha a lingua pretendida.
-                <br>
-                Please select your preferred language.
-            </p> -->
-
-            <div class="flex flex-col space-y-4">
-                <button id="lang-pt"
-                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
-                    style="background-image: linear-gradient(to right, #00664F, #C8102E);">
-                    🇵🇹 Português (PT)
-                </button>
-
-                <button id="lang-en"
-                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
-                    style="background-image: linear-gradient(to right, #012169, #C8102E, #012169);">
-                    🇬🇧 English (EN)
-                </button>
-
-                <button id="lang-es"
-                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
-                    style="background-image: linear-gradient(to right, #AA151B, #CC9900, #AA151B);">
-                    🇪🇸 Español (ES)
-                </button>
-            </div>
-
-            <!-- <p class="mt-4 text-xs text-gray-500">
-                A sua escolha será lembrada.
-            </p> -->
-        </div>
-    </div>
 
     <!-- ===================== -->
     <!-- Header / Navegação -->
     <!-- ===================== -->
-    <div id="header"></div>
-
-    <!-- ===================== -->
-    <!-- Popup de Apresentação DEV (Responsivo) -->
-    <!-- ===================== -->
-    <!-- <div id="intro-popup"
-        class="fixed inset-0 flex items-center justify-center bg-black/70 opacity-0 pointer-events-none transition-opacity duration-500 z-[9999]">
-        <div
-            class="bg-gray-900 rounded-2xl shadow-2xl w-11/12 max-w-xl p-6 sm:p-8 relative text-center animate-fadeIn overflow-y-auto max-h-[90vh]">
-
-            <button id="close-intro"
-                class="absolute top-3 right-3 text-gray-300 hover:text-red-500 text-2xl font-bold">&times;</button>
-
-            <img src="" alt="TM"
-                class="mx-auto rounded-full w-24 h-24 sm:w-28 sm:h-28 object-cover mb-4 border-4 border-blue-500 shadow-lg">
-
-            <h2 class="text-2xl sm:text-3xl font-bold mb-3 text-white">👨‍💻 Bem-vind@</h2>
-
-            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 px-1">
-                Eu sou o <span class="text-blue-400 font-semibold">Tomás Mota</span>, um
-                <span class="text-[var(--c-red)] font-semibold">Fullstack developer</span> apaixonado por criar
-                aplicações limpas, escaláveis ​​e focadas no utilizador.
-                <br><br>
-                Activado em <span class="font-semibold">tecnologias web modernas</span> — criando
-                <span class="text-blue-400 font-semibold">frontends</span> integrados e
-                <span class="text-[var(--c-red)] font-semibold">backends</span> robustos.
-                O meu foco é transformar problemas complexos em soluções intuitivas 🚀
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                <img src="src/img/25/09/1010022038662.jpeg" alt="Developer Project 1"
-                    class="rounded-xl w-full h-32 sm:h-36 object-cover shadow-md">
-                <img src="projectos/src/img/devprojects07.png" alt="Developer Project 2"
-                    class="rounded-xl w-full h-32 sm:h-36 object-cover shadow-md">
-            </div>
-
-            <button id="explore-btn"
-                class="mt-2 sm:mt-4 w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg transition">
-                🚀 Explore o meu trabalho
-            </button>
-        </div>
-    </div> -->
+    <div id="headeres"></div>
 
     <!-- Cookie Consent Banner -->
     <!-- <div id="cookie-banner"
         class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-11/12 md:w-3/4 lg:w-1/2 bg-gray-900 text-gray-100 rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4 z-50 opacity-0 pointer-events-none transition-opacity duration-500">
         <p class="text-sm md:text-base leading-relaxed text-center md:text-left flex-1">
-            🍪 Utilizamos cookies para melhorar a sua experiência, analisar o tráfego e fornecer conteúdo personalizado.
-            Ao continuar, concorda com a nossa utilização de cookies.
+            🍪 We use cookies to improve your experience, analyze traffic, and provide personalized content.
+            By continuing, you agree to our use of cookies.
             <a href="doc/cookies" class="underline text-blue-400 hover:text-blue-500">Saiba mais</a>.
         </p>
         <div class="flex gap-3 mt-3 md:mt-0 justify-center md:justify-end items-center">
             <button id="accept-cookies"
                 class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition">
-                Aceitar
+                Accept
             </button>
             <button id="decline-cookies"
                 class="px-5 py-2 rounded-xl bg-gray-700 hover:bg-gray-600 text-white font-semibold transition">
-                Recusar
+                Decline
             </button>
             <button id="close-cookies"
                 class="ml-2 text-gray-300 hover:text-white text-xl font-bold transition">&times;</button>
@@ -167,7 +68,7 @@
     <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-16">
         <div class="hero-wrap card p-8 md:p-12 rounded-2xl" id="idx">
             <!-- Subtítulo -->
-            <p id="herop" class="text-2xl md:text-3xl font-extrabold mb-2 opacity-90">O meu nome é</p>
+            <p id="herop" class="text-2xl md:text-3xl font-extrabold mb-2 opacity-90">Mi nombre es</p>
             <!-- Título -->
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
                 <span class="text-[var(--c-red)]">&lt;</span>
@@ -176,12 +77,12 @@
             </h1>
             <!-- Descrição / Subtítulo secundário -->
             <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                Eu sou <span class="font-semibold text-[var(--c-white)]">desenvolvedor fullstack</span>,
+                Soy un <span class="font-semibold text-[var(--c-white)]">desarrollador full-stack</span>,
                 <span class="font-semibold text-[var(--c-white)]">fotógrafo</span>,
-                <span class="font-semibold text-[var(--c-white)]">músico</span> e
-                <span class="font-semibold text-[var(--c-white)]">técnico de TI</span>
-                — Transformo ideias em experiências digitais.
-                Contruo websites modernos e apps com interfaces organizadas e engajadas.
+                <span class="font-semibold text-[var(--c-white)]">músico</span> y
+                <span class="font-semibold text-[var(--c-white)]">técnico informático</span>
+                — Transformo ideas en experiencias digitales. Creo sitios web y aplicaciones modernas con interfaces
+                organizadas y atractivas.
             </p>
 
             <!-- Skills / Tecnologias  (background abaixo: bg-[var(--c-gray)]/80 backdrop-blur)-->
@@ -237,7 +138,7 @@
         <!-- ===================== -->
         <section id="developer" class="px-6 py-12">
             <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Projetos Fullstack</h2>
+            <h2 class="text-2xl font-extrabold mb-8">Proyectos full-stack</h2>
             <!-- Lista de projetos -->
             <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
@@ -245,26 +146,26 @@
                     class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <!-- Imagem do projeto -->
-                        <img src="src/img/1010022038662.jpeg" alt="Project 1"
+                        <img src="../src/img/1010022038662.jpeg" alt="Project 1"
                             class="w-full h-40 object-cover rounded-xl mb-3">
                         <!-- Nome do projeto -->
                         <h3 class="font-bold">Gonçalo Teixeira</h3>
                         <!-- Descrição / Tecnologias -->
-                        <p class="text-gray-200 text-sm">Website do jogador de futebol, Gonçalo Teixeira.
-                            Construído com HTML, CSS, Tailwind CSS, e JavaScript.</p>
+                        <p class="text-gray-200 text-sm">Página web del futbolista Gonçalo Teixeira.
+                            Desarrollada con HTML, CSS, Tailwind CSS y JavaScript.</p>
                     </article>
                 </a>
 
                 <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <!-- Imagem do projeto -->
-                        <img src="src/img/1010022035775.png" alt="Project 1"
+                        <img src="../src/img/1010022035775.png" alt="Project 1"
                             class="w-full h-40 object-cover rounded-xl mb-3">
                         <!-- Nome do projeto -->
                         <h3 class="font-bold">Website</h3>
                         <!-- Descrição / Tecnologias -->
-                        <p class="text-gray-200 text-sm">Criado com HTML, CSS, JavaScript, e Tailwind CSS.
-                            Uma demonstração das minhas skills de fullstack.</p>
+                        <p class="text-gray-200 text-sm">Creado con HTML, CSS, JavaScript y Tailwind CSS.
+                            Una demostración de mis habilidades como desarrollador full-stack.</p>
                     </article>
                 </a>
 
@@ -292,7 +193,7 @@
         <!-- ===================== -->
         <section id="photographer" class="px-6 py-12">
             <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Projetos de Fotografia</h2>
+            <h2 class="text-2xl font-extrabold mb-8">Proyectos de fotografía</h2>
             <!-- Lista de projetos -->
             <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
@@ -300,15 +201,15 @@
                 <!-- Creative Work Section -->
                 <!-- ===================== -->
                 <!-- Photography @ Sport -->
-                <a href="photo/desportiva" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <a href="photo/sports" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <div class="slideshow-container">
-                            <img src="src/img/1010022031452.jpg" class="slide active">
-                            <img src="src/img/1010022033624.jpg" class="slide">
-                            <img src="src/img/1010022031181.jpg" class="slide">
+                            <img src="../src/img/1010022031452.jpg" class="slide active">
+                            <img src="../src/img/1010022033624.jpg" class="slide">
+                            <img src="../src/img/1010022031181.jpg" class="slide">
                         </div>
-                        <h3 class="font-bold">Fotografia Desportiva</h3>
-                        <p class="text-gray-200 text-sm">Aqui pode ver o meu trabalho como fotógrafo desportivo.</p>
+                        <h3 class="font-bold">Fotografía Deportiva</h3>
+                        <p class="text-gray-200 text-sm">Aquí podéis ver mi trabajo como fotógrafo deportivo.</p>
                     </article>
                 </a>
 
@@ -316,12 +217,12 @@
                 <a href="photo/musical" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <div class="slideshow-container">
-                            <img src="src/img/1010022037146.jpg" class="slide active">
-                            <img src="src/img/1010022036309.jpg" class="slide">
-                            <img src="src/img/1010022038560.jpg" class="slide">
+                            <img src="../src/img/1010022037146.jpg" class="slide active">
+                            <img src="../src/img/1010022036309.jpg" class="slide">
+                            <img src="../src/img/1010022038560.jpg" class="slide">
                         </div>
-                        <h3 class="font-bold">Fotografia Musical</h3>
-                        <p class="text-gray-200 text-sm">Aqui pode ver o meu trabalho como fotógrafo musical.</p>
+                        <h3 class="font-bold">Fotografía Musical</h3>
+                        <p class="text-gray-200 text-sm">Aquí podéis ver mi trabajo como fotógrafo musical.</p>
                     </article>
                 </a>
 
@@ -329,11 +230,11 @@
                 <a href="photo/casual" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <div class="slideshow-container">
-                            <img src="src/img/1010022039451.jpg" class="slide active">
-                            <img src="src/img/1010022035312.jpg" class="slide">
+                            <img src="../src/img/1010022039451.jpg" class="slide active">
+                            <img src="../src/img/1010022035312.jpg" class="slide">
                         </div>
-                        <h3 class="font-bold">Fotografia Casual</h3>
-                        <p class="text-gray-200 text-sm">Aqui pode ver o meu trabalho como fotógrafo casual.</p>
+                        <h3 class="font-bold">Fotografía Casual</h3>
+                        <p class="text-gray-200 text-sm">Aquí podéis ver mi trabajo como fotógrafo casual.</p>
                     </article>
                 </a>
 
@@ -355,7 +256,7 @@
         <section id="cv" class="bg-gray-50 py-14 mt-12"> <!-- adicionei mt-12 -->
             <div class="max-w-5xl mx-auto px-4">
                 <!-- Título da seção -->
-                <h2 class="text-2xl font-extrabold mb-10">Experiência Profissional</h2>
+                <h2 class="text-2xl font-extrabold mb-10">Experiencia Profesional</h2>
                 <!-- Timeline de experiência -->
                 <div class="relative timeline">
                     <div class="space-y-12">
@@ -363,14 +264,14 @@
                         <div class="flex flex-col md:flex-row gap-6 items-center">
                             <!-- Lado esquerdo / Data e cargo -->
                             <div class="md:w-1/2 md:text-right md:pr-10">
-                                <p class="text-sm text-gray-500">2024 — Hoje</p>
-                                <h3 class="font-bold">Dev Fullstack & Fotógrafo</h3>
+                                <p class="text-sm text-gray-500">2024 — Hoy</p>
+                                <h3 class="font-bold">Desarrollador full-stack y fotógrafo</h3>
                                 <p class="text-gray-600">Freelancer</p>
                             </div>
                             <!-- Lado direito / Descrição -->
                             <div class="md:w-1/2 md:text-left md:pl-10">
-                                <p class="text-gray-700">Transformo ideias em experiências digitais e fotográficas. Crio
-                                    sites e aplicações modernas com interfaces otimizadas e envolventes.</p>
+                                <p class="text-gray-700">Transformo ideas en experiencias digitales y fotográficas. Creo
+                                    sitios web y aplicaciones modernas con interfaces optimizadas y atractivas.</p>
                             </div>
                         </div>
                     </div>
@@ -383,97 +284,97 @@
         <!-- ===================== -->
         <section id="certificados" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
             <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Certificados</h2>
+            <h2 class="text-2xl font-extrabold mb-8">Certificates</h2>
             <div class="relative card bg-white p-4">
                 <!-- Carrossel de certificados -->
                 <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Marca Pessoal 360º, do Profissional Anónimo à Referência
-                            Visível</h3>
+                        <img src="../src/img/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Marca personal 360°: Del profesional anónimo al profesional
+                            visible</h3>
                         <p class="text-gray-400 text-sm">Santander</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e Savegnago</p>
+                        <img src="../src/img/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programación Lógica</h3>
+                        <p class="text-gray-400 text-sm">DIO y Savegnago</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e GFT</p>
+                        <img src="../src/img/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programación Lógica</h3>
+                        <p class="text-gray-400 text-sm">DIO y GFT</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Inteligência Artificial e Produtividade</h3>
-                        <p class="text-gray-400 text-sm">Santander e Google</p>
+                        <img src="../src/img/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Inteligencia artificial y productividad</h3>
+                        <p class="text-gray-400 text-sm">Santander y Google</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <img src="../src/img/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                         <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                        <p class="text-gray-400 text-sm">DIO e Microsoft</p>
+                        <p class="text-gray-400 text-sm">DIO y Microsoft</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Storytelling para Marketing Digital</h3>
-                        <p class="text-gray-400 text-sm">Santander e University Of Chicago</p>
+                        <img src="../src/img/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Narrativa para el marketing digital</h3>
+                        <p class="text-gray-400 text-sm">Santander y University Of Chicago</p>
                     </article>
 
                     <!-- Repete certificados para fazer a animação -->
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Marca Pessoal 360º, do Profissional Anónimo à Referência
-                            Visível</h3>
+                        <img src="../src/img/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Marca personal 360°: Del profesional anónimo al profesional
+                            visible</h3>
                         <p class="text-gray-400 text-sm">Santander</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e Savegnago</p>
+                        <img src="../src/img/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programación Lógica</h3>
+                        <p class="text-gray-400 text-sm">DIO y Savegnago</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e GFT</p>
+                        <img src="../src/img/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Programación Lógica</h3>
+                        <p class="text-gray-400 text-sm">DIO y GFT</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Inteligência Artificial e Produtividade</h3>
-                        <p class="text-gray-400 text-sm">Santander e Google</p>
+                        <img src="../src/img/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Inteligencia artificial y productividad</h3>
+                        <p class="text-gray-400 text-sm">Santander y Google</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <img src="../src/img/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                         <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                        <p class="text-gray-400 text-sm">DIO e Microsoft</p>
+                        <p class="text-gray-400 text-sm">DIO y Microsoft</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="src/img/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Storytelling para Marketing Digital</h3>
-                        <p class="text-gray-400 text-sm">Santander e University Of Chicago</p>
+                        <img src="../src/img/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
+                        <h3 class="font-bold text-lg">Narrativa para el marketing digital</h3>
+                        <p class="text-gray-400 text-sm">Santander y University Of Chicago</p>
                     </article>
 
                 </div>
@@ -487,7 +388,7 @@
     <!-- ===================== -->
     <!-- Footer -->
     <!-- ===================== -->
-    <div id="footer"></div>
+    <div id="footeres"></div>
 
 </body>
 

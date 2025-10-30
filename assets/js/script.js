@@ -39,6 +39,21 @@ fetch("/includes/footer-en.html")
     });
 
 //
+// Footer ES
+//
+fetch("/includes/footer-es.html")
+    .then(response => response.text())
+    .then(data => {
+    // Insere o HTML do footer
+        document.getElementById("footeres").innerHTML = data;
+
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/assets/js/footer.js";
+    document.body.appendChild(script);
+    });
+
+//
 // Header
 //
 fetch("/includes/header.html")
@@ -71,6 +86,32 @@ fetch("/includes/header-en.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("headeren").innerHTML = data;
+
+    function loadCSS(href) {
+      if (!document.querySelector(`link[href="${href}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+      }
+    }
+
+    loadCSS("/assets/css/styles.css");
+    loadCSS("/assets/css/header.css");
+
+    const script = document.createElement("script");
+    script.src = "/assets/js/header.js";
+    document.body.appendChild(script);
+  });
+
+
+//
+// Header ES
+//
+fetch("/includes/header-es.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("headeres").innerHTML = data;
 
     function loadCSS(href) {
       if (!document.querySelector(`link[href="${href}"]`)) {
