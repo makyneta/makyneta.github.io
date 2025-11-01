@@ -86,12 +86,6 @@ a.back-home {
   background: linear-gradient(to right, #00247d, #aeaeae, #cf142b);
 }
 
-/* Gradiente para Espanhol (Vermelho e Amarelo) */
-.es-flag {
-  /* Gradiente linear do vermelho para o amarelo, cores da bandeira espanhola  */
-  background: linear-gradient(to right, #ff0000, #ffc400);
-}
-
 
 /* ESTILOS HOVER para os botões */
 
@@ -109,8 +103,8 @@ a.back-home:hover {
   color: #ffffff; /* Mantém o texto branco no hover para melhor contraste com o fundo escurecido */
 }
 
-/* Estilo hover específico para EN e ES onde o texto preto pode funcionar */
-.en-flag:hover, .es-flag:hover {
+/* Estilo hover específico para EN onde o texto preto pode funcionar */
+.en-flag:hover {
   filter: brightness(0.75);
   color: #ffffff; 
 }
@@ -135,7 +129,6 @@ a.back-home:hover {
     <h1>404 | PAGE NOT FOUND</h1>
     <a href="/" class="back-home pt-flag">← Voltar</a>
     <a href="/en" class="back-home en-flag">← Back</a>
-    <a href="/es" class="back-home es-flag">← Volver</a>
 </main>
 
   <footer>
