@@ -108,7 +108,7 @@ fetch("/components/header/english.html")
 //
 // Header ES
 //
-fetch("/components/header/spanish.html")
+fetch("/components/header/.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("headeres").innerHTML = data;
