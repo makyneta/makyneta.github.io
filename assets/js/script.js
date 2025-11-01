@@ -1,59 +1,4 @@
 //
-// Favicon
-//
-  // fetch("/includes/favicon.html")
-  //   .then(response => response.text())
-  //   .then(html => {
-  //     document.getElementById("favicon").innerHTML = html;
-  //   })
-  //   .catch(err => console.error('Erro ao carregar favicon:', err));
-
-//
-// Footer
-//
-fetch("/components/footer/portuguese.html")
-    .then(response => response.text())
-    .then(data => {
-    // Insere o HTML do footer
-        document.getElementById("footer").innerHTML = data;
-
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
-    const script = document.createElement("script");
-    script.src = "/components/footer/script.js";
-    document.body.appendChild(script);
-    });
-
-//
-// Footer EN
-//
-fetch("/components/footer/english.html")
-    .then(response => response.text())
-    .then(data => {
-    // Insere o HTML do footer
-        document.getElementById("footeren").innerHTML = data;
-
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
-    const script = document.createElement("script");
-    script.src = "/components/footer/script.js";
-    document.body.appendChild(script);
-    });
-
-//
-// Footer ES
-//
-fetch("/components/footer/spanish.html")
-    .then(response => response.text())
-    .then(data => {
-    // Insere o HTML do footer
-        document.getElementById("footeres").innerHTML = data;
-
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
-    const script = document.createElement("script");
-    script.src = "/components/footer/script.js";
-    document.body.appendChild(script);
-    });
-
-//
 // Header
 //
 fetch("/components/header/portuguese.html")
@@ -78,10 +23,7 @@ fetch("/components/header/portuguese.html")
     document.body.appendChild(script);
   });
 
-
-//
 // Header EN
-//
 fetch("/components/header/english.html")
   .then(response => response.text())
   .then(data => {
@@ -104,33 +46,37 @@ fetch("/components/header/english.html")
     document.body.appendChild(script);
   });
 
-
 //
-// Header ES
+// Footer
 //
-fetch("/components/header/spanish.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("headeres").innerHTML = data;
+fetch("/components/footer/portuguese.html")
+    .then(response => response.text())
+    .then(data => {
+    // Insere o HTML do footer
+        document.getElementById("footer").innerHTML = data;
 
-    function loadCSS(href) {
-      if (!document.querySelector(`link[href="${href}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href;
-        document.head.appendChild(link);
-      }
-    }
-
-    loadCSS("/assets/css/styles.css");
-    loadCSS("/components/header/styles.css");
-
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
-    script.src = "/components/header/script.js";
+    script.src = "/components/footer/script.js";
     document.body.appendChild(script);
-  });
+    });
 
-  // Preloader
+// Footer EN
+fetch("/components/footer/english.html")
+    .then(response => response.text())
+    .then(data => {
+    // Insere o HTML do footer
+        document.getElementById("footeren").innerHTML = data;
+
+    // Carrega o JS do header (mobile menu, dropdowns etc.)
+    const script = document.createElement("script");
+    script.src = "/components/footer/script.js";
+    document.body.appendChild(script);
+    });
+
+//
+// Preloader
+//
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     if (!preloader) return;

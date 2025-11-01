@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const languagePopup = document.getElementById('language-popup');
     const langPtButton = document.getElementById('lang-pt');
     const langEnButton = document.getElementById('lang-en');
-    const langEsButton = document.getElementById('lang-es');
-
+    // langEsButton REMOVIDO
+    
     // Popups Adicionais (mantidos para o fluxo secundário)
     const introPopup = document.getElementById("intro-popup");
     const exploreBtn = document.getElementById("explore-btn");
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // --- Chaves de localStorage ---
     const INTRO_KEY = 'introShown'; 
-    const LANGUAGE_CHOSEN_DATE_KEY = 'langChosenDate'; // NOVA CHAVE
+    // LANGUAGE_CHOSEN_DATE_KEY e setLanguageChosenDate() REMOVIDOS
     const DELAY_MS = 100;
 
     // --- Funções de Controle de Popups ---
@@ -39,14 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    /**
-     * Define a data de hoje no localStorage para bloquear o popup
-     * até o dia seguinte.
-     */
-    function setLanguageChosenDate() {
-        const today = new Date().toDateString(); // Ex: "Sat Nov 01 2025"
-        localStorage.setItem(LANGUAGE_CHOSEN_DATE_KEY, today);
-    }
+    // setLanguageChosenDate() foi removida.
 
     // --- Lógica de Exibição de Popups Secundários (Aniversário / Introdução) ---
     function showSecondaryPopups() {
@@ -68,26 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Lógica de Exibição Inicial (Ordem de Prioridade) ---
 
-    // 1. Mostrar o Popup de Idioma (Prioridade Máxima com verificação de data)
+    // 1. Mostrar o Popup de Idioma (Sempre na Home)
     function showLanguageFlow() {
-        const today = new Date().toDateString();
-        const lastChosenDate = localStorage.getItem(LANGUAGE_CHOSEN_DATE_KEY);
         
-        // Verifica se o utilizador já escolheu hoje
-        const hasChosenToday = (lastChosenDate === today);
-
-        // Se estiver em versão de idioma secundário, ou se já escolheu hoje, SALTA o popup de idioma
-        if (window.location.pathname.startsWith('/en') || 
-            window.location.pathname.startsWith('/es') || 
-            hasChosenToday) {
-            
+        // Se estiver em /en, SALTA o popup de idioma.
+        if (window.location.pathname.startsWith('/en')) {
             showSecondaryPopups();
             return;
         }
         
-        // Se estiver na Home (PT) e NÃO escolheu hoje, mostramos o popup de idioma.
-        showPopup(languagePopup);
-        document.body.style.overflow = 'hidden'; // Bloqueia o scroll
+        // Se estiver na Home (/)
+        if (window.location.pathname === '/' && languagePopup) {
+            showPopup(languagePopup);
+            document.body.style.overflow = 'hidden'; // Bloqueia o scroll
+        } else {
+            // Se estiver noutra página (ex: /about) que não seja /en, 
+            // ou se o languagePopup não existir, apenas mostra os secundários.
+            showSecondaryPopups(); 
+        }
     }
 
     // 2. Controlar o Preloader e Iniciar o Fluxo
@@ -105,31 +96,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Event Listeners para Interações ---
 
-    // 1. Popup de Idioma (PT, EN, ES)
+    // 1. Popup de Idioma (PT, EN)
+    
+    // Botão Português (Fica na Home, esconde o popup)
     if (langPtButton) {
         langPtButton.addEventListener('click', function() {
-            setLanguageChosenDate(); // Registra a data
-            // Esconde o popup e chama a próxima cadeia de popups
+            // Não registra a data.
             hidePopup(languagePopup, () => {
                 document.body.style.overflow = ''; // Libera o scroll
                 showSecondaryPopups();
             });
+            // Não há redirecionamento, permanece em /
         });
     }
 
+    // Botão Inglês (Redireciona para /en)
     if (langEnButton) {
         langEnButton.addEventListener('click', function() {
-            setLanguageChosenDate(); // Registra a data ANTES de redirecionar
+            // Não registra a data.
             window.location.href = '/en'; 
         });
     }
 
-    if (langEsButton) {
-        langEsButton.addEventListener('click', function() {
-            setLanguageChosenDate(); // Registra a data ANTES de redirecionar
-            window.location.href = '/es';
-        });
-    }
+    // langEsButton REMOVIDO
 
     // 2. Popup de Aniversário
     if (closeBirthday) {
