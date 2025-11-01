@@ -11,7 +11,7 @@
 //
 // Footer
 //
-fetch("/includes/footer.html")
+fetch("/components/footer/portuguese.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
@@ -19,14 +19,14 @@ fetch("/includes/footer.html")
 
     // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
-    script.src = "/assets/js/footer.js";
+    script.src = "/components/footer/script.js";
     document.body.appendChild(script);
     });
 
 //
 // Footer EN
 //
-fetch("/includes/footer-en.html")
+fetch("/components/footer/english.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
@@ -34,14 +34,14 @@ fetch("/includes/footer-en.html")
 
     // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
-    script.src = "/assets/js/footer.js";
+    script.src = "/components/footer/script.js";
     document.body.appendChild(script);
     });
 
 //
 // Footer ES
 //
-fetch("/includes/footer-es.html")
+fetch("/components/footer/spanish.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
@@ -49,14 +49,14 @@ fetch("/includes/footer-es.html")
 
     // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
-    script.src = "/assets/js/footer.js";
+    script.src = "/components/footer/script.js";
     document.body.appendChild(script);
     });
 
 //
 // Header
 //
-fetch("/includes/header.html")
+fetch("/components/header/portuguese.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -71,10 +71,10 @@ fetch("/includes/header.html")
     }
 
     loadCSS("/assets/css/styles.css");
-    loadCSS("/assets/css/header.css");
+    loadCSS("/components/header/styles.css");
 
     const script = document.createElement("script");
-    script.src = "/assets/js/header.js";
+    script.src = "/components/header/script.js";
     document.body.appendChild(script);
   });
 
@@ -82,7 +82,7 @@ fetch("/includes/header.html")
 //
 // Header EN
 //
-fetch("/includes/header-en.html")
+fetch("/components/header/english.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("headeren").innerHTML = data;
@@ -97,10 +97,10 @@ fetch("/includes/header-en.html")
     }
 
     loadCSS("/assets/css/styles.css");
-    loadCSS("/assets/css/header.css");
+    loadCSS("/components/header/styles.css");
 
     const script = document.createElement("script");
-    script.src = "/assets/js/header.js";
+    script.src = "/components/header/script.js";
     document.body.appendChild(script);
   });
 
@@ -108,7 +108,7 @@ fetch("/includes/header-en.html")
 //
 // Header ES
 //
-fetch("/includes/header-es.html")
+fetch("/components/header/spanish.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("headeres").innerHTML = data;
@@ -123,10 +123,10 @@ fetch("/includes/header-es.html")
     }
 
     loadCSS("/assets/css/styles.css");
-    loadCSS("/assets/css/header.css");
+    loadCSS("/components/header/styles.css");
 
     const script = document.createElement("script");
-    script.src = "/assets/js/header.js";
+    script.src = "/components/header/script.js";
     document.body.appendChild(script);
   });
 

@@ -1,0 +1,123 @@
+<header class="flex justify-between items-center px-6 py-4 shadow-md"">
+        <!-- Logo / Nome -->
+        <a href="/en" class="flex items-center space-x-3 ">
+    <img src="/src/img/1010022021819.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+    <span class="font-bold text-xl">Tomás Mota </span>
+    </a>
+
+    <!-- Navegação Desktop -->
+    <nav class="hidden md:flex space-x-3">
+        <a href="/en/about" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        About
+        </a>
+
+        <div class="dropdown group relative">
+            <a href="#" class="px-4 py-2 rounded-lg text-white transition dropdown-toggle
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+            Programming <span class="arrow-down">▾</span>
+            </a>
+            <div
+                class="dropdown-content absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+                <a href="/en/dev/highlights" class="block px-4 py-2 text-white hover:underline">Highlights
+                </a>
+                <a href="/en/dev/frontend" class="block px-4 py-2 text-white hover:underline">Front-end
+                    Projects</a>
+                <a href="/en/dev/backend" class="block px-4 py-2 text-white hover:underline">Back-end
+                    Projects</a>
+            </div>
+        </div>
+
+        <div class="dropdown group relative">
+            <a href="#" class="px-4 py-2 rounded-lg text-white transition dropdown-toggle
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+            Photography <span class="arrow-down">▾</span>
+            </a>
+            <div
+                class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+                <a href="/en/photo/sports" class="block px-4 py-2 text-white hover:underline">Sports</a>
+                <a href="/en/photo/musical" class="block px-4 py-2 text-white hover:underline">Musical</a>
+                <a href="/en/photo/casual" class="block px-4 py-2 text-white hover:underline">Casual</a>
+            </div>
+        </div>
+
+        <a href="/en/blog" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        Blog
+        </a>
+
+        <a href="/en/cv" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        CV
+
+        </a>
+
+        <a href="/en/contact" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black" /* Estilos de HOVER * />
+        Contact
+        </a>
+
+        <!-- <a href="/" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */ bg-white/[0]"">
+            <img src=" https://flagcdn.com/pt.svg" alt="GN" width="32" height="24" style="border-radius: 4px;">
+        </a> -->
+
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+
+</header>
+
+<!-- ===================== -->
+<!-- Mobile Menu -->
+<!-- ===================== -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
+    <a href="/en/about" class="block">About</a>
+
+    <div class="flex flex-col">
+        <span id="mobile-developer-btn" class="mobile-dropdown-btn block hover:no-underline transition">Programming
+            ▾</span>
+        <div id="mobile-developer-menu" class="mobile-dropdown-content">
+            <a href="/en/dev/highlights" class="block">Highlights</a>
+            <a href="/en/dev/frontend" class="block">Front-end</a>
+            <a href="/en/dev/backend" class="block">Back-end</a>
+        </div>
+    </div>
+
+    <div class="flex flex-col">
+        <span id="mobile-photographer-btn" class="mobile-dropdown-btn block hover:no-underline transition">Photography
+            ▾</span>
+        <div id="mobile-photographer-menu" class="mobile-dropdown-content">
+            <a href="/en/photo/sports" class="block">Sports</a>
+            <a href="/en/photo/musical" class="block">Musical</a>
+            <a href="/en/photo/casual" class="block">Casual</a>
+        </div>
+    </div>
+
+    <a href="/en/blog" class="block">Blog</a>
+    <a href="/en/cv" class="block">CV</a>
+    <a href="/en/contact" class="block">Contact</a>
+
+    <!-- <a href="/en" class="block"><img src="https://flagcdn.com/pt.svg" alt="PT" width="32" height="24"
+            style="border-radius: 4px;">Mudar para o Português</a> -->
+</div>
