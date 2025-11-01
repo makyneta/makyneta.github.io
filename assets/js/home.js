@@ -6,18 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const languagePopup = document.getElementById('language-popup');
     const langPtButton = document.getElementById('lang-pt');
     const langEnButton = document.getElementById('lang-en');
-    const langEsButton = document.getElementById('lang-es'); // Adicionado ES
+    const langEsButton = document.getElementById('lang-es');
 
-    // Popups Adicionais
+    // Popups Adicionais (mantidos para o fluxo secundário)
     const introPopup = document.getElementById("intro-popup");
     const exploreBtn = document.getElementById("explore-btn");
     const closeIntro = document.getElementById("close-intro");
     const birthdayPopup = document.getElementById("birthday-popup");
     const closeBirthday = document.getElementById("close-birthday");
     
-    // Chaves de localStorage
+    // --- Chaves de localStorage ---
     const INTRO_KEY = 'introShown'; 
-    const DELAY_MS = 100; // Tempo padrão de delay/transição
+    const LANGUAGE_CHOSEN_DATE_KEY = 'langChosenDate'; // NOVA CHAVE
+    const DELAY_MS = 100;
 
     // --- Funções de Controle de Popups ---
 
@@ -32,11 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (element) {
             element.classList.add('opacity-0', 'pointer-events-none');
             element.classList.remove('opacity-100');
-            // Executa um callback após a transição de saída (0.5s)
             setTimeout(() => {
                 if (callback) callback();
             }, DELAY_MS);
         }
+    }
+    
+    /**
+     * Define a data de hoje no localStorage para bloquear o popup
+     * até o dia seguinte.
+     */
+    function setLanguageChosenDate() {
+        const today = new Date().toDateString(); // Ex: "Sat Nov 01 2025"
+        localStorage.setItem(LANGUAGE_CHOSEN_DATE_KEY, today);
     }
 
     // --- Lógica de Exibição de Popups Secundários (Aniversário / Introdução) ---
@@ -47,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (isBirthday && birthdayPopup) {
             setTimeout(() => showPopup(birthdayPopup), DELAY_MS);
-            return; // Se o de aniversário aparecer, não mostra o de intro
+            return;
         }
         
         // Verifica o popup de Introdução (se não tiver sido mostrado)
@@ -59,22 +68,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Lógica de Exibição Inicial (Ordem de Prioridade) ---
 
-    // 1. Mostrar o Popup de Idioma (Prioridade Máxima)
+    // 1. Mostrar o Popup de Idioma (Prioridade Máxima com verificação de data)
     function showLanguageFlow() {
-        // Se estiver em qualquer versão de idioma secundário, saltamos o popup de idioma
-        if (window.location.pathname.startsWith('/en') || window.location.pathname.startsWith('/es')) {
-            showSecondaryPopups(); // Vai diretamente para os popups de introdução/aniversário
+        const today = new Date().toDateString();
+        const lastChosenDate = localStorage.getItem(LANGUAGE_CHOSEN_DATE_KEY);
+        
+        // Verifica se o utilizador já escolheu hoje
+        const hasChosenToday = (lastChosenDate === today);
+
+        // Se estiver em versão de idioma secundário, ou se já escolheu hoje, SALTA o popup de idioma
+        if (window.location.pathname.startsWith('/en') || 
+            window.location.pathname.startsWith('/es') || 
+            hasChosenToday) {
+            
+            showSecondaryPopups();
             return;
         }
         
-        // Se estiver na Home (PT), mostramos o popup de idioma.
+        // Se estiver na Home (PT) e NÃO escolheu hoje, mostramos o popup de idioma.
         showPopup(languagePopup);
-        document.body.style.overflow = 'hidden'; // Bloqueia o scroll enquanto o popup está aberto
+        document.body.style.overflow = 'hidden'; // Bloqueia o scroll
     }
 
     // 2. Controlar o Preloader e Iniciar o Fluxo
     if (preloader) {
-        // Oculta o preloader após 500ms
         setTimeout(() => {
             hidePopup(preloader);
             // Após o preloader desaparecer, iniciar o fluxo de popups
@@ -91,7 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. Popup de Idioma (PT, EN, ES)
     if (langPtButton) {
         langPtButton.addEventListener('click', function() {
-            // Esconde o popup de idioma e chama a próxima cadeia de popups
+            setLanguageChosenDate(); // Registra a data
+            // Esconde o popup e chama a próxima cadeia de popups
             hidePopup(languagePopup, () => {
                 document.body.style.overflow = ''; // Libera o scroll
                 showSecondaryPopups();
@@ -101,13 +119,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (langEnButton) {
         langEnButton.addEventListener('click', function() {
-            window.location.href = '/en'; // Redireciona para a versão em Inglês
+            setLanguageChosenDate(); // Registra a data ANTES de redirecionar
+            window.location.href = '/en'; 
         });
     }
 
-    if (langEsButton) { // NOVO EVENT LISTENER
+    if (langEsButton) {
         langEsButton.addEventListener('click', function() {
-            window.location.href = '/es'; // Redireciona para a versão em Espanhol
+            setLanguageChosenDate(); // Registra a data ANTES de redirecionar
+            window.location.href = '/es';
         });
     }
 
