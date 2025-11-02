@@ -46,6 +46,26 @@ fetch("/components/header/english.html")
     document.body.appendChild(script);
   });
 
+  // Header EN
+fetch("/components/link/link.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("link").innerHTML = data;
+
+    function loadCSS(href) {
+      if (!document.querySelector(`link[href="${href}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = href;
+        document.head.appendChild(link);
+      }
+    }
+
+    loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+    loadCSS("/assets/css/styles.css");
+    loadCSS("/components/link/cntsocial.css");
+  });
+
 //
 // Footer
 //
