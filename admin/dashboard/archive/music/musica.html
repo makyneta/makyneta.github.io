@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <!-- Metadados da Página -->
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/image/favicon.jpg" type="image/jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Música | Tomás Mota</title>
+
+    <!-- CSS & JavaScript -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/javascript/script.js"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <main class="flex-grow">
+
+    <!-- Preloader Profissional -->
+    <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
+
+        <!-- Logo / iniciais animadas -->
+        <div class="text-4xl sm:text-5xl font-bold text-blue-500 animate-bounce-slow">TM</div>
+
+        <!-- Linha de loading -->
+        <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
+
+        <!-- Texto Loading -->
+        <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">A carregar...</p>
+    </div>
+
+
+    <!-- ===================== -->
+    <!-- Header / Navegação -->
+    <!-- ===================== -->
+    <div id="header"></div>
+
+    <!-- ===================== -->
+
+<section class="discos-section container mx-auto px-4 py-16">
+  <h1 class="text-4xl font-bold mb-10 text-center">Discografia</h1>
+
+  <!-- Grid responsivo centralizado -->
+  <div class="grid gap-6 justify-center"
+       style="grid-template-columns: repeat(auto-fit, minmax(180px, max-content));">
+
+    <!-- Álbum 1 -->
+    <a href="/release/send-me-an-angel" class="group flex flex-col items-center w-full max-w-[300px] relative">
+      <div class="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+        <img src="/assets/image/1010022046618.jpg" alt="Disco 1"
+             class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
+
+        <!-- Overlay PC -->
+        <div class="hidden sm:flex absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300 flex-col justify-end p-3">
+          <h2 class="text-white text-sm md:text-base font-semibold">Send Me An Angel</h2>
+          <p class="text-gray-300 text-xs">21 novembro 2025</p>
+        </div>
+
+        <!-- Nome mobile -->
+        <div class="sm:hidden absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-sm font-semibold px-2 py-1 rounded">
+          Send Me An Angel
+        </div>
+      </div>
+    </a>
+
+    <!-- Álbum 2 -->
+    <!-- <a href="disco2.html" class="group flex flex-col items-center w-full max-w-[300px] relative">
+      <div class="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+        <img src="/src/img/disco2.jpg" alt="Disco 2"
+             class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
+
+        <div class="hidden sm:flex absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300 flex-col justify-end p-3">
+          <h2 class="text-white text-sm md:text-base font-semibold">Disco 2</h2>
+          <p class="text-gray-300 text-xs">Lançado em 2021</p>
+        </div>
+
+        <div class="sm:hidden absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-sm font-semibold px-2 py-1 rounded">
+          Disco 2
+        </div>
+      </div>
+    </a> -->
+
+    <!-- Álbum 3 -->
+    <!-- <a href="disco3.html" class="group flex flex-col items-center w-full max-w-[300px] relative">
+      <div class="relative w-full aspect-square overflow-hidden rounded-xl shadow-lg">
+        <img src="/src/img/disco3.jpg" alt="Disco 3"
+             class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105">
+
+        <div class="hidden sm:flex absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300 flex-col justify-end p-3">
+          <h2 class="text-white text-sm md:text-base font-semibold">Disco 3</h2>
+          <p class="text-gray-300 text-xs">Lançado em 2019</p>
+        </div>
+
+        <div class="sm:hidden absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 text-white text-sm font-semibold px-2 py-1 rounded">
+          Disco 3
+        </div>
+      </div>
+    </a> -->
+
+    <!-- Adicione mais álbuns -->
+
+  </div>
+</section>
+
+
+</main>
+
+    <!-- Links -->
+    <div id="link"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+
+</html>
