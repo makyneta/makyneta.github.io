@@ -16,7 +16,7 @@ fetch("/assets/components/header/portuguese.html")
     }
 
     loadCSS("/assets/css/styles.css");
-    loadCSS("/components/header/styles.css");
+    loadCSS("/assets/components/header/styles.css");
 
     const script = document.createElement("script");
     script.src = "/assets/components/header/script.js";
