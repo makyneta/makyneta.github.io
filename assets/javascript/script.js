@@ -1,7 +1,7 @@
 //
 // Header
 //
-fetch("/components/header/portuguese.html")
+fetch("/assets/components/header/portuguese.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -19,12 +19,12 @@ fetch("/components/header/portuguese.html")
     loadCSS("/components/header/styles.css");
 
     const script = document.createElement("script");
-    script.src = "/components/header/script.js";
+    script.src = "/assets/components/header/script.js";
     document.body.appendChild(script);
   });
 
 // Header EN
-fetch("/components/header/english.html")
+fetch("/assets/components/header/english.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("headeren").innerHTML = data;
@@ -39,15 +39,15 @@ fetch("/components/header/english.html")
     }
 
     loadCSS("/assets/css/styles.css");
-    loadCSS("/components/header/styles.css");
+    loadCSS("/assets/components/header/styles.css");
 
     const script = document.createElement("script");
-    script.src = "/components/header/script.js";
+    script.src = "/assets/components/header/script.js";
     document.body.appendChild(script);
   });
 
   // Header EN
-fetch("/components/link/link.html")
+fetch("/assets/components/link/link.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("link").innerHTML = data;
@@ -63,13 +63,13 @@ fetch("/components/link/link.html")
 
     loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
     loadCSS("/assets/css/styles.css");
-    loadCSS("/components/link/cntsocial.css");
+    loadCSS("/assets/components/link/cntsocial.css");
   });
 
 //
 // Footer
 //
-fetch("/components/footer/portuguese.html")
+fetch("/assets/components/footer/portuguese.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
@@ -77,12 +77,12 @@ fetch("/components/footer/portuguese.html")
 
     // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
-    script.src = "/components/footer/script.js";
+    script.src = "/assets/components/footer/script.js";
     document.body.appendChild(script);
     });
 
 // Footer EN
-fetch("/components/footer/english.html")
+fetch("/assets/components/footer/english.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
@@ -90,7 +90,7 @@ fetch("/components/footer/english.html")
 
     // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
-    script.src = "/components/footer/script.js";
+    script.src = "/assets/components/footer/script.js";
     document.body.appendChild(script);
     });
 
