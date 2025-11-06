@@ -1,44 +1,43 @@
-# Política de Segurança
+# Security Policy
 
-Este documento descreve as práticas de segurança e os procedimentos de comunicação para este projeto. Levamos a segurança a sério e agradecemos os esforços dos colaboradores para nos ajudar a manter uma base de código segura.
+This document describes the security practices and communication procedures for this project. We take security seriously and appreciate the efforts of employees to help us maintain a secure codebase.
 
-## Versões Suportadas
-| Versão | Suportada |
+## Supported Versions
+| Version | Supported |
 |---------|------------------|
-| 1.0.x | ✅ Sim |
-| 1.1. x | ✅ Sim |
-| 2.0.x | ❌ Não |
+| 1.0.x | ✅ Yes |
+| 1.1.x | ✅ Yes |
+| 2.0.x | ❌ No |
+We strongly recommend that users update to the latest supported version to receive security patches.
 
-Recomendamos vivamente que os utilizadores atualizem para a versão mais recente com suporte para receber patches de segurança.
+## Reporting a Vulnerability
+If you discover a vulnerability, **do not** create a public issue. Instead, contact the project maintainers directly:
 
-## Reportar uma Vulnerabilidade
-Se descobrir uma vulnerabilidade, **não** crie um problema público. Em vez disso, contacte diretamente os mantenedores do projeto:
+- **Email:** [tomasmotastudios@gmail.com](mailto:tomasmotastudios@gmail.com)
 
-- **E-mail:** [tomasmota.coffee934@silomails.com](mailto:tomasmota.coffee934@silomails.com)
+Please provide the following information when reporting a vulnerability:
+1. Detailed description of the problem.
+2. Steps to reproduce the vulnerability.
+3. Impact assessment (e.g., data loss, remote code execution).
+4. Any relevant screenshots, logs, or code snippets.
 
-Forneça as seguintes informações ao comunicar uma vulnerabilidade:
-1. Descrição detalhada do problema.
-2.º Passos para reproduzir a vulnerabilidade.
-3.º Avaliação de impacto (por exemplo, perda de dados, execução remota de código).
-4. Quaisquer capturas de ecrã, registos ou excertos de código relevantes.
+## Response Process
+1. **Confirmation:** We will confirm receipt within 48 hours.
+2. **Assessment:** The issue will be assessed to determine its severity and impact.
+3. **Resolution:** We will create a fix and a patch release as quickly as possible.
+4. **Disclosure:** Once the problem is fixed, the author of the complaint will be informed and the notice published.
 
-## Processo de Resposta
-1. **Confirmação:** Confirmaremos a receção no prazo de 48 horas.
-2. **Avaliação:** O problema será avaliado para determinar a gravidade e o impacto.
-3. **Resolução:** Criaremos uma correção e um lançamento de patch o mais rapidamente possível.
-4. **Divulgação:** Assim que o problema for corrigido, o autor da denúncia será informado e o aviso publicado.
+## Security Best Practices
+- Always use the latest stable version of dependencies.
+- Do not send confidential information (e.g., API keys, passwords) to the repository.
+- Follow secure coding practices, including input validation and proper error handling.
+- Review and update dependencies regularly to avoid known vulnerabilities.
 
-## Melhores Práticas de Segurança
-- Utilize sempre a versão estável mais recente das dependências.
-- Não envie informações confidenciais (por exemplo, chaves API, palavras-passe) para o repositório.
-- Siga práticas de codificação seguras, incluindo a validação de entrada e o tratamento adequado de erros.
-- Reveja e atualize as dependências regularmente para evitar vulnerabilidades conhecidas.
-
-## Responsabilidades da Comunidade
-- Evite partilhar publicamente relatórios de segurança não verificados.
-- Respeite a confidencialidade das investigações em curso.
-- Forneça feedback construtivo ao discutir questões de segurança.
+## Community Responsibilities
+- Avoid publicly sharing unverified security reports.
+- Respect the confidentiality of ongoing investigations.
+- Provide constructive feedback when discussing security issues.
 
 ---
 
-Agradecemos por nos ajudar a manter este projeto seguro. Os seus contributos são essenciais para manter a confiança e a segurança de todos os utilizadores.
+Thank you for helping us keep this project secure. Your contributions are essential to maintaining the trust and security of all users.

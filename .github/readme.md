@@ -1,43 +1,43 @@
 # Tomás Mota
 
-Bem-vindo ao meu site pessoal, criado e alojado com o **GitHub Pages**. Este espaço serve como o meu portefólio digital, mostrando quem sou e o que faço — tudo concebido a pensar na simplicidade e na clareza.
+Welcome to my personal website, created and hosted with **GitHub Pages**. This space serves as my digital portfolio, showcasing who I am and what I do — all designed with simplicity and clarity in mind.
 
-## 🖼️ Sobre este site
+## 🖼️ About this website
 
-> **"vida, descomplicada"**
-> _Vida, descomplicada._
+> **"Life, Uncomplicated"**
+> _Life, Uncomplicated._
 
-Esta frase reflete a filosofia central deste site: design minimalista, acesso direto e sem desordem desnecessária.
+This phrase reflects the central philosophy of this website: minimalist design, direct access, and no unnecessary clutter.
 
-O site é uma coleção de materiais pessoais e profissionais, incluindo:
+The website is a collection of personal and professional materials, including:
 
-- 📄 **CV** — O meu currículo profissional
-- 🧾 **Certificados** — Credenciais e realizações
-- 🔗 **Links** — Acesso ao meu GitHub, LinkedIn e outras plataformas
+- 📄 **CV** — My professional resume
+- 🧾 **Certificates** — Credentials and achievements
+- 🔗 **Links** — Access to my GitHub, LinkedIn, and other platforms
 
-Cada secção é facilmente acessível a partir da navegação.
+Each section is easily accessible through navigation.
 
-## 🧰 Pilha de Tecnologia
+## 🧰 Technology Stack
 
-- **HTML** – Puro e leve
-- **GitHub Pages** – Para alojamento gratuito e integrado
-- **Git** – Controlo de versões
+- **HTML** – Pure and lightweight
+- **GitHub Pages** – For free and integrated hosting
+- **Git** – Version control
 
-Sem frameworks JavaScript ou ferramentas de build — apenas desenvolvimento web direto ao assunto.
+No JavaScript frameworks or build tools — just straightforward web development.
 
-## 🚀 Implantação
+## 🚀 Deployment
 
-Este site é automaticamente implantado através de [GitHub Pages](https://pages.github.com/) sempre que são enviadas alterações para a branch `main`.
+This site is automatically deployed via [GitHub Pages](https://pages.github.com/) whenever changes are pushed to the `main` branch.
 
-## 👤 Autor
+## 👤 Author
 
 **[Tomás Mota](https://tomasmotastudios.github.io/)**
-Construindo sempre com foco e minimalismo.
+Always building with focus and minimalism.
 
-## 📬 Contacto
+## 📬 Contact
 
-Sinta-se à vontade para se ligar através de [https://tomasmotastudios.github.io/contacto](https://tomasmotastudios.github.io/contacto)
+Feel free to connect via [https://tomasmotastudios.github.io/contact](https://tomasmotastudios.github.io/contact)
 
 ---
 
-Obrigado pela visita. Faça com que seja simples, mas significativo.
+Thank you for visiting. Keep it simple, but meaningful.
