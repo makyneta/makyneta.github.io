@@ -1,0 +1,409 @@
+  <!DOCTYPE html>
+  <html lang="pt-PT">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/assets/image/favicon.jpg" type="image/jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Me An Angel | Tomás Mota</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/release.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/javascript/release.js"></script>
+    <script src="/assets/javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <audio id="fireworks-sound" src="/assets/audio/fireworks-01.mp3" preload="auto"></audio>
+    <main class="flex-grow">
+
+      <!-- Header do site -->
+      <div id="header"></div>
+
+      <!-- Página do Álbum -->
+      <section class="album-page container mx-auto px-4 pt-8 pb-8"> <!-- espaçamento topo/baixo -->
+
+        <!-- Título do álbum -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-bold text-white">Send Me An Angel</h1>
+          <p class="text-gray-300 mt-2">21.11.2025</p>
+        </div>
+
+        <!-- Capa e detalhes -->
+        <div class="flex flex-col md:flex-row md:gap-10 justify-center">
+
+          <!-- LADO ESQUERDO: Capa + Ícones -->
+          <div class="w-full md:w-1/3 mb-6 md:mb-0 text-center md:sticky md:top-20 self-start">
+            <div class="relative group cursor-pointer inline-block" data-video="https://www.youtube.com/embed/4i1t9hamUhc"
+              id="album-cover">
+              <img src="/assets/image/1010022046618.jpg" alt="Disco 1"
+                class="w-full rounded-2xl shadow-lg transition-transform transform group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
+                <span class="text-white font-bold text-lg">PLAY</span>
+              </div>
+            </div>
+
+            <!-- Ícones das plataformas -->
+            <div class="flex justify-center gap-6 mt-4">
+              <a href="https://lnkfi.re/send-me-an-angel/spotify" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-green-500 transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify"
+                  class="w-5 h-5">
+              </a>
+
+              <a href="https://lnkfi.re/send-me-an-angel/apple-music" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-gray-800 transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applemusic.svg" alt="Apple Music"
+                  class="w-5 h-5">
+              </a>
+
+              <a href="https://lnkfi.re/send-me-an-angel/youtube-music" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-red-500 transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubemusic.svg"
+                  alt="YouTube Music" class="w-5 h-5">
+              </a>
+
+              <a href="https://lnkfi.re/send-me-an-angel" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-purple-500 transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkfire.svg"
+                  alt="Outras Plataformas" class="w-5 h-5">
+              </a>
+            </div>
+          </div>
+
+          <!-- Modal do YouTube -->
+          <div id="yt-modal"
+            class="fixed inset-0 bg-black/80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity z-50">
+            <div class="relative w-[90%] max-w-3xl">
+              <button id="close-modal" class="absolute top-2 right-2 text-white text-2xl font-bold z-50">&times;</button>
+              <iframe id="yt-video" class="w-full h-64 sm:h-96 rounded-xl" src="" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+
+
+          <!-- LADO DIREITO: Texto e Faixas -->
+          <div class="w-full md:w-2/3 text-white md:max-h-[80vh] md:overflow-y-auto md:pr-4">
+
+  <div id="countdown" class="flex flex-col items-center justify-center h-full min-h-80 p-10 rounded-2xl shadow-2xl border-t-8 border-gray-600 transition-all duration-500">
+      
+      <h2 class="text-4xl font-extrabold mb-8 text-gray-200 tracking-wider uppercase">
+          OFFICIAL RELEASE
+      </h2>
+      <p class="text-xl mb-10 text-gray-400">
+          "Send Me An Angel" final countdown.
+      </p>
+      
+  <div class="flex flex-wrap justify-center gap-2 sm:gap-5 text-center" id="timer"> 
+
+      <div id="large-units" class="flex justify-center gap-2 sm:gap-5">
+          
+          <div class="flex flex-col items-center p-2 sm:p-4 bg-gray-800 rounded-xl shadow-inner shadow-black/50 min-w-16 sm:min-w-24 border-b-4 border-gray-600 transition-transform hover:scale-[1.02]">
+              <span id="years" class="text-4xl sm:text-6xl font-extrabold text-white font-mono leading-none">00</span>
+              <span class="text-xs sm:text-sm mt-1 text-gray-500 uppercase tracking-widest">YEARS</span>
+          </div>
+
+          <div class="flex flex-col items-center p-2 sm:p-4 bg-gray-800 rounded-xl shadow-inner shadow-black/50 min-w-16 sm:min-w-24 border-b-4 border-gray-600 transition-transform hover:scale-[1.02]">
+              <span id="months" class="text-4xl sm:text-6xl font-extrabold text-white font-mono leading-none">00</span>
+              <span class="text-xs sm:text-sm mt-1 text-gray-500 uppercase tracking-widest">MONTHS</span>
+          </div>
+
+      </div>
+      <div class="flex flex-col items-center p-2 sm:p-4 bg-gray-800 rounded-xl shadow-inner shadow-black/50 min-w-16 sm:min-w-24 border-b-4 border-gray-600 transition-transform hover:scale-[1.02]">
+          <span id="days" class="text-4xl sm:text-6xl font-extrabold text-white font-mono leading-none">00</span>
+          <span class="text-xs sm:text-sm mt-1 text-gray-500 uppercase tracking-widest">DAYS</span>
+      </div>
+
+      <div class="flex flex-col items-center p-2 sm:p-4 bg-gray-800 rounded-xl shadow-inner shadow-black/50 min-w-16 sm:min-w-24 border-b-4 border-gray-600 transition-transform hover:scale-[1.02]">
+          <span id="hours" class="text-4xl sm:text-6xl font-extrabold text-white font-mono leading-none">00</span>
+          <span class="text-xs sm:text-sm mt-1 text-gray-500 uppercase tracking-widest">HOURS</span>
+      </div>
+
+      <div class="flex flex-col items-center p-2 sm:p-4 bg-gray-800 rounded-xl shadow-inner shadow-black/50 min-w-16 sm:min-w-24 border-b-4 border-gray-600 transition-transform hover:scale-[1.02]">
+          <span id="minutes" class="text-4xl sm:text-6xl font-extrabold text-white font-mono leading-none">00</span>
+          <span class="text-xs sm:text-sm mt-1 text-gray-500 uppercase tracking-widest">MINUTES</span>
+      </div>
+
+      <div class="flex flex-col items-center p-2 sm:p-4 bg-gray-800 rounded-xl shadow-inner shadow-black/50 min-w-16 sm:min-w-24 border-b-4 border-gray-600 transition-transform hover:scale-[1.02]">
+          <span id="seconds" class="text-4xl sm:text-6xl font-extrabold text-white font-mono leading-none">00</span>
+          <span class="text-xs sm:text-sm mt-1 text-gray-500 uppercase tracking-widest">SECONDS</span>
+      </div>
+
+  </div>
+      
+      <p class="text-2xl mt-10 font-medium text-gray-300">
+          NOVEMBER 21, 2025
+      </p>
+  </div>
+
+            <div id="lyrics-content" style="display: none;">
+              <h2 class="text-2xl font-semibold mb-4">LETRA | LYRICS</h2>
+              <p class="list-decimal list-inside text-gray-200 space-y-2">
+                Wise man said just walk this way <br>
+                To the dawn of the light <br>
+                Wind will blow into your face <br>
+                As the years pass you by <br>
+                Hear this voice from deep inside <br>
+                It's the call of your heart <br>
+                Close your eyes and you will find <br>
+                Passage out of the dark <br> <br>
+                Here I am (Here I am) <br>
+                Will you send me an angel? <br>
+                Here I am (Here I am) <br>
+                In the land of the morning star <br> <br>
+                Wise man said just find your place <br>
+                In the eye of the storm <br>
+                Seek the roses along the way <br>
+                Just beware of the thorns <br> <br>
+                Here I am (Here I am) <br>
+                Will you send me an angel? <br>
+                Here I am (Here I am) <br>
+                In the land of the morning star <br> <br>
+                Wise man said just raise your hand <br>
+                And reach out for the spell <br>
+                Find the door to the promised land <br>
+                Just believe in yourself <br>
+                Hear this voice from deep inside <br>
+                It's the call of your heart <br>
+                Close your eyes and you will find <br>
+                The way out of the dark <br> <br>
+                Here I am (Here I am) <br>
+                Will you send me an angel? <br>
+                Here I am (Here I am) <br>
+                In the land of the morning star (Here I am) <br>
+                Will you send me an angel? <br>
+                Here I am (Here I am) <br>
+                In the land of the morning star (Here I am) <br> <br>
+                Will you send me an angel? <br>
+                Here I am (Here I am) <br>
+                In the land of the morning star (Here I am) <br>
+                Will you send me an angel? <br>
+                Here I am (Here I am) <br>
+                In the land of the morning star
+              </p>
+            </div>
+
+          </div>
+      </section>
+    </main>
+
+    <!-- Links -->
+    <div id="link"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+<script>
+// --- FUNÇÕES DE EFEITO E SOM APERFEIÇOADAS ---
+
+// Função auxiliar para valores aleatórios
+function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+// Função para reproduzir o som
+function playFireworksSound() {
+    const sound = document.getElementById('fireworks-sound');
+    if (sound) {
+        sound.currentTime = 0;
+        // CRUCIAL: Captura o erro para evitar que o navegador bloqueie a execução do JS, 
+        // embora o autoplay do som possa ser bloqueado sem interação prévia do utilizador.
+        sound.play().catch(e => {
+            console.warn("Reprodução de áudio bloqueada (autoplay):", e.message);
+        });
+    }
+}
+
+// NOVO: Função para disparar um show de Fogos de Artifício dinâmico (profissional)
+function triggerConfetti() {
+    const duration = 5 * 1000; // Duração total do show: 5 segundos
+    const animationEnd = Date.now() + duration;
+    const defaults = { zIndex: 99999 };
+    
+    // Paleta de cores festiva
+    const colors = ['#FF4500', '#FFD700', '#ADFF2F', '#1E90FF', '#FF69B4', '#FFFFFF'];
+
+    // Dispara a primeira explosão de som
+    playFireworksSound();
+
+    // Cria um intervalo para explosões contínuas e variadas
+    const interval = setInterval(function () {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+            return clearInterval(interval);
+        }
+
+        // Origem da explosão (Aleatória)
+        const originX = randomInRange(0.1, 0.9);
+        const originY = randomInRange(0.6, 0.9);
+        const particleCount = randomInRange(80, 150);
+        
+        // Tipo 1: Explosão Estrela (Mais lenta, mais partículas, maior)
+        confetti(Object.assign({}, defaults, {
+            particleCount: particleCount,
+            spread: randomInRange(90, 120),
+            decay: randomInRange(0.91, 0.94),
+            gravity: randomInRange(0.5, 0.7),
+            startVelocity: randomInRange(40, 65),
+            scalar: randomInRange(1.1, 1.5), // Partículas maiores
+            shapes: ['circle', 'square'], // Mistura formas
+            colors: colors,
+            origin: { x: originX, y: originY }
+        }));
+
+        // Tipo 2: Rasto Rápido e Luminoso (Efeito de rasto/fumo)
+        confetti(Object.assign({}, defaults, {
+            particleCount: 50,
+            spread: randomInRange(30, 60),
+            startVelocity: randomInRange(20, 40),
+            decay: 0.97,
+            gravity: 0.2, 
+            colors: ['#FFFFFF', '#C0C0C0'], 
+            origin: { x: originX, y: originY }
+        }));
+
+
+        // Toca o som novamente em algumas explosões
+        if (Math.random() < 0.35) {
+            playFireworksSound();
+        }
+
+    }, 300); // Intervalo rápido para parecer contínuo
+
+    // Disparo final de alto impacto (Grande Final)
+    setTimeout(() => {
+        confetti(Object.assign({}, defaults, {
+            particleCount: 250,
+            spread: 180,
+            startVelocity: 80,
+            decay: 0.9,
+            colors: ['#FF0000', '#0000FF', '#FFD700'],
+            origin: { y: 0.5 }
+        }));
+    }, duration - 500); // Meio segundo antes do fim
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Configuração ---
+    // A data de lançamento para teste rápido. Mude para a data real após o teste:
+    const releaseDate = new Date("November 21, 2025 00:00:00"); 
+    
+    // Seletores dos elementos HTML
+    const countdownDiv = document.getElementById('countdown');
+    const lyricsDiv = document.getElementById('lyrics-content');
+    const largeUnitsDiv = document.getElementById('large-units');
+    const yearsSpan = document.getElementById('years');
+    const monthsSpan = document.getElementById('months');
+    const daysSpan = document.getElementById('days');
+    const hoursSpan = document.getElementById('hours');
+    const minutesSpan = document.getElementById('minutes');
+    const secondsSpan = document.getElementById('seconds');
+
+    let confettiTriggered = false;
+
+    function updateCountdown() {
+        const now = new Date();
+        const distance = releaseDate.getTime() - now.getTime();
+
+        // Se a contagem regressiva terminou
+        if (distance < 0) {
+            clearInterval(timerInterval);
+            
+            // Dispara a animação (apenas uma vez)
+            if (!confettiTriggered) {
+                triggerConfetti(); 
+                confettiTriggered = true; 
+            }
+            
+            // Esconde o contador e mostra a letra após 5 segundos (duração do show)
+            setTimeout(() => {
+                countdownDiv.style.display = 'none';
+                lyricsDiv.style.display = 'block';
+            }, 5000); 
+
+            // Define todos os contadores para 00
+            yearsSpan.innerHTML = '00';
+            monthsSpan.innerHTML = '00';
+            daysSpan.innerHTML = '00';
+            hoursSpan.innerHTML = '00';
+            minutesSpan.innerHTML = '00';
+            secondsSpan.innerHTML = '00';
+            
+            return;
+        }
+
+        // --- Lógica de CÁLCULO DE TEMPO (inclusa no código anterior, mas aqui simplificada para brevidade) ---
+
+        const future = new Date(releaseDate.getTime());
+        const past = new Date(now.getTime());
+
+        let years = future.getFullYear() - past.getFullYear();
+        let months = future.getMonth() - past.getMonth();
+
+        if (future.getDate() < past.getDate()) {
+            months--;
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        // LÓGICA DE VISIBILIDADE (Anos e Meses)
+        largeUnitsDiv.style.display = (years === 0 && months === 0) ? 'none' : 'flex';
+        
+        // CÁLCULO DE DIAS, HORAS, MINUTOS E SEGUNDOS
+        const adjustedNow = new Date(now);
+        adjustedNow.setFullYear(adjustedNow.getFullYear() + years);
+        adjustedNow.setMonth(adjustedNow.getMonth() + months);
+        let remainingDistance = releaseDate.getTime() - adjustedNow.getTime();
+
+        if (remainingDistance < 0) {
+            months--;
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+            adjustedNow.setFullYear(now.getFullYear() + years);
+            adjustedNow.setMonth(now.getMonth() + months);
+            remainingDistance = releaseDate.getTime() - adjustedNow.getTime();
+        }
+
+        const MS_IN_DAY = 1000 * 60 * 60 * 24;
+        
+        const days = Math.floor(remainingDistance / MS_IN_DAY);
+        remainingDistance %= MS_IN_DAY;
+        const hours = Math.floor(remainingDistance / (1000 * 60 * 60));
+        remainingDistance %= (1000 * 60 * 60);
+        const minutes = Math.floor(remainingDistance / (1000 * 60));
+        remainingDistance %= (1000 * 60);
+        const seconds = Math.floor(remainingDistance / 1000);
+
+        // Formatação
+        function formatTime(unit) {
+            return unit < 10 ? '0' + unit : unit;
+        }
+
+        // Atualiza o HTML
+        yearsSpan.innerHTML = formatTime(years);
+        monthsSpan.innerHTML = formatTime(months);
+        daysSpan.innerHTML = formatTime(days);
+        hoursSpan.innerHTML = formatTime(hours);
+        minutesSpan.innerHTML = formatTime(minutes);
+        secondsSpan.innerHTML = formatTime(seconds);
+    }
+
+    updateCountdown(); 
+    const timerInterval = setInterval(updateCountdown, 1000);
+});
+</script>
+
+  </body>
+
+  </html>
