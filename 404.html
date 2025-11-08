@@ -62,15 +62,25 @@ h1 {
 }
 a.back-home {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 30px;
   font-size: 1rem;
   /* Cor do texto alterada para branco para melhor contraste com fundos coloridos */
-  color: #ffffff; 
+  color: #000000; 
+  font-weight: bold;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px) !important;
   /* Removido o background-color genérico para aplicar os gradientes */
-  border-radius: 6px;
+  border-radius: 10px;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
   margin: 0 5px; /* Adicionado um pequeno espaçamento entre os botões */
+}
+
+/* Gradiente para botão */
+.flag {
+  /* Gradiente linear do verde para o vermelho, cores da bandeira portuguesa  */
+  background: linear-gradient(to right, #006600d0, #006600d0, #ff0000d0,  #00247dd0, #aeaeaed0, #cf142bd0); 
+  /* Ajuste a cor do texto para ser escura no hover, ou remova o hover de cor */
 }
 
 /* Gradiente para Portugal (Verde e Vermelho) */
@@ -92,7 +102,7 @@ a.back-home {
 a.back-home:hover {
   /* Mantém o fundo atual e muda a cor do texto para um cinza escuro no hover */
   background-color: transparent; /* Certifique-se de que o gradiente não é sobreposto */
-  color: #ffffff; 
+  color: #000000; 
   /* Adicione um filtro para escurecer o gradiente no hover (opcional, mas melhora o efeito) */
   filter: brightness(0.75); 
 }
@@ -106,7 +116,7 @@ a.back-home:hover {
 /* Estilo hover específico para EN onde o texto preto pode funcionar */
 .en-flag:hover {
   filter: brightness(0.75);
-  color: #ffffff; 
+  color: #000000; 
 }
 
     /* Rodapé */
@@ -127,7 +137,7 @@ a.back-home:hover {
 
 <main>
     <h1>404 | PAGE NOT FOUND</h1>
-    <a href="/" class="back-home pt-flag hover:en-flag">← Voltar | Back</a>
+    <a href="/" class="back-home flag hover:en-flag">← Voltar | Back</a>
     <!-- <a href="/en" class="back-home en-flag">← Back</a> -->
 </main>
 
