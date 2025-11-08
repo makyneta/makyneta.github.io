@@ -59,7 +59,7 @@ header > a:hover:first-child {
 .dropdown-content {
   /* Não adicione display: none aqui */
   position: absolute;
-  background-color: rgba(55, 55, 55, 0.853) !important;
+  background-color: rgba(255, 255, 255, 0.272) !important;
   backdrop-filter: blur(10px) !important;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2) !important;
@@ -69,22 +69,32 @@ header > a:hover:first-child {
   left: 50%;
   transform: translateX(-50%);
   top: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .dropdown-content a {
-  color: var(--c-white);
-  backdrop-filter: blur(10px) !important;
+  color: var(--c-black);
+  backdrop-filter: blur(100px) !important;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: center;
+/* ADICIONA A LINHA DIVISÓRIA ABAIXO DE CADA LINK */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.572); /* Ajuste a cor e espessura conforme necessário */
+}
+
+/* REMOVE A LINHA DIVISÓRIA DO ÚLTIMO LINK */
+.dropdown-content a:last-child {
+  border-bottom: none;
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(15, 22, 32, 0.45);
-  backdrop-filter: blur(10px) !important;
+  text-decoration: none;
+  font: bold;
+  color: var(--c-white);
+  background-color: rgba(0, 0, 0, 0.445);
+  backdrop-filter: blur(100px) !important;
 }
 
 /* =====================
