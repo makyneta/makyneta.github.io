@@ -27,16 +27,18 @@ No JavaScript frameworks or build tools — just straightforward web development
 
 ## 🚀 Deployment
 
-This site is automatically deployed via [GitHub Pages](https://pages.github.com/) whenever changes are pushed to the `main` branch.
+This site is automatically deployed via [GitHub Pages](https://pages.github.com) whenever changes are pushed to the `main` branch.
 
 ## 👤 Author
 
-**[Tomás Mota](https://tomasmotastudios.github.io/)**
+**[Tomás Mota](https://tomasmotastudios.github.io)**
 Always building with focus and minimalism.
 
 ## 📬 Contact
 
-Feel free to connect via [https://tomasmotastudios.github.io/contact](https://tomasmotastudios.github.io/contact)
+Feel free to connect via
+- Email [tomasmotastudios@gmail.com](mailto:tomasmotastudios@gmail.com)
+- WhatsApp [+351 913 936 776](https://wa.me/351913936776)
 
 ---
 
