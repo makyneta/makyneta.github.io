@@ -37,8 +37,8 @@ Always building with focus and minimalism.
 ## 📬 Contact
 
 Feel free to connect via
-- Email [tomasmotastudios@gmail.com](mailto:tomasmotastudios@gmail.com)
-- WhatsApp [+351 913 936 776](https://wa.me/351913936776)
+- **Email:** [tomasmotastudios@gmail.com](mailto:tomasmotastudios@gmail.com)
+- **WhatsApp:** [+351 913 936 776](https://wa.me/351913936776)
 
 ---
 
