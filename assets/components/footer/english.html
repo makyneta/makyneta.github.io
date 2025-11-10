@@ -1,42 +1,57 @@
-<!-- ===================== -->
-<!-- Footer -->
-<!-- ===================== -->
-<!-- Footer Desktop -->
 <footer
     class="hidden md:flex py-4 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-gray-300 text-sm">
     <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
 
-        <!-- Copyright à esquerda -->
+        <!-- Copyright -->
         <div class="text-left text-white">
             © 2024 - <span class="year"></span>
-            <a href="/" class="text-white transition no-underline font-bold hover:text-gray-300 hover:underline">Tomás Mota Studios Unipessoal, Lda</a>. All rights reserved.
+            <a href="/" class="text-white transition no-underline font-bold hover:text-gray-300 hover:underline">
+                Tomás Mota Studios Unipessoal, Lda</a>. All rights reserved.
         </div>
 
-            <!-- Links legais -->
-            <nav class="flex gap-4">
-                <a href="/en/privacy-policy" class="text-white hover:text-gray-300 hover:underline no-underline transition">Privacy Policy</a>
-                <a href="/en/terms-of-service" class="text-white hover:text-gray-300 hover:underline no-underline transition">Terms of Service</a>
-            </nav>
+        <!-- Contact -->
+        <nav class="flex gap-4 items-center">
+            <a href="mailto:tomasmotastudios@gmail.com" target="_blank"
+                class="text-white hover:text-gray-300  transition duration-300" title="Email">
+                <i class="fas fa-envelope text-lg"></i>
+            </a>
 
-        </div>
+            <a href="https://wa.me/351913936776" target="_blank"
+                class="text-white hover:text-gray-300 transition duration-300" title="WhatsApp">
+                <i class="fab fa-whatsapp text-lg"></i>
+            </a>
+        </nav>
+
+    </div>
 
     </div>
 </footer>
 
-<!-- Footer Mobile -->
+<!-- Mobile -->
 <footer
     class="flex flex-col md:hidden py-5 px-6 bg-[var(--c-gray-2)]/80 backdrop-blur-md border-t border-gray-700 text-white text-sm items-center gap-4">
 
     <!-- Copyright -->
     <div class="text-center">
         © 2024 - <span class="year"></span>
-        <a href="/" class="text-white transition no-underline font-bold">Tomás Mota Studios Unipessoal, Lda</a>. <!-- <br> All Rights Reserved. -->
+        <a href="/" class="text-white transition no-underline font-bold">Tomás Mota Studios Unipessoal, Lda</a>.
     </div>
 
-    <!-- Links legais -->
-    <nav class="flex flex-wrap justify-center gap-4 text-center text-white">
-        <a href="/en/privacy-policy" class="hover:text-white no-underline transition">Privacy Policy</a>
-        <a href="/en/terms-of-service" class="hover:text-white no-underline transition">Terms of Service</a>
-    </nav>
+    <!-- Contact -->
+    <div class="flex justify-center gap-8 text-center text-white">
+        
+        <a href="mailto:tomasmotastudios@gmail.com" target="_blank"
+            class="text-white hover:text-gray-300 transition" 
+            title="Email">
+            <i class="fas fa-envelope text-2xl"></i> 
+        </a>
+
+        <a href="https://wa.me/351913936776" target="_blank"
+            class="text-white hover:text-gray-300 transition" 
+            title="WhatsApp">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+
+    </div>
 
 </footer>
