@@ -66,6 +66,17 @@ fetch("/assets/components/link/link.html")
     loadCSS("/assets/components/link/cntsocial.css");
   });
 
+// Função auxiliar para carregar CSS (se não estiver definida)
+function loadCSS(url) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = url;
+    document.head.appendChild(link);
+}
+
+// Carrega o CSS do Font Awesome
+loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
 //
 // Footer
 //
