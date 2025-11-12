@@ -7,7 +7,7 @@
 
     <!-- Navegação Desktop -->
     <nav class="hidden md:flex space-x-3">
-        <a href="/en/about" class="px-4 py-2 rounded-lg text-white transition
+        <a href="/about" class="px-4 py-2 rounded-lg text-white transition
           backdrop-blur-md /* Aproximação do blur(10px) */
           bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
           hover:no-underline hover:bg-white/70 hover:text-black hover:font-bold" /* Estilos de HOVER * />
@@ -23,8 +23,8 @@
             </a>
             <div
                 class="dropdown-content absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
-                <a href="/en/dev/frontend" class="block px-4 py-2 text-white hover:underline hover:font-bold">Front-end</a>
-                <a href="/en/dev/backend" class="block px-4 py-2 text-white hover:underline hover:font-bold">Back-end</a>
+                <a href="/dev/frontend" class="block px-4 py-2 text-white hover:underline hover:font-bold">Front-end</a>
+                <a href="/dev/backend" class="block px-4 py-2 text-white hover:underline hover:font-bold">Back-end</a>
             </div>
         </div>
 
@@ -37,8 +37,8 @@
             </a>
             <div
                 class="dropdown-content absolute left-0 mt-2 w-48 bg-[var(--c-gray-2)] rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
-                <a href="/en/photo/sports" class="block px-4 py-2 text-white hover:underline hover:font-bold">Sports</a>
-                <a href="/en/photo/portrait" class="block px-4 py-2 text-white hover:underline hover:font-bold">Portrait</a>
+                <a href="/photo/sports" class="block px-4 py-2 text-white hover:underline hover:font-bold">Sports</a>
+                <a href="/photo/portrait" class="block px-4 py-2 text-white hover:underline hover:font-bold">Portrait</a>
             </div>
         </div>
 
@@ -46,7 +46,14 @@
           backdrop-blur-md /* Aproximação do blur(10px) */
           bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
           hover:no-underline hover:bg-white/70 hover:text-black hover:font-bold" /* Estilos de HOVER * />
-        CV
+        CV (en)
+        </a>
+
+        <a href="/upload/cvpt.pdf" class="px-4 py-2 rounded-lg text-white transition
+          backdrop-blur-md /* Aproximação do blur(10px) */
+          bg-white/[0.272] /* Fundo base: rgba(255, 255, 255, 0.272) */
+          hover:no-underline hover:bg-white/70 hover:text-black hover:font-bold" /* Estilos de HOVER * />
+        CV (pt)
         </a>
         
     </nav>
@@ -65,14 +72,14 @@
 
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="hidden flex-col space-y-2 p-4 md:hidden">
-    <a href="/en/about" class="block">About</a>
+    <a href="/about" class="block">About</a>
 
     <div class="flex flex-col">
         <span id="mobile-developer-btn" class="mobile-dropdown-btn block hover:no-underline transition">Programming
             ▾</span>
         <div id="mobile-developer-menu" class="mobile-dropdown-content">
-            <a href="/en/dev/frontend" class="block">Front-end</a>
-            <a href="/en/dev/backend" class="block">Back-end</a>
+            <a href="/dev/frontend" class="block">Front-end</a>
+            <a href="/dev/backend" class="block">Back-end</a>
         </div>
     </div>
 
@@ -80,11 +87,12 @@
         <span id="mobile-photographer-btn" class="mobile-dropdown-btn block hover:no-underline transition">Photography
             ▾</span>
         <div id="mobile-photographer-menu" class="mobile-dropdown-content">
-            <a href="/en/photo/sports" class="block">Sports</a>
-            <a href="/en/photo/portrait" class="block">Portrait</a>
+            <a href="/photo/sports" class="block">Sports</a>
+            <a href="/photo/portrait" class="block">Portrait</a>
         </div>
     </div>
 
-    <a href="/upload/cven.pdf" class="block">CV</a>
+    <a href="/upload/cven.pdf" class="block">CV (en)</a>
+    <a href="/upload/cvpt.pdf" class="block">CV (pt)</a>
     
 </div>

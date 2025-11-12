@@ -1,6 +1,6 @@
 //
 // Header
-fetch("/assets/components/header/english.html")
+fetch("/assets/components/header/index.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -22,29 +22,6 @@ fetch("/assets/components/header/english.html")
     document.body.appendChild(script);
   });
 
-fetch("/assets/components/header/english.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("headeren").innerHTML = data;
-
-    function loadCSS(href) {
-      if (!document.querySelector(`link[href="${href}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href;
-        document.head.appendChild(link);
-      }
-    }
-
-    loadCSS("/assets/css/styles.css");
-    loadCSS("/assets/components/header/styles.css");
-
-    const script = document.createElement("script");
-    script.src = "/assets/components/header/script.js";
-    document.body.appendChild(script);
-  });
-
-
 //
 // Footer
 // Função auxiliar para carregar CSS (se não estiver definida)
@@ -58,23 +35,11 @@ function loadCSS(url) {
 // Carrega o CSS do Font Awesome
 loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
-fetch("/assets/components/footer/english.html")
+fetch("/assets/components/footer/index.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
         document.getElementById("footer").innerHTML = data;
-
-    // Carrega o JS do header (mobile menu, dropdowns etc.)
-    const script = document.createElement("script");
-    script.src = "/assets/components/footer/script.js";
-    document.body.appendChild(script);
-    });
-
-fetch("/assets/components/footer/english.html")
-    .then(response => response.text())
-    .then(data => {
-    // Insere o HTML do footer
-        document.getElementById("footeren").innerHTML = data;
 
     // Carrega o JS do header (mobile menu, dropdowns etc.)
     const script = document.createElement("script");
