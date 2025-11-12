@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en-GB">
 
 <head>
     <!-- Metadados da Página -->
@@ -12,24 +12,6 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <style>
-        /* * ESTILOS DE HOVER (DEGRADÊ MAIS ESCURO) 
- * O !important garante que sobrescreve o estilo inline no botão. */
-        #lang-pt:hover {
-            background-image: linear-gradient(to right, #004F3E, #9C0C23) !important;
-            /* Verde e Vermelho mais escuros */
-        }
-
-        #lang-en:hover {
-            background-image: linear-gradient(to right, #011B55, #9C0C23, #011B55) !important;
-            /* Azul e Vermelho mais escuros */
-        }
-
-        #lang-es:hover {
-            background-image: linear-gradient(to right, #800C12, #A07A00, #800C12) !important;
-            /* Vermelho e Amarelo Dourado mais escuros */
-        }
-    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/javascript/fotografia.js"></script>
     <script src="/assets/javascript/certificados.js"></script>
@@ -37,7 +19,8 @@
     <script src="/assets/javascript/home.js"></script>
 </head>
 
-<body>
+<body class="min-h-screen flex flex-col">
+    <main class="flex-grow">
 
     <!-- Preloader Profissional -->
     <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
@@ -49,50 +32,17 @@
         <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
 
         <!-- Texto Loading -->
-        <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">A carregar...</p>
+        <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Loading...</p>
     </div>
 
-    <div id="language-popup" class="fixed inset-0 flex items-center justify-center 
-               bg-black/75 backdrop-blur-sm
-               opacity-0 pointer-events-none transition-opacity duration-500 z-[99999]">
-
-        <div
-            class="bg-gray-900 border border-blue-500/50 rounded-2xl shadow-2xl w-11/12 max-w-sm p-6 sm:p-8 relative text-center animate-fadeIn">
-
-            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-white">Idioma 🌍 Language</h2>
-
-            <!-- <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
-                Escolha a lingua pretendida.
-                <br>
-                Please select your preferred language.
-            </p> -->
-
-            <div class="flex flex-col space-y-4">
-                <button id="lang-pt"
-                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
-                    style="background-image: linear-gradient(to right, #00664F, #C8102E);">
-                    🇵🇹 Português (PT)
-                </button>
-
-                <button id="lang-en"
-                    class="w-full px-6 py-3 rounded-xl text-white font-semibold shadow-lg transition flex items-center justify-center"
-                    style="background-image: linear-gradient(to right, #012169, #C8102E, #012169);">
-                    🇬🇧 English (EN)
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Header / Navegação -->
     <div id="header"></div>
 
-    <!-- ===================== -->
     <!-- Hero Section / Sobre Mim -->
-    <!-- ===================== -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-16">
-        <div class="hero-wrap card p-8 md:p-12 rounded-2xl" id="idx">
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-4">
+        <div class="hero-wrap card p-16 md:p-12 rounded-2xl mb-8" id="idx">
             <!-- Subtítulo -->
-            <p id="herop" class="text-2xl md:text-3xl font-extrabold mb-2 opacity-90">O meu nome é</p>
+            <p id="herop" class="text-2xl md:text-3xl font-extrabold mb-2 opacity-90">My name is</p>
             <!-- Título -->
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
                 <span class="text-[var(--c-red)]">&lt;</span>
@@ -101,11 +51,11 @@
             </h1>
             <!-- Descrição / Subtítulo secundário -->
             <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                Eu sou <span class="font-semibold text-[var(--c-white)]">desenvolvedor fullstack</span>,
-                <span class="font-semibold text-[var(--c-white)]">fotógrafo</span> e
-                <span class="font-semibold text-[var(--c-white)]">técnico de TI</span>
-                — Transformo ideias em experiências digitais.
-                Contruo websites modernos e apps com interfaces organizadas e engajadas.
+                I am a <span class="font-semibold text-[var(--c-white)]">fullstack developer</span>,
+                <span class="font-semibold text-[var(--c-white)]">photographer</span> and
+                <span class="font-semibold text-[var(--c-white)]">IT technician</span>
+                — I transform ideas into digital experiences.
+                I build modern websites and apps with organized and engaging interfaces.
             </p>
 
             <!-- Skills / Tecnologias  (background abaixo: bg-[var(--c-gray)]/80 backdrop-blur)-->
@@ -136,12 +86,10 @@
             </div>
         </div>
 
-        <!-- ===================== -->
         <!-- Full-Stack Projects Section -->
-        <!-- ===================== -->
         <section id="developer" class="px-6 py-12">
             <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Projetos Fullstack</h2>
+            <h2 class="text-2xl font-extrabold mb-8">Full-stack Projects</h2>
             <!-- Lista de projetos -->
             <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
@@ -154,8 +102,8 @@
                         <!-- Nome do projeto -->
                         <h3 class="font-bold">Gonçalo Teixeira</h3>
                         <!-- Descrição / Tecnologias -->
-                        <p class="text-gray-200 text-sm">Website do jogador de futebol, Gonçalo Teixeira.
-                            Construído com HTML, CSS, Tailwind CSS, e JavaScript.</p>
+                        <p class="text-gray-200 text-sm">Website for soccer player Gonçalo Teixeira.
+                            Built with HTML, CSS, Tailwind CSS, and JavaScript.</p>
                     </article>
                 </a>
 
@@ -167,8 +115,8 @@
                         <!-- Nome do projeto -->
                         <h3 class="font-bold">Website</h3>
                         <!-- Descrição / Tecnologias -->
-                        <p class="text-gray-200 text-sm">Criado com HTML, CSS, JavaScript, e Tailwind CSS.
-                            Uma demonstração das minhas skills de fullstack.</p>
+                        <p class="text-gray-200 text-sm">Created with HTML, CSS, JavaScript, and Tailwind CSS.
+                            A demonstration of my fullstack skills.</p>
                     </article>
                 </a>
 
@@ -191,41 +139,39 @@
             </div> -->
         </section>
 
-        <!-- ===================== -->
         <!-- Photography Projects Section -->
-        <!-- ===================== -->
         <section id="photographer" class="px-6 py-12">
             <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Projetos de Fotografia</h2>
+            <h2 class="text-2xl font-extrabold mb-8">Photography Projects</h2>
             <!-- Lista de projetos -->
             <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
 
                 <!-- ===================== -->
                 <!-- Creative Work Section -->
                 <!-- ===================== -->
-                <!-- Fotografia de Desporto -->
-                <a href="/photo/desporto" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <!-- Sports Photography -->
+                <a href="/en/photo/sports" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <div class="slideshow-container">
                             <img src="/upload/1010022031452.jpg" class="slide active">
                             <img src="/upload/1010022033624.jpg" class="slide">
                             <img src="/upload/1010022031181.jpg" class="slide">
                         </div>
-                        <h3 class="font-bold">Fotografia de Desporto</h3>
-                        <p class="text-gray-200 text-sm">Todo o meu trabalho de fotografia de desporto.</p>
+                        <h3 class="font-bold">Sports Photography</h3>
+                        <p class="text-gray-200 text-sm">All my sports photography work..</p>
                     </article>
                 </a>
 
                 <!-- Fotografia de Retrato -->
-                <a href="/photo/retrato" class="block w-full md:w-[calc(33.333333%-16px)]">
+                <a href="/en/photo/portrait" class="block w-full md:w-[calc(33.333333%-16px)]">
                     <article class="card p-4 text-left rounded-xl shadow-md">
                         <div class="slideshow-container">
                             <img src="/upload/1010022036309.jpg" class="slide active">
                             <img src="/upload/1010022039451.jpg" class="slide">
                             <img src="/upload/1010022038560.jpg" class="slide">
                         </div>
-                        <h3 class="font-bold">Fotografia de Retrato</h3>
-                        <p class="text-gray-200 text-sm">Todo o meu trabalho de fotografia de retrato.</p>
+                        <h3 class="font-bold">Portrait Photography</h3>
+                        <p class="text-gray-200 text-sm">All my portrait photography work.</p>
                     </article>
                 </a>
 
@@ -241,12 +187,10 @@
             </div> -->
         </section>
 
-        <!-- ===================== -->
         <!-- Certificates Section -->
-        <!-- ===================== -->
         <section id="certificados" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
             <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Certificados</h2>
+            <h2 class="text-2xl font-extrabold mb-8">Certificates</h2>
             <div class="relative card bg-white p-4">
                 <!-- Carrossel de certificados -->
                 <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
@@ -254,44 +198,43 @@
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Marca Pessoal 360º, do Profissional Anónimo à Referência
-                            Visível</h3>
+                        <h3 class="font-bold text-lg">360º Personal Brand, from Anonymous Professional to Visible Reference</h3>
                         <p class="text-gray-400 text-sm">Santander</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e Savegnago</p>
+                        <h3 class="font-bold text-lg">Logic Programming</h3>
+                        <p class="text-gray-400 text-sm">DIO & Savegnago</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e GFT</p>
+                        <h3 class="font-bold text-lg">Logic Programming</h3>
+                        <p class="text-gray-400 text-sm">DIO & GFT</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Inteligência Artificial e Produtividade</h3>
-                        <p class="text-gray-400 text-sm">Santander e Google</p>
+                        <h3 class="font-bold text-lg">Artificial Intelligence and Productivity</h3>
+                        <p class="text-gray-400 text-sm">Santander & Google</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                         <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                        <p class="text-gray-400 text-sm">DIO e Microsoft</p>
+                        <p class="text-gray-400 text-sm">DIO & Microsoft</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Storytelling para Marketing Digital</h3>
-                        <p class="text-gray-400 text-sm">Santander e University Of Chicago</p>
+                        <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm">Santander & University Of Chicago</p>
                     </article>
 
                     <!-- Repete certificados para fazer a animação -->
@@ -299,44 +242,43 @@
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Marca Pessoal 360º, do Profissional Anónimo à Referência
-                            Visível</h3>
+                        <h3 class="font-bold text-lg">360º Personal Brand, from Anonymous Professional to Visible Reference</h3>
                         <p class="text-gray-400 text-sm">Santander</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e Savegnago</p>
+                        <h3 class="font-bold text-lg">Logic Programming</h3>
+                        <p class="text-gray-400 text-sm">DIO & Savegnago</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Programação Lógica</h3>
-                        <p class="text-gray-400 text-sm">DIO e GFT</p>
+                        <h3 class="font-bold text-lg">Logic Programming</h3>
+                        <p class="text-gray-400 text-sm">DIO & GFT</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Inteligência Artificial e Produtividade</h3>
-                        <p class="text-gray-400 text-sm">Santander e Google</p>
+                        <h3 class="font-bold text-lg">Artificial Intelligence and Productivity</h3>
+                        <p class="text-gray-400 text-sm">Santander & Google</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
                         <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                        <p class="text-gray-400 text-sm">DIO e Microsoft</p>
+                        <p class="text-gray-400 text-sm">DIO & Microsoft</p>
                     </article>
 
                     <!-- Certificado -->
                     <article class="card p-4 text-left flex-shrink-0 w-80">
                         <img src="/upload/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Storytelling para Marketing Digital</h3>
-                        <p class="text-gray-400 text-sm">Santander e University Of Chicago</p>
+                        <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
+                        <p class="text-gray-400 text-sm">Santander & University Of Chicago</p>
                     </article>
 
                 </div>
@@ -346,8 +288,9 @@
     </section>
     </section>
     </div>
+    </main>
 
-    <!-- Links & Footer -->
+    <!-- Footer -->
     <div id="footer"></div>
 
 </body>

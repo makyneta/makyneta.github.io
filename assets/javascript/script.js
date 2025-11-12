@@ -1,6 +1,6 @@
 //
 // Header
-fetch("/assets/components/header/portuguese.html")
+fetch("/assets/components/header/english.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -58,7 +58,7 @@ function loadCSS(url) {
 // Carrega o CSS do Font Awesome
 loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
-fetch("/assets/components/footer/portuguese.html")
+fetch("/assets/components/footer/english.html")
     .then(response => response.text())
     .then(data => {
     // Insere o HTML do footer
