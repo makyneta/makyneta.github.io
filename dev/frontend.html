@@ -1,59 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-
 <head>
-    <!-- Metados da página -->
     <meta charset="UTF-8" />
-    <link rel="icon" href="/upload/favicon.jpg" type="image/jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front-end Projects | Tomás Mota </title>
-
-    <!-- CSS & JavaScript -->
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/projects.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/javascript/script.js"></script>
 </head>
+<body>
 
-<body class="min-h-screen flex flex-col">
-    <main class="flex-grow">
+    <section id="fullscreen-hero" class="h-screen w-full flex flex-col relative p-4"
+        style="background-image: url('/upload/1010022033890.jpg'); background-size: cover; background-position: center;">
 
-        <!-- Preloader Profissional -->
-        <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
+        <div class="absolute inset-0 bg-black opacity-90"></div>
 
-            <!-- Logo / iniciais animadas -->
-            <div class="text-4xl sm:text-5xl font-bold text-blue-500 animate-bounce-slow">TM</div>
+        <div id="header"></div>
 
-            <!-- Linha de loading -->
-            <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center justify-center flex-grow">
+            <img src="/upload/favicon.jpg" alt="Tomás Mota"
+                class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500 shadow-xl">
 
-            <!-- Texto Loading -->
-            <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Loading...</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Frontend Projects
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                Here you'll find all my front-end projects. — Each project reflects my learning and passion for transforming ideas into functional and creative digital solutions.
+            </p>
+            <div class="mt-4">
+            </div>
         </div>
 
-        <!-- Header -->
-    <div id="header"></div>
-    
-        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div class="hero-wrap card p-8 md:p-12 rounded-2xl">
-                <!-- Título -->
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-                    <span class="text-[var(--c-red)]">&lt;</span>
-                    <span class="text-white">Front-end Projects</span>
-                    <span class="text-[var(--c-red)]" /> /&gt;</span>
-                </h1>
-                <!-- Descrição / Subtítulo secundário -->
-                <p id="herop" class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
-                    Here you'll find all my <span class="font-semibold text-[var(--c-white)]">front-end
-                        projects</span>. — Each project reflects my learning and passion for transforming ideas into
-                    functional and creative digital solutions.
-                </p>
+        <div class="w-full relative z-10 p-4">
+            <div class="flex flex-col items-center justify-end">
+                <svg class="w-8 h-8 text-blue-500 animate-bounce mx-auto" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+                <footer class="w-full py-2">
+                    <div class="container mx-auto text-center">
+                        <p class="text-xs text-gray-500 tracking-wider">
+                            &copy; 2024 - <span class="year"></span> Tomás Mota Unipessoal, Lda. All Rights
+                            Reserved.
+                        </p>
+                    </div>
+                </footer>
             </div>
+        </div>
+    </section>
 
-            <!-- ===================== -->
-            <!-- Projects Section -->
-            <!-- ===================== -->
-            <!-- <h2 class="text-2xl font-bold mb-6 mt-12">Explore my Projects</h2> -->
             <h1>ㅤ</h1>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-x-8" id="proj">
 
@@ -94,12 +88,14 @@
                     <a href="/" target="_blank" class="btn">Live Demo</a>
                 </article>
             </div>
-    </main>
-    <h2 class="grid grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-x-8 text-1l font-bold mb-6 mt-12">ㅤ</h2>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+<a href="#" id="scroll-to-top" title="Go to Top"></a>
 
 </body>
-
+<script>
+    // Atualiza todos os elementos com a classe 'year'
+    document.querySelectorAll('.year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
+</script>
 </html>

@@ -1,276 +1,51 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-
 <head>
-    <!-- Metadados da Página -->
     <meta charset="UTF-8" />
-    <link rel="icon" href="/upload/favicon.jpg" type="image/jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomás Mota</title>
-
-    <!-- CSS & JavaScript -->
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/javascript/script.js"></script>
 </head>
+<body>
 
-<body class="min-h-screen flex flex-col">
-    <main class="flex-grow">
+    <section id="fullscreen-hero" class="h-screen w-full flex flex-col relative p-4"
+        style="background-image: url('/upload/background.jpg'); background-size: cover; background-position: center;">
 
-        <!-- Preloader Profissional -->
-        <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 z-[9999]">
+        <div class="absolute inset-0 bg-black opacity-90"></div>
 
-            <!-- Logo / iniciais animadas -->
-            <div class="text-4xl sm:text-5xl font-bold text-blue-500 animate-bounce-slow">TM</div>
+        <div id="header"></div>
 
-            <!-- Linha de loading -->
-            <div class="mt-4 w-20 h-1 bg-blue-500 rounded-full animate-loading"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center justify-center flex-grow">
+            <img src="/upload/favicon.jpg" alt="Tomás Mota"
+                class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500 shadow-xl">
 
-            <!-- Texto Loading -->
-            <p class="mt-4 text-gray-300 text-sm sm:text-base animate-pulse">Loading...</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Hi! I am Tomás Mota
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                Dev Fullstack | Photographer | IT Technician
+            </p>
+            <div class="mt-4">
+            </div>
         </div>
 
-<section id="fullscreen-hero" 
-    class="h-screen w-full flex flex-col relative p-4"
-    style="background-image: url('/upload/1010022033890.jpg'); background-size: cover; background-position: center;">
-
-    <div class="absolute inset-0 bg-black opacity-90"></div>
-
-    <header class="w-full relative z-50 flex justify-between items-center px-4 md:px-8 pt-4 md:pt-8">
-        <a href="/" class="text-2xl font-bold text-white tracking-widest hover:text-blue-400 transition duration-300">TM</a>
-
-        <nav class="hidden md:flex space-x-6 text-lg font-medium">
-            
-            <a href="/about" class="text-white hover:text-blue-400 transition duration-300 py-2">About</a>
-            
-            <div class="relative">
-                <button id="desktop-prog-toggle" class="text-white hover:text-blue-400 transition duration-300 flex items-center py-2 focus:outline-none">
-                    Programming
-                    <svg class="w-4 h-4 ml-1 transform transition duration-300" id="desktop-prog-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div id="desktop-prog-menu" class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition duration-300 transform scale-95 origin-top-right z-50">
-                    <a href="/dev/frontend" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-t-lg">Frontend</a>
-                    <a href="/dev/backend" class="block px-4 py-3 text-sm text-white hover:bg-blue-600">Backend</a>
-                </div>
-            </div>
-
-            <div class="relative">
-                <button id="desktop-photo-toggle" class="text-white hover:text-blue-400 transition duration-300 flex items-center py-2 focus:outline-none">
-                    Photography
-                    <svg class="w-4 h-4 ml-1 transform transition duration-300" id="desktop-photo-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div id="desktop-photo-menu" class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition duration-300 transform scale-95 origin-top-right z-50">
-                    <a href="/photo/sports" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-t-lg">Sport</a>
-                    <a href="/photo/portrait" class="block px-4 py-3 text-sm text-white hover:bg-blue-600">Portrait</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-white p-2 focus:outline-none rounded transition duration-300 hover:bg-gray-700">
-                <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-
-        <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-70 z-40 md:hidden invisible opacity-0 transition-opacity duration-300"></div>
-
-        <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-gray-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden p-6">
-            
-            <button id="close-menu-sidebar-button" class="text-white absolute top-6 right-6 p-2 focus:outline-none rounded hover:bg-gray-700">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            
-            <div class="mt-16 flex flex-col space-y-4">
-                <a href="/about" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">About</a>
-                
-                <div class="relative w-full">
-                    <button id="mobile-prog-toggle" class="text-white text-xl font-medium p-3 hover:bg-gray-700 rounded transition duration-300 flex items-center justify-between w-full">
-                        Programming
-                        <svg class="w-5 h-5 ml-2 transform transition duration-300" id="mobile-prog-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="mobile-prog-menu" class="mt-2 hidden flex-col space-y-1 bg-gray-800 rounded-lg p-2 ml-4">
-                        <a href="/dev/frontend" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Frontend</a>
-                        <a href="/dev/backend" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Backend</a>
+        <div class="w-full relative z-10 p-4">
+            <div class="flex flex-col items-center justify-end">
+                <footer class="w-full py-2">
+                    <div class="container mx-auto text-center">
+                        <p class="text-xs text-gray-500 tracking-wider">
+                            &copy; 2024 - <span class="year"></span> Tomás Mota Unipessoal, Lda. All Rights Reserved.
+                        </p>
                     </div>
-                </div>
-
-                <div class="relative w-full">
-                    <button id="mobile-photo-toggle" class="text-white text-xl font-medium p-3 hover:bg-gray-700 rounded transition duration-300 flex items-center justify-between w-full">
-                        Photography
-                        <svg class="w-5 h-5 ml-2 transform transition duration-300" id="mobile-photo-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="mobile-photo-menu" class="mt-2 hidden flex-col space-y-1 bg-gray-800 rounded-lg p-2 ml-4">
-                        <a href="/photo/sports" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Sport</a>
-                        <a href="/photo/portrait" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Portrait</a>
-                    </div>
-                </div>
+                </footer>
             </div>
-        </nav>
-    </header>
-    <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center justify-center flex-grow">
-        <img src="/upload/favicon.jpg" alt="Tomás Mota"
-            class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500 shadow-xl">
-
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Hi! I am Tomás Mota
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-            Dev Fullstack | Photographer | IT Technician
-        </p>
-        <div class="mt-4">
         </div>
-    </div>
-
-    <div class="w-full relative z-10 p-4">
-        <div class="flex flex-col items-center justify-end"> 
-            <footer class="w-full py-2"> 
-                <div class="container mx-auto text-center">
-                    <p class="text-xs text-gray-500 tracking-wider">
-                        Copyright &copy; 2024 - <span class="year"></span> Tomás Mota Unipessoal, Lda. Todos os direitos reservados.
-                    </p>
-                </div>
-            </footer>
-        </div>
-    </div>
-</section>
-    </main>
-
+    </section>
+</body>
 <script>
     // Atualiza todos os elementos com a classe 'year'
     document.querySelectorAll('.year').forEach(el => {
         el.textContent = new Date().getFullYear();
     });
-
-    // =========================================================
-    // Lógica para Dropdowns de Desktop (Click-only)
-    // =========================================================
-    function toggleDesktopDropdown(buttonId, menuId, arrowId) {
-        const button = document.getElementById(buttonId);
-        const menu = document.getElementById(menuId);
-        const arrow = document.getElementById(arrowId);
-
-        if (!button || !menu || !arrow) return;
-
-        button.addEventListener('click', (e) => {
-            e.stopPropagation();
-            
-            const isOpen = menu.classList.contains('opacity-100');
-            
-            // Fecha outros menus se estiverem abertos
-            document.querySelectorAll('[id$="-menu"]').forEach(m => {
-                if (m.id !== menuId && m.classList.contains('opacity-100')) {
-                    m.classList.remove('opacity-100');
-                    m.classList.add('opacity-0', 'invisible', 'scale-95');
-                    document.getElementById(m.id.replace('-menu', '-arrow')).classList.remove('rotate-180');
-                }
-            });
-
-            // Alterna o estado do menu atual
-            if (isOpen) {
-                menu.classList.remove('opacity-100');
-                menu.classList.add('opacity-0', 'invisible', 'scale-95');
-                arrow.classList.remove('rotate-180');
-            } else {
-                menu.classList.add('opacity-100');
-                menu.classList.remove('opacity-0', 'invisible', 'scale-95');
-                arrow.classList.add('rotate-180');
-            }
-        });
-
-        // Fechar ao clicar em um link dentro do dropdown
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('opacity-0', 'invisible', 'scale-95');
-                arrow.classList.remove('rotate-180');
-            });
-        });
-    }
-
-    toggleDesktopDropdown('desktop-prog-toggle', 'desktop-prog-menu', 'desktop-prog-arrow');
-    toggleDesktopDropdown('desktop-photo-toggle', 'desktop-photo-menu', 'desktop-photo-arrow');
-
-    // Fechar Menus de Desktop quando o usuário clicar fora (Geral)
-    document.addEventListener('click', (e) => {
-        const desktopProgMenu = document.getElementById('desktop-prog-menu');
-        const desktopPhotoMenu = document.getElementById('desktop-photo-menu');
-        
-        // Verifica se o clique não foi em nenhum dos botões ou menus de dropdown
-        const isClickInsideDesktopMenu = e.target.closest('[id^="desktop-"]');
-        
-        if (!isClickInsideDesktopMenu) {
-            document.querySelectorAll('[id^="desktop-"][id$="-menu"]').forEach(menu => {
-                menu.classList.add('opacity-0', 'invisible', 'scale-95');
-                document.getElementById(menu.id.replace('-menu', '-arrow')).classList.remove('rotate-180');
-            });
-        }
-    });
-
-
-    // =========================================================
-    // Lógica para Menu Hambúrguer (Mobile) - Sidebar
-    // =========================================================
-    const hamburgerButton = document.getElementById('hamburger-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
-    const closeMenuSidebarButton = document.getElementById('close-menu-sidebar-button');
-    const menuOpenIcon = document.getElementById('menu-open-icon');
-    const menuCloseIcon = document.getElementById('menu-close-icon');
-    
-    // Função para abrir/fechar o menu mobile
-    function toggleMobileMenu(isOpen) {
-        const shouldOpen = isOpen !== undefined ? isOpen : mobileMenu.classList.contains('translate-x-full');
-
-        if (shouldOpen) {
-            // Abrir
-            mobileMenu.classList.remove('translate-x-full');
-            mobileMenuBackdrop.classList.remove('invisible', 'opacity-0');
-            mobileMenuBackdrop.classList.add('visible', 'opacity-100');
-            menuOpenIcon.classList.add('hidden');
-            menuCloseIcon.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden'); // Impede scroll no corpo
-        } else {
-            // Fechar
-            mobileMenu.classList.add('translate-x-full');
-            mobileMenuBackdrop.classList.remove('visible', 'opacity-100');
-            mobileMenuBackdrop.classList.add('invisible', 'opacity-0');
-            menuOpenIcon.classList.remove('hidden');
-            menuCloseIcon.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
-    }
-
-    // Event Listeners
-    hamburgerButton.addEventListener('click', () => toggleMobileMenu());
-    closeMenuSidebarButton.addEventListener('click', () => toggleMobileMenu(false));
-    mobileMenuBackdrop.addEventListener('click', () => toggleMobileMenu(false)); // Fecha ao clicar no fundo
-
-    // Fechar Menu Mobile ao clicar em links (exceto botões de dropdown)
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            toggleMobileMenu(false);
-        });
-    });
-
-    // Lógica para Dropdowns de Mobile (Alterna classes 'hidden'/'flex' no menu)
-    function toggleMobileDropdown(buttonId, menuId, arrowId) {
-        const button = document.getElementById(buttonId);
-        const menu = document.getElementById(menuId);
-        const arrow = document.getElementById(arrowId);
-        
-        if (!button || !menu || !arrow) return;
-
-        button.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-            arrow.classList.toggle('rotate-180');
-        });
-    }
-
-    toggleMobileDropdown('mobile-prog-toggle', 'mobile-prog-menu', 'mobile-prog-arrow');
-    toggleMobileDropdown('mobile-photo-toggle', 'mobile-photo-menu', 'mobile-photo-arrow');
 </script>
-
-</body>
 </html>

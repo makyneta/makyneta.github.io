@@ -1,0 +1,74 @@
+    <header class="w-full relative z-50 flex justify-between items-center px-4 md:px-8 pt-4 md:pt-8">
+        <a href="/" class="text-2xl font-bold text-white tracking-widest hover:text-blue-400 transition duration-300">TM</a>
+
+        <nav class="hidden md:flex space-x-6 text-lg font-medium">
+            
+            <a href="/about" class="text-white hover:text-blue-400 transition duration-300 py-2">About</a>
+            
+            <div class="relative">
+                <button id="desktop-prog-toggle" class="text-white hover:text-blue-400 transition duration-300 flex items-center py-2 focus:outline-none">
+                    Programming
+                    <svg class="w-4 h-4 ml-1 transform transition duration-300" id="desktop-prog-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="desktop-prog-menu" class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition duration-300 transform scale-95 origin-top-right z-50">
+                    <a href="/dev/frontend" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-t-lg">Frontend</a>
+                    <a href="/dev/backend" class="block px-4 py-3 text-sm text-white hover:bg-blue-600">Backend</a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <button id="desktop-photo-toggle" class="text-white hover:text-blue-400 transition duration-300 flex items-center py-2 focus:outline-none">
+                    Photography
+                    <svg class="w-4 h-4 ml-1 transform transition duration-300" id="desktop-photo-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="desktop-photo-menu" class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition duration-300 transform scale-95 origin-top-right z-50">
+                    <a href="/photo/sports" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-t-lg">Sport</a>
+                    <a href="/photo/portrait" class="block px-4 py-3 text-sm text-white hover:bg-blue-600">Portrait</a>
+                </div>
+            </div>
+            
+            <a href="/upload/cven.pdf" class="text-white hover:text-blue-400 transition duration-300 py-2">CV</a>
+        </nav>
+
+        <div class="md:hidden">
+            <button id="hamburger-button" class="text-white p-2 focus:outline-none rounded transition duration-300 hover:bg-gray-700">
+                <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-70 z-40 md:hidden invisible opacity-0 transition-opacity duration-300"></div>
+
+        <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-gray-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden p-6">
+            
+            <button id="close-menu-sidebar-button" class="text-white absolute top-6 right-6 p-2 focus:outline-none rounded hover:bg-gray-700">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="mt-16 flex flex-col space-y-4">
+                <a href="/about" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">About</a>
+                
+                <div class="relative w-full">
+                    <button id="mobile-prog-toggle" class="text-white text-xl font-medium p-3 hover:bg-gray-700 rounded transition duration-300 flex items-center justify-between w-full">
+                        Programming
+                        <svg class="w-5 h-5 ml-2 transform transition duration-300" id="mobile-prog-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-prog-menu" class="mt-2 hidden flex-col space-y-1 bg-gray-800 rounded-lg p-2 ml-4">
+                        <a href="/dev/frontend" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Frontend</a>
+                        <a href="/dev/backend" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Backend</a>
+                    </div>
+                </div>
+
+                <div class="relative w-full">
+                    <button id="mobile-photo-toggle" class="text-white text-xl font-medium p-3 hover:bg-gray-700 rounded transition duration-300 flex items-center justify-between w-full">
+                        Photography
+                        <svg class="w-5 h-5 ml-2 transform transition duration-300" id="mobile-photo-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-photo-menu" class="mt-2 hidden flex-col space-y-1 bg-gray-800 rounded-lg p-2 ml-4">
+                        <a href="/photo/sports" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Sport</a>
+                        <a href="/photo/portrait" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Portrait</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
