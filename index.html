@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/javascript/fotografia.js"></script>
-    <script src="/assets/javascript/certificados.js"></script>
     <script src="/assets/javascript/script.js"></script>
 </head>
 
@@ -35,7 +33,7 @@
         </div>
 
 <section id="fullscreen-hero" 
-    class="h-screen w-full flex flex-col items-center justify-start relative p-4"
+    class="h-screen w-full flex flex-col relative p-4"
     style="background-image: url('/upload/1010022033890.jpg'); background-size: cover; background-position: center;">
 
     <div class="absolute inset-0 bg-black opacity-90"></div>
@@ -112,8 +110,7 @@
             </div>
         </nav>
     </header>
-    <div class="relative z-10 text-center max-w-4xl mx-auto pt-20">
-
+    <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center justify-center flex-grow">
         <img src="/upload/favicon.jpg" alt="Tomás Mota"
             class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500 shadow-xl">
 
@@ -126,200 +123,26 @@
         </div>
     </div>
 
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center z-10">
-        <svg class="w-8 h-8 text-blue-500 animate-bounce mx-auto" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
+    <div class="w-full relative z-10 p-4">
+        <div class="flex flex-col items-center justify-end"> 
+            <footer class="w-full py-2"> 
+                <div class="container mx-auto text-center">
+                    <p class="text-xs text-gray-500 tracking-wider">
+                        Copyright &copy; 2024 - <span class="year"></span> Tomás Mota Unipessoal, Lda. Todos os direitos reservados.
+                    </p>
+                </div>
+            </footer>
+        </div>
     </div>
 </section>
-
-        <!-- Full-Stack Projects Section -->
-        <section id="developer" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-12">
-            <h2 class="text-2xl font-extrabold mb-8">Full-stack Projects</h2>
-            <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
-
-                <a href="https://tomasmotastudios.github.io/goncaloteixeira"
-                    class="block w-full md:w-[calc(33.333333%-16px)]">
-                    <article class="card p-4 text-left rounded-xl shadow-md">
-                        <!-- Imagem do projeto -->
-                        <img src="/upload/1010022038662.jpeg" alt="Project 1"
-                            class="w-full object-cover rounded-xl mb-3">
-                        <!-- Nome do projeto -->
-                        <h3 class="font-bold">Gonçalo Teixeira</h3>
-                        <!-- Descrição / Tecnologias -->
-                        <p class="text-gray-200 text-sm">Website for soccer player Gonçalo Teixeira.
-                            Built with HTML, CSS, Tailwind CSS, and JavaScript.</p>
-                    </article>
-                </a>
-
-                <a href="#" class="block w-full md:w-[calc(33.333333%-16px)]">
-                    <article class="card p-4 text-left rounded-xl shadow-md">
-                        <!-- Imagem do projeto -->
-                        <img src="/upload/1010022035775.png" alt="Project 1"
-                            class="w-full object-cover rounded-xl mb-3">
-                        <!-- Nome do projeto -->
-                        <h3 class="font-bold">Website</h3>
-                        <!-- Descrição / Tecnologias -->
-                        <p class="text-gray-200 text-sm">Created with HTML, CSS, JavaScript, and Tailwind CSS.
-                            A demonstration of my fullstack skills.</p>
-                    </article>
-                </a>
-        </section>
-
-        <!-- Photography Projects Section -->
-        <section id="photographer" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-12">
-            <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Photography Projects</h2>
-            <!-- Lista de projetos -->
-            <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-center">
-
-                <!-- ===================== -->
-                <!-- Creative Work Section -->
-                <!-- ===================== -->
-                <!-- Sports Photography -->
-                <a href="/photo/sports" class="block w-full md:w-[calc(33.333333%-16px)]">
-                    <article class="card p-4 text-left rounded-xl shadow-md">
-                        <div class="slideshow-container">
-                            <img src="/upload/1010022031452.jpg" class="slide active">
-                            <img src="/upload/1010022033624.jpg" class="slide">
-                            <img src="/upload/1010022031181.jpg" class="slide">
-                        </div>
-                        <h3 class="font-bold">Sports Photography</h3>
-                        <p class="text-gray-200 text-sm">All my sports photography work..</p>
-                    </article>
-                </a>
-
-                <!-- Fotografia de Retrato -->
-                <a href="/photo/portrait" class="block w-full md:w-[calc(33.333333%-16px)]">
-                    <article class="card p-4 text-left rounded-xl shadow-md">
-                        <div class="slideshow-container">
-                            <img src="/upload/1010022036309.jpg" class="slide active">
-                            <img src="/upload/1010022039451.jpg" class="slide">
-                            <img src="/upload/1010022038560.jpg" class="slide">
-                        </div>
-                        <h3 class="font-bold">Portrait Photography</h3>
-                        <p class="text-gray-200 text-sm">All my portrait photography work.</p>
-                    </article>
-                </a>
-
-            </div>
-
-
-            <!-- Botão Ver Mais 
-            <div class="w-full flex justify-center mt-6">
-                <a href="/projects" class="px-4 py-2 rounded-lg text-white transition hover:underline"
-                    style="background-color: rgba(15, 22, 32, 0.349); backdrop-filter: blur(10px);">
-                    See more
-                </a>
-            </div> -->
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificados" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-            <!-- Título -->
-            <h2 class="text-2xl font-extrabold mb-8">Certificates</h2>
-            <div class="relative card bg-white p-4">
-                <!-- Carrossel de certificados -->
-                <div id="cert-track" class="flex gap-4 overflow-x-auto scroll-smooth">
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">360º Personal Brand, from Anonymous Professional to Visible
-                            Reference</h3>
-                        <p class="text-gray-400 text-sm">Santander</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Logic Programming</h3>
-                        <p class="text-gray-400 text-sm">DIO & Savegnago</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Logic Programming</h3>
-                        <p class="text-gray-400 text-sm">DIO & GFT</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Artificial Intelligence and Productivity</h3>
-                        <p class="text-gray-400 text-sm">Santander & Google</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                        <p class="text-gray-400 text-sm">DIO & Microsoft</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
-                        <p class="text-gray-400 text-sm">Santander & University Of Chicago</p>
-                    </article>
-
-                    <!-- Repete certificados para fazer a animação -->
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012015317.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">360º Personal Brand, from Anonymous Professional to Visible
-                            Reference</h3>
-                        <p class="text-gray-400 text-sm">Santander</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012013139.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Logic Programming</h3>
-                        <p class="text-gray-400 text-sm">DIO & Savegnago</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012012537.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Logic Programming</h3>
-                        <p class="text-gray-400 text-sm">DIO & GFT</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012011924.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Artificial Intelligence and Productivity</h3>
-                        <p class="text-gray-400 text-sm">Santander & Google</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012017045.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">GitHub Copilot</h3>
-                        <p class="text-gray-400 text-sm">DIO & Microsoft</p>
-                    </article>
-
-                    <!-- Certificado -->
-                    <article class="card p-4 text-left flex-shrink-0 w-80">
-                        <img src="/upload/1010012014499.jpg" class="w-full h-40 object-cover rounded-xl mb-3">
-                        <h3 class="font-bold text-lg">Storytelling for Digital Marketing</h3>
-                        <p class="text-gray-400 text-sm">Santander & University Of Chicago</p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <div id="footer"></div>
-
 <script>
+    // Atualiza todos os elementos com a classe 'year'
+    document.querySelectorAll('.year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
+
     // =========================================================
     // Lógica para Dropdowns de Desktop (Click-only)
     // =========================================================
@@ -450,5 +273,4 @@
 </script>
 
 </body>
-
 </html>
