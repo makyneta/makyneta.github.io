@@ -19,9 +19,6 @@ fetch("/assets/header/index.html")
       }
     }
 
-    loadCSS("/assets/css/styles.css");
-    loadCSS("/assets/header/styles.css");
-
     const script = document.createElement("script");
     script.src = "/assets/header/script.js";
     document.body.appendChild(script);
