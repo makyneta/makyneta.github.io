@@ -1,6 +1,4 @@
 # Tomás Mota
-
-## 🖼️ About this website
 > _Life, Uncomplicated._
 
 This phrase reflects the central philosophy of this website: minimalist design, direct access, and no unnecessary clutter.
