@@ -55,6 +55,10 @@
             transform: scale(0.95);
         }
 
+html {
+    scroll-behavior: auto; /* Deixa o JS controlar a suavidade, evita conflitos */
+}
+
 /* ===================== */
 /* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
 /* ===================== */

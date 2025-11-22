@@ -1,0 +1,28 @@
+  .btn-repo-outline {
+      display: inline-block;
+      padding: 10px 20px;
+
+      /* Cores Normais (Claras) */
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      background-color: transparent;
+
+      /* Tipografia e Layout */
+      text-decoration: none;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+
+      /* Animação Suave */
+      transition: all 0.3s ease;
+  }
+
+  /* O Efeito Hover */
+  .btn-repo-outline:hover {
+      background-color: #ffffff;
+      color: #000000;
+      /* Texto fica preto para contraste */
+      transform: translateY(-2px);
+      /* Ligeiro movimento para cima */
+  }
