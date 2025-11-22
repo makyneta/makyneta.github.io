@@ -1,24 +1,24 @@
 <header class="w-full relative z-50 flex justify-between items-center px-4 md:px-8 pt-4 md:pt-8">
-    <a href="/" class="text-2xl font-bold text-white tracking-widest hover:text-blue-400 transition duration-300">TM</a>
+    <a href="/" class="text-2xl font-bold text-white tracking-widest hover:text-blue-400 transition duration-300"></a>
 
     <nav class="hidden md:flex space-x-6 text-lg font-medium">
         
         <a href="/" class="text-white hover:text-blue-400 transition duration-300 py-2">Home</a>
-        <a href="/sobre" class="text-white hover:text-blue-400 transition duration-300 py-2">Sobre</a>
+        <a href="/i/bio" class="text-white hover:text-blue-400 transition duration-300 py-2">About</a>
         
         <div class="relative">
             <button id="desktop-portfolio-toggle" class="text-white hover:text-blue-400 transition duration-300 flex items-center py-2 focus:outline-none">
-                Portefólio
+                Portfolio
                 <svg class="w-4 h-4 ml-1 transform transition duration-300" id="desktop-portfolio-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
-            <div id="desktop-portfolio-menu" class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition duration-300 transform scale-95 origin-top-right z-50">
-                <a href="/dev" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-t-lg">Programação</a>
+            <div id="desktop-portfolio-menu" class="absolute right-0 mt-2 w-40 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible transition duration-300 transform scale-95 origin-top-right z-50">
+                <a href="/d" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-t-lg">Dev</a>
                 <div class="border-t border-gray-700 my-1"></div>
-                <a href="/ph" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-b-lg">Fotografia</a>
+                <a href="/p" class="block px-4 py-3 text-sm text-white hover:bg-blue-600 rounded-b-lg">Photo</a>
             </div>
         </div>
         
-        <a href="/cv.pdf" class="text-white hover:text-blue-400 transition duration-300 py-2">CV</a>
+        <a href="/i/cv.pdf" class="text-white hover:text-blue-400 transition duration-300 py-2">CV</a>
     </nav>
 
     <div class="md:hidden">
@@ -38,21 +38,21 @@
         
         <div class="mt-16 flex flex-col space-y-4">
             <a href="/" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">Home</a>
-            <a href="/sobre" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">Sobre</a>
+            <a href="/i/bio" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">About</a>
             
             <div class="relative w-full">
                 <button id="mobile-portfolio-toggle" class="text-white text-xl font-medium p-3 hover:bg-gray-700 rounded transition duration-300 flex items-center justify-between w-full">
-                    Portefólio
+                    Portfolio
                     <svg class="w-5 h-5 ml-2 transform transition duration-300" id="mobile-portfolio-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div id="mobile-portfolio-menu" class="mt-2 hidden flex-col space-y-1 bg-gray-800 rounded-lg p-2 ml-4">
-                    <a href="/dev" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Programação</a>
+                    <a href="/d" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Dev</a>
                     <div class="border-t border-gray-700 my-1"></div>
-                    <a href="/ph" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Fotografia</a>
+                    <a href="/p" class="block px-3 py-2 text-base text-white hover:bg-blue-600 rounded">Photo</a>
                 </div>
             </div>
             
-            <a href="/cv.pdf" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">CV</a>
+            <a href="/i/cv.pdf" class="text-white text-xl font-medium p-3 hover:bg-blue-600 rounded transition duration-300">CV</a>
         </div>
     </nav>
 </header>

@@ -1,0 +1,368 @@
+#scroll-to-top {
+            /* Posicionamento Fixo */
+            position: fixed;
+            bottom: 30px; 
+            right: 30px; 
+            z-index: 1000;
+            
+            /* Formato de Bola e Dimensões */
+            width: 56px; /* Um pouco maior para um toque moderno */
+            height: 56px;
+            border-radius: 50%;
+            
+            /* EFEITO LIQUID GLASS */
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente e claro */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+            
+            /* O SEGREDO DO VIDRO FOSCO (Pode não funcionar em navegadores muito antigos) */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); /* Compatibilidade com Safari */
+            
+            /* Sombra Multi-camadas (Efeito de flutuação) */
+            box-shadow: 
+                0 4px 12px rgba(0, 0, 0, 0.2), /* Sombra principal */
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset; /* Borda de luz interna */
+            
+            /* Estilo e Seta (Para centralizar a seta) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Estilo da Seta */
+        #scroll-to-top::before {
+            content: '▲'; /* Seta Unicode simples */
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            opacity: 0.9;
+            transition: transform 0.2s;
+        }
+
+        /* Efeito Hover (Interação) */
+        #scroll-to-top:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 6px 15px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+        }
+
+        /* Efeito de Clique (Active State) */
+        #scroll-to-top:active {
+            transform: scale(0.95);
+        }
+
+html {
+    scroll-behavior: auto; /* Deixa o JS controlar a suavidade, evita conflitos */
+}
+
+/* ===================== */
+/* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
+/* ===================== */
+:root {
+  --c-white: #ffffff;
+  --c-white2: #eeeeee;
+  --c-black: #000000;
+  --c-gray: #2b2f36;
+  --c-gray-2: #3a3f46;
+  --c-red: #ff3b3b;
+  --c-blue: #1a73ff;
+  --c-yellow: #ffd43b;
+}
+
+/* ===================== */
+/* Estilos Globais */
+/* ===================== */
+body {
+  text-align: center;
+  color: var(--c-gray);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== */
+/* Background Animado do Site */
+/* ===================== */
+body {
+  background-color: #0d0d0d; /* fundo base escuro */
+  background-image: 
+    radial-gradient(circle at center, rgba(255,255,255,0.03) 1px, transparent 1px),
+    radial-gradient(circle at center, rgba(255,255,255,0.02) 2px, transparent 2px),
+    radial-gradient(circle at center, rgba(255,255,255,0.01) 4px, transparent 4px);
+  background-size: 20px 20px, 40px 40px, 80px 80px; /* círculos concêntricos */
+  background-position: center;
+  background-repeat: repeat;
+  color: white; /* texto padrão branco para contraste */
+}
+
+/* Opcional: animação leve de rotação do vinil */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at center, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.05;
+  z-index: 0;
+  animation: spin 300s linear infinite; /* rotação lenta */
+    /* ADICIONE ESTA LINHA */
+  pointer-events: none; /* permite clicar em tudo acima */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/*
+ * =====================
+ * Header e Menus
+ * =====================
+ */
+
+ h2 {
+  color: var(--c-white2);
+  font-size: 2.2rem;
+}
+
+#developer h3,
+#photographer h3,
+#certificados h3,
+#cv h2,
+#proj h3,
+#foto h3,
+#cvcnt h3,
+#sbrcnt h3 {
+  color: var(--c-white);
+}
+
+#idx p,
+#developer p,
+#photographer p,
+#certificados p,
+#proj p,
+#foto p, 
+#cvcnt p, ul,
+#sbrcnt p, blockquote {
+  color: var(--c-white2)
+}
+
+/* ===================== */
+/* Hero Section */
+/* ===================== */
+.hero-wrap {
+  background: 
+    radial-gradient(1200px 600px at 10% 10%, rgba(155, 155, 155, 0.300), transparent 70%),
+    radial-gradient(900px 500px at 90% 80%,  rgba(167, 167, 167, 0.500), transparent 70%);
+    position: relative;
+    z-index: 0;
+}
+
+/* ===================== */
+/* Cards (Projetos, Fotografia, Certificados) */
+/* ===================== */
+.card {
+    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+  backdrop-filter: blur(0px) !important;
+  color: var(--c-gray);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+  border-radius: 1rem;
+}
+
+.card img {
+  filter: brightness(0.8);
+}
+
+.card h3 {
+  color: var(--c-white);
+}
+
+/* Alteração específica: descrição dos certificados */
+#certificados .card p {
+  color: var(--c-white);
+}
+
+/* ===================== */
+/* Certificados com bordas arredondadas */
+/* ===================== */
+#certificados .card {
+  border-radius: 1rem; /* bordas arredondadas mais suaves */
+  overflow: hidden;      /* garante que imagens respeitem as bordas */
+}
+
+#cert-track {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* ===================== */
+/* Botões Primários */
+/* ===================== */
+.btn {
+  border-radius: .8rem;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease !important;
+  background: var(--c-gray-2);
+  color: var(--c-white);
+}
+
+.btn:hover {
+  background: var(--c-white2);
+  color: var(--c-black);
+  transition: transform .15s ease, box-shadow .15s ease !important;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ===================== */
+/* Timeline (Experiência Profissional) */
+/* ===================== */
+@media (min-width: 768px) {
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, var(--c-red), var(--c-blue));
+    border-radius: 999px;
+  }
+}
+
+/* ===================== */
+/* Carrossel de Certificados - Ocultar barra de rolagem */
+/* ===================== */
+#cert-track {
+  scrollbar-width: none;
+}
+
+#cert-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===================== */
+/* Slideshow (Fotografia) */
+/* ===================== */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* proporção 3:2 */
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 12px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ===================== */
+/* Experiência Profissional (CV) */
+/* ===================== */
+#cv {
+    border-radius: 1rem;
+
+  background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+  backdrop-filter: blur(10px) !important;
+    position: relative;
+    z-index: 0;
+}
+
+#cv p {
+  color: var(--c-white2);
+}
+
+#cv h3 {
+  color: var(--c-white);
+}
+
+/* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  color: var(--c-white);
+  background-color: rgba(15, 22, 32, 0.356); /* mesmo fundo */
+  backdrop-filter: blur(30px);              /* mesmo blur */
+}
+
+/* Popup de Aniversário ativo */
+#birthday-popup.show {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Bounce lento do logo */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15%); }
+}
+.animate-bounce-slow { animation: bounce-slow 1.5s infinite; }
+
+/* Linha de loading que se expande */
+@keyframes loading-bar {
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(1); }
+  100% { transform: scaleX(0); }
+}
+.animate-loading {
+  transform-origin: left;
+  animation: loading-bar 1.5s infinite;
+}
+
+/* ====================== */
+/* Code Demos Section     */
+/* ====================== */
+
+/* Section Code Demos */
+#code-demos {
+  padding: 4rem 1rem;
+}
+
+#code-demos h2 {
+  text-align: center;
+  /* font-size: 1.8rem; */
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* grid responsivo */
+#code-demos .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  #code-demos .grid {
+    grid-template-columns: repeat(2, 1fr); /* lado a lado */
+  }
+}

@@ -5,7 +5,7 @@ document.querySelectorAll('.year').forEach(el => {
 
 //
 // Header
-fetch("/assets/header/index.html")
+fetch("/a/h/index.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -20,6 +20,6 @@ fetch("/assets/header/index.html")
     }
 
     const script = document.createElement("script");
-    script.src = "/assets/header/script.js";
+    script.src = "/a/h/script.js";
     document.body.appendChild(script);
   });
