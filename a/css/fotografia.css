@@ -1,18 +1,18 @@
 /* ===================== */
 /* Cards (Projetos, Fotografia, Certificados) */
 /* ===================== */
-.card {
-    background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
+.article {
+  background-color: rgba(15, 22, 32, 0.356) !important; /* leve transparência */
   backdrop-filter: blur(10px) !important;
   color: var(--c-white);
   box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
   border-radius: 1rem;
 }
 
-.card img {
+.article img {
   filter: brightness(0.8);
 }
 
-.card h3 {
+.article h3 {
   color: var(--c-black);
 }

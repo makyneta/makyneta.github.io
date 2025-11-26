@@ -6,12 +6,3 @@ box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
   backdrop-filter: blur(10px) !important;
 color: var(--c-white);
 }
-
-
-
-/* Footer ajustado para o tema escuro */
-footer {
-  color: var(--c-white);
-  background-color: rgba(15, 22, 32, 0.349); /* mesmo fundo */
-  backdrop-filter: blur(5px);              /* mesmo blur */
-}
