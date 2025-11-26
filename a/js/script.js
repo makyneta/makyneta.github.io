@@ -10,17 +10,6 @@ fetch("/a/h/header.html")
   .then(data => {
     document.getElementById("header").innerHTML = data;
 
-    function loadCSS(href) {
-      if (!document.querySelector(`link[href="${href}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href;
-        document.head.appendChild(link);
-      }
-    }
-
-    loadCSS("/a/h/styles.css");
-
     const script = document.createElement("script");
     script.src = "/a/h/script.js";
     document.body.appendChild(script);
