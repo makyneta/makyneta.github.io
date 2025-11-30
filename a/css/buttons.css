@@ -1,0 +1,48 @@
+/* * Estilos Base para Botões de Ação (Aplicável a Repositório e Demo)
+ * Define o layout, tamanho, borda e transições
+ */
+.btn-repo-outline {
+    /* Layout e Espaçamento */
+    display: inline-block;
+    margin-top: 0.75rem; /* 12px */
+    margin-right: 0.75rem; /* 12px */
+    padding: 0.5rem 1rem; /* Preenchimento interno */
+    
+    /* Tipografia */
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600; /* Semi-bold */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    cursor: pointer;
+    
+    /* Design */
+    border-radius: 0.5rem; /* Bordas arredondadas (8px) */
+    border-width: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Sombra suave */
+    
+    /* Transições para efeitos hover */
+    transition: all 0.2s ease-in-out;
+}
+
+/* * Estilos Específicos: Botão de Repositório (Cinza/Neutro)
+ */
+.btn-repo {
+    border-color: #d1d5db; /* Cinza-300 */
+    color: #4b5563; /* Cinza-600 */
+    background-color: transparent;
+}
+.btn-repo:hover {
+    background-color: #f3f4f6; /* Cinza-100 (Levemente mais escuro) */
+    border-color: #9ca3af; /* Cinza-400 */
+}
+
+/* * Estilos Específicos: Botão de Demonstração (Azul/Destaque)
+ */
+.btn-demo {
+    border-color: #3b82f6; /* Azul-500 */
+    color: #2563eb; /* Azul-600 */
+    background-color: transparent;
+}
+.btn-demo:hover {
+    background-color: #eff6ff; /* Azul-50 (Fundo claro ao passar o mouse) */
+    border-color: #2563eb; /* Azul-600 */
+}

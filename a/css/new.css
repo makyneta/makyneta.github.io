@@ -1,0 +1,526 @@
+/* 1. Reset, Fontes e Variáveis */
+:root {
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --color-gray: #666666;
+    --font-family: 'Poppins', sans-serif;
+    --side-padding: 80px; /* Padding lateral padrão para desktop */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: opacity 0.3s;
+}
+
+/* 2. Placeholder do Header (TOP NAV) - Usado para posicionar o texto do cabeçalho */
+.top-nav-placeholder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Padding para mobile */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20; /* Sempre acima de tudo */
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+.menu-icon {
+    font-size: 0.8em;
+}
+
+
+/* 3. Layout Principal (Mobile-First) */
+.hero-section, #fullscreen-hero {
+    /* **CHAVE:** Garantir que a altura é definida pelo CONTEÚDO */
+    min-height: auto; 
+    height: auto;
+    width: 100%;
+    position: relative; /* Mantém a posição relativa para os filhos absolutos */
+    overflow: hidden; 
+    
+    /* Espaço grande para garantir separação da próxima seção */
+    padding-bottom: 60px; 
+    padding-top: 50px; 
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column; 
+    padding: 0 20px;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* 4. Texto de Fundo (Designer) */
+.background-text {
+    position: absolute;
+    top: 35vh; /* Ajustado para começar na parte superior do ecrã */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18vw; 
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.035);
+    pointer-events: none;
+    z-index: 5;
+    white-space: nowrap;
+}
+
+/* 5. Coluna de Imagem (Order 1: No topo do telemóvel) */
+.image-column {
+    order: 1; 
+    padding-top: 50px; /* Espaço por baixo do menu */
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 450px; /* Aumentado ligeiramente */
+    height: auto;
+    filter: grayscale(100%) contrast(1.1) brightness(1.05);
+    display: block;
+    object-fit: cover;
+}
+
+/* 6. Coluna de Texto (Order 2: Abaixo no telemóvel) */
+.text-column {
+    order: 2;
+    padding-top: 30px; 
+    padding-bottom: 0; 
+    max-width: 100%;
+}
+
+.name-subtitle {
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 2px; /* Mais espaçamento como no original */
+    color: var(--color-gray);
+    margin-bottom: 5px;
+}
+
+.headline {
+    font-size: 1.8em !important; /* Ligeiramente maior */
+    line-height: 1.1; 
+    font-weight: 900; 
+    margin-bottom: 20px;
+    color: #2e2e2e;
+    text-align: justify;
+}
+
+.description {
+    font-size: 1em;
+    color: var(--color-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 450px;
+    text-align: justify;
+}
+
+/* 7. Ações (Links) */
+.actions {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.primary-action {
+    font-weight: 700; 
+}
+
+.secondary-action {
+    font-weight: 500; 
+    /* No original, 'Read About Me' não tem sublinhado por defeito, é apenas um link mais claro */
+}
+
+.or-separator {
+    color: var(--color-gray);
+    font-size: 0.9em;
+    margin: 0 10px;
+}
+
+/* 8. Ícones Fixos (Estilização Fiel) */
+.contact-icon-wrapper {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-icon-wrapper a { color: var(--color-light); font-size: 1.2em; }
+
+.scroll-indicator-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-arrow {
+    width: 8px; height: 8px; border: 2px solid var(--color-dark);
+    border-width: 0 2px 2px 0; display: inline-block; padding: 3px;
+    transform: rotate(45deg);
+}
+
+
+/* 9. MEDIA QUERY: Layout de Duas Colunas para Desktop/Tablet */
+@media (min-width: 992px) {
+    /* Reposiciona o Header Placeholder */
+    .top-nav-placeholder {
+        padding: 40px var(--side-padding); /* Aumenta o padding no desktop */
+    }
+
+    /* Layout Grid Desequilibrado: 40% (Texto) / 60% (Imagem) */
+    .content-area {
+        display: grid;
+        grid-template-columns: 4fr 6fr; 
+        min-height: 100vh;
+        max-width: none; /* Permite que o grid se estique para a largura total */
+        align-items: center;
+        padding: 0;
+    }
+
+    /* Coluna de Texto (Esquerda) */
+    .text-column {
+        /* Adiciona padding lateral do lado esquerdo para o texto */
+        padding-left: var(--side-padding);
+        padding-right: 50px; /* Margem interna para a imagem */
+        align-self: center; 
+        grid-column: 1 / 2;
+    }
+    
+    .headline {
+        font-size: 4.5em; 
+        line-height: 1; 
+    }
+
+    /* Texto de Fundo Reposicionado */
+    .background-text {
+        font-size: 7vw; 
+        top: 55%;
+        left: 20%; 
+        transform: translate(-50%, -50%);
+    }
+    
+    /* Coluna de Imagem (Direita) - A chave do visual */
+    .image-column {
+        grid-column: 2 / 3;
+        order: 2; 
+        padding: 0;
+        align-self: stretch; 
+        justify-content: flex-start; /* Alinha a imagem à esquerda da sua coluna (60%) */
+    }
+
+    .profile-photo {
+        width: 100%;
+        max-width: 100%;
+        height: 100vh; /* Ocupa a altura total da viewport (Vertical) */
+        object-position: top center; 
+    }
+    
+    /* Ícones Reposicionados (Ajustados ao novo padding) */
+    .contact-icon-wrapper { bottom: 50px; left: var(--side-padding); }
+    .scroll-indicator-wrapper { bottom: 50px; right: var(--side-padding); }
+}
+
+
+
+/* ========================================
+   SEÇÃO: ESTUDOS DE CASO (Case Studies)
+   ======================================== */
+
+.case-studies-section {
+    width: 100%;
+    /* Padding para mobile (20px) */
+    padding: 100px 20px 50px 20px; 
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 1. Cabeçalho da Seção */
+.section-subtitle {
+    font-size: 0.8em; font-weight: 500; letter-spacing: 2px;
+    color: var(--color-gray); margin-bottom: 5px; text-transform: uppercase;
+}
+.section-title {
+    font-size: 3em; font-weight: 900; line-height: 1.1; margin-bottom: 50px; color: var(--color-gray);
+}
+
+/* 2. Grid e Cartões (Mobile-First) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+}
+
+.project-card {
+    /* ... (estilos anteriores como border-radius, overflow: hidden, background-size, etc.) ... */
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 20px;
+    color: white;
+    background-color: transparent !important; /* Certifica-se de que não haja cor de fundo sólida */
+
+    /* **Novos estilos para o efeito de escurecimento e hover** */
+    position: relative; /* Essencial para posicionar o pseudo-elemento */
+    z-index: 1; /* Garante que o conteúdo (texto) fique acima do overlay */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos gerais do cartão */
+}
+
+/* Pseudo-elemento para o overlay de escurecimento */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Cor de fundo inicial (escurecimento leve) */
+    background-color: rgba(0, 0, 0, 0.6); /* 60% de opacidade preta */
+    z-index: -1; /* Coloca o overlay atrás do conteúdo, mas acima da imagem de fundo */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito de hover */
+    /* Garante que o overlay respeite as bordas arredondadas do cartão */
+    border-radius: inherit; /* Herda o border-radius do elemento pai */
+}
+
+/* Efeito ao passar o rato (hover) */
+.project-card:hover::before {
+    /* Escurece ainda mais ao passar o rato */
+    background-color: rgba(0, 0, 0, 0.7); /* 70% de opacidade preta */
+}
+
+/* Opcional: Efeitos de destaque no hover do cartão */
+.project-card:hover {
+    transform: translateY(-5px); /* Move o cartão ligeiramente para cima */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
+/* Garante que o texto e outros elementos dentro do cartão tenham um z-index maior
+   para sempre ficarem visíveis sobre o overlay */
+.project-card .project-info,
+.project-card .project-title,
+.project-card .view-case-study-link {
+    position: relative;
+    z-index: 2; /* Garante que estejam acima do overlay (z-index -1) */
+}
+
+/* Se você ainda tiver o .project-visual ou .dark-card::after do código anterior,
+   certifique-se de que não entre em conflito.
+   Sugiro remover o .project-card.dark-card::after se você estiver usando este novo ::before. */
+.project-card.dark-card::after {
+    display: none; /* Desativa o overlay antigo se este novo for suficiente */
+}
+
+.dark-card { 
+    background-color: #171717; /* Preto ligeiramente mais suave */
+    color: var(--color-light); 
+}
+
+.project-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.project-year { font-size: 0.9em; font-weight: 500; opacity: 0.7; }
+
+/* Etiqueta 'NEW' (Círculo Branco) */
+.new-tag {
+    background-color: transparent; border: 2px solid var(--color-light); 
+    color: var(--color-light); border-radius: 50%; padding: 7px 10px;
+    font-size: 0.7em; font-weight: 400;
+}
+
+.project-title {
+    font-size: 1.8em; font-weight: 900; line-height: 1.2; z-index: 10;
+    margin-bottom: 10px; 
+}
+
+/* 3. Visuais (Imagens de Fundo) */
+.project-visual {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 80%; 
+    background-size: cover; background-repeat: no-repeat; opacity: 0.8; 
+    transition: opacity 0.3s;
+}
+/* Substitua as URLs pelas suas imagens */
+.basic-ux-visual { background-image: url('basic-ux-visual.png'); background-position: bottom center; }
+.triniso-visual { background-image: url('triniso-visual.png'); background-position: bottom center; }
+
+
+/* 4. COMPORTAMENTO DO LINK (Mobile vs. Desktop) */
+
+/* ESTADO PADRÃO (MOBILE): Link VISÍVEL e sem animação */
+.view-case-study-link {
+    color: var(--color-light); 
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 10px; 
+    
+    opacity: 1; /* Visível no mobile */
+    transform: translateY(0); /* Sem deslocamento no mobile */
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 10;
+}
+
+.view-case-study-link .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s; 
+}
+
+/* Para garantir feedback no toque em mobile (simula hover) */
+.project-card:active .view-case-study-link .arrow {
+    transform: translateX(5px); 
+}
+
+
+/* 5. MEDIA QUERY: Desktop (Comportamento de Hover) */
+@media (min-width: 992px) {
+    .case-studies-section {
+        padding-left: var(--side-padding); 
+        padding-right: var(--side-padding);
+    }
+    .projects-grid {
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px; 
+    }
+    .section-title { font-size: 4em; }
+    .project-card { 
+        height: 600px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .project-card:hover {
+        transform: translateY(-5px); /* Efeito de elevação do cartão */
+    }
+    .project-title { margin-bottom: 0; font-size: 2em; }
+
+    /* ESTADO PADRÃO NO DESKTOP: O link está ESCONDIDO e posicionado para a animação */
+    .view-case-study-link {
+        opacity: 0;
+        transform: translateY(10px); 
+    }
+    
+    /* Efeito de HOVER NO DESKTOP */
+    .project-card:hover .view-case-study-link {
+        opacity: 1; /* Torna o link visível */
+        transform: translateY(0); /* Move para a posição final */
+    }
+    
+    .project-card:hover .view-case-study-link .arrow {
+        transform: translateX(5px); /* Efeito de seta deslizante */
+    }
+}
+
+
+
+.newsletter-section {
+    background-color: #dedede; /* Fundo ligeiramente mais claro que o footer */
+    color: #202020;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.newsletter-subtitle {
+    font-size: 1.1em;
+    color: #505050;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: 2px solid #d8d8d8;
+    background-color: #f2f2f2;
+    color: #1a1a1a;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #00BFFF; /* Destaque na cor principal */
+    outline: none;
+}
+
+.subscribe-button {
+    background-color: #00BFFF;
+    color: #eeeeee;
+    font-weight: 700;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #0096ff;
+    transform: translateY(-2px);
+}
+
+.newsletter-privacy {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #777777;
+}
+
+/* Responsividade para o Formulário */
+@media (max-width: 600px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .newsletter-form input[type="email"], .subscribe-button {
+        width: 100%;
+    }
+}
