@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Tomás Mota</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define global font and ensure page fills the viewport height */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9fafb; /* bg-gray-50 */
+            color: #1f2937; /* text-gray-800 */
+        }
+        
+        /* Professional button style (Blue) */
+        .btn-primary {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            cursor: pointer;
+            
+            background-color: #10b981; /* Emerald-500 (A sharp, professional color) */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3), 0 2px 4px -2px rgba(16, 185, 129, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #059669; /* Emerald-600 */
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3), 0 4px 6px -4px rgba(16, 185, 129, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main card container for the 404 message -->
+    <div class="text-center max-w-lg p-8 bg-white rounded-xl shadow-2xl transform hover:scale-[1.01] transition duration-300">
+        <!-- Error Code/Title -->
+        <span class="text-9xl font-extrabold text-gray-300 block mb-4 select-none">404</span>
+        
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-2">
+            Page Not Found.
+        </h1>
+        <h2 class="text-xl font-semibold text-gray-600 mb-6">
+            But I found an opportunity for you!
+        </h2>
+        
+        <!-- Recruiter-focused message -->
+        <p class="text-gray-500 mb-10 text-lg">
+            This URL seems to be broken, but my code isn't!
+            <br class="hidden sm:block">
+            Let's re-route you to where the good stuff is.
+        </p>
+
+        <!-- Call to Action (CTA) button to the Homepage/Portfolio -->
+        <a href="/" class="btn-primary">
+            Explore My Portfolio (Success Path)
+        </a>
+        
+        <!-- Small supportive message for debugging -->
+        <p class="mt-8 text-sm text-gray-400">
+            P.S. If you're looking for something specific, please check the main navigation.
+        </p>
+    </div>
+
+</body>
+</html>
