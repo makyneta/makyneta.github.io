@@ -1,0 +1,111 @@
+/* --- ESTILOS GERAIS (TEMA CLARO/BRANCO) --- */
+body {
+    background-color: #0d0d0d;
+    color: #f4f4f4;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/* ... (Outros estilos de corpo/hero omitidos por brevidade, mas mantenha-os) ... */
+
+/* 1. Grelha Responsiva e Espaçamento */
+.photoshoot-section {
+    padding: 3rem 1.5rem; /* Ajuste o padding se necessário */
+}
+
+.photoshoot-grid {
+    display: grid;
+    /* 3 colunas padrão para telas pequenas (Mobile First) */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; /* Espaçamento entre itens */
+}
+
+/* NOVO: Estilo para a tag <a> (Link) */
+.photo-link {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+    
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+    cursor: pointer;
+    z-index: 1; 
+}
+
+/* Efeito de HOVER (Zoom para fora no link) */
+.photo-link:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2); 
+    z-index: 10;
+}
+
+/* 3. Item da Foto (Visual e Overflow) */
+.photo-item {
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 0.75rem; /* Adicionado rounded-xl aqui */
+    position: relative; /* ESSENCIAL para posicionar o .photo-info */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: #000;
+}
+
+/* 4. Imagem em Si (Formato Nativo) */
+.photo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* NOVO: Estilos da Caixa de Informação */
+.photo-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    background: rgba(0, 0, 0, 0.75); /* Fundo preto semi-transparente */
+    color: white;
+    font-size: 0.9em;
+    line-height: 1.3;
+    
+    /* Configuração padrão (Mobile First): VISÍVEL NO MOBILE */
+    opacity: 1; 
+    transform: translateY(0); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.photo-info strong {
+    font-weight: bold;
+    display: block;
+    font-size: 1.1em;
+}
+
+
+/* 🖥️ Media Query para Telas Grandes (PC/Desktop) */
+@media (min-width: 1024px) {
+    .photoshoot-grid {
+        /* 6 colunas para telas maiores (imagens menores) */
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    /* Regras para Desktop: OCULTAR POR PADRÃO */
+    .photo-info {
+        opacity: 0; /* Oculta o texto */
+        /* Move o texto para baixo para que pareça "entrar" quando aparece */
+        transform: translateY(100%); 
+    }
+    
+    /* Regras para Desktop: MOSTRAR APENAS AO FAZER HOVER */
+    .photo-link:hover .photo-info {
+        opacity: 1; /* Mostra o texto */
+        transform: translateY(0); /* Move para a posição original */
+    }
+
+    /* Manter o hover da imagem no link, pois o link contém tudo */
+    .photo-link:hover {
+        /* Garante que o zoom se aplique */
+        transform: scale(1.05);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2); 
+        z-index: 10;
+    }
+}

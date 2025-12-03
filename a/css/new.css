@@ -1,8 +1,8 @@
 /* 1. Reset, Fontes e Variáveis */
 :root {
-    --color-dark: #000000;
-    --color-light: #ffffff;
-    --color-gray: #666666;
+    --color-dark: #ffffff; 
+    --color-light: #000000;
+    --color-gray: #b2b2b2;
     --font-family: 'Poppins', sans-serif;
     --side-padding: 80px; /* Padding lateral padrão para desktop */
 }
@@ -82,7 +82,7 @@ a {
     font-size: 18vw; 
     font-weight: 900;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.035);
+    color: rgba(255, 255, 255, 0.035);
     pointer-events: none;
     z-index: 5;
     white-space: nowrap;
@@ -126,7 +126,7 @@ a {
     line-height: 1.1; 
     font-weight: 900; 
     margin-bottom: 20px;
-    color: #2e2e2e;
+    color: #d0d0d0;
     text-align: justify;
 }
 
@@ -294,7 +294,7 @@ a {
     background-repeat: no-repeat;
     min-height: 400px;
     padding: 20px;
-    color: white;
+    color: rgb(57, 57, 57);
     background-color: transparent !important; /* Certifica-se de que não haja cor de fundo sólida */
 
     /* **Novos estilos para o efeito de escurecimento e hover** */
@@ -336,6 +336,7 @@ a {
 .project-card .project-info,
 .project-card .project-title,
 .project-card .view-case-study-link {
+    color: #ffffff;
     position: relative;
     z-index: 2; /* Garante que estejam acima do overlay (z-index -1) */
 }
@@ -348,7 +349,7 @@ a {
 }
 
 .dark-card { 
-    background-color: #171717; /* Preto ligeiramente mais suave */
+    background-color: #c3c3c3; /* Preto ligeiramente mais suave */
     color: var(--color-light); 
 }
 
@@ -443,8 +444,8 @@ a {
 }
 
 .newsletter-section {
-    background-color: #dedede; /* Fundo ligeiramente mais claro que o footer */
-    color: #202020;
+    background-color: #212121; /* Fundo ligeiramente mais claro que o footer */
+    color: #494949;
     padding: 80px 5%;
     text-align: center;
 }
@@ -458,12 +459,12 @@ a {
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .newsletter-subtitle {
     font-size: 1.1em;
-    color: #505050;
+    color: #8e8e8e;
     margin-bottom: 30px;
 }
 
@@ -478,9 +479,9 @@ a {
 .newsletter-form input[type="email"] {
     flex-grow: 1;
     padding: 15px 20px;
-    border: 2px solid #d8d8d8;
-    background-color: #f2f2f2;
-    color: #1a1a1a;
+    border: 2px solid #707070;
+    background-color: #494949;
+    color: #ffffff;
     border-radius: 5px;
     font-size: 1em;
 }
@@ -492,7 +493,7 @@ a {
 
 .subscribe-button {
     background-color: #00BFFF;
-    color: #eeeeee;
+    color: #000000;
     font-weight: 700;
     padding: 15px 30px;
     border: none;

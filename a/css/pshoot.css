@@ -1,0 +1,57 @@
+body {
+    padding-top: 90px; /* Espaço para o header fixo */  
+}
+
+/* 1. Grelha Responsiva e Espaçamento */
+.photoshoot-grid {
+    display: grid;
+    /* 3 colunas padrão para telas pequenas (Mobile First) */
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+/* 2. Container da Foto (Removido o aspect-ratio para permitir formato nativo) */
+.photo-container {
+    /* REMOVIDO: aspect-ratio: 4 / 3; */
+    
+    /* Configura o hover para o container, garantindo que o zoom seja para fora */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+    cursor: pointer;
+    z-index: 1; 
+}
+
+/* Efeito de HOVER (Zoom para fora no container) */
+.photo-container:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do bloco inteiro */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2); 
+    z-index: 10;
+}
+
+/* 3. Item da Foto (Visual e Overflow) */
+.photo-item {
+    width: 100%;
+    /* REMOVIDO: height: 100%; - Deixamos a altura ser definida pelo conteúdo (a imagem) */
+    overflow: hidden; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. Imagem em Si (Formato Nativo e Não Esticada) */
+.photo-img {
+    width: 100%;
+    /* ESSENCIAL: Permite que a altura seja a da imagem original, mantendo a proporção. */
+    height: auto; 
+    
+    /* O object-fit não é estritamente necessário agora, mas mantemos o contain se 
+       precisarmos de padding, ou simplesmente o removemos para um comportamento padrão.
+       Se a imagem tiver 100% de width e height: auto, ela manterá a proporção. */
+    /* object-fit: cover; - REMOVIDO/SUBSTITUÍDO */
+    display: block; 
+}
+
+
+/* 📱 Media Query para Telas Grandes (lg) - 6 COLUNAS */
+@media (min-width: 1024px) {
+    .photoshoot-grid {
+        /* 6 colunas para telas maiores (imagens menores) */
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

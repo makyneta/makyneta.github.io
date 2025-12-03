@@ -1,7 +1,7 @@
         /* --- ESTILOS GERAIS (TEMA CLARO/BRANCO) --- */
         body {
-            background-color: #ffffff; 
-            color: #333333; 
+            background-color: #0d0d0d;; 
+            color: #f4f4f4;; 
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -13,7 +13,7 @@
             padding: 0 5%;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: #ffffff; 
+            background-color: #0d0d0d;
             padding-bottom: 80px;
         }
 
@@ -21,14 +21,12 @@
         .page-hero {
             padding: 80px 0 50px 0;
             text-align: center;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 40px;
         }
 
         .page-main-title {
             font-size: 3em;
             font-weight: 800;
-            color: #222222; 
+            color: #ffffff; 
             margin-bottom: 10px;
             letter-spacing: -1px;
         }
@@ -37,7 +35,7 @@
             font-size: 1.3em;
             max-width: 800px;
             margin: 0 auto;
-            color: #555555; 
+            color: #acacac; 
         }
 
         /* --- ESTILOS DO GRID DE PROJETOS (Card Gallery) --- */
@@ -65,13 +63,13 @@
         }
 
         .card-content {
-            background-color: #f9f9f9 !important;
+            background-color:  #1c1c1c !important;
             padding: 16px !important;
             text-align: left !important;
             border-radius: 12px !important;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08) !important;
             height: 100% !important;
-            border: 1px solid #eee !important;
+            border: 1px solid #000000 !important;
         }
 
         .card-image-container {
@@ -101,14 +99,14 @@
         .card-title {
             font-size: 1.2em !important;
             font-weight: 700 !important;
-            color: #222 !important;
+            color: #ffffff !important;
             margin: 0 !important;
         }
 
         .card-category {
             font-size: 0.8em !important; 
             opacity: 0.7 !important;
-            color: #555 !important;
+            color: #c5c5c5 !important;
             margin-top: 5px !important;
             display: block !important;
         }

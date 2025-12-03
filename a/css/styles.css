@@ -2,16 +2,16 @@
 /* Paleta base personalizada (branco, cinza, preto, vermelho, azul, amarelo) */
 /* ===================== */
 :root {
-  --c-white: #ffffff;
+  --c-white: #000000;
   --c-white2: #eeeeee;
-  --c-black: #000000;
+  --c-black: #ffffff;
   --c-gray: #2b2f36;
   --c-gray-2: #3a3f46;
   --c-red: #ff3b3b;
   --c-blue: #1a73ff;
   --c-yellow: #ffd43b;
-    --color-dark: #000000;
-    --color-light: #ffffff;
+    --color-dark: #ffffff;
+    --color-light: #000000;
     --color-gray: #666666;
     --font-family: 'Poppins', sans-serif;
     --side-padding: 80px; /* Padding lateral padrão para desktop */
