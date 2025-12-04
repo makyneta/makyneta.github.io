@@ -7,13 +7,13 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Tomás Mota's Website">
     <meta property="og:type" content="website">
-    <link rel="icon" href="/a/i/favicon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="/a/css/stt.css">
-    <link rel="stylesheet" href="/a/css/new.css">
-    <link rel="stylesheet" href="/a/css/footer.css">
+    <link rel="icon" href="/assets/images/favicon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="/assets/styles/stt.css">
+    <link rel="stylesheet" href="/assets/styles/new.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/a/js/script.js"></script>
+    <script src="/assets/scripts/script.js"></script>
     <title>Tomás Mota</title>
 </head>
 <body>
@@ -38,12 +38,12 @@
                 <div class="actions">
                     <a href="#projects" class="action-link primary-action">View Portfolio</a>
                     <span class="or-separator">or</span>
-                    <a href="i/bio" target="_blank" class="action-link primary-action">Read About Me</a>
+                    <a href="/about" target="_blank" class="action-link primary-action">Read About Me</a>
                 </div>
             </div>
 
             <div class="image-column">
-                <img src="a/i/favicon.jpg" alt="Damian Watracz - Web & UI Designer" class="profile-photo">
+                <img src="assets/images/favicon.jpg" alt="Damian Watracz - Web & UI Designer" class="profile-photo">
             </div>
         </div>
         
@@ -61,27 +61,27 @@
     </div>
     <div class="projects-grid">
         
-        <article class="project-card dark-card" data-src="/a/i/mp4amtssfwb.jpg">
+        <article class="project-card dark-card" data-src="assets/images/mp4amtssfwb.jpg">
             <div class="project-info">
                 <p class="project-year">2024 — TODAY</p>
                 <span class="project-tag new-tag">NEW</span>
             </div>
             <h3 class="project-title">Dev Fullstack</h3>
             
-            <a href="dev" class="view-case-study-link">
+            <a href="/dev" class="view-case-study-link">
                 All My Work As A Dev Fulstack<span class="arrow">→</span>
             </a>
             
             <div class="project-visual basic-ux-visual"></div>
         </article>
 
-        <article class="project-card dark-card" data-src="/a/i/1010022031452.jpg">
+        <article class="project-card dark-card" data-src="assets/images/1010022031452.jpg">
             <div class="project-info">
                 <p class="project-year">2024 - TODAY</p>
             </div>
             <h3 class="project-title">Photographer</h3>
             
-            <a href="photo" class="view-case-study-link">
+            <a href="/photo" class="view-case-study-link">
                 All My Work As A Photographer<span class="arrow">→</span>
             </a>
             
@@ -109,67 +109,13 @@
     </div>
 </section>
 
-<footer class="refined-footer">
-    <div class="footer-cta-container">
-        <h2 class="refined-cta-title">Your multidisciplinary project starts here.</h2>
-        
-        <p class="cta-role-list">
-            Fullstack Developer | Photographer | Light and Sound Technician | IT
-        </p>
-        
-        <a href="/i/contact" target="_blank" class="cta-striking-button">
-            Hire the Role You Want →
-        </a>
+<div id="footer"></div>
 
-        <div class="cta-quick-contacts">
-            <p>Or contact me directly:</p>
-            <p>
-                <a href="mailto:tomasmotastudios@gmail.com" class="contact-link">tomasmotastudios@gmail.com</a>
-                <span class="contact-separator">|</span>
-                <a href="tel:+351913936776" class="contact-link">+351 913 936 776</a>
-            </p>
-        </div>
-    </div>
-    
-    <div class="footer-sub-bar">
-        <div class="social-icons">
-            <!-- Instagram -->
-            <a href="/r/instagram" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram social-icon instagram"></i>
-            </a>
-            <!-- GitHub -->
-            <a href="/r/github" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github social-icon github"></i>
-            </a>
-            <!-- WhatsApp -->
-            <a href="/r/whatsapp" target="_blank" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp social-icon whatsapp"></i>
-            </a>
-        </div>
-        
-        <p class="copyright-refined">&copy; 2024 - <span id="current-year-refined"></span> Tomás Mota Studios. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<script>
-    document.getElementById('current-year-refined').textContent = new Date().getFullYear();
-</script>
-
-<script>
-    // Script para atualizar o ano automaticamente
-    document.getElementById('current-year-pro').textContent = new Date().getFullYear();
-</script>
-
-    <a id="scroll-to-top" title="Go to Top"></a>
-    <script src="/a/js/stt.js"></script>
+    <a id="scroll-to-top"></a>
+    <script src="/assets/scripts/stt.js"></script>
 
 </body>
 <script>
-    // Atualiza todos os elementos com a classe 'year'
-    document.querySelectorAll('.year').forEach(el => {
-        el.textContent = new Date().getFullYear();
-    });
-
 document.addEventListener('DOMContentLoaded', function() {
         // Seleciona todos os cartões de projeto
         const projectCards = document.querySelectorAll('.project-card');
