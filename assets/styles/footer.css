@@ -1,183 +1,35 @@
-/* --- Estilos do Footer Minimalista com CTA Impactante --- */
-
 .refined-footer {
-    /* Fundo Escuro Sólido */
-    background-color: #111111; 
-    color: #f0f0f0; 
-    padding: 70px 5% 40px 5%; /* Mais padding vertical */
+    /* Usando cores do tema Suave/Bege */
+    background-color: var(--text-dark); /* Fundo escuro */
+    color: var(--text-light); 
+    padding: 8px 5%; /* Padding compacto (igual ao anterior) */
     text-align: center;
-    /* Linha de destaque para impacto sutil */
-    border-top: 5px solid #00BFFF; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ajustado para ser mais suave */
 }
 
-/* Seção de Chamada para Ação (CTA) Principal */
-.footer-cta-container {
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-}
-
-.refined-cta-title {
-    font-size: 1.8em; 
-    font-weight: 800; 
-    margin-bottom: 10px;
-    line-height: 1.2;
-    color: #ffffff;
-}
-
-/* Estilo para listar as funções e dar ênfase a todas */
-.cta-role-list {
-    font-size: 1.15em;
-    font-weight: 500;
-    color: #00BFFF; /* A cor de destaque para as suas funções */
-    margin-bottom: 30px; 
-    line-height: 1.5;
-    letter-spacing: 0.5px; 
-}
-
-/* Estilo para o Botão CTA (o elemento mais chamativo) */
-.cta-striking-button {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.1em; 
-    font-weight: 700;
-    
-    /* Cores Invertidas: Fundo Chamativo, Texto de Alto Contraste */
-    background-color: #00BFFF; 
-    color: #111111; 
-    border: 2px solid #00BFFF;
-    padding: 15px 35px;
-    border-radius: 5px;
-    
-    /* Sombra para fazer o botão "saltar" */
-    box-shadow: 0 5px 20px rgba(0, 191, 255, 0.4);
-    transition: all 0.3s ease;
-}
-
-.cta-striking-button:hover {
-    background-color: #111111; /* Inverte as cores no hover */
-    color: #00BFFF;
-    border-color: #00BFFF;
-    transform: translateY(-3px); /* Efeito de elevação sutil */
-    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.6);
-}
-
-/* NOVO: Estilos para Contatos Rápidos Abaixo do CTA */
-.cta-quick-contacts {
-    margin-top: 30px; 
-    font-size: 0.95em;
-}
-
-.cta-quick-contacts p {
-    margin: 5px 0; /* Remove margens extras entre parágrafos de contato */
-}
-
-.cta-quick-contacts p:first-child {
-    color: #aaaaaa; /* Texto "Ou contacte..." mais suave */
-    margin-bottom: 5px;
-}
-
-.contact-link {
-    color: #f0f0f0; /* Branco para alto contraste */
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.contact-link:hover {
-    color: #00BFFF; /* Electric Blue no hover para indicar interatividade */
-}
-
-.contact-separator {
-    color: #555555; /* Separador discreto */
-    margin: 0 10px;
-}
-
-/* Barra Inferior (Social e Copyright) */
-.footer-sub-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
+/* 🟢 SIMPLIFICADO: Garante que o link do copyright fique no centro */
+.footer-content-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; 
+    text-align: center; /* Centraliza o conteúdo */
 }
-
-.social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
-
-        .social-icon {
-            font-size: 1.4em;
-            color: #555555; /* Cor padrão cinza */
-            transition: color 0.3s ease, transform 0.2s;
-            cursor: pointer;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.2);
-        }
-
-        /* Cores Oficiais no Hover */
-        .social-icon.linkedin:hover {
-            color: #0A66C2; /* LinkedIn Blue */
-        }
-        .social-icon.github:hover {
-            color: #e9dfdf; /* GitHub Black */
-        }
-        .social-icon.instagram:hover {
-            /* Usamos um rosa que representa bem o Instagram */
-            color: #E1306C; 
-        }
-        .social-icon.whatsapp:hover {
-            /* Usamos um verde que representa bem o WhatsApp */
-            color: #00c103; 
-        }
-        .social-icon.email:hover {
-            color: #DD4B39; /* Gmail/Email Red */
-        }
 
 .copyright-refined {
-    font-size: 0.85em;
-    color: #555555; 
-    margin: 0;
+    display: inline-block; /* Permite hover/margin sem quebrar a linha */
+    font-size: 0.9em;
+    color: #aaaaaa; /* Cor cinza suave */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 5px 0;
 }
 
-/* Media Query para responsividade */
+.copyright-refined:hover {
+    color: var(--primary-color);
+}
+
+/* Media Query para Mobile - Apenas centralização, sem necessidade de complexidade flexbox */
 @media (max-width: 768px) {
     .refined-footer {
-        padding: 50px 5% 20px 5%;
-    }
-    .refined-cta-title {
-        font-size: 2em;
-    }
-    .cta-role-list {
-        font-size: 1em;
-    }
-    .footer-sub-bar {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .social-icons-refined {
-        order: -1; 
-    }
-    .cta-striking-button {
-        padding: 12px 25px;
-    }
-    /* Responsividade para Contatos */
-    .cta-quick-contacts p:last-child {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    .contact-separator {
-        display: none; /* Esconde o separador | em telas pequenas */
+        padding: 10px 5%;
     }
 }

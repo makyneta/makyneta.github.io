@@ -597,44 +597,15 @@
     </main>
     
     <!-- RODAPÉ (FOOTER) -->
-<footer class="refined-footer">
-    <div class="footer-cta-container">
-        <h2 class="refined-cta-title">Your multidisciplinary project starts here.</h2>
-        
-        <p class="cta-role-list">
-            Fullstack Developer | Photographer | Light and Sound Technician | IT
-        </p>
-        
-        <a href="/about" target="_blank" class="cta-striking-button">
-            Hire the Role You Want →
+<footer class="refined-footer" id="main-copyright-footer">
+    <div class="footer-content-wrapper">
+        <a href="https://makyneta.github.io" class="copyright-refined">
+            Copyright &copy; 2024 - <span id="current-year-refined"></span> Tomás Mota Studios. All Rights Reserved.
         </a>
-
-        <div class="cta-quick-contacts">
-            <p>Or contact me directly:</p>
-            <p>
-                <a href="mailto:tomasmotastudios@gmail.com" class="contact-link">tomasmotastudios@gmail.com</a>
-                <!-- <span class="contact-separator">|</span> -->
-                <!-- <a href="tel:+351913936776" class="contact-link">+351 913 936 776</a> -->
-            </p>
-        </div>
-    </div>
-    
-    <div class="footer-sub-bar">
-        <div class="social-icons">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/iamtomasmota" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram social-icon instagram"></i>
-            </a>
-            <!-- GitHub -->
-            <a href="https://github.com/makyneta" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github social-icon github"></i>
-            </a>
-        </div>
-        
-        <p class="copyright-refined">&copy; 2024 - <span id="current-year-refined"></span> Tomás Mota Studios. All Rights Reserved.</p>
     </div>
 </footer>
 
+<script>document.getElementById('current-year-refined').textContent = new Date().getFullYear();</script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script>
