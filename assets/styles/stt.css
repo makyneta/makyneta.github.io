@@ -20,8 +20,8 @@
             
             /* Sombra Multi-camadas (Efeito de flutuação) */
             box-shadow: 
-                0 4px 12px rgba(255, 255, 255, 0.2), /* Sombra principal */
-                0 0 0 1px rgba(227, 227, 227, 0.1) inset; /* Borda de luz interna */
+                0 4px 12px rgba(255, 255, 255, 0), /* Sombra principal */
+                0 0 0 1px rgba(227, 227, 227, 0) inset; /* Borda de luz interna */
             
             /* Estilo e Seta (Para centralizar a seta) */
             display: flex;
@@ -46,8 +46,8 @@
         #scroll-to-top:hover {
             background-color: rgba(255, 255, 255, 0.2);
             box-shadow: 
-                0 6px 15px rgba(255, 255, 255, 0.3),
-                0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+                0 6px 15px rgba(255, 255, 255, 0),
+                0 0 0 1px rgba(255, 255, 255, 0) inset;
         }
 
         /* Efeito de Clique (Active State) */

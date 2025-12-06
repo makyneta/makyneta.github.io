@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .refined-footer {
     /* Usando cores do tema Suave/Bege */
+    font-family: 'Montserrat', sans-serif !important;
     background-color: var(--text-dark); /* Fundo escuro */
     color: var(--text-light); 
     padding: 8px 5%; /* Padding compacto (igual ao anterior) */
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ajustado para ser mais suave */
+    border-top: 1px solid rgba(255, 255, 255, 0.049); /* Ajustado para ser mais suave */
 }
 
 /* 🟢 SIMPLIFICADO: Garante que o link do copyright fique no centro */
@@ -16,7 +21,7 @@
 
 .copyright-refined {
     display: inline-block; /* Permite hover/margin sem quebrar a linha */
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #aaaaaa; /* Cor cinza suave */
     text-decoration: none;
     transition: color 0.3s ease;
