@@ -1,0 +1,141 @@
+
+    /* ---------------------------------------------------- */
+    /* --------- CSS DE DESKTOP (PRESERVADO) -------------- */
+    /* ---------------------------------------------------- */
+    
+    /* Variáveis de Cores (Definidas para uso em ambos) */
+    :root {
+        --color-black: #000000;
+        --color-white: #ffffff;
+        --primary-red: #3b82f6; 
+        --color-dark-gray: rgba(255, 255, 255, 0.1);
+        --color-bg-sidebar: #020617; 
+        --color-primary: var(--primary-red); 
+        --color-text-light: var(--color-white); 
+        --color-text-muted: #94a3b8; 
+        --color-border: rgba(255, 255, 255, 0.08);
+        --header-bg: rgba(15, 23, 42, 0.95); 
+    }
+
+    /* Estilos Desktop */
+    #main-header { padding: 0 1rem !important; height: 64px; }
+    @media (max-width: 767px) { #main-header { height: auto; padding: 0.75rem 1rem !important; } }
+    .header-brand { color: #fff; text-decoration: none; letter-spacing: 0.03em; }
+    .header-nav { gap: 1.5rem; display: flex; align-items: center; height: 100%; }
+    .nav-link, .nav-btn { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 0 0.75rem; border-radius: 0; position: relative; overflow: visible; display: flex; align-items: center; gap: 0.4rem; background: transparent; transition: color 0.25s ease, transform 0.15s ease; height: 100%; }
+    .nav-link span, .nav-btn span { position: relative; z-index: 2; display: inline-block; }
+    .nav-link::before, .nav-btn::before {
+        content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: linear-gradient(to top, rgba(255,255,255,0.12), rgba(255,255,255,0.12)); transform-origin: bottom; transform: scaleY(0); transition: transform 0.32s cubic-bezier(.2,.9,.2,1); z-index: 1;
+    }
+    .nav-link:hover::before, .nav-link:focus-visible::before, .nav-btn:hover::before, .nav-btn:focus-visible::before { transform: scaleY(1); }
+    .nav-link:hover, .nav-link:focus-visible, .nav-btn:hover, .nav-btn:focus-visible { color: #ffffff; outline: none; }
+    .nav-link, .nav-btn { padding: 0 0.75rem; border-radius: 0; }
+    .nav-link::before, .nav-btn::before { height: auto; }
+    .nav-btn { border: none; background: transparent; cursor: pointer; }
+    .nav-btn svg { transition: transform .28s ease; }
+    .nav-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .dropdown-menu { background: rgba(20,24,28,0.95); border: none; border-radius: 0; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 8px 24px rgba(0,0,0,0.5); padding: 0; min-width: 11rem; }
+    .dropdown-link { display: block; padding: 0.65rem 1rem; color: #e5e7eb; text-decoration: none; font-size: 0.9rem; font-weight: 500; border-radius: 0; position: relative; overflow: hidden; transition: color 0.22s ease; }
+    .dropdown-link::before { content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0.08)); transform-origin: top; transform: scaleY(0); transition: transform 0.25s cubic-bezier(.2,.9,.2,1); z-index: 0; }
+    .dropdown-link span { position: relative; z-index: 1; }
+    .dropdown-link:hover::before, .dropdown-link:focus-visible::before { transform: scaleY(1); }
+    .dropdown-link:hover, .dropdown-link:focus-visible { color: #ffffff; }
+    .md-hidden { display: none; }
+    @media (max-width: 767px) {
+        .header-nav { display: none !important; }
+        .md-hidden { display: block !important; }
+    }
+    @media (min-width: 768px) {
+        #mobile-menu-toggle-btn, #mobile-menu-backdrop, #mobile-sidebar-nav { display: none !important; }
+    }
+
+    /* ---------------------------------------------------- */
+    /* --------- INÍCIO DO CSS DE MOBILE (NOVO ESTILO) ---- */
+    /* ---------------------------------------------------- */
+    
+    @media (max-width: 767px) {
+        
+        /* ########## 1. BOTÃO HAMBÚRGUER ########### */
+        #mobile-menu-toggle-btn {
+            position: fixed; top: 0.75rem; right: 1rem; display: block !important; background: none; border: none; cursor: pointer; padding: 10px; z-index: 1001; transition: all 0.3s ease;
+        }
+        #mobile-menu-toggle-btn .bar {
+            display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--color-black) !important; transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu-toggle-btn.active .bar:nth-child(2) { opacity: 0; }
+        #mobile-menu-toggle-btn.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        #mobile-menu-toggle-btn.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        #mobile-menu-toggle-btn.active .bar { background-color: var(--color-white) !important; }
+
+
+        /* ############ 2. MENU PRINCIPAL (SIDEBAR) ########### */
+        #mobile-menu-backdrop {
+            position: fixed; inset: 0; z-index: 40; background-color: rgba(0, 0, 0, 0.8); transition: opacity 0.3s ease; display: none; 
+        }
+        #mobile-sidebar-nav {
+            position: fixed; top: 0; right: 0; height: 100vh; width: 100vw; max-width: 340px; transform: translateX(100%); transition: transform 0.3s ease-in-out; z-index: 50; background: var(--color-bg-sidebar) !important; display: flex; flex-direction: column; overflow: hidden; backdrop-filter: blur(10px); 
+        }
+        #mobile-sidebar-nav.active { transform: translateX(0); }
+        #main-nav-list {
+            list-style: none; flex: 1; overflow-y: auto; background: var(--color-bg-sidebar) !important; padding: 0; margin: 0; flex-direction: column; align-items: center; 
+        }
+
+        /* ######### 3. HEADER PROFISSIONAL ######### */
+        .mobile-header {
+            display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 1.25rem 1rem; background: var(--header-bg) !important; border-bottom: 1px solid var(--color-border); flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .mobile-header h1 { color: var(--color-text-light); font-size: 1.25rem; font-weight: 800; margin: 0; letter-spacing: -0.04em; }
+        #close-menu-sidebar-button { background: transparent; border: none; color: var(--color-text-muted); padding: 0.5rem; cursor: pointer; font-size: 1.5rem; width: 2.5rem; height: 2.5rem; line-height: 1; border-radius: 50%; transition: all 0.2s ease; }
+        #close-menu-sidebar-button:hover { color: var(--color-text-light); background-color: rgba(255, 255, 255, 0.08); }
+
+
+        /* ########### 4. LINKS DE NAVEGAÇÃO ######## */
+        #main-nav-list li { 
+            margin: 15px 0; width: 80%; text-align: center; border-bottom: 1px solid var(--color-dark-gray); padding-bottom: 10px; 
+        }
+        
+        .mobile-nav-link {
+            display: flex; align-items: center; width: 100%; padding: 1rem 1.5rem; color: var(--color-text-light) !important; text-decoration: none; font-size: 1rem; font-weight: 500; transition: all 0.15s ease; border-bottom: none; position: relative; overflow: hidden;
+        }
+        
+        /* Anula o estilo ::before do Desktop */
+        .mobile-nav-link::before,
+        .mobile-nav-link span::before {
+             content: none !important;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link:focus {
+            color: var(--primary-red) !important; 
+            background-color: transparent !important; 
+            border-bottom-color: var(--primary-red);
+            outline: none;
+        }
+
+        /* Dropdown */
+        .mobile-nav-link#mobile-portfolio-toggle { justify-content: space-between; padding-bottom: 0; margin: 0; border-bottom: none; }
+        #mobile-portfolio-arrow { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.625rem; font-weight: 800; color: rgba(59, 130, 246, 0.6); }
+        #mobile-portfolio-arrow.rotate-180 { transform: rotate(180deg); }
+        .hidden-dropdown { flex-direction: column; background: rgba(8,10,12,0.9) !important; border-left: 3px solid var(--color-primary); overflow: hidden; display: none; }
+        .dropdown-link-new {
+            display: flex; align-items: center; width: 100%; padding: 0.75rem 1.5rem 0.75rem 2.5rem; color: var(--color-text-muted) !important; text-decoration: none; font-size: 0.9rem; font-weight: 400; border-bottom: 1px solid var(--color-border); transition: all 0.15s ease; position: relative; overflow: hidden;
+        }
+        
+        /* Anula o estilo ::before do Desktop */
+        .dropdown-link-new::before,
+        .dropdown-link-new span::before {
+             content: none !important;
+        }
+
+        .dropdown-link-new:hover,
+        .dropdown-link-new:focus {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--color-text-light) !important;
+            outline: none;
+        }
+
+        .dropdown-link-new span:first-child { margin-right: 0.75rem; }
+        .mobile-portfolio-icon {
+            display:inline-flex; align-items:center; justify-content:center; width:1.75rem; height:1.75rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59,130,246,0.3); border-radius:0.5rem; font-size:0.875rem;
+        }
+    }

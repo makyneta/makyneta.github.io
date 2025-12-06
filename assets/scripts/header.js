@@ -1,7 +1,102 @@
 // =========================================================
-// Lógica para Dropdowns de Desktop (Click-only)
+// 1. Lógica para Dropdowns de Desktop (Hover + Clique Fora) - MANTIDO
 // =========================================================
-function toggleDesktopDropdown(buttonId, menuId, arrowId) {
+
+const desktopPortfolioContainer = document.getElementById('desktop-portfolio-container');
+const desktopPortfolioMenu = document.getElementById('desktop-portfolio-menu');
+const desktopPortfolioArrow = document.getElementById('desktop-portfolio-arrow');
+
+if (desktopPortfolioContainer && desktopPortfolioMenu && desktopPortfolioArrow) {
+
+    const openDropdown = () => {
+        // Fechar outros menus abertos (garantindo que não há conflito)
+        document.querySelectorAll('[id^="desktop-"][id$="-menu"]').forEach(m => {
+            if (m.id !== 'desktop-portfolio-menu' && m.classList.contains('opacity-100')) {
+                m.classList.remove('opacity-100');
+                m.classList.add('opacity-0', 'invisible', 'scale-95');
+                const otherArrow = document.getElementById(m.id.replace('-menu', '-arrow'));
+                if (otherArrow) otherArrow.classList.remove('rotate-180');
+            }
+        });
+
+        // Abrir o menu atual
+        desktopPortfolioMenu.classList.add('opacity-100');
+        desktopPortfolioMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
+        desktopPortfolioArrow.classList.add('rotate-180');
+    };
+
+    const closeDropdown = () => {
+        // Fechar o menu atual
+        desktopPortfolioMenu.classList.remove('opacity-100');
+        desktopPortfolioMenu.classList.add('opacity-0', 'invisible', 'scale-95');
+        desktopPortfolioArrow.classList.remove('rotate-180');
+    };
+
+    // Abre no mouseenter e fecha no mouseleave
+    desktopPortfolioContainer.addEventListener('mouseenter', openDropdown);
+    desktopPortfolioContainer.addEventListener('mouseleave', closeDropdown);
+
+    // Fecha quando o usuário clica fora
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('#desktop-portfolio-container')) {
+            closeDropdown();
+        }
+    });
+}
+
+// --------------------------------------------------------------------------------------------------
+// 2. Lógica Mobile (Hambúrguer e Sidebar) - CORRIGIDO
+// --------------------------------------------------------------------------------------------------
+
+const menuButton = document.getElementById('mobile-menu-toggle-btn'); 
+const navMenu = document.getElementById('mobile-sidebar-nav'); 
+const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+const navLinks = navMenu ? navMenu.querySelectorAll('.mobile-nav-link') : []; 
+
+function toggleMobileMenu(isOpen) {
+    const shouldOpen = isOpen !== undefined ? isOpen : !menuButton.classList.contains('active');
+
+    if (shouldOpen) {
+        menuButton.classList.add('active'); 
+        navMenu.classList.add('active'); 
+        mobileMenuBackdrop.style.display = 'block';
+        setTimeout(() => { mobileMenuBackdrop.style.opacity = '1'; }, 10);
+        document.body.classList.add('overflow-hidden');
+    } else {
+        menuButton.classList.remove('active');
+        navMenu.classList.remove('active'); 
+        mobileMenuBackdrop.style.opacity = '0';
+        setTimeout(() => { mobileMenuBackdrop.style.display = 'none'; }, 300);
+        document.body.classList.remove('overflow-hidden');
+    }
+}
+
+// Event Listeners Mobile
+if (menuButton && navMenu) {
+    // 1. Clique no Hambúrguer (Abre/Fecha Sidebar)
+    menuButton.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        toggleMobileMenu();
+    });
+    
+    // 2. Fechar pelo backdrop (clicar fora do menu lateral)
+    mobileMenuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+
+    // 3. Fechar ao clicar em um Link de Navegação (exceto no botão toggle do dropdown)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Se não for o botão Portfolio, fecha o menu inteiro
+            if (link.id !== 'mobile-portfolio-toggle') {
+                toggleMobileMenu(false);
+            }
+        });
+    });
+}
+
+// =========================================================
+// 3. Lógica para Dropdowns de Mobile (Alterna display por Clique) - MANTIDO
+// =========================================================
+function toggleMobileDropdown(buttonId, menuId, arrowId) {
     const button = document.getElementById(buttonId);
     const menu = document.getElementById(menuId);
     const arrow = document.getElementById(arrowId);
@@ -10,117 +105,27 @@ function toggleDesktopDropdown(buttonId, menuId, arrowId) {
 
     button.addEventListener('click', (e) => {
         e.stopPropagation();
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-        const isOpen = menu.classList.contains('opacity-100');
-
-        // Fecha outros menus se estiverem abertos
-        // A lógica foi simplificada pois agora há apenas um dropdown
-        document.querySelectorAll('[id^="desktop-"][id$="-menu"]').forEach(m => {
-            if (m.id !== menuId && m.classList.contains('opacity-100')) {
-                m.classList.remove('opacity-100');
-                m.classList.add('opacity-0', 'invisible', 'scale-95');
-                document.getElementById(m.id.replace('-menu', '-arrow')).classList.remove('rotate-180');
-            }
-        });
-
-        // Alterna o estado do menu atual
-        if (isOpen) {
-            menu.classList.remove('opacity-100');
-            menu.classList.add('opacity-0', 'invisible', 'scale-95');
-            arrow.classList.remove('rotate-180');
+        if (isExpanded) {
+            menu.style.display = 'none';
+            arrow.style.transform = 'rotate(0deg)';
+            button.setAttribute('aria-expanded', 'false');
         } else {
-            menu.classList.add('opacity-100');
-            menu.classList.remove('opacity-0', 'invisible', 'scale-95');
-            arrow.classList.add('rotate-180');
+            menu.style.display = 'block'; 
+            arrow.style.transform = 'rotate(180deg)';
+            button.setAttribute('aria-expanded', 'true');
         }
     });
-
-    // Fechar ao clicar em um link dentro do dropdown
-    menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.add('opacity-0', 'invisible', 'scale-95');
-            arrow.classList.remove('rotate-180');
-        });
-    });
-}
-
-// Inicializa o novo dropdown Portfolio
-toggleDesktopDropdown('desktop-portfolio-toggle', 'desktop-portfolio-menu', 'desktop-portfolio-arrow');
-
-// Fechar Menus de Desktop quando o usuário clicar fora (Geral)
-document.addEventListener('click', (e) => {
-    // Agora só precisamos verificar o menu 'portfolio'
-    const isClickInsideDesktopMenu = e.target.closest('[id^="desktop-"]');
-
-    if (!isClickInsideDesktopMenu) {
-        document.querySelectorAll('[id^="desktop-"][id$="-menu"]').forEach(menu => {
-            menu.classList.add('opacity-0', 'invisible', 'scale-95');
-            // A verificação `[id^="desktop-"]` pega o novo ID 'desktop-portfolio-arrow' corretamente
-            document.getElementById(menu.id.replace('-menu', '-arrow')).classList.remove('rotate-180');
-        });
-    }
-});
-
-
-// =========================================================
-// Lógica para Menu Hambúrguer (Mobile) - Sidebar (Sem alteração)
-// =========================================================
-const hamburgerButton = document.getElementById('hamburger-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
-const closeMenuSidebarButton = document.getElementById('close-menu-sidebar-button');
-const menuOpenIcon = document.getElementById('menu-open-icon');
-const menuCloseIcon = document.getElementById('menu-close-icon');
-
-// Função para abrir/fechar o menu mobile
-function toggleMobileMenu(isOpen) {
-    const shouldOpen = isOpen !== undefined ? isOpen : mobileMenu.classList.contains('translate-x-full');
-
-    if (shouldOpen) {
-        // Abrir
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenuBackdrop.classList.remove('invisible', 'opacity-0');
-        mobileMenuBackdrop.classList.add('visible', 'opacity-100');
-        menuOpenIcon.classList.add('hidden');
-        menuCloseIcon.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden'); // Impede scroll no corpo
+    
+    // Configuração inicial
+    if (button.getAttribute('aria-expanded') === 'true') {
+        menu.style.display = 'block';
+        arrow.style.transform = 'rotate(180deg)';
     } else {
-        // Fechar
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenuBackdrop.classList.remove('visible', 'opacity-100');
-        mobileMenuBackdrop.classList.add('invisible', 'opacity-0');
-        menuOpenIcon.classList.remove('hidden');
-        menuCloseIcon.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
+        menu.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)';
     }
 }
 
-// Event Listeners
-hamburgerButton.addEventListener('click', () => toggleMobileMenu());
-closeMenuSidebarButton.addEventListener('click', () => toggleMobileMenu(false));
-mobileMenuBackdrop.addEventListener('click', () => toggleMobileMenu(false)); // Fecha ao clicar no fundo
-
-// Fechar Menu Mobile ao clicar em links (exceto botões de dropdown)
-mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        toggleMobileMenu(false);
-    });
-});
-
-// Lógica para Dropdowns de Mobile (Alterna classes 'hidden'/'flex' no menu)
-function toggleMobileDropdown(buttonId, menuId, arrowId) {
-    const button = document.getElementById(buttonId);
-    const menu = document.getElementById(menuId);
-    const arrow = document.getElementById(arrowId);
-
-    if (!button || !menu || !arrow) return;
-
-    button.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-        arrow.classList.toggle('rotate-180');
-    });
-}
-
-// Inicializa o novo dropdown Portfolio (Mobile)
 toggleMobileDropdown('mobile-portfolio-toggle', 'mobile-portfolio-menu', 'mobile-portfolio-arrow');
