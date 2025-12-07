@@ -5,20 +5,20 @@ document.querySelectorAll('.year').forEach(el => {
 
 //
 // Header
-fetch("/assets/header.html")
+fetch("/assets/div/header.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
 
     const script = document.createElement("script");
-    script.src = "/assets/scripts/header.js";
+    script.src = "/assets/js/header.js";
     document.body.appendChild(script);
   });
 
 
 //
 // Footer
-fetch("/assets/footer.html")
+fetch("/assets/div/footer.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
@@ -26,10 +26,10 @@ fetch("/assets/footer.html")
     // Adiciona o CSS
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/styles/footer.css"; // Altere para o caminho correto do seu arquivo CSS
+    link.href = "/assets/css/footer.css"; // Altere para o caminho correto do seu arquivo CSS
     document.head.appendChild(link);
 
     const script = document.createElement("script");
-    script.src = "/assets/scripts/footer.js";
+    script.src = "/assets/js/footer.js";
     document.body.appendChild(script);
   });
