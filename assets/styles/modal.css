@@ -1,0 +1,54 @@
+/* ---------------------------------- */
+/* Estilos para o Modal (Popup)       */
+/* ---------------------------------- */
+
+.modal {
+    /* Esconde o modal por padrão */
+    display: none; 
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Adiciona scroll se o conteúdo for grande */
+    background-color: rgba(0, 0, 0, 0.489); /* Fundo escuro transparente (overlay) */
+    backdrop-filter: blur(20px); /* Efeito de desfoque no fundo */
+}
+
+/* Onde o seu conteúdo (portfólio) realmente fica */
+.modal-content {
+    background-color: #000000;
+    margin: 5% auto; /* 5% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Largura do modal */
+    max-width: 1000px; /* Limite de largura para desktop */
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Botão de Fechar */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; /* Posiciona no canto superior direito */
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Você pode precisar ajustar os estilos internos do seu portfólio 
+   para ficarem bons dentro do modal, mas mantive os seus nomes de classes. */
+.case-studies-section {
+    padding: 0; /* Remova o padding para não duplicar com o modal-content padding */
+}

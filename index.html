@@ -10,10 +10,13 @@
     <link rel="icon" href="/assets/images/site/favicon.jpg" type="image/jpg">
     <link rel="stylesheet" href="/assets/styles/stt.css">
     <link rel="stylesheet" href="/assets/styles/new.css">
+    <link rel="stylesheet" href="/assets/styles/modal.css">
     <link rel="stylesheet" href="/assets/styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/modal.js"></script>
+    <script src="/assets/scripts/home.js"></script>
     <title>Tomás Mota</title>
 </head>
 <body>
@@ -26,17 +29,17 @@
             
             <div class="text-column">
                 <p class="name-subtitle">TOMÁS MOTA</p>
-                <h3 class="headline">Dev Fullstack | Photographer<br>Light & Sound Technician<br>IT Technician</h3>
+                <h3 class="headline">Dev Fullstack & Photographer<br>Light, Sound, IT Technician</h3>
                 
                 <p class="description">
-                    Since 2024, I have worked as a full-stack programmer, photographer, lighting and sound technician, and IT technician. I have collaborated with the theater company "Libélula Teatro" as a lighting/sound technician, with football clubs, and with the Marinha Grande Poente School Group as a photographer. Currently, I work as a freelancer, performing the functions of full-stack programmer, photographer, lighting and sound technician, and IT technician, where I am looking to help companies and individuals grow and achieve their goals.
+                    Since 2024, I have worked as a full-stack programmer, photographer, lighting, sound, and IT technician. I have collaborated with the theater company "Libélula Teatro" as a lighting/sound technician, with football clubs, and with the Marinha Grande Poente School Group as a photographer. Currently, I work as a freelancer, performing the functions of full-stack programmer, photographer, lighting, sound, and IT technician, where I am looking to help companies and individuals grow and achieve their goals.
                 </p>
                 <!-- <p class="description">
                     Desde 2024, que trabalho como programador fullstack, fotógrafo, técnico de luz e som, e técnico de informática. Já colaborei com a companhia de teatro "Libélula Teatro" como técnico de luz/som, com clubes de futebol e com o Agrupamento de Escolas Marinha Grande Poente, como fotógrafo. Atualmente trabalho como freelancer no qual exerco as funcções de programador fullstack, fotógrafo, técnico de luz e som, e técnico de TI, no qual estou á procura de ajudar empresas e particulares a crescerem e a alcançarem os seus objetivos.
                 </p> -->
                 
                 <div class="actions">
-                    <a href="#projects" class="action-link primary-action">View Portfolio</a>
+                    <a href="#" id="openPortfolioModal" class="action-link primary-action">View Portfolio</a>
                     <span class="or-separator">or</span>
                     <a href="/about" target="_blank" class="action-link primary-action">Read About Me</a>
                 </div>
@@ -54,79 +57,50 @@
         </div> -->
     </section>
 
-<section class="case-studies-section" id="projects">
-    <div class="case-studies-header">
-        <p class="section-subtitle">PORTFOLIO</p>
-        <h2 class="section-title">All My Work</h2>
-    </div>
-    <div class="projects-grid">
-        
-        <article class="project-card dark-card" data-src="assets/images/mp4amtssfwb.jpg">
-            <div class="project-info">
-                <p class="project-year">2024 — TODAY</p>
-                <span class="project-tag new-tag">NEW</span>
+<div id="portfolioModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closePortfolioModal">&times;</span>
+
+        <section class="case-studies-section" id="projects">
+            <div class="case-studies-header">
+                <p class="section-subtitle">PORTFOLIO</p>
+                <!-- <h2 class="section-title">All My Work</h2> -->
             </div>
-            <h3 class="project-title">Dev Fullstack</h3>
-            
-            <a href="/dev" class="view-case-study-link">
-                All My Work As A Dev Fulstack<span class="arrow">→</span>
-            </a>
-            
-            <div class="project-visual basic-ux-visual"></div>
-        </article>
+            <div class="projects-grid">
+                
+                <article class="project-card dark-card" data-src="assets/images/dev/mesapra4.jpg">
+                    <div class="project-info">
+                        <p class="project-year">2024 — TODAY</p>
+                        <span class="project-tag new-tag">NEW</span>
+                    </div>
+                    <h3 class="project-title">Dev Fullstack</h3>
+                    
+                    <a href="/dev" class="view-case-study-link">
+                        All My Work As A Dev Fulstack<span class="arrow">→</span>
+                    </a>
+                    
+                    <div class="project-visual basic-ux-visual"></div>
+                </article>
 
-        <article class="project-card dark-card" data-src="assets/images/1010022031452.jpg">
-            <div class="project-info">
-                <p class="project-year">2024 — TODAY</p>
+                <article class="project-card dark-card" data-src="assets/images/1010022031452.jpg">
+                    <div class="project-info">
+                        <p class="project-year">2024 — TODAY</p>
+                    </div>
+                    <h3 class="project-title">Photographer</h3>
+                    
+                    <a href="/photo" class="view-case-study-link">
+                        All My Work As A Photographer<span class="arrow">→</span>
+                    </a>
+                    
+                    <div class="project-visual triniso-visual"></div>
+                </article>
+
             </div>
-            <h3 class="project-title">Photographer</h3>
-            
-            <a href="/photo" class="view-case-study-link">
-                All My Work As A Photographer<span class="arrow">→</span>
-            </a>
-            
-            <div class="project-visual triniso-visual"></div>
-        </article>
-
+        </section>
     </div>
-</section>
-
-<!-- <section class="newsletter-section">
-    <div class="newsletter-content">
-        <h3 class="newsletter-title">Receive Multidisciplinary Insights.</h3>
-        <p class="newsletter-subtitle">
-            Sign up to receive technical updates, photographic inspiration, and behind-the-scenes event tips.
-        </p>
-        
-        <form action="https://formspree.io/f/xvgbagja" method="POST" class="newsletter-form">
-            <input type="email" name="email" placeholder="Your Best Email" required>
-            <button type="submit" class="subscribe-button">Subscribe</button>
-        </form>
-        
-        <p class="newsletter-privacy">
-            We respect your privacy. No SPAM.
-        </p>
-    </div>
-</section>  +351964573667 NUMERO POSSACOS -->
+</div>
 
 <div id="footer"></div>
 
-    <a id="scroll-to-top"></a>
-    <script src="/assets/scripts/stt.js"></script>
-
 </body>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-        // Seleciona todos os cartões de projeto
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        projectCards.forEach(card => {
-            const imagePath = card.getAttribute('data-src');
-            if (imagePath) {
-                // Aplica a imagem de fundo no cartão inteiro
-                card.style.backgroundImage = `url('${imagePath}')`;
-            }
-        });
-    });
-</script>
 </html>
