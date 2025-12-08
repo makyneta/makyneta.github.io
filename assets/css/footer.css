@@ -1,40 +1,71 @@
+/* 🚨 Importação do Font Awesome a partir do CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'); 
+
+/* Importação das fontes existentes */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* Estilos base do Rodapé */
 .refined-footer {
-    /* Usando cores do tema Suave/Bege */
     font-family: 'Montserrat', sans-serif !important;
-    background-color: var(--text-dark); /* Fundo escuro */
+    background-color: var(--text-dark);
     color: var(--text-light); 
-    padding: 8px 5%; /* Padding compacto (igual ao anterior) */
+    padding: 8px 5%;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.049); /* Ajustado para ser mais suave */
+    border-top: 1px solid rgba(255, 255, 255, 0.049);
 }
 
-/* 🟢 SIMPLIFICADO: Garante que o link do copyright fique no centro */
+/* 🟢 FLEXBOX: Alinha Copyright (Esq) e Links (Dir) no PC */
 .footer-content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center; /* Centraliza o conteúdo */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: left;
 }
 
+/* ⬇️ COPYRIGHT */
 .copyright-refined {
-    display: inline-block; /* Permite hover/margin sem quebrar a linha */
-    font-size: 0.85em;
-    color: #aaaaaa; /* Cor cinza suave */
+    display: inline-block;
+    font-size: 0.75em; 
+    color: #aaaaaa;
     text-decoration: none;
     transition: color 0.3s ease;
     margin: 5px 0;
 }
 
-.copyright-refined:hover {
-    color: var(--primary-color);
+/* LINKS */
+.footer-links-group {
+    font-size: 0.75em; 
+    color: #aaaaaa;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
-/* Media Query para Mobile - Apenas centralização, sem necessidade de complexidade flexbox */
+.contact-link-icon i {
+    margin-right: 5px; 
+}
+
+
+/* 📱 Media Query: Ocultar links e centralizar Copyright no Mobile/Tablet */
 @media (max-width: 768px) {
-    .refined-footer {
-        padding: 10px 5%;
+    /* 🚨 Oculta o grupo de links no mobile */
+    .footer-links-group {
+        display: none; 
+    }
+    
+    /* Ajusta o wrapper para que o copyright restante seja centrado (ou movido para a esquerda, dependendo do browser/viewport) */
+    .footer-content-wrapper {
+        justify-content: center; /* Centraliza o item restante (Copyright) */
+        text-align: center;
+    }
+    
+    /* Garante que o copyright, agora centralizado, use o tamanho completo */
+    .copyright-refined {
+        width: 100%;
+        text-align: center;
     }
 }

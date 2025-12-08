@@ -1,5 +1,4 @@
-
-    /* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
     /* --------- CSS DE DESKTOP (PRESERVADO) -------------- */
     /* ---------------------------------------------------- */
     
@@ -7,7 +6,6 @@
     :root {
         --color-black: #000000;
         --color-white: #ffffff;
-        --primary-red: #3b82f6; 
         --color-dark-gray: rgba(255, 255, 255, 0.1);
         --color-bg-sidebar: #020617; 
         --color-primary: var(--primary-red); 
@@ -22,24 +20,16 @@
     @media (max-width: 767px) { #main-header { height: auto; padding: 0.75rem 1rem !important; } }
     .header-brand { color: #fff; text-decoration: none; letter-spacing: 0.03em; }
     .header-nav { gap: 1.5rem; display: flex; align-items: center; height: 100%; }
-    .nav-link, .nav-btn { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 0 0.75rem; border-radius: 0; position: relative; overflow: visible; display: flex; align-items: center; gap: 0.4rem; background: transparent; transition: color 0.25s ease, transform 0.15s ease; height: 100%; }
-    .nav-link span, .nav-btn span { position: relative; z-index: 2; display: inline-block; }
-    .nav-link::before, .nav-btn::before {
+    .nav-link { color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 0 0.75rem; border-radius: 0; position: relative; overflow: visible; display: flex; align-items: center; gap: 0.4rem; background: transparent; transition: color 0.25s ease, transform 0.15s ease; height: 100%; }
+    .nav-link span { position: relative; z-index: 2; display: inline-block; }
+    .nav-link::before {
         content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: linear-gradient(to top, rgba(255,255,255,0.12), rgba(255,255,255,0.12)); transform-origin: bottom; transform: scaleY(0); transition: transform 0.32s cubic-bezier(.2,.9,.2,1); z-index: 1;
     }
-    .nav-link:hover::before, .nav-link:focus-visible::before, .nav-btn:hover::before, .nav-btn:focus-visible::before { transform: scaleY(1); }
-    .nav-link:hover, .nav-link:focus-visible, .nav-btn:hover, .nav-btn:focus-visible { color: #ffffff; outline: none; }
-    .nav-link, .nav-btn { padding: 0 0.75rem; border-radius: 0; }
-    .nav-link::before, .nav-btn::before { height: auto; }
-    .nav-btn { border: none; background: transparent; cursor: pointer; }
-    .nav-btn svg { transition: transform .28s ease; }
-    .nav-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
-    .dropdown-menu { background: rgba(20,24,28,0.95); border: none; border-radius: 0; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 8px 24px rgba(0,0,0,0.5); padding: 0; min-width: 11rem; }
-    .dropdown-link { display: block; padding: 0.65rem 1rem; color: #e5e7eb; text-decoration: none; font-size: 0.9rem; font-weight: 500; border-radius: 0; position: relative; overflow: hidden; transition: color 0.22s ease; }
-    .dropdown-link::before { content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0.08)); transform-origin: top; transform: scaleY(0); transition: transform 0.25s cubic-bezier(.2,.9,.2,1); z-index: 0; }
-    .dropdown-link span { position: relative; z-index: 1; }
-    .dropdown-link:hover::before, .dropdown-link:focus-visible::before { transform: scaleY(1); }
-    .dropdown-link:hover, .dropdown-link:focus-visible { color: #ffffff; }
+    .nav-link:hover::before, .nav-link:focus-visible::before { transform: scaleY(1); }
+    .nav-link:hover, .nav-link:focus-visible { color: #ffffff; outline: none; }
+    .nav-link { padding: 0 0.75rem; border-radius: 0; }
+    .nav-link::before { height: auto; }
+    /* REMOVIDO: .nav-btn, .dropdown-menu e .dropdown-link */
     .md-hidden { display: none; }
     @media (max-width: 767px) {
         .header-nav { display: none !important; }
@@ -104,38 +94,7 @@
              content: none !important;
         }
 
-        .mobile-nav-link:hover,
-        .mobile-nav-link:focus {
-            color: var(--primary-red) !important; 
-            background-color: transparent !important; 
-            border-bottom-color: var(--primary-red);
-            outline: none;
-        }
+        /* REMOVIDO: .mobile-nav-link:hover e :focus */
 
-        /* Dropdown */
-        .mobile-nav-link#mobile-portfolio-toggle { justify-content: space-between; padding-bottom: 0; margin: 0; border-bottom: none; }
-        #mobile-portfolio-arrow { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.625rem; font-weight: 800; color: rgba(59, 130, 246, 0.6); }
-        #mobile-portfolio-arrow.rotate-180 { transform: rotate(180deg); }
-        .hidden-dropdown { flex-direction: column; background: rgba(8,10,12,0.9) !important; border-left: 3px solid var(--color-primary); overflow: hidden; display: none; }
-        .dropdown-link-new {
-            display: flex; align-items: center; width: 100%; padding: 0.75rem 1.5rem 0.75rem 2.5rem; color: var(--color-text-muted) !important; text-decoration: none; font-size: 0.9rem; font-weight: 400; border-bottom: 1px solid var(--color-border); transition: all 0.15s ease; position: relative; overflow: hidden;
-        }
-        
-        /* Anula o estilo ::before do Desktop */
-        .dropdown-link-new::before,
-        .dropdown-link-new span::before {
-             content: none !important;
-        }
-
-        .dropdown-link-new:hover,
-        .dropdown-link-new:focus {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: var(--color-text-light) !important;
-            outline: none;
-        }
-
-        .dropdown-link-new span:first-child { margin-right: 0.75rem; }
-        .mobile-portfolio-icon {
-            display:inline-flex; align-items:center; justify-content:center; width:1.75rem; height:1.75rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59,130,246,0.3); border-radius:0.5rem; font-size:0.875rem;
-        }
+        /* REMOVIDO: Dropdown */
     }
