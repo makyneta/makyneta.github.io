@@ -1,7 +1,7 @@
         /* --- ESTILOS GERAIS (TEMA CLARO/BRANCO) --- */
         body {
-            background-color: #ffffff; /* Fundo Branco */
-            color: #333333; /* Texto Escuro para contraste */
+            background-color: #000000; /* Fundo Branco */
+            color: #e1e1e1; /* Texto Escuro para contraste */
             font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte limpa */
             margin: 0;
             padding: 0;
@@ -13,7 +13,7 @@
             padding: 0 5%;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: #ffffff; 
+            background-color: #000000; 
         }
 
         /* O HERÓI (Header via DIV) */
@@ -25,7 +25,7 @@
         .about-main-title {
             font-size: 3em;
             font-weight: 800;
-            color: #222222; /* Título quase preto */
+            color: #d5d5d5; /* Título quase preto */
             margin-bottom: 20px;
             letter-spacing: -1px;
         }
@@ -35,7 +35,7 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
-            color: #555555; /* Cinza médio para o texto de introdução */
+            color: #adadad; /* Cinza médio para o texto de introdução */
         }
 
         /* Títulos das Seções */
@@ -44,7 +44,7 @@
             font-weight: 700;
             margin-top: 60px;
             margin-bottom: 30px;
-            color: #111111;
+            color: #f0f0f0;
             /* Linha azul sutil abaixo do título */
             border-bottom: 2px solid rgba(0, 191, 255, 0.3); 
             padding-bottom: 10px;
@@ -57,8 +57,8 @@
             align-items: center;
             padding: 40px 0;
             /* Bordas cinza claro para separar a seção */
-            border-top: 1px solid #eeeeee;
-            border-bottom: 1px solid #eeeeee;
+            border-top: 1px solid #232323;
+            border-bottom: 1px solid #0f0f0f;
         }
 
         .personal-photo-placeholder {
@@ -89,7 +89,7 @@
         }
         
         .personal-details strong {
-            color: #000;
+            color: #ffffff;
         }
 
         .about-contact-link {
@@ -115,7 +115,7 @@
         .job-title {
             font-size: 1.5em;
             font-weight: 700;
-            color: #222222;
+            color: #e4e4e4;
             margin-bottom: 5px;
             margin-top: 0;
         }
@@ -181,7 +181,7 @@
             filter: grayscale(0%); /* Revela as cores originais no hover */
             opacity: 1;
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(252, 252, 252, 0.1);
             border-color: #00BFFF;
             background-color: #ffffff;
         }
@@ -198,7 +198,7 @@
         /* Estilo para o Nome (quando não há logo) */
         .client-name-fallback {
             font-weight: 800;
-            color: #333;
+            color: #414141;
             font-size: 1.2em;
             margin-bottom: 10px;
             display: block;
@@ -261,7 +261,7 @@
         }
 
         .skill-list strong {
-            color: #222222;
+            color: #e7e7e7;
             font-weight: 600;
         }
 
