@@ -85,7 +85,7 @@
         .personal-details p {
             font-size: 1.1em;
             margin: 10px 0;
-            color: #444444;
+            color: #a9a9a9;
         }
         
         .personal-details strong {
@@ -130,7 +130,7 @@
 
         .job-description {
             list-style-type: disc;
-            color: #444444; /* Texto descritivo escuro */
+            color: #acacac; /* Texto descritivo escuro */
             padding-left: 20px;
             line-height: 1.7;
         }
@@ -145,7 +145,7 @@
         }
 
         .collaborations-intro {
-            color: #555;
+            color: #adadad;
             margin-bottom: 30px;
         }
 
@@ -231,10 +231,10 @@
 
         .skill-area {
             /* Fundo cinza muito claro para destacar os blocos no fundo branco */
-            background-color: #f9f9f9; 
+            background-color: #ffffff; 
             padding: 25px;
             border-radius: 8px;
-            text-align: left;
+            text-align: justify;
             border: 1px solid #eeeeee; /* Borda sutil */
             /* Pequena borda colorida no topo ou esquerda para identidade */
             border-left: 5px solid #00BFFF;
@@ -261,7 +261,7 @@
         }
 
         .skill-list strong {
-            color: #e7e7e7;
+            color: #000000;
             font-weight: 600;
         }
 
