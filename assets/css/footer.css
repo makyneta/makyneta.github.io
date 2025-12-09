@@ -21,9 +21,9 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
-    text-align: left;
+    text-align: center;
 }
 
 /* ⬇️ COPYRIGHT */
@@ -36,26 +36,12 @@
     margin: 5px 0;
 }
 
-/* LINKS */
-.footer-links-group {
-    font-size: 0.75em; 
-    color: #aaaaaa;
-    display: flex;
-    gap: 5px;
-    align-items: center;
+.copyright-refined:hover {
+    color: var(--primary-color);
 }
-
-.contact-link-icon i {
-    margin-right: 5px; 
-}
-
 
 /* 📱 Media Query: Ocultar links e centralizar Copyright no Mobile/Tablet */
 @media (max-width: 768px) {
-    /* 🚨 Oculta o grupo de links no mobile */
-    .footer-links-group {
-        display: none; 
-    }
     
     /* Ajusta o wrapper para que o copyright restante seja centrado (ou movido para a esquerda, dependendo do browser/viewport) */
     .footer-content-wrapper {
