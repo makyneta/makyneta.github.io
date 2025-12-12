@@ -1,23 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Obter os elementos do DOM
-    var modal = document.getElementById("portfolioModal");
-    var btnOpen = document.getElementById("openPortfolioModal");
-    var btnClose = document.getElementById("closePortfolioModal");
+    // --- Lógica do Modal de Portfólio (Já existente) ---
+    var portfolioModal = document.getElementById("portfolioModal");
+    var openPortfolioBtn = document.getElementById("openPortfolioModal");
+    var closePortfolioBtn = document.getElementById("closePortfolioModal");
 
-    // 2. Quando o usuário clica no link, abre o modal
-    btnOpen.onclick = function() {
-        modal.style.display = "block";
-    }
+    if (openPortfolioBtn) openPortfolioBtn.onclick = function() { portfolioModal.style.display = "block"; }
+    if (closePortfolioBtn) closePortfolioBtn.onclick = function() { portfolioModal.style.display = "none"; }
+    
+    // --- Lógica do NOVO Modal de Contato ---
+    var contactModal = document.getElementById("contactModal");
+    var openContactBtn = document.getElementById("openContactModal");
+    var closeContactBtn = document.getElementById("closeContactModal");
 
-    // 3. Quando o usuário clica no 'x' (botão de fechar), fecha o modal
-    btnClose.onclick = function() {
-        modal.style.display = "none";
-    }
+    if (openContactBtn) openContactBtn.onclick = function() { contactModal.style.display = "block"; }
+    if (closeContactBtn) closeContactBtn.onclick = function() { contactModal.style.display = "none"; }
 
-    // 4. Quando o usuário clica em qualquer lugar fora do modal, fecha o modal
+    // --- Fechar ao Clicar Fora (funciona para AMBOS) ---
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        // Se o clique for no fundo (próprio elemento modal)
+        if (event.target == portfolioModal) {
+            portfolioModal.style.display = "none";
+        }
+        if (event.target == contactModal) {
+            contactModal.style.display = "none";
         }
     }
 });
