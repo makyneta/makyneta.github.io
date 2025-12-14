@@ -2,232 +2,16 @@
     style="padding: 0.75rem 1rem; background: rgba(0, 0, 0, 0.6) !important; color: #fff; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.6);">
 
     <style>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'); 
-        /* ---------------------------------------------------- */
-        /* 1. VARIÁVEIS E ESTILOS GERAIS */
-        /* ---------------------------------------------------- */
 
-        :root {
-            --color-black: #000000;
-            --color-white: #ffffff;
-            --highlight-color: #06B6D4;
-            --color-bg-sidebar: #000000;
-            --color-primary: var(--highlight-color);
-            --color-text-light: var(--color-white);
-            --color-text-muted: #9ca3af;
-            --color-border: rgba(255, 255, 255, 0.1);
-            --header-bg: rgba(0, 0, 0, 0.9);
-            --desktop-hover-color: #A0A0A0;
-        }
-
-        /* Estilos Desktop Padrão */
-        #main-header {
-            padding: 0 1rem !important;
-            height: 64px;
-            color: var(--color-white) !important;
-        }
-
-        @media (max-width: 767px) {
-            #main-header {
-                height: auto;
-                padding: 0.75rem 1rem !important;
-            }
-        }
-
-        .header-brand {
-            color: var(--color-white) !important;
-            text-decoration: none;
-            letter-spacing: 0.03em;
-        }
-
-        .header-nav {
-            gap: 0.5rem;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            text-transform: uppercase;
-        }
-
-        /* Links Desktop: HOVER CINZENTO */
-        .nav-link,
-        .nav-btn {
-            color: var(--color-white) !important;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            padding: 0 0.75rem;
-            position: relative;
-            overflow: visible;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: transparent;
-            transition: color 0.2s ease;
-            height: 100%;
-            /* Estilo da barra vertical à direita */
-            border-right: 1px solid rgba(255, 255, 255, 0.238);
-            /* Cor branca/cinza clara semi-transparente para combinar com o header */
-            padding: 0 0.5rem;
-            margin-right: 0rem;
-            margin-left: -0.5rem;
-            /* Aumenta o espaço DENTRO do link, empurrando a borda mais para a direita */
-        }
-
-        /* NOVO BLOCO: Remove a borda divisória do último item */
-        .header-nav>.nav-link:last-child,
-        .header-nav>.nav-btn:last-child {
-            border-right: none;
-            /* Retorna ao padding original para não criar espaço extra no final */
-        }
-
-        .nav-link::before,
-        .nav-btn::before {
-            content: none !important;
-        }
-
-        .nav-link:hover,
-        .nav-btn:hover {
-            color: #000000 !important;
-            background-color: #fff !important;
-            outline: none;
-        }
-
-        /* Media Queries para esconder/mostrar */
-        @media (max-width: 767px) {
-            .header-nav {
-                display: none !important;
-            }
-        }
-
-        @media (min-width: 768px) {
-
-            #mobile-menu-toggle-btn,
-            #mobile-menu-backdrop,
-            #mobile-sidebar-nav {
-                display: none !important;
-            }
-        }
-
-        /* ---------------------------------------------------- */
-        /* 2. CSS DE MOBILE (FINAL: NO TOPO, CENTRADO) */
-        /* ---------------------------------------------------- */
-
-        @media (max-width: 767px) {
-
-            /* Botão Hambúrguer (X no canto superior direito) */
-            #mobile-menu-toggle-btn {
-                position: fixed !important;
-                top: 0.75rem !important;
-                right: 1rem !important;
-                z-index: 9999 !important;
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                width: 30px;
-                height: 24px;
-                padding: 0;
-            }
-
-            #mobile-menu-toggle-btn .bar {
-                display: block !important;
-                width: 100% !important;
-                height: 3px !important;
-                margin: 3px 0;
-                background-color: var(--color-white) !important;
-                transition: all 0.3s ease-in-out;
-                border-radius: 2px;
-            }
-
-            #mobile-menu-toggle-btn.active .bar {
-                background-color: var(--color-white) !important;
-            }
-
-            #mobile-menu-toggle-btn.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            #mobile-menu-toggle-btn.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            #mobile-menu-toggle-btn.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-
-            /* Sidebar Principal */
-            #mobile-sidebar-nav {
-                transform: translateX(100%) !important;
-                transition: transform 0.3s ease-in-out !important;
-                position: fixed !important;
-                top: 0 !important;
-                right: 0 !important;
-                height: 100vh !important;
-                width: 100vw !important;
-                max-width: 340px !important;
-                z-index: 50 !important;
-                background: var(--color-bg-sidebar) !important;
-                border-left: none !important;
-                display: block;
-                /* Alinha o conteúdo ao topo */
-            }
-
-            #mobile-sidebar-nav.active {
-                transform: translateX(0) !important;
-            }
-
-            /* Oculta o Header da Sidebar */
-            .mobile-header {
-                display: none !important;
-            }
-
-            /* Lista de Navegação e Alinhamento ao Topo */
-            #main-nav-list {
-                padding: 4rem 0 2rem 0 !important;
-                /* Afastamento do topo */
-                text-align: center;
-                display: block;
-                width: 100%;
-            }
-
-            #main-nav-list li {
-                border-bottom: none !important;
-                width: 100%;
-            }
-
-            /* Links Mobile Principais */
-            .mobile-nav-link {
-                display: flex !important;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-                margin: 0.6rem 0 !important;
-                padding: 0.5rem 0.75rem !important;
-                color: var(--color-white) !important;
-                background: transparent !important;
-                font-size: 1.25rem !important;
-                font-weight: 500 !important;
-                width: 100%;
-                line-height: 1.2;
-            }
-
-            #mobile-portfolio-arrow {
-                font-size: 0.8em;
-                transition: transform 0.3s ease;
-                display: block;
-            }
-        }
     </style>
 
     <a class="text-2xl font-semibold header-brand">­</a>
 
     <nav class="hidden md:flex items-center header-nav">
         <a href="/" class="nav-link"><span>Home</span></a>
-        <a href="/about" class="nav-link"><span>About & Contact</span></a>
+        <a href="/about" class="nav-link"><span>About</span></a>
         <a href="/developer" class="nav-link"><span>Developer</span></a>
+        <a href="/contact" class="nav-link"><span>Contact</span></a>
     </nav>
 
     <div class="md:hidden">
@@ -245,8 +29,9 @@
         <ul id="main-nav-list">
 
             <li><a href="/" class="mobile-nav-link"><span>Home</span></a></li>
-            <li><a href="/about" class="mobile-nav-link"><span>About & Contact</span></a></li>
+            <li><a href="/about" class="mobile-nav-link"><span>About</span></a></li>
             <li><a href="/developer" class="mobile-nav-link"><span>Developer</span></a></li>
+            <li><a href="/contact" class="mobile-nav-link"><span>Developer</span></a></li>
         </ul>
 
     </nav>

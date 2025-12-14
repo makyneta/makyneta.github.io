@@ -7,15 +7,10 @@
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <link rel="icon" href="assets/images/logos/tomas-mota-oliveira.jpg" type="image/jpg">
-    <link rel="stylesheet" href="assets/styles/stt.css">
     <link rel="stylesheet" href="assets/styles/new.css">
-    <link rel="stylesheet" href="assets/styles/modal.css">
-    <link rel="stylesheet" href="assets/styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/modal.js"></script>
-    <script src="assets/scripts/home.js"></script>
     <title>Tomás Mota | Makyneta Studios</title>
 </head>
 <body>
@@ -30,7 +25,7 @@
                 <p class="name-subtitle">TOMÁS MOTA | MAKYNETA STUDIOS</p>
                 <h3 class="headline">Fullstack Developer<br>Light, Sound, IT Technician</h3>
                 
-                <p class="description">
+                <p class="description" style="text-align: justify !important;">
                     Since 2024, I have worked as a full-stack programmer, lighting, sound, and IT technician. I have collaborated with the theater company "Libélula Teatro" as a lighting/sound technician, with football clubs, and with the Marinha Grande Poente School Group as a photographer. Currently, I work as a freelancer, performing the functions of full-stack programmer, photographer, lighting, sound, and IT technician, where I am looking to help companies and individuals grow and achieve their goals.
                 </p>
                 <!-- <p class="description">
@@ -42,113 +37,17 @@
                     <span class="or-separator">|</span>
                     <a href="/about" target="_blank" class="action-link primary-action">Read About Me</a>
                     <span class="or-separator">|</span>
-                    <a href="#" id="openContactModal" class="action-link primary-action">Contact Me</a>
+                    <a href="/contact" target="_blank" class="action-link primary-action">Contact Me</a>
                 </div>
             </div>
 
             <div class="image-column">
-                <img src="assets/images/site/hero.png" alt="Tomás Mota" class="profile-photo">
+                <img src="assets/images/site/tomasmota1.jpg" alt="Tomás Mota" class="profile-photo">
             </div>
         </div>
     </section>
 
 <div id="footer"></div>
-
-<div id="portfolioModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" id="closePortfolioModal">&times;</span>
-
-        <section class="case-studies-section" id="projects">
-            <div class="case-studies-header">
-                <p class="section-subtitle">PORTFOLIO</p>
-                <!-- <h2 class="section-title">All My Work</h2> -->
-            </div>
-            <div class="projects-grid">
-                
-                <article class="project-card dark-card" data-src="assets/img/dev/mesapra4.jpg">
-                    <!-- <div class="project-info">
-                        <p class="project-year">2024 — TODAY</p>
-                        <span class="project-tag new-tag">NEW</span>
-                    </div> -->
-                    <h3 class="project-title">Developer</h3>
-                    
-                    <a href="/dev" class="view-case-study-link">
-                        All My Work As A Dev Fulstack<span class="arrow">→</span>
-                    </a>
-                    
-                    <div class="project-visual basic-ux-visual"></div>
-                </article>
-
-                <article class="project-card dark-card" data-src="assets/img/photo/sport/24.jpg">
-                    <!-- <div class="project-info">
-                        <p class="project-year">2024 — TODAY</p>
-                    </div> -->
-                    <h3 class="project-title">Photographer</h3>
-                    
-                    <a href="/photo" class="view-case-study-link">
-                        All My Work As A Photographer<span class="arrow">→</span>
-                    </a>
-                    
-                    <div class="project-visual triniso-visual"></div>
-                </article>
-
-            </div>
-        </section>
-    </div>
-</div>
-
-<div id="contactModal" class="modal contact-pro-modal-overlay">
-    <div class="modal-content contact-pro-modal-content">
-        <span class="close-button contact-pro-close-btn" id="closeContactModal">&times;</span>
-
-        <div class="contact-pro-wrapper">
-            
-            <div class="contact-info-highlight">
-                <!-- <h3 class="highlight-title">Direct Contact</h3> -->
-                <!-- <p class="highlight-subtitle">Prefer falar diretamente?</p> -->
-
-                <div class="highlight-item">
-                    <p class="item-label">MAIL</p>
-                    <a href="mailto:makynetastudios@gmail.com" class="item-value">makynetastudios@gmail.com</a>
-                </div>
-
-                <div class="highlight-item">
-                    <p class="item-label">PHONE</p>
-                    <a href="tel:+351913936776" class="item-value">+351 913 936 776</a>
-                </div>
-
-                <p class="highlight-footer">I am available to discuss your project.</p>
-            </div>
-
-            <div class="contact-form-side">
-                <!-- <h2 class="form-title">Send a Message</h2> -->
-                <!-- <p class="form-subtitle">Use o formulário para pedidos de orçamento ou dúvidas.</p> -->
-                
-                <form action="https://formspree.io/f/xvgbagja" method="POST" class="contact-pro-form">
-                    
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" class="contact-pro-input" placeholder="Name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" class="contact-pro-input" placeholder="Email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" class="contact-pro-input" placeholder="Subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="message" name="message" class="contact-pro-textarea" rows="4" placeholder="Message" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="contact-pro-submit-btn">Send Message</button>
-                </form>
-            </div>
-            
-        </div>
-    </div>
-</div>
 
 </body>
 </html>

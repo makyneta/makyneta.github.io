@@ -68,7 +68,7 @@
             border-radius: 50%;
             overflow: hidden;
             /* Borda azul para destaque na foto */
-            border: 4px solid #00BFFF; 
+            border: 4px solid #1f9468; 
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
         }
 
@@ -109,7 +109,7 @@
             margin-bottom: 40px;
             padding-left: 25px;
             /* Linha lateral azul indicando timeline */
-            border-left: 4px solid #00BFFF; 
+            border-left: 4px solid  #1f9468; 
         }
 
         .job-title {
@@ -182,7 +182,7 @@
             opacity: 1;
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(252, 252, 252, 0.1);
-            border-color: #00BFFF;
+            border-color:  #1f9468;
             background-color: #ffffff;
         }
 
@@ -209,7 +209,7 @@
         .client-roles {
             font-size: 0.85em;
             font-weight: 600;
-            color: #007acc; /* Azul subtil para diferenciar */
+            color:  #31d094; /* Azul subtil para diferenciar */
             margin-top: auto; /* Empurra para o fundo se o cartão crescer */
             border-top: 1px solid #eee;
             padding-top: 8px;
@@ -231,13 +231,13 @@
 
         .skill-area {
             /* Fundo cinza muito claro para destacar os blocos no fundo branco */
-            background-color: #ffffff; 
+            background-color: #ffffffda; 
             padding: 25px;
             border-radius: 8px;
             text-align: justify;
             border: 1px solid #eeeeee; /* Borda sutil */
             /* Pequena borda colorida no topo ou esquerda para identidade */
-            border-left: 5px solid #00BFFF;
+            border-left: 5px solid  #1f9468;
             transition: transform 0.2s, box-shadow 0.2s;
         }
         
@@ -248,7 +248,7 @@
 
         .skill-area h4 {
             font-size: 1.25em;
-            color: #007acc; /* Título azul */
+            color: #31d094; /* Título azul */
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 700;

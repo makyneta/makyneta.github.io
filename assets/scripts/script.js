@@ -10,6 +10,13 @@ fetch("/assets/div/header.html")
   .then(data => {
     document.getElementById("header").innerHTML = data;
 
+    // CSS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/styles/header.css";
+    document.head.appendChild(link);
+
+    // JS
     const script = document.createElement("script");
     script.src = "/assets/scripts/header.js";
     document.body.appendChild(script);
@@ -23,12 +30,13 @@ fetch("/assets/div/footer.html")
   .then(data => {
     document.getElementById("footer").innerHTML = data;
 
-    // Adiciona o CSS
+    // CSS
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/styles/footer.css"; // Altere para o caminho correto do seu arquivo CSS
+    link.href = "/assets/styles/footer.css";
     document.head.appendChild(link);
 
+    // JS
     const script = document.createElement("script");
     script.src = "/assets/scripts/footer.js";
     document.body.appendChild(script);

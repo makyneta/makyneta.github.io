@@ -1,202 +1,207 @@
-        /* --- ESTILOS GERAIS (TEMA CLARO/BRANCO) --- */
-        body {
-            background-color: #ffffff; 
-            color: #333333; 
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        
-        /* Container Principal */
-        .contact-page-container {
-            padding: 0 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #ffffff; 
-            padding-bottom: 80px;
-        }
+/* ================================================= */
+/* --- ESTILOS GERAIS (Tema Escuro e Tipografia) --- */
+/* ================================================= */
 
-        /* O HERO (Cabeçalho) */
-        .contact-hero {
-            padding: 80px 0 50px 0;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 40px;
-        }
+body {
+    background-color: #000000;
+    color: #e1e1e1;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-        .contact-main-title {
-            font-size: 3em;
-            font-weight: 800;
-            color: #222222; 
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
+.contact-page-container {
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000000;
+}
 
-        .contact-intro-text {
-            font-size: 1.3em;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #555555; 
-        }
-        
-        /* --- LAYOUT PRINCIPAL (2 COLUNAS) --- */
-        .contact-content {
-            display: flex;
-            gap: 40px;
-        }
+/* --- HERO MINIMALISTA --- */
+.contact-hero {
+    padding: 60px 0 40px 0; /* Menos padding */
+    text-align: center;
+}
 
-        /* Formulário (Coluna Principal) */
-        .contact-form-section {
-            flex: 2; /* O formulário ocupa mais espaço */
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #eeeeee;
-        }
+.contact-main-title {
+    font-size: 2.5em; /* Ligeiramente menor */
+    font-weight: 800;
+    color: #d5d5d5;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
 
-        /* Informações de Contacto (Coluna Lateral) */
-        .contact-info-section {
-            flex: 1; 
-            padding: 30px 0;
-        }
-        
-        .contact-info-section h2 {
-            font-size: 1.5em;
-            color: #222;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+.contact-intro-text {
+    font-size: 1.1em; /* Ligeiramente menor */
+    max-width: 600px;
+    margin: 0 auto;
+    color: #adadad;
+}
 
-        .contact-detail {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .contact-icon {
-            font-size: 1.5em;
-            color: #00BFFF; /* Azul de destaque */
-            margin-right: 15px;
-            flex-shrink: 0;
-            padding-top: 2px;
-        }
-        
-        .contact-text strong {
-            display: block;
-            font-size: 1.1em;
-            color: #222;
-            margin-bottom: 5px;
-        }
-        
-        .contact-text a {
-            color: #555;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .contact-text a:hover {
-            color: #00BFFF;
-        }
+/* ================================================= */
+/* --- SEÇÃO PRINCIPAL (GRID 2 COLUNAS) --- */
+/* ================================================= */
 
-        /* --- ESTILOS DO FORMULÁRIO --- */
-        .contact-form h3 {
-            font-size: 1.6em;
-            color: #007acc;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 1px dashed #ddd;
-            padding-bottom: 10px;
-        }
+.main-contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Form mais largo que os detalhes */
+    gap: 40px;
+    padding: 40px 0 80px 0;
+    border-top: 1px solid #232323;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.form-title-minimal {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #232323; /* Separador sutil */
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #444;
-        }
+/* --- ESTILOS DO FORMULÁRIO (Formulário mais integrado no fundo preto) --- */
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Inclui padding e border no width total */
-            font-size: 1em;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            background-color: #ffffff;
-        }
+.contact-form-container {
+    /* Não tem mais fundo destacado */
+    padding: 0;
+}
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #00BFFF;
-            box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
-            outline: none;
-        }
+.contact-form {
+    padding: 0; /* Remove o padding extra do bloco anterior */
+    background: none;
+    box-shadow: none;
+}
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+.form-group {
+    margin-bottom: 18px;
+}
 
-        .submit-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #00BFFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.1em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #adadad;
+    font-size: 0.95em;
+}
 
-        .submit-button:hover {
-            background-color: #0099cc;
-            transform: translateY(-1px);
-        }
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #1a1a1a; /* Fundo do input */
+    color: #e1e1e1;
+}
 
-        .submit-button:active {
-            transform: translateY(0);
-        }
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1f9468;
+    outline: none;
+}
 
-        /* --- MENSAGEM DE SUCESSO --- */
-        #response-message {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            display: none; /* Escondido por padrão */
-            background-color: #e6ffed; /* Fundo verde suave */
-            color: #1a7a2a; /* Texto verde escuro */
-            border: 1px solid #b3ffc2;
-        }
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #31d094; 
+    color: #000000;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
 
-        /* --- RESPONSIVIDADE --- */
-        @media (max-width: 768px) {
-            .contact-hero {
-                padding: 50px 0 30px 0;
-            }
-            .contact-main-title {
-                font-size: 2.2em;
-            }
-            .contact-content {
-                flex-direction: column;
-            }
-            .contact-info-section {
-                order: -1; /* Move info para o topo em mobile */
-                padding-bottom: 0;
-            }
-            .contact-form-section {
-                padding: 20px;
-            }
-        }
+.submit-button:hover {
+    background-color: #1f9468;
+    transform: none; /* Remove a animação de translateY para minimalismo */
+}
+.submit-button i {
+    margin-right: 8px;
+}
+
+/* --- ESTILOS DOS DETALHES (Blocos mais compactos) --- */
+
+.contact-details-container {
+    padding-top: 0;
+}
+
+.contact-detail-block {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #232323;
+    margin-bottom: 15px; /* Espaçamento entre blocos de contacto */
+    transition: none; /* Remove a animação de hover para minimalismo */
+}
+
+.contact-detail-block:hover {
+    border-color: #1f9468; /* Mantém apenas a mudança de cor da borda no hover */
+    box-shadow: none;
+    transform: none;
+}
+
+.contact-icon {
+    font-size: 2em; /* Ícones menores */
+    color: #31d094;
+    margin-bottom: 10px;
+}
+
+.contact-detail-block h4 {
+    font-size: 1.1em;
+    color: #f0f0f0;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.contact-detail-block p {
+    color: #adadad;
+    font-size: 0.85em; /* Texto descritivo menor */
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    font-weight: 500;
+    color: #31d094;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-text {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+/* ================================================= */
+/* --- RESPONSIVIDADE --- */
+/* ================================================= */
+
+@media (max-width: 900px) {
+    /* Em tablets e mobile, empilha as colunas */
+    .main-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 40px 0 20px 0;
+    }
+    .contact-main-title {
+        font-size: 2em;
+    }
+}
