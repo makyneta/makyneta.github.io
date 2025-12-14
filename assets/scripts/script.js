@@ -11,7 +11,7 @@ fetch("/assets/div/header.html")
     document.getElementById("header").innerHTML = data;
 
     const script = document.createElement("script");
-    script.src = "/assets/js/header.js";
+    script.src = "/assets/scripts/header.js";
     document.body.appendChild(script);
   });
 
@@ -26,10 +26,10 @@ fetch("/assets/div/footer.html")
     // Adiciona o CSS
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/css/footer.css"; // Altere para o caminho correto do seu arquivo CSS
+    link.href = "/assets/styles/footer.css"; // Altere para o caminho correto do seu arquivo CSS
     document.head.appendChild(link);
 
     const script = document.createElement("script");
-    script.src = "/assets/js/footer.js";
+    script.src = "/assets/scripts/footer.js";
     document.body.appendChild(script);
   });

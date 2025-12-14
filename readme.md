@@ -12,10 +12,10 @@ This phrase reflects the central philosophy of this website: minimalist design, 
 This site is automatically deployed via [GitHub Pages](https://pages.github.com) whenever changes are pushed to the `main` branch.
 
 ## 👤 Author
-**[Tomás Mota](https://tomasmotastudios.github.io)** | Aways building with focus and minimalism.
+**[Makyneta Studios](https://makyneta.github.io)** | Aways building with focus and minimalism.
 
 ## 📬 Contact
-[tomasmotastudios@gmail.com](mailto:tomasmotastudios@gmail.com)
+[makynetastudios@gmail.com](mailto:makynetastudios@gmail.com)
 
 ---
 
