@@ -1,4 +1,7 @@
-        /* --- ESTILOS GERAIS (TEMA CLARO/BRANCO) --- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+/* --- ESTILOS GERAIS --- */
         body {
             background-color: #000000; /* Fundo Branco */
             color: #e1e1e1; /* Texto Escuro para contraste */
@@ -85,17 +88,21 @@
         .personal-details p {
             font-size: 1.1em;
             margin: 10px 0;
-            color: #a9a9a9;
+            color: #ffffffe7;
         }
         
         .personal-details strong {
             color: #ffffff;
         }
 
+        .personal-details divisor {
+            color: #ffffff73;
+        }
+
         .about-contact-link {
             font-size: 1.1em;
             margin: 10px 0;
-            color: #a9a9a9;
+            color: #ffffffe7;
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -231,7 +238,7 @@
 
         .skill-area {
             /* Fundo cinza muito claro para destacar os blocos no fundo branco */
-            background-color: #ffffffda; 
+            background-color: #c6c6c6da; 
             padding: 25px;
             border-radius: 8px;
             text-align: justify;
@@ -248,14 +255,14 @@
 
         .skill-area h4 {
             font-size: 1.25em;
-            color: #31d094; /* Título azul */
+            color: #ffffff; /* Título azul */
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 700;
         }
 
         .skill-list {
-            color: #555555;
+            color: #000000;
             line-height: 1.6;
             margin: 0;
         }
@@ -265,27 +272,37 @@
             font-weight: 600;
         }
 
+        .skill-list divisor {
+            color: #05050580;
+        }
+
         /* --- RESPONSIVIDADE --- */
         @media (max-width: 768px) {
             .about-hero {
                 padding: 50px 0 30px 0;
             }
             .about-main-title {
-                font-size: 2.2em;
+                font-size: 1.7em;
             }
-            .about-personal-info {
+            .about-intro-text {
+                font-size: 1.0em;
+            }
+            /* .about-personal-info {
                 flex-direction: column;
                 gap: 20px;
                 text-align: center;
             }
             .personal-details {
                 text-align: center;
-            }
+            } */
             .about-skills-detail {
                 grid-template-columns: 1fr; /* Uma coluna em mobile */
             }
             .personal-photo-placeholder {
                 width: 150px;
                 height: 150px;
+            }
+            .collaborations-intro {
+                text-align: justify;
             }
         }

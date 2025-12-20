@@ -4,382 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Admin | Makyneta Studios</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/images/site/makyneta-studios.jpg" type="image/jpg">
-    
-    <style>
-        /* CSS Refinement for Ultra-Minimalism */
-        :root {
-            --color-black: #000000;
-            --color-dark-gray: #1a1a1a;
-            --color-light-gray: #f0f0f0;
-            --color-border: #333333;
-            --color-accent: #ffffff;
-            --color-hover: #999999;
-            --color-success: #3ddc84; 
-            --color-warning: #ffaa00; 
-            --color-error: #e63946; 
-            
-            /* Function Colors */
-            --color-prog: #00bcd4; 
-            --color-light: #ffeb3b; 
-            --color-sound: #9c27b0; 
-            --color-ti: #4caf50; 
-        }
-
-        /* CORREÇÃO 1: CSS RESET BÁSICO E CRÍTICO */
-        html, body {
-            margin: 0;
-            padding: 0;
-            /* Garante que o padding não se some à largura */
-            box-sizing: border-box; 
-        }
-        *, *::before, *::after {
-            box-sizing: inherit;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--color-black);
-            color: var(--color-light-gray);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            scroll-behavior: smooth;
-            font-weight: 300;
-            /* CRÍTICO: Previne qualquer elemento de forçar uma barra de rolagem horizontal */
-            overflow-x: hidden; 
-        }
-
-        /* --- Header / Navigation (Desktop Base) --- */
-        header {
-            background-color: var(--color-black);
-            padding: 15px 60px; /* Padding Desktop */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--color-border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 5px rgba(255, 255, 255, 0.05);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.2em;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            font-weight: 700;
-        }
-
-        /* Nav Links Desktop */
-        nav a {
-            color: var(--color-light-gray);
-            text-decoration: none;
-            margin-left: 35px;
-            font-weight: 400;
-            font-size: 0.9em;
-            transition: color 0.3s;
-            letter-spacing: 0.5px;
-        }
-
-        nav a:hover {
-            color: var(--color-accent);
-        }
-
-        /* Menu Icon (Hidden on Desktop) */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--color-accent);
-            font-size: 1.5em;
-            cursor: pointer;
-            z-index: 1001;
-            padding: 0; 
-        }
-
-        /* --- Main Content Layout (Desktop Padding) --- */
-        main {
-            flex-grow: 1;
-            padding: 0 60px; /* Padding Desktop */
-            max-width: 1600px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        section {
-            padding-top: 80px;
-            margin-top: -80px;
-            min-height: calc(100vh - 100px);
-        }
-        
-        .section-title {
-            font-size: 2.2em;
-            color: var(--color-accent);
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 15px;
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 1px;
-            text-align: left;
-        }
-        
-        /* -------------------------------------- */
-        /* --- ESTILOS DA SEÇÃO DE LOGIN --- */
-        /* -------------------------------------- */
-        #login-section {
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            min-height: calc(100vh - 60px); 
-        }
-        
-        .login-box {
-             background-color: var(--color-dark-gray);
-             padding: 60px;
-             border-radius: 4px;
-             box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
-             width: 400px;
-             max-width: 90%; 
-             text-align: center;
-             border: 1px solid var(--color-border);
-        }
-
-        .login-box h2 {
-             margin-bottom: 40px;
-             color: var(--color-accent);
-             font-weight: 300;
-             font-size: 1.8em;
-             letter-spacing: 1px;
-        }
-
-        .login-box input[type="password"] {
-             width: 100%;
-             padding: 15px;
-             margin: 10px 0;
-             border: none;
-             border-bottom: 1px solid var(--color-border);
-             border-radius: 0;
-             background-color: transparent;
-             color: var(--color-light-gray);
-             box-sizing: border-box;
-             font-size: 1em;
-             text-align: center;
-             transition: border-bottom-color 0.3s;
-        }
-
-        .login-box button {
-             background-color: var(--color-accent);
-             color: var(--color-black); 
-             padding: 14px 30px;
-             border: none;
-             border-radius: 3px;
-             cursor: pointer;
-             font-size: 1em;
-             font-weight: 700;
-             text-transform: uppercase;
-             transition: background-color 0.3s, opacity 0.3s;
-             width: 100%;
-             margin-top: 30px;
-        }
-        
-        #login-message {
-             color: var(--color-error);
-             margin-top: 20px;
-             font-weight: 400;
-        }
-
-        /* --- Content Cards --- */
-        #content-section {
-            display: none;
-            padding-top: 40px;
-        }
-        
-        .content-card {
-            background-color: var(--color-dark-gray);
-            padding: 30px;
-            border-radius: 4px;
-            margin-bottom: 0;
-            border: 1px solid var(--color-border);
-            margin-top: 30px; 
-        }
-        
-        .function-header {
-            font-size: 1.5em;
-            font-weight: 700;
-            padding-top: 15px;
-            margin-bottom: 15px;
-        }
-
-        /* --- Table Styling (Projects Section - Desktop) --- */
-        .table-wrapper {
-            overflow-x: auto; 
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            text-align: left; 
-            font-size: 0.9em; 
-        }
-        
-        th, td { 
-            padding: 12px 15px; 
-            border-bottom: 1px solid var(--color-border); 
-            width: 10%; 
-        }
-        th:first-child, td:first-child { width: 90%; }
-        th:last-child, td:last-child { width: 10%; text-align: right; } 
-
-
-        /* --- Gallery Grid (Desktop) --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-        
-        .img-container {
-            width: 100%;
-            padding-top: 100%; 
-            position: relative;
-            overflow: hidden;
-            border-radius: 2px;
-            border: 1px solid var(--color-border);
-        }
-
-        .img-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--color-black);
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid var(--color-border);
-            color: #555;
-            font-size: 0.8em;
-            letter-spacing: 0.5px;
-            margin-top: 40px;
-        }
-        
-        /* ==================================== */
-        /* === MEDIA QUERY: MOBILE STYLES (≤ 768px) === */
-        /* ==================================== */
-        @media (max-width: 768px) {
-            
-            /* --- AJUSTE CRÍTICO DE ESPAÇAMENTO LATERAL (15px para Header e Main) --- */
-            header { 
-                padding: 15px 15px; 
-            }
-            
-            main { 
-                padding: 0 15px; 
-            }
-            
-            .content-card {
-                padding: 15px;
-                margin-top: 20px;
-            }
-
-            .section-title {
-                padding-left: 0;
-                padding-right: 0;
-                font-size: 1.8em; 
-                margin-bottom: 25px;
-            }
-            
-            /* Login Box Mobile */
-            .login-box {
-                padding: 30px;
-            }
-            
-            /* --- GALERIA OTIMIZADA PARA MOBILE (1 Imagem por Linha) --- */
-            .gallery-grid {
-                grid-template-columns: 1fr; 
-                gap: 15px; 
-            }
-
-            .img-container {
-                padding-top: 75%; 
-            }
-            
-            /* --- SOLUÇÃO PARA TABELAS (Formato Lista/Card) --- */
-            
-            .table-wrapper { overflow-x: hidden; padding-bottom: 0; }
-            table { border: 0; width: 100%; }
-            table thead { display: none; }
-            table, tbody, tr { display: block; width: 100%; }
-            
-            tr {
-                border-bottom: 2px solid var(--color-border);
-                margin-bottom: 10px;
-                padding: 10px 0;
-            }
-            
-            tr td:nth-child(3) { display: none; }
-
-            td {
-                display: block;
-                padding: 5px 0;
-                border: none;
-                font-size: 0.85em;
-            }
-            
-            td:nth-child(1) { /* Project Name */
-                font-weight: 700;
-                font-size: 1em;
-                text-align: left;
-                padding-bottom: 2px;
-            }
-            
-            td:nth-child(2) { /* Status */
-                text-align: left;
-                padding-top: 2px;
-                margin-bottom: 5px;
-            }
-
-            td::before {
-                content: none;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/images/site/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/admin.css">  
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <script src="assets/scripts/admin.js"></script>
+    <title>Admin – Tomás Mota | Makyneta Studios</title>
 </head>
 <body>
 
     <header id="top-header">
-        <h1>MAKYNETA</h1>
+        <h1></h1>
         <button class="menu-toggle" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </button>
 
         <nav id="admin-nav">
-            <a href="#projects-section" class="nav-link" onclick="closeMenu()">Projects</a> 
-            <a href="#gallery-section" class="nav-link" onclick="closeMenu()">Gallery</a>
-            <a href="#" onclick="logout(); closeMenu()" class="nav-link">Logout</a>
+            <a href="" onclick="logout(); closeMenu()" class="nav-link">Logout</a>
         </nav>
     </header>
 
     <main>
         <section id="login-section">
             <div class="login-box">
-                <h2>AUTHENTICATION</h2>
-                <input type="password" id="password-input" placeholder="ACCESS KEY">
-                <button onclick="checkPassword()">ACCESS PANEL</button>
+                <input type="password" id="password-input" placeholder="PASSWORD">
+                <button onclick="checkPassword()">&ac;</button>
                 <p id="login-message"></p>
             </div>
         </section>
@@ -387,7 +36,7 @@
         <div id="content-section">
             
             <section id="projects-section">
-                <h2 class="section-title">Projects & Milestones</h2>
+                <h2 class="section-title">PROJECTS</h2>
                 
                 <div class="content-card">
                     <h3 class="function-header prog">💻 Programming</h3>
@@ -479,17 +128,17 @@
             </section>
             
             <section id="gallery-section">
-                <h2 class="section-title">Private Gallery</h2>
+                <h2 class="section-title">GALLERY</h2>
                 <div class="content-card" style="margin-top: 0;">
                     <div class="gallery-grid">
                         <div class="img-container">
+                            <img src="assets/images/site/vasco-mota.jpg">
+                        </div>
+                        <div class="img-container">
+                            <img src="assets/images/personal/595296039_1273907514773442_5921145347961953862_n.jpg">
+                        </div>
+                        <div class="img-container">
                             <img src="assets/images/personal/587534140_18550703668014397_4970370577555597654_n.jpg">
-                        </div>
-                        <div class="img-container">
-                            <img src="assets/images/personal/463874283_27016060528042605_868987664482202923_n.jpg">
-                        </div>
-                        <div class="img-container">
-                            <img src="assets/images/personal/463904771_8591211050925784_4626081056157208486_n.jpg">
                         </div>
                         <div class="img-container">
                             <img src="assets/images/personal/500762179_9623567704436753_197454331866169884_n.jpg">
@@ -509,110 +158,5 @@
     <footer>
         &copy; Makyneta Studios, Lda.
     </footer>
-
-    <script>
-        // JavaScript for Client-Side Login Logic
-        const CORRECT_PASSWORD_1 = 'makyneta';
-        const CORRECT_PASSWORD_2 = 'tomasmota';
-
-        function checkPassword() {
-            const passwordInput = document.getElementById('password-input').value.trim();
-            const loginSection = document.getElementById('login-section');
-            const contentSection = document.getElementById('content-section');
-            const loginMessage = document.getElementById('login-message');
-
-            if (passwordInput === CORRECT_PASSWORD_1 || passwordInput === CORRECT_PASSWORD_2) {
-                // Correct Password: Hide login, show content
-                loginSection.style.display = 'none';
-                contentSection.style.display = 'block';
-                // Scroll to Projects (Primeira seção de conteúdo)
-                document.getElementById('projects-section').scrollIntoView(); 
-            } else {
-                // Incorrect Password
-                loginMessage.textContent = '❌ Invalid Credentials. Please try again.';
-                document.getElementById('password-input').value = '';
-                setTimeout(() => {
-                    loginMessage.textContent = '';
-                }, 3000);
-            }
-        }
-        
-        function logout() {
-            if (confirm("Are you sure you want to log out of the panel?")) {
-                // Clear password, hide content, show login
-                document.getElementById('password-input').value = '';
-                document.getElementById('content-section').style.display = 'none';
-                document.getElementById('login-section').style.display = 'flex';
-                // Scroll to top of the page
-                window.scrollTo(0, 0); 
-            }
-        }
-        
-        // --- Mobile Menu Functions (Open/Close Navigation) ---
-        const nav = document.getElementById('admin-nav');
-        const menuToggle = document.querySelector('.menu-toggle');
-        
-        function toggleMenu() {
-            nav.classList.toggle('open');
-            // Altera o ícone do menu
-            menuToggle.querySelector('i').classList.toggle('fa-bars');
-            menuToggle.querySelector('i').classList.toggle('fa-times');
-        }
-
-        function closeMenu() {
-            // Fecha o menu após o clique (se estiver aberto)
-            if (nav.classList.contains('open')) {
-                nav.classList.remove('open');
-                // Restaura o ícone para barras
-                menuToggle.querySelector('i').classList.remove('fa-times');
-                menuToggle.querySelector('i').classList.add('fa-bars');
-            }
-        }
-        
-        // Adiciona um estilo para o menu mobile na própria tag style para evitar problemas
-        const styleSheet = document.createElement('style');
-        styleSheet.type = 'text/css';
-        styleSheet.innerText = `
-            @media (max-width: 768px) {
-                /* CORREÇÃO CRÍTICA AQUI: Usar left: 15px e right: 15px para forçar o alinhamento */
-                #admin-nav {
-                    display: none;
-                    flex-direction: column;
-                    position: absolute;
-                    top: 52px; 
-                    left: 15px;  
-                    right: 15px; 
-                    width: auto; 
-                    background-color: var(--color-dark-gray);
-                    border-top: 1px solid var(--color-border);
-                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-                    padding-bottom: 10px;
-                }
-                #admin-nav.open {
-                    display: flex;
-                }
-                #admin-nav a {
-                    margin: 10px 0; 
-                    padding: 8px 15px; 
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                    text-align: right;
-                }
-                #admin-nav a:last-child {
-                    border-bottom: none;
-                }
-                .menu-toggle {
-                    display: block;
-                }
-            }
-        `;
-        document.head.appendChild(styleSheet);
-
-
-        // Ensures only the login screen is visible on initial load
-        window.onload = function() {
-             document.getElementById('content-section').style.display = 'none';
-             document.getElementById('login-section').style.display = 'flex';
-        };
-    </script>
 </body>
 </html>

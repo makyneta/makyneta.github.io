@@ -1,6 +1,7 @@
-/* ---------------------------------------------------- */
-/* --- 0. VARIÁVEIS E CONFIGURAÇÃO BASE (Dark Mode: Tech/Esmeralda) --- */
-/* ---------------------------------------------------- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+/* --- 0. VARIÁVEIS E CONFIGURAÇÃO BASE --- */
+
 :root {
     /* Cores de Fundo (Preto Ardósia - Fundo principal) */
     --primary-bg: #151515;     
@@ -90,7 +91,7 @@ a:hover {
     font-size: 18vw; 
     font-weight: 900;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.035);
+    color: rgba(255, 255, 255, 0.010);
     pointer-events: none;
     z-index: 5;
     white-space: nowrap;
