@@ -12,7 +12,7 @@ This phrase reflects the central philosophy of this website: minimalist design, 
 This site is automatically deployed via [GitHub Pages](https://pages.github.com) whenever changes are pushed to the `main` branch.
 
 ## 👤 Author
-**[Makyneta Studios](https://makyneta.github.io)** | Aways building with focus and minimalism.
+**[Makyneta Studios by Tomás Mota](https://makyneta.github.io)** | Aways building with focus and minimalism.
 
 ## 📬 Contact
 [makynetastudios@gmail.com](mailto:makynetastudios@gmail.com)
