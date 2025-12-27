@@ -56,21 +56,21 @@ const slug   = parts[parts.length - 1];                // "whatsapp"
 if (redirects.hasOwnProperty(slug)) {
   const target = redirects[slug];
   document.getElementById('msg').textContent =
-    `Você será enviado para ${new URL(target).hostname}…`;
+    `You are go to ${new URL(target).hostname}…`;
 
   setTimeout(() => {
     // 302 temporário – muda para 301 se for permanente
     window.location.replace(target);
-  }, 500);
+  }, 0);
 } else {
   // Slug desconhecido → volta à página inicial
   const home = '/';                       // caminho relativo à raiz do site
   document.getElementById('msg').innerHTML =
-    `⚠️ Link não encontrado. Você será redirecionado para a página inicial…`;
+    `⚠️ 404 ERROR. You are go to homepage…`;
 
   setTimeout(() => {
     window.location.replace(home);
-  }, 1500);   // dá tempo de o usuário ler a mensagem
+  }, 0);   // dá tempo de o usuário ler a mensagem
 }
 </script>
 
