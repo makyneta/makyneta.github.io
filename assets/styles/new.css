@@ -21,7 +21,7 @@
     --color-light: var(--primary-bg); 
     --color-gray: var(--text-color-muted);
     
-    --font-family: 'Inter', sans-serif; 
+    --font-family: 'Fira Code', monospace;
     --side-padding: 80px; 
     --border-radius-base: 8px;
 }

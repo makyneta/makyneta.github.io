@@ -16,7 +16,7 @@
             --color-border: rgba(255, 255, 255, 0.1);
             --header-bg: rgba(0, 0, 0, 0.9);
             --desktop-hover-color: #A0A0A0;
-            font-family: 'Montserrat', sans-serif !important;
+            font-family: 'Fira Code', monospace !important;
         }
 
         /* Estilos Desktop Padrão */

@@ -29,7 +29,7 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Fira Code', monospace;
             background-color: var(--color-black);
             color: var(--color-light-gray);
             min-height: 100vh;

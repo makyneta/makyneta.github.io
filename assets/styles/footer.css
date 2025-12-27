@@ -2,7 +2,7 @@
 
 /* Estilos base do Rodapé */
 .refined-footer {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Fira Code', monospace !important;
     background-color: var(--text-dark);
     color: var(--text-light); 
     padding: 8px 5%;

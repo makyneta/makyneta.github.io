@@ -5,7 +5,7 @@
         body {
             background-color: #000000; /* Fundo Branco */
             color: #e1e1e1; /* Texto Escuro para contraste */
-            font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte limpa */
+            font-family: 'Fira Code', monospace;/* Fonte limpa */
             margin: 0;
             padding: 0;
             line-height: 1.6;
