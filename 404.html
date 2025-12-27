@@ -1,8 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta name="robots" content="noindex, nofollow">
-    <meta http-equiv="refresh" content="0; url=/" />
-    <link rel="icon" href="assets/images/site/favicon.jpg" type="image/jpg">
+  <meta charset="UTF-8">
+  <title>Redirecionando…</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      text-align:center;
+      margin-top:10vh;
+      color:#444;
+    }
+    .spinner{
+      border:4px solid #f3f3f3;
+      border-top:4px solid #555;
+      border-radius:50%;
+      width:40px;
+      height:40px;
+      animation:spin 1s linear infinite;
+      margin:0 auto 1rem;
+    }
+    @keyframes spin{ to{transform:rotate(360deg);} }
+  </style>
 </head>
+<body>
+
+<div class="spinner"></div>
+<p id="msg">Redirecionando…</p>
+
+<script>
+/* ---------- 1️⃣ MAPA DE SLUG → URL ---------- */
+const redirects = {
+  whatsapp : 'https://wa.me/351913936776',
+  instagram: 'https://instagram.com/seuperfil',
+  cv       : 'https://drive.google.com/file/d/SEU_ID/view',
+  linkedin : 'https://linkedin.com/in/SEU_USUARIO',
+  // ← adicione novos slugs aqui
+};
+
+/* ---------- 2️⃣ CAPTURA O SLUG ---------- */
+// Exemplo de pathname: /meuprojeto/go/whatsapp
+const path   = window.location.pathname;                // "/meuprojeto/go/whatsapp"
+const parts  = path.split('/').filter(Boolean);        // ["meuprojeto","go","whatsapp"]
+const slug   = parts[parts.length - 1];                // "whatsapp"
+
+/* ---------- 3️⃣ REDIRECIONAMENTO ---------- */
+if (redirects.hasOwnProperty(slug)) {
+  const target = redirects[slug];
+  document.getElementById('msg').textContent =
+    `Você será enviado para ${new URL(target).hostname}…`;
+
+  setTimeout(() => {
+    // 302 temporário – troque para 301 se for permanente
+    window.location.replace(target);
+  }, 500);
+} else {
+  // Slug desconhecido → volta à página inicial
+  const home = '/';                     // raiz do site (ajuste se for sub‑path)
+  document.getElementById('msg').innerHTML =
+    `⚠️ Link não encontrado. Redirecionando para a página inicial…`;
+
+  setTimeout(() => {
+    window.location.replace(home);
+  }, 1500);
+}
+</script>
+
+</body>
 </html>
