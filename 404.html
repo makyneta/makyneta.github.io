@@ -1,70 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirect… – Tomás Mota | Makyneta Studios</title>
-  <meta name="robots" content="noindex,nofollow">
-  <style>
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      text-align:center;
-      margin-top:10vh;
-      color:#444;
-    }
-    .spinner{
-      border:4px solid #f3f3f3;
-      border-top:4px solid #555;
-      border-radius:50%;
-      width:40px;
-      height:40px;
-      animation:spin 1s linear infinite;
-      margin:0 auto 1rem;
-    }
-    @keyframes spin{ to{transform:rotate(360deg);} }
-  </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<title>Tomás Mota | Makyneta Studios</title>
 
-<div class="spinner"></div>
-<p id="msg">Redirect…</p>
+<meta name="robots" content="noindex,nofollow">
+
+<style>
+html,body{
+    height:100%;
+    margin:0;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.container{
+    max-width:460px;
+    width:90%;
+    padding:2rem;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    text-align:center;
+}
+.spinner{
+    margin:0 auto 1rem;
+    width:48px;
+    height:48px;
+    border:4px solid #e0e0e0;
+    border-top:4px solid #0066ff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+@keyframes spin{ to{transform:rotate(360deg);} }
+h1{
+    font-size:1.2rem;
+    margin:0 0 .5rem;
+    font-weight:600;
+}
+p{
+    margin:0;
+    line-height:1.4;
+}
+.fallback{
+    margin-top:1rem;
+    font-size:.9rem;
+}
+.fallback a{
+    color:#0066ff;
+    text-decoration:none;
+}
+.fallback a:hover{
+    text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="spinner"></div>
+    <h1 id="msg">A Rederecionar…</h1>
+    <p class="fallback" id="fallback"></p>
+</div>
 
 <script>
-/* ---------- 1️⃣ MAPA DE SLUG → URL ---------- */
+/* ----------- 1️⃣ MAPA DE SLUG → URL ----------- */
 const redirects = {
-  whatsapp : 'https://wa.me/351913936776',
-  instagram: 'https://instagram.com/seuperfil',
-  cv       : 'https://drive.google.com/file/d/SEU_ID/view',
-  linkedin : 'https://linkedin.com/in/SEU_USUARIO',
-  // ← adicione novos slugs aqui
+    whatsapp : 'https://wa.me/351913936776',
+    instagram: 'https://instagram.com/seuperfil',
+    cv       : 'https://drive.google.com/file/d/SEU_ID/view',
+    linkedin : 'https://linkedin.com/in/SEU_USUARIO'
 };
 
-/* ---------- 2️⃣ CAPTURA O SLUG ---------- */
-// Exemplo de pathname: /meuprojeto/go/whatsapp
-const path   = window.location.pathname;                // "/meuprojeto/go/whatsapp"
-const parts  = path.split('/').filter(Boolean);        // ["meuprojeto","go","whatsapp"]
-const slug   = parts[parts.length - 1];                // "whatsapp"
+/* ----------- 2️⃣ CAPTURA DO SLUG ----------- */
+const path   = window.location.pathname;               // /go/whatsapp
+const parts  = path.split('/').filter(Boolean);
+const slug   = parts[parts.length-1];
 
-/* ---------- 3️⃣ REDIRECIONAMENTO ---------- */
-if (redirects.hasOwnProperty(slug)) {
-  const target = redirects[slug];
-  document.getElementById('msg').textContent =
-    `You are go to ${new URL(target).hostname}…`;
-
-  setTimeout(() => {
-    // 302 temporário – troque para 301 se for permanente
-    window.location.replace(target);
-  }, 0);
-} else {
-  // Slug desconhecido → volta à página inicial
-  const home = '/';                     // raiz do site (ajuste se for sub‑path)
-  document.getElementById('msg').innerHTML =
-    `⚠️ 404 ERROR. You are go to homepage…`;
-
-  setTimeout(() => {
-    window.location.replace(home);
-  }, 0);
+/* ----------- 3️⃣ LOGIC DE REDIRECIONAMENTO ----------- */
+if (redirects.hasOwnProperty(slug)){
+    const target = redirects[slug];
+    document.getElementById('msg').textContent =
+        `Está a ser rederecionado para ${new URL(target).hostname}…`;
+    setTimeout(()=>window.location.replace(target),500);
+}else{
+    const home = '/';
+    document.getElementById('msg').textContent =
+        `⚠️ Link não encontrado. Redirecionando para a página inicial…`;
+    document.getElementById('fallback').innerHTML =
+        `<a href="${home}">Ir para a página inicial</a>`;
+    setTimeout(()=>window.location.replace(home),1500);
 }
 </script>
-
 </body>
 </html>
