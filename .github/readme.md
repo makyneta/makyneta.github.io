@@ -15,9 +15,9 @@ This site is automatically deployed via [GitHub Pages](https://pages.github.com)
 **[Makyneta Studios by Tomás Mota](https://makyneta.github.io)** | Aways building with focus and minimalism.
 
 ## 📬 Contact
-- **Website** [Contact Page](https://makyneta.github.io/pages/contac)
-- **Email** [makynetastudios@gmail.com](mailto:makynetastudios@gmail.com)
-- **WhatsApp** [+351 913 936 776](https://wa.me/351913936776)
+- **Website**_[makyneta.github.io/pages/contact](https://makyneta.github.io/pages/contact)
+- **Email**_[makynetastudios@gmail.com](mailto:makynetastudios@gmail.com)
+- **WhatsApp**_[+351913936776](https://wa.me/351913936776)
 
 ---
 
