@@ -1,0 +1,127 @@
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #0a0e27;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .glass-card {
+        background: rgba(20, 25, 45, 0.5);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .glass-card-hover {
+        transition: all 0.3s ease;
+    }
+
+    .glass-card-hover:hover {
+        background: rgba(0, 217, 255, 0.1);
+        border-color: rgba(0, 217, 255, 0.6);
+        box-shadow: 0 0 30px rgba(0, 217, 255, 0.3), inset 0 0 20px rgba(0, 217, 255, 0.1);
+        transform: translateY(-4px);
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #0a0e27;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #00D9FF;
+        border-radius: 4px;
+        opacity: 0.3;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00D9FF;
+        opacity: 0.6;
+    }
+
+    .gpu {
+        transform: translateZ(0);
+        will-change: transform, opacity;
+    }
+
+    button {
+        appearance: button;
+        -webkit-appearance: button;
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+        display: block;
+    }
+
+    /* Neon glow effect */
+    .neon-glow {
+        text-shadow: 0 0 10px rgba(0, 217, 255, 0.8), 0 0 20px rgba(0, 217, 255, 0.6);
+    }
+
+    .neon-border {
+        border-color: rgba(0, 217, 255, 0.6);
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.4), inset 0 0 15px rgba(0, 217, 255, 0.1);
+    }
+
+    /* Animated border */
+    .animated-border {
+        background: linear-gradient(90deg, rgba(0, 217, 255, 0), rgba(0, 217, 255, 0.8), rgba(0, 217, 255, 0)) center / 200% 100%;
+        animation: borderFlow 3s linear infinite;
+    }
+
+    @keyframes profileGlow {
+        0%, 100% { 
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.4), 
+                        inset 0 0 20px rgba(0, 217, 255, 0.1);
+        }
+        50% { 
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.8), 
+                        inset 0 0 30px rgba(0, 217, 255, 0.2);
+        }
+    }
+
+    @keyframes rotateBorder {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes shimmer {
+        0% { background-position: -1000px 0; }
+        100% { background-position: 1000px 0; }
+    }
+
+    .profile-container {
+        animation: profileGlow 3s ease-in-out infinite;
+    }
+
+    .profile-border {
+        position: absolute;
+        inset: -2px;
+        border-radius: 2rem;
+        background: linear-gradient(45deg, #008f07, #d37b00, #008f07);
+        animation: rotateBorder 8s linear infinite;
+        z-index: -1;
+    }
+
+    .profile-shimmer {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        background-size: 1000px 100%;
+        animation: shimmer 3s infinite;
+        border-radius: 1.75rem;
+        pointer-events: none;
+    }
