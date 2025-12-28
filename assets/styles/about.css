@@ -89,3 +89,132 @@ h1, h2, h3 {
     color: #31d094; /* Cor de acento DEV */
     letter-spacing: 1px;
 }
+
+
+
+#certificates-section {
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.certificates-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.certificate-card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito sutil ao passar o rato no card inteiro */
+.certificate-card:hover {
+    border-color: #31d094;
+    background: #0d0d0d;
+}
+
+.cert-icon {
+    font-size: 1.5rem;
+    color: #31d094;
+    min-width: 40px;
+    text-align: center;
+}
+
+.cert-info {
+    flex-grow: 1;
+}
+
+.cert-date {
+    font-size: 0.65rem;
+    color: #666;
+    font-family: 'Fira Code', monospace;
+}
+
+.cert-title {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.cert-issuer {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+}
+
+.cert-link {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: #31d094;
+    text-decoration: none;
+    border: 1px solid #31d094;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.cert-link:hover {
+    background: #31d094;
+    color: #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .certificate-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 25px;
+    }
+    
+    .cert-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Modal Estilo Base */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Imagem dentro do Modal */
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 1px solid #333;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+/* Botão Fechar */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover { color: #31d094; }
