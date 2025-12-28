@@ -62,7 +62,7 @@ p{
 <body>
 <div class="container">
     <div class="spinner"></div>
-    <h1 id="msg">A Rederecionar…</h1>
+    <h1 id="msg">Redirecting…</h1>
     <p class="fallback" id="fallback"></p>
 </div>
 
@@ -84,14 +84,14 @@ const slug   = parts[parts.length-1];
 if (redirects.hasOwnProperty(slug)){
     const target = redirects[slug];
     document.getElementById('msg').textContent =
-        `Está a ser rederecionado para ${new URL(target).hostname}…`;
+        `You are being redirected to ${new URL(target).hostname}…`;
     setTimeout(()=>window.location.replace(target),500);
 }else{
     const home = '/';
     document.getElementById('msg').textContent =
-        `⚠️ Link não encontrado. Redirecionando para a página inicial…`;
+        `⚠️ Link not found. Redirecting to the homepage…`;
     document.getElementById('fallback').innerHTML =
-        `<a href="${home}">Ir para a página inicial</a>`;
+        `<a href="${home}">Go to the homepage</a>`;
     setTimeout(()=>window.location.replace(home),1500);
 }
 </script>
