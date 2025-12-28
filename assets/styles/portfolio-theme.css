@@ -1,0 +1,86 @@
+/* --- CONFIGURAÇÕES GERAIS E RESETS --- */
+:root {
+    --card-bg: #121212;
+    --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --- TEMA DEV (Verde / Matrix) --- */
+.theme-dev {
+    --accent: #31d094;
+    --accent-glow: rgba(49, 208, 148, 0.2);
+    --font-page: 'Fira Code', monospace;
+}
+
+/* --- TEMA AV (Som & Luz / Neon) --- */
+.theme-av {
+    --accent: #a855f7;
+    --accent-glow: rgba(168, 85, 247, 0.3);
+    --font-page: 'Inter', sans-serif;
+}
+
+/* --- TEMA TI (Sistemas / Enterprise) --- */
+.theme-it {
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.25);
+    --font-page: 'Inter', sans-serif;
+}
+
+/* --- ESTILO DOS CARDS (Comum a todos) --- */
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Hover dinâmico baseado no tema atual */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px var(--accent-glow);
+}
+
+/* Badges e Botões */
+.badge {
+    background: var(--accent);
+    color: #000;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.theme-av .badge, .theme-it .badge {
+    color: #fff;
+}
+
+.btn-portfolio {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-portfolio:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+.theme-av .btn-portfolio:hover, .theme-it .btn-portfolio:hover {
+    color: #fff;
+}
+
+/* Detalhes específicos da fonte */
+body {
+    font-family: 'Inter', sans-serif;
+}
+.theme-dev h1, .theme-dev h2, .theme-dev h3, .theme-dev p, .theme-dev a {
+    font-family: 'Fira Code', monospace !important;
+}

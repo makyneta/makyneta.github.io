@@ -1,207 +1,81 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
-
-/* --- ESTILOS GERAIS --- */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;700;900&display=swap');
 
 body {
-    background-color: #000000;
-    color: #e1e1e1;
-    font-family: 'Fira Code', monospace;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
 }
 
-.contact-page-container {
-    padding: 0 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #000000;
-}
-
-/* --- HERO MINIMALISTA --- */
-.contact-hero {
-    padding: 60px 0 40px 0; /* Menos padding */
-    text-align: center;
-}
-
-.contact-main-title {
-    font-size: 2.5em; /* Ligeiramente menor */
-    font-weight: 800;
-    color: #d5d5d5;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-}
-
-.contact-intro-text {
-    font-size: 1.1em; /* Ligeiramente menor */
-    max-width: 600px;
-    margin: 0 auto;
-    color: #adadad;
-}
-
-/* ================================================= */
-/* --- SEÇÃO PRINCIPAL (GRID 2 COLUNAS) --- */
-/* ================================================= */
-
-.main-contact-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr; /* Form mais largo que os detalhes */
-    gap: 40px;
-    padding: 40px 0 80px 0;
-    border-top: 1px solid #232323;
-}
-
-.form-title-minimal {
-    font-size: 1.6em;
-    font-weight: 700;
-    color: #f0f0f0;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #232323; /* Separador sutil */
-}
-
-/* --- ESTILOS DO FORMULÁRIO (Formulário mais integrado no fundo preto) --- */
-
-.contact-form-container {
-    /* Não tem mais fundo destacado */
-    padding: 0;
-}
-
-.contact-form {
-    padding: 0; /* Remove o padding extra do bloco anterior */
-    background: none;
-    box-shadow: none;
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
-    color: #adadad;
-    font-size: 0.95em;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+/* Campos de Input Minimalistas */
+.input-field {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #333333;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1em;
-    background-color: #1a1a1a; /* Fundo do input */
-    color: #e1e1e1;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #1f9468;
+.input-field:focus {
     outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #31d094;
+    box-shadow: 0 0 20px rgba(49, 208, 148, 0.1);
 }
 
-.submit-button {
+/* Botão de Envio */
+.submit-btn {
+    width: 100%;
+    background: #31d094;
+    color: #000;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #31d094; 
-    color: #000000;
-    font-weight: 700;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    width: 100%;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.submit-button:hover {
-    background-color: #1f9468;
-    transform: none; /* Remove a animação de translateY para minimalismo */
-}
-.submit-button i {
-    margin-right: 8px;
+.submit-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(49, 208, 148, 0.2);
 }
 
-/* --- ESTILOS DOS DETALHES (Blocos mais compactos) --- */
-
-.contact-details-container {
-    padding-top: 0;
-}
-
-.contact-detail-block {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 6px;
-    text-align: center;
-    border: 1px solid #232323;
-    margin-bottom: 15px; /* Espaçamento entre blocos de contacto */
-    transition: none; /* Remove a animação de hover para minimalismo */
-}
-
-.contact-detail-block:hover {
-    border-color: #1f9468; /* Mantém apenas a mudança de cor da borda no hover */
-    box-shadow: none;
-    transform: none;
-}
-
-.contact-icon {
-    font-size: 2em; /* Ícones menores */
-    color: #31d094;
-    margin-bottom: 10px;
-}
-
-.contact-detail-block h4 {
-    font-size: 1.1em;
-    color: #f0f0f0;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.contact-detail-block p {
-    color: #adadad;
-    font-size: 0.85em; /* Texto descritivo menor */
-    margin-bottom: 10px;
-}
-
-.contact-link {
-    font-weight: 500;
-    color: #31d094;
+/* Contact Cards (Estilo igual ao About) */
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.4s ease;
     text-decoration: none;
-    font-size: 1em;
 }
 
-.contact-link:hover {
-    text-decoration: underline;
+.contact-card:hover:not(.cursor-default) {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(8px);
 }
 
-.contact-text {
-    color: #ffffff;
-    font-size: 1em;
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-/* ================================================= */
-/* --- RESPONSIVIDADE --- */
-/* ================================================= */
-
-@media (max-width: 900px) {
-    /* Em tablets e mobile, empilha as colunas */
-    .main-contact-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
+/* Responsividade */
 @media (max-width: 768px) {
-    .contact-hero {
-        padding: 40px 0 20px 0;
-    }
-    .contact-main-title {
-        font-size: 2em;
-    }
+    h1 { font-size: 4rem !important; }
 }

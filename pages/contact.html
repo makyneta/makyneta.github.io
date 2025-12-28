@@ -1,96 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
+    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/geral.css">
     <link rel="stylesheet" href="../assets/styles/stt.css">
     <link rel="stylesheet" href="../assets/styles/contact.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap">
+    <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/scripts/script.js"></script>
     <script src="../assets/scripts/stt.js"></script>
-    <title>Contact – Tomás Mota | Makyneta Studios</title>
+    <!-- Title & Favicon-->
+    <title>About – Tomás Mota // Makyneta Studios</title>
+    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
 </head>
-<body>
-<div id="header"></div>
+<body class="bg-[#050505] text-[#e1e1e1] antialiased">
+    <div id="header"></div>
 
-    <main class="contact-page-container" style="padding: 20px">
-
-        <div class="contact-hero">
-            <h1 class="contact-main-title">Get in Touch</h1>
-            <p class="contact-intro-text">
-                Let's discuss your next project. Use the form for detailed inquiries or choose one of the quick methods below.
+    <main class="max-w-6xl mx-auto px-6 pt-40 pb-24">
+        
+        <section class="mb-20">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic uppercase leading-none">
+                LET'S <span class="text-[#31d094]">TALK.</span>
+            </h1>
+            <p class="text-xl text-gray-400 font-light max-w-2xl leading-relaxed">
+                Do you have a project in mind or need specialized technical support? Choose the fastest option or send a detailed message below.
             </p>
-        </div>
+        </section>
 
-        <section class="main-contact-grid">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
-            <div class="contact-form-container">
-                <h2 class="form-title-minimal">Send a Direct Message</h2>
-                <form action="https://formspree.io/f/xvgbagja" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
+            <div class="lg:col-span-7">
+                <form action="https://formspree.io/f/xvgbagja" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Name</label>
+                            <input type="text" name="name" required placeholder="Your name" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Email</label>
+                            <input type="email" name="email" required placeholder="your@email.com" class="input-field">
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Subject</label>
+                        <input type="text" name="subject" required placeholder="Project subject" class="input-field">
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Project Proposal / Question">
+                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Message</label>
+                        <textarea name="message" rows="6" required placeholder="How can I help?" class="input-field resize-none"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Detail your request..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">
-                        <i class="fas fa-paper-plane"></i> Send Message
+                    
+                    <button type="submit" class="submit-btn group">
+                        <span>SEND MESSAGE</span>
+                        <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
                     </button>
                 </form>
             </div>
-            
-            <div class="contact-details-container">
-                <h2 class="form-title-minimal">Other Channels</h2>
-                <div class="contact-detail-block">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <h4>Email</h4>
-                    <p>Ideal for detailed proposals.</p>
-                    <a href="mailto:makynetastudios@gmail.com" class="contact-link">makynetastudios@gmail.com</a>
+
+            <div class="lg:col-span-5 space-y-6">
+                <h2 class="text-xs uppercase tracking-[0.4em] text-gray-600 font-bold mb-8">Direct Channels</h2>
+                
+                <a href="/go/whatsapp" target="_blank" class="contact-card group">
+                    <div class="icon-box text-[#31d094] bg-[#31d094]/5">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-tight">WhatsApp</h4>
+                        <p class="text-xs text-gray-500 font-mono">+351 913 936 776</p>
+                    </div>
+                </a>
+
+                <a href="mailto:makynetastudios@gmail.com" class="contact-card group">
+                    <div class="icon-box text-blue-400 bg-blue-400/5">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-tight">Email</h4>
+                        <p class="text-xs text-gray-500 font-mono">makynetastudios@gmail.com</p>
+                    </div>
+                </a>
+
+                <div class="contact-card opacity-65 grayscale cursor-default">
+                    <div class="icon-box text-gray-400 bg-gray-400/5">
+                        <i class="fa-solid fa-location-dot text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-tight">Location</h4>
+                        <p class="text-xs text-gray-500 font-mono">Leiria, Portugal</p>
+                    </div>
                 </div>
 
-                <div class="contact-detail-block">
-                    <i class="fab fa-whatsapp contact-icon"></i>
-                    <h4>WhatsApp</h4>
-                    <p>For urgent or quick inquiries.</p>
-                    <a href="/go/whatsapp" class="contact-link">+351 913 936 776</a>
-                </div>
-
-                <!-- <div class="contact-detail-block">
-                    <i class="fas fa-file-pdf contact-icon"></i>
-                    <h4>Download CV</h4>
-                    <p>View my professional background and skills.</p>
-                    <a href="cv.pdf" target="_blank" class="contact-link">View Resume (PDF)</a> 
-                </div> -->
-
-                <div class="contact-detail-block">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <h4>Location</h4>
-                    <p>Based in Leiria, Portugal.</p>
-                    <span class="contact-text">Leiria, Portugal</span>
+                <div class="pt-10 border-t border-white/5">
+                    <p class="text-sm text-gray-500 italic leading-relaxed">
+                        "Technology should be the engine, never the obstacle. Let's build something solid together."
+                    </p>
                 </div>
             </div>
 
-        </section>
-
+        </div>
     </main>
 
-<div id="footer"></div>
-
-    <a id="scroll-to-top"></a>
-    
+    <div id="footer"></div>
 </body>
 </html>

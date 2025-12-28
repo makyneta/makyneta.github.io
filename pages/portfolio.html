@@ -1,231 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
+    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/geral.css">
     <link rel="stylesheet" href="../assets/styles/stt.css">
-    <link rel="stylesheet" href="../assets/styles/dev.css">
-    <link rel="stylesheet" href="../assets/styles/buttons.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../assets/styles/portfolio-theme.css">
+    <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/scripts/script.js"></script>
     <script src="../assets/scripts/stt.js"></script>
-    <title>Portfolio – Tomás Mota | Makyneta Studios</title>
+    <!-- Title & Favicon-->
+    <title>Portfolio – Tomás Mota // Makyneta Studios</title>
+    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
 </head>
-<div id="header"></div>
-<body>
+<body class="bg-[#050505] text-white">
+    <div id="header"></div>
 
-    <main class="max-w-6xl mx-auto" class="p-4 sm:p-8"> 
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <header class="text-center mb-24">
+            <h1 class="text-6xl font-black tracking-tighter italic">EXPERTISE<span class="text-[#31d094]">.</span></h1>
+            <p class="text-gray-500 uppercase tracking-widest text-xs mt-4">Programação, Eventos e Infraestrutura</p>
+        </header>
 
-    <div class="max-w-6xl mx-auto mb-20 pt-20">
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-white tracking-tight mb-2">
-            Dev Portfolio
-        </h1>
-        <!-- <p class="text-xl text-center text-gray-400">
-            A sample of my work in Frontend, Fullstack, and Backend.
-        </p> -->
-    </div>
-        
-        <!-- GRID DE PROJETOS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="proj">
+        <section class="theme-dev mb-32">
+            <div class="flex justify-between items-end mb-8 border-b border-[#31d094]/20 pb-4">
+                <h2 class="text-3xl font-bold font-mono uppercase">01. Development</h2>
+                <a href="portfolio.dev" class="text-[#31d094] hover:opacity-70 font-mono text-sm">See All //</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="card p-4 rounded-lg">
+                    <img src="../assets/images/portfolio/icejiloveyou.jpg" class="w-full h-40 object-cover rounded mb-4">
+                    <span class="badge">Frontend</span>
+                    <h3 class="font-bold mt-2">Ice J (I Love You)</h3>
+                    <div class="flex gap-2 mt-4">
+                        <a href="https://github.com/makyneta/icejiloveyou" class="btn-portfolio flex-1 text-center">Repo</a>
+                        <a href="https://makyneta.github.io/icejiloveyou" class="btn-portfolio flex-1 text-center">Demo</a>
+                    </div>
+                </article>
+                
+                <article class="card p-4 rounded-lg">
+                    <img src="../assets/images/portfolio/mesapra4.jpg" class="w-full h-40 object-cover rounded mb-4">
+                    <span class="badge">Frontend</span>
+                    <h3 class="font-bold mt-2">Mesa P'ra 4</h3>
+                    <div class="flex gap-2 mt-4">
+                        <a href="https://github.com/makyneta/mesapra4" class="btn-portfolio flex-1 text-center">Repo</a>
+                        <a href="https://makyneta.github.io/mesapra4" class="btn-portfolio flex-1 text-center">Demo</a>
+                    </div>
+                </article>
+                
+                <article class="card p-4 rounded-lg">
+                    <img src="../assets/images/portfolio/tiagopedro.jpg" class="w-full h-40 object-cover rounded mb-4">
+                    <span class="badge">Frontend</span>
+                    <h3 class="font-bold mt-2">Tiago Pedro</h3>
+                    <div class="flex gap-2 mt-4">
+                        <a href="https://github.com/makyneta/tiagopedro" class="btn-portfolio flex-1 text-center">Repo</a>
+                        <a href="https://makyneta.github.io/tiagopedro" class="btn-portfolio flex-1 text-center">Demo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <!-- Projeto : Ice J -->
-            <article class="card">
-                <img src="../assets/images/portfolio/brunoteixeira.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/1E88E5/ffffff?text=Bruno+Teixeira'">
-                <h3 class="font-bold text-lg">Bruno Teixeira</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/brunoteixeira" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/brunoteixeira" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
+        <section class="theme-av mb-32">
+            <div class="flex justify-between items-end mb-8 border-b border-purple-500/20 pb-4">
+                <h2 class="text-3xl font-black italic uppercase">02. Sound & Light</h2>
+                <a href="portfolio.av.html" class="text-purple-400 hover:opacity-70 text-sm">Open Case Studies +</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="card p-3 rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745" class="w-full h-56 object-cover rounded-xl mb-4">
+                    <div class="px-2 pb-2">
+                        <span class="badge">Lighting</span>
+                        <h3 class="text-xl font-bold mt-2 italic">Stage Management 2024</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <!-- Projeto : Ice J -->
-            <article class="card">
-                <img src="../assets/images/portfolio/icejiloveyou.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/1E88E5/ffffff?text=Ice+J'">
-                <h3 class="font-bold text-lg">Ice J I Love You</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/icejiloveyou" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/icejiloveyou" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Rodrigo Morgado -->
-            <article class="card">
-                <img src="../assets/images/portfolio/rodrigomorgado.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/1E88E5/ffffff?text=Rodrigo+Morgado'">
-                <h3 class="font-bold text-lg">Rodrigo Morgado</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/rodrigomorgado" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/rodrigomorgado" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Mesa P'ra 4 -->
-            <article class="card">
-                <img src="../assets/images/portfolio/mesapra4.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/1E88E5/ffffff?text=Mesa+P%27ra+4'">
-                <h3 class="font-bold text-lg">Mesa P'ra 4</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/mesapra4" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/mesapra4" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Tiago Pedro -->
-            <article class="card">
-                <img src="../assets/images/portfolio/tiagopedro.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FF5722/ffffff?text=Tiago+Pedro'">
-                <h3 class="font-bold text-lg">Tiago Pedro</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/tiagopedro" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/tiagopedro" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Mateus Loureiro -->
-            <article class="card">
-                <img src="../assets/images/portfolio/mateusloureiro.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FF5722/ffffff?text=Mateus+Loureiro'">
-                <h3 class="font-bold text-lg">Mateus Loureiro</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/mateusloureiro" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/mateusloureiro" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Mount -->
-            <article class="card">
-                <img src="../assets/images/portfolio/mount.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FF5722/ffffff?text=Mount'">
-                <h3 class="font-bold text-lg">Mount</h3>
-                <p class="text-sm opacity-80 text-gray-300">Fullstack</p>
-                <a href="https://github.com/makyneta/mount" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/mount" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Gonçalo Teixeira -->
-            <article class="card">
-                <img src="../assets/images/portfolio/goncaloteixeira.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/9C27B0/ffffff?text=Goncalo+T.'">
-                <h3 class="font-bold text-lg">Gonçalo Teixeira</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/goncaloteixeira" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/goncaloteixeira" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Tomás Macedo (Imagem com URL incompleta corrigida) -->
-            <article class="card">
-                <img src="../assets/images/portfolio" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/00BCD4/ffffff?text=Tomás+Macedo'">
-                <h3 class="font-bold text-lg">Tomás Macedo</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/tomasmacedo" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/tomasmacedo" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Tomás Ramos -->
-            <article class="card">
-                <img src="../assets/images/portfolio/tomasramos.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/4CAF50/ffffff?text=Tomas+Ramos'">
-                <h3 class="font-bold text-lg">Tomás Ramos</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/tomasramos" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/tomasramos" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Website/Portfolio -->
-            <article class="card">
-                <img src="../assets/images/portfolio/tomasmota.jpg" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/F44336/ffffff?text=Portfolio'">
-                <h3 class="font-bold text-lg">Website/Portfolio</h3>
-                <p class="text-sm opacity-80 text-gray-300">Frontend</p>
-                <a href="https://github.com/makyneta/makyneta.github.io" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <!-- O link Demo é para a raiz, conforme fornecido -->
-                <a href="/" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Flash Sale -->
-            <article class="card">
-                <img src="../assets/images/portfolio/1010022033937.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFC107/333333?text=Flash+Sale'">
-                <h3 class="font-bold text-lg">Flash Sale</h3>
-                <p class="text-sm opacity-80 text-gray-300">Backend</p>
-                <a href="https://github.com/makyneta/exploring-java-syntax-and-logic/tree/main/flash-sale" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/exploring-java-syntax-and-logic/flash-sale" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Organizing Inventory -->
-            <article class="card">
-                <img src="../assets/images/portfolio/1010022037110.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/795548/ffffff?text=Inventory'">
-                <h3 class="font-bold text-lg">Organizing Inventory</h3>
-                <p class="text-sm opacity-80 text-gray-300">Backend</p>
-                <a href="https://github.com/makyneta/exploring-java-syntax-and-logic/tree/main/organizing-inventory" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/exploring-java-syntax-and-logic/organizing-inventory" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Hero Level Classifier -->
-            <article class="card">
-                <img src="../assets/images/portfolio/1010022036329.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/673AB7/ffffff?text=Hero+Level'">
-                <h3 class="font-bold text-lg">Hero Level Classifier</h3>
-                <p class="text-sm opacity-80 text-gray-300">Backend</p>
-                <a href="https://github.com/makyneta/hero-level-classifier" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/hero-level-classifier" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Ranked Calculator -->
-            <article class="card">
-                <img src="../assets/images/portfolio/1010022033727.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFEB3B/333333?text=Ranked+Calc'">
-                <h3 class="font-bold text-lg">Ranked Calculator</h3>
-                <p class="text-sm opacity-80 text-gray-300">Backend</p>
-                <a href="https://github.com/makyneta/ranked-calculator" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/ranked-calculator" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Writing Hero Class Game -->
-            <article class="card">
-                <img src="../assets/images/portfolio/1010022034785.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/3F51B5/ffffff?text=Hero+Game'">
-                <h3 class="font-bold text-lg">Writing Hero Class Game</h3>
-                <p class="text-sm opacity-80 text-gray-300">Backend</p>
-                <a href="https://github.com/makyneta/hero_game" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/hero_game" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-
-            <!-- Projeto : Credit Card Brand Validator -->
-            <article class="card">
-                <img src="../assets/images/portfolio/1010022034543.png" 
-                     class="w-full h-40 object-cover rounded-xl mb-3"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/E91E63/ffffff?text=CC+Validator'">
-                <h3 class="font-bold text-lg">Credit Card Brand Validator</h3>
-                <p class="text-sm opacity-80 text-gray-300">Backend</p>
-                <a href="https://github.com/makyneta/credit-card-brand-validator" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-repo">Repository</a>
-                <a href="https://makyneta.github.io/credit-card-brand-validator" target="_blank" rel="noopener noreferrer" class="btn-repo-outline btn-demo">Demo</a>
-            </article>
-            
-        </div>
+        <section class="theme-it">
+            <div class="flex justify-between items-end mb-8 border-b border-blue-500/20 pb-4">
+                <h2 class="text-3xl font-bold uppercase tracking-widest">03. IT Infrastructure</h2>
+                <a href="portfolio.it.html" class="text-blue-400 hover:opacity-70 text-sm italic">Full System _</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <article class="card p-6 rounded-md">
+                    <div class="text-blue-500 text-3xl mb-4"><i class="fa-solid fa-server"></i></div>
+                    <h3 class="font-bold uppercase tracking-tight">Server Management</h3>
+                    <p class="text-gray-500 text-xs mt-2 leading-relaxed">Implementation of Linux/Windows servers, virtualization with Proxmox, and management of automated backups.</p>
+                </article>
+            </div>
+        </section>
     </main>
-<br>
-<div id="footer"></div>
 
-    <a id="scroll-to-top"></a>
-
+    <div id="footer"></div>
 </body>
 </html>

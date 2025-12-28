@@ -1,153 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="../assets/styles/stt.css">  
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/geral.css">
+    <link rel="stylesheet" href="../assets/styles/stt.css">
     <link rel="stylesheet" href="../assets/styles/about.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap">
+    <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/scripts/script.js"></script>
     <script src="../assets/scripts/stt.js"></script>
-    <title>About – Tomás Mota | Makyneta Studios</title>
+    <!-- Title & Favicon-->
+    <title>About – Tomás Mota // Makyneta Studios</title>
+    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
 </head>
-<body>
-<div id="header"></div>
+<body class="bg-[#050505] text-[#e1e1e1] antialiased">
+    <div id="header"></div>
 
-    <main class="about-page-container" style="padding: 20px">
+    <main class="max-w-6xl mx-auto px-6 pt-40 pb-20">
         
-        <!-- SEÇÃO HERO -->
-        <div class="about-hero">
-            <h1 class="about-main-title">Story Behind Multidisciplinary Approaches</h1>
-            <p class="about-intro-text">
-                Combining technical rigor of development and IT with the creativity of sound & lighting,
-                my goal is to deliver complete solutions, from digital conception to field execution.
+        <section class="mb-32">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic uppercase leading-none">
+                BRIDGE THE <br><span class="text-[#31d094]">GAP.</span>
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed">
+                    Specializing in the convergence of the digital and the physical. I transform lines of code into robust solutions and empty spaces into sensory experiences through sound and light.
                 </p>
-        </div>
-
-        <!-- SEÇÃO DE INFORMAÇÕES PESSOAIS & CONTACTOS -->
-        <section class="about-personal-info">
-            <div class="personal-photo-placeholder">
-                <!-- Substitua pelo caminho real da sua imagem -->
-                <img src="../assets/images/site/tomas-mota.jpg" class="profile-photo">
+                <div class="flex flex-col justify-end md:items-end space-y-2">
+                    <span class="text-xs uppercase tracking-[0.3em] text-gray-500">Based in</span>
+                    <span class="text-lg font-mono">Leiria, Portugal</span>
+                </div>
             </div>
-            <div class="personal-details">
-                <p><strong>Name</strong><divisor> | </divisor>Tomás Mota</p>
-                <p><strong>Location</strong><divisor> | </divisor>Leiria, Portugal</p>
-                <!-- <p>
-                    <strong>Phone</strong><divisor> | </divisor><a href="https://wa.me/351913936776" class="about-contact-link">+351 913 936 776</a>
-                </p> -->
-                <p>
-                    <a href="mailto:makynetastudios@gmail.com" class="about-contact-link">makynetastudios@gmail.com</a>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-16 py-16 border-y border-white/10 mb-32">
+            <div class="relative group w-full aspect-square md:aspect-auto h-full max-h-[400px]">
+                <div class="absolute -inset-2 bg-gradient-to-r from-[#31d094] via-blue-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                <img src="../assets/images/site/tomas-mota.jpg" class="relative w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" alt="Tomás Mota">
+            </div>
+            
+            <div class="md:col-span-2 flex flex-col justify-center space-y-8">
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tight mb-2">Tomás Mota</h2>
+                    <p class="text-[#31d094] font-mono tracking-widest uppercase text-sm">Multidisciplinary Engineer</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="mailto:makynetastudios@gmail.com" class="contact-card group">
+                        <i class="fa-solid fa-envelope text-xl group-hover:text-blue-400 transition-colors"></i>
+                        <span>makynetastudios@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/351913936776" target="_blank" class="contact-card group">
+                        <i class="fa-brands fa-whatsapp text-xl group-hover:text-[#31d094] transition-colors"></i>
+                        <span>+351 913 936 776</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-16 font-bold text-center">Core Pillars</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#31d094]/10 rounded-full text-[#31d094] mb-6">
+                        <i class="fa-solid fa-code text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold italic uppercase tracking-wider">Digital Architecture</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Focus on scalability and performance. I develop everything from MVPs to complex cloud architectures, ensuring that the backend is as elegant as the code that supports it.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-500/10 rounded-full text-purple-400 mb-6">
+                        <i class="fa-solid fa-wave-square text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold italic uppercase tracking-wider">Atmosphere Design</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Technology at the service of emotion. Precision sound engineering and immersive lighting design for events that demand visual impact and absolute auditory clarity.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-500/10 rounded-full text-blue-400 mb-6">
+                        <i class="fa-solid fa-server text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold italic uppercase tracking-wider">Infrastructure</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The foundation of everything. I implement high-availability systems, secure networks, and critical hardware management so that technology is never an obstacle, but an enabler.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Experience</h2>
+            <div class="experience-item border-l-2 border-[#31d094] pl-8 pb-12">
+                <h3 class="text-2xl font-bold italic uppercase">Dev Fullstack & Light|Sound|IT Technician</h3>
+                <p class="font-mono text-[#31d094] text-sm mb-4">Freelancer | Since 2024</p>
+                <p class="text-gray-400 max-w-3xl leading-relaxed">
+                    Technical leadership in large-scale projects, unifying the web development stack with the physical infrastructure of events. Responsible for the technical design and execution of over 50 shows and various high-traffic digital platforms.
                 </p>
             </div>
         </section>
 
-        <!-- SEÇÃO DE HISTÓRICO PROFISSIONAL (Onde Trabalhou) -->
-        <section class="about-experience">
-            <h2 class="section-heading">Professional History</h2>
-            
-            <!-- Bloco 1 -->
-            <div class="experience-block">
-                <h3 class="job-title">Founder; Fullstack Engineer; Light/Sound/IT Technician</h3>
-                <span class="company-and-dates">Makyneta Studios | Freelancer | 2024 - Present</span>
-                <ul class="job-description">
-                    <li>Leadership in microservices development using Node.js and Serverless architecture.</li>
-                    <li>User interface development with React, ensuring accessibility and performance.</li>
-                    <li>Technical management and operation of over 50 live events, including PA setup and mixing.</li>
-                    <li>Programming of DMX lighting consoles for musical and corporate shows.</li>
-                    <li>Photographic coverage of corporate events and portrait sessions.</li>
-                    <li>Network and backup system maintenance for small creative businesses.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DE CLIENTES & COLABORAÇÕES -->
-        <section class="about-collaborations">
-            <h2 class="section-heading">Clients & Collaborations</h2>
-            <p class="collaborations-intro">I have the privilege of collaborating with various companies and brands, delivering technical and creative solutions.</p>
-            
-            <div class="collaborations-grid">
+<section class="mb-32">
+            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Clients & Collaborations</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 
-                <div class="collaboration-item">
-                    <img src="../assets/images/logos/libelula-teatro-bw.jpg" alt="Libélula Teatro" class="client-logo">
-                    <span class="client-roles">Front-end Developer<br>Light Technician</span>
+                <div class="client-card">
+                    <img src="../assets/images/logos/libelula-teatro-bw.jpg" alt="Libélula Teatro">
+                    <span class="client-role">Dev / Light</span>
                 </div>
 
-                <div class="collaboration-item">
-                    <img src="../assets/images/logos/aemgp-rgb.png" alt="Agrupamnto de Escolas Marinha Grande Poente" class="client-logo">
-                    <span class="client-roles">Photographer</span>
-                </div>
-                
-                <div class="collaboration-item">
-                    <img src="../assets/images/logos/acm-rgb.png" alt="Atlético Clube Marinhense" class="client-logo">
-                    <span class="client-roles">Photographer</span>
-                </div>
-                
-                <div class="collaboration-item">
-                    <img src="../assets/images/logos/penetras-bw.png" alt="Os Penetras" class="client-logo">
-                    <span class="client-roles">Photographer<br>Sound Technician</span>
-                </div>
-                
-                <div class="collaboration-item">
-                    <img src="../assets/images/logos/slm-rgb.jpg" alt="Sport Lisboa e Marinha" class="client-logo">
-                    <span class="client-roles">Photographer</span>
-                </div>
-                
-                <div class="collaboration-item">
-                    <img src="../assets/images/logos/sr-bw.png" alt="Song Raiders" class="client-logo">
-                    <span class="client-roles">Photographer</span>
+                <div class="client-card">
+                    <img src="../assets/images/logos/penetras-bw.png" alt="Os Penetras">
+                    <span class="client-role">Sound / Photo</span>
                 </div>
 
-                <!-- Sem Logotipo (Mostra Nome) e Funções -->
-                <!-- <div class="collaboration-item">
-                    <span class="client-name-fallback">Estúdio Criativo</span>
-                    <span class="client-roles">Fotografia de Evento</span>
-                </div> -->
+                <div class="client-card">
+                    <img src="../assets/images/logos/aemgp-rgb.png" alt="AEMGP">
+                    <span class="client-role">Photo / IT</span>
+                </div>
 
-            </div>
-        </section>
+                <div class="client-card">
+                    <img src="../assets/images/logos/acm-rgb.png" alt="AC Marinhense">
+                    <span class="client-role">Photographer</span>
+                </div>
 
-        <!-- SEÇÃO DE HABILIDADES -->
-        <section class="about-skills-detail">
-            <h2 class="section-heading">Technical Skills</h2>
-            
-            <div class="skill-area">
-                <h4>Web & Software Development</h4>
-                <p class="skill-list">
-                    <strong>Languages</strong><divisor> | </divisor>JavaScript, Python, PHP, SQL.<br>
-                    <strong>Frameworks</strong><divisor> | </divisor>React, Node.js, WordPress.<br>
-                    <strong>DevOps</strong><divisor> | </divisor>Git, GitHub, Docker.
-                </p>
-            </div>
-            
-            <div class="skill-area">
-                <h4>Sound & Light Technician</h4>
-                <p class="skill-list">
-                    <strong>Audio</strong><divisor> | </divisor>Digital mixing consoles, microphones.<br>
-                    <strong>lighting</strong><divisor> | </divisor>DMX512, moving heads, control software.<br>
-                    <strong>Logistics</strong><divisor> | </divisor>Stage setup and cabling.
-                </p>
-            </div>
+                <div class="client-card">
+                    <img src="../assets/images/logos/slm-rgb.jpg" alt="SL Marinha">
+                    <span class="client-role">Photographer</span>
+                </div>
 
-            <div class="skill-area">
-                <h4>IT Systems & Administration</h4>
-                <p class="skill-list">
-                    <strong>Systems</strong><divisor> | </divisor>Windows Server, Linux (Ubuntu).<br>
-                    <strong>Networks</strong><divisor> | </divisor>VPN and Firewall configuration.<br>
-                    <strong>Hardware</strong><divisor> | </divisor>Workstation assembly and maintenance.
-                </p>
+                <div class="client-card">
+                    <img src="../assets/images/logos/sr-bw.png" alt="Song Raiders">
+                    <span class="client-role">Photographer</span>
+                </div>
+
             </div>
         </section>
 
     </main>
 
-<div id="footer"></div>
-
-    <a id="scroll-to-top"></a>
-    
+    <div id="footer"></div>
 </body>
 </html>

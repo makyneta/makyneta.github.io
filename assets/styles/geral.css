@@ -1,0 +1,23 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+/* Garante que o HTML e o Body ocupem toda a altura */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura total da visualização */
+}
+
+/* O elemento principal (main) deve crescer para ocupar o espaço vazio */
+main {
+    flex: 1 0 auto;
+}
+
+/* O footer mantém o seu tamanho mas fica no fundo */
+footer, #footer {
+    flex-shrink: 0;
+}

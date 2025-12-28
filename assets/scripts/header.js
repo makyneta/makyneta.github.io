@@ -1,47 +1,35 @@
-// --------------------------------------------------------------------------------------------------
-// Lógica Mobile (Hambúrguer e Sidebar) - CORRIGIDO
-// --------------------------------------------------------------------------------------------------
+// Usamos este formato para garantir que funciona mesmo com o fetch do header
+document.addEventListener('click', function (event) {
+    const menuBtn = document.getElementById('mobile-menu-toggle-btn');
+    const sidebar = document.getElementById('mobile-sidebar-nav');
+    const backdrop = document.getElementById('mobile-menu-backdrop');
 
-const menuButton = document.getElementById('mobile-menu-toggle-btn'); 
-const navMenu = document.getElementById('mobile-sidebar-nav'); 
-const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
-// navLinks agora inclui todos os links, exceto o toggle que foi removido
-const navLinks = navMenu ? navMenu.querySelectorAll('.mobile-nav-link') : []; 
-
-function toggleMobileMenu(isOpen) {
-    const shouldOpen = isOpen !== undefined ? isOpen : !menuButton.classList.contains('active');
-
-    if (shouldOpen) {
-        menuButton.classList.add('active'); 
-        navMenu.classList.add('active'); 
-        mobileMenuBackdrop.style.display = 'block';
-        setTimeout(() => { mobileMenuBackdrop.style.opacity = '1'; }, 10);
-        document.body.classList.add('overflow-hidden');
-    } else {
-        menuButton.classList.remove('active');
-        navMenu.classList.remove('active'); 
-        mobileMenuBackdrop.style.opacity = '0';
-        setTimeout(() => { mobileMenuBackdrop.style.display = 'none'; }, 300);
-        document.body.classList.remove('overflow-hidden');
+    // Lógica para Abrir/Fechar o Menu
+    if (event.target.closest('#mobile-menu-toggle-btn') || event.target.closest('#mobile-menu-backdrop')) {
+        const isOpening = !sidebar.classList.contains('active');
+        
+        if (isOpening) {
+            menuBtn.classList.add('active');
+            sidebar.classList.add('active');
+            backdrop.classList.remove('hidden');
+            // Timeout pequeno para a transição de opacidade funcionar
+            setTimeout(() => backdrop.classList.add('visible'), 10);
+            document.body.style.overflow = 'hidden'; // Trava o scroll
+        } else {
+            menuBtn.classList.remove('active');
+            sidebar.classList.remove('active');
+            backdrop.classList.remove('visible');
+            setTimeout(() => backdrop.classList.add('hidden'), 300);
+            document.body.style.overflow = ''; // Liberta o scroll
+        }
     }
-}
 
-// Event Listeners Mobile
-if (menuButton && navMenu) {
-    // 1. Clique no Hambúrguer (Abre/Fecha Sidebar)
-    menuButton.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        toggleMobileMenu();
-    });
-    
-    // 2. Fechar pelo backdrop (clicar fora do menu lateral)
-    mobileMenuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
-
-    // 3. Fechar ao clicar em um Link de Navegação (Agora fecha sempre, pois não há dropdown)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Remove a verificação do dropdown toggle e fecha o menu sempre
-            toggleMobileMenu(false); 
-        });
-    });
-}
+    // Fechar ao clicar num link de navegação mobile
+    if (event.target.closest('.mobile-nav-link')) {
+        menuBtn.classList.remove('active');
+        sidebar.classList.remove('active');
+        backdrop.classList.remove('visible');
+        setTimeout(() => backdrop.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+    }
+});

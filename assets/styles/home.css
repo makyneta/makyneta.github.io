@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-bg: #0c0c0c;     
+    --accent: #31d094;        
+    --text-main: #f5f5f5;    
+    --text-dim: #888888;    
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Selection Color */
+::selection {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Typography Refinement */
+.headline {
+    letter-spacing: -0.05em;
+}
+
+/* Tech Scanline Effect */
+#fullscreen-hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Profile Photo Hover Effect */
+.profile-photo {
+    transform: scale(1.05);
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease;
+}
+
+.group:hover .profile-photo {
+    transform: scale(1);
+    filter: grayscale(0);
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.text-column > div, .text-column h1, .text-column .introduction, .text-column .actions {
+    animation: fadeInSlide 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.text-column h1 { animation-delay: 0.2s; }
+.text-column .introduction { animation-delay: 0.4s; }
+.text-column .actions { animation-delay: 0.6s; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .headline { font-size: 3.5rem !important; }
+    .image-column { order: -1; margin-bottom: 2rem; }
+}
