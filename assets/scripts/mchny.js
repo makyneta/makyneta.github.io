@@ -9,8 +9,8 @@
         const month = now.getMonth(); 
         const day = now.getDate();
 
-        // Verifica se é época festiva (24 Dez a 01 Jan)
-        const isSeason = (month === 11 && day >= 24) || (month === 0 && day === 1);
+        // Verifica se é época festiva (20 Dez a 06 Jan)
+        const isSeason = (month === 11 && day >= 20) || (month === 0 && day === 6);
 
         if (isSeason) {
             popup.style.display = 'flex';
