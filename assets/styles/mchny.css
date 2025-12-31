@@ -1,0 +1,149 @@
+/* --- ESTILO GERAL DO POPUP --- */
+.christmas-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.98);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+
+.christmas-terminal {
+    width: 480px;
+    max-width: 90%;
+    background: #0a0a0a !important;
+    border: 1px solid #1a1a1a;
+    position: relative;
+    overflow: hidden;
+    animation: terminalOpen 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* BARRA DE CIMA (HEADER) */
+.holiday-header {
+    background: #151515 !important;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.header-dots { display: flex; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.holiday-title {
+    font-family: 'Fira Code', monospace !important;
+    font-size: 10px !important;
+    color: #555 !important;
+    letter-spacing: 1px;
+}
+
+/* CONTEÚDO E TEXTO */
+.christmas-content { padding: 50px 20px 30px 20px; text-align: justify; position: relative; }
+
+.holiday-h2 {
+    font-family: 'Fira Code', monospace !important;
+    font-size: 2.2rem !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    margin: 20px 0 10px 0 !important;
+    text-transform: uppercase;
+    /* Efeito de digitação */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #31d094;
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+.holiday-p {
+    font-family: 'Fira Code', monospace !important;
+    font-size: 0.9rem !important;
+    color: #888 !important;
+    margin: 5px 0 !important;
+    line-height: 1.6 !important;
+}
+
+.text-accent { color: #31d094 !important; text-shadow: 0 0 10px rgba(49, 208, 148, 0.3); }
+
+/* LOGO E FOTO */
+.christmas-logo-top {
+    position: absolute;
+    top: 20px; /* Ajustado para dar espaço à barra do terminal */
+    right: 10px;
+    width: 120px; /* Tamanho aumentado conforme pedido */
+    height: auto;
+    opacity: 0.9; /* Um pouco mais visível */
+    z-index: 10;
+    filter: drop-shadow(0 0 8px rgba(49, 208, 147, 0.368)); /* Brilho sutil da cor da marca */
+    transition: transform 0.3s ease;
+}
+
+/* Pequeno detalhe: o logo pulsa levemente junto com a estrela */
+.christmas-logo-top {
+    animation: logoGlow 3s infinite alternate ease-in-out;
+}
+
+.photo-wrapper { margin-top: 10px; display: flex; justify-content: center; }
+.christmas-photo-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #31d094;
+    object-fit: cover;
+    animation: photoGlow 3s infinite ease-in-out;
+}
+
+/* ANIMAÇÕES DOS ITENS NATALÍCIOS */
+.christmas-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: #31d094;
+    font-size: 1.5rem;
+}
+
+.snow-icon { animation: rotateSnow 4s infinite linear; }
+.gift-icon { animation: bounceGift 2s infinite ease-in-out; }
+.star-icon { animation: twinkleStar 1.5s infinite alternate; }
+
+@keyframes rotateSnow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes bounceGift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes twinkleStar { from { opacity: 0.4; transform: scale(0.9); } to { opacity: 1; transform: scale(1.2); } }
+
+@keyframes photoGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(49, 208, 148, 0.2); }
+    50% { box-shadow: 0 0 30px rgba(49, 208, 148, 0.5); }
+}
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #31d094 } }
+@keyframes terminalOpen { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+
+/* BOTÃO FECHAR */
+.christmas-close-btn {
+    margin-top: 35px;
+    background: transparent;
+    border: 1px solid #31d094;
+    color: #31d094;
+    padding: 10px 35px;
+    font-family: 'Fira Code', monospace !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.christmas-close-btn:hover {
+    background: #31d094;
+    color: #000;
+    box-shadow: 0 0 20px rgba(49, 208, 148, 0.4);
+}
