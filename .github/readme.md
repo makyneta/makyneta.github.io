@@ -17,7 +17,6 @@ This site is automatically deployed via [GitHub Pages](https://pages.github.com)
 ## 📬 Contact
 - **Website**_[makyneta.github.io/pages/contact](https://makyneta.github.io/pages/contact)
 - **Email**_[makynetastudios@gmail.com](mailto:makynetastudios@gmail.com)
-- **WhatsApp**_[+351913936776](https://wa.me/351913936776)
 
 ---
 
