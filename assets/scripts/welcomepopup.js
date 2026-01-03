@@ -91,27 +91,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Controle de Animações
-    motionToggle.addEventListener('change', (e) => {
-        if (e.target.checked) {
-            body.classList.add('motion-off');
-            if(mainSite) mainSite.classList.add('entered');
-        } else {
-            body.classList.remove('motion-off');
-        }
-    });
+    // // 3. Controle de Animações
+    // motionToggle.addEventListener('change', (e) => {
+    //     if (e.target.checked) {
+    //         body.classList.add('motion-off');
+    //         if(mainSite) mainSite.classList.add('entered');
+    //     } else {
+    //         body.classList.remove('motion-off');
+    //     }
+    // });
 
-    // 4. Detetar preferência do sistema
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // // 4. Detetar preferência do sistema
+    // const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    function checkReducedMotion() {
-        if (prefersReducedMotion.matches) {
-            body.classList.add('motion-off');
-            motionToggle.checked = true;
-            if(mainSite) mainSite.classList.add('entered');
-        }
-    }
+    // function checkReducedMotion() {
+    //     if (prefersReducedMotion.matches) {
+    //         body.classList.add('motion-off');
+    //         motionToggle.checked = true;
+    //         if(mainSite) mainSite.classList.add('entered');
+    //     }
+    // }
 
-    checkReducedMotion();
-    prefersReducedMotion.addEventListener('change', checkReducedMotion);
+    // checkReducedMotion();
+    // prefersReducedMotion.addEventListener('change', checkReducedMotion);
 });

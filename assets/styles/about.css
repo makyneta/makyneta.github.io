@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/devicon@latest/devicon.min.css');
 
 body {
     font-family: 'Inter', sans-serif;
@@ -50,6 +51,59 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     h1 { font-size: 3.5rem !important; }
 }
+
+/* DEV CARDS */
+.tech-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 10px; /* Cards pequenos */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0.6;
+    cursor: default;
+}
+
+.tech-card:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Ícone */
+.tech-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    margin-bottom: 12px;
+    /* O segredo: Força grayscale e brilho alto para parecer branco/cinza */
+    filter: grayscale(100%) brightness(250%); 
+    transition: filter 0.4s ease;
+}
+
+/* No hover, remove o filtro para mostrar a cor original do "colored" */
+.tech-card:hover .tech-icon {
+    filter: grayscale(0%) brightness(100%);
+}
+
+/* Texto */
+.tech-name {
+    font-family: 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
+}
+
+.tech-card:hover .tech-name {
+    color: #ffffff;
+}
+
 
 /* --- CLIENT CARDS --- */
 .client-card {
