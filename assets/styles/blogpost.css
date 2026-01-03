@@ -1,0 +1,89 @@
+/* --- 1. BADGE THEME COLORS (Igual ao Blog) --- */
+.theme-dev { color: #4ade80; }
+.theme-work { color: #60a5fa; }
+.theme-personal { color: #f472b6; }
+.theme-professional { color: #fb923c; }
+
+.badge-pill {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 99px;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    color: #4ade80; /* Fallback */
+}
+/* Variações de cor para a Badge (usando CSS Variables ou regras específicas) */
+.badge-pill.theme-dev { background: rgba(74, 222, 128, 0.1); border-color: rgba(74, 222, 128, 0.3); color: #4ade80; }
+.badge-pill.theme-work { background: rgba(96, 165, 250, 0.1); border-color: rgba(96, 165, 250, 0.3); color: #60a5fa; }
+
+/* --- 2. ARTICLE BODY TYPOGRAPHY --- */
+.article-body p {
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
+
+.article-body h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.article-body h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.article-body ul {
+    list-style-type: none; /* Custom bullets used in HTML */
+    margin-bottom: 1.5rem;
+}
+
+.article-body blockquote {
+    font-style: italic;
+}
+
+.article-body code {
+    background-color: #1f2937;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+/* --- 3. CODE BLOCK STYLING (Mac Window look) --- */
+.article-body pre {
+    background-color: #151618;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.article-body pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Syntax Highlight Simulation Colors (para JS) */
+.article-body code .text-\[fb923c\] { color: #fb923c; } /* keyword */
+.article-body code .text-\[60a5fa\] { color: #60a5fa; } /* function */
+.article-body code .text-\[9ca3af\] { color: #9ca3af; } /* comment */
+
+/* --- 4. READING PROGRESS BAR --- */
+#readingProgress {
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}

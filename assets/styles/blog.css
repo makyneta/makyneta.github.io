@@ -1,0 +1,142 @@
+/* --- BASE --- */
+body {
+    background-color: #0b0c0e;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* --- 1. COLOR THEMES (CSS CONTROL) --- */
+/* Define a cor e o glow para cada categoria */
+/* currentColor é usado para preencher o background dos dots automaticamente */
+
+.theme-all { color: #ffffff; }
+.theme-dev { color: #4ade80; }
+.theme-work { color: #60a5fa; }
+.theme-professional { color: #fb923c; }
+.theme-personal { color: #f472b6; }
+
+/* --- 2. COMMAND BAR --- */
+.command-bar {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.command-bar:focus-within {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 50px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* --- 3. CUSTOM DROPDOWN --- */
+.custom-dropdown-container {
+    position: relative;
+    z-index: 100;
+}
+
+#dropdownMenu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.2s;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* O Dot (ponto de cor) no menu */
+.dropdown-dot {
+    flex-shrink: 0;
+    background-color: currentColor; /* Pega a cor definida em .theme-xxx */
+    box-shadow: 0 0 8px currentColor; /* Glow com a mesma cor */
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* --- 4. BLOG CARDS & BADGES --- */
+.blog-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.blog-card img {
+    transition: transform 0.7s ease, filter 0.5s ease, opacity 0.5s ease;
+}
+
+.blog-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Badge Pill */
+.badge-pill {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 99px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid currentColor; /* Borda usa a cor da categoria */
+    opacity: 0.9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+/* Hover effects */
+.blog-card:hover .badge-pill {
+    background: rgba(255,255,255,0.1);
+    opacity: 1;
+    box-shadow: 0 0 15px currentColor; /* Glow no hover */
+}
+
+/* Utilities */
+.font-mono { font-family: 'Fira Code', monospace; }
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.filter-hidden {
+    display: none !important;
+}
