@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/styles/loading.css">
     <link rel="stylesheet" href="../../assets/styles/geral.css">
     <link rel="stylesheet" href="../../assets/styles/stt.css">
     <link rel="stylesheet" href="../../assets/styles/portfolio-theme.css">
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../assets/scripts/loading.js"></script>
     <script src="../../assets/scripts/script.js"></script>
     <script src="../../assets/scripts/stt.js"></script>
     <!-- Title -->
@@ -17,6 +19,26 @@
     <link rel="icon" href="../../assets/images/site/favicon.jpg" type="image/jpg">
 </head>
 <body class="theme-av bg-[#080808] text-white">
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">A INICIALIZAR O SISTEMA</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="header.pt"></div>
 
     <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">

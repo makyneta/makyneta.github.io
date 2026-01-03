@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/loading.css">
     <link rel="stylesheet" href="../assets/styles/geral.css">
     <link rel="stylesheet" href="../assets/styles/stt.css">
     <link rel="stylesheet" href="../assets/styles/about.css">
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/scripts/loading.js"></script>
     <script src="../assets/scripts/about.js"></script>
     <script src="../assets/scripts/script.js"></script>
     <script src="../assets/scripts/stt.js"></script>
@@ -17,7 +20,28 @@
     <title>About – Tomás Mota // Makyneta Studios</title>
     <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
 </head>
+
 <body class="bg-[#050505] text-[#e1e1e1] antialiased">
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">INITIALIZING SYSTEM</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="header"></div>
 
     <main class="max-w-6xl mx-auto px-6 pt-40 pb-20">
@@ -164,7 +188,8 @@
                     <div class="cert-icon"><i class="fa-solid fa-file-signature"></i></div>
                     <div class="cert-info">
                         <span class="cert-date">2025</span>
-                        <h3 class="cert-title">360º Personal Branding: From Anonymous Professional to Visible Reference</h3>
+                        <h3 class="cert-title">360º Personal Branding: From Anonymous Professional to Visible Reference
+                        </h3>
                         <p class="cert-issuer">Santander</p>
                     </div>
                     <a href="#" class="cert-link" data-cert="../assets/images/certs/1010012015317.jpg">VIEW_DOC</a>

@@ -1,149 +1,196 @@
-/* --- ESTILO GERAL DO POPUP --- */
+/* --- MODAL & FUNDO --- */
 .christmas-modal {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.98);
+    background-color: rgba(10, 15, 20, 0.85); 
     z-index: 99999;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
 }
 
+/* --- TERMINAL 3D SUAVE --- */
 .christmas-terminal {
     width: 480px;
     max-width: 90%;
-    background: #0a0a0a !important;
-    border: 1px solid #1a1a1a;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 0, 0, 0.5);
+        
     position: relative;
     overflow: hidden;
-    animation: terminalOpen 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: modalFadeIn 0.6s ease-out forwards;
 }
 
-/* BARRA DE CIMA (HEADER) */
+.christmas-terminal:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(49, 208, 148, 0.1);
+}
+
+/* --- HEADER --- */
 .holiday-header {
-    background: #151515 !important;
-    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 14px 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px 16px 0 0;
 }
 
-.header-dots { display: flex; gap: 6px; }
-.dot { width: 10px; height: 10px; border-radius: 50%; }
+.header-dots { display: flex; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; opacity: 0.9; }
 .red { background: #ff5f56; }
 .yellow { background: #ffbd2e; }
 .green { background: #27c93f; }
 
 .holiday-title {
-    font-family: 'Fira Code', monospace !important;
-    font-size: 10px !important;
-    color: #555 !important;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: #666;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
-/* CONTEÚDO E TEXTO */
-.christmas-content { padding: 50px 20px 30px 20px; text-align: justify; position: relative; }
-
-.holiday-h2 {
-    font-family: 'Fira Code', monospace !important;
-    font-size: 2.2rem !important;
-    font-weight: bold !important;
-    color: #ffffff !important;
-    margin: 20px 0 10px 0 !important;
-    text-transform: uppercase;
-    /* Efeito de digitação */
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #31d094;
-    width: fit-content;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+/* --- CONTEÚDO --- */
+.christmas-content { 
+    padding: 40px 30px; 
+    text-align: center; 
+    position: relative; 
 }
 
-.holiday-p {
-    font-family: 'Fira Code', monospace !important;
-    font-size: 0.9rem !important;
-    color: #888 !important;
-    margin: 5px 0 !important;
-    line-height: 1.6 !important;
-}
-
-.text-accent { color: #31d094 !important; text-shadow: 0 0 10px rgba(49, 208, 148, 0.3); }
-
-/* LOGO E FOTO */
-.christmas-logo-top {
-    position: absolute;
-    top: 20px; /* Ajustado para dar espaço à barra do terminal */
-    right: 10px;
-    width: 120px; /* Tamanho aumentado conforme pedido */
-    height: auto;
-    opacity: 0.9; /* Um pouco mais visível */
-    z-index: 10;
-    filter: drop-shadow(0 0 8px rgba(49, 208, 147, 0.368)); /* Brilho sutil da cor da marca */
-    transition: transform 0.3s ease;
-}
-
-/* Pequeno detalhe: o logo pulsa levemente junto com a estrela */
-.christmas-logo-top {
-    animation: logoGlow 3s infinite alternate ease-in-out;
-}
-
-.photo-wrapper { margin-top: 10px; display: flex; justify-content: center; }
-.christmas-photo-large {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #31d094;
-    object-fit: cover;
-    animation: photoGlow 3s infinite ease-in-out;
-}
-
-/* ANIMAÇÕES DOS ITENS NATALÍCIOS */
+/* --- ÍCONES COM BRILHO E SUAVIDADE --- */
 .christmas-icons {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    color: #31d094;
-    font-size: 1.5rem;
+    gap: 30px;
+    margin-bottom: 25px;
 }
 
-.snow-icon { animation: rotateSnow 4s infinite linear; }
-.gift-icon { animation: bounceGift 2s infinite ease-in-out; }
-.star-icon { animation: twinkleStar 1.5s infinite alternate; }
-
-@keyframes rotateSnow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes bounceGift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes twinkleStar { from { opacity: 0.4; transform: scale(0.9); } to { opacity: 1; transform: scale(1.2); } }
-
-@keyframes photoGlow {
-    0%, 100% { box-shadow: 0 0 10px rgba(49, 208, 148, 0.2); }
-    50% { box-shadow: 0 0 30px rgba(49, 208, 148, 0.5); }
+.christmas-icons i {
+    font-size: 1.6rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    position: relative;
 }
 
-@keyframes typing { from { width: 0 } to { width: 100% } }
-@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #31d094 } }
-@keyframes terminalOpen { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+.snow-icon { color: #aaddff; animation: floatIcon 3s ease-in-out infinite; }
+.gift-icon { color: #ff6b6b; animation: floatIcon 3s ease-in-out 0.5s infinite; }
+.star-icon { color: #ffd93d; animation: pulseIcon 2s ease-in-out infinite; }
 
-/* BOTÃO FECHAR */
+/* --- FOTO CENTRALIZADA --- */
+.photo-wrapper {
+    display: flex;
+    justify-content: center; /* Garante o centro absoluto */
+    margin: 0 auto 25px auto; /* Margem automática nas laterais */
+    position: relative;
+}
+
+.christmas-photo-large {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(49, 208, 148, 0.2);
+    box-shadow: 
+        0 0 0 4px #1a1a1a,
+        0 8px 25px rgba(0,0,0,0.4); 
+    transition: all 0.3s ease;
+}
+
+.christmas-photo-large:hover {
+    transform: scale(1.05);
+    border-color: #31d094;
+    box-shadow: 0 0 20px rgba(49, 208, 148, 0.2);
+}
+
+/* --- TIPOGRAFIA --- */
+.holiday-h2 {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.text-accent { 
+    color: #31d094; 
+    text-shadow: 0 0 15px rgba(49, 208, 148, 0.4);
+}
+
+.holiday-p {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    margin: 6px 0 16px 0;
+    line-height: 1.7;
+}
+
+/* --- LOGO --- */
+.christmas-logo-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.christmas-logo-top:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* --- BOTÃO --- */
 .christmas-close-btn {
-    margin-top: 35px;
+    margin-top: 25px;
     background: transparent;
     border: 1px solid #31d094;
     color: #31d094;
-    padding: 10px 35px;
-    font-family: 'Fira Code', monospace !important;
+    padding: 12px 30px;
+    font-family: 'Fira Code', monospace;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    text-transform: uppercase;
     font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(49, 208, 148, 0.1);
 }
 
 .christmas-close-btn:hover {
     background: #31d094;
-    color: #000;
-    box-shadow: 0 0 20px rgba(49, 208, 148, 0.4);
+    color: #0f0f0f;
+    box-shadow: 0 6px 20px rgba(49, 208, 148, 0.3);
+    transform: translateY(-2px);
+}
+
+.christmas-close-btn:active {
+    transform: translateY(0);
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; text-shadow: 0 0 10px #ffd93d; }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
