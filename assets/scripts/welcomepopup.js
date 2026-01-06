@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const motionToggle = document.getElementById('reduce-motion-toggle');
     const mainSite = document.getElementById('main-site');
     const body = document.body;
-    
+
     // Elementos de texto para tradução
     const titleAccent = document.getElementById('title-accent');
     const titleRest = document.getElementById('title-rest');
@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'A inicializar os protocolos para Desenvolvimento, Luz e Som. Ambiente pronto para interação profissional.',
             btn: 'ENTRAR',
             perf: 'Modo Performance'
+        },
+        es: {
+            titleAccent: 'BIENVENID@',
+            titleRest: 'USUARI@',
+            desc: 'Protocolos de inicio para desarrollo, iluminación y sonido. Ambiente listo para la interacción profesional.',
+            btn: 'ENTRAR',
+            perf: 'Modo Performance'
         }
     };
 
@@ -39,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Atualiza visual dos botões
         langBtns.forEach(btn => {
-            if(btn.dataset.lang === lang) {
+            if (btn.dataset.lang === lang) {
                 btn.classList.add('active');
             } else {
                 btn.classList.remove('active');
@@ -63,30 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Entrada no Sistema
     enterBtn.addEventListener('click', () => {
-        // LÓGICA DE REDIRECIONAMENTO
+
+        // LÓGICA DE REDIRECIONAMENTO PORTUGUÊS
         if (currentLang === 'pt') {
             btnText.innerText = "A ACESSAR...";
             setTimeout(() => {
                 window.location.href = '/pt';
             }, 500);
-        } else {
+
+            // LÓGICA DE REDIRECIONAMENTO ESPANHOL
+        } else if (currentLang === 'es') {
+            btnText.innerText = "ACCEDIENDO...";
+            setTimeout(() => {
+                window.location.href = '/es';
+            }, 500);
+
             // Lógica Normal de Animação (Inglês)
+        } else {
             btnText.innerText = "ACCESSING...";
-            
+
             setTimeout(() => {
                 overlay.classList.add('hidden');
                 body.classList.remove('no-scroll');
-                
-                if(mainSite) {
+
+                if (mainSite) {
                     mainSite.classList.add('entered');
                 }
-                
+
                 btnText.innerText = "ACCESS GRANTED";
-                
+
                 setTimeout(() => {
                     overlay.style.display = 'none';
                 }, 600);
-                
+
             }, 400);
         }
     });
@@ -103,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // // 4. Detetar preferência do sistema
     // const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
+
     // function checkReducedMotion() {
     //     if (prefersReducedMotion.matches) {
     //         body.classList.add('motion-off');

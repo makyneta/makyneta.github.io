@@ -44,6 +44,26 @@ fetch("/assets/div/header.pt.html")
 
 
 //
+// Header ES
+fetch("/assets/div/header.es.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header.es").innerHTML = data;
+
+    // CSS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/styles/header.css";
+    document.head.appendChild(link);
+
+    // JS
+    const script = document.createElement("script");
+    script.src = "/assets/scripts/header.js";
+    document.body.appendChild(script);
+  });
+
+
+//
 // Footer
 fetch("/assets/div/footer.html")
   .then(response => response.text())
