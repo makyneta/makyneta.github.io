@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // --- 3. CARREGAR DADOS DO JSON (Fetch) ---
     async function loadArticles() {
         try {
-            const response = await fetch('../../assets/data/bloges.json');
+            const response = await fetch('../assets/data/bloges.json');
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/loadingsoon.css">
+    <link rel="stylesheet" href="../assets/styles/port.ms.css">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/scripts/loadingsoon.js"></script>
+    <script src="../assets/scripts/script.js"></script>
+    <script src="../assets/scripts/port.ms.js"></script>
+    <!-- Title -->
+    <title>Música | Makyneta Studios</title>
+    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
+</head>
+
+<body class="bg-[#050505]">
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">DENTRO DE POCO</span>
+                <span id="loader-status"><a href="/es" style="text-decoration: underline;">IR A LA PAGINA DE INICIO</a></span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header.es"></div>
+
+    <!-- CONTAINER PRINCIPAL (Full Width) -->
+    <div class="artist-page-wrapper">
+
+        <!-- HERO SECTION (Full Screen) -->
+        <section class="artist-hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <h1 class="artist-name">MAKYNETA</h1>
+                <p class="artist-tagline">by Tomás Mota</p>
+            </div>
+        </section>
+
+        <!-- 2. RELEASES SECTION (Compacto) -->
+        <section class="content-section">
+            <div class="section-header">
+                <h3><span class="line">///</span> LATEST RELEASES</h3>
+                <!-- Botão que abre o POPUP de todos os lançamentos -->
+                <button class="view-all-btn" data-target="modal-releases">
+                    VIEW ALL RELEASES <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Grid de itens compactos -->
+            <div class="preview-grid">
+                <!-- Item 1 -->
+                <div class="release-card">
+                    <div class="cover-art"
+                        style="background-image: url('../../assets/images/gallery/other/587799623_907147694987343_6195713011112903552_n.jpg');">
+                    </div>
+                    <div class="card-info">
+                        <h4>Midnight Code</h4>
+                        <span class="meta">Single • 2023</span>
+                    </div>
+                    <button class="listen-btn">
+                        <i class="fa-solid fa-play"></i> LISTEN
+                    </button>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="release-card">
+                    <div class="cover-art"
+                        style="background-image: url('https://images-ssl.gotinder.com/u/mndczSydKM4gFNc2ev75mk/uiTbwccvvvxdEiDtyP3xgx.webp?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6IiovdS9tbmRjelN5ZEtNNGdGTmMyZXY3NW1rLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3Njc5MjAzMDR9fX1dfQ__&Signature=h9RfLH0SisAbUONcjfk-YZd3gWoKLyGDOJKxooSbYRAt8VHNnDUSt-Z10rtJW1g6Bt89FAC9JbVuoGiSaTHXzZHV6aznO3PLmfGhhrymgmG4TPbM7ehDkuXYMdEB~H9vJkWOpX89Fgod2mO80yK549xI1vzWWImZO-WS8RtXGVd3cXAN77DO4NdGy5AO2wkxqDUoL0NCcc2H9OrYVXvaACNv5ohLyAPdb~XFlTWEaI~qKBHXFwQdTtJoZYMPi-TyYtCX9AzFF0xJ3-gQr9y8clzEDrunirV~h3XAphf398z4wHTQ8NiVbko6yv0UYwei18Xh~W6IrtKsc1iyd4k~Hw__&Key-Pair-Id=K368TLDEUPA6OI&quot');">
+                    </div>
+                    <div class="card-info">
+                        <h4>System Failure</h4>
+                        <span class="meta">Album • 2022</span>
+                    </div>
+                    <button class="listen-btn">
+                        <i class="fa-solid fa-play"></i> LISTEN
+                    </button>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="release-card">
+                    <div class="cover-art"
+                        style="background-image: url('https://via.placeholder.com/150/333/111?text=M3');"></div>
+                    <div class="card-info">
+                        <h4>Dark Wave</h4>
+                        <span class="meta">EP • 2022</span>
+                    </div>
+                    <button class="listen-btn">
+                        <i class="fa-solid fa-play"></i> LISTEN
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. VIDEOS SECTION -->
+        <section class="content-section">
+            <div class="section-header">
+                <h3><span class="line">///</span> LATEST VIDEOS</h3>
+                <button class="view-all-btn" data-target="modal-videos">
+                    WATCH ALL VIDEOS <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- GRID DE VÍDEOS -->
+            <div class="videos-grid">
+
+                <!-- VÍDEO 1 -->
+                <a class="featured-video video-trigger" href="https://www.youtube.com/watch?v=INSERE_OUTRO_ID_AQUI"
+                    target="_blank">
+                    <div class="video-placeholder"
+                        style="background-image: url('../../assets/images/gallery/other/k4VCoTBUSCJBZzztAfFwYe.jpg');">
+                    </div>
+                    <div class="play-icon-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="video-caption">
+                        <h4>"BINARY RAIN"</h4>
+                        <p>Official Music Video</p>
+                    </div>
+                </a>
+
+                <!-- VÍDEO 2 -->
+                <a class="featured-video video-trigger" href="https://www.youtube.com/watch?v=INSERE_OUTRO_ID_AQUI"
+                    target="_blank">
+                    <div class="video-placeholder"
+                        style="background-image: url('../../assets/images/gallery/other/uiTbwccvvvxdEiDtyP3xgx.jpg');">
+                    </div>
+                    <div class="play-icon-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="video-caption">
+                        <h4>"NEON SOULS"</h4>
+                        <p>Official Music Video</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 4. LIVE PERFORMANCES -->
+        <section class="content-section">
+            <div class="section-header">
+                <h3><span class="line">///</span> LIVE SHOWS</h3>
+                <button class="view-all-btn" data-target="modal-lives">
+                    VIEW ARCHIVE <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="tour-list">
+                <div class="tour-item">
+                    <div class="date">OCT 24</div>
+                    <div class="details">Lisbon • Music Box</div>
+                    <button class="ticket-btn">TICKETS</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ================= MODALS (POPUPS) ================= -->
+
+    <!-- MODAL: RELEASES -->
+    <div id="modal-releases" class="fullscreen-modal">
+        <div class="modal-header">
+            <h2>DISCOGRAPHY</h2>
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="releases-list">
+
+                <!-- Header da Tabela (Opcional para organização) -->
+                <div class="release-header-row">
+                    <span>TITLE & ARTIST</span>
+                    <span>DETAILS</span>
+                    <span>ACTION</span>
+                </div>
+
+                <!-- Item 1 -->
+                <div class="release-row">
+                    <div class="r-left">
+                        <div class="r-cover" style="background-image: url('https://via.placeholder.com/60');"></div>
+                        <div class="r-info">
+                            <h4>Neon Souls EP</h4>
+                            <span class="r-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <div class="r-center">
+                        <span class="tag type">EP</span>
+                        <span class="tag year">2023</span>
+                    </div>
+                    <div class="r-right">
+                        <button class="action-btn listen">
+                            <i class="fa-solid fa-play"></i> LISTEN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="release-row">
+                    <div class="r-left">
+                        <div class="r-cover" style="background-image: url('https://via.placeholder.com/60');"></div>
+                        <div class="r-info">
+                            <h4>Midnight Code</h4>
+                            <span class="r-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <div class="r-center">
+                        <span class="tag type">Single</span>
+                        <span class="tag year">2023</span>
+                    </div>
+                    <div class="r-right">
+                        <button class="action-btn listen">
+                            <i class="fa-solid fa-play"></i> LISTEN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="release-row">
+                    <div class="r-left">
+                        <div class="r-cover" style="background-image: url('https://via.placeholder.com/60');"></div>
+                        <div class="r-info">
+                            <h4>System Failure</h4>
+                            <span class="r-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <div class="r-center">
+                        <span class="tag type">Album</span>
+                        <span class="tag year">2022</span>
+                    </div>
+                    <div class="r-right">
+                        <button class="action-btn listen">
+                            <i class="fa-solid fa-play"></i> LISTEN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="release-row">
+                    <div class="r-left">
+                        <div class="r-cover" style="background-image: url('https://via.placeholder.com/60');"></div>
+                        <div class="r-info">
+                            <h4>Dark Wave</h4>
+                            <span class="r-artist">Artist Name</span>
+                        </div>
+                    </div>
+                    <div class="r-center">
+                        <span class="tag type">EP</span>
+                        <span class="tag year">2022</span>
+                    </div>
+                    <div class="r-right">
+                        <button class="action-btn listen">
+                            <i class="fa-solid fa-play"></i> LISTEN
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: VIDEOS -->
+    <div id="modal-videos" class="fullscreen-modal">
+        <div class="modal-header">
+            <h2>VIDEO ARCHIVE</h2>
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body grid-container-videos">
+
+            <!-- VÍDEO 1 (Link Externo) -->
+            <a class="video-item" href="https://www.youtube.com/watch?v=INSERE_O_ID_AQUI" target="_blank">
+                <div class="thumb"
+                    style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop');">
+                </div>
+                <h4>Binary Rain</h4>
+            </a>
+
+            <!-- VÍDEO 2 (Link Externo) -->
+            <a class="video-item" href="https://www.youtube.com/watch?v=INSERE_OUTRO_ID_AQUI" target="_blank">
+                <div class="thumb"
+                    style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop');">
+                </div>
+                <h4>Electric Sheep</h4>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- MODAL: LIVES -->
+    <div id="modal-lives" class="fullscreen-modal">
+        <div class="modal-header">
+            <h2>PERFORMANCE HISTORY</h2>
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="timeline-container">
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="t-date">
+                        <span class="day">24</span>
+                        <span class="month">OCT</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="t-content">
+                        <h4>Lisbon • Music Box</h4>
+                        <p>Headline Tour 2023 - Sold Out Show</p>
+                        <div class="t-actions">
+                            <a href="#" class="link-btn">WATCH VIDEO <i class="fa-solid fa-video"></i></a>
+                            <a href="#" class="link-btn">PHOTOS <i class="fa-solid fa-camera"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="t-date">
+                        <span class="day">12</span>
+                        <span class="month">AUG</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="t-content">
+                        <h4>Porto • Festival V2</h4>
+                        <p>Main Stage Performance</p>
+                        <div class="t-actions">
+                            <a href="#" class="link-btn">WATCH VIDEO <i class="fa-solid fa-video"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="t-date">
+                        <span class="day">31</span>
+                        <span class="month">DEC</span>
+                        <span class="year">2022</span>
+                    </div>
+                    <div class="t-content">
+                        <h4>Lisbon • NYE Party</h4>
+                        <p>New Year's Eve Exclusive Set</p>
+                        <div class="t-actions">
+                            <a href="#" class="link-btn">WATCH VIDEO <i class="fa-solid fa-video"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/loading.css">
+    <link rel="stylesheet" href="../assets/styles/geral.css">
+    <link rel="stylesheet" href="../assets/styles/stt.css">
+    <link rel="stylesheet" href="../assets/styles/portfolio-theme.css">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/scripts/loading.js"></script>
+    <script src="../assets/scripts/script.js"></script>
+    <script src="../assets/scripts/stt.js"></script>
+    <!-- Title -->
+    <title>Luz & Som | Makyneta Studios</title>
+    <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
+</head>
+<body class="theme-av bg-[#080808] text-white">
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">A INICIALIZAR O SISTEMA</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header.pt"></div>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <header class="text-center mb-20">
+            <h1 class="text-6xl md:text-7xl font-black italic tracking-tighter uppercase">
+                Som <span class="text-purple-500">&</span> Luz
+            </h1>
+            <p class="text-gray-500 uppercase tracking-[0.4em] text-xs mt-4">Engenharia da atmosfera</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article class="card p-2 rounded-2xl group">
+                <div class="overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <span class="badge mb-3">Som & Iluminação Ao Vivo</span>
+                    <h3 class="text-2xl font-bold italic uppercase">Controlo de Palco - Festivais</h3>
+                    <p class="text-gray-400 mt-2">Gestão completa de iluminação DMX e mistura de som ao vivo para uma audiência de 1500 pessoas.</p>
+                </div>
+            </article>
+
+            <article class="card p-2 rounded-2xl group">
+                <div class="overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <span class="badge mb-3">Engenharia de Estúdio</span>
+                    <h3 class="text-2xl font-bold italic uppercase">Produção de áudio em estúdio</h3>
+                    <p class="text-gray-400 mt-2">Gravação, mistura e masterização de faixas multi-instrumentais.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+</body>
+</html>
