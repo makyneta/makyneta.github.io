@@ -1,1 +1,1 @@
-    document.getElementById('current-year-refined').textContent = new Date().getFullYear();
+document.getElementById('current-year-refined').textContent = new Date().getFullYear();

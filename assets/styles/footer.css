@@ -47,19 +47,18 @@
 }
 
 .footer-socials {
-    display: flex;
+    display: flex;  
     gap: 20px;
 }
 
 .footer-socials a {
-    color: #555;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    color: #666;
+    font-size: 0.8rem;
+    transition: color 0.5s ease !important;
 }
 
 .footer-socials a:hover {
-    color: #31d094;
-    transform: translateY(-3px);
+    color: #ffffff;
 }
 
 /* Parte Inferior: Copyright */
@@ -86,14 +85,14 @@
 .copyright-text:hover .white-text {
     /* Define as 3 cores do gradiente */
     background: linear-gradient(90deg, #31d094 0%, #3b82f6 50%, #a855f7 100%);
-    
+
     /* Faz o background aparecer apenas dentro das letras */
     -webkit-background-clip: text;
     background-clip: text;
-    
+
     /* Torna a cor do texto transparente para revelar o gradiente atrás */
     -webkit-text-fill-color: transparent;
-    
+
     /* Ajuste visual para destacar */
     font-weight: 700;
 }
@@ -113,12 +112,14 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .footer-top, .footer-bottom {
+
+    .footer-top,
+    .footer-bottom {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-    
+
     .footer-socials {
         justify-content: center;
     }
