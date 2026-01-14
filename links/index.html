@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/styles/links.css">
     <!-- Scripts -->
     <script src="../assets/scripts/links.js"></script>
+    <script src="../assets/scripts/year.js"></script>
     <!-- Title & Favicon-->
     <title>Makyneta Studios by Tomás Mota</title>
     <link rel="icon" href="../assets/images/site/favicon.jpg" type="image/jpg">
@@ -137,7 +138,7 @@
         </div>
 
         <footer>
-            <p>Copyright &copy; Makyneta Studios, Lda.</p>
+            <p>Copyright &copy; <span id="current-year-refined"></span> Makyneta Studios, Lda.</p>
             <button onclick="copyLink()" style="margin-top: 10px; background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer; text-decoration: none;">
                 <i class="fa-solid fa-share"></i> Share this page
             </button>
@@ -146,5 +147,6 @@
 
     <!-- Toast -->
     <div id="toast"><i class="fa-solid fa-check"></i> Link copied!</div>
+    <script src="../assets/scripts/year.js"></script>
 </body>
 </html>
