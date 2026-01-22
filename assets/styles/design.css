@@ -348,19 +348,84 @@ body {
     }
 }
 
+/* --- AJUSTES PARA MOBILE E TABLET --- */
+
 @media (max-width: 1024px) {
-    .modal-container {
-        grid-template-columns: 1fr;
-        overflow-y: auto;
+    .project-modal {
+        padding: 0; /* Remove espaço lateral para ganhar tela */
     }
 
-    .modal-info {
-        border-left: none;
-        padding: 2rem;
+    .modal-container {
+        grid-template-columns: 1fr; /* Uma única coluna */
+        height: 100vh; /* Ocupa a tela toda */
+        max-width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: column; /* Organiza em fluxo vertical */
+        overflow-y: auto; /* Permite scroll no container pai */
     }
 
     .modal-visuals {
-        height: auto;
+        order: 2; /* Move as imagens para depois da informação (opcional, mas melhor para UX) */
+        padding: 1.5rem;
+        gap: 1rem;
+        overflow: visible; /* Deixa o scroll para o container pai */
+    }
+
+    .modal-visuals img {
+        width: 100%;
+        max-width: 500px; /* Limita o tamanho das imagens para não ficarem gigantes no mobile */
+        margin: 0 auto; /* Centraliza as imagens menores */
+        border-radius: 8px;
+    }
+
+    .modal-info {
+        order: 1; /* Título e descrição aparecem primeiro */
+        padding: 5rem 1.5rem 2rem 1.5rem; /* Aumenta o topo por causa do botão de fechar */
+        border-left: none;
         overflow: visible;
+        min-height: auto;
+    }
+
+    .modal-info h2 {
+        font-size: 2rem; /* Título menor no mobile */
+        margin-bottom: 1.5rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-meta-grid {
+        grid-template-columns: 1fr 1fr; /* Mantém duas colunas de info */
+        gap: 1.5rem;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .meta-item p {
+        font-size: 0.9rem;
+    }
+
+    .close-modal {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        position: fixed; /* Garante que o botão fique sempre visível ao scrollar */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+}
+
+/* Ajuste específico para telas muito pequenas */
+@media (max-width: 480px) {
+    .project-meta-grid {
+        grid-template-columns: 1fr; /* Coluna única para metadados em celulares pequenos */
+    }
+    
+    .main-title {
+        font-size: 3.5rem;
     }
 }
