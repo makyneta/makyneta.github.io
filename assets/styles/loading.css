@@ -35,26 +35,26 @@
     position: absolute;
     border-radius: 50%;
     border: 2px solid transparent;
-    border-top-color: #31d094; /* Verde Tech */
+    border-top-color: #e2e2e2; /* Verde Tech */
 }
 
 .circle-1 {
     inset: 0;
     animation: spin 1s linear infinite;
-    border-top-color: rgba(49, 208, 148, 0.2);
+    border-top-color: rgba(255, 255, 255, 0.786);
 }
 
 .circle-2 {
     inset: 10px;
     animation: spin 1.5s linear infinite reverse;
-    border-top-color: rgba(49, 208, 148, 0.6);
+    border-top-color: rgb(171, 171, 171);
 }
 
 .circle-3 {
     inset: 20px;
     width: 40px;
     height: 40px;
-    background: radial-gradient(circle, #31d094 30%, transparent 70%);
+    background: radial-gradient(circle, #adadad 30%, transparent 70%);
     animation: pulse 1s ease-in-out infinite alternate;
     border: none;
     filter: blur(5px);
@@ -69,7 +69,7 @@
 #loader-status {
     font-family: 'Fira Code', monospace;
     font-size: 0.75rem;
-    color: #31d094;
+    color: #ffffff;
     letter-spacing: 2px;
     display: block;
     margin-bottom: 8px;
@@ -87,7 +87,7 @@
 .progress-fill {
     width: 0%;
     height: 100%;
-    background: #31d094;
+    background: #ffffff;
     box-shadow: 0 0 10px #31d094;
     transition: width 0.2s linear;
     animation: loadingProgress 1.5s ease-in-out forwards;

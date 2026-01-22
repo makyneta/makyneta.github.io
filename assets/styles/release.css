@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Mono&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/simple-icons-font@v10/font/simple-icons.min.css');
+
+:root {
+    --bg: #050505;
+    --card: #121212;
+    --accent: #ff3333;
+    --text: #ffffff;
+    --text-dim: #808080;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Background Art Blur */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://picsum.photos/seed/cosmic/800/800') center/cover;
+    filter: blur(80px) brightness(0.2);
+    z-index: -1;
+}
+
+.main-wrapper {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.release-card {
+    background: var(--card);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Top Header */
+.header {
+    padding: 30px;
+    text-align: center;
+}
+
+.cover-art {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.header .badge {
+    display: inline-block;
+    background: rgba(255, 51, 51, 0.1);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Info Section */
+.release-info {
+    padding: 0 30px 25px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.info-label {
+    color: #fff;
+    display: block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+/* Streaming List */
+.stream-list {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.stream-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 30px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid var(--border);
+    transition: 0.2s;
+}
+
+.stream-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.stream-item:last-child {
+    border-bottom: none;
+}
+
+.platform {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.platform i {
+    font-size: 1.4rem;
+    width: 24px;
+    text-align: center;
+}
+
+.platform span {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Cores oficiais via Simple Icons Class */
+.si-spotify {
+    color: #1DB954;
+}
+
+.si-applemusic {
+    color: #FA243C;
+}
+
+.si-youtubemusic {
+    color: #FF0000;
+}
+
+.si-tidal {
+    color: #fff;
+}
+
+.si-deezer {
+    color: #EF3340;
+}
+
+.si-amazonmusic {
+    color: #00A8E1;
+}
+
+.btn-action {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.stream-item:hover .btn-action {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}

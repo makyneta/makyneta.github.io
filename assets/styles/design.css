@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&family=Space+Mono:wght@400&display=swap');
+
+:root {
+    --bg: #080808;
+    --surface: #121212;
+    --text-main: #ffffff;
+    --text-sub: #888888;
+    --accent: #FF4500;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+.design-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 6vw;
+    position: relative;
+}
+
+/* TÍTULO */
+.hero-title {
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    animation: fadeUp 1s forwards;
+}
+
+.meta-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.3s;
+}
+
+.main-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 12vw, 8rem);
+    line-height: 0.85;
+    font-weight: 800;
+    letter-spacing: -3px;
+    background: linear-gradient(120deg, #fff 0%, #aaaaaa 20%, #fff 40%, #888 60%, #fff 80%, #fff 100%);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: smoothGradient 8s ease infinite, textReveal 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards 0.2s;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+/* GRID */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 350px;
+    gap: 25px;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    opacity: 0;
+    animation: cardPop 0.8s forwards;
+    cursor: pointer;
+}
+
+.card:hover .card-bg {
+    filter: grayscale(0%);
+    opacity: 0.6;
+    transform: scale(1.05) translateZ(-20px);
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: all 0.6s ease;
+    filter: grayscale(100%);
+    z-index: 0;
+    transform: translateZ(-20px);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: #fff;
+}
+
+.card-number {
+    font-family: 'Space Mono', monospace;
+    color: var(--accent);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 2;
+}
+
+.card.hovered .card-tags {
+    opacity: 1;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    backdrop-filter: blur(5px);
+}
+
+/* NOVO MODAL ULTRA PREMIUM */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-container {
+    background: #0a0a0a;
+    width: 100%;
+    max-width: 1400px;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-visuals {
+    background: #000;
+    overflow-y: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #000;
+}
+
+.modal-visuals img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #222;
+}
+
+.modal-info {
+    padding: 4rem;
+    overflow-y: auto;
+    border-left: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-info h2 {
+    font-family: 'Syne';
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.project-description {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #222;
+    margin-top: auto;
+}
+
+.meta-item h4 {
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.meta-item p {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: #fff;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Animations */
+@keyframes smoothGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes textReveal {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardPop {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-container {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+
+    .modal-info {
+        border-left: none;
+        padding: 2rem;
+    }
+
+    .modal-visuals {
+        height: auto;
+        overflow: visible;
+    }
+}

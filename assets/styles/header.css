@@ -36,7 +36,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 240px;
+    min-width: 150px;
     background: rgba(15, 15, 15, 0.98);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);

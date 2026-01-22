@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 <head>
     <!-- Metadados -->
     <meta charset="UTF-8">
@@ -12,26 +12,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/loading.css">
-    <link rel="stylesheet" href="assets/styles/welcomepopup.css">
     <link rel="stylesheet" href="assets/styles/geral.css">
     <link rel="stylesheet" href="assets/styles/home.css">
-    <link rel="stylesheet" href="assets/styles/portfolio-theme.css">
-    <link rel="stylesheet" href="assets/styles/mchny.css">
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/scripts/loading.js"></script>
-    <script src="assets/scripts/welcomepopup.js"></script>
-    <script src="assets/scripts/mchny.js"></script>
     <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/stt.js"></script>
     <!-- Title -->
     <title>Makyneta | Tomás Mota</title>
-    <link rel="icon" href="assets/images/site/favicon.jpg" type="image/jpg">
+    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
 </head>
 <body class="bg-[#0c0c0c] text-[#f5f5f5] font-['Fira_Code',_monospace] overflow-x-hidden">
 
 <!-- LOADER -->
-<div id="page-loader" class="page-loader">
+    <div id="page-loader" class="page-loader">
         <div class="loader-content">
             <!-- Spinner Tech -->
             <div class="spinner-box">
@@ -42,64 +36,13 @@
 
             <!-- Texto de Estado -->
             <div class="loader-text">
-                <span id="loader-status">INITIALIZING SYSTEM</span>
+                <span id="loader-status">A CARREGAR</span>
                 <div class="progress-bar-bg">
                     <div class="progress-fill"></div>
                 </div>
             </div>
         </div>
-</div>
-
-<!-- WRAP -->
-<div id="main-site" class="main-site-content no-scroll">    
-</div>
-
-<!-- POPUP -->
-<!-- <div id="welcome-overlay" class="welcome-overlay">
-    <div class="welcome-terminal">
-        <div class="holiday-header">
-            
-            <div class="header-left">
-                <img src="assets/images/logos/makyneta-studios.png" alt="Logo" class="popup-logo-header">
-            </div>
-
-            <div class="header-right">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="pt">PT</button>
-                    <button class="lang-btn" data-lang="es">ES</button>
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="welcome-content">
-            <div class="christmas-icons-3d">
-                <i class="fa-solid fa-code code-icon"></i>
-                <i class="fa-solid fa-lightbulb light-icon"></i>
-                <i class="fa-solid fa-headphones-simple sound-icon"></i>
-            </div>
-
-            <h2 class="welcome-h2"><span class="text-accent" id="title-accent">WELCOME</span> <span id="title-rest">USER</span></h2>
-            
-            <p class="welcome-p" id="desc-text">
-                Initializing protocols for Development, Lighting & Audio Systems. Environment ready for professional interaction.
-            </p>
-
-            <div class="control-panel">
-                <label class="toggle-switch">
-                    <input type="checkbox" id="reduce-motion-toggle">
-                    <span class="slider"></span>
-                    <span class="label-text" id="perf-label">Performance Mode</span>
-                </label>
-            </div>
-
-            <button id="enter-btn" class="enter-btn">
-                <span class="btn-glitch" id="btn-text">ENTER</span>
-            </button>
-        </div>
     </div>
-</div> -->
 
 <div id="header"></div>
 
@@ -118,25 +61,25 @@
             <div class="badge-container flex items-center gap-3">
                 <span class="h-[1px] w-12 bg-[#31d094]"></span>
                 <p class="name-subtitle text-[#31d094] tracking-[0.4em] text-xs font-bold uppercase">
-                    Tomás Mota • Makyneta Studios
+                    Makyneta // Tomás Mota
                 </p>
             </div>
 
             <h1 class="headline text-5xl lg:text-8xl font-extrabold leading-none tracking-tighter">
-                Bridging <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#31d094] to-emerald-400">Code</span> <br>
-                & Experience.
+                A unir <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#31d094] to-emerald-400">Código</span> <br>
+                e Experiência.
             </h1>
             
             <div class="introduction space-y-4 max-w-xl">
                 <p class="description text-gray-400 text-lg leading-relaxed text-justify border-l-2 border-[#31d094]/30 pl-6">
-                    Professional <span class="text-white font-medium">Fullstack Developer</span> and <span class="text-white font-medium">Multidisciplinary Technician</span> specializing in IT infrastructure, professional lighting, and sound engineering. 
+                    <span class="text-white font-medium">Desenvolvedor Fullstack</span>, <span class="text-white font-medium">fotógrafo</span>, <span class="text-white font-medium">designer</span>, <span class="text-white font-medium">técnico de som, luz e informática</span>.
                 </p>
                 <p class="description text-gray-400 text-base leading-relaxed text-justify pl-6">
-                    Since 2024, I have been delivering high-end technical solutions for theater companies, sports organizations, and educational groups. I specialize in the intersection of robust backend logic and immersive live environments, ensuring that every project — digital or physical — operates at peak performance.
+                    Desde 2024, tenho fornecido soluções técnicas de vanguarda a companhias de teatro, organizações desportivas e grupos educativos. Sou especialista na interseção entre uma lógica de back-end robusta e ambientes imersivos ao vivo, garantindo que cada projeto — digital ou físico — opera com o máximo desempenho.
                 </p>
             </div>
             
-            <div class="actions flex flex-wrap items-center gap-8 pt-4">
+            <!-- <div class="actions flex flex-wrap items-center gap-8 pt-4">
                 <a href="portfolio" class="px-8 py-4 bg-[#31d094] text-[#0c0c0c] font-bold rounded-sm transition-all hover:bg-white hover:tracking-widest">
                     VIEW_PROJECTS
                 </a>
@@ -146,7 +89,7 @@
                     <span class="opacity-20">/</span>
                     <a href="contact" class="hover:text-[#31d094] transition-colors">CONTACT</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="image-column relative flex justify-center lg:justify-end">
@@ -154,17 +97,17 @@
                 <div class="absolute -inset-0.5 bg-gradient-to-tr from-[#31d094] to-blue-500 rounded-lg blur opacity-20 group-hover:opacity-50 transition duration-700"></div>
                 
                 <div class="relative bg-black rounded-lg overflow-hidden border border-white/10 w-full max-w-[400px] aspect-square">
-                    <img src="assets/images/site/tomas-mota.jpg" alt="Tomás Mota" 
+                    <img src="assets/images/tomas-mota.jpg" alt="Tomás Mota" 
                          class="profile-photo w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
                     
                     <div class="absolute inset-0 flex flex-col justify-between p-6 pointer-events-none">
                         <div class="flex justify-between items-start">
                             <span class="text-[10px] text-[#31d094] bg-black/60 p-1 px-2 border border-[#31d094]/30">SYS_RUNNING</span>
-                            <span class="text-[10px] text-black/25">TMMS-2025</span>
+                            <span class="text-[10px] text-black/25">TM-2026</span>
                         </div>
                         <div class="bg-black/80 backdrop-blur-sm p-4 rounded border border-white/5 font-mono text-[11px] leading-tight">
                             <div class="flex justify-between mb-1">
-                                <span class="text-[#31d094]">Fullstack_Dev</span>
+                                <span class="text-[#31d094]">Dev</span>
                                 <span class="text-white">Active</span>
                             </div>
                             <div class="flex justify-between mb-1">
@@ -184,43 +127,6 @@
 </section>
 </main>
 <div id="footer"></div>
-
-<div id="christmas-popup" class="christmas-modal">
-    <div class="christmas-terminal">
-        <div class="holiday-header">
-            <div class="header-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-            </div>
-            <span class="holiday-title">SEASON_GREETINGS_v3.0</span>
-        </div>
-
-        <div class="christmas-content">
-            <!-- Logo com transparência elegante -->
-            <img src="assets/images/logos/makyneta-studios.png" alt="Logo" class="christmas-logo-top">
-            
-            <!-- Ícones 3D Suaves -->
-            <div class="christmas-icons">
-                <i class="fa-solid fa-snowflake snow-icon"></i>
-                <i class="fa-solid fa-gift gift-icon"></i>
-                <i class="fa-solid fa-star star-icon"></i>
-            </div>
-            
-            <!-- Foto com borda luminosa e sombra suave -->
-            <div class="photo-wrapper">
-                <img src="assets/images/site/tomas-mota.jpg" alt="Tomás Mota" class="christmas-photo-large">
-            </div>
-
-            <h2 class="holiday-h2"><span class="text-accent">HAPPY</span> HOLIDAYS!</h2>
-            
-            <p class="holiday-p">May your Christmas be filled with light, peace, and bug-free code.</p>
-            <p class="holiday-p">A Happy New Year filled with many achievements and creativity.</p>
-            
-            <button class="christmas-close-btn">CLOSE_MESSAGE</button>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>

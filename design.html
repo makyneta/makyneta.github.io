@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/design.css">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/scripts/loading.js"></script>
+    <script src="assets/scripts/design.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <!-- Title & Favicon-->
+    <title>Design // Makyneta</title>
+    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
+</head>
+<body>
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">A CARREGAR</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header"></div>
+
+    <div class="design-wrapper">
+        <header class="hero-title">
+            <span class="meta-title">TRABALHOS SELECIONADOS</span>
+            <div class="main-title">Design</div>
+        </header>
+
+        <div class="bento-grid">
+            <article class="card col-6" style="grid-row: span 2;" onclick="openProject('franciscoferreira')">
+                <img src="assets/images/design/franciscoferreira-inicio.jpg" class="card-bg" alt="Project">
+                <div class="card-content">
+                    <span class="card-number">01</span>
+                    <h2 class="card-title">Francisco Ferreira</h2>
+                </div>
+            </article>
+
+            <!-- <article class="card col-4" onclick="openProject('fintech')">
+                <img src="https://picsum.photos/seed/tech/600/400" class="card-bg" alt="Project">
+                <div class="card-content">
+                    <span class="card-number">02</span>
+                    <h2 class="card-title">FinTech UI Kit</h2>
+                </div>
+            </article> -->
+        </div>
+    </div>
+
+    <div class="project-modal" id="projectModal">
+        <button class="close-modal" onclick="closeProject()">&times;</button>
+        <div class="modal-container">
+            <div class="modal-visuals" id="modalGallery">
+                </div>
+            <div class="modal-info">
+                <h2 id="modalTitle">Nome do Projeto</h2>
+                <div class="project-description" id="modalDesc">
+                    </div>
+                
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <h4>Cliente</h4>
+                        <p id="modalClient">Nome do Cliente</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Ano</h4>
+                        <p id="modalYear">2024</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Serviços</h4>
+                        <p id="modalServices">Design, Strategy</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Link</h4>
+                        <p><a href="#" id="modalLink" style="color: #fff;">Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+</body>
+</html>

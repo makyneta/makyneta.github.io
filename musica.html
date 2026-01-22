@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/music.css">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/scripts/loading.js"></script>
+    <script src="assets/scripts/music.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <!-- Title & Favicon-->
+    <title>Música // Makyneta</title>
+    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
+</head>
+<body>
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">A CARREGAR</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header"></div>
+
+    <div class="stars"></div>
+
+    <header class="hero-section hero">
+        <div class="hero-top">
+            <span class="new-release-tag">Novo Lançamento Em Breve</span>
+            <h1>Sou Como<br>Um Rio Remix</h1>
+        </div>
+
+        <div class="hero-mid">
+            <div class="album-art-hero"></div>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="torn-ticket" onclick="location.href='release/golden.html'">
+                <div class="perforated-line"></div>
+                <div class="ticket-left">
+                    <h3>Pre-save</h3>
+                    <p>DISPONÍVEL EM TODAS AS PALATAFORMAS</p>
+                </div>
+                <button class="ticket-btn">OUVIR ▶</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- <div class="content-wrapper">
+        <section>
+            <h2 class="section-title">DISCOGRAFIA</h2>
+            <div class="disc-grid">
+                <div class="album-card" onclick="openDisco('cosmic')">  
+                    <img src="https://picsum.photos/seed/album1/400/400" alt="Cosmic Harmony">
+                    <div class="album-title">Cosmic Harmony (2024)</div>
+                </div>
+                <div class="album-card" onclick="openDisco('everyday')">
+                    <img src="https://picsum.photos/seed/album2/400/400" alt="Everyday Life">
+                    <div class="album-title">Everyday Life (2019)</div>
+                </div>
+                <div class="album-card" onclick="openDisco('dreams')">
+                    <img src="https://picsum.photos/seed/album3/400/400" alt="A Head Full of Dreams">
+                    <div class="album-title">A Head Full of Dreams (2015)</div>
+                </div>
+                <div class="album-card" onclick="openDisco('ghost')">
+                    <img src="https://picsum.photos/seed/album4/400/400" alt="Ghost Stories">
+                    <div class="album-title">Ghost Stories (2014)</div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;">
+            <h2 class="section-title">TOUR DATES</h2>
+            <div class="torn-ticket box-office-item" style="max-width: 100%; margin-bottom: 1rem; background: #111; color: #fff;">
+                <div class="ticket-left"><h3>20 MAI • LISBOA</h3><p>ESTÁDIO DA LUZ</p></div>
+                <button class="ticket-btn">TICKETS</button>
+            </div>
+            <div class="torn-ticket box-office-item" style="max-width: 100%; background: #111; color: #fff;">
+                <div class="ticket-left"><h3>25 MAI • MADRID</h3><p>WIZINK CENTER</p></div>
+                <button class="ticket-btn" style="background:#333;">SOLD OUT</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="disco-modal" id="discoModal">
+        <div class="disco-content">
+            <button class="disco-close" onclick="closeDisco()">×</button>
+            <h2 id="dTitle">Album</h2>
+            <p id="dYear" style="font-family: 'Space Mono'; color: var(--neon-accent);"></p>
+            <div class="disco-details" id="dDesc"></div>
+            <button class="disco-btn">STREAMING COMPLETO</button>
+        </div>
+    </div> -->
+
+    <div id="footer"></div>
+</body>
+</html>
