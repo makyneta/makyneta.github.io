@@ -1,12 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Thank You, Libélula Teatro",
+    "title": "Obrigado Por Tudo, Querido Tio",
     "category": "work",
-    "date": "30 NOV 2025",
-    "readTime": "1 min read",
-    "image": "assets/images/blog/2025/11/libelula-teatro-operario-marinhense.jpg",
+    "date": "13 FEVEVREIRO 2025",
+    "readTime": "1 minuto de leitura",
+    "image": "assets/images/blog/obrigado-por-tudo-querido-tio.jpg",
+    "excerpt": "Uma mensagem especial para o meu tio que infelizmente veio a fal...",
+    "link": "news/obrigado-por-tudo-querido-tio.html"
+  },
+  {
+    "id": 2,
+    "title": "Farias Hoje Os Teus 50 Anos",
+    "category": "work",
+    "date": "25 JUNHO 2025",
+    "readTime": "1 minuto de leitura",
+    "image": "assets/images/blog/farias-hoje-os-teus-50-anos.jpg",
+    "excerpt": "Querido, tio. Hoje fazias os teus tão sonhados 50 anos. Toda a tu...",
+    "link": "news/farias-hoje-os-teus-50-anos.html"
+  },
+  {
+    "id": 3,
+    "title": "Obrigado, Libélula Teatro",
+    "category": "work",
+    "date": "30 NOVEMBRO 2025",
+    "readTime": "1 minuto de leitura",
+    "image": "assets/images/blog/obrigado-libelula-teatro.jpg",
     "excerpt": "A short note of gratitude to Libélula Teatro for the opportunity to...",
-    "link": "news/2025/11/thank-you-libelula-teatro"
+    "link": "news/obrigado-libelula-teatro.html"
+  },
+  {
+    "id": 4,
+    "title": "Porque Saí Das Redes Sociais?",
+    "category": "personal",
+    "date": "24 JANEIRO 2026",
+    "readTime": "6 minuto de leitura",
+    "image": "assets/images/blog/porque-sai-das-redes-sociais.jpg",
+    "excerpt": "O motivo real do motivo pelo qual decidi sair das redes sociais foi...",
+    "link": "news/porque-sai-das-redes-sociais.html"
   }
 ]

@@ -11,10 +11,10 @@ body {
 /* currentColor é usado para preencher o background dos dots automaticamente */
 
 .theme-all { color: #ffffff; }
-.theme-dev { color: #4ade80; }
+.theme-dev { color: #117636; }
 .theme-work { color: #60a5fa; }
 .theme-professional { color: #fb923c; }
-.theme-personal { color: #f472b6; }
+.theme-personal { color: #72f476; }
 
 /* --- 2. COMMAND BAR --- */
 .command-bar {
