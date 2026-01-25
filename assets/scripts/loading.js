@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para remover o loader
     function dismissLoader() {
         // Atualiza texto para "System Ready"
-        if(statusText) statusText.innerText = "CARREGADO";
+        if(statusText) statusText.innerText = "LOADED";
         
         // Pequeno delay para o utilizador ver o "Ready"
         setTimeout(() => {
