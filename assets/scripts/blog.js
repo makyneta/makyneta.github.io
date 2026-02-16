@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[current] transition-colors">${article.title}</h3>
                         <p class="text-gray-400 text-sm leading-relaxed line-clamp-3 mb-4">${article.excerpt}</p>
                         <div class="mt-auto">
-                            <a href="${article.link}" target="_blank" class="inline-flex items-center text-xs font-bold text-white uppercase tracking-widest hover:text-[current] transition-colors">Ler Artigo &rarr;</a>
+                            <a href="${article.link}" target="_blank" class="inline-flex items-center text-xs font-bold text-white uppercase tracking-widest hover:text-[current] transition-colors">Read Article &rarr;</a>
                         </div>
                     </div>
                 </article>
