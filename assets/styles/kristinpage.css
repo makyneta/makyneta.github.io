@@ -1,0 +1,109 @@
+:root {
+    --primary: #0052cc;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    --safety-top: 90px; /* ESPAÇO DE SEGURANÇA NO TOPO */
+}
+
+body {
+    margin: 0; font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg); color: var(--dark);
+    padding-top: var(--safety-top); line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
+
+/* GRID PRINCIPAL */
+.grid-main { display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: start; }
+
+/* SIDEBAR AESTHETIC */
+.sidebar { 
+    position: sticky; top: var(--safety-top); background: white; padding: 15px; 
+    border-radius: 28px; border: 1px solid #e2e8f0; box-shadow: var(--shadow); 
+    box-sizing: border-box;
+}
+.v-slider { 
+    width: 100%; height: 370px; border-radius: 20px; overflow: hidden; 
+    position: relative; background: #eee; margin-bottom: 15px; 
+}
+.slide { 
+    position: absolute; inset: 0; opacity: 0; transition: 1.2s ease-in-out; 
+    background-size: cover; background-position: center; 
+}
+.slide.active { opacity: 1; transform: scale(1.05); }
+
+.sidebar-footer { background: #f8fafc; padding: 15px; border-radius: 20px; box-sizing: border-box; }
+.btn-site { 
+    display: flex; align-items: center; justify-content: center; width: 100%; 
+    padding: 12px; background: var(--dark); color: white; border-radius: 12px; 
+    text-decoration: none; font-weight: 700; font-size: 0.8rem; margin-bottom: 12px;
+}
+
+.social-wrap { display: flex; justify-content: center; gap: 10px; }
+.social-icon { 
+    width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; 
+    border-radius: 50%; background: white; border: 1px solid #e2e8f0; color: var(--dark); text-decoration: none;
+}
+
+/* CARDS E TÍTULOS CHAMATIVOS */
+.content-card { 
+    background: white; padding: 40px; border-radius: 30px; 
+    border: 1px solid #edf2f7; margin-bottom: 30px; box-shadow: var(--shadow);
+}
+.highlight-card { border-top: 8px solid var(--primary); }
+
+/* TÍTULOS GRANDES */
+.title-xl { 
+    color: var(--primary); font-size: 1.8rem; font-weight: 800; 
+    margin: 0 0 20px 0; letter-spacing: -0.03em; text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h3 { font-size: 0.95rem; font-weight: 800; margin: 30px 0 15px 0; color: var(--dark); border-left: 4px solid var(--accent); padding-left: 12px; }
+
+.loc-tag { 
+    background: #eef4ff; color: var(--primary); padding: 12px 18px; 
+    border-radius: 14px; font-size: 0.85rem; font-weight: 700; margin-bottom: 25px;
+    display: inline-flex; align-items: center; gap: 10px;
+}
+
+.intro-text { font-size: 1.05rem; color: #475569; margin-bottom: 25px; }
+
+.info-list { padding-left: 20px; font-size: 0.95rem; color: #475569; }
+.info-list li { margin-bottom: 10px; }
+
+.grid-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.item-tag { 
+    background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; 
+    border-radius: 12px; font-size: 0.8rem; font-weight: 700; text-align: center;
+}
+
+.btn-main { 
+    display: block; width: 100%; padding: 18px; background: var(--primary); 
+    color: white; border-radius: 16px; text-decoration: none; font-weight: 800; 
+    text-align: center; box-sizing: border-box; transition: 0.3s;
+}
+.btn-main:hover { filter: brightness(1.1); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 82, 204, 0.15); }
+
+.bank-box { 
+    background: var(--dark); color: white; padding: 35px; border-radius: 24px; text-align: center; 
+}
+code { display: block; font-size: 1.3rem; color: var(--accent); margin: 15px 0; font-family: monospace; letter-spacing: 1px; }
+.bank-label { font-size: 0.7rem; letter-spacing: 2px; opacity: 0.6; }
+.bank-footer { font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px; padding-top: 20px; opacity: 0.8; }
+
+/* SLIDER VOLUNTÁRIOS */
+.vol-slider-wrap { width: 100%; height: 600px; border-radius: 24px; overflow: hidden; position: relative; margin-top: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 900px) {
+    :root { --safety-top: 30px; }
+    .grid-main { grid-template-columns: 1fr; }
+    .sidebar { position: relative; top: 0; display: flex; gap: 15px; padding: 12px; }
+    .v-slider { width: 200px; height: 320px; margin-bottom: 0; flex-shrink: 0; }
+    .sidebar-footer { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+    .title-xl { font-size: 1.5rem; }
+}
