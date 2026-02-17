@@ -5,7 +5,7 @@
     --bg: #f8fafc;
     --card-bg: #ffffff;
     --shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    --safety-top: 90px; /* ESPAÇO DE SEGURANÇA NO TOPO */
+    --safety-top: 45px; /* ESPAÇO DE SEGURANÇA NO TOPO */
 }
 
 body {
