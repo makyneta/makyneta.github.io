@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // --- 1. CONFIGURAÇÃO (Lógica de Interface - Fica no JS) ---
     const categories = [
-        { id: 'all', label: 'All Categories', themeClass: 'theme-all' },
-        { id: 'dev', label: 'Development', themeClass: 'theme-dev' },
-        { id: 'work', label: 'Work / Portfolio', themeClass: 'theme-work' },
-        { id: 'professional', label: 'Career', themeClass: 'theme-professional' },
-        { id: 'personal', label: 'Personal', themeClass: 'theme-personal' },
+        { id: 'all', label: 'Todas as Categorias', themeClass: 'theme-all' },
+        { id: 'dev', label: 'Desenvolvimento', themeClass: 'theme-dev' },
+        { id: 'work', label: 'Trabalho', themeClass: 'theme-work' },
+        { id: 'professional', label: 'Carreira', themeClass: 'theme-professional' },
+        { id: 'personal', label: 'Pessoal', themeClass: 'theme-personal' },
         { id: 'design', label: 'Design', themeClass: 'theme-design' } 
     ];
 

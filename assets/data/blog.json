@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Thank Your For Everything, Dear Uncle",
+    "title": "Obrigado Por Tudo, Querido Tio",
     "category": "personal",
     "date": "13 FEV 2025",
-    "readTime": "1 min read",
+    "readTime": "1 min leitura",
     "image": "assets/images/blog/2025/02/thank-you-for-everything-dear-uncle.jpg",
     "excerpt": "Uma mensagem especial para o meu tio que infelizmente veio a fal...",
-    "link": "news/2025/02/thank-you-for-everything-dear-uncle.html"
+    "link": "news/2025/02/obrigado-por-tudo-querido-tio"
   },
   {
     "id": 2,
     "title": "Farias Hoje Os Teus 50 Anos",
     "category": "personal",
     "date": "25 JUN 2025",
-    "readTime": "1 min read de leitura",
+    "readTime": "1 min leitura",
     "image": "assets/images/blog/2025/06/farias-hoje-os-teus-50-anos.jpg",
     "excerpt": "Querido, tio. Hoje fazias os teus tão sonhados 50 anos. Toda a tu...",
-    "link": "news/2025/06/farias-hoje-os-teus-50-anos.html"
+    "link": "news/2025/06/farias-hoje-os-teus-50-anos"
   },
   {
     "id": 3,
     "title": "Obrigado, Libélula Teatro",
     "category": "work",
     "date": "30 NOV 2025",
-    "readTime": "1 min read",
+    "readTime": "1 min leitura",
     "image": "assets/images/blog/2025/11/thank-you-libelula-teatro.jpg",
-    "excerpt": "A short note of gratitude to Libélula Teatro for the opportunity to...",
-    "link": "news/2025/11/thank-you-libelula-teatro.html"
+    "excerpt": "Uma breve nota de agradecimento ao Libélula Teatro pela oportunidade de...",
+    "link": "news/2025/11/obrigado-libelula-teatro"
   },
   {
     "id": 4,
-    "title": "Public Note About Kristin Storm",
+    "title": "Nota Pública Sobre a Tempestade Kristin",
     "category": "personal",
     "date": "08 FEV 2026",
-    "readTime": "2 min read",
+    "readTime": "2 min leitura",
     "image": "assets/images/blog/2026/02/public-note-about-storm-kristin.jpeg",
-    "excerpt": "A public note about the storm Kristin.",
-    "link": "news/2026/02/public-note-about-storm-kristin.html"
+    "excerpt": "Nota pública sobre a tempestade Kristin.",
+    "link": "news/2026/02/nota-publica-sobre-a-tempestade-kristin"
   }
 ]
