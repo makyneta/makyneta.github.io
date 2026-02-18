@@ -1,0 +1,167 @@
+:root {
+    --cor-sic: #de0000;         
+    --cor-sic-dark: #660000;   
+    --cor-texto: #2d3436;      
+    --cor-fundo: #fdfdfd75;      
+    --transicao: all 0.3s ease;
+}
+
+/* --- ANIMAÇÃO DE FUNDO --- */
+.background-animation {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #fdfdfd, #f0f2f5, #ffebeb, #fdfdfd);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- ESTRUTURA --- */
+.spacer-top { height: 100px; }
+.spacer-bottom { height: 120px; }
+
+.entrevista-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: var(--cor-texto);
+    line-height: 1.8;
+}
+
+.header-entrevista {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tag-voluntariado {
+    display: inline-block;
+    background: var(--cor-sic);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(222, 0, 0, 0.3);
+}
+
+.header-entrevista h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #1a1a1a;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+/* --- VÍDEO --- */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.video-cover-wrapper {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.video-cover {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-container:hover .video-cover {
+    opacity: 0.8;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: var(--transicao);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.play-button::after {
+    content: '';
+    border-left: 20px solid var(--cor-sic);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 5px;
+}
+
+.video-container:hover .play-button {
+    background: var(--cor-sic);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-container:hover .play-button::after {
+    border-left-color: #fff;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- CONTEÚDO COM EFEITO GLASSMORPHISM --- */
+.descricao-entrevista {
+    margin-top: 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7); /* Transparência */
+    backdrop-filter: blur(10px);        /* Desfoca o fundo animado */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.descricao-entrevista h3 {
+    color: var(--cor-sic);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.quote-box {
+    border-left: 4px solid var(--cor-sic);
+    padding: 15px 25px;
+    font-style: italic;
+    color: #444;
+    margin: 30px 0;
+    font-size: 1.1rem;
+    background: rgba(222, 0, 0, 0.05);
+    border-radius: 0 8px 8px 0;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .entrevista-section { padding: 0 15px; }
+    .descricao-entrevista { padding: 25px; }
+    .play-button { width: 60px; height: 60px; }
+}
