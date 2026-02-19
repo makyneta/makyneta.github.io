@@ -1,0 +1,260 @@
+/* Overlay e Estrutura Base */
+.storm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.94);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.storm-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.storm-card {
+    background: #ffffff;
+    width: 92%;
+    max-width: 540px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+    transform: translateY(40px);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.storm-overlay.is-active .storm-card {
+    transform: translateY(0);
+}
+
+.storm-blob {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.storm-blob-1 {
+    top: -80px;
+    left: -80px;
+    background: #3b82f6;
+}
+
+.storm-blob-2 {
+    bottom: -80px;
+    right: -80px;
+    background: #f59e0b;
+}
+
+.storm-inner {
+    padding: 45px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo Câmara Municipal */
+.cm-logo-hero {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-institutional-logo {
+    max-height: 90px;
+    width: auto;
+}
+
+/* Botão de Fechar X */
+.storm-close-x {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f1f5f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.storm-close-x:hover {
+    background: #ef4444;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.storm-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.storm-main-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.8px;
+}
+
+/* Texto Justificado */
+.text-justified {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 20px;
+    text-justify: inter-word;
+}
+
+/* Card de Apoio */
+.storm-action-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 6px solid #3b82f6;
+}
+
+.u-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.storm-action-card h3 {
+    font-size: 17px;
+    margin: 0 0 10px 0;
+    color: #1e293b;
+    font-weight: 800;
+}
+
+.btn-primary-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #1e293b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-primary-action:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* Logo SIC Imagem Footer */
+.storm-media-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.sic-logo-box {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sic-img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.media-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.media-text p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.media-link {
+    font-size: 12px;
+    font-weight: 800;
+    color: #3b82f6;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.media-link:hover {
+    text-decoration: underline;
+}
+
+.storm-btn-close {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #94a3b8;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.storm-btn-close:hover {
+    color: #1e293b;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 600px) {
+    .main-institutional-logo {
+        max-height: 70px;
+    }
+
+    .storm-inner {
+        padding: 30px 20px;
+    }
+
+    .storm-main-title {
+        font-size: 1.3rem;
+    }
+}

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/styles/kristin.css">
+    <link rel="stylesheet" href="assets/styles/kristin-popup.css">
     <link rel="stylesheet" href="assets/styles/homeabout.css">
     <link rel="stylesheet" href="assets/styles/loading.css">
     <link rel="stylesheet" href="assets/styles/geral.css">
@@ -18,7 +18,7 @@
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/scripts/loading.js"></script>
-    <script src="assets/scripts/kristin.js"></script>
+    <script src="assets/scripts/kristin-popup.js"></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title -->
     <title>Makyneta by Tomás Mota</title>
@@ -46,54 +46,52 @@
         </div>
     </div>
 
-<div id="storm-ultra-popup" class="u-overlay">
-    <div class="u-card">
-        <div class="u-blob u-blob-1"></div>
-        <div class="u-blob u-blob-2"></div>
+<div id="storm-popup-container" class="storm-overlay">
+    <div class="storm-card">
+        <div class="storm-blob storm-blob-1"></div>
+        <div class="storm-blob storm-blob-2"></div>
         
-        <button class="u-close-icon" onclick="terminatePopup()" aria-label="Close">&times;</button>
+        <button class="storm-close-x" onclick="closeStormPopup()" aria-label="Fechar">&times;</button>
         
-        <div class="u-inner">
-            <div class="u-visual-wrapper">
-                <div class="u-icon-stack">
-                    <svg viewBox="0 0 24 24" class="u-cloud">
-                        <path d="M17.5 19c.5.011.95-.3 1.35-.91.54-.82.52-1.92.05-2.79a5.992 5.992 0 00-11-5.3A5 5 0 005 19h12.5z" fill="rgba(59, 130, 246, 0.1)" stroke="#3b82f6" stroke-width="1.5"/>
-                    </svg>
-                    <svg viewBox="0 0 24 24" class="u-bolt-anim">
-                        <path d="M13 10l-3 5h4l-3 5" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+        <div class="storm-inner">
+            <div class="storm-header">
+                <div class="cm-logo-hero">
+                    <img src="assets/images/external/marinha-grande-preto.png" alt="Câmara Municipal da Marinha Grande" class="main-institutional-logo">
                 </div>
+                <h2 class="storm-main-title">Apoio à População: Tempestade Kristin</h2>
             </div>
 
-            <h2 class="u-title">Status: Tempestade Kristin</h2>
-
-            <div class="u-grid-text">
-                <div class="u-column">
-                    <div class="u-lang-label">Português</div>
-                    <p class="u-justified">
-                        Devido aos impactos severos causados pela <strong>tempestade Kristin</strong>, informo que a capacidade de resposta e o cumprimento de prazos habituais estão temporariamente condicionados. Agradeço a sua compreensão e solidariedade enquanto trabalho para normalizar todas as operações pendentes.
-                    </p>
-                </div>
-                <div class="u-column">
-                    <div class="u-lang-label">English</div>
-                    <p class="u-justified">
-                        Due to the severe disruptions caused by <strong>storm Kristin</strong>, please be advised that response times and project deadlines are currently affected. I sincerely appreciate your patience and support as I strive to restore normal operations and attend to all pending matters.
-                    </p>
-                </div>
+            <div class="storm-body">
+                <p class="text-justified">
+                    No âmbito dos danos severos registados no concelho da <strong>Marinha Grande</strong>, informo que todos os meus esforços estão centrados no apoio como voluntário. Peço a vossa compreensão para possíveis demoras no atendimento.
+                </p>
             </div>
 
-            <div class="u-support-card">
-                <div class="u-support-content">
-                    <h3>Apoie a Causa / Support the Cause</h3>
-                    <p class="u-justified">Pode contribuir para os esforços de recuperação e apoiar as vítimas desta tempestade através da nossa plataforma dedicada. Cada gesto conta.</p>
-                    <a href="tempestade-kristin.html" class="u-cta-link">
-                        <span>Visitar Página de Apoio</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div class="storm-action-card">
+                <div class="action-content">
+                    <div class="u-badge">Urgente</div>
+                    <h3>Portal Único de Apoio</h3>
+                    <p class="text-justified">
+                        Aceda ao formulário oficial para o <strong>registo de danos em bens e habitações</strong> e ajude-nos ao se tornar um <strong>voluntariado</strong> para ajudar nas operações de limpeza e apoio.
+                    </p>
+                    <a href="tempestade-kristin.html" class="btn-primary-action">
+                        Apoio à População, Registo de Danos e Voluntariado
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
 
-            <button class="u-confirm-btn" onclick="terminatePopup()">Confirmar Leitura / Understood</button>
+            <div class="storm-media-footer">
+                <div class="sic-logo-box">
+                    <img src="assets/images/external/sic-noticias.png" alt="SIC Notícias" class="sic-img-logo">
+                </div>
+                <div class="media-text">
+                    <p>Esclarecimentos sobre a situação no terreno (< 1min).</p>
+                    <a href="media/entrevista-sic-tempestade-kristin.html" target="_blank" class="media-link">Ver Vídeo da Entrevista</a>
+                </div>
+            </div>
+
+            <button class="storm-btn-close" onclick="closeStormPopup()">Fechar e continuar no site</button>
         </div>
     </div>
 </div>
