@@ -1,23 +1,21 @@
-/* Overlay e Estrutura Base */
+/* Overlay e Estrutura Base - Transições removidas */
 .storm-overlay {
     position: fixed;
     inset: 0;
     background: rgba(15, 23, 42, 0.94);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    display: flex;
+    display: none;
+    /* Escondido por padrão */
     justify-content: center;
     align-items: center;
     z-index: 999999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     font-family: 'Inter', -apple-system, sans-serif;
 }
 
+/* Estado Ativo - Sem transição */
 .storm-overlay.is-active {
-    opacity: 1;
-    visibility: visible;
+    display: flex;
 }
 
 .storm-card {
@@ -28,12 +26,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
-    transform: translateY(40px);
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.storm-overlay.is-active .storm-card {
-    transform: translateY(0);
+    /* Transform removido */
 }
 
 .storm-blob {
