@@ -38,5 +38,15 @@
     "image": "assets/images/blog/2026/02/public-note-about-storm-kristin.jpeg",
     "excerpt": "Nota pública sobre a tempestade Kristin.",
     "link": "news/2026/02/nota-publica-sobre-a-tempestade-kristin"
+  },
+  {
+    "id": 5,
+    "title": "Nota De Agradecimento",
+    "category": "personal",
+    "date": "20 FEV 2026",
+    "readTime": "2 min leitura",
+    "image": "assets/images/blog/2026/02/nota-de-agradecimento.jpg",
+    "excerpt": "Nota de agradecimento a todos/as que contribuíram para que a Marinha Grande se reerguesse cada...",
+    "link": "news/2026/02/nota-de-agradecimento"
   }
 ]
