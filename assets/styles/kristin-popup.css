@@ -91,7 +91,7 @@
 .storm-close-x:hover {
     background: #ef4444;
     color: white;
-    transform: rotate(90deg);
+    transform: rotate(360deg);
 }
 
 .storm-header {
