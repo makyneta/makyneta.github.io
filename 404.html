@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makyneta | Studio</title>
+    <title>404 | Makyneta by Tomás Mota</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -201,8 +201,19 @@
 
     <script>
         const redirects = {
+            // SOCIAL MEDIA
             'whatsapp': { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
-            'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email Directo' }
+            'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
+            // CMMG LINKS
+            'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande', label: 'CMMG Facebook' },
+            'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande', label: 'CMMG Instagram' },
+            'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande', label: 'CMMG YouTube' },
+            'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542', label: 'CMMG Kristin' },
+            'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade', label: 'CMMG Kristin Form' },
+            // APPS
+            'adobe-lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom' },
+            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
+            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
         };
 
         const path = window.location.pathname;
@@ -222,7 +233,7 @@
             code.textContent = "LINK";
             code.setAttribute('data-text', "LINK");
             title.textContent = "Sinal Encontrado";
-            msg.innerHTML = `Ligação detetada para <b>${data.label}</b>.<br>A redirecionar em 5 segundos...`;
+            msg.innerHTML = `Ligação detetada para <b>${data.label}</b>.<br>A redirecionar...`;
             
             btn.textContent = `Ligar agora a ${data.label}`;
             btn.href = data.url;
@@ -235,10 +246,10 @@
                 progressBar.style.width = '100%';
             }, 100);
 
-            // Redireciona após 5 segundos
+            // Redireciona após 3 segundos
             setTimeout(() => {
                 window.location.href = data.url;
-            }, 5000);
+            }, 3000);
 
         } else {
             // Caso seja 404 real: não faz nada automático
