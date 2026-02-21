@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     videoCover.addEventListener('click', () => {
         // Desvanecer a capa
         videoCover.style.opacity = '0';
-        
+
         // Esperar a animação e iniciar vídeo
         setTimeout(() => {
             videoCover.style.display = 'none';
