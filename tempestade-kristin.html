@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/kristin-estaleiro.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/styles/loading.css">
@@ -17,6 +18,7 @@
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/scripts/kristin-page.js"></script>
+    <script src="assets/scripts/kristin-estaleiro.js"></script>
     <script src="assets/scripts/loading.js"></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title -->
@@ -49,11 +51,22 @@
 
 <br><br>
 
+<div id="popupOverlay" class="overlay">
+  <div class="popup-card">
+    <img src="assets/images/kristin/info/novo-horario-funcionamento-estaleiro-municipal.jpg" alt="Alerta" class="popup-img">
+    
+    <div class="btn-area">
+      <button onclick="closePopup()" class="close-btn">FECHAR</button>
+    </div>
+  </div>
+</div>
+
     <div class="container">
         <div class="grid-main">
             <aside class="sidebar">
                 <div class="v-slider" id="main-slider">
-                    <div class="slide active" style="background-image: url('assets/images/kristin/info/16-fev.jpg');"></div>
+                    <div class="slide active" style="background-image: url('assets/images/kristin/info/novo-horario-funcionamento-estaleiro-municipal.jpg');"></div>
+                    <div class="slide" style="background-image: url('assets/images/kristin/info/16-fev.jpg');"></div>
                     <div class="slide" style="background-image: url('assets/images/kristin/info/apoio-populacao-resinagem.jpg');"></div>
                     <div class="slide" style="background-image: url('assets/images/kristin/alertas/risco-eletrocussao.jpg');"></div>
                 </div>
@@ -95,7 +108,7 @@
 
                 <section class="content-card">
                     <h2 class="title-xl">MATERIAIS DE CONSTRUÇÃO</h2>
-                    <div class="loc-tag"><i class="fas fa-location-dot"></i> Estaleiro Municipal<br>Segunda - Sexta | 09h00 - 17h00</div>
+                    <div class="loc-tag"><i class="fas fa-location-dot"></i> Estaleiro Municipal | Segunda - Sexta<br>09h00 - 12h30 & 14h00 - 17h00</div>
                     <div class="grid-items">
                         <div class="item-tag">Lonas</div>
                         <div class="item-tag">Telhas</div>
