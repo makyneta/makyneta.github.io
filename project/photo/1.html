@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/styles/loading.css">
+    <link rel="stylesheet" href="../../assets/styles/photoproj.css">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../assets/scripts/loading.js"></script>
+    <script src="../../assets/scripts/photoproj/1.js" defer></script>
+    <script src="../../assets/scripts/script.js"></script>
+    <!-- Title & Favicon-->
+    <title>Music | Makyneta by Tomás Mota</title>
+    <link rel="icon" href="../../favicon.png" type="image/png">
+</head>
+<body>
+
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <!-- Spinner Tech -->
+            <div class="spinner-box">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+            </div>
+
+            <!-- Texto de Estado -->
+            <div class="loader-text">
+                <span id="loader-status">A CARREGAR</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header"></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <div id="site-header"></div>
+
+  <section class="project-hero">
+    <div class="hero-bg-img"><img id="hero-img" src="" alt="" /></div>
+    <div class="hero-dark"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-info">
+      <h1 class="project-title" id="proj-title"></h1>
+      <div class="hero-desc-row">
+        <div class="project-meta">
+          <div><p class="meta-label">Categoria</p><p class="meta-value" id="proj-cat"></p></div>
+          <div><p class="meta-label">Ano</p><p class="meta-value" id="proj-year"></p></div>
+          <div><p class="meta-label">Imagens</p><p class="meta-value" id="proj-count"></p></div>
+        </div>
+        <p class="project-desc" id="proj-desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section reveal">
+    <div class="gallery-header">
+      <p class="gallery-label">Galeria do Projeto</p>
+      <p class="gallery-count" id="gallery-count-display"></p>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <div class="statement reveal">
+    <p class="statement-label">Nota do autor</p>
+    <p class="statement-text" id="proj-statement"></p>
+  </div>
+
+    <div id="footer"></div>
+</body>
+</html>

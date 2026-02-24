@@ -5,108 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/styles/loading.css">
     <link rel="stylesheet" href="assets/styles/photo.css">
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/geral.css">
+    <style>.hero-title em { font-style: italic; color: #c4824a !important; }</style>
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="assets/scripts/photo.js"></script>
     <script src="assets/scripts/loading.js"></script>
-    <script src="assets/scripts/photo.js" defer></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title & Favicon-->
-    <title>Photography | Makyneta by Tomás Mota</title>
-    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
+    <title>Fotografia | Makyneta by Tomás Mota</title>
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
 
-    <div id="page-loader" class="page-loader">
-        <div class="loader-content">
-            <!-- Spinner Tech -->
-            <div class="spinner-box">
-                <div class="circle-1"></div>
-                <div class="circle-2"></div>
-                <div class="circle-3"></div>
-            </div>
+  <div id="header"></div>
 
-            <!-- Texto de Estado -->
-            <div class="loader-text">
-                <span id="loader-status">LOADING</span>
-                <div class="progress-bar-bg">
-                    <div class="progress-fill"></div>
-                </div>
-            </div>
-        </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <div id="site-header"></div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+
+    <!-- SLIDESHOW -->
+    <div class="hero-slides">
+      <!--
+        Para usar as tuas imagens reais, substitui o background-image inline:
+        <div class="hero-slide" style="background-image:url('fotos/foto1.jpg')"></div>
+      -->
+      <div class="hero-slide active" style="background-image:url('assets/images/projects/photo/page/01.jpg')"></div>
     </div>
 
-    <div id="header"></div>
+    <!-- GRAIN POR CIMA DAS FOTOS --> 
+    <div class="hero-grain"></div>
 
-    <div class="cursor-dot" id="cursor"></div>
+    <!-- ESCURECIMENTO GERAL -->
+    <div class="hero-dark"></div>
 
-    <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <h1>The Visual Poet</h1>
-            <p>Fine Art & Editorial</p>
-        </div>
-        <div class="scroll-down">Scroll</div>
-    </header>
+    <!-- FADE PARA O FUNDO DA PÁGINA -->
+    <div class="hero-fade"></div>
 
-    <div class="content-wrapper">
-        
-        <section>
-            <div class="section-header">
-                <h2>01 — Fashion</h2>
-                <span>4 WORKS</span>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal('fashion')">
-                    <img src="https://picsum.photos/seed/vogue/600/800">
-                    <div class="item-overlay"><div class="item-title">Silk</div></div>
-                </div>
-                <div class="gallery-item" onclick="openModal('fashion')">
-                    <img src="https://picsum.photos/seed/street/600/800">
-                    <div class="item-overlay"><div class="item-title">Urban</div></div>
-                </div>
-                <div class="gallery-item" onclick="openModal('fashion')">
-                    <img src="https://picsum.photos/seed/art1/600/800">
-                    <div class="item-overlay"><div class="item-title">Concept</div></div>
-                </div>
-            </div>
-        </section>
+    <!-- LINHAS DECORATIVAS -->
+    <div class="hero-vline"></div>
+    <div class="hero-vline"></div>
 
-        <section>
-            <div class="section-header">
-                <h2>02 — Portrait</h2>
-                <span>2 WORKS</span>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal('portrait')">
-                    <img src="https://picsum.photos/seed/man/600/800">
-                    <div class="item-overlay"><div class="item-title">The Soul</div></div>
-                </div>
-                <div class="gallery-item" onclick="openModal('portrait')">
-                    <img src="https://picsum.photos/seed/woman/600/800">
-                    <div class="item-overlay"><div class="item-title">Ethereal</div></div>
-                </div>
-            </div>
-        </section>
+    <!-- CONTEÚDO -->
+    <h1 class="hero-title">Light &<br><em>Silence</em></h1>
+    <p class="hero-sub">Fotografia que captura o que mantém e o que desaparece.</p>
 
+    <!-- DOTS -->
+    <div class="hero-dots" id="hero-dots"></div>
+
+    <!-- SCROLL -->
+    <div class="hero-scroll">Scroll <span class="hero-scroll-line"></span></div>
+
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section>
+    <div class="section-intro reveal">
+      <div>
+        <p class="section-label">Projetos</p>
+        <h2 class="section-title">Selected<br>Work</h2>
+      </div>
+      <p class="section-desc">Uma coleção de trabalhos que exploram a luz, o espaço e o tempo. Cada projeto é uma narrativa visual construída com intenção.</p>
     </div>
 
-    <div class="modal" id="galleryModal">
-        <div class="close-btn" onclick="closeModal()">×</div>
-        <div class="modal-content">
-            <div class="modal-images" id="modalImages"></div>
-            <div class="modal-info">
-                <h2 id="modalTitle" class="modal-title">Project Title</h2>
-                <div style="height: 1px; width: 30px; background: var(--accent); margin: 1.5rem auto;"></div>
-                <p style="color:#888; margin-bottom: 2rem;">Uma seleção curada.</p>
-                <div style="margin-top:auto;">
-                    <button style="background:transparent; border: 1px solid #444; color: #fff; padding: 1rem 2rem; width: 100%; cursor: pointer; text-transform: uppercase;">Contatar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="projects-grid" id="grid">
 
-    <div id="footer"></div>
+      <a href="project/photo/1" class="project-card reveal">
+        <img class="project-img" src="assets/images/projects/photo/page/01.jpg" alt="Os Penetras Live" />
+        <div class="project-overlay"></div>
+        <div class="project-info"><h3 class="project-name">Os Penetras Live</h3><p class="project-tag">Landscape · 2025</p></div>
+        <div class="project-arrow">↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <div class="cta-line reveal">
+    <p class="cta-text">Vamos trabalhar juntos?</p>
+    <a href="contact" class="cta-btn"><span>Entrar em contacto</span><span>→</span></a>
+  </div>
+
+  <div id="site-footer"></div>
+  <div id="footer"></div>
+
 </body>
 </html>

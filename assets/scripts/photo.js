@@ -1,45 +1,91 @@
-        // Cursor
-        const cursor = document.getElementById('cursor');
-        const items = document.querySelectorAll('.gallery-item');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
+document.addEventListener('DOMContentLoaded', () => {
 
-        items.forEach(item => {
-            item.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-            item.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
-        });
+  /* ── CURSOR ── */
+  const cursor = document.getElementById('cursor');
+  const ring   = document.getElementById('cursor-ring');
 
-        // Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
+  if (cursor && ring) {
+    let mx=0, my=0, rx=0, ry=0;
 
-        items.forEach(el => observer.observe(el));
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top  = my + 'px';
+    });
 
-        // Modal
-        const modal = document.getElementById('galleryModal');
-        const container = document.getElementById('modalImages'); 
-        const title = document.getElementById('modalTitle');
+    (function loop() {
+      rx += (mx - rx) * .12;
+      ry += (my - ry) * .12;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(loop);
+    })();
 
-        const data = {
-            'fashion': ['https://picsum.photos/seed/vogue/800/1000', 'https://picsum.photos/seed/street/800/1000', 'https://picsum.photos/seed/art1/800/1000'],
-            'portrait': ['https://picsum.photos/seed/man/800/1000', 'https://picsum.photos/seed/woman/800/1000']
-        };
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width  = '18px';
+        cursor.style.height = '18px';
+        ring.style.width    = '56px';
+        ring.style.height   = '56px';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width  = '10px';
+        cursor.style.height = '10px';
+        ring.style.width    = '36px';
+        ring.style.height   = '36px';
+      });
+    });
+  }
 
-        function openModal(key) {
-            container.innerHTML = ''; title.innerText = key === 'fashion' ? 'Fashion Collection' : 'Portraits';
-            data[key].forEach(url => {
-                const img = document.createElement('img'); img.src = url; img.className = 'modal-img'; container.appendChild(img);
-            });
-            modal.classList.add('active'); document.body.style.overflow = 'hidden';
+  /* ── SCROLL REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal');
+
+  if (revealEls.length) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
         }
+      });
+    }, { threshold: 0.05 });
 
-        function closeModal() { 
-            modal.classList.remove('active'); 
-            document.body.style.overflow = 'auto'; 
-        }
+    revealEls.forEach(el => obs.observe(el));
+  }
+
+  /* ── SLIDESHOW ── */
+  const slides   = document.querySelectorAll('.hero-slide');
+  const dotsWrap = document.getElementById('hero-dots');
+
+  if (slides.length && dotsWrap) {
+    let current = 0;
+    let timer   = null;
+
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'hero-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+
+    function goTo(idx) {
+      const dots = dotsWrap.querySelectorAll('.hero-dot');
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = idx;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      resetTimer();
+    }
+
+    function next() { goTo((current + 1) % slides.length); }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 5000);
+    }
+
+    resetTimer();
+  }
+
+});
