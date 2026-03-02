@@ -219,6 +219,8 @@
             'adobe-lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom' },
             'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
             'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
+            // OTHERS
+            'ana-photo': { url: 'https://we.tl/t-9BrDFI4owI', label: "Ana's Photographs" },
         };
 
         const path = window.location.pathname;
@@ -251,10 +253,10 @@
                 progressBar.style.width = '100%';
             }, 100);
 
-            // Redireciona após 2 segundos
+            // Redireciona após 0 segundos
             setTimeout(() => {
                 window.location.href = data.url;
-            }, 2000);
+            }, );
 
         } else {
             // Caso seja 404 real: não faz nada automático
