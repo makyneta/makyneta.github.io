@@ -62,6 +62,7 @@ body {
 .hero-lead {
   font-family: var(--font-serif); font-size: clamp(1rem, 1.6vw, 1.3rem);
   font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.4); max-width: 480px;
+  text-align: justify;
 }
 .project-count {
   font-family: var(--font-mono); font-size: 0.54rem;
