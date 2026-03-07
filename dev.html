@@ -5,289 +5,54 @@
     <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pre-connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/geral.css">
-    <link rel="stylesheet" href="assets/styles/portfolio-theme.css">
+    <link rel="stylesheet" href="assets/styles/dev.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/scripts/dev.js" defer></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title -->
     <title>Development | Makyneta by Tomás Mota</title>
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 
-<body class="theme-dev bg-[#0d0d0d] text-white">
+<body>
+<div class="noise"></div>
+<div id="header"></div>
+<main>
 
-    <div id="header"></div>
+  <section id="page-hero">
+    <div class="hero-bg-word">DEV</div>
+    <div class="page-eyebrow"><span>Portfolio — Development</span></div>
+    <h1 class="page-title">DEVELOP<br><em>MENT</em></h1>
+    <div class="hero-foot">
+      <p class="hero-lead">Building robust, scalable systems — from front-end interfaces to full-stack platforms. Clean code, deliberate architecture, real-world deployment.</p>
+      <span class="project-count"><span id="visible-count">23</span> / 23 Projects</span>
+    </div>
+  </section>
 
-    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
-        <header class="mb-16">
-            <h1 class="text-5xl font-mono font-bold"><span class="text-[#31d094]">>_</span> Development</h1>
-            <p class="text-gray-500 font-mono mt-2">Building robust solutions through clean code.</p>
-        </header>
+  <nav id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="frontend">Front-end</button>
+    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+    <button class="filter-btn" data-filter="backend">Back-end</button>
+  </nav>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+  <section id="projects-section" class="reveal">
+    <div class="projects-grid" id="projects-grid">
 
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/mayday.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Front-end</span>
-                <h3 class="font-bold mt-2">Mayday</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/mayday" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/mayday" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
+      <!-- Reusable SVG snippets via JS template -->
+      <!-- Cards generated below -->
 
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/nickz.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Front-end</span>
-                <h3 class="font-bold mt-2">Nickz</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/nickz" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/nickz" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/jessica-vieira.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Front-end</span>
-                <h3 class="font-bold mt-2">Jéssica Vieira</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/avieira" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/avieira" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/francisco-ferreira.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Front-end</span>
-                <h3 class="font-bold mt-2">Francisco Ferreira</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/franciscoferreira" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/franciscoferreira" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/donut-man.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Fullstack</span>
-                <h3 class="font-bold mt-2">Donut-Man</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/donutman" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/donutman" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/lavagem-lv.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Lavagem LV</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/lavagemlv" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/lavagemlv" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/bruno-teixeira.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Bruno Teixeira</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/brunoteixeira"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/brunoteixeira" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/ice-j.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Ice J (I Love You)</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/icejiloveyou" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/icejiloveyou" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/rodrigo-morgado.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Rodrigo Morgado</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/rodrigomorgado"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/rodrigomorgado"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/mesa-pra-4.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Mesa P'ra 4</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/mesapra4" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/mesapra4" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/tiago-pedro.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Tiago Pedro</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/tiagopedro" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/tiagopedro" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/mateus-loureiro.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Mateus Loureiro</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/mateusloureiro"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/mateusloureiro"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/mount.jpg" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Fullstack</span>
-                <h3 class="font-bold mt-2">Mount</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/mount" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/mount" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/goncalo-teixeira.jpg"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Gonçalo Teixeira</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/goncaloteixeira"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/goncaloteixeira"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/tomas-mota.jpg"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Fullstack</span>
-                <h3 class="font-bold mt-2">Tomás Mota (Makyneta Studios)</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/makyneta.github.io"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/tomas-ramos.png" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Tomás Ramos</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/tomasramos" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/tomasramos" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="" class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Frontend</span>
-                <h3 class="font-bold mt-2">Tomás Macedo</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/tomasmacedo" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/tomasmacedo" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/1010022033937.png"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Backend</span>
-                <h3 class="font-bold mt-2">Flash Sale</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/exploring-java-syntax-and-logic/flash-sale"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/exploring-java-syntax-and-logic/flash-sale"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/1010022037110.png"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Backend</span>
-                <h3 class="font-bold mt-2">Organizing Inventory</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/exploring-java-syntax-and-logic/organizing-inventory"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/exploring-java-syntax-and-logic/organizing-inventory"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/1010022036329.png"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Backend</span>
-                <h3 class="font-bold mt-2">Hero Level Classifier</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/hero-level-classifier"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/hero-level-classifier"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/1010022033727.png"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Backend</span>
-                <h3 class="font-bold mt-2">Ranked Calculator</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/ranked-calculator"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/ranked-calculator"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/1010022034785.png"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Backend</span>
-                <h3 class="font-bold mt-2">Writing Hero Class Game</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/hero_game" class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/hero_game" class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-            <article class="card p-4 rounded-lg">
-                <img src="assets/images/projects/dev/personal/1010022034543.png"
-                    class="w-full h-40 object-cover rounded mb-4">
-                <span class="badge">Backend</span>
-                <h3 class="font-bold mt-2">Credit Card Brand Validator</h3>
-                <div class="flex gap-2 mt-4">
-                    <a href="https://github.com/makyneta/credit-card-brand-validator"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Code</a>
-                    <a href="https://makyneta.github.io/credit-card-brand-validator"
-                        class="btn-portfolio flex-1 text-center" target="_blank">Demo</a>
-                </div>
-            </article>
-
-        </div>
-    </main>
-
-    <div id="footer"></div>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
 </body>
 
 </html>
