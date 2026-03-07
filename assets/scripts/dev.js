@@ -57,7 +57,7 @@ projects.forEach((p, i) => {
 /* Update total in hero */
 document.getElementById('visible-count').textContent = projects.length;
 document.querySelector('.project-count').innerHTML =
-  `<span id="visible-count">${projects.length}</span> / ${projects.length} Projects`;
+  `<span id="visible-count">${projects.length}</span> Projects`;
 
 /* Filter */
 const filterBtns = document.querySelectorAll('.filter-btn');
