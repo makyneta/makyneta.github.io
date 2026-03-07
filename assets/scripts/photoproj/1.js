@@ -8,7 +8,7 @@ const PROJECT = {
     images: 9,
     basePath: '../../assets/images/projects/photo/01/',
     desc: 'Uma breve sessão de fotografias realizada à banda "Os Penetras"',
-    statement: '"Interessava-me o momento em que o calor desfaz a fronteira entre o real e o imaginado. Fui ao Alentejo três vezes, sempre em agosto, sempre ao meio-dia."',
+    statement: '"Interessava-me o momento em que o calor desfaz a fronteira entre o real e o imaginado. Durante um ano estive junto d’Os Penetras e pude ver a realidade da música."',
 };
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 

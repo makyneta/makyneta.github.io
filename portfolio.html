@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makyneta Unipessoal, Lda."/>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Makyneta by Tomás Mota - Fullstack Developer, Roadie, IT Technician, Photographer, Photo Editor, Editor, Musician.">
+    <meta name="keywords" content="Makyneta, Tomás Mota, Fullstack Developer, Roadie, IT Technician, Photographer, Photo Editor, Editor, Musician">
+    <meta property="og:title" content="Makyneta by Tomás Mota">
+    <meta property="og:description" content="Makyneta by Tomás Mota - Fullstack Developer, Roadie, IT Technician, Photographer, Photo Editor, Editor, Musician.">
+    <meta property="og:image" content="assets/images/branding/og-image.png">
+    <!-- <meta property="og:url" content="https://makyneta.com"> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Makyneta by Tomás Mota">
+    <meta name="twitter:description" content="Makyneta by Tomás Mota - Fullstack Developer, Roadie, IT Technician, Photographer, Photo Editor, Editor, Musician.">
+    <meta name="twitter:image" content="assets/images/branding/og-image.png">
+    <meta name="twitter:creator" content="@makyneta">
+    <!-- <meta name="twitter:site" content="@makyneta">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Makyneta by Tomás Mota">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="google-site-verification" content="your-google-site-verification-code">
+    <meta name="msvalidate.01" content="your-bing-site-verification-code">
+    <meta name="yandex-verification" content="your-yandex-site-verification-code">
+    <meta name="alexaVerifyID" content="your-alexa-site-verification-code">
+    <meta name="p:domain_verify" content="your-pinterest-site-verification-code">
+    <meta name="facebook-domain-verification" content="your-facebook-site-verification-code">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/portfolio.css">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/scripts/loading.js" defer></script>
+    <script src="assets/scripts/portfolio.js" defer></script>
+    <script src="assets/scripts/script.js"></script>
+    <!-- Title -->
+    <title>Makyneta by Tomás Mota</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<div class="noise"></div>
+<div id="header"></div>
+
+<main>
+
+  <!-- ══ PAGE HERO ═════════════════════════════════════════════════ -->
+  <section id="page-hero">
+    <div class="hero-bg-word">WORK</div>
+
+    <div class="page-eyebrow page-hero-anim"><span>Selected Work</span></div>
+
+    <h1 class="page-title page-hero-anim-2">
+      PORTF<span>O</span>LIO
+    </h1>
+
+    <p class="page-subtitle page-hero-anim-3">
+      A curated selection of projects across development, photography,
+      design, live events and music.
+    </p>
+  </section>
+
+  <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
+  <nav id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="dev">Development</button>
+    <button class="filter-btn" data-filter="photo">Photography</button>
+    <!-- <button class="filter-btn" data-filter="design">Design</button>
+    <button class="filter-btn" data-filter="live">Live &amp; Events</button>
+    <button class="filter-btn" data-filter="music">Music</button> -->
+  </nav>
+
+  <!-- ══ DEVELOPMENT ═══════════════════════════════════════════════ -->
+  <section class="category-section reveal" data-category="dev">
+    <div class="cat-header">
+      <div>
+        <p class="cat-count">01 — Development</p>
+        <h2 class="cat-title">DEV</h2>
+      </div>
+      <a href="dev.html" class="cat-link">View all projects</a>
+    </div>
+
+    <div class="projects-grid">
+
+      <a href="https://maydaygrupo.github.io" target="_blank" class="project-card featured">
+        <div class="card-img" style="background-image: url('assets/images/projects/dev/mayday.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Frontend · Website</span>
+          <h3 class="card-title">MayDay</h3>
+          <p class="card-desc">A professional website for the band MAYDAY to have their entire catalog, shows, and more all in one place.</p>
+          <div class="card-footer">
+            <span class="card-year">2026</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://makyneta.github.io/mesapra4" target="_blank" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/projects/dev/mesa-pra-4.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Front-end · Website</span>
+          <h3 class="card-title">Mesas P'ra 4</h3>
+          <p class="card-desc">A professional website for the theater piece "Mesa P'ra 4" by Libélula Teatro.</p>
+          <div class="card-footer">
+            <span class="card-year">2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://makyneta.github.io/tiagopedro" target="_blank" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/projects/dev/tiago-pedro.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Front-end · Website</span>
+          <h3 class="card-title">Tiago Pedro</h3>
+          <p class="card-desc">A professional website for wedding photographer Tiago Pedro, designed to showcase his entire portfolio in one place.</p>
+          <div class="card-footer">
+            <span class="card-year">2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://makyneta.github.io/franciscoferreira" target="_blank" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/projects/dev/francisco-ferreira.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Front-end · Website</span>
+          <h3 class="card-title">Francisco Ferreira</h3>
+          <p class="card-desc">A link-in-bio style website for real estate consultant Francisco Ferreira, as a way to acquire more clients, which proved successful and made him even more successful.</p>
+          <div class="card-footer">
+            <span class="card-year">2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ══ PHOTOGRAPHY ════════════════════════════════════════════════ -->
+  <div class="marquee-divider">
+    <div class="marquee-track">
+      <span class="marquee-item">Photography</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Development</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Design</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Live Events</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Music</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Photography</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Development</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Design</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Live Events</span><span class="marquee-item ac">✦</span>
+      <span class="marquee-item">Music</span><span class="marquee-item ac">✦</span>
+    </div>
+  </div>
+
+  <section class="category-section reveal" data-category="photo">
+    <div class="cat-header">
+      <div>
+        <p class="cat-count">02 — Photography</p>
+        <h2 class="cat-title">PHOTO</h2>
+      </div>
+      <a href="photo.html" class="cat-link">View all photos</a>
+    </div>
+
+    <div class="projects-grid">
+
+      <a href="project/photo/1.html" target="_blank" class="project-card featured">
+        <div class="card-img" style="background-image: url('assets/images/projects/photo/01/1.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Photography · Music Band</span>
+          <h3 class="card-title">Os Penetras _ Stage Performance</h3>
+          <p class="card-desc">Photographs of the band, Os Penetras, performing live at the Calazans Duarte Secondary School.</p>
+          <div class="card-footer">
+            <span class="card-year">2024</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- <a href="portfolio/photo/sports" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/photo/sports.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Photography · Sports</span>
+          <h3 class="card-title">Sports &amp; Motion</h3>
+          <p class="card-desc">High-speed shooting at sporting events — capturing the decisive fraction of a second.</p>
+          <div class="card-footer">
+            <span class="card-year">2024</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/photo/portrait" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/photo/portrait.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Photography · Portrait</span>
+          <h3 class="card-title">Portraits</h3>
+          <p class="card-desc">Environmental and studio portraiture — natural light, minimal intervention, maximum honesty.</p>
+          <div class="card-footer">
+            <span class="card-year">2024–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a> -->
+
+    </div>
+  </section>
+
+  <!-- ══ DESIGN ════════════════════════════════════════════════════ -->
+  <!-- <section class="category-section reveal" data-category="design">
+    <div class="cat-header">
+      <div>
+        <p class="cat-count">03 — Design</p>
+        <h2 class="cat-title">DESIGN</h2>
+      </div>
+      <a href="design.html" class="cat-link">View all design work</a>
+    </div>
+
+    <div class="projects-grid">
+
+      <a href="portfolio/design/branding" class="project-card featured">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/design/branding.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Design · Branding</span>
+          <h3 class="card-title">Brand Identity System</h3>
+          <p class="card-desc">Complete visual identity for a cultural organisation — logo, typography, colour system and brand guidelines delivered as a living document.</p>
+          <div class="card-footer">
+            <span class="card-year">2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/design/print" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/design/print.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Design · Print</span>
+          <h3 class="card-title">Print &amp; Editorial</h3>
+          <p class="card-desc">Posters, programmes and print materials for theatre productions and public events.</p>
+          <div class="card-footer">
+            <span class="card-year">2024–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/design/ui" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/design/ui.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Design · UI/UX</span>
+          <h3 class="card-title">Interface Design</h3>
+          <p class="card-desc">UI mockups and design systems for web applications — bridging aesthetics with usability.</p>
+          <div class="card-footer">
+            <span class="card-year">2024–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section> -->
+
+  <!-- ══ LIVE & EVENTS ══════════════════════════════════════════════ -->
+  <!-- <section class="category-section reveal" data-category="live">
+    <div class="cat-header">
+      <div>
+        <p class="cat-count">04 — Live &amp; Events</p>
+        <h2 class="cat-title">LIVE</h2>
+      </div>
+      <a href="portfolio/live" class="cat-link">View all events</a>
+    </div>
+
+    <div class="projects-grid">
+
+      <a href="portfolio/live/theatre-tour" class="project-card featured">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/live/tour.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Roadie · Theatre</span>
+          <h3 class="card-title">Theatre Tour — Technical Direction</h3>
+          <p class="card-desc">Full technical direction for a regional theatre tour — AV setup, sound design, crew coordination across multiple venues over several weeks.</p>
+          <div class="card-footer">
+            <span class="card-year">2024</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/live/concerts" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/live/concert.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Roadie · Concerts</span>
+          <h3 class="card-title">Concert &amp; Live Music</h3>
+          <p class="card-desc">Stage setup and AV operation for live music events — from small venues to outdoor stages.</p>
+          <div class="card-footer">
+            <span class="card-year">2024–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/live/events" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/live/events.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">IT · Events</span>
+          <h3 class="card-title">Event IT Infrastructure</h3>
+          <p class="card-desc">On-site IT infrastructure for large-scale events — temporary networks, streaming setups, real-time troubleshooting.</p>
+          <div class="card-footer">
+            <span class="card-year">2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section> -->
+
+  <!-- ══ MUSIC ══════════════════════════════════════════════════════ -->
+  <!-- <section class="category-section reveal" data-category="music">
+    <div class="cat-header">
+      <div>
+        <p class="cat-count">05 — Music</p>
+        <h2 class="cat-title">MUSIC</h2>
+      </div>
+      <a href="portfolio/music" class="cat-link">View all music</a>
+    </div>
+
+    <div class="projects-grid">
+
+      <a href="portfolio/music/compositions" class="project-card featured">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/music/compositions.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Music · Composition</span>
+          <h3 class="card-title">Original Compositions</h3>
+          <p class="card-desc">A selection of original pieces spanning multiple genres — recorded, produced and mixed independently. Each track a small experiment in sound and structure.</p>
+          <div class="card-footer">
+            <span class="card-year">2023–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/music/live-sets" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/music/live.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Music · Live</span>
+          <h3 class="card-title">Live Performances</h3>
+          <p class="card-desc">Recordings and documentation of live sets — where stage knowledge and musicianship intersect.</p>
+          <div class="card-footer">
+            <span class="card-year">2024–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="portfolio/music/collabs" class="project-card">
+        <div class="card-img" style="background-image: url('assets/images/portfolio/music/collabs.jpg')"></div>
+        <div class="card-content">
+          <span class="card-tag">Music · Collaboration</span>
+          <h3 class="card-title">Collaborative Work</h3>
+          <p class="card-desc">Sessions, features and production work done alongside other artists and bands.</p>
+          <div class="card-footer">
+            <span class="card-year">2023–2025</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section> -->
+
+</main>
+
+<div id="footer"></div>
+</body>
+</html>
