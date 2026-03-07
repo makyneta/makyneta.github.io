@@ -456,5 +456,4 @@ body {
 @media (max-width: 640px) {
   .disciplines-grid { grid-template-columns: 1fr; }
   .hero-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .hero-chips .chip:nth-child(n+5) { display: none; }
 }
