@@ -210,7 +210,7 @@ body {
   font-family: var(--font-mono); font-size: 0.6rem;
   line-height: 1.8; color: #b9b9b9; text-align: justify;
 }
-.project-card:hover .card-desc { color: #aaa; }
+.project-card:hover .card-desc { color: #d3d3d3; }
 
 .card-footer {
   display: flex; align-items: center; justify-content: space-between;
