@@ -190,14 +190,14 @@
             <h1 class="main-code" data-text="404" id="display-code">404</h1>
         </div>
 
-        <h2 id="display-title">Página Não Encontrada</h2>
+        <h2 id="display-title">Page Not Found</h2>
         
         <p id="display-msg">
-            O endereço solicitado não foi localizado.<br>Clique abaixo para retornar à página inicial.
+            The requested address could not be found.<br>Click below to return to the homepage.
         </p>
 
         <div class="action-box">
-            <a href="/" id="main-btn" class="btn">Ir para a Página Inicial</a>
+            <a href="/" id="main-btn" class="btn">Go to Homepage</a>
             <div id="p-bar" class="progress-bar"></div>
         </div>
     </div>
@@ -245,10 +245,10 @@
             // Atualiza Interface
             code.textContent = "LINK";
             code.setAttribute('data-text', "LINK");
-            title.textContent = "Sinal Encontrado";
-            msg.innerHTML = `Ligação detetada para <b>${data.label}</b>.<br>A redirecionar...`;
+            title.textContent = "Signal Found!";
+            msg.innerHTML = `Call detected for <b>${data.label}</b>.<br>Redirecting...`;
             
-            btn.textContent = `Ligar agora a ${data.label}`;
+            btn.textContent = `Redirecting to ${data.label}`;
             btn.href = data.url;
 
             // Ativa redirecionamento automático
