@@ -4,104 +4,133 @@
     <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Pre-connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/geral.css">
     <link rel="stylesheet" href="assets/styles/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/scripts/contact.js" defer></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title & Favicon-->
     <title>Contact | Makyneta by Tomás Mota</title>
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
-<body class="bg-[#050505] text-[#e1e1e1] antialiased">
+<body>
+<div class="noise"></div>
+<div id="header"></div>
 
-    <div id="header"></div>
+<main>
 
-    <main class="max-w-6xl mx-auto px-6 pt-40 pb-24">
-        
-        <section class="mb-20">
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic uppercase leading-none">
-                LET'S <span class="text-[#31d094]">TALK.</span>
-            </h1>
-            <p class="text-xl text-gray-400 font-light max-w-2xl leading-relaxed">
-                Have a project in mind or need specialized technical support? Choose the fastest option or send a detailed message below.
-            </p>
-        </section>
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="contact-hero">
+    <div class="hero-bg-word">TALK</div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
-            <div class="lg:col-span-7">
-                <form action="https://formspree.io/f/xvgbagja" method="POST" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="form-group">
-                            <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Name</label>
-                            <input type="text" name="TM.Makyneta_Name" required placeholder="Name" class="input-field">
-                        </div>
-                        <div class="form-group">
-                            <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">E-mail</label>
-                            <input type="email" name="TM.Makyneta_Email" required placeholder="your@email.com" class="input-field">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Subject</label>
-                        <input type="text" name="subject" required placeholder="Subject" class="input-field">
-                    </div>
-                    <div class="form-group">
-                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-2 block font-mono">Message</label>
-                        <textarea name="TM.Makyneta_Message" rows="5" required placeholder="Write your message..." class="input-field resize-none"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn group">
-                        <span>ENVIAR MENSAGEM</span>
-                        <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-2"></i>
-                    </button>
-                </form>
-            </div>
+    <div class="page-eyebrow"><span>Get in Touch</span></div>
 
-            <div class="lg:col-span-5 space-y-6">
-                <h2 class="text-xs uppercase tracking-[0.4em] text-gray-600 font-bold mb-8">DIRECT CHANNELS</h2>
-                
-                <a href="https://wa.me/351933338431" target="_blank" class="contact-card group">
-                    <div class="icon-box text-[#31d094] bg-[#31d094]/5">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold uppercase tracking-tight">WhatsApp</h4>
-                        <p class="text-xs text-gray-500 font-mono">+351 933 338 431</p>
-                    </div>
-                </a>
+    <h1 class="hero-title">LET'S<br><em>TALK.</em></h1>
 
-                <a href="mailto:makyneta@tutamail.com" class="contact-card group">
-                    <div class="icon-box text-blue-400 bg-blue-400/5">
-                        <i class="fa-solid fa-envelope text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold uppercase tracking-tight">E-mail</h4>
-                        <p class="text-xs text-gray-500 font-mono">makyneta@tutamail.com</p>
-                    </div>
-                </a>
+    <p class="hero-lead">
+      Have a project in mind or need specialised technical support?
+      Choose the fastest channel or send a detailed message below.
+    </p>
+  </section>
 
-                <div class="contact-card opacity-65 grayscale cursor-default">
-                    <div class="icon-box text-gray-400 bg-gray-400/5">
-                        <i class="fa-solid fa-location-dot text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold uppercase tracking-tight">Location</h4>
-                        <p class="text-xs text-gray-500 font-mono">Leiria, Portugal</p>
-                    </div>
-                </div>
+  <!-- ══ BODY GRID ════════════════════════════════════════════════ -->
+  <div id="contact-body">
 
-                <div class="pt-10 border-t border-white/5">
-                    <p class="text-sm text-gray-500 italic leading-relaxed">
-                        "Technology should be the engine, never the obstacle. Let's build something solid together".
-                    </p>
-                </div>
-            </div>
+    <!-- Form -->
+    <div class="form-col reveal">
+      <div class="section-label"><span>Send a Message</span></div>
 
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/xvgbagja"
+        method="POST"
+        id="contact-form"
+      >
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-name">Name</label>
+            <input class="form-input" id="f-name" type="text" name="TM.Makyneta_Name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">E-mail</label>
+            <input class="form-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="your@email.com" />
+          </div>
         </div>
-    </main>
 
-    <div id="footer"></div>
+        <div class="form-group">
+          <label class="form-label" for="f-subject">Subject</label>
+          <input class="form-input" id="f-subject" type="text" name="subject" required placeholder="What's this about?" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-message">Message</label>
+          <textarea class="form-textarea" id="f-message" name="TM.Makyneta_Message" rows="6" required placeholder="Tell me about your project or request..."></textarea>
+        </div>
+
+        <div class="form-status" id="form-status"></div>
+
+        <button type="submit" class="submit-btn">
+          <span>Send Message</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Column divider -->
+    <div class="col-divider"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar-col reveal">
+      <div class="section-label"><span>Direct Channels</span></div>
+
+      <div class="channel-list">
+
+        <a href="https://wa.me/351933338431" target="_blank" class="channel-item">
+          <i class="fa-brands fa-whatsapp channel-icon"></i>
+          <div class="channel-body">
+            <span class="channel-label">WhatsApp</span>
+            <span class="channel-value">+351 933 338 431</span>
+          </div>
+          <span class="channel-arrow">→</span>
+        </a>
+
+        <a href="mailto:makyneta@tutamail.com" class="channel-item">
+          <i class="fa-solid fa-envelope channel-icon"></i>
+          <div class="channel-body">
+            <span class="channel-label">E-mail</span>
+            <span class="channel-value">makyneta@tutamail.com</span>
+          </div>
+          <span class="channel-arrow">→</span>
+        </a>
+
+        <div class="channel-item static">
+          <i class="fa-solid fa-location-dot channel-icon"></i>
+          <div class="channel-body">
+            <span class="channel-label">Location</span>
+            <span class="channel-value">Leiria, Portugal</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sidebar-quote">
+        <p>"Technology should be the engine, never the obstacle. Let's build something solid together."</p>
+        <cite>— Tomás Mota</cite>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<div id="footer"></div>
+</script>
 </body>
 </html>

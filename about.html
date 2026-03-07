@@ -5,376 +5,324 @@
     <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pre-connect -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/geral.css">
     <link rel="stylesheet" href="assets/styles/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/scripts/about.js"></script>
+    <script src="assets/scripts/about.js" defer></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title & Favicon-->
     <title>About | Makyneta by Tomás Mota</title>
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 
-<body class="bg-[#050505] text-[#e1e1e1] antialiased">
-
+<body>
+    <div class="noise"></div>
     <div id="header"></div>
 
-    <main class="max-w-6xl mx-auto px-6 pt-40 pb-20">
+<main>
 
-        <section class="mb-32">
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic uppercase leading-none">
-                FILL THE <br><span class="text-[#31d094]">COLUMN.</span>
-            </h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <p class="text-xl md:text-1xl text-gray-400 font-light leading-relaxed">
-                    Specializing in the convergence of digital and physical realms, I transform lines of code into robust solutions, empty spaces into sensory experiences through sound and light, and moments into unforgettable memories through photography and design projects.
-                </p>
-                <div class="flex flex-col justify-end md:items-end space-y-2">
-                    <span class="text-xs uppercase tracking-[0.3em] text-gray-500">Located in</span>
-                    <span class="text-lg font-mono">Leiria, Portugal</span>
-                </div>
-            </div>
-        </section>
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="about-hero">
+    <div class="hero-bg-word">ABOUT</div>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-16 py-16 border-y border-white/10 mb-32">
-            <div class="relative group w-full aspect-square md:aspect-auto h-full max-h-[400px]">
-                <div
-                    class="absolute -inset-2 bg-gradient-to-r from-[#31d094] via-blue-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
-                </div>
-                <img src="assets/images/profile/tomas-mota.jpg"
-                    class="relative w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700"
-                    alt="Tomás Mota">
-            </div>
+    <div class="about-eyebrow"><span>About — Tomás Mota</span></div>
 
-            <div class="md:col-span-2 flex flex-col justify-center space-y-8">
-                <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-2">Tomás Mota</h2>
-                    <p class="text-[#31d094] font-mono tracking-widest uppercase text-sm">Multidisciplinary Engineer</p>
-                </div>
+    <div class="hero-grid">
+      <!-- Left: title + lead -->
+      <div class="hero-left">
+        <h1>WHERE<br>CODE<br>MEETS<br><em>STAGE</em></h1>
+        <p class="hero-lead">
+          Specialising in the convergence of digital and physical realms —
+          transforming lines of code into robust systems, empty spaces into
+          sensory experiences through sound and light, and moments into
+          lasting images through photography and design. Based in Leiria,
+          Portugal, working across theatre, sport, education and beyond.
+        </p>
+      </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="mailto:makyneta@tutamail.com" class="contact-card group">
-                        <i class="fa-solid fa-envelope text-xl group-hover:text-blue-400 transition-colors"></i>
-                        <span>makyneta@tutamail.com</span>
-                    </a>
-                    <a href="https://wa.me/351933338431" target="_blank" class="contact-card group">
-                        <i class="fa-brands fa-whatsapp text-xl group-hover:text-[#31d094] transition-colors"></i>
-                        <span>+351 933 338 431</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- <section class="mb-32">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-16 font-bold text-center">Core Pillars</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center bg-[#31d094]/10 rounded-full text-[#31d094] mb-6">
-                        <i class="fa-solid fa-code text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold italic uppercase tracking-wider">Digital Architecture</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Focus on scalability and performance. I develop everything from MVPs to complex cloud
-                        architectures, ensuring that the backend is as elegant as the code that supports it.
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center bg-purple-500/10 rounded-full text-purple-400 mb-6">
-                        <i class="fa-solid fa-wave-square text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold italic uppercase tracking-wider">Atmosphere Design</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Technology at the service of emotion. Precision sound engineering and immersive lighting design
-                        for events that demand visual impact and absolute auditory clarity.
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center bg-blue-500/10 rounded-full text-blue-400 mb-6">
-                        <i class="fa-solid fa-server text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold italic uppercase tracking-wider">Infrastructure</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        The foundation of everything. I implement high-availability systems, secure networks, and
-                        critical hardware management so that technology is never an obstacle, but an enabler.
-                    </p>
-                </div>
-            </div>
-        </section> -->
-
-        <section class="mb-32">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Experience</h2>
-            <div class="experience-item border-l-2 border-[#31d094] pl-8 pb-12">
-                <h3 class="text-2xl font-bold italic uppercase">Programmer, Photographer, Roadie, IT Technician
-                </h3>
-                <p class="font-mono text-[#31d094] text-sm mb-4">Freelancer · Since 2024</p>
-            </div>
-        </section>
-
-        <section class="mb-32">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Volunteer Work</h2>
-
-            <div class="experience-item border-l-2 border-[#31d094] pl-8 pb-12">
-                <h3 class="text-2xl font-bold italic uppercase">Calazans Duarte Secondary School</h3>
-                <p class="font-mono text-[#31d094] text-sm mb-4">FEB, MAR . 2026</p>
-                <p class="text-gray-400 max-w-3xl leading-relaxed">
-                    Sound, lighting, and IT technician for awareness lectures for the entire school community, held between February and March in the auditorium of the Eng. Acácio Calazans Duarte high school.
-                </p>
-            </div>
-
-            <div class="experience-item border-l-2 border-[#31d094] pl-8 pb-12">
-                <h3 class="text-2xl font-bold italic uppercase">Municipality of Marinha Grande</h3>
-                <p class="font-mono text-[#31d094] text-sm mb-4">JAN, FEB . 2026</p>
-                <p class="text-gray-400 max-w-3xl leading-relaxed">
-                    - Tile loader/delivery person. <br>
-                    - Tarpaulin, sleeve, and rope delivery person. <br>
-                    - Personnel controller and redirector at the entrance and exit. <br>
-                    - Road traffic controller assistant. <br>
-                    - Assistant head of the tile and tarpaulin division. <br>
-                    - Forklift operator.
-                </p>
-            </div>
-        </section>
-
-        <section class="mb-32">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Clients & Colaborations</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-
-                <!-- MAYDAY -->
-                <div class="client-card">
-                    <img src="assets/images/clients/mayday.png" alt="MAYDAY">
-                    <span class="client-role">Developer<br>Designer</span>
-                </div>
-
-                <!-- Escola Secundária Engº Acácio Calazans Duarte -->
-                <div class="client-card">
-                    <img src="assets/images/clients/escola-secundaria-engenheiro-acacio-calazans-duarte.png"
-                        alt="Escola Secundária Engº Acácio Calazans Duarte">
-                    <span class="client-role">Roadie</span>
-                </div>
-
-                <!-- Libélula Teatro -->
-                <div class="client-card">
-                    <img src="assets/images/clients/libelula-teatro.jpg" alt="Libélula Teatro">
-                    <span class="client-role">Developer<br>IT Technician</span>
-                </div>
-
-                <!-- Os Penetras -->
-                <div class="client-card">
-                    <img src="assets/images/clients/os-penetras-band.png" alt="Os Penetras">
-                    <span class="client-role">Sound Technician<br>Photographer</span>
-                </div>
-
-                <!-- Agrupamento de Escolas Marinha Grande Poente -->
-                <div class="client-card">
-                    <img src="assets/images/clients/agrupamento-de-escolas-marinha-grande-poente.png" alt="AEMGP">
-                    <span class="client-role">Photographer<br>IT Technician</span>
-                </div>
-
-                <!-- Atlético Clube Marinhense -->
-                <div class="client-card">
-                    <img src="assets/images/clients/atletico-clube-marinhense.png" alt="AC Marinhense">
-                    <span class="client-role">Photographer</span>
-                </div>
-
-                <!-- Sport Liboa e Marinha -->
-                <div class="client-card">
-                    <img src="assets/images/clients/sport-lisboa-e-marinha.jpg" alt="SL Marinha">
-                    <span class="client-role">Photographer</span>
-                </div>
-
-                <!-- Song Raiders -->
-                <div class="client-card">
-                    <img src="assets/images/clients/song-raiders.png" alt="Song Raiders">
-                    <span class="client-role">Photographer</span>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="mb-32">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Programming Technologies</h2>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-
-                <!-- HTML5 -->
-                <div class="tech-card">
-                    <i class="devicon-html5-plain colored tech-icon"></i>
-                    <span class="tech-name">HTML5</span>
-                </div>
-
-                <!-- CSS3 -->
-                <div class="tech-card">
-                    <i class="devicon-css3-plain colored tech-icon"></i>
-                    <span class="tech-name">CSS3</span>
-                </div>
-
-                <!-- JavaScript -->
-                <div class="tech-card">
-                    <i class="devicon-javascript-plain colored tech-icon"></i>
-                    <span class="tech-name">JavaScript</span>
-                </div>
-
-                <!-- TypeScript -->
-                <div class="tech-card">
-                    <i class="devicon-typescript-plain colored tech-icon"></i>
-                    <span class="tech-name">TypeScript</span>
-                </div>
-
-                <!-- Python -->
-                <div class="tech-card">
-                    <i class="devicon-python-plain colored tech-icon"></i>
-                    <span class="tech-name">Python</span>
-                </div>
-
-                <!-- React -->
-                <div class="tech-card">
-                    <i class="devicon-react-original colored tech-icon"></i>
-                    <span class="tech-name">React</span>
-                </div>
-
-                <!-- PHP -->
-                <div class="tech-card">
-                    <i class="devicon-php-plain colored tech-icon"></i>
-                    <span class="tech-name">PHP</span>
-                </div>
-
-                <!-- MySQL -->
-                <div class="tech-card">
-                    <i class="devicon-mysql-plain colored tech-icon"></i>
-                    <span class="tech-name">MySQL</span>
-                </div>
-
-                <!-- Git -->
-                <div class="tech-card">
-                    <i class="devicon-git-plain colored tech-icon"></i>
-                    <span class="tech-name">Git</span>
-                </div>
-
-                <!-- GitHub -->
-                <div class="tech-card">
-                    <i class="devicon-github-plain colored tech-icon"></i>
-                    <span class="tech-name">GitHub</span>
-                </div>
-
-                <!-- VS Code -->
-                <div class="tech-card">
-                    <i class="devicon-vscode-plain colored tech-icon"></i>
-                    <span class="tech-name">VS Code</span>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="certificates-section">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Certificates</h2>
-            <div class="certificates-grid">
-                <div class="certificate-card">
-                    <div class="cert-icon"><i class="fa-solid fa-file-signature"></i></div>
-                    <div class="cert-info">
-                        <span class="cert-date">2025</span>
-                        <h3 class="cert-title">360º Personal Branding: From Anonymous Professional to Visible Reference
-                        </h3>
-                        <p class="cert-issuer">Santander</p>
-                    </div>
-                    <a href="#" class="cert-link" data-cert="assets/images/profile/cv/1010012015317.jpg">VIEW_DOC</a>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon"><i class="fa-solid fa-code-merge"></i></div>
-                    <div class="cert-info">
-                        <span class="cert-date">2025</span>
-                        <h3 class="cert-title">Programming Logic</h3>
-                        <p class="cert-issuer">Digital Innovation One & Savegnago Group</p>
-                    </div>
-                    <a href="#" class="cert-link" data-cert="assets/images/profile/cv/1010012013139.jpg">VIEW_DOC</a>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon"><i class="fa-solid fa-code-merge"></i></div>
-                    <div class="cert-info">
-                        <span class="cert-date">2025</span>
-                        <h3 class="cert-title">Programming Logic</h3>
-                        <p class="cert-issuer">Digital Innovation One & GFT</p>
-                    </div>
-                    <a href="#" class="cert-link" data-cert="assets/images/profile/cv/1010012012537.jpg">VIEW_DOC</a>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon"><i class="fa-solid fa-robot"></i></div>
-                    <div class="cert-info">
-                        <span class="cert-date">2025</span>
-                        <h3 class="cert-title">Artificial Intelligence & Productivity</h3>
-                        <p class="cert-issuer">Santander & Google</p>
-                    </div>
-                    <a href="#" class="cert-link" data-cert="assets/images/profile/cv/1010012011924.jpg">VIEW_DOC</a>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon"><i class="fa-solid fa-computer"></i></div>
-                    <div class="cert-info">
-                        <span class="cert-date">2025</span>
-                        <h3 class="cert-title">Storytelling to Digital Marketing</h3>
-                        <p class="cert-issuer">Santander & The University Of Chicago</p>
-                    </div>
-                    <a href="#" class="cert-link" data-cert="assets/images/profile/cv/1010012014499.jpg">VIEW_DOC</a>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon"><i class="fa-solid fa-code-merge"></i></div>
-                    <div class="cert-info">
-                        <span class="cert-date">2025</span>
-                        <h3 class="cert-title">GitHub Copilot</h3>
-                        <p class="cert-issuer">Digital Innovation One & Microsoft</p>
-                    </div>
-                    <a href="#" class="cert-link" data-cert="assets/images/profile/cv/1010012017045.jpg">VIEW_DOC</a>
-                </div>
-            </div>
-        </section>
-
-        <div id="cert-modal" class="modal">
-            <span class="modal-close">&times;</span>
-            <img class="modal-content" id="full-cert-img">
+      <!-- Right: portrait + meta -->
+      <div class="hero-right">
+        <div class="portrait-wrap">
+          <img src="assets/images/profile/tomas-mota.jpg" alt="Tomás Mota" />
         </div>
 
-        <section class="mb-32">
-            <h2 class="text-xs uppercase tracking-[0.5em] text-gray-500 mb-12 font-bold">Education</h2>
-
-            <div class="experience-item border-l-2 border-[#31d094] pl-8 pb-12">
-                <h3 class="text-2xl font-bold italic uppercase">Professional Multimedia Course</h3>
-                <p class="font-mono text-[#31d094] text-sm mb-4">2023 - 2026 @ ESEACD</p>
-                <p class="text-gray-400 max-w-3xl leading-relaxed">
-                    <strong>SKILLS</strong><br>
-                    <ul class="list-disc list-inside mt-2 text-gray-400">
-                        <li>Web Development</li>
-                        <li>Photography Capture and Editing</li>
-                        <li>Video Capture and Editing</li>
-                        <li>2D Animation</li>
-                        <li>3D Modeling and Animation</li>
-                    <br>
-                    <strong class="text-gray-400">APPS</strong><br>
-                    <ul class="list-disc list-inside mt-2 text-gray-400">
-                        <li>Visual Studio Code</li>
-                        <li>Adobe Lightroom Classic</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Audition</li>
-                        <li>Audacity</li>
-                        <li>Adobe After Effects</li>
-                        <li>Adobe Premiere Pro</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Animate</li>
-                        <li>3D Studio Max</li>
-                </p>
+        <div style="flex:1; display:flex; flex-direction:column; gap:2rem; justify-content:flex-end;">
+          <div class="hero-meta">
+            <div class="meta-row">
+              <span class="meta-key">Name</span>
+              <span class="meta-val">Tomás Mota</span>
             </div>
-        </section>
+            <div class="meta-row">
+              <span class="meta-key">Based in</span>
+              <span class="meta-val">Leiria, Portugal</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">Available</span>
+              <span class="meta-val" style="color:var(--accent);">For work</span>
+            </div>
+            <div class="meta-row" style="border:none; padding:0;">
+              <span class="meta-key">Focus</span>
+              <span class="meta-val">Developer · Photographer · Rodie · IT Technician · Designer · Musician</span>
+            </div>
+          </div>
 
-    </main>
+          <div class="contact-row">
+            <a href="mailto:makyneta@tutamail.com" class="contact-pill">
+              <i class="fa-solid fa-envelope"></i> Email
+            </a>
+            <a href="https://wa.me/351933338431" target="_blank" class="contact-pill">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div id="footer"></div>
+  <!-- ══ EXPERIENCE ════════════════════════════════════════════════ -->
+  <section class="section-wrap reveal">
+    <div class="section-label"><span>Experience</span></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="tl-date">Since 2024</span>
+          <span class="tl-org">Freelancer</span>
+        </div>
+        <div class="timeline-right">
+          <h3 class="tl-title">Programmer, Photographer, Roadie,<br> IT Technician, Designer, Musisician</h3>
+          <p class="tl-body">
+            Independent technical and creative work spanning fullstack web development,
+            event photography, live stage support and IT infrastructure. Delivering end-to-end
+            solutions for theatre companies, sports organisations and educational groups.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VOLUNTEER ════════════════════════════════════════════════ -->
+  <section class="section-wrap reveal">
+    <div class="section-label"><span>Volunteer Work</span></div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="tl-date">Feb — Mar 2026</span>
+          <span class="tl-org">ESEACD</span>
+        </div>
+        <div class="timeline-right">
+          <h3 class="tl-title">Calazans Duarte Secondary School</h3>
+          <p class="tl-body">
+            Sound, lighting and IT technician for a series of awareness lectures held for
+            the entire school community in the auditorium of Eng. Acácio Calazans Duarte
+            secondary school — coordinating all technical aspects across multiple sessions.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="tl-date">Jan — Feb 2026</span>
+          <span class="tl-org">Câmara Municipal</span>
+        </div>
+        <div class="timeline-right">
+          <h3 class="tl-title">Municipality of Marinha Grande</h3>
+          <p class="tl-body">
+            <ul>
+              <li>Tile loader and delivery coordinator</li>
+              <li>Tarpaulin, sleeve and rope distribution</li>
+              <li>Personnel controller at entry and exit points</li>
+              <li>Road traffic controller assistant</li>
+              <li>Assistant head of the tile and tarpaulin division</li>
+              <li>Forklift operator</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ CLIENTS ═══════════════════════════════════════════════════ -->
+  <section class="section-wrap reveal">
+    <div class="section-label"><span>Clients &amp; Collaborations</span></div>
+    <div class="clients-grid">
+
+      <div class="client-card">
+        <img src="assets/images/clients/mayday.png" alt="MAYDAY" />
+        <span class="client-role">Developer<br>Designer</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/escola-secundaria-engenheiro-acacio-calazans-duarte.png" alt="ESEACD" />
+        <span class="client-role">Roadie</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/libelula-teatro.jpg" alt="Libélula Teatro" />
+        <span class="client-role">Developer<br>IT Technician</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/os-penetras-band.png" alt="Os Penetras" />
+        <span class="client-role">Sound Tech<br>Photographer</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/agrupamento-de-escolas-marinha-grande-poente.png" alt="AEMGP" />
+        <span class="client-role">Photographer<br>IT Technician</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/atletico-clube-marinhense.png" alt="AC Marinhense" />
+        <span class="client-role">Photographer</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/sport-lisboa-e-marinha.jpg" alt="SL Marinha" />
+        <span class="client-role">Photographer</span>
+      </div>
+      <div class="client-card">
+        <img src="assets/images/clients/song-raiders.png" alt="Song Raiders" />
+        <span class="client-role">Photographer</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ TECH STACK ════════════════════════════════════════════════ -->
+  <section class="section-wrap reveal">
+    <div class="section-label"><span>Programming Technologies</span></div>
+    <div class="tech-grid">
+      <div class="tech-card"><i class="devicon-html5-plain colored tech-icon"></i><span class="tech-name">HTML5</span></div>
+      <div class="tech-card"><i class="devicon-css3-plain colored tech-icon"></i><span class="tech-name">CSS3</span></div>
+      <div class="tech-card"><i class="devicon-javascript-plain colored tech-icon"></i><span class="tech-name">JavaScript</span></div>
+      <div class="tech-card"><i class="devicon-typescript-plain colored tech-icon"></i><span class="tech-name">TypeScript</span></div>
+      <div class="tech-card"><i class="devicon-python-plain colored tech-icon"></i><span class="tech-name">Python</span></div>
+      <div class="tech-card"><i class="devicon-react-original colored tech-icon"></i><span class="tech-name">React</span></div>
+      <div class="tech-card"><i class="devicon-php-plain colored tech-icon"></i><span class="tech-name">PHP</span></div>
+      <div class="tech-card"><i class="devicon-mysql-plain colored tech-icon"></i><span class="tech-name">MySQL</span></div>
+      <div class="tech-card"><i class="devicon-git-plain colored tech-icon"></i><span class="tech-name">Git</span></div>
+      <div class="tech-card"><i class="devicon-github-plain colored tech-icon"></i><span class="tech-name">GitHub</span></div>
+      <div class="tech-card"><i class="devicon-vscode-plain colored tech-icon"></i><span class="tech-name">VS Code</span></div>
+    </div>
+  </section>
+
+  <!-- ══ CERTIFICATES ══════════════════════════════════════════════ -->
+  <section class="section-wrap reveal">
+    <div class="section-label"><span>Certificates</span></div>
+    <div class="certs-list">
+
+      <div class="cert-row">
+        <div class="cert-year">2025</div>
+        <div class="cert-info">
+          <p class="cert-title">360º Personal Branding: From Anonymous Professional to Visible Reference</p>
+          <p class="cert-issuer">Santander</p>
+        </div>
+        <a href="#" class="cert-btn" data-cert="assets/images/profile/cv/1010012015317.jpg">View</a>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-year">2025</div>
+        <div class="cert-info">
+          <p class="cert-title">Programming Logic</p>
+          <p class="cert-issuer">Digital Innovation One &amp; Savegnago Group</p>
+        </div>
+        <a href="#" class="cert-btn" data-cert="assets/images/profile/cv/1010012013139.jpg">View</a>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-year">2025</div>
+        <div class="cert-info">
+          <p class="cert-title">Programming Logic</p>
+          <p class="cert-issuer">Digital Innovation One &amp; GFT</p>
+        </div>
+        <a href="#" class="cert-btn" data-cert="assets/images/profile/cv/1010012012537.jpg">View</a>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-year">2025</div>
+        <div class="cert-info">
+          <p class="cert-title">Artificial Intelligence &amp; Productivity</p>
+          <p class="cert-issuer">Santander &amp; Google</p>
+        </div>
+        <a href="#" class="cert-btn" data-cert="assets/images/profile/cv/1010012011924.jpg">View</a>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-year">2025</div>
+        <div class="cert-info">
+          <p class="cert-title">Storytelling to Digital Marketing</p>
+          <p class="cert-issuer">Santander &amp; The University of Chicago</p>
+        </div>
+        <a href="#" class="cert-btn" data-cert="assets/images/profile/cv/1010012014499.jpg">View</a>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-year">2025</div>
+        <div class="cert-info">
+          <p class="cert-title">GitHub Copilot</p>
+          <p class="cert-issuer">Digital Innovation One &amp; Microsoft</p>
+        </div>
+        <a href="#" class="cert-btn" data-cert="assets/images/profile/cv/1010012017045.jpg">View</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ════════════════════════════════════════════════ -->
+  <section class="section-wrap reveal" style="border-bottom:none;">
+    <div class="section-label"><span>Education</span></div>
+    <div class="edu-block">
+      <div>
+        <h3 class="edu-title">Professional<br>Multimedia<br>Course</h3>
+        <p class="edu-meta">2023 — 2026 · ESEACD</p>
+        <p class="edu-desc">
+          A three-year professional course covering the full spectrum of digital
+          media production — from web development and photography to video, animation
+          and 3D modelling. The foundation of a multidisciplinary technical practice.
+        </p>
+      </div>
+      <div class="edu-cols">
+        <div>
+          <p class="edu-col-title">Skills</p>
+          <ul class="edu-list">
+            <li>Web Development</li>
+            <li>Photography Capture &amp; Editing</li>
+            <li>Video Capture &amp; Editing</li>
+            <li>2D Animation</li>
+            <li>3D Modelling &amp; Animation</li>
+          </ul>
+        </div>
+        <div>
+          <p class="edu-col-title">Applications</p>
+          <ul class="edu-list">
+            <li>VS Code</li>
+            <li>Adobe Lightroom Classic</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Audition · Audacity</li>
+            <li>Adobe After Effects</li>
+            <li>Adobe Premiere Pro</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Animate</li>
+            <li>3D Studio Max</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Certificate Modal -->
+<div id="cert-modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="full-cert-img" alt="Certificate" />
+</div>
+
+<div id="footer"></div>
 </body>
 
 </html>
