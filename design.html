@@ -4,77 +4,73 @@
     <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Style -->
     <link rel="stylesheet" href="assets/styles/design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/scripts/loading.js"></script>
+    <script src="assets/scripts/design.js" defer></script>
     <script src="assets/scripts/script.js"></script>
-    <!-- Title & Favicon-->
+    <!-- Title_Favicon-->
     <title>Design | Makyneta by Tomás Mota</title>
-    <link rel="icon" href="assets/images/tomas-mota.jpg" type="image/jpg">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
+<div class="noise"></div>
+<div id="header"></div>
 
-    <div id="header"></div>
+<main>
 
-    <div class="design-wrapper">
-        <header class="hero-title">
-            <span class="meta-title">SELECT WORK</span>
-            <div class="main-title">Design</div>
-        </header>
-
-        <div class="bento-grid">
-            <article class="card col-6" style="grid-row: span 2;" onclick="openProject('franciscoferreira')">
-                <img src="assets/images/design/franciscoferreira-inicio.jpg" class="card-bg" alt="Project">
-                <div class="card-content">
-                    <span class="card-number">01</span>
-                    <h2 class="card-title">Francisco Ferreira</h2>
-                </div>
-            </article>
-
-            <!-- <article class="card col-4" onclick="openProject('fintech')">
-                <img src="https://picsum.photos/seed/tech/600/400" class="card-bg" alt="Project">
-                <div class="card-content">
-                    <span class="card-number">02</span>
-                    <h2 class="card-title">FinTech UI Kit</h2>
-                </div>
-            </article> -->
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="page-hero">
+    <div class="hero-ghost">DESIGN</div>
+    <div class="eyebrow"><span>Portfolio — Design</span></div>
+    <h1 class="hero-title">DE<em>SIGN</em></h1>
+    <div class="hero-foot">
+      <p class="hero-lead">
+        Visual identity, brand systems, print, and digital layouts —
+        built with intention. Design that communicates before it decorates.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" id="stat-projects">—</div>
+          <div class="stat-label">Projects</div>
         </div>
-    </div>
-
-    <div class="project-modal" id="projectModal">
-        <button class="close-modal" onclick="closeProject()">&times;</button>
-        <div class="modal-container">
-            <div class="modal-visuals" id="modalGallery">
-                </div>
-            <div class="modal-info">
-                <h2 id="modalTitle">Project Name</h2>
-                <div class="project-description" id="modalDesc">
-                    </div>
-                
-                <div class="project-meta-grid">
-                    <div class="meta-item">
-                        <h4>Client</h4>
-                        <p id="modalClient">Client Name</p>
-                    </div>
-                    <div class="meta-item">
-                        <h4>Year</h4>
-                        <p id="modalYear">2024</p>
-                    </div>
-                    <div class="meta-item">
-                        <h4>Services</h4>
-                        <p id="modalServices">Design, Strategy</p>
-                    </div>
-                    <div class="meta-item">
-                        <h4>Link</h4>
-                        <p><a href="#" id="modalLink" style="color: #fff;">Website</a></p>
-                    </div>
-                </div>
-            </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-clients">—</div>
+          <div class="stat-label">Types</div>
         </div>
+      </div>
     </div>
-    
-    <div id="footer"></div>
+  </section>
+
+  <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
+  <nav id="filter-bar">
+    <div class="filter-tabs" id="filter-tabs"><!-- JS --></div>
+    <span class="project-counter"><span id="visible-count">—</span> projects</span>
+  </nav>
+
+  <!-- ══ PROJECTS ══════════════════════════════════════════════════ -->
+  <section id="projects" class="reveal">
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+</main>
+
+<!-- ══ LIGHTBOX ══════════════════════════════════════════════════ -->
+<div id="lightbox">
+  <button id="lightbox-close">Close ✕</button>
+  <img id="lightbox-img" src="" alt="" />
+  <span id="lightbox-caption"></span>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+</script>
 </body>
 </html>
