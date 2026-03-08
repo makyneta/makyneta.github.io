@@ -1,6 +1,6 @@
 [
   {
-    "id": 5,
+    "id": 6,
     "title": "Note Of Thanks",
     "category": "personal",
     "date": "20 FEB 2026",
@@ -10,7 +10,7 @@
     "link": "news/thanks-note"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Kristin Storm: A Public Note",
     "category": "personal",
     "date": "08 FEB 2026",
@@ -20,7 +20,7 @@
     "link": "news/kristin"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Thank You, Libélula Teatro",
     "category": "work",
     "date": "30 NOV 2025",
@@ -30,7 +30,7 @@
     "link": "news/libelula-theater"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "You Would Be Turning 50 Today",
     "category": "personal",
     "date": "25 JUN 2025",
@@ -38,6 +38,16 @@
     "image": "assets/images/blog/uncle-50y.jpg",
     "excerpt": "Dear uncle, today you would have been celebrating your long-awaited 50th birthday.",
     "link": "news/uncle-50y"
+  },
+  {
+    "id": 2,
+    "title": "Thanks, ACM's U-13",
+    "category": "work",
+    "date": "23 JUN 2025",
+    "readTime": "1 min read",
+    "image": "assets/images/blog/thanks-u13.jpg",
+    "excerpt": "A note of thanks to the ACM's U-13 team for their support.",
+    "link": "news/thanks-u13"
   },
   {
     "id": 1,
