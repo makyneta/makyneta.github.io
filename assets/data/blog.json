@@ -1,52 +1,52 @@
 [
   {
-    "id": 1,
-    "title": "Obrigado Por Tudo, Querido Tio",
+    "id": 5,
+    "title": "Note Of Thanks",
     "category": "personal",
-    "date": "13 FEV 2025",
-    "readTime": "1 min leitura",
-    "image": "assets/images/blog/2025/02/thank-you-for-everything-dear-uncle.jpg",
-    "excerpt": "Uma mensagem especial para o meu tio que infelizmente veio a fal...",
-    "link": "news/2025/02/obrigado-por-tudo-querido-tio"
-  },
-  {
-    "id": 2,
-    "title": "Farias Hoje Os Teus 50 Anos",
-    "category": "personal",
-    "date": "25 JUN 2025",
-    "readTime": "1 min leitura",
-    "image": "assets/images/blog/2025/06/farias-hoje-os-teus-50-anos.jpg",
-    "excerpt": "Querido, tio. Hoje fazias os teus tão sonhados 50 anos. Toda a tu...",
-    "link": "news/2025/06/farias-hoje-os-teus-50-anos"
-  },
-  {
-    "id": 3,
-    "title": "Obrigado, Libélula Teatro",
-    "category": "work",
-    "date": "30 NOV 2025",
-    "readTime": "1 min leitura",
-    "image": "assets/images/blog/2025/11/thank-you-libelula-teatro.jpg",
-    "excerpt": "Uma breve nota de agradecimento ao Libélula Teatro pela oportunidade de...",
-    "link": "news/2025/11/obrigado-libelula-teatro"
+    "date": "20 FEB 2026",
+    "readTime": "5 min read",
+    "image": "assets/images/blog/thanks-note.jpg",
+    "excerpt": "Note of thanks to everyone who contributed to helping Marinha Grande rebuild stronger.",
+    "link": "news/thanks-note"
   },
   {
     "id": 4,
-    "title": "Nota Pública Sobre a Tempestade Kristin",
+    "title": "Kristin Storm: A Public Note",
     "category": "personal",
-    "date": "08 FEV 2026",
-    "readTime": "2 min leitura",
-    "image": "assets/images/blog/2026/02/public-note-about-storm-kristin.jpeg",
-    "excerpt": "Nota pública sobre a tempestade Kristin.",
-    "link": "news/2026/02/nota-publica-sobre-a-tempestade-kristin"
+    "date": "08 FEB 2026",
+    "readTime": "2 min read",
+    "image": "assets/images/blog/kristin.jpeg",
+    "excerpt": "A public note about the storm Kristin.",
+    "link": "news/kristin"
   },
   {
-    "id": 5,
-    "title": "Nota De Agradecimento",
+    "id": 3,
+    "title": "Thank You, Libélula Teatro",
+    "category": "work",
+    "date": "30 NOV 2025",
+    "readTime": "1 min read",
+    "image": "assets/images/blog/libelula-theater.jpg",
+    "excerpt": "A brief note of thanks to Libélula Teatro for this opportunity.",
+    "link": "news/libelula-theater"
+  },
+  {
+    "id": 2,
+    "title": "You Would Be Turning 50 Today",
     "category": "personal",
-    "date": "20 FEV 2026",
-    "readTime": "5 min leitura",
-    "image": "assets/images/blog/2026/02/nota-de-agradecimento.jpg",
-    "excerpt": "Nota de agradecimento a todos/as que contribuíram para que a Marinha Grande se reerguesse cada...",
-    "link": "news/2026/02/nota-de-agradecimento"
+    "date": "25 JUN 2025",
+    "readTime": "1 min read",
+    "image": "assets/images/blog/uncle-50y.jpg",
+    "excerpt": "Dear uncle, today you would have been celebrating your long-awaited 50th birthday.",
+    "link": "news/uncle-50y"
+  },
+  {
+    "id": 1,
+    "title": "Thank You For Everything, Dear Uncle",
+    "category": "personal",
+    "date": "13 FEB 2025",
+    "readTime": "1 min read",
+    "image": "assets/images/blog/dear-uncle.jpg",
+    "excerpt": "A special message for my uncle who unfortunately passed away.",
+    "link": "news/dear-uncle"
   }
 ]
