@@ -2,11 +2,11 @@
     DADOS DESTE PROJETO
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 const PROJECT = {
-    title: 'Sertão',
+    title: 'Penetras Live',
     cat: 'Landscape',
     year: '2024',
     images: 9,
-    basePath: '../../assets/images/projects/photo/01/',
+    basePath: '../../assets/images/projects/photo/penetraslive/',
     desc: 'Uma breve sessão de fotografias realizada à banda "Os Penetras"',
     statement: '"Interessava-me o momento em que o calor desfaz a fronteira entre o real e o imaginado. Durante um ano estive junto d’Os Penetras e pude ver a realidade da música."',
 };
