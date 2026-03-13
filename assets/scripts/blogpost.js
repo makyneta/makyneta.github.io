@@ -1,6 +1,6 @@
 /* ── Populate hero & sidebar from POST object ── */
 function populateHero() {
-  document.title = `${POST.title} — Makyneta Blog`;
+  document.title = `${POST.title} | Makyneta by Tomás Mota`;
 
   // hero ghost word: first word of title
   document.getElementById('hero-bg-word').textContent = POST.title.split(' ')[0].toUpperCase();
