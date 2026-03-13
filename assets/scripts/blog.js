@@ -26,7 +26,7 @@ function renderFeatured(a) {
         <div>
           <div class="feat-label">
             <span class="cat-chip" data-cat="${a.category}">${a.category.toUpperCase()}</span>
-            <span class="feat-label-tag">— Featured</span>
+            <span class="feat-label-tag">— Latest Article</span>
           </div>
           <h2 class="feat-title">${a.title}</h2>
           <p class="feat-excerpt">${a.excerpt}</p>
