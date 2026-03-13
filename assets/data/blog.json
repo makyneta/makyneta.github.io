@@ -1,5 +1,25 @@
 [
   {
+    "id": 8,
+    "title": "[EN] Letter of Protest to the Government of Portugal Regarding Storm Kristin",
+    "category": "kristin",
+    "date": "20 MAR 2026",
+    "readTime": "5 min read",
+    "image": "assets/images/blog/repudiation-government.jpg",
+    "excerpt": "Letter of repudiation to the Government of Portugal, especially to Minister Manuel Castro Almeida, due to the accusations made.",
+    "link": "news/repudiation-government"
+  },
+  {
+    "id": 7,
+    "title": "[PT] Carta de Repúdio ao Governo de Portugal em Relação à Tempestade Kristin",
+    "category": "kristin",
+    "date": "13 MAR 2026",
+    "readTime": "5 min read",
+    "image": "assets/images/blog/repudiation-government.jpg",
+    "excerpt": "Carta de repúdio ao Governo de Portual, em especial ao ministro Manuel Castro Almeida devido às acusações feitas.",
+    "link": "news/repudio-governo"
+  },
+  {
     "id": 6,
     "title": "Note Of Thanks",
     "category": "personal",
@@ -12,7 +32,7 @@
   {
     "id": 5,
     "title": "Kristin Storm: A Public Note",
-    "category": "personal",
+    "category": "kristin",
     "date": "08 FEB 2026",
     "readTime": "2 min read",
     "image": "assets/images/blog/kristin.jpeg",

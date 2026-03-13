@@ -7,6 +7,7 @@ const CATEGORIES = [
   { id: 'dev',          label: 'Dev' },
   { id: 'professional', label: 'Career' },
   { id: 'design',       label: 'Design' },
+  { id: 'kristin',      label: 'Kristin' },
 ];
 
 let currentCat = 'all';

@@ -23,6 +23,7 @@
   --cat-professional: #fb923c;
   --cat-personal:     #e879a0;
   --cat-design:       #a78bfa;
+  --cat-kristin:      #ff6161;
 }
 
 html { scroll-behavior: smooth; }
@@ -59,6 +60,7 @@ body {
 .cat-chip[data-cat="professional"] { --chip-color: var(--cat-professional); }
 .cat-chip[data-cat="personal"]     { --chip-color: var(--cat-personal); }
 .cat-chip[data-cat="design"]       { --chip-color: var(--cat-design); }
+.cat-chip[data-cat="kristin"]      { --chip-color: var(--cat-kristin); }
 
 /* ─── ANIMATIONS ─────────────────────────────────────────────────── */
 @keyframes riseIn {
