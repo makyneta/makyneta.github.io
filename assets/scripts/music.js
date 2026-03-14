@@ -1,4 +1,5 @@
-/* ── Platform icons SVG ── */
+const JSON_PATH = '/assets/data/music.json';
+
 const PLATFORM_ICONS = {
   spotify:    `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>`,
   apple:      `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`,
@@ -7,87 +8,53 @@ const PLATFORM_ICONS = {
   bandcamp:   `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>`,
 };
 const PLATFORM_LABELS = {
-  spotify: 'Spotify', apple: 'Apple Music',
-  youtube: 'YouTube', soundcloud: 'SoundCloud', bandcamp: 'Bandcamp',
+  spotify:'Spotify', apple:'Apple Music', youtube:'YouTube', soundcloud:'SoundCloud', bandcamp:'Bandcamp',
 };
 
-/* ── Build platforms strip ── */
+let RELEASES = [], PROFILES = {}, currentType = 'all';
+
 function buildPlatforms() {
   const wrap = document.getElementById('platform-links');
-  Object.entries(PROFILES).forEach(([key, url]) => {
-    if (!url || url.includes('REPLACE')) return;
-    wrap.insertAdjacentHTML('beforeend', `
-      <a href="${url}" target="_blank" rel="noopener" class="platform-link">
-        ${PLATFORM_ICONS[key] || ''}
-        ${PLATFORM_LABELS[key] || key}
-      </a>`);
-  });
-  if (!wrap.innerHTML.trim()) {
-    wrap.innerHTML = `<span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:.15em;color:var(--dim);">Links coming soon</span>`;
-  }
+  const html = Object.entries(PROFILES)
+    .filter(([, url]) => url && !url.includes('REPLACE'))
+    .map(([k, url]) => `<a href="${url}" target="_blank" rel="noopener" class="platform-link">${PLATFORM_ICONS[k]||''}${PLATFORM_LABELS[k]||k}</a>`)
+    .join('');
+  wrap.innerHTML = html || `<span style="font-family:var(--font-mono);font-size:.5rem;letter-spacing:.15em;color:var(--dim);">Links coming soon</span>`;
 }
 
-/* ── Build release card ── */
+/* ── card: cover + title + artist · year ── */
 function buildCard(r) {
-  const coverHtml = r.cover
-    ? `<img src="${r.cover}" alt="${r.title}" loading="lazy"
-           onerror="this.parentElement.innerHTML='<div class=\\'release-cover-placeholder\\'>[COVER]</div>'">`
-    : `<div class="release-cover-placeholder">[COVER]</div>`;
-
-  // streaming overlay icons — only show platforms with a URL
-  const overlayIcons = Object.entries(r.links || {})
-    .filter(([, url]) => url)
-    .map(([key, url]) => `
-      <a href="${url}" target="_blank" rel="noopener" class="overlay-icon" title="${PLATFORM_LABELS[key] || key}" onclick="event.stopPropagation()">
-        ${PLATFORM_ICONS[key] || ''}
-      </a>`).join('');
-
-  const metaStr = `${r.year} · ${r.tracks} track${r.tracks !== 1 ? 's' : ''}`;
-
+  const cover = r.cover
+    ? `<img src="${r.cover}" alt="${r.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'cover-placeholder\\'>[COVER]</div>'">`
+    : `<div class="cover-placeholder">[COVER]</div>`;
+  /* link to dedicated release page, e.g. music/first-single */
+  const href = r.slug ? `music/${r.slug}` : `#`;
   return `
-    <div class="release-card reveal" data-type="${r.type}">
-      <div class="release-cover">
-        ${coverHtml}
-        <span class="release-type-badge">${r.type}</span>
-        <div class="release-stream-overlay">${overlayIcons || '<span style="font-family:var(--font-mono);font-size:.44rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;">Coming soon</span>'}</div>
-      </div>
+    <a href="${href}" class="release-card reveal" data-type="${r.type}">
+      <div class="release-cover">${cover}</div>
       <div class="release-body">
         <div class="release-title">${r.title}</div>
-        <div class="release-meta">${metaStr}</div>
-        ${r.desc ? `<p class="release-desc">${r.desc}</p>` : ''}
+        <div class="release-meta">${r.artist || 'Makyneta'} · ${r.year}</div>
       </div>
-    </div>`;
+    </a>`;
 }
 
-/* ── Render discography ── */
-let currentType = 'all';
-
 function renderDisco(type) {
-  const pool = type === 'all'
-    ? [...RELEASES]
-    : RELEASES.filter(r => r.type === type);
-  pool.sort((a, b) => b.id - a.id);
-
+  const pool = (type === 'all' ? [...RELEASES] : RELEASES.filter(r => r.type === type))
+    .sort((a, b) => b.id - a.id);
   const grid = document.getElementById('disco-grid');
   grid.innerHTML = pool.length
     ? pool.map(buildCard).join('')
-    : `<div style="padding:4rem;font-family:var(--font-mono);font-size:0.56rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;grid-column:1/-1;">No releases found.</div>`;
-
+    : `<div style="padding:4rem;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;grid-column:1/-1;">No releases found.</div>`;
   document.getElementById('disco-count').textContent = pool.length;
-
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-  });
+  requestAnimationFrame(() => document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el)));
 }
 
-/* ── Stats ── */
 function renderStats() {
-  document.getElementById('stat-releases').textContent = String(RELEASES.length).padStart(2, '0');
-  const total = RELEASES.reduce((s, r) => s + (r.tracks || 0), 0);
-  document.getElementById('stat-tracks').textContent   = String(total).padStart(2, '0');
+  document.getElementById('stat-releases').textContent = String(RELEASES.length).padStart(2,'0');
+  document.getElementById('stat-tracks').textContent   = String(RELEASES.reduce((s,r)=>s+(r.tracks||0),0)).padStart(2,'0');
 }
 
-/* ── Filter tabs ── */
 document.getElementById('filter-tabs').addEventListener('click', e => {
   const tab = e.target.closest('.filter-tab');
   if (!tab) return;
@@ -97,14 +64,24 @@ document.getElementById('filter-tabs').addEventListener('click', e => {
   renderDisco(currentType);
 });
 
-/* ── Scroll reveal ── */
 const revealObs = new IntersectionObserver(
   entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
   { threshold: 0.04 }
 );
 
-/* ── Init ── */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const res = await fetch(JSON_PATH);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    RELEASES = data.releases || [];
+    PROFILES = data.profiles || {};
+  } catch (err) {
+    console.error('Failed to load music.json:', err);
+    document.getElementById('disco-grid').innerHTML =
+      `<div style="padding:4rem;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.2em;color:#e55;grid-column:1/-1;">Failed to load assets/data/music.json</div>`;
+    return;
+  }
   buildPlatforms();
   renderStats();
   renderDisco('all');

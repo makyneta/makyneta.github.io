@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/assets/styles/release.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/scripts/release.js" defer></script>
+    <script src="/assets/scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+    <title>Silêncio (Remix) | Makyneta by Tomás Mota</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+</head>
+<body>
+<div class="noise"></div>
+<div id="header"></div>
+
+<!-- loading -->
+<div id="loading">Loading…</div>
+
+<!-- error -->
+<div id="error">
+  <div class="error-num">404</div>
+  <p class="error-msg">Release not found.</p>
+  <a href="/" class="back-link">← Back to Home</a>
+</div>
+
+<!-- content -->
+<main id="main" style="display:none">
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="release-hero">
+    <div class="cover-col" id="cover-col">
+      <img id="cover-img" src="" alt="" />
+      <div class="cover-ghost" id="cover-ghost"></div>
+    </div>
+    <div class="info-col">
+      <div class="release-eyebrow">
+        <span class="eyebrow-text" id="eyebrow-text"></span>
+        <span class="type-pill" id="type-pill"></span>
+      </div>
+      <h1 class="release-title" id="release-title"></h1>
+      <p class="release-artist" id="release-artist"></p>
+      <p class="release-desc" id="release-desc"></p>
+      <div class="stream-buttons" id="stream-buttons"></div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO + TRACKLIST ═════════════════════════════════════════ -->
+  <div id="release-lower">
+
+    <!-- YouTube music video -->
+    <div id="player-col">
+      <div class="col-label"><span>Music Video</span></div>
+      <div class="player-wrap" id="player-wrap"></div>
+    </div>
+
+    <!-- Tracklist only -->
+    <div id="meta-col">
+      <div id="tracklist-section">
+        <div class="col-label"><span>Tracklist</span></div>
+        <div id="tracklist"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ CREDITS (full width) ══════════════════════════════════════ -->
+  <section id="credits-section">
+    <div class="credits-inner">
+      <div class="col-label"><span>Credits</span></div>
+      <div class="credits-grid" id="credits-grid"></div>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  ÚNICO BLOCO A EDITAR — altera só o RELEASE_ID              ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const RELEASE_ID     = 1;
+const JSON_PATH      = '/assets/data/music.json';
+const YOUTUBE_EMBED  = 'https://www.youtube.com/watch?v=apgpI0lmevs&pp=ygUPTUFZREFZIFNJTEVOQ0lP'; // ← ID ou URL completa do YouTube
+/* ╚══════════════════════════════════════════════════════════════╝ */
+
+(function () {
+  const STREAM_LINKS = {
+    spotify:    "",
+    apple:      "",
+    youtube:    "",
+    soundcloud: "",
+    bandcamp:   "",
+  };
+  const FALLBACK = "/music";
+  const segments  = window.location.pathname.replace(/\/+$/, '').split('/');
+  const last      = segments[segments.length - 1].toLowerCase();
+  if (!Object.keys(STREAM_LINKS).includes(last)) return;
+  const url = STREAM_LINKS[last];
+  window.location.replace(url || FALLBACK);
+})();
+</script>
+</body>
+</html>

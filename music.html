@@ -4,99 +4,20 @@
     <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Style -->
     <link rel="stylesheet" href="assets/styles/music.css">
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/scripts/music.js"></script>
+    <script src="assets/scripts/music.js" defer></script>
     <script src="assets/scripts/script.js"></script>
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <!-- Title_Favicon -->
     <title>Music | Makyneta by Tomás Mota</title>
-    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Music — Makyneta</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
-
-<!-- ╔════════════════════════════════════════════════════════════════╗
-     ║  DISCOGRAPHY DATA — edit this to add/remove releases         ║
-     ║                                                              ║
-     ║  Fields per release:                                         ║
-     ║    id       — unique number (higher = more recent)           ║
-     ║    title    — release title                                   ║
-     ║    type     — "album" | "ep" | "single"                      ║
-     ║    year     — release year                                    ║
-     ║    cover    — path to cover image                             ║
-     ║    desc     — short description (optional)                    ║
-     ║    tracks   — total track count                               ║
-     ║    links    — object with streaming URLs (leave "" to hide)   ║
-     ╚════════════════════════════════════════════════════════════════╝ -->
-<script>
-const RELEASES = [
-  {
-    id: 1,
-    title: "First Single",
-    type: "single",
-    year: 2024,
-    cover: "assets/images/music/single-1.jpg",
-    desc: "Description of the release.",
-    tracks: 1,
-    links: {
-      spotify:    "",
-      apple:      "",
-      youtube:    "",
-      soundcloud: "",
-      bandcamp:   "",
-    }
-  },
-  {
-    id: 2,
-    title: "Second Single",
-    type: "single",
-    year: 2025,
-    cover: "assets/images/music/single-2.jpg",
-    desc: "Description of the release.",
-    tracks: 1,
-    links: {
-      spotify:    "",
-      apple:      "",
-      youtube:    "",
-      soundcloud: "",
-      bandcamp:   "",
-    }
-  },
-  {
-    id: 3,
-    title: "First EP",
-    type: "ep",
-    year: 2025,
-    cover: "assets/images/music/ep-1.jpg",
-    desc: "Description of the EP.",
-    tracks: 5,
-    links: {
-      spotify:    "",
-      apple:      "",
-      soundcloud: "",
-      bandcamp:   "",
-    }
-  },
-];
-
-/* Streaming platform profiles (shown in the hero strip) */
-const PROFILES = {
-  spotify:    "https://open.spotify.com/artist/REPLACE",
-  apple:      "https://music.apple.com/artist/REPLACE",
-  youtube:    "https://youtube.com/@makyneta",
-  soundcloud: "https://soundcloud.com/makyneta",
-  bandcamp:   "https://makyneta.bandcamp.com",
-};
-</script>
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
 <div class="noise"></div>
@@ -104,7 +25,6 @@ const PROFILES = {
 
 <main>
 
-  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
   <section id="page-hero">
     <div class="hero-ghost">MUSIC</div>
     <div class="eyebrow"><span>Portfolio — Music</span></div>
@@ -127,13 +47,11 @@ const PROFILES = {
     </div>
   </section>
 
-  <!-- ══ PLATFORMS STRIP ═══════════════════════════════════════════ -->
   <div id="platforms-strip">
     <span class="platforms-label">Listen on</span>
-    <div class="platform-links" id="platform-links"><!-- JS --></div>
+    <div class="platform-links" id="platform-links"></div>
   </div>
 
-  <!-- ══ DISCOGRAPHY ════════════════════════════════════════════════ -->
   <section id="discography" class="reveal">
     <div class="disco-head">
       <div class="disco-head-left">

@@ -1,0 +1,39 @@
+{
+  "profiles": {
+    "spotify":    "https://open.spotify.com/artist/REPLACE_ID",
+    "apple":      "https://music.apple.com/artist/REPLACE_ID",
+    "youtube":    "https://youtube.com/@makyneta",
+    "soundcloud": "https://soundcloud.com/makyneta",
+    "bandcamp":   "https://makyneta.bandcamp.com"
+  },
+  "releases": [
+    {
+      "id": 1,
+      "title": "Silêncio (Remix)",
+      "slug": "../presave",
+      "artist": "Makyneta, MAYDAY",
+      "type": "single",
+      "year": 2026,
+      "cover": "/assets/images/projects/music/silencio-remix.jpg",
+      "desc": "Brief description of the release — mood, inspiration, what it means.",
+      "tracks": 1,
+      "spotifyEmbed": "",
+      "links": {
+        "spotify":    "../release/silencio-remix/spotify",
+        "apple":      "../release/silencio-remix/apple",
+        "youtube":    "../release/silencio-remix/youtube",
+        "soundcloud": "../release/silencio-remix/soundcloud",
+        "bandcamp":   "../release/silencio-remix/bandcamp"
+      },
+      "tracklist": [
+        { "num": "01", "title": "Silêncio (Remix)", "duration": "2:51" }
+      ],
+      "credits": [
+        { "role": "Written by",   "name": "MAYDAY" },
+        { "role": "Produced by",  "name": "Makyneta" },
+        { "role": "Mixed by",     "name": "Tomás Mota" },
+        { "role": "Mastered by",  "name": "Tomás Mota" }
+      ]
+    }
+  ]
+}
