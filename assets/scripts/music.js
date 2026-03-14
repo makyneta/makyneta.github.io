@@ -52,7 +52,6 @@ function renderDisco(type) {
 
 function renderStats() {
   document.getElementById('stat-releases').textContent = String(RELEASES.length).padStart(2,'0');
-  document.getElementById('stat-tracks').textContent   = String(RELEASES.reduce((s,r)=>s+(r.tracks||0),0)).padStart(2,'0');
 }
 
 document.getElementById('filter-tabs').addEventListener('click', e => {

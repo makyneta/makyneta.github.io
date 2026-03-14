@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "spotify":    "https://open.spotify.com/artist/REPLACE_ID",
-    "apple":      "https://music.apple.com/artist/REPLACE_ID",
-    "youtube":    "https://youtube.com/@makyneta",
-    "soundcloud": "https://soundcloud.com/makyneta",
-    "bandcamp":   "https://makyneta.bandcamp.com"
+    "spotify":    "",
+    "apple":      "",
+    "youtube":    "",
+    "soundcloud": "",
+    "bandcamp":   ""
   },
   "releases": [
     {
@@ -26,7 +26,8 @@
         "bandcamp":   "../release/silencio-remix/bandcamp"
       },
       "tracklist": [
-        { "num": "01", "title": "Silêncio (Remix)", "duration": "2:51" }
+        { "num": "01", "title": "Silêncio (Remix)", "duration": "2:51" },
+        { "num": "02", "title": "Silêncio", "duration": "2:51" }
       ],
       "credits": [
         { "role": "Written by",   "name": "MAYDAY" },
