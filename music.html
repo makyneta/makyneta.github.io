@@ -14,80 +14,144 @@
     <title>Music | Makyneta by Tomás Mota</title>
     <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Music — Makyneta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+
+<!-- ╔════════════════════════════════════════════════════════════════╗
+     ║  DISCOGRAPHY DATA — edit this to add/remove releases         ║
+     ║                                                              ║
+     ║  Fields per release:                                         ║
+     ║    id       — unique number (higher = more recent)           ║
+     ║    title    — release title                                   ║
+     ║    type     — "album" | "ep" | "single"                      ║
+     ║    year     — release year                                    ║
+     ║    cover    — path to cover image                             ║
+     ║    desc     — short description (optional)                    ║
+     ║    tracks   — total track count                               ║
+     ║    links    — object with streaming URLs (leave "" to hide)   ║
+     ╚════════════════════════════════════════════════════════════════╝ -->
+<script>
+const RELEASES = [
+  {
+    id: 1,
+    title: "First Single",
+    type: "single",
+    year: 2024,
+    cover: "assets/images/music/single-1.jpg",
+    desc: "Description of the release.",
+    tracks: 1,
+    links: {
+      spotify:    "",
+      apple:      "",
+      youtube:    "",
+      soundcloud: "",
+      bandcamp:   "",
+    }
+  },
+  {
+    id: 2,
+    title: "Second Single",
+    type: "single",
+    year: 2025,
+    cover: "assets/images/music/single-2.jpg",
+    desc: "Description of the release.",
+    tracks: 1,
+    links: {
+      spotify:    "",
+      apple:      "",
+      youtube:    "",
+      soundcloud: "",
+      bandcamp:   "",
+    }
+  },
+  {
+    id: 3,
+    title: "First EP",
+    type: "ep",
+    year: 2025,
+    cover: "assets/images/music/ep-1.jpg",
+    desc: "Description of the EP.",
+    tracks: 5,
+    links: {
+      spotify:    "",
+      apple:      "",
+      soundcloud: "",
+      bandcamp:   "",
+    }
+  },
+];
+
+/* Streaming platform profiles (shown in the hero strip) */
+const PROFILES = {
+  spotify:    "https://open.spotify.com/artist/REPLACE",
+  apple:      "https://music.apple.com/artist/REPLACE",
+  youtube:    "https://youtube.com/@makyneta",
+  soundcloud: "https://soundcloud.com/makyneta",
+  bandcamp:   "https://makyneta.bandcamp.com",
+};
+</script>
+</head>
 <body>
+<div class="noise"></div>
+<div id="header"></div>
 
-    <div id="header"></div>
+<main>
 
-    <div class="stars"></div>
-
-    <header class="hero-section hero">
-        <div class="hero-top">
-            <span class="new-release-tag">New Release Soon</span>
-            <h1>Sou Como<br>Um Rio Remix</h1>
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="page-hero">
+    <div class="hero-ghost">MUSIC</div>
+    <div class="eyebrow"><span>Portfolio — Music</span></div>
+    <h1 class="hero-title">MU<em>SIC</em></h1>
+    <div class="hero-foot">
+      <p class="hero-lead">
+        Songs, instrumentals, and everything in between.
+        Made in Marinha Grande — heard everywhere else.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" id="stat-releases">—</div>
+          <div class="stat-label">Releases</div>
         </div>
-
-        <div class="hero-mid">
-            <div class="album-art-hero"></div>
+        <div class="stat">
+          <div class="stat-num" id="stat-tracks">—</div>
+          <div class="stat-label">Tracks</div>
         </div>
-
-        <div class="hero-bottom">
-            <div class="torn-ticket" onclick="location.href='release/golden.html'">
-                <div class="perforated-line"></div>
-                <div class="ticket-left">
-                    <h3>Pre-save</h3>
-                    <p>ALL PLATFORMS</p>
-                </div>
-                <button class="ticket-btn">PLAY ▶</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- <div class="content-wrapper">
-        <section>
-            <h2 class="section-title">DISCOGRAFIA</h2>
-            <div class="disc-grid">
-                <div class="album-card" onclick="openDisco('cosmic')">  
-                    <img src="https://picsum.photos/seed/album1/400/400" alt="Cosmic Harmony">
-                    <div class="album-title">Cosmic Harmony (2024)</div>
-                </div>
-                <div class="album-card" onclick="openDisco('everyday')">
-                    <img src="https://picsum.photos/seed/album2/400/400" alt="Everyday Life">
-                    <div class="album-title">Everyday Life (2019)</div>
-                </div>
-                <div class="album-card" onclick="openDisco('dreams')">
-                    <img src="https://picsum.photos/seed/album3/400/400" alt="A Head Full of Dreams">
-                    <div class="album-title">A Head Full of Dreams (2015)</div>
-                </div>
-                <div class="album-card" onclick="openDisco('ghost')">
-                    <img src="https://picsum.photos/seed/album4/400/400" alt="Ghost Stories">
-                    <div class="album-title">Ghost Stories (2014)</div>
-                </div>
-            </div>
-        </section>
-
-        <section style="margin-top: 5rem;">
-            <h2 class="section-title">TOUR DATES</h2>
-            <div class="torn-ticket box-office-item" style="max-width: 100%; margin-bottom: 1rem; background: #111; color: #fff;">
-                <div class="ticket-left"><h3>20 MAI • LISBOA</h3><p>ESTÁDIO DA LUZ</p></div>
-                <button class="ticket-btn">TICKETS</button>
-            </div>
-            <div class="torn-ticket box-office-item" style="max-width: 100%; background: #111; color: #fff;">
-                <div class="ticket-left"><h3>25 MAI • MADRID</h3><p>WIZINK CENTER</p></div>
-                <button class="ticket-btn" style="background:#333;">SOLD OUT</button>
-            </div>
-        </section>
+      </div>
     </div>
+  </section>
 
-    <div class="disco-modal" id="discoModal">
-        <div class="disco-content">
-            <button class="disco-close" onclick="closeDisco()">×</button>
-            <h2 id="dTitle">Album</h2>
-            <p id="dYear" style="font-family: 'Space Mono'; color: var(--neon-accent);"></p>
-            <div class="disco-details" id="dDesc"></div>
-            <button class="disco-btn">STREAMING COMPLETO</button>
+  <!-- ══ PLATFORMS STRIP ═══════════════════════════════════════════ -->
+  <div id="platforms-strip">
+    <span class="platforms-label">Listen on</span>
+    <div class="platform-links" id="platform-links"><!-- JS --></div>
+  </div>
+
+  <!-- ══ DISCOGRAPHY ════════════════════════════════════════════════ -->
+  <section id="discography" class="reveal">
+    <div class="disco-head">
+      <div class="disco-head-left">
+        <div class="section-label"><span>Discography</span></div>
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="filter-tab active" data-type="all">All</button>
+          <button class="filter-tab" data-type="album">Albums</button>
+          <button class="filter-tab" data-type="ep">EPs</button>
+          <button class="filter-tab" data-type="single">Singles</button>
         </div>
-    </div> -->
+      </div>
+      <span class="disco-count"><span id="disco-count">—</span> releases</span>
+    </div>
+    <div class="disco-grid" id="disco-grid"></div>
+  </section>
 
-    <div id="footer"></div>
+</main>
+
+<div id="footer"></div>
 </body>
 </html>
