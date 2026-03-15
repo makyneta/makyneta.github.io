@@ -206,30 +206,50 @@
 
     <script>
         const redirects = {
-            // SOCIAL MEDIA
+            // SOCIAL_MEDIA
             'whatsapp': { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
             'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
-            // LINKS
-            'tempestade-kristin': { url: '/kristin', label: 'Tempestade Kristin' },
-            // CMMG LINKS
+
+            // WORK_DESIGN
+            'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw', label: "MAYDAY's Design" },
+
+            // WORK_PHOTO
+            'fotos-cursos-profissionais-8ano-2026': { url: 'https://mega.nz/folder/xmghSRRJ#WXLwn9_HymdQf7GDAAtxZQ', label: "Fotografias Bancas Cursos Profissionais Abertas 8º Ano '26" },
+            'simaomarques-rtp': { url: 'https://mega.nz/folder/IzIimYSR#Qs8MOcwDuYlrzjqdL9tH6Q', label: "Simão Marques" },
+
+            // IT_TOOLS
+            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
+            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
+
+            // APPS
+            'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN', label: 'Adobe' },
+            'adobe-lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
+            'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
+            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view?usp=drive_link', label: 'Adobe Photoshop' },
+            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view?usp=drive_link', label: 'Adobe After Effects' },
+            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view?usp=drive_link', label: 'Adobe Animate' },
+            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
+            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
+            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view?usp=drive_link', label: 'Adobe Illustrator' },
+            '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview', label: '3ds Max' },
+            'blender': { url: 'https://www.blender.org/download/', label: 'Blender' },
+            'audacity': { url: 'https://www.audacityteam.org/download/', label: 'Audacity' },
+            'cptmapps': { url: '/archive/download-cptm-apps', label: 'Download the Applications to Multimedia Course' },
+
+            // OTHERS
+            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A', label: "" },
+            'ppmvid': { url: 'https://we.tl/t-HgBx7bqNAk', label: "" },
+            'ana-photo': { url: 'https://we.tl/t-a6voFYSW9J', label: "Ana's Photographs" },
+            'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA', label: "AEMGP's Toolkit" },
+            'tempestade-kristin': { url: '/archive/kristin', label: 'Tempestade Kristin' },
+            'kristin': { url: '/archive/kristin', label: 'Tempestade Kristin' },
+
+            // CMMG_LINKS
             'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande', label: 'CMMG Facebook' },
             'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande', label: 'CMMG Instagram' },
             'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande', label: 'CMMG YouTube' },
             'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542', label: 'CMMG Kristin' },
             'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade', label: 'CMMG Kristin Form' },
-            // APPS
-            'adobe-lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom' },
-            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
-            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
-            // OTHERS
-            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A', label: "" },
-            'ppmvid': { url: 'https://we.tl/t-HgBx7bqNAk', label: "" },
-            'ana-photo': { url: 'https://we.tl/t-a6voFYSW9J', label: "Ana's Photographs" },
-            'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA', label: "AEMGP's Black Logo" },
-            // FLORINDO
-            'fotos-cursos-profissionais-8ano-2026': { url: 'https://mega.nz/folder/xmghSRRJ#WXLwn9_HymdQf7GDAAtxZQ', label: "Fotografias Bancas Cursos Profissionais Abertas 8º Ano '26" },
-            // VISITAS DE ESTUDO
-            'simaomarques-rtp': { url: 'https://mega.nz/folder/IzIimYSR#Qs8MOcwDuYlrzjqdL9tH6Q', label: "Simão Marques" },
 
         };
 
