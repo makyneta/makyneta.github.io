@@ -1,82 +1,82 @@
 [
   {
     "id": 8,
-    "title": "[EN] Letter of Protest to the Government",
-    "category": "kristin",
-    "date": "13 MAR 2026",
-    "readTime": "5 min read",
-    "image": "assets/images/blog/repudiation-government.jpg",
-    "excerpt": "Letter of repudiation to the Government of Portugal, especially to Minister Manuel Castro Almeida, due to the accusations made.",
-    "link": "news/repudiation-government"
+    "title": "Visita da Juventude Socialista ao Parlamento e Sede do PS",
+    "category": "juventude_socialista",
+    "date": "19 MAR 2026",
+    "readTime": "3 minutos de leitura",
+    "image": "assets/images/blog/fedlraparl.jpg",
+    "excerpt": "No dia 19 de Março de 2026, a Juventude Socialista de Marinha Grande, Leiria, Ansião, Pombal, e Bombarral, comandada pela Federação de Leiria da Juvenstude Socialista, visitaram a Assembleia da República, no qual foi possível assistir à Sessão Plenária, e posteriormente visitar a Sede do Partido Socialista.",
+    "link": "news/juvsocialista-visitaparl"
   },
   {
     "id": 7,
-    "title": "[PT] Carta de Repúdio ao Governo",
+    "title": "Carta de Repúdio ao Governo",
     "category": "kristin",
     "date": "13 MAR 2026",
-    "readTime": "5 min read",
+    "readTime": "5 minutos de leitura",
     "image": "assets/images/blog/repudiation-government.jpg",
     "excerpt": "Carta de repúdio ao Governo de Portual, em especial ao ministro Manuel Castro Almeida devido às acusações feitas.",
     "link": "news/repudio-governo"
   },
   {
     "id": 6,
-    "title": "Note Of Thanks",
-    "category": "personal",
-    "date": "20 FEB 2026",
-    "readTime": "5 min read",
+    "title": "Nota de Agradecimento",
+    "category": "pessoal",
+    "date": "20 FEV 2026",
+    "readTime": "5 minutos de leitura",
     "image": "assets/images/blog/thanks-note.jpg",
-    "excerpt": "Note of thanks to everyone who contributed to helping Marinha Grande rebuild stronger.",
-    "link": "news/thanks-note"
+    "excerpt": "Nota de agradecimento a todos os que contribuíram para ajudar Marinha Grande a reconstruir mais forte.",
+    "link": "news/nota-agradecimento"
   },
   {
     "id": 5,
-    "title": "Kristin Storm: A Public Note",
+    "title": "Tempestade Kristin: Uma Nota Pública",
     "category": "kristin",
-    "date": "08 FEB 2026",
-    "readTime": "2 min read",
+    "date": "08 FEV 2026",
+    "readTime": "2 minutos de leitura",
     "image": "assets/images/blog/kristin.jpeg",
-    "excerpt": "A public note about the storm Kristin.",
+    "excerpt": "Uma nota pública sobre a tempestade Kristin.",
     "link": "news/kristin"
   },
   {
     "id": 4,
-    "title": "Thank You, Libélula Teatro",
-    "category": "work",
+    "title": "Obrigado, Libélula Teatro",
+    "category": "trabalho",
     "date": "30 NOV 2025",
-    "readTime": "1 min read",
+    "readTime": "1 minuto de leitura",
     "image": "assets/images/blog/libelula-theater.jpg",
-    "excerpt": "A brief note of thanks to Libélula Teatro for this opportunity.",
-    "link": "news/libelula-theater"
+    "excerpt": "Uma breve nota de agradecimento ao Libélula Teatro por esta oportunidade.",
+    "link": "news/libelula"
   },
   {
     "id": 3,
-    "title": "You Would Be Turning 50 Today",
-    "category": "personal",
+    "title": "Hoje Farias 50 Anos",
+    "category": "pessoal",
     "date": "25 JUN 2025",
-    "readTime": "1 min read",
+    "readTime": "1 minuto de leitura",
     "image": "assets/images/blog/uncle-50y.jpg",
-    "excerpt": "Dear uncle, today you would have been celebrating your long-awaited 50th birthday.",
-    "link": "news/uncle-50y"
+    "excerpt": "Querido tio, hoje terias estado a celebrar o teu tão aguardado 50º aniversário.",
+    "link": "news/tio50"
   },
   {
     "id": 2,
-    "title": "Thanks, ACM's U-13",
-    "category": "work",
+    "title": "Obrigado, U-13 do ACM",
+    "category": "trabalho",
     "date": "23 JUN 2025",
-    "readTime": "1 min read",
+    "readTime": "1 minuto de leitura",
     "image": "assets/images/blog/thanks-u13.jpg",
-    "excerpt": "A note of thanks to the ACM's U-13 team for their support.",
+    "excerpt": "Uma nota de agradecimento à equipa U-13 do ACM pelo seu apoio.",
     "link": "news/thanks-u13"
   },
   {
     "id": 1,
-    "title": "Thank You For Everything, Dear Uncle",
-    "category": "personal",
-    "date": "13 FEB 2025",
-    "readTime": "1 min read",
+    "title": "Obrigado Por Tudo, Querido Tio",
+    "category": "pessoal",
+    "date": "13 FEV 2025",
+    "readTime": "1 minuto de leitura",
     "image": "assets/images/blog/dear-uncle.jpg",
-    "excerpt": "A special message for my uncle who unfortunately passed away.",
-    "link": "news/dear-uncle"
+    "excerpt": "Uma mensagem especial para o meu tio que infelizmente faleceu.",
+    "link": "news/querido-tio"
   }
 ]

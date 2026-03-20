@@ -1,13 +1,14 @@
 const JSON_PATH = 'assets/data/blog.json';
 
 const CATEGORIES = [
-  { id: 'all',          label: 'All' },
-  { id: 'personal',     label: 'Personal' },
-  { id: 'work',         label: 'Work' },
-  { id: 'dev',          label: 'Dev' },
-  { id: 'professional', label: 'Career' },
-  { id: 'design',       label: 'Design' },
-  { id: 'kristin',      label: 'Kristin' },
+  { id: 'all',                  label: 'Todos' },
+  { id: 'pessoal',              label: 'Pessonal' },
+  { id: 'trabalho',             label: 'Trabalho' },
+  { id: 'dev',                  label: 'Dev' },
+  { id: 'carreira',             label: 'Carreira' },
+  { id: 'design',               label: 'Design' },
+  { id: 'kristin',              label: 'Kristin' },
+  { id: 'juventude_socialista', label: 'Juv. Socialista' },
 ];
 
 let currentCat = 'all';
@@ -117,7 +118,7 @@ const revealObs = new IntersectionObserver(entries =>
 /* ── INIT ── */
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('today-date').textContent =
-    new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+    new Date().toLocaleDateString('pt-PT', { day:'numeric', month:'long', year:'numeric' });
 
   let articles = [];
   try {
