@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Makyneta Unipessoal, Lda."/>
     <meta name="robots" content="noindex, nofollow">
+    <!-- OG Tags (injetadas dinamicamente via JS se aplicável) -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" id="og-image-tag" content="assets/images/branding/og-image.png">
     <!-- Title_Favicon -->
     <title>Makyneta by Tomás Mota</title>
     <link rel="icon" href="/favicon.png" type="image/png">
@@ -147,17 +150,6 @@
             box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
         }
 
-        /* Barra de progresso automática */
-        .progress-bar {
-            width: 0%;
-            height: 2px;
-            background: var(--primary);
-            margin: 15px auto 0;
-            transition: width 1s linear;
-            display: none;
-            opacity: 0.5;
-        }
-
         @keyframes scanline {
             0% { bottom: 100%; }
             100% { bottom: -100%; }
@@ -200,103 +192,93 @@
 
         <div class="action-box">
             <a href="/" id="main-btn" class="btn">Ir para a Página Inicial</a>
-            <div id="p-bar" class="progress-bar"></div>
         </div>
     </div>
 
     <script>
         const redirects = {
             // SOCIAL_MEDIA
-            'whatsapp': { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
-            'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
-            'instagram': { url: 'https://www.instagram.com/makyneta_', label: 'Instagram' },
+            'whatsapp':     { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
+            'mail':         { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
+            'instagram':    { url: 'https://www.instagram.com/makyneta_', label: 'Instagram' },
 
             // WORK_DESIGN
-            'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw', label: "MAYDAY's Design" },
+            'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw', label: "MAYDAY's Design", },
 
             // WORK_PHOTO
-            'fotos-cursos-profissionais-8ano-2026': { url: 'https://mega.nz/folder/xmghSRRJ#WXLwn9_HymdQf7GDAAtxZQ', label: "Fotografias Bancas Cursos Profissionais Abertas 8º Ano '26" },
-            'simaomarques-rtp': { url: 'https://mega.nz/folder/IzIimYSR#Qs8MOcwDuYlrzjqdL9tH6Q', label: "Simão Marques" },
-            'mariabiscaia_futuralia': { url: 'https://mega.nz/folder/tm41TK4L#k4VXp-jAY7owEW2exOft2w', label: "Maria Biscaia @ Futurália" },
+            'fotos-cursos-profissionais-8ano-2026': { url: 'https://mega.nz/folder/xmghSRRJ#WXLwn9_HymdQf7GDAAtxZQ', label: "Fotografias Bancas Cursos Profissionais Abertas 8º Ano '26", },
+            'simaomarques-rtp': { url: 'https://mega.nz/folder/IzIimYSR#Qs8MOcwDuYlrzjqdL9tH6Q', label: "Simão Marques", },
+            'mariabiscaia_futuralia': { url: 'https://mega.nz/folder/tm41TK4L#k4VXp-jAY7owEW2exOft2w', label: "Maria Biscaia @ Futurália", },
+            'poeirasglass': { url: '/photo/poeirasglass', label: "Poeiras Glass", og_image: '/assets/images/projects/photo/poeiras-glass/IMG_9973.jpg' },
 
             // IT_TOOLS
-            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
-            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
+            'cuco':         { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
+            'cuco-update':  { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
 
             // APPS
-            'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN', label: 'Adobe' },
-            'adobe-lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
-            'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
-            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view?usp=drive_link', label: 'Adobe Photoshop' },
-            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view?usp=drive_link', label: 'Adobe After Effects' },
-            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view?usp=drive_link', label: 'Adobe Animate' },
-            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
-            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
-            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view?usp=drive_link', label: 'Adobe Illustrator' },
-            '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview', label: '3ds Max' },
-            'blender': { url: 'https://www.blender.org/download/', label: 'Blender' },
-            'audacity': { url: 'https://www.audacityteam.org/download/', label: 'Audacity' },
-            'cptmapps': { url: '/archive/download-cptm-apps', label: 'Download the Applications to Multimedia Course' },
+            'adobe':            { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN', label: 'Adobe' },
+            'adobe-lightroom':  { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
+            'lightroom':        { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
+            'photoshop':        { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view?usp=drive_link', label: 'Adobe Photoshop' },
+            'aftereffects':     { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view?usp=drive_link', label: 'Adobe After Effects' },
+            'animate':          { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view?usp=drive_link', label: 'Adobe Animate' },
+            'premiere':         { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
+            'premierepro':      { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
+            'illustrator':      { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view?usp=drive_link', label: 'Adobe Illustrator' },
+            '3dsmax':           { url: 'https://www.autodesk.com/products/3ds-max/overview', label: '3ds Max' },
+            'blender':          { url: 'https://www.blender.org/download/', label: 'Blender' },
+            'audacity':         { url: 'https://www.audacityteam.org/download/', label: 'Audacity' },
+            'cptmapps':         { url: '/archive/download-cptm-apps', label: 'Download the Applications to Multimedia Course' },
 
             // OTHERS
-            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A', label: "" },
-            'ppmvid': { url: 'https://we.tl/t-HgBx7bqNAk', label: "" },
-            'ana-photo': { url: 'https://we.tl/t-a6voFYSW9J', label: "Ana's Photographs" },
-            'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA', label: "AEMGP's Toolkit" },
-            'tempestade-kristin': { url: '/archive/kristin', label: 'Tempestade Kristin' },
-            'kristin': { url: '/archive/kristin', label: 'Tempestade Kristin' },
-            'martimcabral_3d': { url: 'https://mega.nz/folder/prw0zaiC#P47clZqkTXFd1TsmTrnAtg', label: 'Martim Cabral 3D' },
+            'download':             { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A', label: "" },
+            'ppmvid':               { url: 'https://we.tl/t-HgBx7bqNAk', label: "" },
+            'ana-photo':            { url: 'https://we.tl/t-a6voFYSW9J', label: "Ana's Photographs" },
+            'aemgp_toolkit':        { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA', label: "AEMGP's Toolkit" },
+            'tempestade-kristin':   { url: '/archive/kristin', label: 'Tempestade Kristin' },
+            'kristin':              { url: '/archive/kristin', label: 'Tempestade Kristin' },
+            'martimcabral_3d':      { url: 'https://mega.nz/folder/prw0zaiC#P47clZqkTXFd1TsmTrnAtg', label: 'Martim Cabral 3D' },
 
             // JS_MARINHAGRANDE
-            'jsmg-instagram': { url: 'https://www.instagram.com/js.marinhagrande', label: 'Juventude Socialista da Marinha Grande @ Instagram' },
-            'jsmg-facebook': { url: 'https://www.facebook.com/jsocialistamg', label: 'Juventude Socialista da Marinha Grande @ Facebook' },
+            'jsmg-instagram':   { url: 'https://www.instagram.com/js.marinhagrande', label: 'Juventude Socialista da Marinha Grande @ Instagram' },
+            'jsmg-facebook':    { url: 'https://www.facebook.com/jsocialistamg', label: 'Juventude Socialista da Marinha Grande @ Facebook' },
 
             // CMMG_LINKS
-            'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande', label: 'CMMG Facebook' },
-            'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande', label: 'CMMG Instagram' },
-            'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande', label: 'CMMG YouTube' },
-            'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542', label: 'CMMG Kristin' },
-            'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade', label: 'CMMG Kristin Form' },
-
+            'cmmg-facebook':    { url: 'https://www.facebook.com/municipiomarinhagrande', label: 'CMMG Facebook' },
+            'cmmg-instagram':   { url: 'https://www.instagram.com/municipiomarinhagrande', label: 'CMMG Instagram' },
+            'cmmg-youtube':     { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande', label: 'CMMG YouTube' },
+            'cmmg-kristin':     { url: 'https://www.cm-mgrande.pt/pages/1542', label: 'CMMG Kristin' },
+            'cmmg-form':        { url: 'https://www.cm-mgrande.pt/p/tempestade', label: 'CMMG Kristin Form' },
         };
 
         const path = window.location.pathname;
         const slug = path.split('/').filter(Boolean).pop()?.toLowerCase();
 
-        const code = document.getElementById('display-code');
+        const code  = document.getElementById('display-code');
         const title = document.getElementById('display-title');
-        const msg = document.getElementById('display-msg');
-        const btn = document.getElementById('main-btn');
-        const progressBar = document.getElementById('p-bar');
+        const msg   = document.getElementById('display-msg');
+        const btn   = document.getElementById('main-btn');
 
-        // Se existir um slug válido na lista de redirecionamentos
         if (slug && redirects[slug]) {
             const data = redirects[slug];
-            
-            // Atualiza Interface
+
+            // --- Injeta og:image personalizado se definido na entrada ---
+            if (data.og_image) {
+                document.getElementById('og-image-tag').setAttribute('content', data.og_image);
+            }
+
+            // --- Atualiza Interface ---
             code.textContent = "LINK";
             code.setAttribute('data-text', "LINK");
             title.textContent = "Signal Found!";
-            msg.innerHTML = `Call detected for <b>${data.label}</b>.<br>Redirecting...`;
-            
-            btn.textContent = `Redirecting to ${data.label}`;
+            msg.innerHTML = `Call detected for <b>${data.label || slug}</b>.<br>Redirecting...`;
+            btn.textContent = `Open ${data.label || slug}`;
             btn.href = data.url;
 
-            // Ativa redirecionamento automático
-            progressBar.style.display = 'block';
-            
-            // Pequeno delay para iniciar a animação da barra
-            setTimeout(() => {
-                progressBar.style.width = '100%';
-            }, 100);
-
-            // Redireciona após 0 segundos
-            setTimeout(() => {
-                window.location.href = data.url;
-            }, );
+            // --- Redireciona imediatamente ---
+            window.location.href = data.url;
 
         } else {
-            // Caso seja 404 real: não faz nada automático
             console.log("Estado 404: Aguardando interação do utilizador.");
         }
 
