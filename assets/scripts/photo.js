@@ -1,91 +1,120 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* ─────────────────────────────────────────────────────────────────
+   JSON path — coloca os teus projectos em assets/data/photo.json
+───────────────────────────────────────────────────────────────── */
+const JSON_PATH = '/assets/data/photo.json';
 
-  /* ── CURSOR ── */
-  const cursor = document.getElementById('cursor');
-  const ring   = document.getElementById('cursor-ring');
+/* ─────────────────────────────────────────────────────────────────
+   CATEGORY ORDER — só aparecem as categorias presentes no JSON
+───────────────────────────────────────────────────────────────── */
+const CATEGORIES = [
+  { id: 'all',      label: 'All' },
+  { id: 'portrait', label: 'Retrato' },
+  { id: 'street',   label: 'Cidade' },
+  { id: 'event',    label: 'Evento' },
+  { id: 'sport',    label: 'Desporto' },
+  { id: 'nature',   label: 'Natureza' },
+  { id: 'other',    label: 'Outro' },
+];
 
-  if (cursor && ring) {
-    let mx=0, my=0, rx=0, ry=0;
+let PROJECTS    = [];
+let currentCat  = 'all';
 
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      cursor.style.left = mx + 'px';
-      cursor.style.top  = my + 'px';
+/* ── build card ── */
+function buildCard(p) {
+  const cover = p.cover
+    ? `<img src="${p.cover}" alt="${p.title}" loading="lazy"
+           onerror="this.parentElement.innerHTML='<div class=\\'cover-placeholder\\'>[NO IMAGE]</div>'">`
+    : `<div class="cover-placeholder">[NO IMAGE]</div>`;
+
+  const photoCount = p.photoCount ? `${p.photoCount} photos` : '';
+
+  return `
+    <a href="${p.slug || '#'}" class="project-card reveal" data-cat="${p.category}">
+      <div class="card-cover">
+        ${cover}
+        <span class="card-badge">${p.category}</span>
+        ${photoCount ? `<span class="card-photo-count">${photoCount}</span>` : ''}
+      </div>
+      <div class="card-body">
+        <div class="card-title">${p.title}</div>
+        <div class="card-meta">
+          ${p.year     ? `<span class="card-year">${p.year}</span>` : ''}
+          ${p.year && p.location ? `<span class="card-sep">·</span>` : ''}
+          ${p.location ? `<span class="card-location">${p.location}</span>` : ''}
+        </div>
+        ${p.desc ? `<p class="card-desc">${p.desc}</p>` : ''}
+      </div>
+    </a>`;
+}
+
+/* ── render grid ── */
+function renderGrid(cat) {
+  const pool = (cat === 'all' ? [...PROJECTS] : PROJECTS.filter(p => p.category === cat))
+    .sort((a, b) => b.id - a.id);
+
+  const grid = document.getElementById('projects-grid');
+  grid.innerHTML = pool.length
+    ? pool.map(buildCard).join('')
+    : `<div style="padding:4rem;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;grid-column:1/-1;">No projects found.</div>`;
+
+  document.getElementById('visible-count').textContent = pool.length;
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  });
+}
+
+/* ── stats ── */
+function renderStats() {
+  document.getElementById('stat-projects').textContent = String(PROJECTS.length).padStart(2, '0');
+  const photos = PROJECTS.reduce((s, p) => s + (p.photoCount || 0), 0);
+  document.getElementById('stat-photos').textContent   = photos > 0 ? String(photos).padStart(2, '0') : '—';
+}
+
+/* ── filter tabs ── */
+function buildTabs() {
+  const available = new Set(PROJECTS.map(p => p.category));
+  const tabs = document.getElementById('filter-tabs');
+  tabs.innerHTML = '';
+  CATEGORIES.forEach(cat => {
+    if (cat.id !== 'all' && !available.has(cat.id)) return;
+    const btn = document.createElement('button');
+    btn.className   = 'filter-tab' + (cat.id === 'all' ? ' active' : '');
+    btn.dataset.cat = cat.id;
+    btn.textContent = cat.label;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCat = cat.id;
+      renderGrid(currentCat);
     });
+    tabs.appendChild(btn);
+  });
+}
 
-    (function loop() {
-      rx += (mx - rx) * .12;
-      ry += (my - ry) * .12;
-      ring.style.left = rx + 'px';
-      ring.style.top  = ry + 'px';
-      requestAnimationFrame(loop);
-    })();
+/* ── scroll reveal ── */
+const revealObs = new IntersectionObserver(
+  entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
+  { threshold: 0.04 }
+);
 
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.style.width  = '18px';
-        cursor.style.height = '18px';
-        ring.style.width    = '56px';
-        ring.style.height   = '56px';
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.style.width  = '10px';
-        cursor.style.height = '10px';
-        ring.style.width    = '36px';
-        ring.style.height   = '36px';
-      });
-    });
+/* ── init ── */
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const res = await fetch(JSON_PATH);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    PROJECTS = await res.json();
+  } catch (err) {
+    console.error('Failed to load photo.json:', err);
+    document.getElementById('projects-grid').innerHTML =
+      `<div style="padding:4rem;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.2em;color:#e55;grid-column:1/-1;">
+        Failed to load /assets/data/photo.json
+      </div>`;
+    return;
   }
 
-  /* ── SCROLL REVEAL ── */
-  const revealEls = document.querySelectorAll('.reveal');
-
-  if (revealEls.length) {
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 80);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.05 });
-
-    revealEls.forEach(el => obs.observe(el));
-  }
-
-  /* ── SLIDESHOW ── */
-  const slides   = document.querySelectorAll('.hero-slide');
-  const dotsWrap = document.getElementById('hero-dots');
-
-  if (slides.length && dotsWrap) {
-    let current = 0;
-    let timer   = null;
-
-    slides.forEach((_, i) => {
-      const d = document.createElement('div');
-      d.className = 'hero-dot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(d);
-    });
-
-    function goTo(idx) {
-      const dots = dotsWrap.querySelectorAll('.hero-dot');
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
-      current = idx;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
-      resetTimer();
-    }
-
-    function next() { goTo((current + 1) % slides.length); }
-
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(next, 5000);
-    }
-
-    resetTimer();
-  }
-
+  renderStats();
+  buildTabs();
+  renderGrid('all');
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 });

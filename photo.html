@@ -8,11 +8,12 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/photo.css">
     <link rel="stylesheet" href="assets/styles/geral.css">
-    <style>.hero-title em { font-style: italic; color: #c4824a !important; }</style>
+    <!-- Fonnt -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="assets/scripts/photo.js"></script>
-    <script src="assets/scripts/script.js"></script>
+    <script defer src="assets/scripts/photo.js" defer></script>
+    <script src="assets/scripts/script.js" defer></script>
     <!-- Title -->
     <title>Fotografia | Makyneta</title>
     <link rel="icon" href="favicon.png" type="image/png">
@@ -21,83 +22,44 @@
 
   <div id="header"></div>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-  <div id="site-header"></div>
+<main>
 
-  <!-- ══ HERO ══ -->
-  <section class="hero">
-
-    <!-- SLIDESHOW -->
-    <div class="hero-slides">
-      <!--
-        Para usar as tuas imagens reais, substitui o background-image inline:
-        <div class="hero-slide" style="background-image:url('fotos/foto1.jpg')"></div>
-      -->
-      <div class="hero-slide active" style="background-image:url('assets/images/projects/photo/rua-viva/IMG_0127.jpg')"></div>
-    </div>
-
-    <!-- GRAIN POR CIMA DAS FOTOS --> 
-    <div class="hero-grain"></div>
-
-    <!-- ESCURECIMENTO GERAL -->
-    <div class="hero-dark"></div>
-
-    <!-- FADE PARA O FUNDO DA PÁGINA -->
-    <div class="hero-fade"></div>
-
-    <!-- LINHAS DECORATIVAS -->
-    <div class="hero-vline"></div>
-    <div class="hero-vline"></div>
-
-    <!-- CONTEÚDO -->
-    <h1 class="hero-title">Luz &<br><em>Silêncio</em></h1>
-    <p class="hero-sub">Fotografia que captura o que permanece e o que desvanece.</p>
-
-    <!-- DOTS -->
-    <div class="hero-dots" id="hero-dots"></div>
-
-    <!-- SCROLL -->
-    <div class="hero-scroll">Deslizar <span class="hero-scroll-line"></span></div>
-
-  </section>
-
-  <!-- ══ PROJECTS ══ -->
-  <section>
-    <div class="section-intro reveal">
-      <div>
-        <p class="section-label">Projetos</p>
-        <h2 class="section-title">Trabalho<br>Selecionado</h2>
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="page-hero">
+    <div class="hero-ghost">FOTOGRAFIA</div>
+    <div class="eyebrow"><span>Portfólio — Fotografia</span></div>
+    <h1 class="hero-title"><em>FOTO</em>GRAFIA</h1>
+    <div class="hero-foot">
+      <p class="hero-lead">
+        Streets, stages, people, places.<br>
+        Captured with intention.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" id="stat-projects">—</div>
+          <div class="stat-label">Projectos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-photos">—</div>
+          <div class="stat-label">Fotografias</div>
+        </div>
       </div>
-      <p class="section-desc">Uma coleção de trabalhos que exploram a luz, o espaço e o tempo. Cada projeto é uma narrativa visual construída com intenção.</p>
-    </div>
-
-    <div class="projects-grid" id="grid">
-
-      <a href="photo/rua-viva" class="project-card reveal">
-        <img class="project-img" src="assets/images/projects/photo/rua-viva/IMG_0127.jpg" alt="Rua Viva" />
-        <div class="project-overlay"></div>
-        <div class="project-info"><h3 class="project-name">Rua Viva</h3><p class="project-tag">2026</p></div>
-        <div class="project-arrow">↗</div>
-      </a>
-
-      <a href="photo/poeiras-glass" class="project-card reveal">
-        <img class="project-img" src="assets/images/projects/photo/poeiras-glass/IMG_9977.jpg" alt="Poeiras Glass" />
-        <div class="project-overlay"></div>
-        <div class="project-info"><h3 class="project-name">Poeiras Glass</h3><p class="project-tag">2026</p></div>
-        <div class="project-arrow">↗</div>
-      </a>
-
     </div>
   </section>
 
-  <!-- ══ CTA ══ -->
-  <div class="cta-line reveal">
-    <p class="cta-text">Vamos trabalhar juntos?</p>
-    <a href="contact" class="cta-btn"><span>Entre em contacto</span><span>→</span></a>
-  </div>
+  <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
+  <nav id="filter-bar">
+    <div class="filter-tabs" id="filter-tabs"></div>
+    <span class="project-counter"><span id="visible-count">—</span> projectos</span>
+  </nav>
 
-  <div id="site-footer"></div>
+  <!-- ══ GRID ══════════════════════════════════════════════════════ -->
+  <section id="projects" class="reveal">
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+</main>
+
   <div id="footer"></div>
 
 </body>

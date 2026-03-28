@@ -1,0 +1,24 @@
+[
+  {
+    "id": 2,
+    "title": "Rua Viva",
+    "category": "street",
+    "year": "2026",
+    "location": "Marinha Grande",
+    "desc": "",
+    "cover": "assets/images/projects/photo/rua-viva/IMG_0127.jpg",
+    "slug": "/ruaviva",
+    "photoCount": 14
+  },
+  {
+    "id": 1,
+    "title": "Poeiras Glass",
+    "category": "portrait",
+    "year": "2024",
+    "location": "Marinha Grande",
+    "desc": "",
+    "cover": "assets/images/projects/photo/poeiras-glass/IMG_9973.jpg",
+    "slug": "/poeirasglass",
+    "photoCount": 6
+  }
+]
