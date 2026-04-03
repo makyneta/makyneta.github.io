@@ -1,5 +1,27 @@
 [
   {
+    "id": 25,
+    "title": "Fair Play Calazans",
+    "category": "sport",
+    "year": "2026",
+    "location": "Marinha Grande",
+    "desc": "",
+    "cover": "assets/images/projects/photo/cover/fair-play-calazans.jpg",
+    "slug": "/fairplaycalazans",
+    "photoCount": 1129
+  },
+  {
+    "id": 24,
+    "title": "Teatro 18 de Janeiro de 1934",
+    "category": "event",
+    "year": "2026",
+    "location": "Marinha Grande",
+    "desc": "",
+    "cover": "assets/images/projects/photo/cover/teatro-18-janeiro-1934.jpg",
+    "slug": "/teatro18jan1934",
+    "photoCount": 247
+  },
+  {
     "id": 23,
     "title": "Rua Viva",
     "category": "street",
