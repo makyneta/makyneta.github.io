@@ -1,16 +1,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg:      #080808;
-  --bg2:     #0f0f0f;
-  --accent:  #31d094;
-  --fg:      #f0ede8;
-  --dim:     #555;
-  --dim2:    #888;
-  --border:  rgba(255,255,255,0.07);
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
+  --accent:  #31d043;
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
 }
+
+
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg); color: var(--fg);
@@ -35,7 +38,7 @@ body {
 .hero-bg-word {
   position: absolute; bottom: -2rem; right: -1rem;
   font-family: var(--font-display); font-size: clamp(6rem, 20vw, 20rem);
-  color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.025);
+  color: transparent; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.124);
   pointer-events: none; line-height: 1;
 }
 .page-eyebrow {
@@ -61,7 +64,7 @@ body {
 }
 .hero-lead {
   font-family: var(--font-serif); font-size: clamp(1rem, 1.6vw, 1.3rem);
-  font-weight: 300; line-height: 1.7; color: rgba(240,237,232,0.4); max-width: 480px;
+  font-weight: 300; line-height: 1.7; color: rgba(0, 0, 0, 0.4); max-width: 480px;
   text-align: justify;
 }
 .project-count {
@@ -76,7 +79,7 @@ body {
   border-bottom: 1px solid var(--border);
   padding: 0 5rem;
   position: sticky; top: 0; z-index: 90;
-  background: rgba(8,8,8,0.92); backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
 }
 .filter-btn {
   font-family: var(--font-mono); font-size: 0.56rem;
@@ -137,7 +140,7 @@ body {
   font-family: var(--font-display); font-size: 1.35rem;
   letter-spacing: 0.04em; color: var(--fg); line-height: 1.05; transition: color 0.3s;
 }
-.project-card:hover .card-title { color: #fff; }
+.project-card:hover .card-title { color: var(--fg); }
 
 .card-actions { display: flex; gap: 0; margin-top: auto; border-top: 1px solid var(--border); }
 .card-btn {

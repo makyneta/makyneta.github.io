@@ -2,17 +2,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #080808;
-  --bg2:     #0f0f0f;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
   --accent:  #31d094;
-  --fg:      #f0ede8;
-  --dim:     #555;
-  --dim2:    #888;
-  --border:  rgba(255,255,255,0.07);
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
 }
+
+
 
 html { scroll-behavior: smooth; }
 
@@ -48,7 +51,7 @@ body {
   position: absolute; bottom: -2rem; right: -1rem;
   font-family: var(--font-display);
   font-size: clamp(6rem, 20vw, 20rem);
-  color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.025);
+  color: transparent; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.124);
   pointer-events: none; line-height: 1; z-index: 0;
 }
 
@@ -78,7 +81,7 @@ body {
 
 .hero-lead {
   font-family: var(--font-serif); font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  font-weight: 300; line-height: 1.75; color: rgba(240,237,232,0.45);
+  font-weight: 300; line-height: 1.75; color: rgba(15, 15, 14, 0.45);
   max-width: 540px;
   opacity: 0; animation: riseIn 0.8s ease 0.5s forwards;
   position: relative; z-index: 1;
@@ -138,7 +141,7 @@ body {
 .form-textarea {
   width: 100%;
   background: transparent;
-  border: none; border-bottom: 1px solid rgba(255,255,255,0.1);
+  border: none; border-bottom: 1px solid rgba(17,17,17,0.1);
   padding: 0.75rem 0;
   color: var(--fg);
   font-family: var(--font-serif); font-size: 1rem; font-style: italic;
@@ -148,7 +151,7 @@ body {
 }
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: rgba(255,255,255,0.12); font-style: italic;
+  color: rgba(17,17,17,0.4); font-style: italic;
 }
 .form-input:focus,
 .form-textarea:focus {
@@ -168,7 +171,7 @@ body {
   position: relative; overflow: hidden; transition: color 0.3s;
 }
 .submit-btn::before {
-  content: ''; position: absolute; inset: 0; background: #000;
+  content: ''; position: absolute; inset: 0; background: #000000;
   transform: translateX(-101%);
   transition: transform 0.4s cubic-bezier(0.77,0,0.175,1);
 }
@@ -235,7 +238,7 @@ body {
 .sidebar-quote p {
   font-family: var(--font-serif); font-size: 1rem;
   font-style: italic; line-height: 1.75;
-  color: rgba(240,237,232,0.25);
+  color: rgba(15, 14, 14, 0.25);
 }
 .sidebar-quote cite {
   display: block; margin-top: 1rem;

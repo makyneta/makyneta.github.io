@@ -2,16 +2,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #080808;
-  --bg2:     #0f0f0f;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
   --accent:  #31d094;
-  --fg:      #f0ede8;
-  --dim:     #555;
-  --border:  rgba(255,255,255,0.07);
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
 }
+
+
 
 html { scroll-behavior: smooth; }
 
@@ -204,7 +208,7 @@ body {
   margin-bottom: 0.7rem;
   transition: color 0.3s;
 }
-.project-card:hover .card-title { color: #fff; }
+.project-card:hover .card-title { color: var(--fg); }
 
 .card-desc {
   font-family: var(--font-mono); font-size: 0.6rem;
@@ -270,7 +274,7 @@ body {
 .marquee-track { display: flex; width: max-content; animation: ticker 35s linear infinite; }
 .marquee-item {
   font-family: var(--font-display); font-size: 0.9rem;
-  letter-spacing: 0.4em; color: rgba(255,255,255,0.05);
+  letter-spacing: 0.4em; color: rgba(17,17,17,0.1);
   text-transform: uppercase; white-space: nowrap; padding: 0 2.5rem;
 }
 .marquee-item.ac { color: rgba(49,208,148,0.1); }

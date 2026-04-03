@@ -1,10 +1,18 @@
 :root {
-    --cor-sic: #de0000;         
-    --cor-sic-dark: #660000;   
-    --cor-texto: #2d3436;      
-    --cor-fundo: #fdfdfd75;      
-    --transicao: all 0.3s ease;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
+  --accent:  #31d094;
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-serif:   'Cormorant Garamond', serif;
+  --font-mono:    'Fira Code', monospace;
 }
+
+
 
 /* --- ANIMAÇÃO DE FUNDO --- */
 .background-animation {
@@ -67,7 +75,7 @@
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #000;
+    background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -122,7 +130,7 @@
 }
 
 .video-container:hover .play-button::after {
-    border-left-color: #fff;
+    border-left-color: #111;
 }
 
 .video-player {

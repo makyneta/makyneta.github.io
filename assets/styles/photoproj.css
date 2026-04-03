@@ -15,16 +15,20 @@
 }
 
 :root {
-    --bg: #0c0a08;
-    --bg3: #1a1610;
-    --border: #2c241a;
-    --clay: #b8956a;
-    --terracotta: #c17a4a;
-    --earth: #8c6a48;
-    --smoke: #5a4c3c;
-    --sand-light: #e0c9a6;
-    --accent: #c4824a;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
+  --accent:  #31d094;
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-serif:   'Cormorant Garamond', serif;
+  --font-mono:    'Fira Code', monospace;
 }
+
+
 
 html {
     scroll-behavior: smooth;

@@ -1,17 +1,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #080808;
-  --bg2:     #0f0f0f;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
   --accent:  #31d094;
-  --fg:      #f0ede8;
-  --dim:     #555;
-  --dim2:    #888;
-  --border:  rgba(255,255,255,0.07);
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
 }
+
+
 
 html, body { height: 100%; }
 
@@ -146,7 +149,7 @@ body {
   display: flex; flex-direction: column; align-items: center;
   min-width: 90px;
   border: 1px solid var(--border); padding: 1.4rem 1rem 1rem;
-  background: rgba(8,8,8,0.6);
+  background: rgba(255,255,255,0.6);
   backdrop-filter: blur(8px);
   position: relative;
 }
@@ -208,7 +211,7 @@ body {
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--dim); text-decoration: none;
   border: 1px solid var(--border); padding: 0.8rem 1.4rem;
-  background: rgba(8,8,8,0.7); backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.7); backdrop-filter: blur(8px);
   position: relative; overflow: hidden;
   transition: color 0.35s, border-color 0.35s;
 }

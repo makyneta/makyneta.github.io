@@ -1,13 +1,25 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
 
 :root {
-    --accent: #31d094;
-    --font-mono: 'Fira Code', monospace;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
+  --accent:  #31d094;
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-serif:   'Cormorant Garamond', serif;
+  --font-mono:    'Fira Code', monospace;
 }
+
+
 
 #main-header {
     font-family: var(--font-mono) !important;
-    background: rgba(10, 10, 10, 0.7) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    border-bottom: 1px solid rgba(17,17,17,0.08);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px);
     height: 64px;
@@ -16,7 +28,7 @@
 /* Nav Links & Buttons Desktop */
 .nav-link, .nav-btn {
     height: 100%;
-    color: #fff !important;
+    color: var(--fg) !important;
     text-transform: uppercase;
     font-size: 0.85rem;
     font-weight: 600;
@@ -24,12 +36,12 @@
     display: flex;
     align-items: center;
     transition: all 0.2s ease;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(17,17,17,0.08);
 }
 
 .nav-link:hover, .nav-btn:hover {
-    background: #fff !important;
-    color: #000 !important;
+    background: rgba(49,208,148,0.12) !important;
+    color: var(--fg) !important;
 }
 
 .dropdown-menu {
@@ -37,15 +49,15 @@
     top: 100%;
     left: 0;
     min-width: 200px;
-    background: rgba(15, 15, 15, 0.98);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(17,17,17,0.08);
     backdrop-filter: blur(20px);
     padding: 0.5rem 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* Garante que o dropdown não saia da tela à direita */
@@ -75,7 +87,7 @@
 .dropdown-menu a {
     display: block;
     padding: 0.75rem 1.25rem;
-    color: #888;
+    color: #333;
     text-decoration: none;
     font-size: 0.8rem;
     transition: all 0.2s;
@@ -104,7 +116,7 @@
 #mobile-menu-toggle-btn .bar {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #111;
     transition: 0.3s ease;
     border-radius: 2px;
 }
@@ -127,7 +139,7 @@
 
 /* Estilo Links Mobile */
 .mobile-nav-link {
-    color: #fff;
+    color: #111;
     text-decoration: none;
     transition: color 0.2s;
 }

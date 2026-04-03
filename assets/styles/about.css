@@ -2,17 +2,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #080808;
-  --bg2:     #0f0f0f;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
   --accent:  #31d094;
-  --fg:      #f0ede8;
-  --dim:     #555;
-  --dim2:    #888;
-  --border:  rgba(255,255,255,0.07);
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
 }
+
+
 
 html { scroll-behavior: smooth; }
 
@@ -66,7 +69,7 @@ body {
   position: absolute; bottom: -2rem; right: -2rem;
   font-family: var(--font-display);
   font-size: clamp(6rem, 18vw, 18rem);
-  color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.03);
+  color: transparent; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.124);
   pointer-events: none; line-height: 1;
 }
 
@@ -103,7 +106,7 @@ body {
 
 .hero-lead {
   font-family: var(--font-serif); font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-  font-weight: 300; line-height: 1.75; color: rgba(240,237,232,0.55);
+  font-weight: 300; line-height: 1.75; color: rgba(15, 14, 14, 0.55);
   text-align: justify;
   opacity: 0; animation: riseIn 0.8s ease 0.6s forwards;
 }
@@ -262,7 +265,7 @@ body {
 
 .tech-icon {
   font-size: 2rem;
-  filter: grayscale(1) brightness(2.5);
+  filter: grayscale(1) brightness(1);
   transition: filter 0.35s;
 }
 .tech-card:hover .tech-icon { filter: grayscale(0) brightness(1); }
@@ -293,7 +296,7 @@ body {
 
 .cert-year {
   font-family: var(--font-display); font-size: 1.6rem;
-  color: rgba(255,255,255,0.1); line-height: 1; text-align: right;
+  color: rgba(17,17,17,0.14); line-height: 1; text-align: right;
   transition: color 0.3s;
 }
 .cert-row:hover .cert-year { color: rgba(49,208,148,0.25); }
@@ -357,7 +360,7 @@ body {
 ═══════════════════════════════════════════════════════════════════ */
 #cert-modal {
   display: none; position: fixed; inset: 0; z-index: 9000;
-  background: rgba(0,0,0,0.95); backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(6px);
   align-items: center; justify-content: center; padding: 2rem;
 }
 #cert-modal.active { display: flex; }

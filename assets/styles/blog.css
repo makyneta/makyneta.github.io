@@ -6,26 +6,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #080808;
-  --bg2:     #0f0f0f;
-  --bg3:     #141414;
+  --bg:      #f7f6f3;
+  --bg2:     #ffffff;
+  --bg3:     #f0efe9;
   --accent:  #31d094;
-  --fg:      #f0ede8;
-  --dim:     #555;
-  --dim2:    #888;
-  --border:  rgba(255,255,255,0.07);
+  --fg:      #111111;
+  --dim:     #6b6b6b;
+  --dim2:    #999999;
+  --border:  rgba(17,17,17,0.08);
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
-
-  --cat-dev:          #31d094;
-  --cat-work:         #60a5fa;
-  --cat-professional: #fb923c;
-  --cat-personal:     #e879a0;
-  --cat-design:       #a78bfa;
-  --cat-kristin:      #ff6161;
-  --cat-js:           #ff0000;
 }
+
+
 
 html { scroll-behavior: smooth; }
 
@@ -86,7 +80,7 @@ body {
 .hero-bg-word {
   position: absolute; top: 3rem; right: -1rem;
   font-family: var(--font-display); font-size: clamp(6rem, 20vw, 20rem);
-  color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.025);
+  color: transparent; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.124);
   pointer-events: none; line-height: 1; z-index: 0;
 }
 .blog-eyebrow {
@@ -121,7 +115,7 @@ body {
 #blog-controls {
   display: flex; align-items: center; gap: 0;
   padding: 0 5rem; border-bottom: 1px solid var(--border);
-  background: rgba(8,8,8,0.92); backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
   position: sticky; top: 0; z-index: 90;
 }
 .search-wrap {
@@ -170,7 +164,7 @@ body {
   line-height: 0.95; letter-spacing: 0.02em; color: var(--fg);
   margin-bottom: 1.5rem; transition: color 0.3s;
 }
-.featured-article:hover .feat-title { color: #fff; }
+.featured-article:hover .feat-title { color: var(--fg); }
 .feat-excerpt {
   font-family: var(--font-serif); font-size: 1.05rem;
   font-weight: 300; line-height: 1.75; color: var(--dim2);
@@ -260,7 +254,7 @@ body {
   letter-spacing: 0.03em; color: var(--fg); line-height: 1.05;
   margin-bottom: 0.8rem; transition: color 0.3s;
 }
-.article-card:hover .card-title { color: #fff; }
+.article-card:hover .card-title { color: var(--fg); }
 
 .card-excerpt {
   font-family: var(--font-serif); font-size: 0.9rem; line-height: 1.75;

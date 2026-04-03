@@ -1,7 +1,7 @@
 .refined-footer {
-    background-color: #050505;
+    background-color: #f7f6f3;
     padding: 20px 0 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(17,17,17,0.08);
     font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center !important;
@@ -31,12 +31,12 @@
 
 .copyright-text {
     font-family: 'Fira Code', monospace;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #666;
     margin: 0;
     transition: all 0.4s ease;
 }
 
 .copyright-text:hover {
-    color: #fff;
+    color: #111;
 }
