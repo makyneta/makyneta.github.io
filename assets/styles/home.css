@@ -108,8 +108,8 @@ body {
 .hero-photo::after {
   content: ''; position: absolute; inset: 0;
   background:
-    linear-gradient(to left,  transparent 50%, #f7f6f3 100%),
-    linear-gradient(to top,   #f7f6f3 0%, transparent 45%);
+    linear-gradient(to left,  transparent 50%, rgba(8,8,8,0.98) 100%),
+    linear-gradient(to top,    rgba(8,8,8,0.75) 0%, transparent 45%);
   z-index: 2;
 }
 .photo-tag {
