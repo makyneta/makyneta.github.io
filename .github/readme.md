@@ -67,7 +67,6 @@ makyneta.github.io/
 ├── blog.html               # Blog listing
 ├── design.html             # Design portfolio
 ├── dev.html                # Development portfolio
-├── music.html              # Music portfolio
 ├── photo.html              # Photography portfolio
 ├── contact.html            # Contact page
 ├── assets/
@@ -97,8 +96,7 @@ Always building with focus and minimalism.
 ## 📬 Contact
 
 - **Website**: [makyneta.github.io](https://makyneta.github.io)
-- **Email**: [makynetastudios@gmail.com](mailto:makynetastudios@gmail.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile) *(Add if applicable)*
+- **Email**: [makyneta@tutamail.com](mailto:makyneta@tutamail.com)
 
 ---
 
