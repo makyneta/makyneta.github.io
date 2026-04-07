@@ -66,7 +66,7 @@ makyneta.github.io/
 ├── about.html              # About page
 ├── blog.html               # Blog listing
 ├── design.html             # Design portfolio
-├── dev.html                # Development portfolio
+├── develop.html            # Development portfolio
 ├── photo.html              # Photography portfolio
 ├── contact.html            # Contact page
 ├── assets/
