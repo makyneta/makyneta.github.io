@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
     <!-- Metadados -->
     <meta charset="UTF-8" />
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <!-- Title -->
     <title>Newsletter | Makyneta</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
     <div class="noise"></div>
@@ -30,26 +30,26 @@
 
             <!-- ══ LEFT — editorial ════════════════════════════════════════ -->
             <div class="nl-left">
-                <div class="nl-ghost">CARTA</div>
+                <div class="nl-ghost">LETTER</div>
 
                 <div class="nl-left-inner">
                     <div class="eyebrow"><span>Makyneta — Newsletter</span></div>
-                    <h1 class="nl-title">A<br><em>CARTA</em></h1>
+                    <h1 class="nl-title">THE<br><em>LETTER</em></h1>
                     <p class="nl-lead">
-                        Envios ocasionais — novos projetos, notas de dev, fotografia,
-                        histórias de campo dos bastidores, e pensamentos que não cabem em mais lado nenhum.
+                        Occasional dispatches — new projects, dev notes, photography,
+                        backstage field stories, and thoughts that don't fit anywhere else.
                     </p>
                 </div>
                     
                 <div>
                     <br><br>
-                    <p class="nl-expect-label">O que esperar</p>
+                    <p class="nl-expect-label">What to expect</p>
                     <div class="nl-expect-items">
-                        <div class="nl-expect-item">Novos lançamentos de projetos</div>
-                        <div class="nl-expect-item">Dicas de dev & trechos de código</div>
-                        <div class="nl-expect-item">Fotografia & histórias de palco</div>
-                        <div class="nl-expect-item">Notas pessoais & reflexões</div>
-                        <div class="nl-expect-item">Sem spam. Cancele a subscrição a qualquer momento.</div>
+                        <div class="nl-expect-item">New project releases</div>
+                        <div class="nl-expect-item">Dev tips & code snippets</div>
+                        <div class="nl-expect-item">Photography & stage stories</div>
+                        <div class="nl-expect-item">Personal notes & reflections</div>
+                        <div class="nl-expect-item">No spam. Unsubscribe anytime.</div>
                     </div>
 
                     <!-- <div class="nl-issue-strip">
@@ -70,29 +70,29 @@
 
                 <!-- Form state -->
                 <div id="form-wrap">
-                    <h2 class="form-heading">Subscrever</h2>
-                    <p class="form-sub">Preencha os seus dados abaixo. Sem barulho, nunca.</p>
+                    <h2 class="form-heading">Subscribe</h2>
+                    <p class="form-sub">Fill in your details below. No noise, ever.</p>
 
                     <div class="nl-form">
 
                         <div class="form-field">
-                            <label for="nl-name">Primeiro nome</label>
+                            <label for="nl-name">First name</label>
                             <input type="text" id="nl-name" name="Newsletter_Name" placeholder="Tomás"
                                 autocomplete="given-name" />
                         </div>
 
                         <div class="form-field">
-                            <label for="nl-email">Endereço de email</label>
-                            <input type="email" id="nl-email" name="Newsletter_Email" placeholder="voce@exemplo.com"
+                            <label for="nl-email">Email address</label>
+                            <input type="email" id="nl-email" name="Newsletter_Email" placeholder="you@example.com"
                                 autocomplete="email" />
                         </div>
 
                         <!-- Interests -->
-                        <p class="interests-label">Estou interessado em</p>
+                        <p class="interests-label">I'm interested in</p>
                         <div class="interests-grid" id="interests-grid">
                             <div class="interest-item checked" data-val="dev">
                                 <div class="interest-box"></div>
-                                <span class="interest-text">Dev &amp; Código</span>
+                                <span class="interest-text">Dev &amp; Code</span>
                             </div>
                             <div class="interest-item checked" data-val="design">
                                 <div class="interest-box"></div>
@@ -100,19 +100,19 @@
                             </div>
                             <div class="interest-item checked" data-val="photo">
                                 <div class="interest-box"></div>
-                                <span class="interest-text">Fotografia</span>
+                                <span class="interest-text">Photography</span>
                             </div>
                             <div class="interest-item checked" data-val="stage">
                                 <div class="interest-box"></div>
-                                <span class="interest-text">Palco &amp; Música</span>
+                                <span class="interest-text">Stage &amp; Music</span>
                             </div>
                             <div class="interest-item checked" data-val="personal">
                                 <div class="interest-box"></div>
-                                <span class="interest-text">Pessoal</span>
+                                <span class="interest-text">Personal</span>
                             </div>
                             <div class="interest-item checked" data-val="all">
                                 <div class="interest-box"></div>
-                                <span class="interest-text">Tudo</span>
+                                <span class="interest-text">Everything</span>
                             </div>
                         </div>
 
@@ -125,13 +125,13 @@
           </div> -->
 
                         <button class="nl-submit" id="nl-submit">
-                            <span>Subscrever →</span>
+                            <span>Subscribe →</span>
                         </button>
                         <p id="nl-status"></p>
 
                         <p class="privacy-note">
-                            Ao subscrever concorda em receber emails ocasionais de Tomás Mota (Makyneta).
-                            Sem partilha com terceiros.
+                            By subscribing you agree to receive occasional emails from Tomás Mota (Makyneta).
+                            No sharing with third parties.
                             <!-- <a href="/privacy">Privacy policy</a>. -->
                         </p>
 
@@ -141,12 +141,12 @@
                 <!-- Success state (shown after submit) -->
                 <div class="nl-success" id="nl-success">
                     <div class="nl-success-icon">✓</div>
-                    <h2 class="nl-success-title">ESTÁS<br>DENTRO.</h2>
+                    <h2 class="nl-success-title">YOU'RE<br>IN.</h2>
                     <p class="nl-success-msg">
-                        Obrigado por subscrever. A primeira carta chegará à sua caixa de entrada em breve.
-                        Verifique a pasta de spam se nada aparecer dentro de alguns minutos.
+                        Thanks for subscribing. The first letter will arrive in your inbox soon.
+                        Check your spam folder if nothing appears within a few minutes.
                     </p>
-                    <a href="/" class="nl-success-back">← Voltar ao site</a>
+                    <a href="/" class="nl-success-back">← Back to site</a>
                 </div>
 
             </div>

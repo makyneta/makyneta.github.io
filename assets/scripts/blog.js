@@ -1,15 +1,21 @@
 const JSON_PATH = 'assets/data/blog.json';
 
 const CATEGORIES = [
-  { id: 'all',                  label: 'Todos' },
-  { id: 'pessoal',              label: 'Pessonal' },
-  { id: 'trabalho',             label: 'Trabalho' },
-  { id: 'dev',                  label: 'Dev' },
-  { id: 'carreira',             label: 'Carreira' },
-  { id: 'design',               label: 'Design' },
-  { id: 'kristin',              label: 'Kristin' },
-  { id: 'juventude_socialista', label: 'Juv. Socialista' },
+  { id: 'all',             label: 'All' },
+  { id: 'personal',        label: 'Personal' },
+  { id: 'work',            label: 'Work' },
+  { id: 'dev',             label: 'Dev' },
+  { id: 'career',          label: 'Career' },
+  { id: 'design',          label: 'Design' },
+  { id: 'kristin',         label: 'Kristin' },
+  { id: 'socialist_youth', label: 'Socialist Youth' },
 ];
+
+const CATEGORY_LABELS = Object.fromEntries(CATEGORIES.map(cat => [cat.id, cat.label]));
+
+function getCategoryLabel(id) {
+  return CATEGORY_LABELS[id] || id;
+}
 
 let currentCat = 'all';
 
@@ -26,7 +32,7 @@ function renderFeatured(a) {
       <div class="feat-body">
         <div>
           <div class="feat-label">
-            <span class="cat-chip" data-cat="${a.category}">${a.category.toUpperCase()}</span>
+            <span class="cat-chip" data-cat="${a.category}">${getCategoryLabel(a.category).toUpperCase()}</span>
             <span class="feat-label-tag">— Latest Article</span>
           </div>
           <h2 class="feat-title">${a.title}</h2>
@@ -55,7 +61,7 @@ function renderGrid(articles) {
         <div class="card-img">${img(a.image, a.title)}</div>
         <div class="card-body">
           <div class="card-meta">
-            <span class="cat-chip" data-cat="${a.category}">${a.category.toUpperCase()}</span>
+            <span class="cat-chip" data-cat="${a.category}">${getCategoryLabel(a.category).toUpperCase()}</span>
             <span class="card-date">${a.date}</span>
             <span class="card-read-time">${a.readTime}</span>
           </div>
@@ -118,7 +124,7 @@ const revealObs = new IntersectionObserver(entries =>
 /* ── INIT ── */
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('today-date').textContent =
-    new Date().toLocaleDateString('pt-PT', { day:'numeric', month:'long', year:'numeric' });
+    new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
 
   let articles = [];
   try {

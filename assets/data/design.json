@@ -1,40 +1,40 @@
 [
   {
     "id": 5,
-    "title": "Divulgação do Website do MAYDAY",
+    "title": "Promotion of MAYDAY's Website",
     "category": "social",
     "tags": ["Illustrator", "Photoshop"],
-    "desc": "Post promocional do website da boy band brasileira, MAYDAY.",
+    "desc": "Promotional post for the Brazilian boy band MAYDAY's website.",
     "image": "assets/images/projects/design/thumb/mayday_web.jpg",
     "preview": "assets/images/projects/design/preview/mayday_web.png",
     "link": ""
   },
   {
     "id": 4,
-    "title": "Divulgação do Website do Nickz",
+    "title": "Promotion of Nickz's Website",
     "category": "social",
     "tags": ["Illustrator", "Photoshop"],
-    "desc": "Post promocional do website do produtor musical e artista, Nickz.",
+    "desc": "Promotional post for the music producer and artist Nickz's website.",
     "image": "assets/images/projects/design/thumb/nickz_web.jpg",
     "preview": "assets/images/projects/design/preview/nickz_web.jpg",
     "link": ""
   },
   {
     "id": 3,
-    "title": "Logótipo do Nickz",
+    "title": "Nickz's Logo",
     "category": "branding",
     "tags": ["Illustrator"],
-    "desc": "Criação de um logótipo de marca pessoal/profissional de acordo com os desejos do cliente.",
+    "desc": "Creation of a personal/professional brand logo according to the client's wishes.",
     "image": "assets/images/projects/design/thumb/nickz_logo.jpg",
     "preview": "assets/images/projects/design/preview/nickz_logo.png",
     "link": ""
   },
   {
     "id": 2,
-    "title": "Cartaz de Publicidade de Palestra",
+    "title": "Lecture Advertising Poster",
     "category": "print",
     "tags": ["Illustrator", "Photoshop"],
-    "desc": "Cartaz publicitário de uma palestra sobre consciencialização do bullying.",
+    "desc": "Advertising poster for a lecture on bullying awareness.",
     "image": "assets/images/projects/design/thumb/bullyinglecture.jpg",
     "preview": "assets/images/projects/design/preview/bullyinglecture.jpg",
     "link": ""
@@ -44,7 +44,7 @@
     "title": "Francisco Ferreira",
     "category": "social",
     "tags": ["Canva", "Remax"],
-    "desc": "Post nas redes sociais para promoção de marca.",
+    "desc": "Social media post for brand promotion.",
     "image": "assets/images/projects/design/thumb/franciscoferreira.jpg",
     "preview": "assets/images/projects/design/preview/franciscoferreira.jpg",
     "link": ""

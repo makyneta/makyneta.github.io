@@ -1,19 +1,19 @@
 /* ─────────────────────────────────────────────────────────────────
-   JSON path — coloca os teus projectos em assets/data/photo.json
+   JSON path — place your projects in assets/data/photo.json
 ───────────────────────────────────────────────────────────────── */
 const JSON_PATH = '/assets/data/photo.json';
 
 /* ─────────────────────────────────────────────────────────────────
-   CATEGORY ORDER — só aparecem as categorias presentes no JSON
+   CATEGORY ORDER — only categories present in the JSON appear
 ───────────────────────────────────────────────────────────────── */
 const CATEGORIES = [
   { id: 'all',      label: 'All' },
-  { id: 'portrait', label: 'Retrato' },
-  { id: 'street',   label: 'Cidade' },
-  { id: 'event',    label: 'Evento' },
-  { id: 'sport',    label: 'Desporto' },
-  { id: 'nature',   label: 'Natureza' },
-  { id: 'other',    label: 'Outro' },
+  { id: 'portrait', label: 'Portrait' },
+  { id: 'street',   label: 'Street' },
+  { id: 'event',    label: 'Event' },
+  { id: 'sport',    label: 'Sport' },
+  { id: 'nature',   label: 'Nature' },
+  { id: 'other',    label: 'Other' },
 ];
 
 let PROJECTS    = [];

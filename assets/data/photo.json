@@ -45,7 +45,7 @@
   },
   {
     "id": 21,
-    "title": "Festa ACMarinhense",
+    "title": "ACMarinhense Party",
     "category": "event",
     "year": "2025",
     "location": "Marinha Grande",
@@ -100,7 +100,7 @@
   },
   {
     "id": 16,
-    "title": "XIV Edição de 'Mediateca com Vida'",
+    "title": "XIV Edition of 'Mediateca com Vida'",
     "category": "event",
     "year": "2025",
     "location": "Marinha Grande",
@@ -155,7 +155,7 @@
   },
   {
     "id": 11,
-    "title": "Grupo Desportivo de Pescadores da Costa da Caparica",
+    "title": "Costa da Caparica Fishermen's Sports Group",
     "category": "sport",
     "year": "2024",
     "location": "Marinha Grande",
@@ -170,7 +170,7 @@
     "category": "sport",
     "year": "2024",
     "location": "Marinha Grande",
-    "desc": "IberoAlpla no torneio inter-empresas.",
+    "desc": "IberoAlpla in the inter-company tournament.",
     "cover": "assets/images/projects/photo/cover/iberoalpla.jpg",
     "slug": "",
     "photoCount": 0
@@ -236,7 +236,7 @@
     "category": "event",
     "year": "2024",
     "location": "Marinha Grande",
-    "desc": "Song Raiders ao vivo nas Festas da Cidade da Marinha Grande de 2024, com o baerista do Xutos & Pontapés, Kalú.",
+    "desc": "Song Raiders live at the Marinha Grande City Festivals 2024, with the bassist from Xutos & Pontapés, Kalú.",
     "cover": "assets/images/projects/photo/cover/song-raiders.jpg",
     "slug": "",
     "photoCount": 0
@@ -265,7 +265,7 @@
   },
   {
     "id": 1,
-    "title": "Penetras Ao Vivo",
+    "title": "Penetras Live",
     "category": "event",
     "year": "2024",
     "location": "Marinha Grande",
