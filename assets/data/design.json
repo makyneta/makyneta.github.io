@@ -1,32 +1,72 @@
 [
   {
-    "id": 5,
-    "title": "Promotion of MAYDAY's Website",
+    "id": 7,
+    "title": "Dia Internacional do Trabalhador",
     "category": "social",
     "tags": ["Illustrator", "Photoshop"],
-    "desc": "Promotional post for the Brazilian boy band MAYDAY's website.",
-    "image": "assets/images/projects/design/thumb/mayday_web.jpg",
-    "preview": "assets/images/projects/design/preview/mayday_web.png",
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/jsmg-diatrabalhador.jpg",
+    "preview": "assets/images/projects/design/preview/jsmg-diatrabalhador.jpg",
+    "link": ""
+  },
+  {
+    "id": 7,
+    "title": "Dia da Revolução dos Cravos",
+    "category": "social",
+    "tags": ["Illustrator", "Photoshop"],
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/jsmg-revolucaocravos.jpg",
+    "preview": "assets/images/projects/design/preview/jsmg-revolucaocravos.jpg",
+    "link": ""
+  },
+  {
+    "id": 6,
+    "title": "Fair Play Calazans",
+    "category": "event",
+    "tags": ["Illustrator"],
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/fair-play-calazans.jpg",
+    "preview": "assets/images/projects/design/preview/fair-play-calazans.jpg",
+    "link": ""
+  },
+  {
+    "id": 5,
+    "title": "Nacional Day of Student",
+    "category": "social",
+    "tags": ["Illustrator", "Photoshop"],
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/jsmg-diaestudante.jpg",
+    "preview": "assets/images/projects/design/preview/jsmg-diaestudante.jpg",
+    "link": ""
+  },
+  {
+    "id": 5,
+    "title": "Simão Santos Pereira",
+    "category": "social",
+    "tags": ["Illustrator"],
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/simao-santos-pereira.jpg",
+    "preview": "assets/images/projects/design/preview/simao-santos-pereira.jpg",
     "link": ""
   },
   {
     "id": 4,
-    "title": "Promotion of Nickz's Website",
+    "title": "JS Visita Sede PS",
     "category": "social",
-    "tags": ["Illustrator", "Photoshop"],
-    "desc": "Promotional post for the music producer and artist Nickz's website.",
-    "image": "assets/images/projects/design/thumb/nickz_web.jpg",
-    "preview": "assets/images/projects/design/preview/nickz_web.jpg",
+    "tags": ["Illustrator"],
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/jsmg-visitaps.jpg",
+    "preview": "assets/images/projects/design/preview/jsmg-visitaps.jpg",
     "link": ""
   },
   {
     "id": 3,
-    "title": "Nickz's Logo",
-    "category": "branding",
+    "title": "JS Visita Parlamento",
+    "category": "social",
     "tags": ["Illustrator"],
-    "desc": "Creation of a personal/professional brand logo according to the client's wishes.",
-    "image": "assets/images/projects/design/thumb/nickz_logo.jpg",
-    "preview": "assets/images/projects/design/preview/nickz_logo.png",
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/jsmg-visitaparl.jpg",
+    "preview": "assets/images/projects/design/preview/jsmg-visitaparl.jpg",
     "link": ""
   },
   {
@@ -34,9 +74,9 @@
     "title": "Lecture Advertising Poster",
     "category": "print",
     "tags": ["Illustrator", "Photoshop"],
-    "desc": "Advertising poster for a lecture on bullying awareness.",
-    "image": "assets/images/projects/design/thumb/bullyinglecture.jpg",
-    "preview": "assets/images/projects/design/preview/bullyinglecture.jpg",
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/bullying-lecture.jpg",
+    "preview": "assets/images/projects/design/preview/bullying-lecture.jpg",
     "link": ""
   },
   {
@@ -44,9 +84,9 @@
     "title": "Francisco Ferreira",
     "category": "social",
     "tags": ["Canva", "Remax"],
-    "desc": "Social media post for brand promotion.",
-    "image": "assets/images/projects/design/thumb/franciscoferreira.jpg",
-    "preview": "assets/images/projects/design/preview/franciscoferreira.jpg",
+    "desc": "",
+    "image": "assets/images/projects/design/thumb/francisco-ferreira.jpg",
+    "preview": "assets/images/projects/design/preview/francisco-ferreira.jpg",
     "link": ""
   }
 ]
