@@ -58,7 +58,7 @@ document.getElementById('copy-link').addEventListener('click', e => {
   e.preventDefault();
   navigator.clipboard.writeText(window.location.href).then(() => {
     const tooltip = document.getElementById('copy-tooltip');
-    tooltip.textContent = 'Copied!';
+    tooltip.textContent = 'Copiado!';
     tooltip.classList.add('visible');
     setTimeout(() => {
       tooltip.textContent = 'Copy link';
