@@ -10,6 +10,11 @@
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
+  --cor-sic: #de0000;         
+  --cor-sic-dark: #660000;   
+  --cor-texto: #2d3436;      
+  --cor-fundo: #fdfdfd75;      
+  --transicao: all 0.3s ease;
 }
 
 
