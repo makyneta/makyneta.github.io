@@ -17,6 +17,14 @@
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
+  /* Categories Colors */
+  --cat-dev:          #31d094;
+  --cat-work:         #60a5fa;
+  --cat-professional: #fb923c;
+  --cat-personal:     #e879a0;
+  --cat-design:       #a78bfa;
+  --cat-kristin:      #ff6161;
+  --cat-js:           #ff0000;
 }
 
 
