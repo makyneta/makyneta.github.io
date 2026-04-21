@@ -1,5 +1,16 @@
 [
   {
+    "id": 26,
+    "title": "50th Anniversary of the Constitution of the Portuguese Republic",
+    "category": "event",
+    "year": "2026",
+    "location": "Marinha Grande",
+    "desc": "",
+    "cover": "assets/images/projects/photo/cover/50th-anniversary-constitution.jpg",
+    "slug": "/50anniversaryconstitution",
+    "photoCount": 127
+  },
+  {
     "id": 25,
     "title": "Fair Play Calazans",
     "category": "sport",
