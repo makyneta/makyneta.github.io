@@ -1,5 +1,16 @@
 [
   {
+    "id": 27,
+    "title": "XI Café com Livros",
+    "category": "event",
+    "year": "2026",
+    "location": "Marinha Grande",
+    "desc": "",
+    "cover": "assets/images/projects/photo/cover/xi-cafe-com-livros.jpg",
+    "slug": "/xicafecomlivros",
+    "photoCount": 145
+  },
+  {
     "id": 26,
     "title": "50th Anniversary of the Constitution of the Portuguese Republic",
     "category": "event",
