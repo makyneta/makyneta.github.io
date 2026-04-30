@@ -14,7 +14,10 @@
   --font-mono:    'Fira Code', monospace;
 }
 
-
+.dropdown-left .dropdown-menu {
+  right: 0;
+  left: auto;
+}
 
 #main-header {
     font-family: var(--font-mono) !important;
