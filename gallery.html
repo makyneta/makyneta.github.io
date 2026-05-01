@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makyneta Unipessoal, Lda."/>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/gallery.css">
+    <link rel="stylesheet" href="assets/styles/geral.css">
+    <!-- Fonnt -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="assets/scripts/gallery.js" defer></script>
+    <script src="assets/scripts/script.js" defer></script>
+    <!-- Title -->
+    <title>Gallery | Makyneta</title>
+    <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  ADICIONA AS TUAS FOTOS AQUI                                ║
+     ║                                                              ║
+     ║  category: "evento" | "palestra" | "visita" |                ║
+     ║             "defesa" | "bastidores" | "outro"                ║
+     ║  size: "normal" | "wide" (ocupa 2 colunas)                   ║
+     ║         | "tall" (ocupa 2 linhas)                            ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+<script>
+const PHOTOS = [
+    { src: "assets/images/gallery/pap-defense.jpg", alt: "PAP Defense", category: "pap", size: "normal" },
+    { src: "assets/images/gallery/kristin-interview.jpg", alt: "Kristin Interview @ SIC", category: "interview", size: "normal" },
+    { src: "assets/images/gallery/visit-with-js.jpg", alt: "Visita à Assembleia da República", category: "visit", size: "normal" },
+];
+</script>
+</head>
+<body>
+<div id="header"></div>
+
+<main>
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="gallery-hero">
+    <div class="hero-ghost">GALLERY</div>
+    <div class="eyebrow"><span>Tomás Mota</span></div>
+    <h1 class="hero-title">GA<em>LLERY</em></h1>
+    <div class="hero-foot">
+      <p class="hero-lead">
+        Photoshoot of the percurse — events, lectures,<br>
+        study visits, PAP defense, and behind-the-scenes.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" id="stat-total">—</div>
+          <div class="stat-label">Photography's</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-cats">—</div>
+          <div class="stat-label">Categories</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
+  <nav id="filter-bar">
+    <div class="filter-tabs" id="filter-tabs"></div>
+    <span class="photo-counter"><span id="visible-count">—</span> photos</span>
+  </nav>
+
+  <!-- ══ MASONRY GRID ═══════════════════════════════════════════════ -->
+  <section id="gallery-section" class="reveal">
+    <div class="masonry-grid" id="masonry-grid"></div>
+  </section>
+
+</main>
+
+<!-- ══ LIGHTBOX ══════════════════════════════════════════════════ -->
+<div id="lightbox" role="dialog" aria-modal="true">
+  <button id="lb-close">Close ✕</button>
+  <button class="lb-nav" id="lb-prev" aria-label="Previous">←</button>
+  <img id="lb-img" src="" alt="" draggable="false" />
+  <button class="lb-nav" id="lb-next" aria-label="Next">→</button>
+  <div class="lb-info">
+    <p id="lb-caption"></p>
+    <p id="lb-counter"></p>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+
+</script>
+</body>
+</html>
