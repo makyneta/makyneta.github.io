@@ -7,15 +7,15 @@ const projects = [
     code:"https://github.com/makyneta/lsvideomaker",
     demo:"https://makyneta.github.io/lsvideomaker" },
 
-  { title:"JS Marinha Grande", type:"frontend",
-    img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
-    code:"https://github.io/makyneta/jsmarinhagrande",
-    demo:"https://makyneta.github.io/jsmarinhagrande" },
-
   { title:"Simão Santos Pereira", type:"frontend",
     img:"/assets/images/projects/dev/simaosantosp.jpg",
     code:"https://github.com/makyneta/simaosantosp",
     demo:"https://makyneta.github.io/simaosantosp" },
+
+  { title:"JS Marinha Grande", type:"frontend",
+    img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
+    code:"https://github.io/makyneta/jsmarinhagrande",
+    demo:"https://makyneta.github.io/jsmarinhagrande" },
 
   { title:"Nicholas Simões", type:"frontend",
     img:"/assets/images/projects/dev/nicholassimoes.jpg",
