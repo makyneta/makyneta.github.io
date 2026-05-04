@@ -5,7 +5,7 @@
   --bg:      #f7f6f3;
   --bg2:     #ffffff;
   --bg3:     #f0efe9;
-  --accent:  #31d094;
+  --accent:  #000000;
   --fg:      #111111;
   --dim:     #6b6b6b;
   --dim2:    #999999;
@@ -13,6 +13,7 @@
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
+  --accent-green:  #31d094;
 }
 
 
