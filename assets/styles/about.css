@@ -239,7 +239,7 @@ body {
 .client-role {
   font-family: var(--font-mono); font-size: 0.48rem;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--accent) !important; text-align: center; line-height: 1.6;
+  color: var(--fg) !important; text-align: center; line-height: 1.6;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
