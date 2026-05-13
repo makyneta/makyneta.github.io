@@ -33,83 +33,6 @@
     "photoCount": 1129
   },
   {
-    "id": 24,
-    "title": "January 18th 1934 Teather",
-    "category": "event",
-    "year": "2026",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/teatro-18-janeiro-1934.jpg",
-    "slug": "/teatro18jan1934",
-    "photoCount": 247
-  },
-  {
-    "id": 23,
-    "title": "Street Alive",
-    "category": "street",
-    "year": "2026",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/rua-viva.jpg",
-    "slug": "/ruaviva",
-    "photoCount": 14
-  },
-  {
-    "id": 22,
-    "title": "Poeiras Glass",
-    "category": "portrait",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/poeiras-glass.jpg",
-    "slug": "/poeirasglass",
-    "photoCount": 6
-  },
-  {
-    "id": 21,
-    "title": "ACMarinhense Party",
-    "category": "event",
-    "year": "2025",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/acm-festa.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 20,
-    "title": "U-13",
-    "category": "sport",
-    "year": "2025",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/u-13.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 19,
-    "title": "João Fazendeiro",
-    "category": "sport",
-    "year": "2025",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/joao-fazendeiro.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 18,
-    "title": "Afonso Correia",
-    "category": "sport",
-    "year": "2025",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/afonso-correia.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
     "id": 17,
     "title": "PombalCup",
     "category": "sport",
@@ -154,28 +77,6 @@
     "photoCount": 0
   },
   {
-    "id": 13,
-    "title": "Tomás Ramos",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/tomas-ramos.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 12,
-    "title": "Luís Santos",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/luis-santos.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
     "id": 11,
     "title": "Costa da Caparica Fishermen's Sports Group",
     "category": "sport",
@@ -198,61 +99,6 @@
     "photoCount": 0
   },
   {
-    "id": 9,
-    "title": "Francisco Teixeira",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/francisco-teixeira.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 8,
-    "title": "Brazão",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/brazao.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 7,
-    "title": "Bernardo Lopes",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/bernardo-lopes.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 6,
-    "title": "Tomás Lordelo",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/tomas-lordelo.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 5,
-    "title": "Pedro Batista",
-    "category": "sport",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/pedro-batista.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
     "id": 4,
     "title": "Song Raiders",
     "category": "event",
@@ -260,28 +106,6 @@
     "location": "Marinha Grande",
     "desc": "Song Raiders live at the Marinha Grande City Festivals 2024, with the bassist from Xutos & Pontapés, Kalú.",
     "cover": "assets/images/projects/photo/cover/song-raiders.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 3,
-    "title": "David Ferromau",
-    "category": "portrait",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/david-ferromau.jpg",
-    "slug": "/ruaviva",
-    "photoCount": 0
-  },
-  {
-    "id": 2,
-    "title": "Gabriel Elói",
-    "category": "portrait",
-    "year": "2024",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/gabriel-eloi.jpg",
     "slug": "",
     "photoCount": 0
   },
