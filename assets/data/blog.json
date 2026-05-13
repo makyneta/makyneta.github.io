@@ -60,16 +60,6 @@
     "link": "news/tio50"
   },
   {
-    "id": 2,
-    "title": "Obrigado, U-13 do ACM",
-    "category": "trabalho",
-    "date": "23 JUN 2025",
-    "readTime": "1 minuto de leitura",
-    "image": "assets/images/blog/thanks-u13.jpg",
-    "excerpt": "Uma nota de agradecimento à equipa U-13 do ACM pelo seu apoio.",
-    "link": "news/thanks-u13"
-  },
-  {
     "id": 1,
     "title": "Obrigado Por Tudo, Querido Tio",
     "category": "pessoal",
