@@ -1,16 +1,5 @@
 [
   {
-    "id": 27,
-    "title": "XI Café com Livros (Coffe with Books)",
-    "category": "event",
-    "year": "2026",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/xi-cafe-com-livros.jpg",
-    "slug": "/xicafecomlivros",
-    "photoCount": 145
-  },
-  {
     "id": 26,
     "title": "50th Anniversary of the Constitution of the Portuguese Republic",
     "category": "event",
@@ -40,17 +29,6 @@
     "location": "Pombal",
     "desc": "",
     "cover": "assets/images/projects/photo/cover/pombalcup.jpg",
-    "slug": "",
-    "photoCount": 0
-  },
-  {
-    "id": 16,
-    "title": "XIV Edition of 'Mediateca com Vida'",
-    "category": "event",
-    "year": "2025",
-    "location": "Marinha Grande",
-    "desc": "",
-    "cover": "assets/images/projects/photo/cover/xiv-mediateca-com-vida.jpg",
     "slug": "",
     "photoCount": 0
   },
