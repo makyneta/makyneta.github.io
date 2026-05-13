@@ -62,16 +62,6 @@ const projects = [
     code:"https://github.com/makyneta/tiagopedro",
     demo:"https://makyneta.github.io/tiagopedro" },
 
-  { title:"Mateus Loureiro", type:"frontend",
-    img:"/assets/images/projects/dev/mateus-loureiro.jpg",
-    code:"https://github.com/makyneta/mateusloureiro",
-    demo:"https://makyneta.github.io/mateusloureiro" },
-
-  { title:"Mount", type:"fullstack",
-  img:"/assets/images/projects/dev/mount.jpg",
-  code:"https://github.com/makyneta/mount",
-  demo:"https://makyneta.github.io/mount" },
-
   // { title:"Tomás Mota (Makyneta)", type:"fullstack", img:"/assets/images/projects/dev/personal/tomas-mota.jpg",             code:"https://github.com/makyneta/makyneta.github.io",                                            demo:"https://makyneta.github.io/" },
   // { title:"Tomás Ramos",           type:"frontend",  img:"/assets/images/projects/dev/tomas-ramos.png",                     code:"https://github.com/makyneta/tomasramos",                                                    demo:"https://makyneta.github.io/tomasramos" },
   // { title:"Tomás Macedo",          type:"frontend",  img:"",                                                                code:"https://github.com/makyneta/tomasmacedo",                                                   demo:"https://makyneta.github.io/tomasmacedo" },
