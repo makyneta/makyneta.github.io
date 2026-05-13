@@ -7,11 +7,6 @@ const projects = [
     code:"https://github.com/makyneta/lsvideomaker",
     demo:"https://makyneta.github.io/lsvideomaker" },
 
-  { title:"Simão Santos Pereira", type:"frontend",
-    img:"/assets/images/projects/dev/simaosantosp.jpg",
-    code:"https://github.com/makyneta/simaosantosp",
-    demo:"https://makyneta.github.io/simaosantosp" },
-
   { title:"JS Marinha Grande", type:"frontend",
     img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
     code:"https://github.io/makyneta/jsmarinhagrande",
@@ -37,16 +32,6 @@ const projects = [
     code:"https://github.com/makyneta/nickz",
     demo:"https://makyneta.github.io/nickz" },
 
-  { title:"DCA Photography", type:"frontend",
-    img:"/assets/images/projects/dev/personal/dca-photography.jpg",
-    code:"https://github.com/makyneta/dca",
-    demo:"https://makyneta.github.io/dca" },
-
-  { title:"Jéssica Vieira", type:"frontend",
-    img:"/assets/images/projects/dev/jessica-vieira.jpg",
-    code:"https://github.com/makyneta/avieira",
-    demo:"https://makyneta.github.io/avieira" },
-
   { title:"Francisco Ferreira", type:"frontend",
     img:"/assets/images/projects/dev/francisco-ferreira.jpg",
     code:"https://github.com/makyneta/franciscoferreira",
@@ -62,20 +47,10 @@ const projects = [
     code:"https://github.com/makyneta/lavagemlv",
     demo:"https://makyneta.github.io/lavagemlv" },
 
-  { title:"Bruno Teixeira", type:"frontend",
-    img:"/assets/images/projects/dev/bruno-teixeira.jpg",
-    code:"https://github.com/makyneta/brunoteixeira",
-    demo:"https://makyneta.github.io/brunoteixeira" },
-
   { title:"Ice J (I Love You)", type:"frontend",
     img:"/assets/images/projects/dev/ice-j.jpg",
     code:"https://github.com/makyneta/icejiloveyou",
     demo:"https://makyneta.github.io/icejiloveyou" },
-
-  { title:"Rodrigo Morgado", type:"frontend",
-    img:"/assets/images/projects/dev/rodrigo-morgado.jpg",
-    code:"https://github.com/makyneta/rodrigomorgado",
-    demo:"https://makyneta.github.io/rodrigomorgado" },
 
   { title:"Mesa P'ra 4", type:"frontend",
     img:"/assets/images/projects/dev/mesa-pra-4.jpg",
@@ -96,11 +71,6 @@ const projects = [
   img:"/assets/images/projects/dev/mount.jpg",
   code:"https://github.com/makyneta/mount",
   demo:"https://makyneta.github.io/mount" },
-
-  { title:"Gonçalo Teixeira", type:"frontend",
-    img:"/assets/images/projects/dev/goncalo-teixeira.jpg",
-    code:"https://github.com/makyneta/goncaloteixeira",
-    demo:"https://makyneta.github.io/goncaloteixeira" },
 
   // { title:"Tomás Mota (Makyneta)", type:"fullstack", img:"/assets/images/projects/dev/personal/tomas-mota.jpg",             code:"https://github.com/makyneta/makyneta.github.io",                                            demo:"https://makyneta.github.io/" },
   // { title:"Tomás Ramos",           type:"frontend",  img:"/assets/images/projects/dev/tomas-ramos.png",                     code:"https://github.com/makyneta/tomasramos",                                                    demo:"https://makyneta.github.io/tomasramos" },
