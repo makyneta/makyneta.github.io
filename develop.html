@@ -23,37 +23,72 @@
     <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
-<div class="noise"></div>
-<div id="header"></div>
-<main>
+  <div id="progress"></div>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div class="noise"></div>
+  <div id="header"></div>
+ 
+  <main>
+    <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+    <section id="page-hero">
+      <div class="about-eyebrow page-eyebrow"><span>Portfolio — Development</span></div>
+ 
+      <!-- Terminal widget -->
+      <div class="terminal-window">
+        <div class="term-bar">
+          <span class="term-dot r"></span>
+          <span class="term-dot y"></span>
+          <span class="term-dot g"></span>
+          <span class="term-title">makyneta — zsh</span>
+        </div>
+        <div class="term-body">
+          <div class="term-line"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> ls projects/</span></div>
+          <div class="term-line term-out"><span class="hi-g">frontend/</span>&nbsp;&nbsp;<span class="hi-c">fullstack/</span>&nbsp;&nbsp;<span class="hi-y">backend/</span></div>
+          <div class="term-line" style="margin-top:0.3rem"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> git log --oneline -3</span></div>
+          <div class="term-line term-out"><span class="hi-c">a3f9c2d</span> feat: launch makyneta portfolio</div>
+          <div class="term-line term-out"><span class="hi-c">b8e1f0a</span> feat: add jsmarinhagrande site</div>
+          <div class="term-line term-out"><span class="hi-c">d4c7891</span> feat: ship donut-man fullstack</div>
+          <div class="term-line" style="margin-top:0.3rem"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> npm run build</span></div>
+          <div class="term-line term-out" style="color:var(--green)">✓ Built successfully in 1.2s</div>
+          <div class="term-line"><span class="term-prompt">~/makyneta $</span><span class="term-cursor"></span></div>
+        </div>
+      </div>
+ 
+      <h1 class="page-title">
+        DEVELOP<br>
+        <span class="outline">MENT</span>
+      </h1>
+ 
+      <div class="hero-foot">
+        <p class="hero-lead">
+          <span class="comment">/* Building robust and scalable systems —</span><br>
+          <span class="comment">&nbsp;&nbsp;&nbsp;from front-end interfaces to full-stack</span><br>
+          <span class="comment">&nbsp;&nbsp;&nbsp;platforms. Clean code, real-world impl. */</span>
+        </p>
+        <div class="project-count">
+          <span class="num" id="count-num">12</span>
+          <span id="count-label">projects indexed</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ══ FILTER BAR ══════════════════════════════════════════════ -->
+    <nav id="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Front-end</button>
+      <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+      <button class="filter-btn" data-filter="backend">Back-end</button>
+    </nav>
+ 
+    <!-- ══ PROJECTS ════════════════════════════════════════════════ -->
+    <section id="projects-section" class="reveal">
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+  </main>
+ 
+  <div id="footer"></div>
 
-  <section id="page-hero">
-    <div class="hero-bg-word">DEV</div>
-    <div class="page-eyebrow"><span>Portfolio — Development</span></div>
-    <h1 class="page-title">DEVELOP<br><em>MENT</em></h1>
-    <div class="hero-foot">
-      <p class="hero-lead">Building robust and scalable systems — from front-end interfaces to full-stack platforms. Clean code, deliberate architecture, real-world implementation.</p>
-      <span class="project-count"><span id="visible-count">24</span> Projects</span>
-    </div>
-  </section>
-
-  <nav id="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="frontend">Front-end</button>
-    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
-    <button class="filter-btn" data-filter="backend">Back-end</button>
-  </nav>
-
-  <section id="projects-section" class="reveal">
-    <div class="projects-grid" id="projects-grid">
-
-      <!-- Reusable SVG snippets via JS template -->
-      <!-- Cards generated below -->
-
-    </div>
-  </section>
-</main>
-<div id="footer"></div>
 </body>
 
 </html>

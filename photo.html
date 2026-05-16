@@ -10,7 +10,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/photo.css">
     <link rel="stylesheet" href="assets/styles/geral.css">
-    <!-- Fonnt -->
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,47 +21,109 @@
     <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
-
+  <div id="bar"></div>
+  <div id="cx"></div>
+  <div id="cy"></div>
   <div id="header"></div>
-
-<main>
-
-  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
-  <section id="page-hero">
-    <div class="hero-ghost">PHOTO</div>
-    <div class="eyebrow"><span>Portfolio — Photography</span></div>
-    <h1 class="hero-title"><em>PHOTO</em>GRAPH</h1>
-    <div class="hero-foot">
-      <p class="hero-lead">
-        Streets, stages, people, places.<br>
-        Captured with intention.
-      </p>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num" id="stat-projects">—</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num" id="stat-photos">—</div>
-          <div class="stat-label">Photographs</div>
+ 
+  <main>
+ 
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg">
+        <img id="hero-bg" src="assets/images/projects/photo/cover/50th-anniversary-constitution.jpg" alt=""/>
+      </div>
+      <div class="hero-inner">
+        <div class="h-eye"><span>Portfolio — Photography</span></div>
+        <h1 class="h-title">PHOTO<span class="stroke">GRAPH</span></h1>
+        <div class="h-foot">
+          <p class="h-lead">
+            Streets, stages, people, places.<br>
+            Captured with <em>intention</em> —<br>
+            every frame a deliberate choice.
+          </p>
+          <div class="h-right">
+            <div class="h-stats">
+              <div class="st"><span class="st-n" id="sp">—</span><span class="st-l">Projects</span></div>
+              <div class="st"><span class="st-n" id="sf">—</span><span class="st-l">Frames</span></div>
+            </div>
+            <a href="contact" class="btn-gold">
+              <span>Book a session</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
-  <nav id="filter-bar">
-    <div class="filter-tabs" id="filter-tabs"></div>
-    <span class="project-counter"><span id="visible-count">—</span> projects</span>
-  </nav>
-
-  <!-- ══ GRID ══════════════════════════════════════════════════════ -->
-  <section id="projects" class="reveal">
-    <div class="projects-grid" id="projects-grid"></div>
-  </section>
-
-</main>
-
+      <div class="h-scroll">
+        <div class="scroll-bar"></div>
+        <span class="scroll-txt">Scroll</span>
+      </div>
+    </section>
+ 
+    <!-- TICKER -->
+    <div id="ticker"><div class="ticker-t" id="tt"></div></div>
+ 
+    <!-- FILTER -->
+    <nav id="fbar">
+      <div class="ftabs" id="ftabs"></div>
+      <span class="fc"><strong id="vc">—</strong>&nbsp;projects</span>
+    </nav>
+ 
+    <!-- GRID -->
+    <section id="grid-section" class="reveal">
+      <div class="grid" id="grid"></div>
+    </section>
+ 
+    <!-- HIRE -->
+    <section id="hire" class="reveal">
+      <div class="hire-l">
+        <div class="hire-eyebrow">Available for hire</div>
+        <h2 class="hire-heading">
+          Looking for a photographer<br>who delivers <em>more</em><br>than just images?
+        </h2>
+        <div class="svc-list">
+          <div class="svc">Events &amp; Concerts<span class="svc-arr">→</span></div>
+          <div class="svc">Sports Photography<span class="svc-arr">→</span></div>
+          <div class="svc">Portraits &amp; Headshots<span class="svc-arr">→</span></div>
+          <div class="svc">Street &amp; Documentary<span class="svc-arr">→</span></div>
+          <div class="svc">Institutional Coverage<span class="svc-arr">→</span></div>
+        </div>
+        <a href="contact" class="btn-gold">
+          <span>Get in touch</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hire-r">
+        <div class="avail">
+          <span class="avail-dot"></span>
+          Available — Portugal
+        </div>
+        <blockquote class="hire-quote">
+          "Every project is approached with the same discipline — technical precision meets instinct, and instinct meets story."
+        </blockquote>
+        <div class="contact-block">
+          <div class="contact-row">
+            <span class="c-key">Email</span>
+            <span class="c-val">makyneta@tutamail.com</span>
+          </div>
+          <div class="contact-row">
+            <span class="c-key">WhatsApp</span>
+            <span class="c-val">+351 933 338 431</span>
+          </div>
+          <div class="contact-row">
+            <span class="c-key">Location</span>
+            <span class="c-val">Leiria · Portugal</span>
+          </div>
+          <div class="contact-row">
+            <span class="c-key">Availability</span>
+            <span class="c-val" style="color:#44e09a">Nationwide</span>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
   <div id="footer"></div>
 
 </body>
