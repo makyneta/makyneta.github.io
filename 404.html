@@ -10,301 +10,372 @@
     <meta property="og:type" content="website">
     <meta property="og:image" id="og-image-tag" content="assets/images/branding/og-image.png">
     <!-- Title_Favicon -->
-    <title>Makyneta</title>
+    <title>Makyneta - 404</title>
     <link rel="icon" href="/assets/images/ui/favicon.png" type="image/png">
 
-    <!--
-    ╔══════════════════════════════════════════════════════╗
-    ║  REDIRECT ENGINE — ordem de execução:               ║
-    ║  1. <meta http-equiv="refresh"> injetado via JS     ║
-    ║     antes do </head> → dispara antes do render      ║
-    ║  2. window.location.replace() como fallback imediato║
-    ╚══════════════════════════════════════════════════════╝
-    -->
-    <script>
-        // ── Tabela de redirects ──────────────────────────────────────────────
-        const redirects = {
-            // SOCIAL_MEDIA
-            'whatsapp': { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
-            'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
-            'instagram': { url: 'https://www.instagram.com/makyneta_', label: 'Instagram' },
-            'backerz': { url: 'https://backerz.me/makyneta', label: 'Backerz' },
-            'github': { url: 'https://github.com/makyneta', label: 'GitHub' },
-
-            // CLIENTS
-            'camg-download': { url: 'https://mega.nz/folder/YqIBQCgT#zevdmI5tDayVSijJasRUaA', label: "CAMG Download" },
-            'jsmg-download': { url: 'https://mega.nz/folder/k7IVQSjR#0stw1G-2sIH5p-GSSAR4uA', label: "JSMG Download" },
-
-            // CLIENTS
-            'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw', label: "MAYDAY's Design" },
-            'camg-cartazes-meetingfernandoalves': { url: 'https://mega.nz/folder/YqIBQCgT#zevdmI5tDayVSijJasRUaA', label: "CAMG Cartazes - 12º Meeting Fernando Alves" },
-
-            // WORK_PHOTO
-            'penetraslive': { url: 'https://www.behance.net/gallery/232189175/Music-OP-Live-Performance-at-CDSS', label: "Penetras Live" },
-            'songraiders': { url: 'https://www.behance.net/gallery/231746927/Music-SR-LIve-Performance-at-MG2024CF', label: 'Song Raiders' },
-            'alpla': { url: 'https://www.behance.net/gallery/231766181/Sport-IA-Inter-Company-Tournament', label: 'ALPLA @ Inter-Company Tournament' },
-            'gdpcc': { url: 'https://www.behance.net/gallery/232285927/Sport-GDPCC-Impor4mill-Sumer-Cup', label: 'GDPCC Inter4mill SummerCup' },
-            'luissantosgdpcc': { url: 'https://www.behance.net/gallery/232285591/Sport-GDPCC-Luis-Santos', label: 'GDPCC Luís Santos' },
-            'tomasramosgdpcc': { url: 'https://www.behance.net/gallery/232285481/Sport-GDPCC-Tomas-Ramos', label: 'GDPCC Tomás Ramos' },
-            'penetrasrtp': { url: 'https://www.behance.net/gallery/232190989/Music-OP-Live-Performance-at-Estrelas-ao-Sabado', label: 'Penetras Live RTP' },
-            'penetras': { url: 'https://www.behance.net/gallery/232210639/Music-OP-Photoshoot', label: 'Penetras' },
-            'pombalcup': { url: 'https://www.behance.net/gallery/231754863/Sport-ACM-PombalCup', label: 'ACM PombalCup' },
-            'u13trainings': { url: 'https://www.behance.net/gallery/231756789/Sport-ACM-U-13-Trainings', label: 'u-13 Trainings' },
-            'acmparty': { url: 'https://www.behance.net/gallery/231760081/festa-acmarinhense', label: 'ACM Party' },
-            'fairplaycalazans': { url: 'https://makyneta.pixieset.com/fairplaycalazans/', label: "30ª Edição do Fair Play Calazans" },
-            '50aniversarioconstituicao': { url: 'https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic/', label: "50º Aniversário da Constituição da República Portuguesa"},
-            '50anniversaryconstitution': { url: 'https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic/', label: "50th Anniversary of the Constitution of the Portuguese Republic"},
-            'saladeespera': { url: 'https://makyneta.pixieset.com/saladeespera/', label: "Sala de Espera" },
-
-            // WORK_MUSIC
-            'listen': { url: 'https://lnkfi.re/makyneta', label: 'Listen to Makyneta' },
-            'inmyblood': { url: 'https://lnkfi.re/inmyblood_', label: 'In My Blood' },
-
-            // IT_TOOLS
-            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
-            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
-
-            // JS_MARINHAGRANDE
-            'jsmg-instagram': { url: 'https://www.instagram.com/js.marinhagrande', label: 'Marinha Grande Socialist Youth @ Instagram' },
-            'jsmg-facebook': { url: 'https://www.facebook.com/jsocialistamg', label: 'Marinha Grande Socialist Youth @ Facebook' },
-
-            // CMMG_LINKS
-            'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande', label: 'CMMG Facebook' },
-            'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande', label: 'CMMG Instagram' },
-            'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande', label: 'CMMG YouTube' },
-            'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542', label: 'CMMG Kristin' },
-            'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade', label: 'CMMG Kristin Form' },
-            'todospelamarinha': { url: 'https://www.instagram.com/p/DXZ8pq6DZ-h/', label: 'Todos pela Marinha' },
-
-            // OTHERS
-            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A',},
-            'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN', label: 'Adobe' },
-            'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
-            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view?usp=drive_link', label: 'Adobe Photoshop' },
-            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view?usp=drive_link', label: 'Adobe After Effects' },
-            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view?usp=drive_link', label: 'Adobe Animate' },
-            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
-            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
-            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view?usp=drive_link', label: 'Adobe Illustrator' },
-            '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview', label: '3ds Max' },
-            'blender': { url: 'https://www.blender.org/download/', label: 'Blender' },
-            'audacity': { url: 'https://www.audacityteam.org/download/', label: 'Audacity' },
-            'cptmapps': { url: '/archive/download-cptm-apps', label: 'Download the Applications to Multimedia Course' },
-            'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA', label: "AEMGP's Toolkit" },
-            'tempestade-kristin': { url: '/archive/kristin', label: 'Kristin Storm' },
-            'kristin': { url: '/archive/kristin', label: 'Kristin Storm' },
-            'mj': { url: 'https://www.playimdb.com/title/tt11378946/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_MI', label: 'MJ' },
-
-            // STREAM
-            'inmyblood_spotify': { url: '/inmyblood'},
-            'inmyblood_applemusic': { url: '/inmyblood'},
-            'inmyblood_itunes': { url: '/inmyblood'},
-            'inmyblood_deezer': { url: '/inmyblood'},
-            'inmyblood_youtube': { url: '/inmyblood'},
-            'inmyblood_youtubemusic': { url: '/inmyblood'},
-        };
-
-        // ── Resolve slug e dispara redirect o mais cedo possível ─────────────
-        const slug = window.location.pathname.split('/').filter(Boolean).pop()?.toLowerCase();
-        const match = slug && redirects[slug];
-
-        if (match) {
-            // 1️⃣ og:image personalizado (antes de qualquer render)
-            if (match.og_image) {
-                const ogImg = document.createElement('meta');
-                ogImg.setAttribute('property', 'og:image');
-                ogImg.content = match.og_image;
-                document.head.appendChild(ogImg);
-            }
-
-            // 2️⃣ Meta refresh — o browser usa isto antes de renderizar o body
-            const meta = document.createElement('meta');
-            meta.httpEquiv = 'refresh';
-            meta.content = '0;url=' + match.url;
-            document.head.appendChild(meta);
-
-            // 3️⃣ location.replace — fallback JS imediato, sem deixar histórico
-            window.location.replace(match.url);
-        }
-    </script>
-
-    <!-- Fonts e estilos — só relevantes se for um 404 real -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #f7f6f3;
-            --primary: #111111;
-            --accent: #31d094;
-            --text-dim: rgba(17, 17, 17, 0.4);
-            --glitch-speed: 4s;
+            --bg:      #0f0f0f;
+            --bg2:     #1a1a1a;
+            --accent:  #d4af37;
+            --fg:      #ffffff;
+            --dim:     #b0b0b0;
+            --border:  rgba(212,175,55,0.15);
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-serif:   'Cormorant Garamond', serif;
+            --font-mono:    'Fira Code', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            background-color: var(--bg);
-            color: var(--primary);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            height: 100vh;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-mono);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            perspective: 1000px;
         }
 
-        body::before {
-            content: " ";
-            position: absolute;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-            z-index: 100;
-            background-size: 100% 4px, 3px 100%;
-            pointer-events: none;
-        }
-
-        .scanline {
-            width: 100%;
-            height: 100px;
-            z-index: 101;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
-            opacity: 0.1;
-            position: absolute;
-            bottom: 100%;
-            animation: scanline 8s linear infinite;
+        .noise {
+            position: fixed; inset: 0; pointer-events: none; z-index: 500; opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 128px;
         }
 
         .container {
             position: relative;
             z-index: 10;
             text-align: center;
-            padding: 2rem;
-            max-width: 700px;
-            animation: containerAppear 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-            transition: transform 0.1s ease-out;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            animation: riseIn 0.9s ease 0.2s both;
         }
 
-        .glitch-container { position: relative; margin-bottom: 0rem; }
-
-        .main-code {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(5rem, 18vw, 9rem);
-            font-weight: 300;
+        /* ─── HERO ────────────────────────────────────────── */
+        .hero-ghost {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            font-family: var(--font-display);
+            font-size: clamp(8rem, 35vw, 20rem);
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212,175,55,0.08);
+            pointer-events: none;
             line-height: 1;
-            letter-spacing: -0.05em;
+            letter-spacing: 0.04em;
+        }
+
+        .content {
             position: relative;
-            color: var(--primary);
-            display: inline-block;
+            z-index: 1;
         }
 
-        .main-code::before, .main-code::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--bg);
-            clip: rect(0, 0, 0, 0);
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: riseIn 0.8s ease 0.4s forwards;
         }
 
-        .main-code::before { left: -2px; text-shadow: 2px 0 #ff00c1; animation: glitch-anim-1 var(--glitch-speed) infinite linear alternate-reverse; }
-        .main-code::after  { left:  2px; text-shadow: -2px 0 #00fff9; animation: glitch-anim-2 var(--glitch-speed) infinite linear alternate-reverse; }
+        .eyebrow::before {
+            content: '';
+            width: 22px;
+            height: 1px;
+            background: var(--accent);
+            display: block;
+            box-shadow: 0 0 8px rgba(212,175,55,0.4);
+        }
 
-        h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 500;
-            letter-spacing: 0.3em;
+        .eyebrow span {
+            font-family: var(--font-mono);
+            font-size: 0.56rem;
+            letter-spacing: 0.38em;
+            color: var(--accent);
             text-transform: uppercase;
-            margin-bottom: 1rem;
-            opacity: 0.8;
+            font-weight: 600;
         }
 
-        p {
+        .error-code {
+            font-family: var(--font-display);
+            font-size: clamp(5rem, 15vw, 12rem);
+            line-height: 0.9;
+            letter-spacing: 0.02em;
+            color: var(--fg);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: riseIn 0.9s ease 0.5s forwards;
+            text-shadow: 0 0 30px rgba(212,175,55,0.2);
+        }
+
+        .error-code em {
+            color: transparent;
+            font-style: normal;
+            -webkit-text-stroke: 1.5px var(--accent);
+        }
+
+        .error-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            letter-spacing: 0.04em;
+            color: var(--fg);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: riseIn 0.9s ease 0.6s forwards;
+        }
+
+        .error-desc {
+            font-family: var(--font-serif);
             font-size: 1rem;
-            color: var(--text-dim);
-            line-height: 1.8;
-            margin-bottom: 3rem;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.6);
             font-weight: 300;
-            max-width: 400px;
+            margin-bottom: 3rem;
+            max-width: 500px;
             margin-left: auto;
             margin-right: auto;
+            opacity: 0;
+            animation: riseIn 0.9s ease 0.7s forwards;
         }
 
-        .btn {
-            position: relative;
-            padding: 1.2rem 3rem;
-            background: transparent;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 0.3em;
+        .language-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: riseIn 0.9s ease 0.8s forwards;
+        }
+
+        .lang-btn {
+            font-family: var(--font-mono);
+            font-size: 0.56rem;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(212,175,55,0.3);
+            background: transparent;
+            color: var(--dim);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(212,175,55,0.1);
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: var(--accent);
+            color: #000;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.85rem 1.8rem;
+            position: relative;
             overflow: hidden;
-            display: inline-block;
+            transition: color 0.3s;
+            opacity: 0;
+            animation: riseIn 0.9s ease 0.9s forwards;
         }
 
-        .btn:hover {
-            border-color: var(--primary);
-            background: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #ffffff;
+            transform: translateX(-101%);
+            transition: transform 0.4s cubic-bezier(0.77,0,0.175,1);
         }
 
-        @keyframes scanline {
-            0%   { bottom: 100%; }
-            100% { bottom: -100%; }
+        .btn-primary:hover {
+            color: var(--accent);
         }
 
-        @keyframes containerAppear {
-            from { opacity: 0; transform: scale(0.9) translateY(30px); filter: blur(10px); }
-            to   { opacity: 1; transform: scale(1)   translateY(0);    filter: blur(0); }
+        .btn-primary:hover::before {
+            transform: translateX(0);
         }
 
-        @keyframes glitch-anim-1 {
-            0%, 100% { clip: rect(0, 0, 0, 0); }
-            5%  { clip: rect(10px, 9999px, 40px, 0); transform: translate(-5px); }
-            10% { clip: rect(60px, 9999px, 80px, 0); transform: translate(5px); }
-            15% { clip: rect(0, 0, 0, 0); }
+        .btn-primary span,
+        .btn-arrow {
+            position: relative;
+            z-index: 1;
         }
 
-        @keyframes glitch-anim-2 {
-            0%, 100% { clip: rect(0, 0, 0, 0); }
-            7%  { clip: rect(30px, 9999px, 50px, 0); transform: translate(5px); }
-            12% { clip: rect(70px, 9999px, 90px, 0); transform: translate(-5px); }
-            18% { clip: rect(0, 0, 0, 0); }
+        .btn-arrow {
+            font-size: 1rem;
+        }
+
+        /* ─── ANIMATIONS ───────────────────────────────── */
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── RESPONSIVE ───────────────────────────────── */
+        @media (max-width: 768px) {
+            .container { padding: 3rem 1.5rem; }
+            .error-code { font-size: clamp(3rem, 12vw, 6rem); }
+            .error-title { font-size: clamp(1.3rem, 2.5vw, 2rem); }
+            .error-desc { font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="scanline"></div>
+    <div class="noise"></div>
 
     <div class="container">
-        <div class="glitch-container">
-            <h1 class="main-code" data-text="404" id="display-code">404</h1>
-        </div>
+        <div class="hero-ghost">404</div>
 
-        <h2 id="display-title">Página Não Encontrada</h2>
+        <div class="content">
+            <div class="eyebrow">
+                <span id="eyebrow-text">Error</span>
+            </div>
 
-        <p id="display-msg">
-            O endereço solicitado não pôde ser encontrado.<br>Clique abaixo para voltar à página inicial.
-        </p>
+            <h1 class="error-code">
+                <span id="code-number">4</span><em id="code-accent">0</em><span id="code-number-2">4</span>
+            </h1>
 
-        <div class="action-box">
-            <a href="/" id="main-btn" class="btn">Ir para a Página Inicial</a>
+            <h2 class="error-title" id="error-title">Page Not Found</h2>
+
+            <p class="error-desc" id="error-desc">
+                The page you are looking for doesn't exist or has been moved.
+                Go back to the home page to continue exploring.
+            </p>
+
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+                <button class="lang-btn" data-lang="pt" onclick="changeLanguage('pt')">Português</button>
+                <button class="lang-btn" data-lang="es" onclick="changeLanguage('es')">Español</button>
+                <button class="lang-btn" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
+            </div>
+
+            <a href="/" class="btn-primary">
+                <span id="btn-text">Home</span>
+                <span class="btn-arrow">→</span>
+            </a>
         </div>
     </div>
 
     <script>
-        // Interação de rato — só relevante na página 404 real
-        document.addEventListener('mousemove', (e) => {
-            const moveX = (e.clientX - window.innerWidth  / 2) * 0.01;
-            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-            document.querySelector('.container').style.transform = `rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
+        // ── Redirect engine ──────────────────────────────────────
+        const redirects = {
+            'whatsapp': { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
+            'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
+            'instagram': { url: 'https://www.instagram.com/makyneta_', label: 'Instagram' },
+            'backerz': { url: 'https://backerz.me/makyneta', label: 'Backerz' },
+            'github': { url: 'https://github.com/makyneta', label: 'GitHub' },
+            'camg-download': { url: 'https://mega.nz/folder/YqIBQCgT#zevdmI5tDayVSijJasRUaA', label: "CAMG Download" },
+            'jsmg-download': { url: 'https://mega.nz/folder/k7IVQSjR#0stw1G-2sIH5p-GSSAR4uA', label: "JSMG Download" },
+            'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw', label: "MAYDAY's Design" },
+            'penetraslive': { url: 'https://www.behance.net/gallery/232189175/Music-OP-Live-Performance-at-CDSS', label: "Penetras Live" },
+            'songraiders': { url: 'https://www.behance.net/gallery/231746927/Music-SR-LIve-Performance-at-MG2024CF', label: 'Song Raiders' },
+            'alpla': { url: 'https://www.behance.net/gallery/231766181/Sport-IA-Inter-Company-Tournament', label: 'ALPLA @ Inter-Company Tournament' },
+            'listen': { url: 'https://lnkfi.re/makyneta', label: 'Listen to Makyneta' },
+            'inmyblood': { url: 'https://lnkfi.re/inmyblood_', label: 'In My Blood' },
+            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
+            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A' },
+            'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN', label: 'Adobe' },
+        };
+
+        // Executa redirect
+        const slug = window.location.pathname.split('/').filter(Boolean).pop()?.toLowerCase();
+        const match = slug && redirects[slug];
+
+        if (match) {
+            const meta = document.createElement('meta');
+            meta.httpEquiv = 'refresh';
+            meta.content = '0;url=' + match.url;
+            document.head.appendChild(meta);
+            window.location.replace(match.url);
+        }
+
+        // ── Language system ──────────────────────────────────────
+        const translations = {
+            en: {
+                eyebrow: 'Error',
+                title: 'Page Not Found',
+                desc: 'The page you are looking for doesn\'t exist or has been moved. Go back to the home page to continue exploring.',
+                btn: 'Home'
+            },
+            pt: {
+                eyebrow: 'Erro',
+                title: 'Página Não Encontrada',
+                desc: 'A página que procura não existe ou foi movida. Volte à página inicial para continuar explorando.',
+                btn: 'Início'
+            },
+            es: {
+                eyebrow: 'Error',
+                title: 'Página No Encontrada',
+                desc: 'La página que buscas no existe o ha sido movida. Vuelve a la página de inicio para continuar explorando.',
+                btn: 'Inicio'
+            },
+            ja: {
+                eyebrow: 'エラー',
+                title: 'ページが見つかりません',
+                desc: 'お探しのページは存在しないか、移動しました。ホームページに戻って探索を続けてください。',
+                btn: 'ホーム'
+            }
+        };
+
+        function changeLanguage(lang) {
+            const t = translations[lang];
+            
+            // Update text
+            document.getElementById('eyebrow-text').textContent = t.eyebrow;
+            document.getElementById('error-title').textContent = t.title;
+            document.getElementById('error-desc').textContent = t.desc;
+            document.getElementById('btn-text').textContent = t.btn;
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+            // Update HTML lang
+            document.documentElement.lang = lang;
+
+            // Save preference
+            localStorage.setItem('makyneta_language', lang);
+        }
+
+        // ── Load saved language or detect ──────────────────────
+        window.addEventListener('DOMContentLoaded', () => {
+            let lang = localStorage.getItem('makyneta_language');
+            
+            if (!lang) {
+                const browserLang = navigator.language.split('-')[0];
+                lang = ['en', 'pt', 'es', 'ja'].includes(browserLang) ? browserLang : 'en';
+            }
+
+            changeLanguage(lang);
         });
     </script>
 </body>
