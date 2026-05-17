@@ -25,18 +25,18 @@
     const PHOTO_PROJECTS = [
       { id:3, title:"50th Anniversary of the Constitution of the Portuguese Republic",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/cover/50th-anniversary-constitution.jpg",
+        cover:"assets/images/projects/photo/50th-anniversary-constitution.jpg",
         slug:"/50anniversaryconstitution", photoCount:127 },
 
       { id:2, title:"Fair Play Calazans",
         category:"sport", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/cover/fair-play-calazans.jpg",
+        cover:"assets/images/projects/photo/fair-play-calazans.jpg",
         slug:"/fairplaycalazans", photoCount:1129 },
 
       { id:1, title:"PombalCup",
         category:"sport", year:"2025", location:"Pombal",
         desc:"",
-        cover:"assets/images/projects/photo/cover/pombalcup.jpg",
+        cover:"assets/images/projects/photo/pombalcup.jpg",
         slug:"/pombalcup", photoCount:0 },
     ];
  

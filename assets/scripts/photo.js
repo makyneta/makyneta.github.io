@@ -1,53 +1,53 @@
     const PROJECTS = [
       { id:9, title:"50th Anniversary of the Constitution of the Portuguese Republic",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/cover/50th-anniversary-constitution.jpg",
+        cover:"assets/images/projects/photo/50th-anniversary-constitution.jpg",
         slug:"/50anniversaryconstitution", photoCount:127 },
 
       { id:8, title:"Fair Play Calazans",
         category:"sport", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/cover/fair-play-calazans.jpg",
+        cover:"assets/images/projects/photo/fair-play-calazans.jpg",
         slug:"/fairplaycalazans", photoCount:1129 },
 
       { id:7, title:"PombalCup",
         category:"sport", year:"2025", location:"Pombal",
         desc:"",
-        cover:"assets/images/projects/photo/cover/pombalcup.jpg",
+        cover:"assets/images/projects/photo/pombalcup.jpg",
         slug:"", photoCount:0 },
       
       { id:6, title:"Penetras",
         category:"portrait", year:"2025", location:"Marinha Grande",
         desc:"",
-        cover:"assets/images/projects/photo/cover/penetras.jpg",
+        cover:"assets/images/projects/photo/penetras.jpg",
         slug:"", photoCount:0 },
       
       { id:5, title:"Penetras @ Estrelas ao Sábado",
         category:"event", year:"2024", location:"Lisboa",
         desc:"",
-        cover:"assets/images/projects/photo/cover/penetras-estrelas-ao-sabado.jpg",
+        cover:"assets/images/projects/photo/penetras-estrelas-ao-sabado.jpg",
         slug:"", photoCount:0 },
       
       { id:4, title:"Costa da Caparica Fishermen's Sports Group",
         category:"sport", year:"2024", location:"Marinha Grande",
         desc:"",
-        cover:"assets/images/projects/photo/cover/gdpcc.jpg",
+        cover:"assets/images/projects/photo/gdpcc.jpg",
         slug:"", photoCount:0 },
       
       { id:3, title:"IberoAlpla",
         category:"sport", year:"2024", location:"Marinha Grande",
         desc:"IberoAlpla in the inter-company tournament.",
-        cover:"assets/images/projects/photo/cover/iberoalpla.jpg",
+        cover:"assets/images/projects/photo/iberoalpla.jpg",
         slug:"", photoCount:0 },
       
       { id:2,  title:"Song Raiders",
         category:"event", year:"2024", location:"Marinha Grande",
         desc:"Song Raiders live at the Marinha Grande City Festivals 2024, with Kalú, bassist of Xutos & Pontapés.",
-        cover:"assets/images/projects/photo/cover/song-raiders.jpg",
+        cover:"assets/images/projects/photo/song-raiders.jpg",
         slug:"", photoCount:0 },
       
       { id:1,  title:"Penetras Live",
         category:"event", year:"2024", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/cover/penetras-live.jpg",
+        cover:"assets/images/projects/photo/penetras-live.jpg",
         slug:"", photoCount:0 },
     ];
  
