@@ -286,22 +286,76 @@
     <script>
         // ── Redirect engine ──────────────────────────────────────
         const redirects = {
+            // SOCIAL_MEDIA
             'whatsapp': { url: 'https://wa.me/351933338431', label: 'WhatsApp' },
             'mail': { url: 'mailto:makynetastudios@gmail.com', label: 'Email' },
             'instagram': { url: 'https://www.instagram.com/makyneta_', label: 'Instagram' },
             'backerz': { url: 'https://backerz.me/makyneta', label: 'Backerz' },
             'github': { url: 'https://github.com/makyneta', label: 'GitHub' },
+
+            // CLIENTS
             'camg-download': { url: 'https://mega.nz/folder/YqIBQCgT#zevdmI5tDayVSijJasRUaA', label: "CAMG Download" },
             'jsmg-download': { url: 'https://mega.nz/folder/k7IVQSjR#0stw1G-2sIH5p-GSSAR4uA', label: "JSMG Download" },
+
+            // CLIENTS
             'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw', label: "MAYDAY's Design" },
+            'camg-cartazes-meetingfernandoalves': { url: 'https://mega.nz/folder/YqIBQCgT#zevdmI5tDayVSijJasRUaA', label: "CAMG Cartazes - 12º Meeting Fernando Alves" },
+
+            // WORK_PHOTO
             'penetraslive': { url: 'https://www.behance.net/gallery/232189175/Music-OP-Live-Performance-at-CDSS', label: "Penetras Live" },
             'songraiders': { url: 'https://www.behance.net/gallery/231746927/Music-SR-LIve-Performance-at-MG2024CF', label: 'Song Raiders' },
             'alpla': { url: 'https://www.behance.net/gallery/231766181/Sport-IA-Inter-Company-Tournament', label: 'ALPLA @ Inter-Company Tournament' },
+            'gdpcc': { url: 'https://www.behance.net/gallery/232285927/Sport-GDPCC-Impor4mill-Sumer-Cup', label: 'GDPCC Inter4mill SummerCup' },
+            'luissantosgdpcc': { url: 'https://www.behance.net/gallery/232285591/Sport-GDPCC-Luis-Santos', label: 'GDPCC Luís Santos' },
+            'tomasramosgdpcc': { url: 'https://www.behance.net/gallery/232285481/Sport-GDPCC-Tomas-Ramos', label: 'GDPCC Tomás Ramos' },
+            'penetrasrtp': { url: 'https://www.behance.net/gallery/232190989/Music-OP-Live-Performance-at-Estrelas-ao-Sabado', label: 'Penetras Live RTP' },
+            'penetras': { url: 'https://www.behance.net/gallery/232210639/Music-OP-Photoshoot', label: 'Penetras' },
+            'pombalcup': { url: 'https://www.behance.net/gallery/231754863/Sport-ACM-PombalCup', label: 'ACM PombalCup' },
+            'u13trainings': { url: 'https://www.behance.net/gallery/231756789/Sport-ACM-U-13-Trainings', label: 'u-13 Trainings' },
+            'acmparty': { url: 'https://www.behance.net/gallery/231760081/festa-acmarinhense', label: 'ACM Party' },
+            'fairplaycalazans': { url: 'https://makyneta.pixieset.com/fairplaycalazans/', label: "30ª Edição do Fair Play Calazans" },
+            '50aniversarioconstituicao': { url: 'https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic/', label: "50º Aniversário da Constituição da República Portuguesa"},
+            '50anniversaryconstitution': { url: 'https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic/', label: "50th Anniversary of the Constitution of the Portuguese Republic"},
+            'saladeespera': { url: 'https://makyneta.pixieset.com/saladeespera/', label: "Sala de Espera" },
+
+            // WORK_MUSIC
             'listen': { url: 'https://lnkfi.re/makyneta', label: 'Listen to Makyneta' },
             'inmyblood': { url: 'https://lnkfi.re/inmyblood_', label: 'In My Blood' },
+
+            // IT_TOOLS
             'cuco': { url: 'https://cuco.inforlandia.pt/ucode/', label: 'Cuco' },
-            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A' },
+            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/', label: 'Cuco Update' },
+
+            // JS_MARINHAGRANDE
+            'jsmg-instagram': { url: 'https://www.instagram.com/js.marinhagrande', label: 'Marinha Grande Socialist Youth @ Instagram' },
+            'jsmg-facebook': { url: 'https://www.facebook.com/jsocialistamg', label: 'Marinha Grande Socialist Youth @ Facebook' },
+
+            // CMMG_LINKS
+            'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande', label: 'CMMG Facebook' },
+            'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande', label: 'CMMG Instagram' },
+            'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande', label: 'CMMG YouTube' },
+            'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542', label: 'CMMG Kristin' },
+            'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade', label: 'CMMG Kristin Form' },
+            'todospelamarinha': { url: 'https://www.instagram.com/p/DXZ8pq6DZ-h/', label: 'Todos pela Marinha' },
+
+            // OTHERS
+            'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A',},
             'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN', label: 'Adobe' },
+            'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view', label: 'Adobe Lightroom Classic' },
+            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view?usp=drive_link', label: 'Adobe Photoshop' },
+            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view?usp=drive_link', label: 'Adobe After Effects' },
+            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view?usp=drive_link', label: 'Adobe Animate' },
+            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
+            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link', label: 'Adobe Premiere Pro' },
+            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view?usp=drive_link', label: 'Adobe Illustrator' },
+            '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview', label: '3ds Max' },
+            'blender': { url: 'https://www.blender.org/download/', label: 'Blender' },
+            'audacity': { url: 'https://www.audacityteam.org/download/', label: 'Audacity' },
+            'cptmapps': { url: '/archive/download-cptm-apps', label: 'Download the Applications to Multimedia Course' },
+            'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA', label: "AEMGP's Toolkit" },
+            'tempestade-kristin': { url: '/archive/kristin', label: 'Kristin Storm' },
+            'kristin': { url: '/archive/kristin', label: 'Kristin Storm' },
+            'mj': { url: 'https://www.playimdb.com/title/tt11378946/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_MI', label: 'MJ' },
         };
 
         // Executa redirect
