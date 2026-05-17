@@ -56,8 +56,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   
   // Calcula quantos cards por página
   function getPerView() {
-    if (window.innerWidth >= 900) return Math.min(3, total);
-    if (window.innerWidth >= 600) return Math.min(2, total);
+    if (window.innerWidth >= 900) return 2;
     return 1;
   }
   
@@ -79,9 +78,11 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   function goTo(page){
     current = Math.max(0, Math.min(page, pages-1));
-    const offset = current * perView * (100/total);
+    // Calcula o offset: cada página ocupa (100 / perView) % do slider
+    const offsetPerPage = 100 / perView;
+    const offset = current * offsetPerPage;
     slider.style.transform = `translateX(-${offset}%)`;
-    slider.style.transition = 'transform 0.4s cubic-bezier(0.77,0,0.175,1)';
+    slider.style.transition = 'transform 0.5s cubic-bezier(0.77,0,0.175,1)';
     
     if (dotsWrap) {
       dotsWrap.querySelectorAll('.test-dot').forEach((d,i)=>d.classList.toggle('on',i===current));
@@ -91,14 +92,6 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   // Botões anterior/próximo
   if(prevBtn) prevBtn.addEventListener('click', ()=>goTo(current-1));
   if(nextBtn) nextBtn.addEventListener('click', ()=>goTo(current+1));
-
-  // Auto-slide
-  let auto = setInterval(()=>goTo(current+1<pages ? current+1 : 0), 5500);
-  
-  slider.addEventListener('mouseenter', ()=>clearInterval(auto));
-  slider.addEventListener('mouseleave', ()=>{ 
-    auto = setInterval(()=>goTo(current+1<pages ? current+1 : 0), 5500); 
-  });
 
   // Touch swipe para mobile
   let tx = 0;
@@ -111,14 +104,16 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     ty = e.touches[0].clientY;
     touchStarted = true;
     slider.style.transition = 'none';
-    clearInterval(auto);
   }, {passive:true});
   
   slider.addEventListener('touchmove', e=>{
     if (!touchStarted || e.touches.length === 0) return;
     const currentX = e.touches[0].clientX;
     const diffX = tx - currentX;
-    slider.style.transform = `translateX(calc(-${current * perView * (100/total)}% - ${diffX}px))`;
+    const offsetPerPage = 100 / perView;
+    const offset = current * offsetPerPage;
+    const movePercent = (diffX / slider.offsetWidth) * offsetPerPage;
+    slider.style.transform = `translateX(calc(-${offset}% - ${movePercent}%))`;
   }, {passive:true});
   
   slider.addEventListener('touchend', e=>{
@@ -130,7 +125,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     const diffY = ty - e.changedTouches[0].clientY;
     
     // Só navegar se for swipe horizontal significativo
-    if(Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+    if(Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
       if(diffX > 0) {
         goTo(current + 1);
       } else {
@@ -139,9 +134,6 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     } else {
       goTo(current);
     }
-    
-    // Reinicia auto-slide
-    auto = setInterval(()=>goTo(current+1<pages ? current+1 : 0), 5500);
   }, {passive:true});
 
   // Responsive resize
@@ -158,4 +150,4 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   buildDots();
   goTo(0);
-})();   
+})();
