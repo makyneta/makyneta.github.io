@@ -1,166 +1,191 @@
-/* ─────────────────────────────────────────────────────────────────
-   PROJECTS DATA
-   Add / remove projects here. Fields:
-     id, title, category, tags (tools/stack), desc, image, link
-   image: path to project image (can be empty string for placeholder)
-   link:  URL to open on click (leave "" to open lightbox instead)
-───────────────────────────────────────────────────────────────── */
-const JSON_PATH = 'assets/data/design.json';
-let PROJECTS = [];
+    /* ── Data ── */
+    const PROJECTS = [
+      { id:8, title:"Dia Internacional do Trabalhador",
+        category:"social", tags:["Illustrator","Photoshop"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-diatrabalhador.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-diatrabalhador.jpg",
+        link:"" },
 
-/* ── Categories ── */
-const CATEGORIES = [
-  { id: 'all',      label: 'All' },
-  { id: 'branding', label: 'Branding' },
-  { id: 'ui',       label: 'UI / Digital' },
-  { id: 'print',    label: 'Print' },
-  { id: 'social',   label: 'Social Media' },
-];
+      { id:7, title:"Dia da Revolução dos Cravos",
+        category:"social", tags:["Illustrator","Photoshop"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-revolucaocravos.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-revolucaocravos.jpg",
+        link:"" },
 
-let currentCat = 'all';
+      { id:6, title:"Fair Play Calazans",
+        category:"event", tags:["Illustrator"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/fair-play-calazans.jpg",
+        preview:"assets/images/projects/design/preview/fair-play-calazans.jpg",
+        link:"" },
 
-/* ── Build image or placeholder ── */
-/* Uses p.image for the card thumbnail */
-function cardVisual(p) {
-  if (p.image) {
-    return `<div class="card-visual"><img src="${p.image}" alt="${p.title}" loading="lazy" /></div>`;
-  }
-  return `<div class="card-visual"><div class="card-placeholder">[ IMAGE ]</div></div>`;
-}
+      { id:5, title:"Nacional Day of Student",
+        category:"social", tags:["Illustrator","Photoshop"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-diaestudante.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-diaestudante.jpg",
+        link:"" },
 
-/* ── Build card HTML ── */
-/* p.preview = image shown in lightbox on click (falls back to p.image if absent) */
-function buildCard(p, extraClass = 'normal') {
-  const tools = (p.tags || []).map(t => `<span class="tool-pill">${t}</span>`).join('');
-  const previewSrc = p.preview || p.image || '';
+      { id:4, title:"JS Visita Sede PS",
+        category:"social", tags:["Illustrator"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-visitaps.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-visitaps.jpg",
+        link:"" },
 
-  const clickAttr = p.link
-    ? `href="${p.link}" target="_blank" rel="noopener"`
-    : `href="#" data-lightbox="${previewSrc}" data-caption="${p.title}"`;
+      { id:3, title:"JS Visita Parlamento",
+        category:"social", tags:["Illustrator"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-visitaparl.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-visitaparl.jpg",
+        link:"" },
 
-  return `
-    <a ${clickAttr} class="project-card ${extraClass} reveal"
-       data-cat="${p.category}" data-id="${p.id}">
-      ${cardVisual(p)}
-      <div class="card-body">
-        <div class="card-top">
-          <span class="card-tag">${p.category}</span>
-          <span class="card-num">${String(p.id).padStart(2,'0')}</span>
-        </div>
-        <h3 class="card-title">${p.title}</h3>
-        <p class="card-desc">${p.desc || ''}</p>
-        <div class="card-footer">
-          <div class="card-tools">${tools}</div>
-          <span class="card-arrow">${p.link ? 'View →' : 'Preview →'}</span>
-        </div>
-      </div>
-    </a>`;
-}
+      { id:2, title:"Lecture Advertising Poster",
+        category:"print", tags:["Illustrator","Photoshop"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/bullying-lecture.jpg",
+        preview:"assets/images/projects/design/preview/bullying-lecture.jpg",
+        link:"" },
 
-/* ── Render all projects for a given filter ── */
-function renderProjects(cat) {
-  const pool = cat === 'all'
-    ? [...PROJECTS]
-    : PROJECTS.filter(p => p.category === cat);
-
-  pool.sort((a, b) => b.id - a.id);
-
-  const grid = document.getElementById('projects-grid');
-
-  if (pool.length === 0) {
-    grid.innerHTML = `<div style="padding:4rem;font-family:var(--font-mono);font-size:0.56rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;grid-column:1/-1;">No projects found.</div>`;
-    document.getElementById('visible-count').textContent = 0;
-    return;
-  }
-
-  grid.innerHTML = pool.map(p => buildCard(p, 'normal')).join('');
-  document.getElementById('visible-count').textContent = pool.length;
-
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-  });
-}
-
-/* ── Initial stats ── */
-function renderStats() {
-  document.getElementById('stat-projects').textContent =
-    String(PROJECTS.length).padStart(2, '0');
-  document.getElementById('stat-clients').textContent =
-    String(new Set(PROJECTS.map(p => p.category)).size).padStart(2, '0');
-}
-
-/* ── Filter tabs — only show categories present in JSON ── */
-function buildTabs() {
-  const available = new Set(PROJECTS.map(p => p.category));
-  const tabs = document.getElementById('filter-tabs');
-  tabs.innerHTML = '';
-  CATEGORIES.forEach(cat => {
-    if (cat.id !== 'all' && !available.has(cat.id)) return;
-    const btn = document.createElement('button');
-    btn.className   = 'filter-tab' + (cat.id === 'all' ? ' active' : '');
-    btn.dataset.cat = cat.id;
-    btn.textContent = cat.label;
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentCat = cat.id;
-      renderProjects(currentCat);
+      { id:1, title:"Francisco Ferreira",
+        category:"social", tags:["Canva","Remax"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/francisco-ferreira.jpg",
+        preview:"assets/images/projects/design/preview/francisco-ferreira.jpg",
+        link:"" },
+    ];
+ 
+    const CATS = [
+      {id:'all',label:'All'},
+      {id:'branding',label:'Branding'},
+      {id:'ui',label:'UI / Digital'},
+      {id:'print',label:'Print'},
+      {id:'social',label:'Social Media'},
+      {id:'event',label:'Event'},
+    ];
+ 
+    /* Stats */
+    document.getElementById('stat-projects').textContent = PROJECTS.length;
+    document.getElementById('stat-types').textContent    = new Set(PROJECTS.map(p=>p.category)).size;
+ 
+    /* Tabs */
+    (function(){
+      const avail = new Set(PROJECTS.map(p=>p.category));
+      const cont  = document.getElementById('filter-tabs');
+      CATS.forEach(cat=>{
+        if(cat.id!=='all'&&!avail.has(cat.id)) return;
+        const b=document.createElement('button');
+        b.className='filter-tab'+(cat.id==='all'?' active':'');
+        b.dataset.cat=cat.id; b.textContent=cat.label;
+        b.addEventListener('click',()=>{
+          document.querySelectorAll('.filter-tab').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active'); render(cat.id);
+        });
+        cont.appendChild(b);
+      });
+    })();
+ 
+    /* Build card */
+    function buildCard(p,i){
+      const preview = p.preview||p.image||'';
+      const clickA  = p.link
+        ? `href="${p.link}" target="_blank" rel="noopener"`
+        : `href="#" data-lightbox="${preview}" data-caption="${p.title}"`;
+      const tools   = (p.tags||[]).map(t=>`<span class="tool-pill">${t}</span>`).join('');
+      const imgHtml = p.image
+        ? `<img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.closest('.card-visual').innerHTML='<div class=\\'card-placeholder\\'>[no preview]</div>'">`
+        : `<div class="card-placeholder">[no preview]</div>`;
+      const arrow   = p.link ? 'View →' : 'Preview →';
+      return `
+        <a ${clickA} class="project-card" data-cat="${p.category}">
+          <div class="card-visual">
+            ${imgHtml}
+            <div class="card-grad"></div>
+            <span class="card-badge">${p.category}</span>
+            <div class="card-over"><span class="card-over-tag">${arrow}</span></div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-tag">${p.category}</span>
+              <span class="card-num">${String(p.id).padStart(2,'0')}</span>
+            </div>
+            <h3 class="card-title">${p.title}</h3>
+            ${p.desc?`<p class="card-desc">${p.desc}</p>`:''}
+            <div class="card-footer">
+              <div class="card-tools">${tools}</div>
+              <span class="card-arrow">${arrow}</span>
+            </div>
+          </div>
+        </a>`;
+    }
+ 
+    /* Render */
+    function render(cat){
+      const pool=(cat==='all'?[...PROJECTS]:PROJECTS.filter(p=>p.category===cat)).sort((a,b)=>b.id-a.id);
+      const g=document.getElementById('projects-grid');
+      document.getElementById('visible-count').textContent=pool.length;
+      if(!pool.length){
+        g.innerHTML=`<div style="padding:5rem;font-family:var(--fm);font-size:.48rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase;grid-column:1/-1">No projects found.</div>`;
+        return;
+      }
+      g.innerHTML=pool.map((p,i)=>buildCard(p,i)).join('');
+      requestAnimationFrame(()=>{
+        g.querySelectorAll('.project-card').forEach((c,i)=>{
+          setTimeout(()=>c.classList.add('in'),i*60);
+        });
+      });
+      g.querySelectorAll('.card-visual').forEach(el=>{
+        el.addEventListener('mouseenter',()=>document.body.classList.add('mag'));
+        el.addEventListener('mouseleave',()=>document.body.classList.remove('mag'));
+      });
+    }
+    render('all');
+ 
+    /* Lightbox */
+    const lb=document.getElementById('lightbox');
+    const lbi=document.getElementById('lightbox-img');
+    const lbc=document.getElementById('lightbox-caption');
+    document.addEventListener('click',e=>{
+      const card=e.target.closest('[data-lightbox]');
+      if(!card) return;
+      const src=card.dataset.lightbox;
+      if(!src) return;
+      e.preventDefault();
+      lbi.src=src; lbi.alt=card.dataset.caption||'';
+      lbc.textContent=card.dataset.caption||'';
+      lb.classList.add('open');
+      document.body.style.overflow='hidden';
     });
-    tabs.appendChild(btn);
-  });
-}
-
-/* ── Lightbox ── */
-const lb      = document.getElementById('lightbox');
-const lbImg   = document.getElementById('lightbox-img');
-const lbCap   = document.getElementById('lightbox-caption');
-const lbClose = document.getElementById('lightbox-close');
-
-document.addEventListener('click', e => {
-  const card = e.target.closest('[data-lightbox]');
-  if (!card) return;
-  const src = card.dataset.lightbox;
-  if (!src) return;
-  e.preventDefault();
-  lbImg.src = src;
-  lbImg.alt = card.dataset.caption || '';
-  lbCap.textContent = card.dataset.caption || '';
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-});
-
-function closeLb() {
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-  setTimeout(() => { lbImg.src = ''; }, 350);
-}
-
-lbClose.addEventListener('click', closeLb);
-lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
-
-/* ── Scroll reveal ── */
-const revealObs = new IntersectionObserver(
-  entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
-  { threshold: 0.04 }
-);
-
-/* ── Init ── */
-document.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const res = await fetch(JSON_PATH);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    PROJECTS = await res.json();
-  } catch (err) {
-    console.error('Failed to load design.json:', err);
-    document.getElementById('projects-grid').innerHTML =
-      `<div style="padding:4rem;font-family:var(--font-mono);font-size:0.56rem;letter-spacing:.2em;color:#e55;grid-column:1/-1;">
-        Failed to load design.json — check assets/data/design.json
-      </div>`;
-    return;
-  }
-
-  renderStats();
-  buildTabs();
-  renderProjects('all');
-});
+    const closeLb=()=>{
+      lb.classList.remove('open');
+      document.body.style.overflow='';
+      setTimeout(()=>{ lbi.src=''; },400);
+    };
+    document.getElementById('lightbox-close').addEventListener('click',closeLb);
+    lb.addEventListener('click',e=>{ if(e.target===lb) closeLb(); });
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLb(); });
+ 
+    /* Reveal */
+    const ro=new IntersectionObserver(
+      entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),
+      {threshold:.04}
+    );
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+ 
+    /* Progress */
+    window.addEventListener('scroll',()=>{
+      document.getElementById('bar').style.width=
+        Math.min(window.scrollY/(document.documentElement.scrollHeight-innerHeight)*100,100)+'%';
+    });
+ 
+    /* Cursor */
+    const cx=document.getElementById('cx'),cy=document.getElementById('cy');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{ mx=e.clientX;my=e.clientY;cx.style.left=mx+'px';cx.style.top=my+'px'; });
+    (function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cy.style.left=rx+'px';cy.style.top=ry+'px';requestAnimationFrame(a);})();
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{cy.style.width='52px';cy.style.height='52px';cy.style.borderColor='rgba(200,164,80,.7)';});
+      el.addEventListener('mouseleave',()=>{cy.style.width='32px';cy.style.height='32px';cy.style.borderColor='rgba(200,164,80,.32)';});
+    });
