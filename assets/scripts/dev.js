@@ -29,62 +29,62 @@
  
     /* ── Projects data ── */
     const projects = [
-      { title:"LS Videomaker", type:"frontend",
+      { id:12, title:"LS Videomaker", type:"frontend",
         img:"/assets/images/projects/dev/lsvideomaker.jpg",
         code:"https://github.com/makyneta/lsvideomaker",
         demo:"https://makyneta.github.io/lsvideomaker" },
 
-      { title:"JS Marinha Grande", type:"frontend",
+      { id:11, title:"JS Marinha Grande", type:"frontend",
         img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
         code:"https://github.io/makyneta/jsmarinhagrande",
         demo:"https://makyneta.github.io/jsmarinhagrande" },
 
-      { title:"Nicholas Simões", type:"frontend",
+      { id:10, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholassimoes.jpg",
         code:"https://github.com/makyneta/nico",
         demo:"https://makyneta.github.io/nico" },
 
-      { title:"Amalias", type:"frontend",
+      { id:9, title:"Amalias", type:"frontend",
         img:"/assets/images/projects/dev/amalias.jpg",
         code:"https://github.com/makyneta/amalias",
         demo:"https://makyneta.github.io/amalias" },
 
-      { title:"Mayday", type:"frontend",
+      { id:8, title:"Mayday", type:"frontend",
         img:"/assets/images/projects/dev/mayday.jpg",
         code:"https://github.com/makyneta/mayday",
         demo:"https://makyneta.github.io/mayday" },
 
-      { title:"Nickz", type:"frontend",
+      { id:7, title:"Nickz", type:"frontend",
         img:"/assets/images/projects/dev/nickz.jpg",
         code:"https://github.com/makyneta/nickz",
         demo:"https://makyneta.github.io/nickz" },
 
-      { title:"Francisco Ferreira", type:"frontend",
+      { id:6, title:"Francisco Ferreira", type:"frontend",
         img:"/assets/images/projects/dev/francisco-ferreira.jpg",
         code:"https://github.com/makyneta/franciscoferreira",
         demo:"https://makyneta.github.io/franciscoferreira" },
 
-      { title:"Donut-Man", type:"fullstack",
+      { id:5, title:"Donut-Man", type:"fullstack",
         img:"/assets/images/projects/dev/personal/donut-man.jpg",
         code:"https://github.com/makyneta/donutman",
         demo:"https://makyneta.github.io/donutman" },
 
-      { title:"Lavagem LV", type:"frontend",
+      { id:4, title:"Lavagem LV", type:"frontend",
         img:"/assets/images/projects/dev/lavagem-lv.jpg",
         code:"https://github.com/makyneta/lavagemlv",
         demo:"https://makyneta.github.io/lavagemlv" },
 
-      { title:"Ice J (I Love You)", type:"frontend",
+      { id:3, title:"Ice J (I Love You)", type:"frontend",
         img:"/assets/images/projects/dev/ice-j.jpg",
         code:"https://github.com/makyneta/icejiloveyou",
         demo:"https://makyneta.github.io/icejiloveyou" },
 
-      { title:"Mesa P'ra 4", type:"frontend",
+      { id:2, title:"Mesa P'ra 4", type:"frontend",
         img:"/assets/images/projects/dev/mesa-pra-4.jpg",
         code:"https://github.com/makyneta/mesapra4",
         demo:"https://makyneta.github.io/mesapra4" },
 
-      { title:"Tiago Pedro", type:"frontend",
+      { id:1, title:"Tiago Pedro", type:"frontend",
         img:"/assets/images/projects/dev/tiago-pedro.jpg",
         code:"https://github.com/makyneta/tiagopedro",
         demo:"https://makyneta.github.io/tiagopedro" },

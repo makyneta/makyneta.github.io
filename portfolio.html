@@ -26,336 +26,109 @@
     <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
-<div class="noise"></div>
-<div id="header"></div>
-
-<main>
-
-  <!-- ══ PAGE HERO ═════════════════════════════════════════════════ -->
-  <section id="page-hero">
-    <div class="hero-bg-word">WORK</div>
-
-    <div class="page-eyebrow page-hero-anim"><span>Selected Work</span></div>
-
-    <h1 class="page-title page-hero-anim-2">
-      PORTF<span>O</span>LIO
-    </h1>
-
-    <p class="page-subtitle page-hero-anim-3">
-      A curated selection of projects across development, photography,
-      design, live events and music.
-    </p>
-  </section>
-
-  <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
-  <nav id="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="dev">Development</button>
-    <button class="filter-btn" data-filter="photo">Photography</button>
-    <!-- <button class="filter-btn" data-filter="design">Design</button>
-    <button class="filter-btn" data-filter="live">Live &amp; Events</button>
-    <button class="filter-btn" data-filter="music">Music</button> -->
-  </nav>
-
-  <!-- ══ DEVELOPMENT ═══════════════════════════════════════════════ -->
-  <section class="category-section reveal" data-category="dev">
-    <div class="cat-header">
-      <div>
-        <p class="cat-count">01 — Development</p>
-        <h2 class="cat-title">DEV</h2>
+  <div id="bar"></div>
+  <div id="cx"></div>
+  <div id="cy"></div>
+  <div id="header"></div>
+ 
+  <main>
+ 
+    <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+    <section id="page-hero">
+      <div class="hero-bg-word">WORK</div>
+      <div class="page-eyebrow"><span>Selected Work</span></div>
+      <h1 class="page-title">PORTF<span class="outline">O</span>LIO</h1>
+      <p class="page-subtitle">A curated selection of projects across development, photography and design.</p>
+    </section>
+ 
+    <!-- ══ FILTER BAR ════════════════════════════════════════════════ -->
+    <nav id="filter-bar">
+      <div class="fbtns">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+        <button class="filter-btn" data-filter="photo">Photography</button>
+        <button class="filter-btn" data-filter="design">Design</button>
       </div>
-      <a href="develop" class="cat-link">View all projects</a>
-    </div>
-
-    <div class="projects-grid">
-
-      <a href="https://makyneta.github.io/nico" target="_blank" class="project-card featured">
-        <div class="card-img" style="background-image: url('assets/images/projects/dev/nicholassimoes.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Frontend · Website</span>
-          <h3 class="card-title">Nicholas Simões</h3>
-          <p class="card-desc">A professional website for the photographer Nicholas Simões to have their entire catalog, info, and more all in one place.</p>
-          <div class="card-footer">
-            <span class="card-year">2026</span>
-            <span class="card-arrow">→</span>
-          </div>
+      <span class="filter-note">Latest 3 per discipline</span>
+    </nav>
+ 
+    <!-- ══ DEV SECTION ═══════════════════════════════════════════════ -->
+    <section class="cat-section reveal" data-category="dev" id="sec-dev">
+      <div class="cat-header">
+        <div class="cat-meta">
+          <span class="cat-eyebrow">01 — Development</span>
+          <h2 class="cat-title">DEV</h2>
         </div>
-      </a>
-
-      <a href="https://makyneta.github.io/mesapra4" target="_blank" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/dev/mesa-pra-4.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Front-end · Website</span>
-          <h3 class="card-title">Mesas P'ra 4</h3>
-          <p class="card-desc">A professional website for the theater piece "Mesa P'ra 4" by Libélula Teatro.</p>
-          <div class="card-footer">
-            <span class="card-year">2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://makyneta.github.io/tiagopedro" target="_blank" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/dev/tiago-pedro.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Front-end · Website</span>
-          <h3 class="card-title">Tiago Pedro</h3>
-          <p class="card-desc">A professional website for wedding photographer Tiago Pedro, designed to showcase his entire portfolio in one place.</p>
-          <div class="card-footer">
-            <span class="card-year">2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://makyneta.github.io/franciscoferreira" target="_blank" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/dev/francisco-ferreira.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Front-end · Website</span>
-          <h3 class="card-title">Francisco Ferreira</h3>
-          <p class="card-desc">A link-in-bio style website for real estate consultant Francisco Ferreira, as a way to acquire more clients, which proved successful and made him even more successful.</p>
-          <div class="card-footer">
-            <span class="card-year">2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- ══ PHOTOGRAPHY ════════════════════════════════════════════════ -->
-  <div class="marquee-divider">
-    <div class="marquee-track">
-      <span class="marquee-item">Photography</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Development</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Design</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Live Events</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Music</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Photography</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Development</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Design</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Live Events</span><span class="marquee-item ac">✦</span>
-      <span class="marquee-item">Music</span><span class="marquee-item ac">✦</span>
-    </div>
-  </div>
-
-  <section class="category-section reveal" data-category="photo">
-    <div class="cat-header">
-      <div>
-        <p class="cat-count">02 — Photography</p>
-        <h2 class="cat-title">PHOTO</h2>
+        <a href="develop" class="cat-link">
+          View all projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
-      <a href="photo" class="cat-link">View all photos</a>
-    </div>
-
-    <div class="projects-grid">
-
-      <a href="fairplaycalazans" target="_blank" class="project-card featured">
-        <div class="card-img" style="background-image: url('assets/images/projects/photo/cover/fair-play-calazans.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Photography · Sport</span>
-          <h3 class="card-title">Fair Play Calazans</h3>
-          <p class="card-desc">Photographs of the 30th edition of the Fair Play Calazans event.</p>
-          <div class="card-footer">
-            <span class="card-year">2026</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- <a href="teatro18jan1934" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/photo/cover/teatro-18-janeiro-1934.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Photography · Event</span>
-          <h3 class="card-title">Teatro 18 de Janeiro de 1934</h3>
-          <p class="card-desc">Photographs from the theatrical performance held on January 18, 1934.</p>
-          <div class="card-footer">
-            <span class="card-year">2026</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/photo/cover/acm-festa.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Photography · Event/Sport</span>
-          <h3 class="card-title">ACMarinhense Party</h3>
-          <p class="card-desc">Photographs from the ACMarinhense party event.</p>
-          <div class="card-footer">
-            <span class="card-year">2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a> -->
-
-    </div>
-  </section>
-
-  <!-- ══ DESIGN ════════════════════════════════════════════════════ -->
-  <section class="category-section reveal" data-category="design">
-    <div class="cat-header">
-      <div>
-        <p class="cat-count">03 — Design</p>
-        <h2 class="cat-title">DESIGN</h2>
+      <div class="projects-grid" id="grid-dev"></div>
+    </section>
+ 
+    <!-- ══ MARQUEE ════════════════════════════════════════════════════ -->
+    <div class="mq-div" id="mq1">
+      <div class="mq-track">
+        <span class="mq-item">Photography</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Development</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Design</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Live Events</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Music</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Photography</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Development</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Design</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Live Events</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Music</span><span class="mq-item mq-dot">✦</span>
       </div>
-      <a href="design" class="cat-link">View all design work</a>
     </div>
-
-    <div class="projects-grid">
-
-      <a href="design" class="project-card featured">
-        <div class="card-img" style="background-image: url('assets/images/projects/design/thumb/jsmg-revolucaocravos.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Design · Social</span>
-          <h3 class="card-title">Dia da Revolução dos Cravos</h3>
-          <p class="card-desc"></p>
-          <div class="card-footer">
-            <span class="card-year">2026</span>
-            <span class="card-arrow">→</span>
-          </div>
+ 
+    <!-- ══ PHOTO SECTION ═════════════════════════════════════════════ -->
+    <section class="cat-section reveal" data-category="photo" id="sec-photo">
+      <div class="cat-header">
+        <div class="cat-meta">
+          <span class="cat-eyebrow">02 — Photography</span>
+          <h2 class="cat-title">PHOTO</h2>
         </div>
-      </a>
-
-      <a href="design" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/design/thumb/fair-play-calazans.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Design · Social</span>
-          <h3 class="card-title">Fair Play Calazans</h3>
-          <p class="card-desc"></p>
-          <div class="card-footer">
-            <span class="card-year">2026</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="design" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/projects/design/thumb/francisco-ferreira.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Design · Social</span>
-          <h3 class="card-title">Francisco Ferreira</h3>
-          <p class="card-desc"></p>
-          <div class="card-footer">
-            <span class="card-year">2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- ══ LIVE & EVENTS ══════════════════════════════════════════════ -->
-  <!-- <section class="category-section reveal" data-category="live">
-    <div class="cat-header">
-      <div>
-        <p class="cat-count">04 — Live &amp; Events</p>
-        <h2 class="cat-title">LIVE</h2>
+        <a href="photo" class="cat-link">
+          View all photos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
-      <a href="portfolio/live" class="cat-link">View all events</a>
-    </div>
-
-    <div class="projects-grid">
-
-      <a href="portfolio/live/theatre-tour" class="project-card featured">
-        <div class="card-img" style="background-image: url('assets/images/portfolio/live/tour.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Roadie · Theatre</span>
-          <h3 class="card-title">Theatre Tour — Technical Direction</h3>
-          <p class="card-desc">Full technical direction for a regional theatre tour — AV setup, sound design, crew coordination across multiple venues over several weeks.</p>
-          <div class="card-footer">
-            <span class="card-year">2024</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="portfolio/live/concerts" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/portfolio/live/concert.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Roadie · Concerts</span>
-          <h3 class="card-title">Concert &amp; Live Music</h3>
-          <p class="card-desc">Stage setup and AV operation for live music events — from small venues to outdoor stages.</p>
-          <div class="card-footer">
-            <span class="card-year">2024–2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="portfolio/live/events" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/portfolio/live/events.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">IT · Events</span>
-          <h3 class="card-title">Event IT Infrastructure</h3>
-          <p class="card-desc">On-site IT infrastructure for large-scale events — temporary networks, streaming setups, real-time troubleshooting.</p>
-          <div class="card-footer">
-            <span class="card-year">2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </section> -->
-
-  <!-- ══ MUSIC ══════════════════════════════════════════════════════ -->
-  <!-- <section class="category-section reveal" data-category="music">
-    <div class="cat-header">
-      <div>
-        <p class="cat-count">05 — Music</p>
-        <h2 class="cat-title">MUSIC</h2>
+      <div class="projects-grid" id="grid-photo"></div>
+    </section>
+ 
+    <!-- ══ MARQUEE 2 ══════════════════════════════════════════════════ -->
+    <div class="mq-div" id="mq2">
+      <div class="mq-track">
+        <span class="mq-item">Design</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Branding</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Print</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Social Media</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Visual Identity</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Design</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Branding</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Print</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Social Media</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Visual Identity</span><span class="mq-item mq-dot">✦</span>
       </div>
-      <a href="portfolio/music" class="cat-link">View all music</a>
     </div>
-
-    <div class="projects-grid">
-
-      <a href="portfolio/music/compositions" class="project-card featured">
-        <div class="card-img" style="background-image: url('assets/images/portfolio/music/compositions.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Music · Composition</span>
-          <h3 class="card-title">Original Compositions</h3>
-          <p class="card-desc">A selection of original pieces spanning multiple genres — recorded, produced and mixed independently. Each track a small experiment in sound and structure.</p>
-          <div class="card-footer">
-            <span class="card-year">2023–2025</span>
-            <span class="card-arrow">→</span>
-          </div>
+ 
+    <!-- ══ DESIGN SECTION ════════════════════════════════════════════ -->
+    <section class="cat-section reveal" data-category="design" id="sec-design">
+      <div class="cat-header">
+        <div class="cat-meta">
+          <span class="cat-eyebrow">03 — Design</span>
+          <h2 class="cat-title">DESIGN</h2>
         </div>
-      </a>
-
-      <a href="portfolio/music/live-sets" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/portfolio/music/live.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Music · Live</span>
-          <h3 class="card-title">Live Performances</h3>
-          <p class="card-desc">Recordings and documentation of live sets — where stage knowledge and musicianship intersect.</p>
-          <div class="card-footer">
-            <span class="card-year">2024–2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="portfolio/music/collabs" class="project-card">
-        <div class="card-img" style="background-image: url('assets/images/portfolio/music/collabs.jpg')"></div>
-        <div class="card-content">
-          <span class="card-tag">Music · Collaboration</span>
-          <h3 class="card-title">Collaborative Work</h3>
-          <p class="card-desc">Sessions, features and production work done alongside other artists and bands.</p>
-          <div class="card-footer">
-            <span class="card-year">2023–2025</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </section> -->
-
-</main>
+        <a href="design" class="cat-link">
+          View all design work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="projects-grid" id="grid-design"></div>
+    </section>
+    
 
 <div id="footer"></div>
 </body>
