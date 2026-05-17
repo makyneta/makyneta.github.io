@@ -1,5 +1,33 @@
     /* ── Data ── */
     const PROJECTS = [
+      { id:12, title:"António Pedro",
+        category:"social", tags:["Illustrator","Photoshop","Canva"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/antonio-pedro.jpg",
+        preview:"assets/images/projects/design/preview/antonio-pedro.jpg",
+        link:"" },
+
+      { id:11, title:"Emanuel OLiveira",
+        category:"social", tags:["Illustrator","Photoshop","Canva"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/emanuel-oliveira.jpg",
+        preview:"assets/images/projects/design/preview/emanuel-oliveira.jpg",
+        link:"" },
+
+      { id:10, title:"TUMG _ Dia do Estudante",
+        category:"social", tags:["Illustrator","Photoshop"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-tumg.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-tumg.jpg",
+        link:"" },
+
+      { id:9, title:"Quinta-feira da Ascensão",
+        category:"social", tags:["Illustrator","Photoshop"],
+        desc:"",
+        image:"assets/images/projects/design/thumb/jsmg-quintafeiraascensao.jpg",
+        preview:"assets/images/projects/design/preview/jsmg-quintafeiraascensao.jpg",
+        link:"" },
+
       { id:8, title:"Dia Internacional do Trabalhador",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
