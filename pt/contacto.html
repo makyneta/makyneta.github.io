@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makyneta Unipessoal, Lda."/>
+    <meta name="description" content="Entre em contacto com Tomás Mota da Makyneta. Disponível para projectos de desenvolvimento web, fotografia, design e muito mais.">
+    <meta name="keywords" content="Contacto, Tomás Mota, Makyneta, Programador, Fotógrafo">
+    <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.jpg">
+    <meta name="twitter:image" content="https://makyneta.github.io/assets/images/ui/og-image.jpg">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/styles/geral.css">
+    <link rel="stylesheet" href="../assets/styles/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/scripts/contact.js" defer></script>
+    <script src="../assets/scripts/script.js" defer></script>
+    <!-- Title_Favicon -->
+    <title>Contacto | Makyneta</title>
+    <link rel="icon" href="../assets/images/ui/favicon.png" type="image/png">
+</head>
+<body>
+  <div id="bar"></div>
+  <div id="cx"></div>
+  <div id="cy"></div>
+  <div id="headerpt"></div>
+ 
+  <main>
+ 
+    <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+    <section id="contact-hero">
+      <div class="hero-bg-word">FALA</div>
+      <div class="page-eyebrow"><span>Entre em Contacto</span></div>
+      <h1 class="hero-title">VAMOS<br><span class="outline">CONVERSAR.</span></h1>
+      <p class="hero-lead">
+        Tem um projecto em mente ou precisa de suporte técnico especializado?
+        Escolha o canal mais rápido ou envie uma <em>mensagem detalhada</em> abaixo.
+      </p>
+    </section>
+ 
+    <!-- ══ AVAILABILITY STRIP ════════════════════════════════════════ -->
+    <div id="avail-strip">
+      <div class="avail-left">
+        <span class="avail-dot"></span>
+        <span class="avail-text">Actualmente disponível para novos projectos</span>
+      </div>
+      <div class="avail-right">
+        Tempo de resposta · <span>Geralmente em 24h</span>
+      </div>
+    </div>
+ 
+    <!-- ══ BODY GRID ═════════════════════════════════════════════════ -->
+    <div id="contact-body">
+ 
+      <!-- FORM -->
+      <div class="form-col reveal">
+        <div class="sec-lbl"><span>Enviar Mensagem</span></div>
+ 
+        <form class="contact-form" action="https://formspree.io/f/xvgbagja" method="POST" id="contact-form">
+ 
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-name">Nome</label>
+              <input class="form-input" id="f-name" type="text" name="TM.Makyneta_Name" required placeholder="Seu nome"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email</label>
+              <input class="form-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="seu@email.com"/>
+            </div>
+          </div>
+ 
+          <!-- Service selector -->
+          <div class="form-group">
+            <label class="form-label">Serviço</label>
+            <div class="service-chips" id="svc-chips">
+              <div class="svc-chip" data-val="Desenvolvimento Web">Dev Web</div>
+              <div class="svc-chip" data-val="Fotografia">Fotografia</div>
+              <div class="svc-chip" data-val="Design">Design</div>
+              <div class="svc-chip" data-val="Suporte de TI">Suporte TI</div>
+              <div class="svc-chip" data-val="Roadie / Palco">Roadie / Palco</div>
+              <div class="svc-chip" data-val="Outro">Outro</div>
+            </div>
+            <input type="hidden" id="f-service" name="service"/>
+          </div>
+ 
+          <div class="form-group">
+            <label class="form-label" for="f-subject">Assunto</label>
+            <input class="form-input" id="f-subject" type="text" name="subject" required placeholder="Do que se trata?"/>
+          </div>
+ 
+          <div class="form-group">
+            <label class="form-label" for="f-message">Mensagem</label>
+            <textarea class="form-textarea" id="f-message" name="TM.Makyneta_Message" rows="6" required placeholder="Conte-me sobre o seu projecto ou pedido..."></textarea>
+          </div>
+ 
+          <div class="form-status" id="form-status"></div>
+ 
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <span>Enviar Mensagem</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+ 
+        </form>
+      </div>
+ 
+      <!-- DIVIDER -->
+      <div class="col-divider"></div>
+ 
+      <!-- SIDEBAR -->
+      <aside class="sidebar-col reveal">
+        <div class="sec-lbl"><span>Canais Directos</span></div>
+ 
+        <div class="channel-list">
+          <a href="https://wa.me/351933338431" target="_blank" class="ch-item">
+            <i class="fa-brands fa-whatsapp ch-ico"></i>
+            <div class="ch-body">
+              <span class="ch-lbl">WhatsApp</span>
+              <span class="ch-val">+351 933 338 431</span>
+            </div>
+            <span class="ch-arr">→</span>
+          </a>
+          <a href="mailto:makyneta@tutamail.com" class="ch-item">
+            <i class="fa-solid fa-envelope ch-ico"></i>
+            <div class="ch-body">
+              <span class="ch-lbl">Email</span>
+              <span class="ch-val">makyneta@tutamail.com</span>
+            </div>
+            <span class="ch-arr">→</span>
+          </a>
+          <div class="ch-item static">
+            <i class="fa-solid fa-location-dot ch-ico"></i>
+            <div class="ch-body">
+              <span class="ch-lbl">Localização</span>
+              <span class="ch-val">Leiria, Portugal</span>
+            </div>
+          </div>
+          <div class="ch-item static">
+            <i class="fa-solid fa-clock ch-ico"></i>
+            <div class="ch-body">
+              <span class="ch-lbl">Disponibilidade</span>
+              <span class="ch-val">Seg – Sáb · 9:00 – 21:00</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="sidebar-facts">
+          <div class="fact-row">
+            <span class="fact-key">Tempo de resposta</span>
+            <span class="fact-val">Dentro de 24 horas</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-key">Contacto preferido</span>
+            <span class="fact-val">WhatsApp ou Email</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-key">Idiomas</span>
+            <span class="fact-val">PT · EN</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-key">Cobertura</span>
+            <span class="fact-val">Nacional · Remoto</span>
+          </div>
+        </div>
+ 
+        <blockquote class="sidebar-quote">
+          <p>"A tecnologia deve ser o motor, nunca o obstáculo. Vamos construir algo sólido juntos."</p>
+          <cite>Tomás Mota</cite>
+        </blockquote>
+      </aside>
+    </div>
+ 
+  </main>
+
+<div id="footer"></div>
+
+</body>
+</html>

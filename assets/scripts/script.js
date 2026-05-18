@@ -5,10 +5,29 @@ document.querySelectorAll('.year').forEach(el => {
 
 //
 // Header
-fetch("/assets/header.html")
+fetch("/assets/header/main.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
+
+    // CSS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/styles/header.css";
+    document.head.appendChild(link);
+
+    // JS
+    const script = document.createElement("script");
+    script.src = "/assets/scripts/header.js";
+    document.body.appendChild(script);
+  });
+
+//
+// Header-PT
+fetch("/assets/header/portuguese.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("headerpt").innerHTML = data;
 
     // CSS
     const link = document.createElement("link");

@@ -26,7 +26,7 @@
         <!-- <a href="/gallery" class="nav-link"><span>Gallery</span></a>
         <a href="/blog" class="nav-link"><span>Blog</span></a> -->
 
-        <div class="dropdown-wrapper h-full dropdown-left">
+        <div class="dropdown-wrapper h-full">
             <button class="nav-btn">
                 <span>Legal</span>
                 <i class="fa-solid fa-chevron-down text-[10px] opacity-50 ml-1"></i>
@@ -37,7 +37,19 @@
                 <a href="/legal/cookies-policy"><i class="fa-solid fa-cookie mr-2 opacity-70"></i> Cookies Policy</a>
             </div>
         </div>
-        
+
+        <div class="dropdown-wrapper h-full dropdown-left">
+            <button class="nav-btn">
+                <span><i class="fa-solid fa-globe"></i> English</span>
+                <i class="fa-solid fa-chevron-down text-[10px] opacity-50 ml-1"></i>
+            </button>
+            <div class="dropdown-menu shadow-2xl">
+                <a href="/pt"><i class="mr-2 opacity-70"></i> Português [pt]</a>
+                <!-- <a href="/es"><i class="mr-2 opacity-70"></i> Español [es]</a> -->
+                <!-- <a href="/jp"><i class="mr-2 opacity-70"></i> 日本語 [jp]</a> -->
+            </div>
+        </div>
+
     </nav>
 
     <div class="md:hidden flex items-center">
@@ -79,6 +91,16 @@
                     <a href="/legal/cookies-policy" class="mobile-nav-link text-base block opacity-80">Cookies Policy</a>
                 </div>
             </li>
+
+            <li class="pt-0">
+                <span class="text-[10px] text-[#31d094] tracking-widest font-bold uppercase block mb-4">Language</span>
+                <div class="pl-4 space-y-3 border-l border-black/10">
+                    <a href="/pt" class="mobile-nav-link text-base block opacity-80">Português</a>
+                    <!-- <a href="/es" class="mobile-nav-link text-base block opacity-80">Español</a> -->
+                    <!-- <a href="/jp" class="mobile-nav-link text-base block opacity-80">日本語</a> -->
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
+
