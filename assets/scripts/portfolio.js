@@ -5,15 +5,15 @@
  
     /* ── DEV PROJECTS (from dev.html) ── */
     const DEV_PROJECTS = [
-      { id:3, title:"LS Videomaker", type:"frontend",
+      { id:3, title:"António Pedro", type:"frontend",
+        img:"/assets/images/projects/dev/antoniorpedro.png",
+        code:"https://github.com/makyneta/antoniorpedro",
+        demo:"https://makyneta.github.io/antoniorpedro" },
+
+      { id:2, title:"LS Videomaker", type:"frontend",
         img:"/assets/images/projects/dev/lsvideomaker.jpg",
         code:"https://github.com/makyneta/lsvideomaker",
         demo:"https://makyneta.github.io/lsvideomaker" },
-
-      { id:2, title:"JS Marinha Grande", type:"frontend",
-        img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
-        code:"https://github.io/makyneta/jsmarinhagrande",
-        demo:"https://makyneta.github.io/jsmarinhagrande" },
 
       { id:1, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholassimoes.jpg",
@@ -25,18 +25,18 @@
     const PHOTO_PROJECTS = [
       { id:3, title:"50th Anniversary of the Constitution of the Portuguese Republic",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/50th-anniversary-constitution.jpg",
+        cover:"/assets/images/projects/photo/50th-anniversary-constitution.jpg",
         slug:"/50anniversaryconstitution", photoCount:127 },
 
       { id:2, title:"Fair Play Calazans",
         category:"sport", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"assets/images/projects/photo/fair-play-calazans.jpg",
+        cover:"/assets/images/projects/photo/fair-play-calazans.jpg",
         slug:"/fairplaycalazans", photoCount:1129 },
 
       { id:1, title:"PombalCup",
         category:"sport", year:"2025", location:"Pombal",
         desc:"",
-        cover:"assets/images/projects/photo/pombalcup.jpg",
+        cover:"/assets/images/projects/photo/pombalcup.jpg",
         slug:"/pombalcup", photoCount:0 },
     ];
  
@@ -45,22 +45,22 @@
       { id:3, title:"António Pedro",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
-        image:"assets/images/projects/design/thumb/antonio-pedro.jpg",
-        preview:"assets/images/projects/design/preview/antonio-pedro.jpg",
+        image:"/assets/images/projects/design/thumb/antonio-pedro.jpg",
+        preview:"/assets/images/projects/design/preview/antonio-pedro.jpg",
         link:"" },
 
       { id:2, title:"Emanuel OLiveira",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
-        image:"assets/images/projects/design/thumb/emanuel-oliveira.jpg",
-        preview:"assets/images/projects/design/preview/emanuel-oliveira.jpg",
+        image:"/assets/images/projects/design/thumb/emanuel-oliveira.jpg",
+        preview:"/assets/images/projects/design/preview/emanuel-oliveira.jpg",
         link:"" },
 
       { id:0, title:"TUMG _ Dia do Estudante",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
-        image:"assets/images/projects/design/thumb/jsmg-tumg.jpg",
-        preview:"assets/images/projects/design/preview/jsmg-tumg.jpg",
+        image:"/assets/images/projects/design/thumb/jsmg-tumg.jpg",
+        preview:"/assets/images/projects/design/preview/jsmg-tumg.jpg",
         link:"" },
     ];
  

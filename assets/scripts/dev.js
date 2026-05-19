@@ -29,20 +29,25 @@
  
     /* ── Projects data ── */
     const projects = [
+      { id:13, title:"António Pedro", type:"frontend",
+        img:"/assets/images/projects/dev/antoniorpedro.png",
+        code:"https://github.com/makyneta/antoniorpedro",
+        demo:"https://makyneta.github.io/antoniorpedro" },
+
       { id:12, title:"LS Videomaker", type:"frontend",
         img:"/assets/images/projects/dev/lsvideomaker.jpg",
         code:"https://github.com/makyneta/lsvideomaker",
         demo:"https://makyneta.github.io/lsvideomaker" },
 
-      { id:11, title:"JS Marinha Grande", type:"frontend",
-        img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
-        code:"https://github.io/makyneta/jsmarinhagrande",
-        demo:"https://makyneta.github.io/jsmarinhagrande" },
-
-      { id:10, title:"Nicholas Simões", type:"frontend",
+      { id:11, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholassimoes.jpg",
         code:"https://github.com/makyneta/nico",
         demo:"https://makyneta.github.io/nico" },
+
+      { id:10, title:"JS Marinha Grande", type:"frontend",
+        img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
+        code:"https://github.io/makyneta/jsmarinhagrande",
+        demo:"https://makyneta.github.io/jsmarinhagrande" },
 
       { id:9, title:"Amalias", type:"frontend",
         img:"/assets/images/projects/dev/amalias.jpg",
