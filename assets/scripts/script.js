@@ -41,6 +41,25 @@ fetch("/assets/header/portuguese.html")
     document.body.appendChild(script);
   });
 
+//
+// Header-ES
+fetch("/assets/header/spanish.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("headeres").innerHTML = data;
+
+    // CSS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/styles/header.css";
+    document.head.appendChild(link);
+
+    // JS
+    const script = document.createElement("script");
+    script.src = "/assets/scripts/header.js";
+    document.body.appendChild(script);
+  });
+
 
 //
 // Footer

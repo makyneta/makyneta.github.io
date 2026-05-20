@@ -11,34 +11,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/styles/geral.css">
-    <link rel="stylesheet" href="assets/styles/contact.css">
+    <link rel="stylesheet" href="../assets/styles/geral.css">
+    <link rel="stylesheet" href="../assets/styles/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/scripts/contact.js" defer></script>
-    <script src="assets/scripts/script.js"></script>
+    <script src="../assets/scripts/contact.js" defer></script>
+    <script src="../assets/scripts/script.js"></script>
     <!-- Title_Favicon -->
-    <title>Contact | Makyneta</title>
-    <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
+    <title>Contacto | Makyneta</title>
+    <link rel="icon" href="../assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
   <div id="bar"></div>
   <div id="cx"></div>
   <div id="cy"></div>
-  <div id="header"></div>
+  <div id="headeres"></div>
  
   <main>
  
     <!-- ══ HERO ══════════════════════════════════════════════════════ -->
     <section id="contact-hero">
-      <div class="hero-bg-word">TALK</div>
-      <div class="page-eyebrow"><span>Get in Touch</span></div>
-      <h1 class="hero-title">LET'S<br><span class="outline">TALK.</span></h1>
+      <div class="hero-bg-word">HABLA</div>
+      <div class="page-eyebrow"><span>Contacta</span></div>
+      <h1 class="hero-title">VAMOS A<br>HABLAR.</h1>
       <p class="hero-lead">
-        Have a project in mind or need specialized technical support?
-        Choose the fastest channel or send a <em>detailed message</em> below.
+        ¿Tienes un proyecto en mente o necesitas asistencia técnica especializada?
+        Elige el canal más rápido o envía un <em>mensaje detallado</em> a continuación.
       </p>
     </section>
  
@@ -46,10 +46,10 @@
     <div id="avail-strip">
       <div class="avail-left">
         <span class="avail-dot"></span>
-        <span class="avail-text">Currently available for new projects</span>
+        <span class="avail-text">Actualmente disponible para nuevos proyectos</span>
       </div>
       <div class="avail-right">
-        Response time · <span>Usually within 24h</span>
+        Tiempo de respuesta · <span>Generalmente dentro de 24h</span>
       </div>
     </div>
  
@@ -58,49 +58,49 @@
  
       <!-- FORM -->
       <div class="form-col reveal">
-        <div class="sec-lbl"><span>Send a Message</span></div>
- 
+        <div class="sec-lbl"><span>Enviar un Mensaje</span></div>
+
         <form class="contact-form" action="https://formspree.io/f/xvgbagja" method="POST" id="contact-form">
  
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="f-name">Name</label>
-              <input class="form-input" id="f-name" type="text" name="TM.Makyneta_Name" required placeholder="Your name"/>
+              <label class="form-label" for="f-name">Nombre</label>
+              <input class="form-input" id="f-name" type="text" name="TM.Makyneta_Name" required placeholder="Tú Nombre"/>
             </div>
             <div class="form-group">
               <label class="form-label" for="f-email">Email</label>
-              <input class="form-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="your@email.com"/>
+              <input class="form-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="tú@email.com"/>
             </div>
           </div>
  
           <!-- Service selector -->
           <div class="form-group">
-            <label class="form-label">Service</label>
+            <label class="form-label">Servicio</label>
             <div class="service-chips" id="svc-chips">
-              <div class="svc-chip" data-val="Web Development">Web Dev</div>
-              <div class="svc-chip" data-val="Photography">Photography</div>
-              <div class="svc-chip" data-val="Design">Design</div>
-              <div class="svc-chip" data-val="IT Support">IT Support</div>
-              <div class="svc-chip" data-val="Roadie / Stage">Roadie / Stage</div>
-              <div class="svc-chip" data-val="Other">Other</div>
+              <div class="svc-chip" data-val="Web Development">Desarrollo Web</div>
+              <div class="svc-chip" data-val="Photography">Fotografía</div>
+              <div class="svc-chip" data-val="Design">Diseño</div>
+              <div class="svc-chip" data-val="IT Support">Soporte IT</div>
+              <div class="svc-chip" data-val="Roadie / Stage">Roadie / Escenario</div>
+              <div class="svc-chip" data-val="Other">Otro</div>
             </div>
             <input type="hidden" id="f-service" name="service"/>
           </div>
  
           <div class="form-group">
-            <label class="form-label" for="f-subject">Subject</label>
-            <input class="form-input" id="f-subject" type="text" name="subject" required placeholder="What's this about?"/>
+            <label class="form-label" for="f-subject">Sujeto</label>
+            <input class="form-input" id="f-subject" type="text" name="subject" required placeholder="¿De qué se trata?"/>
           </div>
  
           <div class="form-group">
-            <label class="form-label" for="f-message">Message</label>
-            <textarea class="form-textarea" id="f-message" name="TM.Makyneta_Message" rows="6" required placeholder="Tell me about your project or request..."></textarea>
+            <label class="form-label" for="f-message">Mensaje</label>
+            <textarea class="form-textarea" id="f-message" name="TM.Makyneta_Message" rows="6" required placeholder="Cuéntame sobre tu proyecto o solicitud..."></textarea>
           </div>
  
           <div class="form-status" id="form-status"></div>
  
           <button type="submit" class="submit-btn" id="submit-btn">
-            <span>Send Message</span>
+            <span>Enviar Mensaje</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
  
@@ -112,8 +112,8 @@
  
       <!-- SIDEBAR -->
       <aside class="sidebar-col reveal">
-        <div class="sec-lbl"><span>Direct Channels</span></div>
- 
+        <div class="sec-lbl"><span>Canales Directos</span></div>
+
         <div class="channel-list">
           <a href="https://wa.me/351933338431" target="_blank" class="ch-item">
             <i class="fa-brands fa-whatsapp ch-ico"></i>
@@ -134,40 +134,40 @@
           <div class="ch-item static">
             <i class="fa-solid fa-location-dot ch-ico"></i>
             <div class="ch-body">
-              <span class="ch-lbl">Location</span>
+              <span class="ch-lbl">Ubicación</span>
               <span class="ch-val">Leiria, Portugal</span>
             </div>
           </div>
           <div class="ch-item static">
             <i class="fa-solid fa-clock ch-ico"></i>
             <div class="ch-body">
-              <span class="ch-lbl">Availability</span>
-              <span class="ch-val">Mon – Sat · 9:00 – 21:00</span>
+              <span class="ch-lbl">Disponibilidad</span>
+              <span class="ch-val">Lun – Sáb · 9:00 – 21:00</span>
             </div>
           </div>
         </div>
  
         <div class="sidebar-facts">
           <div class="fact-row">
-            <span class="fact-key">Response time</span>
-            <span class="fact-val">Within 24 hours</span>
+            <span class="fact-key">Tiempo de respuesta</span>
+            <span class="fact-val">Dentro de 24 horas</span>
           </div>
           <div class="fact-row">
-            <span class="fact-key">Preferred contact</span>
-            <span class="fact-val">WhatsApp or Email</span>
+            <span class="fact-key">Contacto preferido</span>
+            <span class="fact-val">WhatsApp o Email</span>
           </div>
           <div class="fact-row">
-            <span class="fact-key">Languages</span>
-            <span class="fact-val">PT · EN</span>
+            <span class="fact-key">Idiomas</span>
+            <span class="fact-val">PT · EN · ES</span>
           </div>
           <div class="fact-row">
-            <span class="fact-key">Coverage</span>
-            <span class="fact-val">Nationwide · Remote</span>
+            <span class="fact-key">Cobertura</span>
+            <span class="fact-val">Nacional · Remoto</span>
           </div>
         </div>
  
         <blockquote class="sidebar-quote">
-          <p>"Technology should be the engine, never the obstacle. Let's build something solid together."</p>
+          <p>"La tecnología debe ser el motor, nunca el obstáculo. Construyamos algo sólido juntos."</p>
           <cite>Tomás Mota</cite>
         </blockquote>
       </aside>
