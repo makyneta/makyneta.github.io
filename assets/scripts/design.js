@@ -7,7 +7,7 @@
         preview:"/assets/images/projects/design/preview/antonio-pedro.jpg",
         link:"" },
 
-      { id:11, title:"Emanuel OLiveira",
+      { id:11, title:"Emanuel Oliveira",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
         image:"/assets/images/projects/design/thumb/emanuel-oliveira.jpg",
