@@ -42,13 +42,6 @@
         preview:"/assets/images/projects/design/preview/jsmg-revolucaocravos.jpg",
         link:"" },
 
-      { id:6, title:"Fair Play Calazans",
-        category:"event", tags:["Illustrator"],
-        desc:"",
-        image:"/assets/images/projects/design/thumb/fair-play-calazans.jpg",
-        preview:"/assets/images/projects/design/preview/fair-play-calazans.jpg",
-        link:"" },
-
       { id:5, title:"Nacional Day of Student",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
