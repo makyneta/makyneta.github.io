@@ -1,22 +1,22 @@
     const PROJECTS = [
-      { id:9, title:"50th Anniversary of the Constitution of the Portuguese Republic",
+      { id:4, title:"50th Anniversary of the Constitution of the Portuguese Republic",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/50th-anniversary-constitution.jpg",
         slug:"/50anniversaryconstitution", photoCount:127 },
-      
-      { id:4, title:"Costa da Caparica Fishermen's Sports Group",
+
+      { id:3, title:"Costa da Caparica Fishermen's Sports Group",
         category:"sport", year:"2024", location:"Marinha Grande",
         desc:"",
         cover:"/assets/images/projects/photo/gdpcc.jpg",
         slug:"", photoCount:0 },
       
-      { id:3, title:"IberoAlpla",
+      { id:2, title:"IberoAlpla",
         category:"sport", year:"2024", location:"Marinha Grande",
         desc:"IberoAlpla in the inter-company tournament.",
         cover:"/assets/images/projects/photo/iberoalpla.jpg",
         slug:"", photoCount:0 },
       
-      { id:2,  title:"Song Raiders",
+      { id:1,  title:"Song Raiders",
         category:"event", year:"2024", location:"Marinha Grande",
         desc:"Song Raiders live at the Marinha Grande City Festivals 2024, with Kalú, bassist of Xutos & Pontapés.",
         cover:"/assets/images/projects/photo/song-raiders.jpg",
