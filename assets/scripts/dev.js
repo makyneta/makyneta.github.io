@@ -29,23 +29,33 @@
  
     /* ── Projects data ── */
     const projects = [
+      { id:15, title:"Mr. Devix", type:"frontend",
+        img:"/assets/images/projects/dev/mr-devix.png",
+        code:"https://github.com/makyneta/mrdevix",
+        demo:"https://makyneta.github.io/mrdevix" },
+
+      { id:14, title:"Clube Atletismo de Marinha Grande", type:"frontend",
+        img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.png",
+        code:"https://github.com/makyneta/catletismomg",
+        demo:"https://makyneta.github.io/catletismomg" },
+
       { id:13, title:"António Pedro", type:"frontend",
-        img:"/assets/images/projects/dev/antoniorpedro.png",
+        img:"/assets/images/projects/dev/antonio-pedro.png",
         code:"https://github.com/makyneta/antoniorpedro",
         demo:"https://makyneta.github.io/antoniorpedro" },
 
       { id:12, title:"LS Videomaker", type:"frontend",
-        img:"/assets/images/projects/dev/lsvideomaker.jpg",
+        img:"/assets/images/projects/dev/ls-videomaker.jpg",
         code:"https://github.com/makyneta/lsvideomaker",
         demo:"https://makyneta.github.io/lsvideomaker" },
 
       { id:11, title:"Nicholas Simões", type:"frontend",
-        img:"/assets/images/projects/dev/nicholassimoes.jpg",
+        img:"/assets/images/projects/dev/nicholas-simoes.jpg",
         code:"https://github.com/makyneta/nico",
         demo:"https://makyneta.github.io/nico" },
 
-      { id:10, title:"JS Marinha Grande", type:"frontend",
-        img:"/assets/images/projects/dev/jsmarinhagrande.jpg",
+      { id:10, title:"Juventude Socialista Marinha Grande", type:"frontend",
+        img:"/assets/images/projects/dev/juventude-socialista-da-marinha-grande.jpg",
         code:"https://github.io/makyneta/jsmarinhagrande",
         demo:"https://makyneta.github.io/jsmarinhagrande" },
 
@@ -80,7 +90,7 @@
         demo:"https://makyneta.github.io/lavagemlv" },
 
       { id:3, title:"Ice J (I Love You)", type:"frontend",
-        img:"/assets/images/projects/dev/ice-j.jpg",
+        img:"/assets/images/projects/dev/ice-j-i-love-you.jpg",
         code:"https://github.com/makyneta/icejiloveyou",
         demo:"https://makyneta.github.io/icejiloveyou" },
 
