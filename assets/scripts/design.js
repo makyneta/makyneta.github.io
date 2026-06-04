@@ -1,5 +1,12 @@
     /* ── Data ── */
     const PROJECTS = [
+      { id:12, title:"Emanuel Oliveira _ Who I Am?",
+        category:"social", tags:["Illustrator","Photoshop","Canva"],
+        desc:"",
+        image:"/assets/images/projects/design/thumb/emanuel-oliveira-who-i-am-post.jpg",
+        preview:"/assets/images/projects/design/preview/emanuel-oliveira-who-i-am-post.jpg",
+        link:"" },
+
       { id:12, title:"António Pedro",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
