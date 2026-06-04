@@ -55,7 +55,7 @@
         demo:"https://makyneta.github.io/nico" },
 
       { id:10, title:"Juventude Socialista Marinha Grande", type:"frontend",
-        img:"/assets/images/projects/dev/juventude-socialista-da-marinha-grande.jpg",
+        img:"/assets/images/projects/dev/juventude-socialista-da-concelhia-da-marinha-grande.jpg",
         code:"https://github.io/makyneta/jsmarinhagrande",
         demo:"https://makyneta.github.io/jsmarinhagrande" },
 
