@@ -23,7 +23,7 @@
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/scripts/loading.js" defer></script>
-    <script src="../assets/scripts/home.js" defer></script>
+    <script src="../assets/scripts/home-pt.js" defer></script>
     <script src="../assets/scripts/script.js" defer></script>
     <script src="../assets/scripts/cookies.js" defer></script>
     <!-- Title_Favicon -->
@@ -82,8 +82,8 @@
         </div>
  
         <div class="h-cta">
-          <a href="portfolio" class="btn-g">
-            <span>Ver Projetos</span>
+          <a href="#portfolio-showcase" class="btn-g">
+            <span>Portfólio</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <a href="sobre" class="btn-ghost">Sobre</a>
@@ -138,80 +138,34 @@
       </div>
     </div>
  
-    <!-- ══ MARQUEE ════════════════════════════════════════════════════ -->
-    <div class="mq">
-      <div class="mq-track">
-        <span class="mq-item">Programador Fullstack</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Fotógrafo</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Roadie</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Técnico de TI</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Designer</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Programador Fullstack</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Fotógrafo</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Roadie</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Técnico de TI</span><span class="mq-item mq-dot">✦</span>
-        <span class="mq-item">Designer</span><span class="mq-item mq-dot">✦</span>
+    <!-- ══ PORTFOLIO SHOWCASE ═══════════════════════════════════════════ -->
+    <section id="portfolio-showcase" class="reveal">
+
+      <div class="pf-category">
+        <div class="pf-header">
+          <span class="pf-num">01</span>
+          <h2 class="pf-title">DESENVOLVIMENTO</h2>
+        </div>
+        <div class="pf-grid" id="pf-grid-dev"></div>
+        <a href="develop" class="pf-more">Ver mais <span>→</span></a>
       </div>
-    </div>
- 
-    <!-- ══ DISCIPLINES ════════════════════════════════════════════════ -->
-    <section id="disciplines">
-      <div class="sec-eye reveal"><span>O Que Faço</span></div>
-      <div class="disc-grid">
-        <div class="disc-card reveal">
-          <div class="disc-n">01</div>
-          <div class="disc-ic">⌨</div>
-          <h3 class="disc-t">Programador Fullstack</h3>
-          <p class="disc-b">Desenvolvimento web de ponta a ponta — desde arquitetura de base de dados e design de API até interfaces front-end polidas e responsivas. Construindo sistemas performantes e escaláveis para organizações que não podem permitir tempo de paragem.</p>
-          <div class="disc-tags">
-            <span class="dtag">React</span><span class="dtag">Node.js</span><span class="dtag">SQL</span><span class="dtag">REST APIs</span><span class="dtag">UI/UX</span>
-          </div>
+
+      <div class="pf-category">
+        <div class="pf-header">
+          <span class="pf-num">02</span>
+          <h2 class="pf-title">FOTOGRAFIA</h2>
         </div>
-        <div class="disc-card reveal">
-          <div class="disc-n">02</div>
-          <div class="disc-ic">◉</div>
-          <h3 class="disc-t">Fotógrafo</h3>
-          <p class="disc-b">Fotografia comercial, editorial e de eventos com olho documental aguçado. Desde iluminação de palco até desportos ao ar livre — capturando o momento decisivo com clareza e intenção.</p>
-          <div class="disc-tags">
-            <span class="dtag">Eventos</span><span class="dtag">Editorial</span><span class="dtag">Desporto</span><span class="dtag">Teatro</span><span class="dtag">Retrato</span>
-          </div>
+        <div class="pf-grid" id="pf-grid-photo"></div>
+        <a href="photo" class="pf-more">Ver mais <span>→</span></a>
+      </div>
+
+      <div class="pf-category">
+        <div class="pf-header">
+          <span class="pf-num">03</span>
+          <h2 class="pf-title">DESIGN</h2>
         </div>
-        <div class="disc-card reveal">
-          <div class="disc-n">03</div>
-          <div class="disc-ic">🎛</div>
-          <h3 class="disc-t">Roadie &amp; Técnico de Palco</h3>
-          <p class="disc-b">Suporte técnico nos bastidores para apresentações ao vivo, produções de teatro e eventos itinerantes. Configurar, operar e resolver problemas em rigs AV completos sob pressão em tempo real sem perder uma deixa.</p>
-          <div class="disc-tags">
-            <span class="dtag">Montagem de Palco</span><span class="dtag">Sistemas AV</span><span class="dtag">Som</span><span class="dtag">Iluminação</span><span class="dtag">Eventos ao Vivo</span>
-          </div>
-        </div>
-        <div class="disc-card reveal">
-          <div class="disc-n">04</div>
-          <div class="disc-ic">⚡</div>
-          <h3 class="disc-t">Técnico de TI</h3>
-          <p class="disc-b">Infraestrutura de rede, reparação de hardware, administração de sistemas e suporte técnico. Mantendo organizações seguras, conectadas e totalmente operacionais — antes de qualquer coisa ter a chance de quebrar.</p>
-          <div class="disc-tags">
-            <span class="dtag">Redes</span><span class="dtag">Segurança</span><span class="dtag">Hardware</span><span class="dtag">Sysadmin</span><span class="dtag">Suporte</span>
-          </div>
-        </div>
-        <div class="disc-card reveal">
-          <div class="disc-n">05</div>
-          <div class="disc-ic">♪</div>
-          <h3 class="disc-t">Músico</h3>
-          <p class="disc-b">Tocando e produzindo música em vários géneros — um ouvido aguçado aperfeiçoado por anos atrás do palco. Desde apresentação ao vivo até composição em estúdio, o som é apenas outro meio para precisão e expressão.</p>
-          <div class="disc-tags">
-            <span class="dtag">Composição</span><span class="dtag">Produção</span><span class="dtag">Performance</span><span class="dtag">Som ao Vivo</span>
-          </div>
-        </div>
-        <div class="disc-card reveal">
-          <div class="disc-n">06</div>
-          <div class="disc-ic">◧</div>
-          <h3 class="disc-t">Designer</h3>
-          <p class="disc-b">Design gráfico e digital que une o técnico e o criativo. Identidades visuais, materiais impressos e trabalho de interface construído com o mesmo rigor que o código — intencional, limpo e propositado.</p>
-          <div class="disc-tags">
-            <span class="dtag">Design Gráfico</span><span class="dtag">Branding</span><span class="dtag">Impressão</span><span class="dtag">Design UI</span>
-          </div>
-        </div>
+        <div class="pf-grid" id="pf-grid-design"></div>
+        <a href="design" class="pf-more">Ver mais <span>→</span></a>
       </div>
     </section>
  
@@ -270,6 +224,22 @@
         </div>
       </div>
     </section>
+ 
+    <!-- ══ MARQUEE ════════════════════════════════════════════════════ -->
+    <div class="mq">
+      <div class="mq-track">
+        <span class="mq-item">Programador Fullstack</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Fotógrafo</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Roadie</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Técnico de TI</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Designer</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Programador Fullstack</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Fotógrafo</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Roadie</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Técnico de TI</span><span class="mq-item mq-dot">✦</span>
+        <span class="mq-item">Designer</span><span class="mq-item mq-dot">✦</span>
+      </div>
+    </div>
  
     <!-- ══ CTA STRIP ══════════════════════════════════════════════════ -->
     <div id="cta-strip" class="reveal">

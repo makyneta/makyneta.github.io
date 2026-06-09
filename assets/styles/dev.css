@@ -323,20 +323,23 @@
     }
     .project-card:hover .card-title { color: var(--green); }
  
-    /* Code snippet area */
-    .card-code {
+    /* Description area */
+    .card-desc {
       padding: 0.7rem 1rem;
       flex: 1;
-      font-size: 0.52rem; line-height: 1.9;
-      color: var(--dim);
       border-bottom: 1px solid var(--border);
       background: transparent;
+      display: flex; flex-direction: column; gap: 0.4rem;
     }
-    .code-kw  { color: #ff79c6; }
-    .code-fn  { color: var(--cyan); }
-    .code-str { color: var(--yellow); }
-    .code-cmt { color: var(--dim); font-style: italic; }
-    .code-var { color: #bd93f9; }
+    .desc-label {
+      font-family: var(--font-m); font-size: 0.4rem;
+      letter-spacing: 0.2em; color: var(--dim2);
+    }
+    .desc-text {
+      font-family: var(--font-m); font-size: 0.5rem;
+      line-height: 1.7; color: var(--white2);
+      margin: 0;
+    }
  
     /* Actions */
     .card-actions {
