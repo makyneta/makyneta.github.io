@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makyneta Unipessoal, Lda."/>
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../assets/styles/geral.css">
+    <link rel="stylesheet" href="../assets/styles/clients.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/scripts/script.js"></script>
+    <title>Partido Socialista de Leiria | Makyneta</title>
+    <link rel="icon" href="../assets/images/ui/favicon.png" type="image/png">
+</head>
+<body>
+  <div id="bar"></div>
+  <div id="cx"></div>
+  <div id="cy"></div>
+  <div id="header"></div>
+
+  <main>
+    <section class="client-hero">
+      <div class="ch-inner">
+        <img class="ch-logo" src="../assets/images/clients/partido-socialista-2.png" alt="Partido Socialista Leiria">
+        <div class="ch-info">
+          <div class="ch-eyebrow">Cliente</div>
+          <div class="ch-accent"></div>
+          <h1 class="ch-name">Partido Socialista<br><span class="gold">Leiria</span></h1>
+          <p class="ch-desc">Conteúdos e projectos desenvolvidos para o PS de Leiria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="client-projects">
+      <div class="cp-header">
+        <h2 class="cp-title">Projectos desenvolvidos</h2>
+        <span class="cp-count" id="proj-count">0 projectos</span>
+      </div>
+
+      <div class="projects-list" id="projects-list">
+
+        <!--
+          ⇣ EXEMPLO — adiciona ao array PROJECTS mais abaixo ⇣
+          {
+            name: 'Nome do Projecto',
+            desc: 'Breve descrição do projecto (opcional)',
+            type: 'Website / Design / Fotografia',
+            year: '2025',
+            image: '../assets/images/clients/exemplo.jpg',
+            download: 'caminho/para/ficheiro.zip',
+            link: 'https://…' // opcional
+          },
+        -->
+
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <div class="icon">⊞</div>
+        <p>Nenhum projecto adicionado ainda.<br>Os conteúdos serão disponibilizados em breve.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    const PROJECTS = [];
+
+    function renderProjects() {
+      const list = document.getElementById('projects-list');
+      const empty = document.getElementById('empty-state');
+      const count = document.getElementById('proj-count');
+
+      count.textContent = PROJECTS.length + ' projecto' + (PROJECTS.length !== 1 ? 's' : '');
+
+      if (!PROJECTS.length) {
+        empty.style.display = 'block';
+        return;
+      }
+      empty.style.display = 'none';
+
+      list.innerHTML = PROJECTS.map(p => `
+        <div class="proj-card">
+          ${p.image ? `<img class="proj-thumb" src="${p.image}" alt="${p.name}">` : ''}
+          <div class="proj-info">
+            <div class="proj-name">${p.name}</div>
+            ${p.desc ? `<div class="proj-desc">${p.desc}</div>` : ''}
+            <div class="proj-meta">
+              <span class="proj-type">${p.type}</span>
+              <span class="proj-badge">${p.year}</span>
+            </div>
+          </div>
+          <div class="proj-actions">
+            ${p.download ? `<a href="${p.download}" class="btn btn-download"><span class="btn-icon">⬇︎</span> Download</a>` : ''}
+            ${p.link ? `<a href="${p.link}" class="btn" target="_blank">Ver Online →</a>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderProjects();
+  </script>
+</body>
+</html>
