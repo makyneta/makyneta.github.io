@@ -44,7 +44,38 @@
   <div id="footer"></div>
 
   <script>
-    const VIDEOS = [];
+    const VIDEOS = [
+  {
+    title: 'Apresentação da Candidatura de Ridardo Lopes',
+    desc: 'Video de apresentação da candidatura de Ricardo Lopes à Comissão Política do Partido Socialista da Marinha Grande.',
+    embed: 'https://www.youtube.com/embed/Igmi2JkPEwk',
+    thumbnail: '../assets/images/projects/video/apresentacao-ricardo-lopes-2026.jpg',
+    link: 'https://youtu.be/Igmi2JkPEwk'
+  },
+];
+
+    function renderVideos() {
+      const grid = document.getElementById('video-grid');
+      if (!grid) return;
+      if (!VIDEOS.length) return;
+      grid.innerHTML = VIDEOS.map(v => `
+        <a class="v-card" href="${v.link}" target="_blank" rel="noopener">
+          <div class="v-thumb-wrap">
+            <img class="v-thumb" src="${v.thumbnail}" alt="${v.title}" loading="lazy">
+            <div class="v-play">
+              <div class="v-play-btn"></div>
+            </div>
+          </div>
+          <div class="v-body">
+            <div class="v-title">${v.title}</div>
+            ${v.desc ? `<div class="v-desc">${v.desc}</div>` : ''}
+            <span class="v-link">Ver projeto →</span>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    renderVideos();
   </script>
 </body>
 </html>

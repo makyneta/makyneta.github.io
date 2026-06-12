@@ -121,6 +121,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 2px;
+      background: var(--brd);
     }
     .video-grid:empty::after {
       content: 'No video projects yet.';
@@ -128,6 +129,106 @@
       font-size: 1rem; color: var(--dim);
       grid-column: 1 / -1; text-align: center;
       padding: 4rem 0;
+    }
+
+    /* ── Video Card ── */
+    .v-card {
+      background: var(--bg3);
+      display: flex; flex-direction: column;
+      transition: background .35s;
+      position: relative;
+      overflow: hidden;
+    }
+    .v-card:hover { background: var(--bg4); }
+
+    .v-thumb-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg2);
+    }
+    .v-thumb {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .v-card:hover .v-thumb { transform: scale(1.04); }
+
+    .v-play {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,.32);
+      opacity: 0; transition: opacity .35s;
+    }
+    .v-card:hover .v-play { opacity: 1; }
+    .v-play-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.7);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .3s, background .3s, transform .3s;
+    }
+    .v-play-btn::after {
+      content: '';
+      display: block;
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 14px;
+      border-color: transparent transparent transparent rgba(255,255,255,.85);
+      margin-left: 3px;
+    }
+    .v-card:hover .v-play-btn {
+      border-color: var(--gold);
+      background: rgba(200,164,80,.12);
+      transform: scale(1.06);
+    }
+
+    .v-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+      flex: 1; display: flex; flex-direction: column;
+    }
+    .v-title {
+      font-family: var(--fd);
+      font-size: 1.1rem;
+      letter-spacing: .03em;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: .35rem;
+    }
+    .v-desc {
+      font-family: var(--fsc);
+      font-size: .72rem;
+      color: var(--dim);
+      line-height: 1.45;
+      margin-bottom: .75rem;
+      flex: 1;
+    }
+    .v-link {
+      font-family: var(--fm);
+      font-size: .45rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: color .3s, gap .3s;
+    }
+    .v-link:hover { color: var(--gold2); gap: .7rem; }
+
+    .v-card {
+      opacity: 0;
+      animation: fadeUp .5s ease forwards;
+    }
+    .v-card:nth-child(1) { animation-delay: 0s; }
+    .v-card:nth-child(2) { animation-delay: .06s; }
+    .v-card:nth-child(3) { animation-delay: .12s; }
+    .v-card:nth-child(4) { animation-delay: .18s; }
+    .v-card:nth-child(5) { animation-delay: .24s; }
+    .v-card:nth-child(6) { animation-delay: .3s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
