@@ -1,0 +1,198 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:    #070707;
+  --bg2:   #0d0d0d;
+  --bg3:   #111111;
+  --bg4:   #181818;
+  --white: #ede9e2;
+  --w2:    #a8a49c;
+  --dim:   #5a5853;
+  --gold:  #c8a450;
+  --gold2: #dbb96a;
+  --g2:    rgba(200,164,80,0.08);
+  --brd:   rgba(237,233,226,0.06);
+  --brd2:  rgba(237,233,226,0.12);
+  --fd:    'Bebas Neue', sans-serif;
+  --fm:    'Fira Code', monospace;
+}
+html { height: 100%; }
+body {
+  background: var(--bg); color: var(--white);
+  font-family: var(--fm); font-size: .75rem;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--gold); color: #000; }
+.gold { color: var(--gold); }
+
+/* ── Admin Header ── */
+.admin-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  border-bottom: 1px solid var(--brd);
+  background: var(--bg3);
+  position: sticky; top: 0; z-index: 100;
+}
+.ah-left { display: flex; align-items: center; gap: 1rem; }
+.ah-logo {
+  font-family: var(--fd); font-size: 1.3rem;
+  letter-spacing: .05em; color: var(--white); line-height: 1;
+}
+.ah-label {
+  font-size: .48rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--dim);
+  border-left: 1px solid var(--brd2); padding-left: 1rem;
+}
+.ah-right { display: flex; align-items: center; gap: .5rem; }
+
+/* ── Admin Main ── */
+.admin-main {
+  max-width: 1100px; margin: 0 auto;
+  padding: 3rem 2.5rem 5rem;
+}
+
+/* ─── Welcome ── */
+.welcome { margin-bottom: 3rem; }
+.wl-title {
+  font-family: var(--fd); font-size: 2.8rem;
+  letter-spacing: .03em; color: var(--white); line-height: 1.1;
+  margin-bottom: .4rem;
+}
+.wl-title .gold { color: var(--gold); }
+.wl-text {
+  font-size: .68rem; color: var(--w2); line-height: 1.7;
+  max-width: 420px;
+}
+
+/* ─── Section Header ── */
+.sec-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.2rem; flex-wrap: wrap; gap: 1rem;
+}
+.sec-title {
+  font-family: var(--fd); font-size: 1.3rem;
+  letter-spacing: .06em; color: var(--white); line-height: 1;
+  margin-bottom: .15rem;
+}
+.sec-count {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: .7rem; color: var(--dim);
+}
+
+/* ─── Filter Bar ── */
+.filter-bar {
+  display: flex; gap: .3rem; flex-wrap: wrap;
+}
+.filter-btn {
+  font-family: var(--fm); font-size: .48rem; letter-spacing: .12em;
+  text-transform: uppercase; padding: .35rem .7rem;
+  border: 1px solid var(--brd); background: transparent;
+  color: var(--dim); cursor: pointer; border-radius: 5px;
+  transition: all .25s;
+}
+.filter-btn:hover { border-color: var(--brd2); color: var(--w2); }
+.filter-btn.active {
+  background: var(--g2); border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ─── Photo Grid ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: .6rem;
+}
+.photo-card {
+  position: relative; overflow: hidden;
+  background: var(--bg3); border: 1px solid var(--brd);
+  border-radius: 8px; aspect-ratio: 4 / 3;
+  transition: border-color .3s;
+}
+.photo-card:hover { border-color: var(--brd2); }
+.photo-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block;
+}
+.photo-card .overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.8) 0%, transparent 50%);
+  opacity: 0; transition: opacity .3s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: .8rem;
+}
+.photo-card:hover .overlay { opacity: 1; }
+.photo-card .cat {
+  font-size: .4rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .2rem;
+}
+.photo-card .fname {
+  font-size: .52rem; color: var(--white);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* ── Button ── */
+.btn {
+  font-family: var(--fm); font-size: .52rem; letter-spacing: .15em;
+  text-transform: uppercase; padding: .55rem 1.2rem;
+  border: 1px solid var(--brd2); background: transparent;
+  color: var(--white); cursor: pointer; border-radius: 6px;
+  text-decoration: none; display: inline-block;
+  transition: background .3s, border-color .3s, color .3s;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--gold); background: var(--g2); color: var(--gold); }
+.btn-danger:hover { border-color: #ff6b6b; color: #ff6b6b; background: rgba(255,50,50,.08); }
+
+/* ── Empty state ── */
+.empty {
+  text-align: center; padding: 4rem 2rem;
+  color: var(--dim); font-style: italic;
+  font-family: 'Cormorant Garamond', serif; font-size: .9rem;
+  grid-column: 1 / -1;
+}
+
+/* ── Login ── */
+.login-body {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; background: var(--bg);
+}
+.login-box {
+  width: 100%; max-width: 360px;
+  background: var(--bg3); border: 1px solid var(--brd);
+  padding: 2.5rem; border-radius: 10px;
+}
+.login-box .logo {
+  font-family: var(--fd); font-size: 2.2rem; text-align: center;
+  color: var(--white); margin-bottom: .1rem; line-height: 1;
+}
+.login-box .logo em { color: var(--gold); font-style: normal; }
+.login-box .sub {
+  text-align: center; font-size: .5rem; color: var(--dim);
+  margin-bottom: 2rem; letter-spacing: .15em; text-transform: uppercase;
+}
+.login-box .form-group { margin-bottom: 1.2rem; }
+.login-box .form-group label {
+  display: block; font-size: .52rem; color: var(--dim);
+  margin-bottom: .35rem; letter-spacing: .08em; text-transform: uppercase;
+}
+.login-box .form-group input {
+  width: 100%; padding: .65rem .8rem;
+  background: var(--bg); border: 1px solid var(--brd);
+  color: var(--white); font-family: var(--fm); font-size: .7rem;
+  border-radius: 6px; outline: none;
+  transition: border-color .3s;
+}
+.login-box .form-group input:focus { border-color: var(--gold); }
+.login-box .btn-primary { width: 100%; text-align: center; display: block; }
+.login-box .error {
+  font-size: .55rem; color: #ff6b6b;
+  text-align: center; margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .admin-header { padding: 1rem 1.5rem; }
+  .admin-main { padding: 2rem 1.5rem 4rem; }
+  .photo-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .wl-title { font-size: 2rem; }
+  .sec-header { flex-direction: column; align-items: flex-start; }
+  .ah-label { display: none; }
+}

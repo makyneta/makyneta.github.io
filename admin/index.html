@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin | Makyneta</title>
+    <link rel="icon" href="/assets/images/ui/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="ah-left">
+      <div class="ah-logo">MAKYN<span class="gold">E</span>TA</div>
+      <span class="ah-label">Admin</span>
+    </div>
+    <div class="ah-right">
+      <a href="/" target="_blank" class="btn">View Site →</a>
+      <a href="/admin/login" class="btn btn-danger">Logout</a>
+    </div>
+  </header>
+
+  <main class="admin-main">
+
+    <div class="welcome">
+      <h1 class="wl-title">Welcome back, Tomás<span class="gold">.</span></h1>
+      <p class="wl-text">Your portfolio is live and all content is published. Manage your photo gallery below.</p>
+    </div>
+
+    <div class="sec-header">
+      <div>
+        <h2 class="sec-title">Photo Gallery</h2>
+        <span class="sec-count" id="photo-total"></span>
+      </div>
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+      </div>
+    </div>
+
+    <div class="photo-grid" id="photo-grid"></div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('makyneta_admin') !== 'true') {
+      window.location.href = '/admin/login';
+    }
+
+    const PHOTOS = [
+      { src: '../assets/images/gallery/pap-defense.jpg', file: 'pap-defense.jpg', cat: 'Defesa' },
+      { src: '../assets/images/gallery/kristin-interview.jpg', file: 'kristin-interview.jpg', cat: 'Interview' },
+      { src: '../assets/images/gallery/visit-with-js.jpg', file: 'visit-with-js.jpg', cat: 'Visita' },
+    ];
+
+    let activeFilter = 'all';
+
+    function getCategories() {
+      const cats = ['all'];
+      PHOTOS.forEach(p => { if (!cats.includes(p.cat)) cats.push(p.cat); });
+      return cats;
+    }
+
+    function renderFilters() {
+      const bar = document.getElementById('filter-bar');
+      const cats = getCategories();
+      bar.innerHTML = cats.map(c =>
+        `<button class="filter-btn${c === activeFilter ? ' active' : ''}" data-filter="${c}">${c === 'all' ? 'All' : c}</button>`
+      ).join('');
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          renderFilters();
+          renderGrid();
+        });
+      });
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('photo-grid');
+      const total = document.getElementById('photo-total');
+      const filtered = activeFilter === 'all' ? PHOTOS : PHOTOS.filter(p => p.cat === activeFilter);
+      total.textContent = `${filtered.length} photo${filtered.length !== 1 ? 's' : ''}`;
+      if (!filtered.length) {
+        grid.innerHTML = '<div class="empty">No photos in this category.</div>';
+        return;
+      }
+      grid.innerHTML = filtered.map(p => `
+        <div class="photo-card">
+          <img src="${p.src}" alt="${p.file}">
+          <div class="overlay">
+            <span class="cat">${p.cat}</span>
+            <span class="fname">${p.file}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderFilters();
+    renderGrid();
+  </script>
+</body>
+</html>
