@@ -187,6 +187,14 @@
       padding: 1.25rem 1.5rem 1.5rem;
       flex: 1; display: flex; flex-direction: column;
     }
+    .v-client {
+      font-family: var(--fm);
+      font-size: .4rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .3rem;
+    }
     .v-title {
       font-family: var(--fd);
       font-size: 1.1rem;

@@ -3,6 +3,7 @@
       { id:14, title:"2 Years of Government - The Government Fails",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"2 Anos de Governo - O Governo Falha",
+        client:"PS Leiria",
         image:"/assets/images/projects/design/thumb/2-anos-de-governo-o-governo-falha-ps-leiria.jpg",
         preview:"/assets/images/projects/design/preview/2-anos-de-governo-o-governo-falha-ps-leiria.png",
         link:"" },
@@ -10,13 +11,15 @@
       { id:13, title:"Afirmar Leiria",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
+        client:"PS Leiria",
         image:"/assets/images/projects/design/thumb/afirmar-leiria.jpg",
         preview:"/assets/images/projects/design/preview/afirmar-leiria.png",
         link:"" },
 
-      { id:12, title:"Emanuel Oliveira _ Who I Am?",
+      { id:12, title:"Who I Am?",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
+        client:"Emanuel OLiveira",
         image:"/assets/images/projects/design/thumb/emanuel-oliveira-who-i-am-post.jpg",
         preview:"/assets/images/projects/design/preview/emanuel-oliveira-who-i-am-post.jpg",
         link:"" },
@@ -35,9 +38,10 @@
         preview:"/assets/images/projects/design/preview/emanuel-oliveira.jpg",
         link:"" },
 
-      { id:10, title:"TUMG _ Dia do Estudante",
+      { id:10, title:"TUMG @ Student Day",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-tumg.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-tumg.jpg",
         link:"" },
@@ -45,6 +49,7 @@
       { id:9, title:"Quinta-feira da Ascensão",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-quintafeiraascensao.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-quintafeiraascensao.jpg",
         link:"" },
@@ -52,6 +57,7 @@
       { id:8, title:"Dia Internacional do Trabalhador",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-diatrabalhador.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-diatrabalhador.jpg",
         link:"" },
@@ -59,6 +65,7 @@
       { id:7, title:"Dia da Revolução dos Cravos",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-revolucaocravos.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-revolucaocravos.jpg",
         link:"" },
@@ -66,6 +73,7 @@
       { id:5, title:"Nacional Day of Student",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-diaestudante.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-diaestudante.jpg",
         link:"" },
@@ -73,6 +81,7 @@
       { id:4, title:"JS Visita Sede PS",
         category:"social", tags:["Illustrator"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-visitaps.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-visitaps.jpg",
         link:"" },
@@ -80,6 +89,7 @@
       { id:3, title:"JS Visita Parlamento",
         category:"social", tags:["Illustrator"],
         desc:"",
+        client:"JS Marinha Grande",
         image:"/assets/images/projects/design/thumb/jsmg-visitaparl.jpg",
         preview:"/assets/images/projects/design/preview/jsmg-visitaparl.jpg",
         link:"" },
@@ -87,6 +97,7 @@
       { id:2, title:"Lecture Advertising Poster",
         category:"print", tags:["Illustrator","Photoshop"],
         desc:"",
+        client:"AE Marinha Grande Poente",
         image:"/assets/images/projects/design/thumb/bullying-lecture.jpg",
         preview:"/assets/images/projects/design/preview/bullying-lecture.jpg",
         link:"" },
@@ -94,6 +105,7 @@
       { id:1, title:"Francisco Ferreira",
         category:"social", tags:["Canva","Remax"],
         desc:"",
+        client:"RE/MAX Grupo Visão",
         image:"/assets/images/projects/design/thumb/francisco-ferreira.jpg",
         preview:"/assets/images/projects/design/preview/francisco-ferreira.jpg",
         link:"" },
@@ -153,6 +165,7 @@
               <span class="card-tag">${p.category}</span>
               <span class="card-num">${String(p.id).padStart(2,'0')}</span>
             </div>
+            ${p.client?`<div class="card-client">${p.client}</div>`:''}
             <h3 class="card-title">${p.title}</h3>
             ${p.desc?`<p class="card-desc">${p.desc}</p>`:''}
             <div class="card-footer">

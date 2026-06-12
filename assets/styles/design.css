@@ -251,6 +251,11 @@
     }
     .card-num { font-family: var(--fm); font-size: .42rem; letter-spacing: .16em; color: var(--dim2); }
  
+    .card-client {
+      font-family: var(--fm); font-size: .4rem; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: .15rem;
+    }
     .card-title {
       font-family: var(--fd); font-size: clamp(1.3rem, 1.8vw, 1.9rem);
       letter-spacing: .04em; color: var(--white); line-height: 1; transition: color .3s;

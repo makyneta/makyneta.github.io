@@ -48,6 +48,7 @@
   {
     title: 'Apresentação da Candidatura de Ridardo Lopes',
     desc: 'Video de apresentação da candidatura de Ricardo Lopes à Comissão Política do Partido Socialista da Marinha Grande.',
+    client: 'PS Marinha Grande',
     embed: 'https://www.youtube.com/embed/Igmi2JkPEwk',
     thumbnail: '../assets/images/projects/video/apresentacao-ricardo-lopes-2026.jpg',
     link: 'https://youtu.be/Igmi2JkPEwk'
@@ -67,6 +68,7 @@
             </div>
           </div>
           <div class="v-body">
+            ${v.client ? `<div class="v-client">${v.client}</div>` : ''}
             <div class="v-title">${v.title}</div>
             ${v.desc ? `<div class="v-desc">${v.desc}</div>` : ''}
             <span class="v-link">Ver projeto →</span>
