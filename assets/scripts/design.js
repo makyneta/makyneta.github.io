@@ -1,5 +1,19 @@
     /* ── Data ── */
     const PROJECTS = [
+      { id:14, title:"2 Years of Government - The Government Fails",
+        category:"social", tags:["Illustrator","Photoshop","Canva"],
+        desc:"2 Anos de Governo - O Governo Falha",
+        image:"/assets/images/projects/design/thumb/2-anos-de-governo-o-governo-falha-ps-leiria.jpg",
+        preview:"/assets/images/projects/design/preview/2-anos-de-governo-o-governo-falha-ps-leiria.png",
+        link:"" },
+
+      { id:13, title:"Afirmar Leiria",
+        category:"social", tags:["Illustrator","Photoshop","Canva"],
+        desc:"",
+        image:"/assets/images/projects/design/thumb/afirmar-leiria.jpg",
+        preview:"/assets/images/projects/design/preview/afirmar-leiria.png",
+        link:"" },
+
       { id:12, title:"Emanuel Oliveira _ Who I Am?",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
