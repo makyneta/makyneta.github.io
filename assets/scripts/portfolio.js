@@ -6,7 +6,7 @@
     /* ── DEV PROJECTS (from dev.html) ── */
     const DEV_PROJECTS = [
       { id:3, title:"António Pedro", type:"frontend",
-        img:"/assets/images/projects/dev/antoniorpedro.png",
+        img:"/assets/images/projects/dev/antoniorpedro-2.png",
         code:"https://github.com/makyneta/antoniorpedro",
         demo:"https://makyneta.github.io/antoniorpedro" },
 

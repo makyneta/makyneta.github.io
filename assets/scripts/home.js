@@ -160,7 +160,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const devData = [
     { title:"Mr. Devix", desc:"Personal brand portfolio with smooth scroll animations and a dark theme.", tags:["HTML","CSS","JS"], img:"assets/images/projects/dev/mr-devix.png", code:"https://github.com/makyneta/mrdevix", demo:"https://makyneta.github.io/mrdevix" },
     { title:"Clube Atletismo de Marinha Grande", desc:"Institutional website with event calendars, athlete profiles and news sections.", tags:["HTML","CSS","JS"], img:"assets/images/projects/dev/clube-atletismo-de-marinha-grande.png", code:"https://github.com/makyneta/catletismomg", demo:"https://makyneta.github.io/catletismomg" },
-    { title:"Donut-Man", desc:"Fullstack browser game with a Node.js backend and real-time leaderboard.", tags:["Node.js","HTML","CSS","JS"], img:"assets/images/projects/dev/personal/donut-man.jpg", code:"https://github.com/makyneta/donutman", demo:"https://makyneta.github.io/donutman" },
+    { title:"António Pedro", desc:"Professional landing page for a personal trainer. Includes service cards, testimonials, and a booking CTA.", tags:["HTML","CSS","JS"], img:"assets/images/projects/dev/antonio-pedro-2.png", code:"https://github.com/makyneta/antoniorpedro", demo:"https://makyneta.github.io/antoniorpedro" },
   ];
 
   const photoData = [

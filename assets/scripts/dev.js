@@ -20,7 +20,7 @@
         demo:"https://makyneta.github.io/catletismomg" },
 
       { id:13, title:"António Pedro", type:"frontend",
-        img:"/assets/images/projects/dev/antonio-pedro.png",
+        img:"/assets/images/projects/dev/antonio-pedro-2.png",
         desc:"Professional landing page for a personal trainer. Includes service cards, testimonials, and a booking CTA.",
         code:"https://github.com/makyneta/antoniorpedro",
         demo:"https://makyneta.github.io/antoniorpedro" },
