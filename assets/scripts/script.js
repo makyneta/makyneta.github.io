@@ -3,67 +3,51 @@ document.querySelectorAll('.year').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
-//
-// Header
-fetch("/assets/header/main.html")
-  .then(response => response.text())
-  .then(data => {
+var v = Date.now();
+
+fetch("/assets/header/main.html?v=" + v)
+  .then(function(r) { return r.text(); })
+  .then(function(data) {
     document.getElementById("header").innerHTML = data;
-
-    // CSS
-    const link = document.createElement("link");
+    var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/styles/header.css";
+    link.href = "/assets/styles/header.css?v=" + v;
     document.head.appendChild(link);
-
-    // JS
-    const script = document.createElement("script");
-    script.src = "/assets/scripts/header.js";
+    var script = document.createElement("script");
+    script.src = "/assets/scripts/header.js?v=" + v;
     document.body.appendChild(script);
   });
 
-//
-// Header-PT
-fetch("/assets/header/portuguese.html")
-  .then(response => response.text())
-  .then(data => {
+fetch("/assets/header/portuguese.html?v=" + v)
+  .then(function(r) { return r.text(); })
+  .then(function(data) {
     document.getElementById("headerpt").innerHTML = data;
-
-    // CSS
-    const link = document.createElement("link");
+    var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/styles/header.css";
+    link.href = "/assets/styles/header.css?v=" + v;
     document.head.appendChild(link);
-
-    // JS
-    const script = document.createElement("script");
-    script.src = "/assets/scripts/header.js";
+    var script = document.createElement("script");
+    script.src = "/assets/scripts/header.js?v=" + v;
     document.body.appendChild(script);
   });
 
-//
-// Header-ES
-fetch("/assets/header/spanish.html")
-  .then(response => response.text())
-  .then(data => {
+fetch("/assets/header/spanish.html?v=" + v)
+  .then(function(r) { return r.text(); })
+  .then(function(data) {
     document.getElementById("headeres").innerHTML = data;
-
-    // CSS
-    const link = document.createElement("link");
+    var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/styles/header.css";
+    link.href = "/assets/styles/header.css?v=" + v;
     document.head.appendChild(link);
-
-    // JS
-    const script = document.createElement("script");
-    script.src = "/assets/scripts/header.js";
+    var script = document.createElement("script");
+    script.src = "/assets/scripts/header.js?v=" + v;
     document.body.appendChild(script);
   });
 
 
 //
 // Footer
-fetch("/assets/footer.html")
+fetch("/assets/footer.html?v=" + v)
   .then(response => response.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
@@ -71,11 +55,11 @@ fetch("/assets/footer.html")
     // CSS
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/styles/footer.css";
+    link.href = "/assets/styles/footer.css?v=" + v;
     document.head.appendChild(link);
 
     // JS
     const script = document.createElement("script");
-    script.src = "/assets/scripts/footer.js";
+    script.src = "/assets/scripts/footer.js?v=" + v;
     document.body.appendChild(script);
   });
