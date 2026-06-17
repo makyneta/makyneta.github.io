@@ -76,8 +76,9 @@
   align-items: center;
   padding: 0 1.2rem;
   font-family: var(--h-ss);
-  font-size: .65rem;
-  letter-spacing: .12em;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--h-dim);
   text-decoration: none;
@@ -178,8 +179,9 @@
   color: var(--h-dim);
   text-decoration: none;
   font-family: var(--h-ss);
-  font-size: .5rem;
-  letter-spacing: .1em;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
   text-transform: uppercase;
   transition: color .2s, background .2s;
 }
@@ -200,7 +202,8 @@
 .lang-btn {
   gap: .3rem;
   font-family: var(--h-ss);
-  font-size: .65rem;
+  font-size: .8rem;
+  font-weight: 600;
 }
 
 /* ── Hamburger ── */
@@ -340,8 +343,9 @@
   display: block;
   padding: .3rem 0;
   font-family: var(--h-ss);
-  font-size: .65rem;
-  letter-spacing: .12em;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--h-dim);
   text-decoration: none;
