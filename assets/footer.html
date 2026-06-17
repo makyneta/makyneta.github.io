@@ -1,62 +1,47 @@
 <footer class="mk-footer">
-  <div class="mk-footer-inner">
+  <!-- CTA -->
+  <div class="mk-cta">
+    <p class="mk-cta-label" id="mk-cta-label">Let's build something worth building</p>
+    <a href="/contact" class="mk-cta-btn" id="mk-cta-btn">Start a project</a>
+  </div>
 
-    <!-- Brand -->
-    <div class="mk-footer-brand">
+  <!-- Bottom -->
+  <div class="mk-footer-bottom">
+    <div class="mk-footer-left">
       <a href="/" class="mk-footer-logo">
         <img src="/assets/images/ui/header_old.png" alt="Makyneta" class="mk-footer-logo-img">
       </a>
-      <p class="mk-footer-desc">
-        Multidisciplinary creative studio &mdash; development, design, photography, and video. We build digital experiences that matter.
-      </p>
+      <p class="mk-footer-copy">&copy; 2024&ndash;<span id="current-year-refined"></span> Makyneta Unipessoal, Lda.</p>
+    </div>
+    <div class="mk-footer-right">
       <div class="mk-footer-social">
         <a href="https://instagram.com/makyneta" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://github.com/makyneta" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://linkedin.com/in/makyneta" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://www.youtube.com/@makynetalda" target="_blank" rel="noopener" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
-    </div>
-
-    <!-- Portfolio -->
-    <div class="mk-footer-col">
-      <h4>Portfolio</h4>
-      <ul>
-        <li><a href="/develop"><i class="fa-solid fa-code"></i> Development</a></li>
-        <li><a href="/design"><i class="fa-solid fa-paint-brush"></i> Design</a></li>
-        <li><a href="/photo"><i class="fa-solid fa-camera"></i> Photography</a></li>
-        <li><a href="/video"><i class="fa-solid fa-video"></i> Video</a></li>
-        <li><a href="/feedback"><i class="fa-solid fa-star"></i> Feedback</a></li>
-      </ul>
-    </div>
-
-    <!-- Explore -->
-    <div class="mk-footer-col">
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="mk-footer-col">
-      <h4>Contact</h4>
-      <ul class="mk-footer-contact">
-        <li><a href="mailto:hello@makyneta.com">hello@makyneta.com</a></li>
-        <li>Marinha Grande, Portugal</li>
-      </ul>
+      <div class="mk-footer-legal">
+        <a href="/legal/privacy-policy" id="mk-legal-privacy">Privacy</a>
+        <a href="/legal/terms-of-service" id="mk-legal-terms">Terms</a>
+        <a href="/legal/cookies-policy" id="mk-legal-cookies">Cookies</a>
+      </div>
     </div>
   </div>
 
-  <!-- Bottom -->
-  <div class="mk-footer-bottom">
-    <p>&copy; 2024&ndash;<span id="current-year-refined"></span> Makyneta Unipessoal, Lda. All rights reserved.</p>
-    <div class="mk-footer-legal">
-      <a href="/legal/privacy-policy">Privacy</a>
-      <a href="/legal/terms-of-service">Terms</a>
-      <a href="/legal/cookies-policy">Cookies</a>
-    </div>
-  </div>
+  <script>
+    (function(){
+      var p = window.location.pathname;
+      if (p.indexOf('/pt') === 0 || p.indexOf('/pt/') === 0) {
+        document.getElementById('mk-cta-label').textContent = 'Vamos construir algo que vale a pena';
+        document.getElementById('mk-cta-btn').textContent = 'Iniciar projeto';
+        document.getElementById('mk-cta-btn').href = '/pt/contacto';
+        document.getElementById('mk-legal-privacy').textContent = 'Privacidade';
+        document.getElementById('mk-legal-privacy').href = '/pt/legal/politica-de-privacidade';
+        document.getElementById('mk-legal-terms').textContent = 'Termos';
+        document.getElementById('mk-legal-terms').href = '/pt/legal/termos-de-servico';
+        document.getElementById('mk-legal-cookies').textContent = 'Cookies';
+        document.getElementById('mk-legal-cookies').href = '/pt/legal/politica-de-cookies';
+      }
+    })();
+  </script>
 </footer>

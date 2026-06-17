@@ -1,60 +1,99 @@
 .mk-footer {
   background: #0a0a0a;
   border-top: 1px solid rgba(237,233,226,0.06);
-  padding: 3rem 2rem 0;
   font-family: 'Fira Code', monospace;
 }
 
-.mk-footer-inner {
+/* ── CTA ── */
+
+.mk-cta {
+  text-align: center;
+  padding: 3.5rem 2rem 2.5rem;
+  border-bottom: 1px solid rgba(237,233,226,0.04);
+}
+
+.mk-cta-label {
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(237,233,226,0.5);
+  margin: 0 0 1.2rem;
+}
+
+.mk-cta-btn {
+  display: inline-block;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  background: #c8a450;
+  padding: .7rem 2.2rem;
+  text-decoration: none;
+  border-radius: 0;
+  transition: background .3s, transform .3s;
+}
+
+.mk-cta-btn:hover {
+  background: #dbb96a;
+  transform: translateY(-2px);
+}
+
+/* ── Bottom ── */
+
+.mk-footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 2.5rem;
-}
-
-.mk-footer-brand {
+  padding: 1.2rem 2rem;
   display: flex;
-  flex-direction: column;
-  gap: .8rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-.mk-footer-logo {
+.mk-footer-left {
   display: flex;
   align-items: center;
-  gap: .4rem;
-  text-decoration: none;
+  gap: .75rem;
 }
 
 .mk-footer-logo-img {
-  height: 26px;
+  height: 22px;
   width: auto;
   display: block;
+  opacity: .5;
 }
 
-.mk-footer-desc {
-  font-size: .6rem;
-  line-height: 1.7;
-  color: rgba(237,233,226,0.45);
-  max-width: 280px;
+.mk-footer-copy {
+  font-size: .5rem;
+  color: rgba(237,233,226,0.2);
+  margin: 0;
+}
+
+.mk-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .mk-footer-social {
   display: flex;
-  gap: .6rem;
-  margin-top: .3rem;
+  gap: .5rem;
 }
 
 .mk-footer-social a {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 1px solid rgba(237,233,226,0.1);
+  border: 1px solid rgba(237,233,226,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(237,233,226,0.4);
-  font-size: .7rem;
+  color: rgba(237,233,226,0.25);
+  font-size: .6rem;
   text-decoration: none;
   transition: all .3s;
 }
@@ -65,127 +104,49 @@
   background: rgba(200,164,80,0.08);
 }
 
-.mk-footer-col h4 {
-  font-family: 'Sofia Sans Extra Condensed', sans-serif;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: rgba(237,233,226,0.25);
-  margin: 0 0 1rem;
-}
-
-.mk-footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: .55rem;
-}
-
-.mk-footer-col ul a {
-  font-family: 'Sofia Sans Extra Condensed', sans-serif;
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: rgba(237,233,226,0.55);
-  text-decoration: none;
-  transition: color .3s;
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-}
-
-.mk-footer-col ul a:hover {
-  color: #c8a450;
-}
-
-.mk-footer-col ul a i {
-  font-size: .5rem;
-  opacity: .4;
-}
-
-.mk-footer-contact li {
-  font-size: .55rem;
-  color: rgba(237,233,226,0.4);
-  line-height: 1.6;
-}
-
-.mk-footer-contact li a {
-  font-family: 'Fira Code', monospace;
-  font-size: .55rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  color: rgba(237,233,226,0.5);
-}
-
-.mk-footer-contact li a:hover {
-  color: #c8a450;
-}
-
-.mk-footer-bottom {
-  margin-top: 2.5rem;
-  padding: 1.2rem 0;
-  border-top: 1px solid rgba(237,233,226,0.04);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: .5rem;
-}
-
-.mk-footer-bottom p {
-  font-size: .5rem;
-  color: rgba(237,233,226,0.25);
-  margin: 0;
-}
-
 .mk-footer-legal {
   display: flex;
-  gap: 1rem;
+  gap: .75rem;
 }
 
 .mk-footer-legal a {
   font-size: .5rem;
-  color: rgba(237,233,226,0.25);
+  color: rgba(237,233,226,0.2);
   text-decoration: none;
   transition: color .3s;
 }
 
 .mk-footer-legal a:hover {
-  color: rgba(237,233,226,0.55);
+  color: rgba(237,233,226,0.5);
 }
 
-@media (max-width: 768px) {
-  .mk-footer {
-    padding: 2rem 1.2rem 0;
+@media (max-width: 640px) {
+  .mk-cta {
+    padding: 2.5rem 1.5rem 2rem;
   }
 
-  .mk-footer-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  .mk-cta-label {
+    font-size: .95rem;
   }
 
-  .mk-footer-brand {
-    grid-column: span 2;
+  .mk-cta-btn {
+    font-size: .85rem;
+    padding: .6rem 1.8rem;
   }
 
   .mk-footer-bottom {
     flex-direction: column;
     text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .mk-footer-inner {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    padding: 1rem 1.2rem;
   }
 
-  .mk-footer-brand {
-    grid-column: span 1;
+  .mk-footer-left {
+    flex-direction: column;
+    gap: .3rem;
+  }
+
+  .mk-footer-right {
+    flex-direction: column;
+    gap: .6rem;
   }
 }
