@@ -1,42 +1,191 @@
-.refined-footer {
-    background-color: #1a1a1a;
-    padding: 20px 0 20px 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-family: 'Fira Code', monospace;
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
+.mk-footer {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(237,233,226,0.06);
+  padding: 3rem 2rem 0;
+  font-family: 'Fira Code', monospace;
 }
 
-.footer-container {
-    margin: 0 auto;
+.mk-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
 }
 
-.footer-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+.mk-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
 }
 
-.footer-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
+.mk-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  text-decoration: none;
+}
+
+.mk-footer-logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.mk-footer-desc {
+  font-size: .6rem;
+  line-height: 1.7;
+  color: rgba(237,233,226,0.45);
+  max-width: 280px;
+}
+
+.mk-footer-social {
+  display: flex;
+  gap: .6rem;
+  margin-top: .3rem;
+}
+
+.mk-footer-social a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(237,233,226,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(237,233,226,0.4);
+  font-size: .7rem;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.mk-footer-social a:hover {
+  border-color: #c8a450;
+  color: #c8a450;
+  background: rgba(200,164,80,0.08);
+}
+
+.mk-footer-col h4 {
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(237,233,226,0.25);
+  margin: 0 0 1rem;
+}
+
+.mk-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+
+.mk-footer-col ul a {
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(237,233,226,0.55);
+  text-decoration: none;
+  transition: color .3s;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.mk-footer-col ul a:hover {
+  color: #c8a450;
+}
+
+.mk-footer-col ul a i {
+  font-size: .5rem;
+  opacity: .4;
+}
+
+.mk-footer-contact li {
+  font-size: .55rem;
+  color: rgba(237,233,226,0.4);
+  line-height: 1.6;
+}
+
+.mk-footer-contact li a {
+  font-family: 'Fira Code', monospace;
+  font-size: .55rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(237,233,226,0.5);
+}
+
+.mk-footer-contact li a:hover {
+  color: #c8a450;
+}
+
+.mk-footer-bottom {
+  margin-top: 2.5rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(237,233,226,0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.mk-footer-bottom p {
+  font-size: .5rem;
+  color: rgba(237,233,226,0.25);
+  margin: 0;
+}
+
+.mk-footer-legal {
+  display: flex;
+  gap: 1rem;
+}
+
+.mk-footer-legal a {
+  font-size: .5rem;
+  color: rgba(237,233,226,0.25);
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.mk-footer-legal a:hover {
+  color: rgba(237,233,226,0.55);
+}
+
+@media (max-width: 768px) {
+  .mk-footer {
+    padding: 2rem 1.2rem 0;
+  }
+
+  .mk-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .mk-footer-brand {
+    grid-column: span 2;
+  }
+
+  .mk-footer-bottom {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+  }
 }
 
-.copyright-text {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.65rem;
-    color: #999999;
-    margin: 0;
-    transition: all 0.4s ease;
-}
+@media (max-width: 480px) {
+  .mk-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-.copyright-text:hover {
-    color: #e8e8e8;
+  .mk-footer-brand {
+    grid-column: span 1;
+  }
 }
