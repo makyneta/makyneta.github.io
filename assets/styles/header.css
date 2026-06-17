@@ -1,4 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@400;500;600;700&display=swap');
 
 /* ══════════════════════════════════════════════════════════
    HEADER — Makyneta
@@ -15,6 +16,7 @@
   --h-dim:     rgba(237,233,226,.5);
   --h-fd:      'Bebas Neue', sans-serif;
   --h-fm:      'Fira Code', monospace;
+  --h-ss:      'Sofia Sans Extra Condensed', sans-serif;
 }
 
 /* ── Header Bar ── */
@@ -47,6 +49,8 @@
 .header-logo-img {
   height: 28px;
   width: auto;
+  max-width: 160px;
+  object-fit: contain;
   display: block;
   transition: opacity .3s;
 }
@@ -71,9 +75,9 @@
   display: flex;
   align-items: center;
   padding: 0 1.2rem;
-  font-family: var(--h-fm);
-  font-size: .55rem;
-  letter-spacing: .18em;
+  font-family: var(--h-ss);
+  font-size: .65rem;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--h-dim);
   text-decoration: none;
@@ -173,9 +177,9 @@
   padding: .55rem 1.2rem;
   color: var(--h-dim);
   text-decoration: none;
-  font-family: var(--h-fm);
-  font-size: .44rem;
-  letter-spacing: .12em;
+  font-family: var(--h-ss);
+  font-size: .5rem;
+  letter-spacing: .1em;
   text-transform: uppercase;
   transition: color .2s, background .2s;
 }
@@ -195,6 +199,8 @@
 
 .lang-btn {
   gap: .3rem;
+  font-family: var(--h-ss);
+  font-size: .65rem;
 }
 
 /* ── Hamburger ── */
@@ -333,9 +339,9 @@
 .mobile-sub-link {
   display: block;
   padding: .3rem 0;
-  font-family: var(--h-fm);
-  font-size: .55rem;
-  letter-spacing: .15em;
+  font-family: var(--h-ss);
+  font-size: .65rem;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--h-dim);
   text-decoration: none;
