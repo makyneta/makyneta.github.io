@@ -1,19 +1,7 @@
 <footer class="mk-footer">
-  <div class="mk-footer-main">
-    <div class="mk-footer-brand">
-      <a href="/" class="mk-footer-logo">
-        <img src="/assets/images/ui/header_old.png" alt="Makyneta" class="mk-footer-logo-img">
-      </a>
-      <div class="mk-footer-legal">
-        <a href="/legal/privacy-policy" id="mk-legal-privacy">Privacy</a>
-        <a href="/legal/terms-of-service" id="mk-legal-terms">Terms</a>
-        <a href="/legal/cookies-policy" id="mk-legal-cookies">Cookies</a>
-      </div>
-    </div>
-    <div class="mk-cta">
-      <p class="mk-cta-label" id="mk-cta-label">Let's build something worth building</p>
-      <a href="/contact" class="mk-cta-btn" id="mk-cta-btn">Start a project</a>
-    </div>
+  <div class="mk-cta">
+    <p class="mk-cta-label" id="mk-cta-label">Let's build something worth building</p>
+    <a href="/contact" class="mk-cta-btn" id="mk-cta-btn">Start a project</a>
   </div>
   <div class="mk-footer-bar">
     <p class="mk-footer-copy">&copy; 2024&ndash;<span id="current-year-refined"></span> Makyneta Unipessoal, Lda. All rights reserved.</p>
@@ -21,17 +9,10 @@
 
   <script>
     (function(){
-      var p = window.location.pathname;
-      if (p.indexOf('/pt') === 0 || p.indexOf('/pt/') === 0) {
+      if (window.location.pathname.indexOf('/pt') === 0) {
         document.getElementById('mk-cta-label').textContent = 'Vamos construir algo que vale a pena';
         document.getElementById('mk-cta-btn').textContent = 'Iniciar projeto';
         document.getElementById('mk-cta-btn').href = '/pt/contacto';
-        document.getElementById('mk-legal-privacy').textContent = 'Privacidade';
-        document.getElementById('mk-legal-privacy').href = '/pt/legal/politica-de-privacidade';
-        document.getElementById('mk-legal-terms').textContent = 'Termos';
-        document.getElementById('mk-legal-terms').href = '/pt/legal/termos-de-servico';
-        document.getElementById('mk-legal-cookies').textContent = 'Cookies';
-        document.getElementById('mk-legal-cookies').href = '/pt/legal/politica-de-cookies';
       }
     })();
   </script>
