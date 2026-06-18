@@ -1,99 +1,49 @@
 .mk-footer {
-  background: #0a0a0a;
-  border-top: 1px solid rgba(237,233,226,0.06);
+  background: #070707;
+  border-top: 1px solid rgba(200,164,80,0.08);
   font-family: 'Fira Code', monospace;
 }
 
-/* ── CTA ── */
+/* ── Main row: brand + CTA ── */
 
-.mk-cta {
-  text-align: center;
-  padding: 3.5rem 2rem 2.5rem;
-  border-bottom: 1px solid rgba(237,233,226,0.04);
-}
-
-.mk-cta-label {
-  font-family: 'Sofia Sans Extra Condensed', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: rgba(237,233,226,0.5);
-  margin: 0 0 1.2rem;
-}
-
-.mk-cta-btn {
-  display: inline-block;
-  font-family: 'Sofia Sans Extra Condensed', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: #0a0a0a;
-  background: #c8a450;
-  padding: .7rem 2.2rem;
-  text-decoration: none;
-  border-radius: 0;
-  transition: background .3s, transform .3s;
-}
-
-.mk-cta-btn:hover {
-  background: #dbb96a;
-  transform: translateY(-2px);
-}
-
-/* ── Bottom ── */
-
-.mk-footer-bottom {
+.mk-footer-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.2rem 2rem;
+  padding: 2.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.mk-footer-left {
+.mk-footer-brand {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: 1.2rem;
+  flex-shrink: 0;
 }
 
 .mk-footer-logo-img {
-  height: 22px;
+  height: 24px;
   width: auto;
   display: block;
-  opacity: .5;
-}
-
-.mk-footer-copy {
-  font-size: .5rem;
-  color: rgba(237,233,226,0.2);
-  margin: 0;
-}
-
-.mk-footer-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
 .mk-footer-social {
   display: flex;
-  gap: .5rem;
+  gap: .4rem;
 }
 
 .mk-footer-social a {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: 1px solid rgba(237,233,226,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(237,233,226,0.25);
-  font-size: .6rem;
+  color: rgba(237,233,226,0.2);
+  font-size: .55rem;
   text-decoration: none;
   transition: all .3s;
 }
@@ -106,11 +56,15 @@
 
 .mk-footer-legal {
   display: flex;
-  gap: .75rem;
+  gap: .7rem;
+  padding-left: 1.2rem;
+  border-left: 1px solid rgba(237,233,226,0.06);
 }
 
 .mk-footer-legal a {
   font-size: .5rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   color: rgba(237,233,226,0.2);
   text-decoration: none;
   transition: color .3s;
@@ -120,33 +74,82 @@
   color: rgba(237,233,226,0.5);
 }
 
-@media (max-width: 640px) {
+/* ── CTA ── */
+
+.mk-cta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.mk-cta-label {
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(237,233,226,0.25);
+  margin: 0 0 .5rem;
+  line-height: 1.2;
+}
+
+.mk-cta-btn {
+  display: inline-block;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #070707;
+  background: #c8a450;
+  padding: .65rem 1.8rem;
+  text-decoration: none;
+  transition: background .3s, transform .3s;
+}
+
+.mk-cta-btn:hover {
+  background: #dbb96a;
+  transform: translateY(-2px);
+}
+
+/* ── Bottom bar ── */
+
+.mk-footer-bar {
+  border-top: 1px solid rgba(237,233,226,0.04);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.mk-footer-copy {
+  font-size: .55rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(237,233,226,0.12);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mk-footer-main {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .mk-footer-brand {
+    flex-direction: column;
+    gap: .8rem;
+  }
+
+  .mk-footer-legal {
+    border-left: none;
+    padding-left: 0;
+  }
+
   .mk-cta {
-    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
   }
 
   .mk-cta-label {
-    font-size: .95rem;
-  }
-
-  .mk-cta-btn {
-    font-size: .85rem;
-    padding: .6rem 1.8rem;
-  }
-
-  .mk-footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem 1.2rem;
-  }
-
-  .mk-footer-left {
-    flex-direction: column;
-    gap: .3rem;
-  }
-
-  .mk-footer-right {
-    flex-direction: column;
-    gap: .6rem;
+    font-size: 1.1rem;
   }
 }
