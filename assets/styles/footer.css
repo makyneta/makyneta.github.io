@@ -45,15 +45,17 @@
 
 .mk-footer-bar {
   border-top: 1px solid rgba(237,233,226,0.04);
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   text-align: center;
 }
 
 .mk-footer-copy {
-  font-size: .55rem;
-  letter-spacing: .15em;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
   text-transform: uppercase;
-  color: rgba(237,233,226,0.12);
+  color: rgba(237,233,226,0.3);
   margin: 0;
 }
 
