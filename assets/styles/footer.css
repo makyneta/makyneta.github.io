@@ -29,31 +29,6 @@
   display: block;
 }
 
-.mk-footer-social {
-  display: flex;
-  gap: .4rem;
-}
-
-.mk-footer-social a {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 1px solid rgba(237,233,226,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(237,233,226,0.2);
-  font-size: .55rem;
-  text-decoration: none;
-  transition: all .3s;
-}
-
-.mk-footer-social a:hover {
-  border-color: #c8a450;
-  color: #c8a450;
-  background: rgba(200,164,80,0.08);
-}
-
 .mk-footer-legal {
   display: flex;
   gap: .7rem;
