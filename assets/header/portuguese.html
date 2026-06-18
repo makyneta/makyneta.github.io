@@ -40,29 +40,29 @@
     <span class="bar"></span>
   </button>
 
-  <div id="mobile-menu-backdrop" class="hidden"></div>
+  <div id="mobile-menu-backdrop"></div>
 
   <nav id="mobile-sidebar-nav">
-    <div class="mobile-menu-inner">
-      <div class="mobile-menu-logo">MAKYNETA</div>
+    <div class="mobile-brand">MAKYNETA</div>
 
-      <ul id="main-nav-list">
-        <li><a href="/pt" class="mobile-nav-link">Início</a></li>
-        <li><a href="/pt/sobre" class="mobile-nav-link">Sobre</a></li>
+    <ul id="main-nav-list">
+      <li><a href="/pt" class="mobile-nav-link">Início</a></li>
+      <li><a href="/pt/sobre" class="mobile-nav-link">Sobre</a></li>
 
-        <li><span class="mobile-section-label">Portfolio</span></li>
-        <li><a href="/pt/develop" class="mobile-sub-link">Desenvolvimento</a></li>
-        <li><a href="/pt/design" class="mobile-sub-link">Design</a></li>
-        <li><a href="/pt/photo" class="mobile-sub-link">Fotografia</a></li>
-        <li><a href="/pt/video" class="mobile-sub-link">Vídeo</a></li>
-        <li><a href="/pt/feedback" class="mobile-sub-link">Feedback</a></li>
+      <li><span class="mobile-section-label">Portfolio</span></li>
+      <li><a href="/pt/develop" class="mobile-sub-link">Desenvolvimento</a></li>
+      <li><a href="/pt/design" class="mobile-sub-link">Design</a></li>
+      <li><a href="/pt/photo" class="mobile-sub-link">Fotografia</a></li>
+      <li><a href="/pt/video" class="mobile-sub-link">Vídeo</a></li>
+      <li><a href="/pt/feedback" class="mobile-sub-link">Feedback</a></li>
 
-        <li><a href="/pt/contacto" class="mobile-nav-link">Contacto</a></li>
-      </ul>
+      <li><a href="/pt/contacto" class="mobile-nav-link">Contacto</a></li>
+    </ul>
 
-      <div class="mobile-menu-footer">
-        <a href="/" class="mobile-lang">English</a>
-      </div>
+    <div class="mobile-lang-wrap">
+      <a href="/" class="mobile-lang-btn">
+        <i class="fa-solid fa-globe"></i> English
+      </a>
     </div>
   </nav>
 
@@ -76,7 +76,7 @@
         document.querySelectorAll('#main-header .nav-btn')[0].classList.add('active');
       }
       document.querySelectorAll('#mobile-sidebar-nav a').forEach(function(el){
-        if (el.getAttribute('href') === path) el.style.color = '#c8a450';
+        if (el.getAttribute('href') === path) el.classList.add('active');
       });
     })();
   </script>
