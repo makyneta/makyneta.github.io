@@ -22,19 +22,19 @@ footer, #footer {
     flex-shrink: 0;
 }
 
-/* ── Custom Cursor (programming theme) ── */
+/* ── Custom Cursor ── */
 
 #cx {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  background: #00ff88;
+  width: 6px;
+  height: 6px;
+  background: #c8a450;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
-  transition: width 0.2s, height 0.2s;
+  box-shadow: 0 0 12px rgba(200,164,80,0.5), 0 0 24px rgba(200,164,80,0.15);
+  transition: width 0.2s, height 0.2s, box-shadow 0.2s;
 }
 
 #cy {
@@ -42,60 +42,39 @@ footer, #footer {
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 255, 136, 0.35);
-  border-radius: 2px;
-  transition: width 0.3s, height 0.3s, border-color 0.3s, border-radius 0.3s;
-}
-
-#cx.hover,
-#cy.hover {
-  transition: width 0.25s, height 0.25s, border-color 0.25s, background 0.25s;
-}
-
-/* Dev/about page compatibility */
-
-#cursor-dot {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  background: #00ff88;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(200,164,80,0.25);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
-  transition: width 0.2s, height 0.2s;
+  background: radial-gradient(circle at center, rgba(200,164,80,0.04) 0%, transparent 70%);
+  box-shadow: 0 0 30px rgba(200,164,80,0.06), inset 0 0 30px rgba(200,164,80,0.02);
+  transition: width 0.4s cubic-bezier(.22,.68,.33,1), height 0.4s cubic-bezier(.22,.68,.33,1), border-color 0.3s, box-shadow 0.3s;
 }
 
-#cursor-ring {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 255, 136, 0.35);
-  border-radius: 2px;
-  transition: width 0.3s, height 0.3s, border-color 0.3s, border-radius 0.3s;
+#cy.active {
+  width: 64px;
+  height: 64px;
+  border-color: rgba(200,164,80,0.5);
+  box-shadow: 0 0 50px rgba(200,164,80,0.12), inset 0 0 40px rgba(200,164,80,0.04);
+  background: radial-gradient(circle at center, rgba(200,164,80,0.06) 0%, transparent 70%);
 }
 
-#cursor {
+#ct1, #ct2, #ct3, #ct4 {
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 9997;
   transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  background: #00ff88;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
-  transition: width 0.2s, height 0.2s;
+  background: #c8a450;
 }
+
+/* Legacy ID compatibility */
+#cursor-dot { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); width: 6px; height: 6px; background: #c8a450; border-radius: 50%; box-shadow: 0 0 12px rgba(200,164,80,0.5); }
+#cursor-ring { position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); width: 40px; height: 40px; border: 1.5px solid rgba(200,164,80,0.25); border-radius: 50%; background: radial-gradient(circle at center, rgba(200,164,80,0.04) 0%, transparent 70%); box-shadow: 0 0 30px rgba(200,164,80,0.06); }
+#cursor { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); width: 6px; height: 6px; background: #c8a450; border-radius: 50%; box-shadow: 0 0 12px rgba(200,164,80,0.5); }
 
 @media (max-width: 768px) {
-  #cx, #cy, #cursor, #cursor-dot, #cursor-ring {
+  #cx, #cy, #ct1, #ct2, #ct3, #ct4, #cursor, #cursor-dot, #cursor-ring {
     display: none !important;
   }
 }

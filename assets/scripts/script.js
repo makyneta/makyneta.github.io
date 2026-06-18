@@ -46,14 +46,17 @@ fetch("/assets/header/spanish.html?v=" + v)
 
 
 //
-// Custom Cursor — programming theme (disabled on mobile)
+// Custom Cursor — professional trailing effect (disabled on mobile)
 (function(){
   var isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
   if (isMobile) return;
 
-  // Find existing cursor elements or create them
-  var dot = document.getElementById('cx') || document.getElementById('cursor-dot') || document.getElementById('cursor');
-  var ring = document.getElementById('cy') || document.getElementById('cursor-ring');
+  var dot, ring, trail = [];
+  var i;
+
+  // Find existing main cursor elements or create them
+  dot = document.getElementById('cx') || document.getElementById('cursor-dot') || document.getElementById('cursor');
+  ring = document.getElementById('cy') || document.getElementById('cursor-ring');
 
   if (!dot) {
     dot = document.createElement('div');
@@ -66,41 +69,67 @@ fetch("/assets/header/spanish.html?v=" + v)
     document.body.appendChild(ring);
   }
 
+  // Create trailing dots
+  for (i = 0; i < 5; i++) {
+    var el = document.createElement('div');
+    el.id = 'ct' + (i + 1);
+    var size = 5 - i;
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    // Compute opacity: first trail is ~80% opaque, last is ~15%
+    el.style.opacity = 1 - (i + 1) * 0.17;
+    el.style.background = '#c8a450';
+    el.style.boxShadow = '0 0 6px rgba(200,164,80,' + (0.4 - i * 0.07) + ')';
+    document.body.appendChild(el);
+    trail.push({ el: el, x: 0, y: 0, alpha: 0.12 - i * 0.015 });
+  }
+
   var mx = 0, my = 0, rx = 0, ry = 0;
 
   document.addEventListener('mousemove', function(e) {
     mx = e.clientX;
     my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top = my + 'px';
   });
 
-  (function anim() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
+  function anim() {
+    // Main dot instantly at mouse
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+
+    // Ring follows with smooth drag
+    rx += (mx - rx) * 0.09;
+    ry += (my - ry) * 0.09;
     ring.style.left = rx + 'px';
     ring.style.top = ry + 'px';
-    requestAnimationFrame(anim);
-  })();
 
-  // Expand ring on hover
+    // Trail: each dot follows the previous one with its own lag
+    var prevX = mx, prevY = my;
+    for (i = 0; i < trail.length; i++) {
+      var t = trail[i];
+      t.x += (prevX - t.x) * t.alpha;
+      t.y += (prevY - t.y) * t.alpha;
+      t.el.style.left = t.x + 'px';
+      t.el.style.top = t.y + 'px';
+      prevX = t.x;
+      prevY = t.y;
+    }
+
+    requestAnimationFrame(anim);
+  }
+  anim();
+
+  // Hover: expand ring + fade trail
+  var interactive = 'a, button, .project-card, .disc-card, .stat-cell, .pf-card-dev, .pf-card-design, .client-card, .tech-card, .timeline-item, .cert-btn, .contact-pill, .svc-chip';
+
   document.addEventListener('mouseover', function(e) {
-    var t = e.target;
-    if (t.matches('a, button, .project-card, .disc-card, .stat-cell, .pf-card-dev, .pf-card-design, .client-card, .tech-card, .timeline-item, .cert-btn, .contact-pill, .svc-chip')) {
-      ring.style.width = '50px';
-      ring.style.height = '50px';
-      ring.style.borderColor = 'rgba(0,255,136,0.7)';
-      dot.style.opacity = '0.4';
+    if (e.target.matches(interactive)) {
+      ring.classList.add('active');
     }
   }, true);
 
   document.addEventListener('mouseout', function(e) {
-    var t = e.target;
-    if (t.matches('a, button, .project-card, .disc-card, .stat-cell, .pf-card-dev, .pf-card-design, .client-card, .tech-card, .timeline-item, .cert-btn, .contact-pill, .svc-chip')) {
-      ring.style.width = '30px';
-      ring.style.height = '30px';
-      ring.style.borderColor = 'rgba(0,255,136,0.35)';
-      dot.style.opacity = '1';
+    if (e.target.matches(interactive)) {
+      ring.classList.remove('active');
     }
   }, true);
 })();
