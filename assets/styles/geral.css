@@ -37,7 +37,7 @@ footer, #footer {
   transition: width 0.2s, height 0.2s, box-shadow 0.2s;
 }
 
-#ct1, #ct2, #ct3, #ct4, #ct5 {
+#ct1, #ct2, #ct3, #ct4, #ct5, #ct6 {
   position: fixed;
   pointer-events: none;
   z-index: 9997;
@@ -51,7 +51,7 @@ footer, #footer {
 #cursor-ring { display: none; }
 
 @media (max-width: 768px) {
-  #cx, #ct1, #ct2, #ct3, #ct4, #ct5, #cursor, #cursor-dot, #cursor-ring {
+  #cx, #ct1, #ct2, #ct3, #ct4, #ct5, #ct6, #cursor, #cursor-dot, #cursor-ring {
     display: none !important;
   }
 }
