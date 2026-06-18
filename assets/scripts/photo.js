@@ -127,15 +127,4 @@
         Math.min(window.scrollY/(document.documentElement.scrollHeight-innerHeight)*100,100)+'%';
     });
  
-    /* Cursor */
-    const cx=document.getElementById('cx'), cy=document.getElementById('cy');
-    let mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',e=>{
-      mx=e.clientX;my=e.clientY;
-      cx.style.left=mx+'px';cx.style.top=my+'px';
-    });
-    (function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cy.style.left=rx+'px';cy.style.top=ry+'px';requestAnimationFrame(a);})();
-    document.querySelectorAll('a,button').forEach(el=>{
-      el.addEventListener('mouseenter',()=>{cy.style.width='54px';cy.style.height='54px';cy.style.borderColor='rgba(198,162,78,.7)';});
-      el.addEventListener('mouseleave',()=>{cy.style.width='32px';cy.style.height='32px';cy.style.borderColor='rgba(198,162,78,.35)';});
-    });
+

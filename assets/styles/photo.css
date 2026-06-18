@@ -36,12 +36,6 @@
       background-size: 160px;
     }
  
-    /* CUSTOM CURSOR */
-    #cx, #cy { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
-    #cx { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 8px rgba(198,162,78,.6); }
-    #cy { width: 32px; height: 32px; border: 1px solid rgba(198,162,78,.35); border-radius: 50%; transition: width .35s, height .35s, border-color .35s; z-index: 9998; }
-    .enlarge #cy { width: 72px !important; height: 72px !important; border-color: rgba(198,162,78,.6) !important; }
- 
     /* SCROLL PROGRESS */
     #bar { position: fixed; top: 0; left: 0; height: 1px; z-index: 9997; background: var(--gold); width: 0; }
  

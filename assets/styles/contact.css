@@ -36,10 +36,6 @@
       background-size: 160px;
     }
  
-    /* CURSOR */
-    #cx { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); width: 5px; height: 5px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 8px rgba(200,164,80,.55); }
-    #cy { position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); width: 32px; height: 32px; border: 1px solid rgba(200,164,80,.32); border-radius: 50%; transition: width .32s, height .32s, border-color .32s; }
- 
     /* PROGRESS */
     #bar { position: fixed; top: 0; left: 0; height: 1px; z-index: 9997; background: linear-gradient(90deg,var(--gold),var(--gold2)); width: 0; }
  

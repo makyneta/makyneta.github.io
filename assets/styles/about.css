@@ -38,18 +38,6 @@
       background-size: 128px;
     }
  
-    #cursor {
-      width: 6px; height: 6px; background: var(--gold); border-radius: 50%;
-      position: fixed; pointer-events: none; z-index: 9999;
-      transform: translate(-50%,-50%); mix-blend-mode: difference;
-    }
-    #cursor-ring {
-      width: 36px; height: 36px; border: 1px solid rgba(201,168,76,0.4);
-      border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998;
-      transform: translate(-50%,-50%);
-      transition: width 0.3s, height 0.3s, border-color 0.3s;
-    }
- 
     #progress {
       position: fixed; top: 0; left: 0; height: 1px;
       background: linear-gradient(90deg, var(--gold), var(--green));

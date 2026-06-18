@@ -21,3 +21,81 @@ main {
 footer, #footer {
     flex-shrink: 0;
 }
+
+/* ── Custom Cursor (programming theme) ── */
+
+#cx {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  transition: width 0.2s, height 0.2s;
+}
+
+#cy {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 255, 136, 0.35);
+  border-radius: 2px;
+  transition: width 0.3s, height 0.3s, border-color 0.3s, border-radius 0.3s;
+}
+
+#cx.hover,
+#cy.hover {
+  transition: width 0.25s, height 0.25s, border-color 0.25s, background 0.25s;
+}
+
+/* Dev/about page compatibility */
+
+#cursor-dot {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  transition: width 0.2s, height 0.2s;
+}
+
+#cursor-ring {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 255, 136, 0.35);
+  border-radius: 2px;
+  transition: width 0.3s, height 0.3s, border-color 0.3s, border-radius 0.3s;
+}
+
+#cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  transition: width 0.2s, height 0.2s;
+}
+
+@media (max-width: 768px) {
+  #cx, #cy, #cursor, #cursor-dot, #cursor-ring {
+    display: none !important;
+  }
+}

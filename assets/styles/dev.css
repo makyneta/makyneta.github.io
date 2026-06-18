@@ -53,23 +53,6 @@
       background-size: 128px;
     }
  
-    /* ── CURSOR ── */
-    #cursor-dot {
-      width: 4px; height: 4px; background: var(--green);
-      border-radius: 50%; position: fixed; pointer-events: none;
-      z-index: 9999; transform: translate(-50%,-50%);
-      box-shadow: 0 0 8px var(--green);
-      transition: width 0.2s, height 0.2s;
-    }
-    #cursor-ring {
-      width: 28px; height: 28px;
-      border: 1px solid rgba(0,255,136,0.4);
-      border-radius: 0; /* square cursor — dev aesthetic */
-      position: fixed; pointer-events: none; z-index: 9998;
-      transform: translate(-50%,-50%);
-      transition: width 0.3s, height 0.3s, border-color 0.3s;
-    }
- 
     /* ── PROGRESS ── */
     #progress {
       position: fixed; top: 0; left: 0; height: 2px;
