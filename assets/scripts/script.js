@@ -46,45 +46,44 @@ fetch("/assets/header/spanish.html?v=" + v)
 
 
 //
-// Custom Cursor — professional trailing effect (disabled on mobile)
+// Custom Cursor — professional white trailing effect (disabled on mobile)
 (function(){
   var isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
   if (isMobile) return;
 
-  var dot, ring, trail = [];
+  var dot, trail = [];
   var i;
 
-  // Find existing main cursor elements or create them
+  // Find existing cursor dot or create it
   dot = document.getElementById('cx') || document.getElementById('cursor-dot') || document.getElementById('cursor');
-  ring = document.getElementById('cy') || document.getElementById('cursor-ring');
 
   if (!dot) {
     dot = document.createElement('div');
     dot.id = 'cx';
     document.body.appendChild(dot);
   }
-  if (!ring) {
-    ring = document.createElement('div');
-    ring.id = 'cy';
-    document.body.appendChild(ring);
-  }
 
-  // Create trailing dots
-  for (i = 0; i < 5; i++) {
+  // Remove legacy ring if present
+  var ring = document.getElementById('cy') || document.getElementById('cursor-ring');
+  if (ring) ring.style.display = 'none';
+
+  // Create trailing dots — 6 particles with cascade
+  for (i = 0; i < 6; i++) {
     var el = document.createElement('div');
     el.id = 'ct' + (i + 1);
-    var size = 5 - i;
+    var size = 5 - i * 0.65;
+    if (size < 1.5) size = 1.5;
     el.style.width = size + 'px';
     el.style.height = size + 'px';
-    // Compute opacity: first trail is ~80% opaque, last is ~15%
-    el.style.opacity = 1 - (i + 1) * 0.17;
-    el.style.background = '#c8a450';
-    el.style.boxShadow = '0 0 6px rgba(200,164,80,' + (0.4 - i * 0.07) + ')';
+    var op = 0.9 - i * 0.13;
+    if (op < 0.12) op = 0.12;
+    el.style.opacity = op;
+    el.style.boxShadow = '0 0 6px rgba(237,233,226,' + (0.3 - i * 0.04) + ')';
     document.body.appendChild(el);
-    trail.push({ el: el, x: 0, y: 0, alpha: 0.12 - i * 0.015 });
+    trail.push({ el: el, x: 0, y: 0, alpha: 0.14 - i * 0.017 });
   }
 
-  var mx = 0, my = 0, rx = 0, ry = 0;
+  var mx = 0, my = 0;
 
   document.addEventListener('mousemove', function(e) {
     mx = e.clientX;
@@ -96,13 +95,7 @@ fetch("/assets/header/spanish.html?v=" + v)
     dot.style.left = mx + 'px';
     dot.style.top = my + 'px';
 
-    // Ring follows with smooth drag
-    rx += (mx - rx) * 0.09;
-    ry += (my - ry) * 0.09;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-
-    // Trail: each dot follows the previous one with its own lag
+    // Trail: each particle follows the previous one with increasing lag
     var prevX = mx, prevY = my;
     for (i = 0; i < trail.length; i++) {
       var t = trail[i];
@@ -117,21 +110,6 @@ fetch("/assets/header/spanish.html?v=" + v)
     requestAnimationFrame(anim);
   }
   anim();
-
-  // Hover: expand ring + fade trail
-  var interactive = 'a, button, .project-card, .disc-card, .stat-cell, .pf-card-dev, .pf-card-design, .client-card, .tech-card, .timeline-item, .cert-btn, .contact-pill, .svc-chip';
-
-  document.addEventListener('mouseover', function(e) {
-    if (e.target.matches(interactive)) {
-      ring.classList.add('active');
-    }
-  }, true);
-
-  document.addEventListener('mouseout', function(e) {
-    if (e.target.matches(interactive)) {
-      ring.classList.remove('active');
-    }
-  }, true);
 })();
 
 //

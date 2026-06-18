@@ -29,52 +29,29 @@ footer, #footer {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  background: #c8a450;
+  width: 7px;
+  height: 7px;
+  background: #ede9e2;
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(200,164,80,0.5), 0 0 24px rgba(200,164,80,0.15);
+  box-shadow: 0 0 14px rgba(237,233,226,0.5), 0 0 30px rgba(237,233,226,0.12);
   transition: width 0.2s, height 0.2s, box-shadow 0.2s;
 }
 
-#cy {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 1.5px solid rgba(200,164,80,0.25);
-  border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(200,164,80,0.04) 0%, transparent 70%);
-  box-shadow: 0 0 30px rgba(200,164,80,0.06), inset 0 0 30px rgba(200,164,80,0.02);
-  transition: width 0.4s cubic-bezier(.22,.68,.33,1), height 0.4s cubic-bezier(.22,.68,.33,1), border-color 0.3s, box-shadow 0.3s;
-}
-
-#cy.active {
-  width: 64px;
-  height: 64px;
-  border-color: rgba(200,164,80,0.5);
-  box-shadow: 0 0 50px rgba(200,164,80,0.12), inset 0 0 40px rgba(200,164,80,0.04);
-  background: radial-gradient(circle at center, rgba(200,164,80,0.06) 0%, transparent 70%);
-}
-
-#ct1, #ct2, #ct3, #ct4 {
+#ct1, #ct2, #ct3, #ct4, #ct5 {
   position: fixed;
   pointer-events: none;
   z-index: 9997;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: #c8a450;
+  background: rgba(237,233,226,0.9);
 }
 
 /* Legacy ID compatibility */
-#cursor-dot { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); width: 6px; height: 6px; background: #c8a450; border-radius: 50%; box-shadow: 0 0 12px rgba(200,164,80,0.5); }
-#cursor-ring { position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); width: 40px; height: 40px; border: 1.5px solid rgba(200,164,80,0.25); border-radius: 50%; background: radial-gradient(circle at center, rgba(200,164,80,0.04) 0%, transparent 70%); box-shadow: 0 0 30px rgba(200,164,80,0.06); }
-#cursor { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); width: 6px; height: 6px; background: #c8a450; border-radius: 50%; box-shadow: 0 0 12px rgba(200,164,80,0.5); }
+#cursor-dot, #cursor { position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); width: 7px; height: 7px; background: #ede9e2; border-radius: 50%; box-shadow: 0 0 14px rgba(237,233,226,0.5); }
+#cursor-ring { display: none; }
 
 @media (max-width: 768px) {
-  #cx, #cy, #ct1, #ct2, #ct3, #ct4, #cursor, #cursor-dot, #cursor-ring {
+  #cx, #ct1, #ct2, #ct3, #ct4, #ct5, #cursor, #cursor-dot, #cursor-ring {
     display: none !important;
   }
 }
