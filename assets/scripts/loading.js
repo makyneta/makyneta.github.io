@@ -1,19 +1,61 @@
-  /* Loader */
-  const loader = document.getElementById('loader');
-  const countEl = document.getElementById('loaderCount');
-  let n = 0;
-  const tick = setInterval(() => {
-    n = Math.min(n + Math.floor(Math.random()*12)+4, 100);
-    countEl.textContent = String(n).padStart(3,'0');
-    if (n >= 100) {
-      clearInterval(tick);
-      loader.classList.add('filling');
-      setTimeout(() => loader.classList.add('hidden'), 1800);
-    }
-  }, 40);
+(function(){
+  var loader = document.getElementById('loader');
+  if (!loader) return;
 
-  /* Scroll reveal */
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal, .discipline-card').forEach(el => obs.observe(el));
+  var body = document.getElementById('termBody');
+  var cursor = document.getElementById('termCursor');
+  if (!body || !cursor) return;
+
+  document.body.classList.add('loading-active');
+
+  var lines = [
+    { text: '[system] initializing kernel modules...', cls: '' },
+    { text: '[system] loading core components...', cls: '' },
+    { text: '[ OK ] interface ready', cls: 'ok' },
+    { text: '[ OK ] secure channel established', cls: 'ok' },
+    { text: '[system] compiling resources...', cls: '' },
+    { text: '  [====================] 100%', cls: 'progress' },
+    { text: '[ OK ] all systems operational', cls: 'ok' },
+  ];
+
+  var lineIdx = 0, charIdx = 0;
+  var currentLineEl = null, currentText = '';
+
+  function typeNext() {
+    if (lineIdx >= lines.length) {
+      cursor.parentElement.style.opacity = '1';
+      setTimeout(finish, 800);
+      return;
+    }
+    var line = lines[lineIdx];
+    if (!currentLineEl) {
+      currentLineEl = document.createElement('div');
+      currentLineEl.className = 'line';
+      if (line.cls) currentLineEl.classList.add(line.cls);
+      body.appendChild(currentLineEl);
+      currentText = '';
+    }
+    if (charIdx < line.text.length) {
+      currentText += line.text[charIdx];
+      currentLineEl.textContent = currentText;
+      charIdx++;
+      setTimeout(typeNext, 12 + Math.random() * 25);
+    } else {
+      currentLineEl = null;
+      charIdx = 0;
+      lineIdx++;
+      setTimeout(typeNext, 80 + Math.random() * 120);
+    }
+  }
+
+  function finish() {
+    var el = loader.querySelector('.term-loader') || loader;
+    el.classList.add('loaded');
+    setTimeout(function() {
+      loader.style.display = 'none';
+      document.body.classList.remove('loading-active');
+    }, 500);
+  }
+
+  setTimeout(typeNext, 300);
+})();

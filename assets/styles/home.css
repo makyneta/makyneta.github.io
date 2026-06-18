@@ -36,38 +36,6 @@
       background-size: 160px;
     }
  
-    /* ── LOADER ── */
-    #loader {
-      position: fixed; inset: 0; z-index: 2000;
-      background: var(--bg);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 2rem;
-      transition: opacity .8s ease, visibility .8s ease;
-    }
-    #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    .loader-mark {
-      font-family: var(--fd); font-size: clamp(3rem, 8vw, 7rem);
-      letter-spacing: .18em; color: transparent;
-      -webkit-text-stroke: 1px var(--gold); position: relative;
-    }
-    .loader-mark::after {
-      content: attr(data-text); position: absolute; inset: 0;
-      color: var(--gold); clip-path: inset(0 100% 0 0);
-      transition: clip-path 1.6s cubic-bezier(.77,0,.175,1);
-    }
-    #loader.filling .loader-mark::after { clip-path: inset(0 0% 0 0); }
-    .loader-line {
-      width: 200px; height: 1px; background: rgba(237,233,226,.08); position: relative; overflow: hidden;
-    }
-    .loader-line::after {
-      content: ''; position: absolute; inset: 0 100% 0 0;
-      background: var(--gold); transition: inset 1.4s cubic-bezier(.77,0,.175,1) .2s;
-    }
-    #loader.filling .loader-line::after { inset: 0; }
-    .loader-count {
-      font-family: var(--fm); font-size: .6rem; letter-spacing: .3em; color: var(--dim);
-    }
- 
     /* ── PROGRESS ── */
     #bar { position: fixed; top: 0; left: 0; height: 1px; z-index: 9997; background: linear-gradient(90deg,var(--gold),var(--gold2)); width: 0; }
  
