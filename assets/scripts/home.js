@@ -131,38 +131,38 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const devData = [
     { title:"Clube Atletismo de Marinha Grande", desc:"", tags:["HTML","CSS","JS"],
-      img:"assets/images/projects/dev/clube-atletismo-de-marinha-grande.png",
+      img:"assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
       demo:"https://www.catletismomg.pt", info:"/info/dev/camg" },
     
     { title:"Nicholas Simões", desc:"", tags:["HTML","CSS","JS"],
-      img:"assets/images/projects/dev/nicholas-simoes.jpg",
+      img:"assets/images/projects/dev/nicholas-simoes.webp",
       demo:"https://makyneta.github.io/nico", info:"/info/dev/nico" },
     
     { title:"Mesa P'ra 4", desc:"", tags:["HTML","CSS","JS"],
-      img:"assets/images/projects/dev/mesa-pra-4.jpg",
+      img:"assets/images/projects/dev/mesa-pra-4.webp",
       demo:"https://makyneta.github.io/mesapra4", info:"/info/dev/mesapra4" },
   ];
 
   const photoData = [
     { title:"50th Anniversary of the Constitution", cat:"Event",
-      img:"assets/images/projects/photo/50th-anniversary-constitution.jpg" },
+      img:"assets/images/projects/photo/50th-anniversary-constitution.webp" },
 
     { title:"Fair Play Calazans", cat:"Sport",
-      img:"assets/images/projects/photo/fair-play-calazans.jpg" },
+      img:"assets/images/projects/photo/fair-play-calazans.webp" },
 
     { title:"Penetras", cat:"Portrait",
-      img:"assets/images/projects/photo/penetras.jpg" },
+      img:"assets/images/projects/photo/penetras.webp" },
   ];
 
   const designData = [
     { title:"Dia Internacional do Trabalhador", cat:"Social",
-      img:"assets/images/projects/design/thumb/jsmg-diatrabalhador.jpg" },
+      img:"assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
 
     { title:"Lecture Advertising Poster", cat:"Print",
-      img:"assets/images/projects/design/thumb/bullying-lecture.jpg" },
+      img:"assets/images/projects/design/thumb/bullying-lecture.webp" },
 
     { title:"Francisco Ferreira", cat:"Social",
-      img:"assets/images/projects/design/thumb/francisco-ferreira.jpg" },
+      img:"assets/images/projects/design/thumb/francisco-ferreira.webp" },
   ];
 
   const devGrid = document.getElementById('pf-grid-dev');

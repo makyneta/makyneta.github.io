@@ -6,7 +6,7 @@
     "year": "2026",
     "location": "Marinha Grande",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/50th-anniversary-constitution.jpg",
+    "cover": "assets/images/projects/photo/cover/50th-anniversary-constitution.webp",
     "slug": "/50anniversaryconstitution",
     "photoCount": 127
   },
@@ -17,7 +17,7 @@
     "year": "2026",
     "location": "Marinha Grande",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/fair-play-calazans.jpg",
+    "cover": "assets/images/projects/photo/cover/fair-play-calazans.webp",
     "slug": "/fairplaycalazans",
     "photoCount": 1129
   },
@@ -28,7 +28,7 @@
     "year": "2025",
     "location": "Pombal",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/pombalcup.jpg",
+    "cover": "assets/images/projects/photo/cover/pombalcup.webp",
     "slug": "",
     "photoCount": 0
   },
@@ -39,7 +39,7 @@
     "year": "2025",
     "location": "Marinha Grande",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/penetras.jpg",
+    "cover": "assets/images/projects/photo/cover/penetras.webp",
     "slug": "",
     "photoCount": 0
   },
@@ -50,7 +50,7 @@
     "year": "2024",
     "location": "Lisboa",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/penetras-estrelas-ao-sabado.jpg",
+    "cover": "assets/images/projects/photo/cover/penetras-estrelas-ao-sabado.webp",
     "slug": "",
     "photoCount": 0
   },
@@ -61,7 +61,7 @@
     "year": "2024",
     "location": "Marinha Grande",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/gdpcc.jpg",
+    "cover": "assets/images/projects/photo/cover/gdpcc.webp",
     "slug": "",
     "photoCount": 0
   },
@@ -72,7 +72,7 @@
     "year": "2024",
     "location": "Marinha Grande",
     "desc": "IberoAlpla in the inter-company tournament.",
-    "cover": "assets/images/projects/photo/cover/iberoalpla.jpg",
+    "cover": "assets/images/projects/photo/cover/iberoalpla.webp",
     "slug": "",
     "photoCount": 0
   },
@@ -83,7 +83,7 @@
     "year": "2024",
     "location": "Marinha Grande",
     "desc": "Song Raiders live at the Marinha Grande City Festivals 2024, with the bassist from Xutos & Pontapés, Kalú.",
-    "cover": "assets/images/projects/photo/cover/song-raiders.jpg",
+    "cover": "assets/images/projects/photo/cover/song-raiders.webp",
     "slug": "",
     "photoCount": 0
   },
@@ -94,7 +94,7 @@
     "year": "2024",
     "location": "Marinha Grande",
     "desc": "",
-    "cover": "assets/images/projects/photo/cover/penetras-live.jpg",
+    "cover": "assets/images/projects/photo/cover/penetras-live.webp",
     "slug": "",
     "photoCount": 0
   }

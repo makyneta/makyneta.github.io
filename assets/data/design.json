@@ -6,8 +6,8 @@
     "tags": ["Illustrator", "Photoshop"],
     "desc": "",
     "client": "JS Marinha Grande",
-    "image": "assets/images/projects/design/thumb/jsmg-diatrabalhador.jpg",
-    "preview": "assets/images/projects/design/preview/jsmg-diatrabalhador.jpg",
+    "image": "assets/images/projects/design/thumb/jsmg-diatrabalhador.webp",
+    "preview": "assets/images/projects/design/preview/jsmg-diatrabalhador.webp",
     "link": ""
   },
   {
@@ -17,8 +17,8 @@
     "tags": ["Illustrator", "Photoshop"],
     "desc": "",
     "client": "JS Marinha Grande",
-    "image": "assets/images/projects/design/thumb/jsmg-revolucaocravos.jpg",
-    "preview": "assets/images/projects/design/preview/jsmg-revolucaocravos.jpg",
+    "image": "assets/images/projects/design/thumb/jsmg-revolucaocravos.webp",
+    "preview": "assets/images/projects/design/preview/jsmg-revolucaocravos.webp",
     "link": ""
   },
   {
@@ -27,8 +27,8 @@
     "category": "event",
     "tags": ["Illustrator"],
     "desc": "",
-    "image": "assets/images/projects/design/thumb/fair-play-calazans.jpg",
-    "preview": "assets/images/projects/design/preview/fair-play-calazans.jpg",
+    "image": "assets/images/projects/design/thumb/fair-play-calazans.webp",
+    "preview": "assets/images/projects/design/preview/fair-play-calazans.webp",
     "link": ""
   },
   {
@@ -38,8 +38,8 @@
     "tags": ["Illustrator", "Photoshop"],
     "desc": "",
     "client": "JS Marinha Grande",
-    "image": "assets/images/projects/design/thumb/jsmg-diaestudante.jpg",
-    "preview": "assets/images/projects/design/preview/jsmg-diaestudante.jpg",
+    "image": "assets/images/projects/design/thumb/jsmg-diaestudante.webp",
+    "preview": "assets/images/projects/design/preview/jsmg-diaestudante.webp",
     "link": ""
   },
   {
@@ -49,8 +49,8 @@
     "tags": ["Illustrator"],
     "desc": "",
     "client": "JS Marinha Grande",
-    "image": "assets/images/projects/design/thumb/jsmg-visitaps.jpg",
-    "preview": "assets/images/projects/design/preview/jsmg-visitaps.jpg",
+    "image": "assets/images/projects/design/thumb/jsmg-visitaps.webp",
+    "preview": "assets/images/projects/design/preview/jsmg-visitaps.webp",
     "link": ""
   },
   {
@@ -60,8 +60,8 @@
     "tags": ["Illustrator"],
     "desc": "",
     "client": "JS Marinha Grande",
-    "image": "assets/images/projects/design/thumb/jsmg-visitaparl.jpg",
-    "preview": "assets/images/projects/design/preview/jsmg-visitaparl.jpg",
+    "image": "assets/images/projects/design/thumb/jsmg-visitaparl.webp",
+    "preview": "assets/images/projects/design/preview/jsmg-visitaparl.webp",
     "link": ""
   },
   {
@@ -70,8 +70,8 @@
     "category": "print",
     "tags": ["Illustrator", "Photoshop"],
     "desc": "",
-    "image": "assets/images/projects/design/thumb/bullying-lecture.jpg",
-    "preview": "assets/images/projects/design/preview/bullying-lecture.jpg",
+    "image": "assets/images/projects/design/thumb/bullying-lecture.webp",
+    "preview": "assets/images/projects/design/preview/bullying-lecture.webp",
     "link": ""
   },
   {
@@ -80,8 +80,8 @@
     "category": "social",
     "tags": ["Canva", "Remax"],
     "desc": "",
-    "image": "assets/images/projects/design/thumb/francisco-ferreira.jpg",
-    "preview": "assets/images/projects/design/preview/francisco-ferreira.jpg",
+    "image": "assets/images/projects/design/thumb/francisco-ferreira.webp",
+    "preview": "assets/images/projects/design/preview/francisco-ferreira.webp",
     "link": ""
   }
 ]

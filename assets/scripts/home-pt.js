@@ -130,21 +130,21 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const EXT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
 
   const devData = [
-    { title:"Mr. Devix", desc:"Portfólio de marca pessoal com animações de rolagem suaves e tema escuro.", tags:["HTML","CSS","JS"], img:"../assets/images/projects/dev/mr-devix.png", demo:"https://makyneta.github.io/mrdevix", info:"/info/dev/mrdevix" },
-    { title:"Clube Atletismo de Marinha Grande", desc:"Website institucional com calendários de eventos, perfis de atletas e seções de notícias.", tags:["HTML","CSS","JS"], img:"../assets/images/projects/dev/clube-atletismo-de-marinha-grande.png", demo:"https://makyneta.github.io/catletismomg", info:"/info/dev/camg" },
-    { title:"Donut-Man", desc:"Jogo de navegador fullstack com um backend Node.js e placar em tempo real.", tags:["Node.js","HTML","CSS","JS"], img:"../assets/images/projects/dev/personal/donut-man.jpg", demo:"https://makyneta.github.io/donutman", info:"" },
+    { title:"Mr. Devix", desc:"Portfólio de marca pessoal com animações de rolagem suaves e tema escuro.", tags:["HTML","CSS","JS"], img:"../assets/images/projects/dev/mr-devix.webp", demo:"https://makyneta.github.io/mrdevix", info:"/info/dev/mrdevix" },
+    { title:"Clube Atletismo de Marinha Grande", desc:"Website institucional com calendários de eventos, perfis de atletas e seções de notícias.", tags:["HTML","CSS","JS"], img:"../assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp", demo:"https://makyneta.github.io/catletismomg", info:"/info/dev/camg" },
+    { title:"Donut-Man", desc:"Jogo de navegador fullstack com um backend Node.js e placar em tempo real.", tags:["Node.js","HTML","CSS","JS"], img:"../assets/images/projects/dev/personal/donut-man.webp", demo:"https://makyneta.github.io/donutman", info:"" },
   ];
 
   const photoData = [
-    { title:"50º Aniversário da Constituição", cat:"Evento", img:"../assets/images/projects/photo/50th-anniversary-constitution.jpg" },
-    { title:"Fair Play Calazans", cat:"Desporto", img:"../assets/images/projects/photo/fair-play-calazans.jpg" },
-    { title:"Penetras", cat:"Retrato", img:"../assets/images/projects/photo/penetras.jpg" },
+    { title:"50º Aniversário da Constituição", cat:"Evento", img:"../assets/images/projects/photo/50th-anniversary-constitution.webp" },
+    { title:"Fair Play Calazans", cat:"Desporto", img:"../assets/images/projects/photo/fair-play-calazans.webp" },
+    { title:"Penetras", cat:"Retrato", img:"../assets/images/projects/photo/penetras.webp" },
   ];
 
   const designData = [
-    { title:"Dia Internacional do Trabalhador", cat:"Social", img:"../assets/images/projects/design/thumb/jsmg-diatrabalhador.jpg" },
-    { title:"Cartaz de divulgação da palestra", cat:"Print", img:"../assets/images/projects/design/thumb/bullying-lecture.jpg" },
-    { title:"Francisco Ferreira", cat:"Social", img:"../assets/images/projects/design/thumb/francisco-ferreira.jpg" },
+    { title:"Dia Internacional do Trabalhador", cat:"Social", img:"../assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
+    { title:"Cartaz de divulgação da palestra", cat:"Print", img:"../assets/images/projects/design/thumb/bullying-lecture.webp" },
+    { title:"Francisco Ferreira", cat:"Social", img:"../assets/images/projects/design/thumb/francisco-ferreira.webp" },
   ];
 
   const devGrid = document.getElementById('pf-grid-dev');

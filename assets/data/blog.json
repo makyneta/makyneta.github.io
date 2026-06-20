@@ -5,7 +5,7 @@
     "category": "juventude_socialista",
     "date": "19 MAR 2026",
     "readTime": "3 minutos de leitura",
-    "image": "assets/images/blog/fedlraparl.jpg",
+    "image": "assets/images/blog/fedlraparl.webp",
     "excerpt": "No dia 19 de Março de 2026, a Juventude Socialista de Marinha Grande, Leiria, Ansião, Pombal, e Bombarral, comandada pela Federação de Leiria da Juvenstude Socialista, visitaram a Assembleia da República, no qual foi possível assistir à Sessão Plenária, e posteriormente visitar a Sede do Partido Socialista.",
     "link": "news/juvsocialista-visitaparl"
   },
@@ -15,7 +15,7 @@
     "category": "kristin",
     "date": "13 MAR 2026",
     "readTime": "5 minutos de leitura",
-    "image": "assets/images/blog/repudiation-government.jpg",
+    "image": "assets/images/blog/repudiation-government.webp",
     "excerpt": "Carta de repúdio ao Governo de Portual, em especial ao ministro Manuel Castro Almeida devido às acusações feitas.",
     "link": "news/repudio-governo"
   },
@@ -25,7 +25,7 @@
     "category": "pessoal",
     "date": "20 FEV 2026",
     "readTime": "5 minutos de leitura",
-    "image": "assets/images/blog/thanks-note.jpg",
+    "image": "assets/images/blog/thanks-note.webp",
     "excerpt": "Nota de agradecimento a todos os que contribuíram para ajudar Marinha Grande a reconstruir mais forte.",
     "link": "news/nota-agradecimento"
   },
@@ -35,7 +35,7 @@
     "category": "kristin",
     "date": "08 FEV 2026",
     "readTime": "2 minutos de leitura",
-    "image": "assets/images/blog/kristin.jpeg",
+    "image": "assets/images/blog/kristin.webp",
     "excerpt": "Uma nota pública sobre a tempestade Kristin.",
     "link": "news/kristin"
   },
@@ -45,7 +45,7 @@
     "category": "trabalho",
     "date": "30 NOV 2025",
     "readTime": "1 minuto de leitura",
-    "image": "assets/images/blog/libelula-theater.jpg",
+    "image": "assets/images/blog/libelula-theater.webp",
     "excerpt": "Uma breve nota de agradecimento ao Libélula Teatro por esta oportunidade.",
     "link": "news/libelula"
   },
@@ -55,7 +55,7 @@
     "category": "pessoal",
     "date": "25 JUN 2025",
     "readTime": "1 minuto de leitura",
-    "image": "assets/images/blog/uncle-50y.jpg",
+    "image": "assets/images/blog/uncle-50y.webp",
     "excerpt": "Querido tio, hoje terias estado a celebrar o teu tão aguardado 50º aniversário.",
     "link": "news/tio50"
   },
@@ -65,7 +65,7 @@
     "category": "pessoal",
     "date": "13 FEV 2025",
     "readTime": "1 minuto de leitura",
-    "image": "assets/images/blog/dear-uncle.jpg",
+    "image": "assets/images/blog/dear-uncle.webp",
     "excerpt": "Uma mensagem especial para o meu tio que infelizmente faleceu.",
     "link": "news/querido-tio"
   }

@@ -6,17 +6,17 @@
     /* ── DEV PROJECTS (from dev.html) ── */
     const DEV_PROJECTS = [
       { id:3, title:"António Pedro", type:"frontend",
-        img:"/assets/images/projects/dev/antoniorpedro-2.png",
+        img:"/assets/images/projects/dev/antoniorpedro-2.webp",
         code:"https://github.com/makyneta/antoniorpedro",
         demo:"https://makyneta.github.io/antoniorpedro" },
 
       { id:2, title:"LS Videomaker", type:"frontend",
-        img:"/assets/images/projects/dev/lsvideomaker.jpg",
+        img:"/assets/images/projects/dev/lsvideomaker.webp",
         code:"https://github.com/makyneta/lsvideomaker",
         demo:"https://makyneta.github.io/lsvideomaker" },
 
       { id:1, title:"Nicholas Simões", type:"frontend",
-        img:"/assets/images/projects/dev/nicholassimoes.jpg",
+        img:"/assets/images/projects/dev/nicholassimoes.webp",
         code:"https://github.com/makyneta/nico",
         demo:"https://makyneta.github.io/nico" },
     ];
@@ -25,19 +25,19 @@
     const PHOTO_PROJECTS = [
       { id:3, title:"50th Anniversary of the Constitution of the Portuguese Republic",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
-        cover:"/assets/images/projects/photo/50th-anniversary-constitution.jpg",
+        cover:"/assets/images/projects/photo/50th-anniversary-constitution.webp",
         slug:"/50anniversaryconstitution", photoCount:127 },
       
       { id:2, title:"IberoAlpla",
         category:"sport", year:"2024", location:"Marinha Grande",
         desc:"IberoAlpla in the inter-company tournament.",
-        cover:"/assets/images/projects/photo/iberoalpla.jpg",
+        cover:"/assets/images/projects/photo/iberoalpla.webp",
         slug:"", photoCount:0 },
       
       { id:1,  title:"Song Raiders",
         category:"event", year:"2024", location:"Marinha Grande",
         desc:"Song Raiders live at the Marinha Grande City Festivals 2024, with Kalú, bassist of Xutos & Pontapés.",
-        cover:"/assets/images/projects/photo/song-raiders.jpg",
+        cover:"/assets/images/projects/photo/song-raiders.webp",
         slug:"", photoCount:0 },
     ];
  
@@ -46,22 +46,22 @@
       { id:3, title:"António Pedro",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
-        image:"/assets/images/projects/design/thumb/antonio-pedro.jpg",
-        preview:"/assets/images/projects/design/preview/antonio-pedro.jpg",
+        image:"/assets/images/projects/design/thumb/antonio-pedro.webp",
+        preview:"/assets/images/projects/design/preview/antonio-pedro.webp",
         link:"" },
 
       { id:2, title:"Emanuel OLiveira",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
-        image:"/assets/images/projects/design/thumb/emanuel-oliveira.jpg",
-        preview:"/assets/images/projects/design/preview/emanuel-oliveira.jpg",
+        image:"/assets/images/projects/design/thumb/emanuel-oliveira.webp",
+        preview:"/assets/images/projects/design/preview/emanuel-oliveira.webp",
         link:"" },
 
       { id:1, title:"TUMG _ Dia do Estudante",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
-        image:"/assets/images/projects/design/thumb/jsmg-tumg.jpg",
-        preview:"/assets/images/projects/design/preview/jsmg-tumg.jpg",
+        image:"/assets/images/projects/design/thumb/jsmg-tumg.webp",
+        preview:"/assets/images/projects/design/preview/jsmg-tumg.webp",
         link:"" },
     ];
  
