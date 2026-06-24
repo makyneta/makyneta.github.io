@@ -130,6 +130,10 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const EXT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
 
   const devData = [
+    { title:"Nicholas Moraes", desc:"", tags:["HTML","CSS","JS"],
+      img:"assets/images/projects/dev/nicholas-moraes.webp",
+      demo:"https://makyneta.github.io/m0rwes", info:"/info/dev/m0rwes" },
+
     { title:"Clube Atletismo de Marinha Grande", desc:"", tags:["HTML","CSS","JS"],
       img:"assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
       demo:"https://www.catletismomg.pt", info:"/info/dev/camg" },
@@ -137,10 +141,6 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     { title:"Nicholas Simões", desc:"", tags:["HTML","CSS","JS"],
       img:"assets/images/projects/dev/nicholas-simoes.webp",
       demo:"https://makyneta.github.io/nico", info:"/info/dev/nico" },
-    
-    { title:"Mesa P'ra 4", desc:"", tags:["HTML","CSS","JS"],
-      img:"assets/images/projects/dev/mesa-pra-4.webp",
-      demo:"https://makyneta.github.io/mesapra4", info:"/info/dev/mesapra4" },
   ];
 
   const photoData = [

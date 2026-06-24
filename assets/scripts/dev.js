@@ -6,6 +6,12 @@
 
     /* ── Projects data ── */
     const projects = [
+      { id:14, title:"Nicholas Moraes", type:"frontend",
+        img:"/assets/images/projects/dev/nicholas-moraes.webp",
+        desc:"Professional and minimalist website for influencer and musician, Nicholas Moraes.",
+        demo:"https://makyneta.github.io/m0rwes",
+        info:"/info/dev/m0rwes" },
+        
       { id:14, title:"Mr. Devix", type:"frontend",
         img:"/assets/images/projects/dev/mr-devix.webp",
         desc:"Personal brand portfolio for a digital creator. Minimalist design with smooth scroll animations and a dark theme.",
