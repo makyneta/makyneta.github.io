@@ -35,8 +35,8 @@
 
     <section id="client-projects">
       <div class="cp-header">
-        <h2 class="cp-title">Projectos desenvolvidos</h2>
-        <span class="cp-count" id="proj-count">0 projectos</span>
+        <h2 class="cp-title">Projects Developed</h2>
+        <span class="cp-count" id="proj-count">0 projects</span>
       </div>
 
       <div class="projects-list" id="projects-list">
@@ -58,7 +58,7 @@
 
       <div class="empty-state" id="empty-state">
         <div class="icon">⊞</div>
-        <p>Nenhum projecto adicionado ainda.<br>Os conteúdos serão disponibilizados em breve.</p>
+        <p>No projects added yet.<br>Content will be available soon.</p>
       </div>
     </section>
   </main>
@@ -92,7 +92,7 @@
       const empty = document.getElementById('empty-state');
       const count = document.getElementById('proj-count');
 
-      count.textContent = PROJECTS.length + ' projecto' + (PROJECTS.length !== 1 ? 's' : '');
+      count.textContent = PROJECTS.length + ' project' + (PROJECTS.length !== 1 ? 's' : '');
 
       if (!PROJECTS.length) {
         empty.style.display = 'block';
@@ -113,7 +113,7 @@
           </div>
           <div class="proj-actions">
             ${p.download ? `<a href="${p.download}" class="btn btn-download"><span class="btn-icon">⬇︎</span> Download</a>` : ''}
-            ${p.link ? `<a href="${p.link}" class="btn" target="_blank">Ver Online →</a>` : ''}
+            ${p.link ? `<a href="${p.link}" class="btn" target="_blank">View Online →</a>` : ''}
           </div>
         </div>
       `).join('');
