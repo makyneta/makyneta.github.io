@@ -27,8 +27,8 @@
         <div class="ch-info">
           <div class="ch-eyebrow">Cliente</div>
           <div class="ch-accent"></div>
-          <h1 class="ch-name">Clube de Atletismo<br><span class="gold">Marinha Grande</span></h1>
-          <p class="ch-desc">Conteúdos e projectos desenvolvidos para o CAMG.</p>
+          <h1 class="ch-name">Clube Atletismo De<br><span class="gold">Marinha Grande</span></h1>
+          <p class="ch-desc">Projects and content for the Clube Atletismo de Marinha Grande.</p>
         </div>
       </div>
     </section>
@@ -66,7 +66,26 @@
   <div id="footer"></div>
 
   <script>
-    const PROJECTS = [];
+    const PROJECTS = [
+          {
+            name: 'Nacionais Femininos',
+            desc: 'Posts for the "Nacionais" project.',
+            type: 'Design',
+            year: '2026',
+            image: '../assets/images/projects/thumb/camg/nacionais-femininos.webp',
+            download: '../download/camg/nacionais-femininos.jpg',
+            link: '' // opcional
+          },
+          {
+            name: 'Nacionais Masculinos',
+            desc: 'Posts for the "Nacionais" project.',
+            type: 'Design',
+            year: '2026',
+            image: '../assets/images/projects/thumb/camg/nacionais-masculinos.webp',
+            download: '../download/camg/nacionais-masculinos.jpg',
+            link: '' // opcional
+          },
+        ];
 
     function renderProjects() {
       const list = document.getElementById('projects-list');
