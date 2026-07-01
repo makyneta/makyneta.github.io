@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Makyneta Unipessoal, Lda."/>
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../assets/styles/geral.css">
+    <link rel="stylesheet" href="../assets/styles/clients.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/scripts/script.js"></script>
+    <title>Pedro Fernandes | Makyneta</title>
+    <link rel="icon" href="../assets/images/ui/favicon.png" type="image/png">
+</head>
+<body>
+  <div id="bar"></div>
+  <div id="header"></div>
+
+  <main>
+    <section class="client-hero">
+      <div class="ch-inner">
+        <img class="ch-logo" src="https://www.catletismomg.pt/assets/images/nacional-clubes-coimbra-2026/_MG_0417.jpg" alt="CAMG">
+        <div class="ch-info">
+          <div class="ch-eyebrow">Client</div>
+          <div class="ch-accent"></div>
+          <h1 class="ch-name">Pedro <span class="gold">Fernandes</span></h1>
+          <p class="ch-desc">Projects and content for Pedro Fernandes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="client-projects">
+      <div class="cp-header">
+        <h2 class="cp-title">Projects Developed</h2>
+        <span class="cp-count" id="proj-count">0 projects</span>
+      </div>
+
+      <div class="projects-list" id="projects-list">
+
+        <!--
+          ⇣ EXEMPLO — adiciona ao array PROJECTS mais abaixo ⇣
+          {
+            name: 'Nome do Projecto',
+            desc: 'Breve descrição do projecto (opcional)',
+            type: 'Website / Design / Fotografia',
+            year: '2025',
+            image: '../assets/images/clients/exemplo.webp',
+            download: 'caminho/para/ficheiro.zip',
+            link: 'https://…' // opcional
+          },
+        -->
+
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <div class="icon">⊞</div>
+        <p>No projects added yet.<br>Content will be available soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    const PROJECTS = [
+          {
+            name: 'Nacional de Clubes 2025/26',
+            desc: 'Photographs for the "Nacional de Clubes" project.',
+            type: 'Photo',
+            year: '2026',
+            image: 'https://www.catletismomg.pt/assets/images/nacional-clubes-coimbra-2026/_MG_0417.jpg',
+            download: 'https://mega.nz/folder/xiRV3Y5T#zbJTFWe4um3LKXhF2VDslA',
+            link: '' // opcional
+          },
+        ];
+
+    function renderProjects() {
+      const list = document.getElementById('projects-list');
+      const empty = document.getElementById('empty-state');
+      const count = document.getElementById('proj-count');
+
+      count.textContent = PROJECTS.length + ' project' + (PROJECTS.length !== 1 ? 's' : '');
+
+      if (!PROJECTS.length) {
+        empty.style.display = 'block';
+        return;
+      }
+      empty.style.display = 'none';
+
+      list.innerHTML = PROJECTS.map(p => `
+        <div class="proj-card">
+          ${p.image ? `<img class="proj-thumb" src="${p.image}" alt="${p.name}">` : ''}
+          <div class="proj-info">
+            <div class="proj-name">${p.name}</div>
+            ${p.desc ? `<div class="proj-desc">${p.desc}</div>` : ''}
+            <div class="proj-meta">
+              <span class="proj-type">${p.type}</span>
+              <span class="proj-badge">${p.year}</span>
+            </div>
+          </div>
+          <div class="proj-actions">
+            ${p.download ? `<a href="${p.download}" class="btn btn-download"><span class="btn-icon">⬇︎</span> Download</a>` : ''}
+            ${p.link ? `<a href="${p.link}" class="btn" target="_blank">View Online →</a>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderProjects();
+  </script>
+</body>
+</html>
