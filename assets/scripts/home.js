@@ -144,14 +144,14 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   ];
 
   const photoData = [
+    { title:"Nacional de Clubes ao Ar Livre", cat:"Sport",
+      img:"assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp" },
+
     { title:"50th Anniversary of the Constitution", cat:"Event",
       img:"assets/images/projects/photo/50th-anniversary-constitution.webp" },
 
     { title:"Fair Play Calazans", cat:"Sport",
       img:"assets/images/projects/photo/fair-play-calazans.webp" },
-
-    { title:"Penetras", cat:"Portrait",
-      img:"assets/images/projects/photo/penetras.webp" },
   ];
 
   const designData = [

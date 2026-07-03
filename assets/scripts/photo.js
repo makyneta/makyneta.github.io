@@ -1,4 +1,9 @@
     const PROJECTS = [
+      { id:5, title:"Nacional de Clubes ao Ar Livre",
+        category:"sport", year:"2026", location:"Coimbra", desc:"",
+        cover:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp",
+        slug:"https://banlek.com/album/235f08-nacional-de-clubes-ao-ar-livre", photoCount:670 },
+
       { id:4, title:"50th Anniversary of the Constitution of the Portuguese Republic",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/50th-anniversary-constitution.webp",
