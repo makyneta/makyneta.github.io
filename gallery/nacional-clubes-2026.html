@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Makyneta Unipessoal, Lda."/>
+  <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
+  <meta name="twitter:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
+  <meta name="description" content="Gallery — Nacional de Clubes Ar Livre 2025/26. 629 photos from the national outdoor clubs athletics championship in Coimbra.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="/assets/styles/geral.css">
+  <link rel="stylesheet" href="/assets/styles/photo-gallery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Sofia+Sans+Extra+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="/assets/scripts/script.js"></script>
+
+  <title>Nacional de Clubes Ar Livre 2025/26 | Makyneta</title>
+  <link rel="icon" href="/assets/images/ui/favicon.png" type="image/png">
+</head>
+<body>
+  <div id="progress"></div>
+  <div class="noise"></div>
+  <div id="header"></div>
+
+  <main>
+
+    <!-- ══ BACK LINK ══════════════════════════════════════════════ -->
+    <a href="/photo" class="gallery-back">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- ══ HERO ═══════════════════════════════════════════════════ -->
+    <section class="gallery-hero">
+      <div class="gallery-meta">
+        <span><i class="fa-solid fa-camera"></i> Photography</span>
+        <span><span class="dot" style="width:4px;height:4px;border-radius:50%;background:#c8a450;opacity:.5;display:inline-block;"></span></span>
+        <span><i class="fa-solid fa-calendar"></i> 2026</span>
+        <span><i class="fa-solid fa-location-dot"></i> Coimbra</span>
+      </div>
+      <h1>Nacional de Clubes<br>Ar Livre 2025/26</h1>
+      <p class="gallery-desc">
+        629 photos from the national outdoor clubs athletics championship held in Coimbra.
+        Select the photos you're interested in and choose between free download with watermark
+        or purchase the originals without watermark.
+      </p>
+    </section>
+
+    <!-- ══ TOOLBAR ════════════════════════════════════════════════ -->
+    <div class="gallery-toolbar">
+      <div class="gallery-toolbar-left">
+        <span id="gallery-total">0 photos</span>
+      </div>
+      <div style="display:flex;gap:.5rem">
+        <button id="btn-select-all" class="gallery-toolbar-btn">Select All</button>
+        <button id="btn-clear" class="gallery-toolbar-btn">Clear</button>
+      </div>
+    </div>
+
+    <!-- ══ GRID ═══════════════════════════════════════════════════ -->
+    <div class="gallery-grid-wrap">
+      <div id="gallery-grid" class="gallery-grid"></div>
+      <div id="gallery-sentinel" class="gallery-sentinel"></div>
+    </div>
+
+  </main>
+
+  <!-- ══ FLOATING ACTION BAR ════════════════════════════════════ -->
+  <div id="gallery-action-bar" class="gallery-action-bar">
+    <div class="gallery-action-count">
+      <i class="fa-solid fa-image"></i>
+      <span><span id="gallery-count" class="count-num">0</span> selected</span>
+    </div>
+    <div class="gallery-action-btns">
+      <button class="gallery-action-btn clear" id="action-clear">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="gallery-action-btn watermark" data-action="watermark">
+        <i class="fa-solid fa-download"></i> Download (watermark)
+      </button>
+      <a class="gallery-action-btn buy" data-action="buy">
+        <i class="fa-solid fa-cart-shopping"></i> Buy Originals
+      </a>
+    </div>
+  </div>
+
+  <!-- ══ TOAST ═══════════════════════════════════════════════════ -->
+  <div id="gallery-toast" class="gallery-toast"></div>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════════ -->
+  <div id="footer"></div>
+
+  <script src="/assets/scripts/photo-gallery.js"></script>
+</body>
+</html>
