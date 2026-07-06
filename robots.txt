@@ -1,0 +1,13 @@
+# robots.txt — Makyneta
+# https://makyneta.github.io
+
+User-agent: *
+Allow: /
+
+# Block admin area (if publicly accessible)
+# Disallow: /admin/
+
+# Block archive copy (duplicate)
+Disallow: /archive/index%20copy.html
+
+Sitemap: https://makyneta.github.io/sitemap.xml
