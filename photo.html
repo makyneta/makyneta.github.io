@@ -147,6 +147,9 @@
     <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
+  <div id="loader-overlay"></div>
+  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(196,164,80,.15);border-top-color:#c8a450;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
+  <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div id="bar"></div>
   <div id="header"></div>
  
@@ -155,27 +158,16 @@
     <!-- HERO -->
     <section id="hero">
       <div class="hero-bg">
-        <img id="hero-bg" src="assets/images/projects/photo/50th-anniversary-constitution.webp" alt=""/>
+        <img id="hero-bg" src="assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp" alt=""/>
+        <div class="hero-overlay"></div>
       </div>
       <div class="hero-inner">
-        <div class="h-eye"><span>Portfolio — Photography</span></div>
-        <h1 class="h-title">PHOTO<span class="stroke">GRAPH</span></h1>
-        <div class="h-foot">
-          <p class="h-lead">
-            Streets, stages, people, places.<br>
-            Captured with <em>intention</em> —<br>
-            every frame a deliberate choice.
-          </p>
-          <div class="h-right">
-            <div class="h-stats">
-              <div class="st"><span class="st-n" id="sp">—</span><span class="st-l">Projects</span></div>
-              <div class="st"><span class="st-n" id="sf">—</span><span class="st-l">Frames</span></div>
-            </div>
-            <a href="contact" class="btn-gold">
-              <span>Book a session</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
+        <div class="h-eye"><span>Photography</span></div>
+        <h1 class="h-title">PHOTOGRAPHY</h1>
+        <p class="h-lead">Events · Sports · Portraits · Documentary</p>
+        <div class="h-actions">
+          <a href="contact" class="btn-gold">Book a session</a>
+          <a href="https://banlek.com/makyneta" target="_blank" class="btn-ghost">banlek.com/makyneta</a>
         </div>
       </div>
       <div class="h-scroll">

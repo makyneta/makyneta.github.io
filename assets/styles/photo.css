@@ -63,9 +63,9 @@
     }
     @keyframes hz { to { transform: scale(1); } }
  
-    /* Gradient overlays */
-    .hero-bg::after {
-      content: ''; position: absolute; inset: 0;
+    /* Gradient overlay */
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
       background:
         linear-gradient(to right, rgba(5,5,5,.9) 0%, rgba(5,5,5,.3) 55%, transparent 100%),
         linear-gradient(to top, rgba(5,5,5,.98) 0%, rgba(5,5,5,.15) 38%, transparent 60%);
@@ -78,49 +78,36 @@
     }
  
     .h-eye {
-      display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2.8rem;
+      margin-bottom: 2rem;
       opacity: 0; animation: fu .6s ease .05s forwards;
     }
-    .h-eye::before { content: ''; width: 28px; height: 1px; background: var(--gold); display: block; flex-shrink: 0; }
     .h-eye span {
       font-family: var(--font-m); font-size: .48rem;
       letter-spacing: .46em; color: var(--gold); text-transform: uppercase;
     }
- 
+
     .h-title {
       font-family: var(--font-d);
       font-size: clamp(5.5rem, 13vw, 16rem);
       line-height: .82; letter-spacing: .01em; color: var(--white);
-      margin-bottom: 4rem;
-      opacity: 0; animation: fu .95s ease .2s forwards;
+      margin-bottom: 2.4rem;
+      opacity: 0; animation: fu .95s ease .18s forwards;
     }
-    .h-title .stroke {
-      display: block; color: transparent;
-      -webkit-text-stroke: 1px rgba(198,162,78,.55);
-    }
- 
-    .h-foot {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      flex-wrap: wrap; gap: 3rem;
-      opacity: 0; animation: fu .8s ease .45s forwards;
-    }
- 
+
     .h-lead {
-      font-family: var(--font-p); font-style: italic;
-      font-size: clamp(1rem, 1.6vw, 1.45rem);
-      line-height: 1.8; color: var(--white2); max-width: 430px;
+      font-family: var(--font-sc); font-style: italic;
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      line-height: 1.6; color: var(--dim);
+      margin-bottom: 3rem;
+      opacity: 0; animation: fu .7s ease .35s forwards;
     }
-    .h-lead em { color: var(--gold-l); font-style: normal; }
- 
-    .h-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2.2rem; }
- 
-    .h-stats { display: flex; gap: 4rem; }
-    .st { text-align: right; }
-    .st-n { font-family: var(--font-d); font-size: 4rem; color: var(--white); line-height: 1; display: block; transition: color .3s; }
-    .st:hover .st-n { color: var(--gold); }
-    .st-l { font-family: var(--font-m); font-size: .42rem; letter-spacing: .32em; text-transform: uppercase; color: var(--dim); margin-top: .2rem; display: block; }
- 
-    /* CTA button */
+
+    .h-actions {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; animation: fu .7s ease .5s forwards;
+    }
+
+    /* Gold button */
     .btn-gold {
       display: inline-flex; align-items: center; gap: .8rem;
       font-family: var(--font-m); font-size: .48rem; letter-spacing: .24em; text-transform: uppercase;
@@ -140,6 +127,16 @@
     .btn-gold:hover { box-shadow: 0 14px 40px rgba(198,162,78,.3); transform: translateY(-2px); }
     .btn-gold svg { width: 13px; height: 13px; transition: transform .3s; flex-shrink: 0; }
     .btn-gold:hover svg { transform: translateX(4px); }
+
+    /* Ghost button */
+    .btn-ghost {
+      font-family: var(--font-m); font-size: .42rem; letter-spacing: .2em; text-transform: uppercase;
+      text-decoration: none; color: var(--white2); background: transparent;
+      padding: .85rem 1.8rem; border: 1px solid var(--border2);
+      transition: border-color .3s, color .3s;
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { color: var(--white); border-color: rgba(237,233,226,.25); }
  
     /* Scroll indicator */
     .h-scroll {
@@ -216,7 +213,6 @@
       position: relative; overflow: hidden;
       background: var(--bg2);
       display: flex; flex-direction: column;
-      text-decoration: none; color: inherit;
       opacity: 0; transform: translateY(16px);
       transition: opacity .55s ease, transform .55s ease, background .3s;
     }
@@ -272,22 +268,24 @@
     }
     .card:hover .c-frames { opacity: 1; transform: translateY(0); }
  
-    /* Hover overlay */
-    .c-over {
-      position: absolute; inset: 0; z-index: 4;
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity .4s;
+    /* Card actions */
+    .c-actions {
+      display: flex; gap: .6rem; flex-wrap: wrap;
+      margin-top: auto; padding-top: 1rem;
     }
-    .card:hover .c-over { opacity: 1; }
-    .c-over-tag {
-      font-family: var(--font-m); font-size: .44rem; letter-spacing: .36em; text-transform: uppercase;
-      color: var(--gold); border: 1px solid rgba(198,162,78,.45);
-      padding: .6rem 1.7rem; background: rgba(5,5,5,.55); backdrop-filter: blur(10px);
+    .c-btn {
+      font-family: var(--font-m); font-size: .38rem; letter-spacing: .2em; text-transform: uppercase;
+      text-decoration: none; color: var(--white2); background: transparent;
+      padding: .5rem 1rem; border: 1px solid var(--border2);
+      transition: border-color .3s, color .3s;
+      display: inline-flex; align-items: center; gap: .4rem;
     }
+    .c-btn:hover { color: var(--white); border-color: rgba(237,233,226,.25); }
+    .c-btn svg { width: 11px; height: 11px; flex-shrink: 0; }
  
     /* Card body */
     .c-body {
-      padding: 1.6rem 1.8rem 2rem;
+      padding: 1.6rem 1.8rem 1.8rem;
       display: flex; flex-direction: column; gap: .5rem; flex: 1;
       border-top: 1px solid var(--border);
       transition: border-color .35s;
@@ -436,10 +434,7 @@
       #fbar { padding: 0 2.5rem; }
       #grid-section { padding: 0 2.5rem 5rem; }
       .hire-l, .hire-r { padding: 4rem 2.5rem; }
-      .h-foot { flex-direction: column; align-items: flex-start; }
-      .h-right { align-items: flex-start; }
-      .h-stats { gap: 3rem; }
-      .st { text-align: left; }
+      .h-actions { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 560px) {
       .grid { grid-template-columns: 1fr; }

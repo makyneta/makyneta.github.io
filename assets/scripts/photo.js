@@ -2,6 +2,7 @@
       { id:5, title:"Nacional de Clubes ao Ar Livre",
         category:"sport", year:"2026", location:"Coimbra", desc:"",
         cover:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp",
+        info:"/info/photo/fpa-nc26",
         slug:"https://banlek.com/album/235f08-nacional-de-clubes-ao-ar-livre", photoCount:670 },
 
       { id:4, title:"50th Anniversary of the Constitution of the Portuguese Republic",
@@ -33,13 +34,6 @@
       {id:'portrait',label:'Portrait'},{id:'street',label:'Street'},{id:'nature',label:'Nature'},
     ];
  
-    /* Stats */
-    (function(){
-      document.getElementById('sp').textContent = PROJECTS.length;
-      const f = PROJECTS.reduce((s,p)=>s+(p.photoCount||0),0);
-      document.getElementById('sf').textContent = f>0 ? f.toLocaleString() : '—';
-    })();
- 
     /* Ticker */
     (function(){
       const items = PROJECTS.map(p=>
@@ -67,22 +61,23 @@
       });
     })();
  
+    const EXT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
     /* Build card */
     function card(p){
-      const a = p.slug ? `href="${p.slug}"` : '';
       const img = p.cover
         ? `<img src="${p.cover}" alt="${p.title}" loading="lazy" onerror="this.closest('.c-img').innerHTML='<div class=\\'no-img\\'>[no preview]</div>'">`
         : `<div class="no-img">[no preview]</div>`;
       const fr = p.photoCount>0 ? `<span class="c-frames">${p.photoCount.toLocaleString()} frames</span>` : '';
       const desc = p.desc ? `<p class="c-desc">${p.desc}</p>` : '';
+      const infoBtn = p.info ? `<a href="${p.info}" class="c-btn">Info</a>` : '';
       return `
-        <a ${a} class="card" data-cat="${p.category}">
+        <div class="card" data-cat="${p.category}">
           <div class="c-img">
             ${img}
             <div class="c-grad"></div>
             <span class="c-badge">${p.category}</span>
             ${fr}
-            <div class="c-over"><span class="c-over-tag">View project</span></div>
           </div>
           <div class="c-body">
             <div class="c-title">${p.title}</div>
@@ -92,8 +87,12 @@
               ${p.location?`<span>${p.location}</span>`:''}
             </div>
             ${desc}
+            <div class="c-actions">
+              ${infoBtn}
+              ${p.slug ? `<a href="${p.slug}" target="_blank" rel="noopener" class="c-btn">${EXT} View photos</a>` : ''}
+            </div>
           </div>
-        </a>`;
+        </div>`;
     }
  
     /* Render */

@@ -141,13 +141,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/styles/loading.css">
     <link rel="stylesheet" href="assets/styles/geral.css">
     <link rel="stylesheet" href="assets/styles/home.css">
     <link rel="stylesheet" href="assets/styles/cookies.css">
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/scripts/loading.js" defer></script>
     <script src="assets/scripts/home.js" defer></script>
     <script src="assets/scripts/script.js" defer></script>
     <script src="assets/scripts/cookies.js" defer></script>
@@ -155,26 +153,12 @@
     <link rel="icon" href="assets/images/ui/favicon.png" type="image/png">
 </head>
 <body>
+  <div id="loader-overlay"></div>
+  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(196,164,80,.15);border-top-color:#c8a450;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
+  <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div class="noise"></div>
   <div id="bar"></div>
- 
-  <!-- LOADER -->
-  <div id="loader">
-    <div class="term-loader">
-      <div class="term-title-row">
-        <span class="term-dot red"></span>
-        <span class="term-dot yellow"></span>
-        <span class="term-dot green"></span>
-        <span class="term-label">makyneta@boot:~$</span>
-      </div>
-      <div class="term-body" id="termBody"></div>
-      <div class="term-cursor-row">
-        <span class="term-prompt">></span>
-        <span class="term-cursor" id="termCursor">_</span>
-      </div>
-    </div>
-  </div>
- 
+  
   <div id="header"></div>
  
   <main>
