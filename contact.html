@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadados -->
     <meta charset="UTF-8">
   <title>Contact | Makyneta</title>
   <meta name="description" content="Get in touch with Makyneta for web development, photography, design or IT support. WhatsApp, email or contact form.">
@@ -44,7 +43,7 @@
     "founder": {
       "@type": "Person",
       "@id": "https://makyneta.github.io/#person",
-      "name": "Tomás Mota",
+      "name": "Tom\u00e1s Mota",
       "jobTitle": "Fullstack Developer & Creative Director",
       "url": "https://makyneta.github.io/about",
       "sameAs": [
@@ -77,7 +76,7 @@
     "url": "https://makyneta.github.io",
     "telephone": "+351933338431",
     "email": "makyneta@tutamail.com",
-    "priceRange": "€€",
+    "priceRange": "\u20ac\u20ac",
     "areaServed": {
       "@type": "Country",
       "name": "Portugal"
@@ -86,41 +85,11 @@
       "@type": "OfferCatalog",
       "name": "Services",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Web Development"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Photography"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Graphic Design"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Video Production"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "IT Support"
-          }
-        }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photography" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Production" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT Support" } }
       ]
     },
     "address": {
@@ -140,10 +109,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/geral.css">
     <link rel="stylesheet" href="assets/styles/contact.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Scripts -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/scripts/contact.js" defer></script>
     <script src="assets/scripts/script.js"></script>
     <!-- Title_Favicon -->
@@ -155,163 +123,140 @@
   <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div id="bar"></div>
   <div id="header"></div>
- 
+
   <main>
- 
-    <!-- ══ HERO ══════════════════════════════════════════════════════ -->
-    <section id="contact-hero">
-      <div class="hero-bg-word">TALK</div>
-      <div class="page-eyebrow"><span>Get in Touch</span></div>
-      <h1 class="hero-title">LET'S<br><span class="outline">TALK.</span></h1>
-      <p class="hero-lead">
-        Have a project in mind or need specialized technical support?
-        Choose the fastest channel or send a <em>detailed message</em> below.
+
+    <!-- ══ HEADER ══════════════════════════════════════════════ -->
+    <header id="contact-into">
+      <p class="ci-eyebrow">Contact</p>
+      <h1>Let's work together</h1>
+      <p class="ci-lead">
+        Tell me about your project, idea, or the problem you're trying to solve.
+        I'll get back to you within 24&nbsp;hours.
       </p>
-    </section>
- 
-    <!-- ══ AVAILABILITY STRIP ════════════════════════════════════════ -->
-    <div id="avail-strip">
-      <div class="avail-left">
-        <span class="avail-dot"></span>
-        <span class="avail-text">Always available — let's talk</span>
-      </div>
-      <div class="avail-right">
-        Response time · <span>Usually within 24h</span>
-      </div>
-    </div>
- 
-    <!-- ══ BODY GRID ═════════════════════════════════════════════════ -->
-    <div id="contact-body">
- 
+    </header>
+
+    <!-- ══ CONTENT ═════════════════════════════════════════════ -->
+    <div id="contact-content">
+
       <!-- FORM -->
-      <div class="form-col reveal">
-        <div class="sec-lbl"><span>Send a Message</span></div>
- 
-        <form class="contact-form" action="https://formspree.io/f/xvgbagja" method="POST" id="contact-form">
- 
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="f-name">Name</label>
-              <input class="form-input" id="f-name" type="text" name="TM.Makyneta_Name" required placeholder="Your name"/>
+      <div class="cc-form reveal">
+        <form class="cform" action="https://formspree.io/f/xvgbagja" method="POST" id="contact-form">
+
+          <div class="cf-row">
+            <div class="cf-group">
+              <label class="cf-label" for="f-name">Name</label>
+              <input class="cf-input" id="f-name" type="text" name="TM.Makyneta_Name" required placeholder="Your name" autocomplete="name"/>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="f-email">Email</label>
-              <input class="form-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="your@email.com"/>
+            <div class="cf-group">
+              <label class="cf-label" for="f-email">Email</label>
+              <input class="cf-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="your@email.com" autocomplete="email"/>
             </div>
           </div>
- 
-          <!-- Service selector -->
-          <div class="form-group">
-            <label class="form-label">Service</label>
-            <div class="service-chips" id="svc-chips">
-              <div class="svc-chip" data-val="Web Development">Web Dev</div>
-              <div class="svc-chip" data-val="Photography">Photography</div>
-              <div class="svc-chip" data-val="Design">Design</div>
-              <div class="svc-chip" data-val="IT Support">IT Support</div>
-              <div class="svc-chip" data-val="Roadie / Stage">Roadie / Stage</div>
-              <div class="svc-chip" data-val="Other">Other</div>
+
+          <div class="cf-group">
+            <label class="cf-label">Service needed</label>
+            <div class="cf-chips" id="svc-chips">
+              <div class="cf-chip" data-val="Web Development">Web Dev</div>
+              <div class="cf-chip" data-val="Photography">Photography</div>
+              <div class="cf-chip" data-val="Design">Design</div>
+              <div class="cf-chip" data-val="IT Support">IT Support</div>
+              <div class="cf-chip" data-val="Roadie / Stage">Roadie</div>
+              <div class="cf-chip" data-val="Other">Other</div>
             </div>
             <input type="hidden" id="f-service" name="service"/>
           </div>
- 
-          <div class="form-group">
-            <label class="form-label" for="f-subject">Subject</label>
-            <input class="form-input" id="f-subject" type="text" name="subject" required placeholder="What's this about?"/>
+
+          <div class="cf-group">
+            <label class="cf-label" for="f-subject">Subject</label>
+            <input class="cf-input" id="f-subject" type="text" name="subject" required placeholder="What's this about?"/>
           </div>
- 
-          <div class="form-group">
-            <label class="form-label" for="f-message">Message</label>
-            <textarea class="form-textarea" id="f-message" name="TM.Makyneta_Message" rows="6" required placeholder="Tell me about your project or request..."></textarea>
+
+          <div class="cf-group">
+            <label class="cf-label" for="f-message">Message</label>
+            <textarea class="cf-textarea" id="f-message" name="TM.Makyneta_Message" rows="5" required placeholder="Describe your project, timeline, and any specific requirements…"></textarea>
           </div>
- 
+
           <div class="form-status" id="form-status"></div>
- 
-          <button type="submit" class="submit-btn" id="submit-btn">
+
+          <button type="submit" class="cf-btn" id="submit-btn">
             <span>Send Message</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
- 
+
         </form>
       </div>
- 
+
       <!-- DIVIDER -->
-      <div class="col-divider"></div>
- 
-      <!-- SIDEBAR -->
-      <aside class="sidebar-col reveal">
-        <div class="sec-lbl"><span>Direct Channels</span></div>
- 
-        <div class="channel-list">
-          <a href="https://wa.me/351933338431" target="_blank" class="ch-item">
-            <i class="fa-brands fa-whatsapp ch-ico"></i>
-            <div class="ch-body">
-              <span class="ch-lbl">WhatsApp</span>
-              <span class="ch-val">+351 933 338 431</span>
-            </div>
-            <span class="ch-arr">→</span>
-          </a>
-          <a href="https://instagram.com/tomasmota.eu" target="_blank" class="ch-item">
-            <i class="fa-brands fa-instagram ch-ico"></i>
-            <div class="ch-body">
-              <span class="ch-lbl">Instagram</span>
-              <span class="ch-val">@tomasmota.eu</span>
-            </div>
-            <span class="ch-arr">→</span>
-          </a>
-          <a href="mailto:makyneta@tutamail.com" class="ch-item">
-            <i class="fa-solid fa-envelope ch-ico"></i>
-            <div class="ch-body">
-              <span class="ch-lbl">Email</span>
-              <span class="ch-val">makyneta@tutamail.com</span>
-            </div>
-            <span class="ch-arr">→</span>
-          </a>
-          <div class="ch-item static">
-            <i class="fa-solid fa-location-dot ch-ico"></i>
-            <div class="ch-body">
-              <span class="ch-lbl">Location</span>
-              <span class="ch-val">Leiria, Portugal</span>
-            </div>
+      <div class="cc-divider"></div>
+
+      <!-- INFO -->
+      <aside class="cc-info reveal">
+        <div class="ci-section">
+          <h3 class="ci-heading">Direct channels</h3>
+          <div class="ci-channels">
+            <a href="https://wa.me/351933338431" target="_blank" class="ci-channel">
+              <span class="ci-icon"><i class="fa-brands fa-whatsapp"></i></span>
+              <span class="ci-body">
+                <span class="ci-lbl">WhatsApp</span>
+                <span class="ci-val">+351 933 338 431</span>
+              </span>
+              <span class="ci-arrow">&rarr;</span>
+            </a>
+            <a href="https://instagram.com/tomasmota.eu" target="_blank" class="ci-channel">
+              <span class="ci-icon"><i class="fa-brands fa-instagram"></i></span>
+              <span class="ci-body">
+                <span class="ci-lbl">Instagram</span>
+                <span class="ci-val">@tomasmota.eu</span>
+              </span>
+              <span class="ci-arrow">&rarr;</span>
+            </a>
+            <a href="mailto:makyneta@tutamail.com" class="ci-channel">
+              <span class="ci-icon"><i class="fa-regular fa-envelope"></i></span>
+              <span class="ci-body">
+                <span class="ci-lbl">Email</span>
+                <span class="ci-val">makyneta@tutamail.com</span>
+              </span>
+              <span class="ci-arrow">&rarr;</span>
+            </a>
           </div>
-          <div class="ch-item static">
-            <i class="fa-solid fa-clock ch-ico"></i>
-            <div class="ch-body">
-              <span class="ch-lbl">Availability</span>
-              <span class="ch-val">Always available</span>
+        </div>
+
+        <div class="ci-section">
+          <h3 class="ci-heading">Quick info</h3>
+          <div class="ci-grid">
+            <div class="ci-item">
+              <span class="ci-key">Location</span>
+              <span class="ci-value">Leiria, Portugal</span>
+            </div>
+            <div class="ci-item">
+              <span class="ci-key">Response time</span>
+              <span class="ci-value">&lt; 24 hours</span>
+            </div>
+            <div class="ci-item">
+              <span class="ci-key">Languages</span>
+              <span class="ci-value">PT &middot; EN</span>
+            </div>
+            <div class="ci-item">
+              <span class="ci-key">Coverage</span>
+              <span class="ci-value">Nationwide &middot; Remote</span>
             </div>
           </div>
         </div>
- 
-        <div class="sidebar-facts">
-          <div class="fact-row">
-            <span class="fact-key">Response time</span>
-            <span class="fact-val">Immediate</span>
-          </div>
-          <div class="fact-row">
-            <span class="fact-key">Preferred contact</span>
-            <span class="fact-val">WhatsApp or Email</span>
-          </div>
-          <div class="fact-row">
-            <span class="fact-key">Languages</span>
-            <span class="fact-val">PT · EN</span>
-          </div>
-          <div class="fact-row">
-            <span class="fact-key">Coverage</span>
-            <span class="fact-val">Nationwide · Remote</span>
-          </div>
+
+        <div class="ci-cta">
+          <p>Prefer a quick chat?</p>
+          <a href="https://wa.me/351933338431" target="_blank" class="ci-wa-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp me</span>
+          </a>
         </div>
- 
-        <blockquote class="sidebar-quote">
-          <p>"Technology should be the engine, never the obstacle. Let's build something solid together."</p>
-          <cite>Tomás Mota</cite>
-        </blockquote>
       </aside>
+
     </div>
- 
+
   </main>
 
-
 <div id="footer"></div>
-</script>
 </body>
 </html>

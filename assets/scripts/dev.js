@@ -6,52 +6,64 @@
 
     /* ── Projects data ── */
     const projects = [
-      { id:14, title:"Nicholas Moraes", type:"frontend",
+      { id:17, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
         desc:"Professional and minimalist website for influencer and musician, Nicholas Moraes.",
         demo:"https://makyneta.github.io/m0rwes",
         info:"/info/dev/m0rwes" },
-        
-      { id:14, title:"Mr. Devix", type:"frontend",
+
+      { id:16, title:"Libélula Teatro", type:"frontend",
+        img:"/assets/images/projects/dev/libelula-teatro.webp",
+        desc:"Professional and minimalist website for the theater company Libélula Teatro.",
+        demo:"https://libelulateatro.lovable.app",
+        info:"" },
+
+      { id:15, title:"Mr. Devix", type:"frontend",
         img:"/assets/images/projects/dev/mr-devix.webp",
         desc:"Personal brand portfolio for a digital creator. Minimalist design with smooth scroll animations and a dark theme.",
         demo:"https://makyneta.github.io/mrdevix",
         info:"/info/dev/mrdevix" },
 
-      { id:13, title:"Clube Atletismo de Marinha Grande", type:"frontend",
+      { id:14, title:"Clube Atletismo de Marinha Grande", type:"frontend",
         img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
         desc:"Institutional website for an athletics club featuring event calendars, athlete profiles, and news sections.",
         demo:"https://makyneta.github.io/catletismomg",
         info:"/info/dev/camg" },
 
-      { id:12, title:"António Pedro", type:"frontend",
+      { id:13, title:"António Pedro", type:"frontend",
         img:"/assets/images/projects/dev/antonio-pedro-2.webp",
         desc:"Professional landing page for a personal trainer. Includes service cards, testimonials, and a booking CTA.",
         demo:"https://makyneta.github.io/antoniorpedro",
         info:"" },
 
-      { id:11, title:"LS Videomaker", type:"frontend",
+      { id:12, title:"LS Videomaker", type:"frontend",
         img:"/assets/images/projects/dev/ls-videomaker.webp",
         desc:"Video production portfolio with a video gallery, client showcase, and contact form for bookings.",
         demo:"https://makyneta.github.io/lsvideomaker",
         info:"" },
 
-      { id:10, title:"Nicholas Simões", type:"frontend",
+      { id:11, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-simoes.webp",
         desc:"Personal website for a photographer and videographer, featuring a masonry gallery and lightbox viewer.",
         demo:"https://makyneta.github.io/nico",
         info:"/info/dev/nico" },
 
-      { id:9, title:"Juventude Socialista Marinha Grande", type:"frontend",
+      { id:10, title:"Juventude Socialista Marinha Grande", type:"frontend",
         img:"/assets/images/projects/dev/juventude-socialista-da-concelhia-da-marinha-grande.webp",
         desc:"Political youth movement website with event promotion, manifesto pages, and membership sign-up forms.",
         demo:"https://makyneta.github.io/jsmarinhagrande",
         info:"" },
 
-      { id:8, title:"Amalias", type:"frontend",
+      { id:9, title:"Amalias", type:"frontend",
         img:"/assets/images/projects/dev/amalias.webp",
         desc:"Brand website for a local restaurant. Includes a digital menu, location map, and reservation system.",
         demo:"https://makyneta.github.io/amalias",
+        info:"" },
+
+      { id:8, title:"MakyScale", type:"backend",
+        img:"/assets/images/projects/dev/makyscale.webp",
+        desc:"Website for professionally upscaling images up to 6 times with the help of Artificial Intelligence.",
+        demo:"https://makyscale.lovable.app",
         info:"" },
 
       { id:7, title:"Mayday", type:"frontend",
