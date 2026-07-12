@@ -1,8 +1,8 @@
     /* ── Data ── */
     const PROJECTS = [
-      { id:14, title:"2 Years of Government - The Government Fails",
+      { id:14, title:"2 Anos de Governo - O Governo Falha",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
-        desc:"2 Anos de Governo - O Governo Falha",
+        desc:"",
         client:"PS Leiria",
         image:"/assets/images/projects/design/thumb/2-anos-de-governo-o-governo-falha-ps-leiria.webp",
         preview:"/assets/images/projects/design/preview/2-anos-de-governo-o-governo-falha-ps-leiria.webp",
