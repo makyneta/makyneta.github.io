@@ -145,7 +145,7 @@
             </div>
             <div class="card-actions">
               ${p.info ? `<a href="${p.info}" class="card-btn"><i class="fa-solid fa-circle-info"></i> Info</a>` : ''}
-              <a href="${p.demo}" target="_blank" rel="noopener" class="card-btn">${EXT} Visit</a>
+              <a href="${p.demo}" target="_blank" rel="noopener" class="card-btn">${EXT} Visitar</a>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@
           if (show) { n++; card.classList.add('card-visible'); }
         });
         countNum.textContent = n;
-        countLbl.textContent = n === 1 ? 'project indexed' : 'projects indexed';
+        countLbl.textContent = n === 1 ? 'projeto indexado' : 'projetos indexados';
       });
     });
 

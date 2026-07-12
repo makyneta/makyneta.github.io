@@ -33,7 +33,7 @@
     form.addEventListener('submit', async e => {
       e.preventDefault();
       btn.disabled = true;
-      btn.querySelector('span').textContent = 'Sending\u2026';
+      btn.querySelector('span').textContent = 'A enviar\u2026';
       status.className = 'form-status'; status.textContent = '';
 
       try {
@@ -43,19 +43,19 @@
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          status.textContent = '\u2713 Message sent \u2014 I\'ll get back to you shortly.';
+          status.textContent = '\u2713 Mensagem enviada \u2014 responderei em breve.';
           status.classList.add('success', 'show');
           form.reset();
           document.querySelectorAll('.cf-chip').forEach(c => c.classList.remove('picked'));
           document.getElementById('f-service').value = '';
-          btn.querySelector('span').textContent = 'Message Sent';
+          btn.querySelector('span').textContent = 'Mensagem Enviada';
         } else {
           throw new Error();
         }
       } catch {
-        status.textContent = '\u2717 Something went wrong. Try WhatsApp or email directly.';
+        status.textContent = '\u2717 Algo correu mal. Tenta WhatsApp ou email diretamente.';
         status.classList.add('error', 'show');
         btn.disabled = false;
-        btn.querySelector('span').textContent = 'Send Message';
+        btn.querySelector('span').textContent = 'Enviar Mensagem';
       }
     });

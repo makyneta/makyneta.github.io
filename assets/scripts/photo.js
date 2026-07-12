@@ -30,8 +30,8 @@
     ];
  
     const CATS = [
-      {id:'all',label:'All'},{id:'event',label:'Event'},{id:'sport',label:'Sport'},
-      {id:'portrait',label:'Portrait'},{id:'street',label:'Street'},{id:'nature',label:'Nature'},
+      {id:'all',label:'Todas'},{id:'event',label:'Evento'},{id:'sport',label:'Desporto'},
+      {id:'portrait',label:'Retrato'},{id:'street',label:'Rua'},{id:'nature',label:'Natureza'},
     ];
  
     /* Ticker */
@@ -66,8 +66,8 @@
     /* Build card */
     function card(p){
       const img = p.cover
-        ? `<img src="${p.cover}" alt="${p.title}" loading="lazy" onerror="this.closest('.c-img').innerHTML='<div class=\\'no-img\\'>[no preview]</div>'">`
-        : `<div class="no-img">[no preview]</div>`;
+        ? `<img src="${p.cover}" alt="${p.title}" loading="lazy" onerror="this.closest('.c-img').innerHTML='<div class=\\'no-img\\'>[sem pr\u00e9-visualiza\u00e7\u00e3o]</div>'">`
+        : `<div class="no-img">[sem pr\u00e9-visualiza\u00e7\u00e3o]</div>`;
       const fr = p.photoCount>0 ? `<span class="c-frames">${p.photoCount.toLocaleString()} frames</span>` : '';
       const desc = p.desc ? `<p class="c-desc">${p.desc}</p>` : '';
       const infoBtn = p.info ? `<a href="${p.info}" class="c-btn">Info</a>` : '';
@@ -83,13 +83,13 @@
             <div class="c-title">${p.title}</div>
             <div class="c-meta">
               ${p.year?`<span>${p.year}</span>`:''}
-              ${p.year&&p.location?`<span class="c-sep">·</span>`:''}
+              ${p.year&&p.location?`<span class="c-sep">\u00b7</span>`:''}
               ${p.location?`<span>${p.location}</span>`:''}
             </div>
             ${desc}
             <div class="c-actions">
               ${infoBtn}
-              ${p.slug ? `<a href="${p.slug}" target="_blank" rel="noopener" class="c-btn">${EXT} View photos</a>` : ''}
+              ${p.slug ? `<a href="${p.slug}" target="_blank" rel="noopener" class="c-btn">${EXT} Ver fotos</a>` : ''}
             </div>
           </div>
         </div>`;
@@ -102,7 +102,7 @@
       const g = document.getElementById('grid');
       document.getElementById('vc').textContent = pool.length;
       if(!pool.length){
-        g.innerHTML=`<div style="padding:5rem;font-family:var(--font-m);font-size:.48rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase;grid-column:1/-1">No projects found.</div>`;
+        g.innerHTML=`<div style="padding:5rem;font-family:var(--font-m);font-size:.48rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase;grid-column:1/-1">Nenhum projeto encontrado.</div>`;
         return;
       }
       g.innerHTML = pool.map(card).join('');

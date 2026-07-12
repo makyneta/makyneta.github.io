@@ -179,7 +179,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
             <div class="pf-dev-tags">${p.tags.map(t => `<span class="pf-dev-tag">${t}</span>`).join('')}</div>
             <div class="pf-dev-actions">
               ${p.info ? `<a href="${p.info}"><i class="fa-solid fa-circle-info"></i> Info</a>` : ''}
-              <a href="${p.demo}" target="_blank" rel="noopener">${EXT} Visit</a>
+              <a href="${p.demo}" target="_blank" rel="noopener">${EXT} Visitar</a>
             </div>
           </div>
         </div>

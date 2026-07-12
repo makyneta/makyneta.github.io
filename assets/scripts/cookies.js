@@ -26,12 +26,12 @@
     banner.innerHTML = `
       <div class="cookie-content">
         <div class="cookie-text">
-          <p><strong>🍪 Cookie Consent</strong></p>
-          <p>We use cookies to enhance your experience and analyze site performance. By accepting, you agree to our use of cookies.</p>
+          <p><strong>🍪 Consentimento de Cookies</strong></p>
+          <p>Utilizamos cookies para melhorar a tua experi\u00eancia e analisar o desempenho do site. Ao aceitares, concordas com o uso de cookies.</p>
         </div>
         <div class="cookie-buttons">
-          <button id="cookie-reject" class="cookie-btn reject">Decline</button>
-          <button id="cookie-accept" class="cookie-btn accept">Accept</button>
+          <button id="cookie-reject" class="cookie-btn reject">Recusar</button>
+          <button id="cookie-accept" class="cookie-btn accept">Aceitar</button>
         </div>
       </div>
     `;

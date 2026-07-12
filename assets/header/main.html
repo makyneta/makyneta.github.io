@@ -4,7 +4,7 @@
   </a>
 
   <nav class="header-nav">
-    <a href="/about" class="nav-link">About</a>
+    <a href="/about" class="nav-link">Sobre</a>
 
     <div class="dropdown-wrapper">
       <button class="nav-btn">
@@ -12,29 +12,18 @@
         <i class="fa-solid fa-chevron-down" style="font-size:.4rem;opacity:.5"></i>
       </button>
       <div class="dropdown-menu">
-        <a href="/develop"><i class="fa-solid fa-code"></i> Development</a>
+        <a href="/develop"><i class="fa-solid fa-code"></i> Desenvolvimento</a>
         <a href="/design"><i class="fa-solid fa-paint-brush"></i> Design</a>
-        <a href="/photo"><i class="fa-solid fa-camera"></i> Photography</a>
-        <a href="/video"><i class="fa-solid fa-video"></i> Video</a>
+        <a href="/photo"><i class="fa-solid fa-camera"></i> Fotografia</a>
+        <a href="/video"><i class="fa-solid fa-video"></i> Vídeo</a>
         <a href="/feedback"><i class="fa-solid fa-star"></i> Feedback</a>
       </div>
     </div>
 
-    <a href="/contact" class="nav-link">Contact</a>
-
-    <!-- <div class="dropdown-wrapper dropdown-left">
-      <button class="nav-btn lang-btn">
-        <i class="fa-solid fa-globe" style="font-size:.5rem"></i>
-        EN
-        <i class="fa-solid fa-chevron-down" style="font-size:.4rem;opacity:.5"></i>
-      </button>
-      <div class="dropdown-menu">
-        <a href="/pt"><i class="fa-solid fa-arrow-right" style="font-size:.4rem"></i> Português</a>
-      </div> -->
-    </div>
+    <a href="/contact" class="nav-link">Contacto</a>
   </nav>
 
-  <button id="mobile-menu-toggle-btn" aria-label="Toggle menu">
+  <button id="mobile-menu-toggle-btn" aria-label="Menu">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
@@ -46,38 +35,29 @@
     <div class="mobile-brand">MAKYNETA</div>
 
     <ul id="main-nav-list">
-      <li><a href="/" class="mobile-nav-link">Home</a></li>
-      <li><a href="/about" class="mobile-nav-link">About</a></li>
+      <li><a href="/" class="mobile-nav-link">Início</a></li>
+      <li><a href="/about" class="mobile-nav-link">Sobre</a></li>
 
       <li><span class="mobile-section-label">Portfolio</span></li>
-      <li><a href="/develop" class="mobile-sub-link">Development</a></li>
+      <li><a href="/develop" class="mobile-sub-link">Desenvolvimento</a></li>
       <li><a href="/design" class="mobile-sub-link">Design</a></li>
-      <li><a href="/photo" class="mobile-sub-link">Photography</a></li>
-      <li><a href="/video" class="mobile-sub-link">Video</a></li>
+      <li><a href="/photo" class="mobile-sub-link">Fotografia</a></li>
+      <li><a href="/video" class="mobile-sub-link">Vídeo</a></li>
       <li><a href="/feedback" class="mobile-sub-link">Feedback</a></li>
 
-      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contacto</a></li>
     </ul>
-
-    <!-- <div class="mobile-lang-wrap">
-      <a href="/pt" class="mobile-lang-btn">
-        <i class="fa-solid fa-globe"></i> Português
-      </a>
-    </div> -->
   </nav>
 
   <script>
     (function(){
       var path = window.location.pathname;
-      // Mark direct nav links
       document.querySelectorAll('#main-header .nav-link').forEach(function(el){
         if (el.getAttribute('href') === path) el.classList.add('active');
       });
-      // Mark Portfolio button if on a portfolio sub-page
       if (path.match(/^\/(develop|design|photo|video|feedback)/)) {
         document.querySelectorAll('#main-header .nav-btn')[0].classList.add('active');
       }
-      // Mobile active
       document.querySelectorAll('#mobile-sidebar-nav a').forEach(function(el){
         if (el.getAttribute('href') === path) el.classList.add('active');
       });

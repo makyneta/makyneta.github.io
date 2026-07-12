@@ -112,12 +112,12 @@
     ];
  
     const CATS = [
-      {id:'all',label:'All'},
+      {id:'all',label:'Todas'},
       {id:'branding',label:'Branding'},
       {id:'ui',label:'UI / Digital'},
-      {id:'print',label:'Print'},
-      {id:'social',label:'Social Media'},
-      {id:'event',label:'Event'},
+      {id:'print',label:'Impress\u00e3o'},
+      {id:'social',label:'Redes Sociais'},
+      {id:'event',label:'Evento'},
     ];
  
     /* Stats */
@@ -149,9 +149,9 @@
         : `href="#" data-lightbox="${preview}" data-caption="${p.title}"`;
       const tools   = (p.tags||[]).map(t=>`<span class="tool-pill">${t}</span>`).join('');
       const imgHtml = p.image
-        ? `<img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.closest('.card-visual').innerHTML='<div class=\\'card-placeholder\\'>[no preview]</div>'">`
-        : `<div class="card-placeholder">[no preview]</div>`;
-      const arrow   = p.link ? 'View →' : 'Preview →';
+        ? `<img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.closest('.card-visual').innerHTML='<div class=\\'card-placeholder\\'>[sem pré-visualização]</div>'">`
+        : `<div class="card-placeholder">[sem pré-visualização]</div>`;
+      const arrow   = p.link ? 'Ver →' : 'Pré-visualização →';
       return `
         <a ${clickA} class="project-card" data-cat="${p.category}">
           <div class="card-visual">
@@ -182,7 +182,7 @@
       const g=document.getElementById('projects-grid');
       document.getElementById('visible-count').textContent=pool.length;
       if(!pool.length){
-        g.innerHTML=`<div style="padding:5rem;font-family:var(--fm);font-size:.48rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase;grid-column:1/-1">No projects found.</div>`;
+        g.innerHTML=`<div style="padding:5rem;font-family:var(--fm);font-size:.48rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase;grid-column:1/-1">Nenhum projeto encontrado.</div>`;
         return;
       }
       g.innerHTML=pool.map((p,i)=>buildCard(p,i)).join('');
