@@ -188,24 +188,35 @@
     }
  
     /* ═══ CLIENTS ════════════════════════════════════════════════ */
-    .clients-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
-      gap: 1px; background: var(--border); border: 1px solid var(--border);
+    .clients-compact {
+      display: flex; flex-direction: column;
     }
-    .client-card {
-      background: var(--black); padding: 2.5rem 1.5rem;
-      display: flex; flex-direction: column; align-items: center; gap: 1.2rem;
-      filter: grayscale(1) brightness(0.4); opacity: 0.45;
-      transition: filter 0.5s, opacity 0.5s, background 0.4s;
+    .cc-row {
+      display: grid; grid-template-columns: 30px 1fr auto;
+      align-items: center; gap: 1.2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: padding-left 0.3s;
     }
-    .client-card:hover { filter: grayscale(0) brightness(1); opacity: 1; background: var(--black3); }
-    .client-card img { width: 100%; max-width: 72px; height: 46px; object-fit: contain; }
-    .client-role {
-      font-family: var(--font-m); font-size: 0.44rem;
+    .cc-row:last-child { border-bottom: none; }
+    .cc-row:hover { padding-left: 0.6rem; }
+    .cc-logo {
+      width: 24px; height: 18px; object-fit: contain;
+      filter: grayscale(1) brightness(0.4); opacity: 0.5;
+      transition: filter 0.35s, opacity 0.35s;
+    }
+    .cc-row:hover .cc-logo { filter: grayscale(0) brightness(1); opacity: 1; }
+    .cc-name {
+      font-family: var(--font-d); font-size: 1.05rem;
+      letter-spacing: 0.04em; color: var(--white2); transition: color 0.3s;
+    }
+    .cc-row:hover .cc-name { color: var(--white); }
+    .cc-role {
+      font-family: var(--font-m); font-size: 0.5rem;
       letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--dim); text-align: center; line-height: 1.8; transition: color 0.4s;
+      color: var(--dim); transition: color 0.3s;
     }
-    .client-card:hover .client-role { color: var(--gold); }
+    .cc-row:hover .cc-role { color: var(--gold); }
  
     /* ═══ TECH ════════════════════════════════════════════════════ */
     .tech-grid {
@@ -424,6 +435,8 @@
       .cert-year { display: none; }
       .edu-cols { grid-template-columns: 1fr; gap: 1.5rem; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .cc-row { grid-template-columns: 24px 1fr; }
+      .cc-role { display: none; }
     }
     @media (max-width: 600px) {
       .section-wrap, #intro { padding: 4rem 1.5rem; }
@@ -433,4 +446,6 @@
       .stat-cell { padding: 2.5rem 2rem; }
       .services-grid { grid-template-columns: 1fr; }
       .edu-number { display: none; }
+      .cc-row { grid-template-columns: 20px 1fr; gap: 0.8rem; padding: 0.8rem 0; }
+      .cc-role { display: block; font-size: 0.4rem; color: var(--dim); }
     }
