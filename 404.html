@@ -244,40 +244,6 @@
           animation: fadeUp .8s ease .55s both;
         }
 
-        /* ── Language ── */
-        .lang-wrap {
-          display: flex; align-items: center; justify-content: center;
-          gap: .5rem; margin-bottom: 2.5rem;
-          animation: fadeUp .8s ease .6s both;
-        }
-        .lang-btn {
-          font-family: var(--fm); font-size: .5rem;
-          letter-spacing: .18em; text-transform: uppercase;
-          padding: .45rem 1rem;
-          border: 1px solid var(--brd2);
-          background: transparent; color: var(--dim);
-          cursor: pointer; transition: all .3s;
-        }
-        .lang-btn:hover,
-        .lang-btn.active {
-          border-color: var(--gold); color: var(--gold);
-          background: rgba(200,164,80,.08);
-        }
-
-        /* ── Language ── */
-        .lang-btn {
-          font-family: var(--fm); font-size: .5rem;
-          letter-spacing: .18em; text-transform: uppercase;
-          padding: .45rem 1rem;
-          border: 1px solid var(--brd2);
-          background: transparent; color: var(--dim);
-          cursor: pointer; transition: all .3s;
-        }
-        .lang-btn:hover,
-        .lang-btn.active {
-          border-color: var(--gold); color: var(--gold);
-          background: rgba(200,164,80,.08);
-        }
 
         /* ── Home Button ── */
         .btn-home {
@@ -326,27 +292,22 @@
 
         <div class="content">
             <div class="eyebrow">
-                <span id="eyebrow-text">Erro</span>
+                <span>Erro</span>
             </div>
 
             <h1 class="error-code">
                 4<span class="zero">0</span>4
             </h1>
 
-            <h2 class="error-title" id="error-title">Página Não Encontrada</h2>
+            <h2 class="error-title">Página Não Encontrada</h2>
 
-            <p class="error-desc" id="error-desc">
-                A página que procura não existe ou foi movida.
-                Volte à página inicial para continuar a explorar.
+            <p class="error-desc">
+                A página que procuras não existe ou foi movida.<br>
+                Volta ao início para continuares a explorar.
             </p>
 
-            <div class="language-selector" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:2.5rem;animation:fadeUp .8s ease .6s both;">
-                <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">English</button>
-                <button class="lang-btn active" data-lang="pt" onclick="changeLanguage('pt')">Português</button>
-            </div>
-
-            <a href="/pt" class="btn-home" id="home-link">
-                <span id="btn-text">Início</span>
+            <a href="/" class="btn-home">
+                <span>Início</span>
                 <span class="arr">→</span>
             </a>
         </div>
@@ -354,7 +315,6 @@
 
     <script>
         const redirects = {
-          // SOCIAL_
             'mail': { url: 'mailto:makynetastudios@gmail.com' },
             'whatsapp': { url: 'https://wa.me/351933338431' },
             'instagram': { url: 'https://www.instagram.com/makyneta_' },
@@ -363,13 +323,9 @@
             'lovable': { url: 'https://lovable.dev/@makyneta' },
             'google': { url: 'https://share.google/LIDnM7m9kEhkwjaob' },
             'community': { url: 'https://whatsapp.com/channel/0029VbDDrPvD8SDtBdiD4V0n' },
-            
-          // CLIENTS.DOWNLOAD_
             'download.psmg': { url: 'https://mega.nz/folder/hqpiWbDJ#XZvJyznWwcqzViaQH1Suvw' },
             'download.jsmg': { url: 'https://mega.nz/folder/k7IVQSjR#0stw1G-2sIH5p-GSSAR4uA' },
             'download.camg': { url: '/client/ps-marinha-grande' },
-
-          // PROJECTS_
             'songraiders': { url: 'https://www.behance.net/gallery/231746927/Music-SR-LIve-Performance-at-MG2024CF' },
             'alpla': { url: 'https://www.behance.net/gallery/231766181/Sport-IA-Inter-Company-Tournament' },
             'gdpcc': { url: 'https://www.behance.net/gallery/232285927/Sport-GDPCC-Impor4mill-Sumer-Cup' },
@@ -378,8 +334,6 @@
             '50aniversarioconstituicao': { url: 'https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic/' },
             '50anniversaryconstitution': { url: 'https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic/' },
             'saladeespera': { url: 'https://makyneta.pixieset.com/saladeespera/' },
-            
-          // OTHER_
             'jsmg-instagram': { url: 'https://www.instagram.com/js.marinhagrande' },
             'jsmg-facebook': { url: 'https://www.facebook.com/jsocialistamg' },
             'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande' },
@@ -388,31 +342,25 @@
             'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542' },
             'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade' },
             'todospelamarinha': { url: 'https://www.instagram.com/p/DXZ8pq6DZ-h/' },
-            
-          // IT.TOOLS_
             'cuco': { url: 'https://cuco.inforlandia.pt/ucode/' },
             'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/' },
-            
-          // APPS_
             'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN' },
             'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view' },
-            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view?usp=drive_link' },
-            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view?usp=drive_link' },
-            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view?usp=drive_link' },
-            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link' },
-            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view?usp=drive_link' },
-            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view?usp=drive_link' },
+            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view' },
+            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view' },
+            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view' },
+            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view' },
+            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view' },
+            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view' },
             '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview' },
             'blender': { url: 'https://www.blender.org/download/' },
             'audacity': { url: 'https://www.audacityteam.org/download/' },
             'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A' },
             'cptmapps': { url: '/archive/download-cptm-apps' },
             'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA' },
-            
-          // ARCHIVE_
             'tempestade-kristin': { url: '/archive/kristin' },
             'kristin': { url: '/archive/kristin' },
-            'mj': { url: 'https://www.playimdb.com/title/tt11378946/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_MI' },
+            'mj': { url: 'https://www.imdb.com/title/tt11378946/' },
             'investir-imobiliario': { url: 'https://www.youtube.com/watch?v=beb7NagI7Y4' },
             'emanueloliveira-download': { url: 'https://mega.nz/folder/1yIgWDrL#tvbcJt00p-DyeSu-3f0Nyg' },
             'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw' },
@@ -430,44 +378,6 @@
             document.head.appendChild(meta);
             window.location.replace(match.url);
         }
-
-        const translations = {
-            en: {
-                eyebrow: 'Error',
-                title: 'Page Not Found',
-                desc: 'The page you are looking for doesn\'t exist or has been moved. Go back to the home page to continue exploring.',
-                btn: 'Home'
-            },
-            pt: {
-                eyebrow: 'Erro',
-                title: 'Página Não Encontrada',
-                desc: 'A página que procura não existe ou foi movida. Volte à página inicial para continuar a explorar.',
-                btn: 'Início'
-            }
-        };
-
-        function changeLanguage(lang) {
-            const t = translations[lang];
-            document.getElementById('eyebrow-text').textContent = t.eyebrow;
-            document.getElementById('error-title').textContent = t.title;
-            document.getElementById('error-desc').textContent = t.desc;
-            document.getElementById('btn-text').textContent = t.btn;
-            document.getElementById('home-link').href = lang === 'pt' ? '/pt' : '/';
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lang === lang);
-            });
-            document.documentElement.lang = lang;
-            localStorage.setItem('makyneta_language', lang);
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            let lang = localStorage.getItem('makyneta_language');
-            if (!lang) {
-                const browserLang = navigator.language.split('-')[0];
-                lang = ['en', 'pt'].includes(browserLang) ? browserLang : 'en';
-            }
-            changeLanguage(lang);
-        });
     </script>
 </body>
 </html>
