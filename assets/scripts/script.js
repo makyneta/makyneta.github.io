@@ -5,36 +5,10 @@ document.querySelectorAll('.year').forEach(el => {
 
 var v = Date.now();
 
-fetch("/assets/header/main.html?v=" + v)
+fetch("/assets/header.html?v=" + v)
   .then(function(r) { return r.text(); })
   .then(function(data) {
     document.getElementById("header").innerHTML = data;
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "/assets/styles/header.css?v=" + v;
-    document.head.appendChild(link);
-    var script = document.createElement("script");
-    script.src = "/assets/scripts/header.js?v=" + v;
-    document.body.appendChild(script);
-  });
-
-fetch("/assets/header/portuguese.html?v=" + v)
-  .then(function(r) { return r.text(); })
-  .then(function(data) {
-    document.getElementById("headerpt").innerHTML = data;
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "/assets/styles/header.css?v=" + v;
-    document.head.appendChild(link);
-    var script = document.createElement("script");
-    script.src = "/assets/scripts/header.js?v=" + v;
-    document.body.appendChild(script);
-  });
-
-fetch("/assets/header/spanish.html?v=" + v)
-  .then(function(r) { return r.text(); })
-  .then(function(data) {
-    document.getElementById("headeres").innerHTML = data;
     var link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "/assets/styles/header.css?v=" + v;
