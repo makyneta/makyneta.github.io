@@ -102,4 +102,4 @@ Makyneta Unipessoal, Lda.
 
 ---
 
-&copy; 2023–2026 Makyneta Unipessoal, Lda. Todos os direitos reservados.
+Copyright &copy; Makyneta Unipessoal, Lda. Todos os direitos reservados.
