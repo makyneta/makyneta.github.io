@@ -24,7 +24,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - PLpgSQL adicionado às tecnologias de programação
 - Design mobile da página sobre melhorado
 
-## [1.0.0] - 2023
+## [1.0.0] - 2024
 
 ### Added
 - Lançamento inicial do website
