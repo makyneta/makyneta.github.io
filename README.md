@@ -73,22 +73,6 @@ makyneta.github.io/
 └── client/                   # Área de cliente
 ```
 
-## Desenvolvimento Local
-
-```bash
-# Clonar o repositório
-git clone https://github.com/makyneta/makyneta.github.io.git
-cd makyneta.github.io
-
-# Iniciar servidor local (Python)
-python3 -m http.server 8000
-
-# Ou com Node.js
-npx serve .
-```
-
-Aceder a `http://localhost:8000`.
-
 ## Deploy
 
 O site é automaticamente deployado via [GitHub Pages](https://pages.github.com) sempre que são feitos push para a branch `main`.
@@ -112,6 +96,7 @@ Makyneta Unipessoal, Lda.
 
 - Website: [makyneta.github.io](https://makyneta.github.io)
 - Email: [makyneta@tutamail.com](mailto:makyneta@tutamail.com)
+- Telefone: [+351 933 338 431](tel:+351933338431)
 - Instagram: [@tomasmota.eu](https://instagram.com/tomasmota.eu)
 - GitHub: [@makyneta](https://github.com/makyneta)
 
