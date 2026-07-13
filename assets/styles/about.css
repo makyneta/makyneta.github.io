@@ -426,9 +426,9 @@
       .stat-cell { border-bottom: 1px solid var(--border); }
     }
     @media (max-width: 900px) {
-      .section-wrap, #intro { padding: 5rem 2.5rem; }
+      .section-wrap, #intro { padding: 4.5rem 2.5rem; }
       .intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .intro-photo { max-width: 300px; }
+      .intro-photo { max-width: 280px; }
       .timeline-item { grid-template-columns: 1fr; gap: 1rem; padding: 3rem 0; }
       .edu-block { grid-template-columns: 1fr; gap: 3rem; }
       .cert-row { grid-template-columns: 1fr auto; gap: 1.5rem; }
@@ -437,15 +437,46 @@
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .cc-row { grid-template-columns: 24px 1fr; }
       .cc-role { display: none; }
+      .tech-grid { grid-template-columns: repeat(4, 1fr); }
     }
     @media (max-width: 600px) {
-      .section-wrap, #intro { padding: 4rem 1.5rem; }
-      .intro-actions { flex-direction: column; align-items: stretch; }
-      .hero-btn { text-align: center; justify-content: center; }
+      .section-wrap, #intro { padding: 3.5rem 1.2rem; }
+      .section-label { margin-bottom: 3rem; }
+
+      .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .intro-photo { max-width: 220px; order: -1; }
+      .intro-photo img { aspect-ratio: 1/1.1; }
+      .intro-text h1 { font-size: clamp(2.4rem, 12vw, 3.2rem); }
+      .intro-desc { font-size: 0.9rem; }
+      .intro-actions { flex-direction: column; }
+      .intro-actions .hero-btn { width: 100%; justify-content: center; }
+      .intro-socials { justify-content: flex-start; }
+
       #stats-strip { grid-template-columns: 1fr 1fr; }
-      .stat-cell { padding: 2.5rem 2rem; }
+      .stat-cell { padding: 2.2rem 1.5rem; }
+      .stat-num { font-size: clamp(2.4rem, 10vw, 3rem); }
+      .stat-label { font-size: 0.42rem; letter-spacing: 0.2em; }
+
       .services-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 2rem 1.5rem; }
+
+      .timeline-item { grid-template-columns: 1fr; gap: 0.8rem; padding: 2.5rem 0; }
+      .tl-title { font-size: 1.5rem; }
+
+      .cert-row { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.6rem 0; }
+      .cert-year { display: none; }
+      .cert-title { font-size: 0.92rem; }
+
       .edu-number { display: none; }
-      .cc-row { grid-template-columns: 20px 1fr; gap: 0.8rem; padding: 0.8rem 0; }
-      .cc-role { display: block; font-size: 0.4rem; color: var(--dim); }
+      .edu-title { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+      .edu-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .edu-cols { grid-template-columns: 1fr; gap: 1.5rem; }
+
+      .cc-row { grid-template-columns: 20px 1fr; gap: 0.8rem; padding: 0.7rem 0; }
+      .cc-name { font-size: 0.85rem; grid-column: 2; }
+      .cc-role { display: block; font-size: 0.4rem; color: var(--dim); grid-column: 2; }
+
+      .tech-grid { grid-template-columns: repeat(3, 1fr); }
+      .tech-card { padding: 1.5rem 0.8rem; }
+      .tech-icon { font-size: 1.8rem; }
     }
