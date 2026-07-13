@@ -14,6 +14,8 @@
 - **Segunda a Sexta**: 09:00 — 18:00 (WET/WEST)
 - **Sábado e Domingo**: Encerrado
 
+Tempo de resposta: dentro de **48 horas**.
+
 ## FAQ
 
 ### Posso usar o código do site para o meu projeto?

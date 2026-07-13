@@ -15,7 +15,7 @@ Inclui na tua mensagem:
 
 ## Response Time
 
-Comprometo-me a responder a qualquer relatório de segurança dentro de **48 horas**.
+Comprometo-me a responder dentro de **48 horas**.
 
 ## Scope
 
