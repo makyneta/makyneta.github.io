@@ -138,6 +138,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="assets/scripts/script.js"></script>
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -163,7 +166,6 @@
           overflow-x: hidden; -webkit-font-smoothing: antialiased;
           min-height: 100vh;
           display: flex; flex-direction: column;
-          justify-content: center; align-items: center;
         }
         ::selection { background: var(--gold); color: #000; }
 
@@ -173,15 +175,25 @@
           background-size: 160px;
         }
 
+        #bar {
+          position: fixed; top: 0; left: 0; width: 0; height: 2px;
+          background: var(--gold); z-index: 9999;
+          transition: width 0.15s ease-out;
+        }
+
+        .error-wrap {
+          flex: 1;
+          display: flex; align-items: center; justify-content: center;
+          padding: 6rem 2rem 4rem;
+        }
+
         .container {
           position: relative; z-index: 1;
           text-align: center;
-          padding: 4rem 2rem;
-          max-width: 680px;
+          max-width: 640px;
           animation: fadeUp .8s ease .15s both;
         }
 
-        /* ── Ghost ── */
         .ghost {
           position: absolute; top: 50%; left: 50%;
           transform: translate(-50%,-50%);
@@ -196,7 +208,6 @@
 
         .content { position: relative; z-index: 1; }
 
-        /* ── Eyebrow ── */
         .eyebrow {
           display: flex; align-items: center; justify-content: center;
           gap: 1rem; margin-bottom: 2rem;
@@ -212,7 +223,6 @@
           color: var(--gold);
         }
 
-        /* ── Error Code ── */
         .error-code {
           font-family: var(--fd);
           font-size: clamp(5rem, 16vw, 11rem);
@@ -226,26 +236,22 @@
           -webkit-text-stroke: 1.5px var(--gold);
         }
 
-        /* ── Title ── */
         .error-title {
           font-family: var(--fd);
           font-size: clamp(1.6rem, 3vw, 2.6rem);
           letter-spacing: .04em; color: var(--white);
-          line-height: 1; margin-bottom: 1.2rem;
+          line-height: 1; margin-bottom: 1rem;
           animation: fadeUp .8s ease .5s both;
         }
 
-        /* ── Description ── */
         .error-desc {
-          font-family: var(--fsc); font-style: italic;
+          font-family: var(--fsc);
           font-size: 1rem; line-height: 1.85;
           color: var(--dim);
-          max-width: 420px; margin: 0 auto 2.5rem;
+          max-width: 440px; margin: 0 auto 2rem;
           animation: fadeUp .8s ease .55s both;
         }
 
-
-        /* ── Home Button ── */
         .btn-home {
           display: inline-flex; align-items: center; gap: .7rem;
           background: var(--gold); color: #000;
@@ -270,48 +276,100 @@
         }
         .btn-home .arr { font-size: .9rem; }
 
-        /* ── Animations ── */
+        .divider {
+          width: 2rem; height: 1px;
+          background: var(--brd2);
+          margin: 3rem auto 2.5rem;
+          animation: fadeUp .8s ease .75s both;
+        }
+
+        .quick-links {
+          display: flex; flex-wrap: wrap;
+          justify-content: center; gap: .75rem 1.25rem;
+          animation: fadeUp .8s ease .85s both;
+        }
+        .quick-links a {
+          font-family: var(--fm); font-size: .5rem;
+          letter-spacing: .25em; text-transform: uppercase;
+          color: var(--dim); text-decoration: none;
+          transition: color .3s;
+          padding: .35rem 0;
+        }
+        .quick-links a:hover {
+          color: var(--gold);
+        }
+        .quick-links .sep {
+          color: var(--brd2);
+          font-size: .5rem;
+        }
+
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-          .container { padding: 3rem 1.5rem; }
+          .error-wrap { padding: 5rem 1.5rem 3rem; }
           .error-code { font-size: clamp(3.5rem, 14vw, 6rem); }
           .error-title { font-size: clamp(1.3rem, 2.5vw, 2rem); }
-
+          .quick-links { gap: .5rem 1rem; }
         }
     </style>
 </head>
 <body>
+    <div id="bar"></div>
     <div class="noise"></div>
 
-    <div class="container">
-        <div class="ghost">404</div>
+    <div id="header"></div>
 
-        <div class="content">
-            <div class="eyebrow">
-                <span>Erro</span>
+    <div class="error-wrap">
+        <div class="container">
+            <div class="ghost">404</div>
+
+            <div class="content">
+                <div class="eyebrow">
+                    <span>Erro</span>
+                </div>
+
+                <h1 class="error-code">
+                    4<span class="zero">0</span>4
+                </h1>
+
+                <h2 class="error-title">Página Não Encontrada</h2>
+
+                <p class="error-desc">
+                    A página que procuras não existe ou foi movida.<br>
+                    Volta ao início para continuares a explorar.
+                </p>
+
+                <a href="/" class="btn-home">
+                    <span>Início</span>
+                    <span class="arr">→</span>
+                </a>
+
+                <!-- <div class="divider"></div> -->
+
+                <!-- <nav class="quick-links">
+                    <a href="/">Início</a>
+                    <span class="sep">/</span>
+                    <a href="/sobre">Sobre</a>
+                    <span class="sep">/</span>
+                    <a href="/contacto">Contactos</a>
+                    <span class="sep">/</span>
+                    <a href="/dev">Desenvolvimento</a>
+                    <span class="sep">/</span>
+                    <a href="/design">Design</a>
+                    <span class="sep">/</span>
+                    <a href="/foto">Fotografia</a>
+                    <span class="sep">/</span>
+                    <a href="/video">Vídeo</a>
+                </nav> -->
             </div>
-
-            <h1 class="error-code">
-                4<span class="zero">0</span>4
-            </h1>
-
-            <h2 class="error-title">Página Não Encontrada</h2>
-
-            <p class="error-desc">
-                A página que procuras não existe ou foi movida.<br>
-                Volta ao início para continuares a explorar.
-            </p>
-
-            <a href="/" class="btn-home">
-                <span>Início</span>
-                <span class="arr">→</span>
-            </a>
         </div>
     </div>
+
+    <div id="footer"></div>
+    <script src="assets/scripts/footer.js"></script>
 
     <script>
         const redirects = {
