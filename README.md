@@ -97,6 +97,7 @@ O site é automaticamente deployado via [GitHub Pages](https://pages.github.com)
 
 Este é um **repositório privado com código fonte público para referência**. Todos os direitos reservados.
 
+- **Não é autorizado** o clone, fork ou cópia deste repositório ou de qualquer parte do seu código
 - **Não é autorizado** o deploy, hosting ou redistribuição do site ou de qualquer parte do seu código
 - **Não é autorizado** o uso comercial do código, design ou conteúdo
 - **Não é autorizado** a criação de websites derivados baseados neste projeto
