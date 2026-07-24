@@ -3,9 +3,7 @@
 ## Reporting Vulnerabilities
 
 Se descobrires uma vulnerabilidade de segurança neste site, por favor **não** a tornes pública. Em vez disso, contacta diretamente:
-
 - **Email**: [makyneta@tutamail.com](mailto:makyneta@tutamail.com)
-- **Telefone**: [+351 933 338 431](tel:+351933338431)
 
 Inclui na tua mensagem:
 - Descrição da vulnerabilidade
