@@ -102,7 +102,7 @@ body::after {
 
 .hero-foot {
   display: flex; align-items: flex-end; justify-content: space-between;
-  flex-wrap: wrap; gap: 2.5rem; padding: 2.2rem 0 3rem;
+  flex-wrap: wrap; gap: 2rem; padding: 2.2rem 0 3rem;
   position: relative; z-index: 2;
   opacity: 0; animation: fu .8s ease .5s forwards;
 }
@@ -449,9 +449,6 @@ body::after {
   #promo-banner .promo-inner { padding-left: 2rem; padding-right: 2rem; }
   #notes-section { padding-left: 2rem; padding-right: 2rem; }
   #page-hero { padding-top: 5rem; }
-  .hero-foot { flex-direction: column; align-items: flex-start; }
-  .hero-stats { gap: 3rem; }
-  .stat { text-align: left; }
   .ps-lbl { display: none; }
 }
 @media (max-width: 560px) {
