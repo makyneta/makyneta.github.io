@@ -111,7 +111,7 @@
       line-height: 1.8; color: var(--w2); max-width: 460px;
     }
     .hero-lead em { color: var(--gold2); font-style: normal; }
- 
+
     .hero-stats { display: flex; gap: 4rem; }
     .stat { text-align: right; }
     .st-n { font-family: var(--fd); font-size: 3.8rem; color: var(--white); line-height: 1; display: block; transition: color .3s; }

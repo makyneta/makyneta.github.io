@@ -25,6 +25,18 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://makyneta.github.io/precos/dev.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://makyneta.github.io/precos/design.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://makyneta.github.io/design.html</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>

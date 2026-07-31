@@ -167,7 +167,7 @@
       line-height: 2; color: var(--white2); max-width: 500px;
     }
     .hero-lead .comment { color: var(--dim); font-style: italic; }
- 
+
     .project-count {
       font-family: var(--font-m); font-size: 0.52rem;
       letter-spacing: 0.25em; color: var(--dim); text-transform: uppercase;
