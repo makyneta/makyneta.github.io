@@ -207,3 +207,47 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   buildLabelCards('pf-grid-photo', photoData);
   buildLabelCards('pf-grid-design', designData);
 })();
+
+/* ── Hero terminal typing ── */
+(function(){
+  const win = document.querySelector('.term-window');
+  if (!win) return;
+  const lines = Array.prototype.slice.call(win.querySelectorAll('.term-line'));
+  if (!lines.length) return;
+
+  win.classList.add('term-anim');
+
+  const TYPING_MS = 45;
+
+  function typeCommand(line){
+    const cmd = line.querySelector('.term-cmd');
+    if (!cmd) return Promise.resolve();
+    const full = cmd.textContent;
+    cmd.textContent = '';
+    return new Promise(resolve => {
+      let n = 0;
+      const iv = setInterval(() => {
+        n++;
+        cmd.textContent = full.slice(0, n);
+        if (n >= full.length) {
+          clearInterval(iv);
+          setTimeout(resolve, 260);
+        }
+      }, TYPING_MS);
+    });
+  }
+
+  async function run(){
+    for (let i = 0; i < lines.length; i++){
+      const line = lines[i];
+      line.classList.add('in');
+      if (line.querySelector('.term-cmd')) {
+        await typeCommand(line);
+      } else {
+        await new Promise(r => setTimeout(r, 360));
+      }
+    }
+  }
+
+  setTimeout(run, 2100);
+})();
