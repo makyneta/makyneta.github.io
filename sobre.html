@@ -150,7 +150,7 @@
 </head>
 <body>
   <div id="loader-overlay"></div>
-  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(196,164,80,.15);border-top-color:#c8a450;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
+  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(0,255,136,.15);border-top-color:#00ff88;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
   <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div id="progress"></div>
   <div class="noise"></div>
@@ -161,14 +161,14 @@
     <section id="intro">
       <div class="intro-grid">
         <div class="intro-text">
-          <p class="intro-label">Programador fullstack &amp; criativo</p>
-          <h1>Tomás Mota</h1>
-          <div class="intro-brand">Makyneta</div>
+          <p class="intro-label">quem sou</p>
+          <h1>TOMÁS <span class="outline">MOTA</span></h1>
+          <div class="intro-brand">makyneta@studio — fullstack &amp; criativo<span class="brand-cur">▊</span></div>
           <p class="intro-desc">
             A construir experiências digitais e físicas em seis disciplinas —
             desde aplicações web e fotografia a eventos ao vivo e além.
           </p>
-          <p class="intro-location">Leiria, Portugal</p>
+          <p class="intro-location">leiria, portugal</p>
           <div class="intro-actions"> 
             <a href="/#portfolio-showcase" class="hero-btn hero-btn-primary">Ver Portfólio</a>
             <a href="/contacto" class="hero-btn hero-btn-secondary">Contactar</a>
@@ -189,58 +189,68 @@
     </section>
 
     <!-- ══ STATS ══════════════════════════════════════════════════════ -->
-    <div id="stats-strip" class="reveal">
-      <div class="stat-cell">
-        <span class="stat-num">2<sup>+</sup></span>
-        <span class="stat-label">Anos de atividade</span>
+    <section id="stats-strip" class="reveal">
+      <div class="strip-head">./makyneta --stats</div>
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <span class="stat-num">2<sup>+</sup></span>
+          <span class="stat-label">Anos de atividade</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-num">10<sup>+</sup></span>
+          <span class="stat-label">Clientes &amp; parceiros</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-num">6<sup>+</sup></span>
+          <span class="stat-label">Certificados</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-num">6<sup>×</sup></span>
+          <span class="stat-label">Disciplinas</span>
+        </div>
       </div>
-      <div class="stat-cell">
-        <span class="stat-num">10<sup>+</sup></span>
-        <span class="stat-label">Clientes &amp; parceiros</span>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-num">6<sup>+</sup></span>
-        <span class="stat-label">Certificados</span>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-num">6<sup>×</sup></span>
-        <span class="stat-label">Disciplinas</span>
-      </div>
-    </div>
+    </section>
 
     <!-- ══ SERVICES ═══════════════════════════════════════════════════ -->
     <section class="section-wrap reveal">
       <div class="section-label"><span>Disciplinas</span></div>
+      <div class="sec-term">ls ~/disciplinas</div>
       <div class="services-grid">
         <div class="service-card">
+          <span class="serv-index">01</span>
           <i class="fa-solid fa-code"></i>
           <h3 class="serv-title">Desenvolvimento Web</h3>
           <p class="serv-desc">Websites fullstack, apps web e ferramentas digitais construídas de raiz</p>
         </div>
         <div class="service-card">
+          <span class="serv-index">02</span>
           <i class="fa-solid fa-camera"></i>
           <h3 class="serv-title">Fotografia</h3>
           <p class="serv-desc">Fotografia de eventos, desporto e retrato com edição profissional</p>
         </div>
         <div class="service-card">
-          <i class="fa-solid fa-lightbulb"></i>
-          <h3 class="serv-title">Eventos Ao Vivo</h3>
-          <p class="serv-desc">Engenharia de som, design de iluminação e apoio técnico backstage</p>
-        </div>
-        <div class="service-card">
-          <i class="fa-solid fa-server"></i>
-          <h3 class="serv-title">Suporte Informático</h3>
-          <p class="serv-desc">Configuração de infraestrutura, redes e assistência técnica no local</p>
-        </div>
-        <div class="service-card">
+          <span class="serv-index">03</span>
           <i class="fa-solid fa-pen-nib"></i>
           <h3 class="serv-title">Design Gráfico</h3>
           <p class="serv-desc">Identidade visual, design print e digital para marcas e eventos</p>
         </div>
         <div class="service-card">
-          <i class="fa-solid fa-"></i>
-          <h3 class="serv-title"></h3>
-          <p class="serv-desc"></p>
+          <span class="serv-index">04</span>
+          <i class="fa-solid fa-server"></i>
+          <h3 class="serv-title">Suporte Informático</h3>
+          <p class="serv-desc">Configuração de infraestrutura, redes e assistência técnica no local</p>
+        </div>
+        <div class="service-card">
+          <span class="serv-index">05</span>
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3 class="serv-title">Eventos Ao Vivo</h3>
+          <p class="serv-desc">Engenharia de som, design de iluminação e apoio técnico backstage</p>
+        </div>
+        <div class="service-card">
+          <span class="serv-index">06</span>
+          <i class="fa-solid fa-film"></i>
+          <h3 class="serv-title">Produção de Vídeo</h3>
+          <p class="serv-desc">Captação, edição e pós-produção de vídeo para eventos e conteúdos digitais</p>
         </div>
       </div>
     </section>
@@ -248,6 +258,7 @@
     <!-- ══ EXPERIENCE ═════════════════════════════════════════════════ -->
     <section class="section-wrap reveal">
       <div class="section-label"><span>Experiência</span></div>
+      <div class="sec-term">git log --oneline</div>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-left">
@@ -269,6 +280,7 @@
     <!-- ══ CLIENTS ════════════════════════════════════════════════════ -->
     <section class="section-wrap reveal">
       <div class="section-label"><span>Clientes &amp; Colaborações</span></div>
+      <div class="sec-term">cat clientes.txt</div>
       <div class="clients-compact">
         <div class="cc-row">
           <img src="assets/images/clients/partido-socialista.webp" alt="Partido Socialista" class="cc-logo"/>
@@ -331,25 +343,48 @@
     <!-- ══ TECH ═══════════════════════════════════════════════════════ -->
     <section class="section-wrap reveal">
       <div class="section-label"><span>Tecnologias de Programação</span></div>
-      <div class="tech-grid">
-        <div class="tech-card"><i class="devicon-html5-plain colored tech-icon"></i><span class="tech-name">HTML5</span></div>
-        <div class="tech-card"><i class="devicon-css3-plain colored tech-icon"></i><span class="tech-name">CSS3</span></div>
-        <div class="tech-card"><i class="devicon-javascript-plain colored tech-icon"></i><span class="tech-name">JavaScript</span></div>
-        <div class="tech-card"><i class="devicon-typescript-plain colored tech-icon"></i><span class="tech-name">TypeScript</span></div>
-        <div class="tech-card"><i class="devicon-python-plain colored tech-icon"></i><span class="tech-name">Python</span></div>
-        <div class="tech-card"><i class="devicon-react-original colored tech-icon"></i><span class="tech-name">React</span></div>
-        <div class="tech-card"><i class="devicon-php-plain colored tech-icon"></i><span class="tech-name">PHP</span></div>
-        <div class="tech-card"><i class="devicon-mysql-plain colored tech-icon"></i><span class="tech-name">MySQL</span></div>
-        <div class="tech-card"><i class="devicon-postgresql-plain colored tech-icon"></i><span class="tech-name">PLpgSQL</span></div>
-        <div class="tech-card"><i class="devicon-git-plain colored tech-icon"></i><span class="tech-name">Git</span></div>
-        <div class="tech-card"><i class="devicon-github-plain colored tech-icon"></i><span class="tech-name">GitHub</span></div>
-        <div class="tech-card"><i class="devicon-vscode-plain colored tech-icon"></i><span class="tech-name">VS Code</span></div>
+      <div class="sec-term">ls -l ~/tecnologias</div>
+      <div class="tech-term">
+        <div class="term-bar">
+          <span class="t-dot t-dot-g"></span>
+          <span class="t-dot"></span>
+          <span class="t-dot"></span>
+          <span class="term-title">tomas@makyneta: ~/tecnologias</span>
+        </div>
+        <div class="term-body">
+          <div class="tech-group">
+            <p class="tg-head">frontend</p>
+            <div class="tg-row"><i class="devicon-html5-plain colored tg-icon"></i><span class="tg-name">HTML5</span></div>
+            <div class="tg-row"><i class="devicon-css3-plain colored tg-icon"></i><span class="tg-name">CSS3</span></div>
+            <div class="tg-row"><i class="devicon-javascript-plain colored tg-icon"></i><span class="tg-name">JavaScript</span></div>
+            <div class="tg-row"><i class="devicon-typescript-plain colored tg-icon"></i><span class="tg-name">TypeScript</span></div>
+            <div class="tg-row"><i class="devicon-react-original colored tg-icon"></i><span class="tg-name">React</span></div>
+          </div>
+          <div class="tech-group">
+            <p class="tg-head">backend</p>
+            <div class="tg-row"><i class="devicon-python-plain colored tg-icon"></i><span class="tg-name">Python</span></div>
+            <div class="tg-row"><i class="devicon-php-plain colored tg-icon"></i><span class="tg-name">PHP</span></div>
+          </div>
+          <div class="tech-group">
+            <p class="tg-head">base de dados</p>
+            <div class="tg-row"><i class="devicon-mysql-plain colored tg-icon"></i><span class="tg-name">MySQL</span></div>
+            <div class="tg-row"><i class="devicon-postgresql-plain colored tg-icon"></i><span class="tg-name">PLpgSQL</span></div>
+          </div>
+          <div class="tech-group">
+            <p class="tg-head">ferramentas</p>
+            <div class="tg-row"><i class="devicon-git-plain colored tg-icon"></i><span class="tg-name">Git</span></div>
+            <div class="tg-row"><i class="devicon-github-plain colored tg-icon"></i><span class="tg-name">GitHub</span></div>
+            <div class="tg-row"><i class="devicon-vscode-plain colored tg-icon"></i><span class="tg-name">VS Code</span></div>
+          </div>
+          <div class="term-status"><span class="ts-dot"></span>12 packages installed <span class="ts-cursor">▊</span></div>
+        </div>
       </div>
     </section>
  
     <!-- ══ CERTIFICATES ═══════════════════════════════════════════════ -->
     <section class="section-wrap reveal">
       <div class="section-label"><span>Certificados</span></div>
+      <div class="sec-term">cat certificados.txt</div>
       <div class="certs-list">
         <div class="cert-row">
           <div class="cert-year">26</div>
@@ -397,6 +432,7 @@
     <!-- ══ EDUCATION ══════════════════════════════════════════════════ -->
     <section id="education" class="section-wrap reveal">
       <div class="section-label"><span>Educação</span></div>
+      <div class="sec-term">cat education.md</div>
       <div class="edu-block">
         <div>
           <span class="edu-number">01</span>
