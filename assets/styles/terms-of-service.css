@@ -22,7 +22,7 @@ body {
   font-family: var(--font-mono);
   overflow-x: hidden; -webkit-font-smoothing: antialiased;
 }
-::selection { background: var(--accent); color: #000; }
+::selection { background: #00ff88; color: #000; }
 
 .noise {
   position: fixed; inset: 0; pointer-events: none; z-index: 500; opacity: 0.03;

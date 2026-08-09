@@ -33,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection { background: var(--gold); color: #000; }
+::selection { background: #00ff88; color: #000; }
 .gold { color: var(--gold); }
 
 #header { position: relative; z-index: 100; }

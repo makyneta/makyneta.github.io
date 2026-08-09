@@ -19,20 +19,34 @@
     return false;
   }
 
-  // Cria o banner
+  // Cria o banner — terminal window
   function createBanner() {
     const banner = document.createElement('div');
     banner.id = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Consentimento de cookies');
     banner.innerHTML = `
-      <div class="cookie-content">
-        <div class="cookie-text">
-          <p><strong>🍪 Consentimento de Cookies</strong></p>
-          <p>Utilizamos cookies para melhorar a tua experi\u00eancia e analisar o desempenho do site. Ao aceitares, concordas com o uso de cookies.</p>
-        </div>
-        <div class="cookie-buttons">
-          <button id="cookie-reject" class="cookie-btn reject">Recusar</button>
-          <button id="cookie-accept" class="cookie-btn accept">Aceitar</button>
-        </div>
+      <div class="ck-bar">
+        <span class="ck-dot r"></span>
+        <span class="ck-dot y"></span>
+        <span class="ck-dot g"></span>
+        <span class="ck-title"><span class="ck-prompt">makyneta@</span>consent — cookies</span>
+      </div>
+      <div class="ck-body">
+        <div class="ck-line"><span class="ck-prompt">$</span><span class="ck-cmd">cat ~/.config/makyneta/cookies.conf</span></div>
+        <div class="ck-comment"># config: consentimento de cookies</div>
+        <p class="ck-text">
+          Este site utiliza cookies para melhorar a tua experi\u00eancia e analisar o desempenho.
+          <span class="hl">Os cookies essenciais est\u00e3o sempre ativos;</span> os restantes apenas com a tua autoriza\u00e7\u00e3o.
+        </p>
+        <a class="ck-link" href="legal/cookies-policy">&#8594; ver pol\u00edtica de cookies</a>
+      </div>
+      <div class="ck-status" id="cookie-status">
+        <span class="dot"></span> estado: a aguardar decis\u00e3o
+      </div>
+      <div class="ck-actions">
+        <button id="cookie-reject" class="ck-btn reject">recusar</button>
+        <button id="cookie-accept" class="ck-btn accept">aceitar</button>
       </div>
     `;
     document.body.appendChild(banner);
@@ -40,19 +54,31 @@
     // Event listeners
     document.getElementById('cookie-accept').addEventListener('click', acceptCookies);
     document.getElementById('cookie-reject').addEventListener('click', rejectCookies);
+    document.getElementById('cookie-accept').focus();
+  }
+
+  // Regista a decisão do utilizador
+  function decide(accepted) {
+    setCookie(COOKIE_NAME, accepted ? 'true' : 'false', COOKIE_EXPIRY);
+
+    const status = document.getElementById('cookie-status');
+    if (status) {
+      status.classList.add('saved');
+      status.innerHTML = '<span class="dot"></span> estado: consentimento guardado';
+    }
+
+    if (accepted) loadGoogleAnalytics();
+    setTimeout(removeBanner, 700);
   }
 
   // Aceita cookies e inicia Google Analytics
   function acceptCookies() {
-    setCookie(COOKIE_NAME, 'true', COOKIE_EXPIRY);
-    removeBanner();
-    loadGoogleAnalytics();
+    decide(true);
   }
 
   // Rejeita cookies
   function rejectCookies() {
-    setCookie(COOKIE_NAME, 'false', COOKIE_EXPIRY);
-    removeBanner();
+    decide(false);
   }
 
   // Define cookie com configuração melhorada

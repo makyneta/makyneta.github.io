@@ -26,7 +26,7 @@
       font-family: var(--font-sc);
       overflow-x: hidden; -webkit-font-smoothing: antialiased;
     }
-    ::selection { background: var(--gold); color: #000; }
+    ::selection { background: #00ff88; color: #000; }
  
     /* NOISE GRAIN */
     body::after {

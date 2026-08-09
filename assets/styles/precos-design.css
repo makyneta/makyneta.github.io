@@ -27,7 +27,7 @@ body {
   font-family: var(--fm);
   overflow-x: hidden; -webkit-font-smoothing: antialiased;
 }
-::selection { background: var(--gold); color: #000; }
+::selection { background: #00ff88; color: #000; }
 
 /* ── NOISE ── */
 body::after {

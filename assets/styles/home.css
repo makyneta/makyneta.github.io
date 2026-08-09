@@ -34,7 +34,7 @@
       font-family: var(--fm);
       overflow-x: hidden; -webkit-font-smoothing: antialiased;
     }
-    ::selection { background: var(--gold); color: #000; }
+    ::selection { background: var(--grn); color: #000; }
  
     /* ── NOISE ── */
     .noise {

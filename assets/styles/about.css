@@ -30,7 +30,7 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    ::selection { background: var(--gold); color: var(--black); }
+    ::selection { background: var(--green); color: var(--black); }
  
     .noise {
       position: fixed; inset: 0; pointer-events: none; z-index: 900; opacity: 0.04;
