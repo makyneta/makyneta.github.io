@@ -128,6 +128,8 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 /* ── Portfolio Showcase ── */
 (function(){
   const EXT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+  const INFO_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`;
+  const VIEW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`;
 
   const devData = [
     { title:"Nicholas Moraes", desc:"", tags:["HTML","CSS","JS"],
@@ -145,7 +147,8 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const photoData = [
     { title:"Nacional de Clubes ao Ar Livre", cat:"Sport",
-      img:"assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp" },
+      img:"assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp",
+      info:"/info/photo/fpa-nc26" },
 
     { title:"50th Anniversary of the Constitution", cat:"Event",
       img:"assets/images/projects/photo/50th-anniversary-constitution.webp" },
@@ -167,9 +170,14 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const devGrid = document.getElementById('pf-grid-dev');
   if (devGrid) {
-    devData.forEach(p => {
+    devData.forEach((p, i) => {
+      const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
       devGrid.insertAdjacentHTML('beforeend', `
         <div class="pf-card-dev">
+          <div class="pf-dev-filepath">
+            <span class="pfp-path">~/projetos/</span><span class="pfp-file">${slug}.html</span>
+            <span class="pfp-num">0${i + 1}</span>
+          </div>
           <div class="pf-dev-img">
             <img src="${p.img}" alt="${p.title}" loading="lazy"/>
           </div>
@@ -178,7 +186,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
             <p class="pf-dev-desc">${p.desc}</p>
             <div class="pf-dev-tags">${p.tags.map(t => `<span class="pf-dev-tag">${t}</span>`).join('')}</div>
             <div class="pf-dev-actions">
-              ${p.info ? `<a href="${p.info}"><i class="fa-solid fa-circle-info"></i> Info</a>` : ''}
+              ${p.info ? `<a href="${p.info}">${INFO_ICON} Info</a>` : ''}
               <a href="${p.demo}" target="_blank" rel="noopener">${EXT} Visitar</a>
             </div>
           </div>
@@ -187,25 +195,90 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     });
   }
 
-  function buildLabelCards(gridId, data) {
+  function buildLabelCards(gridId, data, viewLink) {
     const grid = document.getElementById(gridId);
     if (!grid) return;
-    data.forEach(p => {
+    data.forEach((p, i) => {
+      const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const full = p.full || p.img.replace(/thumb\//, 'preview/');
+      const ver = viewLink
+        ? `<a href="${viewLink}" class="pfd-btn pfd-view">${VIEW_ICON} Ver</a>`
+        : `<button type="button" class="pfd-btn pfd-view" data-src="${full}" data-title="${p.title}">${VIEW_ICON} Ver</button>`;
       grid.insertAdjacentHTML('beforeend', `
         <div class="pf-card-design">
+          <div class="pf-dev-filepath">
+            <span class="pfp-path">~/galeria/</span><span class="pfp-file">${slug}.webp</span>
+            <span class="pfp-num">0${i + 1}</span>
+          </div>
           <div class="pf-design-img">
             <img src="${p.img}" alt="${p.title}" loading="lazy"/>
           </div>
           <div class="pf-design-label">
             <span class="pf-design-cat">${p.cat}</span>
             <h3 class="pf-design-title">${p.title}</h3>
+            <div class="pf-design-actions">
+              ${p.info ? `<a href="${p.info}" class="pfd-btn pfd-info">${INFO_ICON} Info</a>` : ''}
+              ${ver}
+            </div>
           </div>
         </div>
       `);
     });
   }
-  buildLabelCards('pf-grid-photo', photoData);
+  buildLabelCards('pf-grid-photo', photoData, 'photo.html');
   buildLabelCards('pf-grid-design', designData);
+
+  /* ── Lightbox (popup de imagem) ── */
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.setAttribute('aria-hidden', 'true');
+  lb.innerHTML = `
+    <button type="button" class="lb-close" aria-label="Fechar">&times;</button>
+    <figure class="lb-fig">
+      <img id="lb-img" src="" alt=""/>
+      <figcaption class="lb-cap"></figcaption>
+    </figure>`;
+  document.body.appendChild(lb);
+
+  const lbImg = lb.querySelector('#lb-img');
+  const lbCap = lb.querySelector('.lb-cap');
+
+  function lbOpen(src, title) {
+    lbImg.src = src;
+    lbImg.alt = title;
+    lbCap.textContent = title;
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    history.pushState({ lightbox: src }, '', '#ver=' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+  }
+  function lbClose() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (location.hash.startsWith('#ver=')) history.back();
+  }
+  function lbCloseNoBack() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', e => {
+    const view = e.target.closest('.pfd-view');
+    if (view && view.tagName === 'BUTTON') {
+      e.preventDefault();
+      lbOpen(view.dataset.src, view.dataset.title);
+      return;
+    }
+    if (e.target === lb || e.target.classList.contains('lb-close')) lbClose();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) lbClose();
+  });
+  window.addEventListener('popstate', () => {
+    if (lb.classList.contains('open')) lbCloseNoBack();
+  });
 })();
 
 /* ── Hero terminal typing ── */
