@@ -34,35 +34,11 @@
     <a href="/contacto" class="nav-link">Contacto</a>
   </nav>
 
-  <button id="mobile-menu-toggle-btn" aria-label="Menu">
+  <button id="mobile-menu-toggle-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
   </button>
-
-  <div id="mobile-menu-backdrop"></div>
-
-  <nav id="mobile-sidebar-nav">
-    <div class="mobile-brand">MAKYNETA</div>
-
-    <ul id="main-nav-list">
-      <li><a href="/" class="mobile-nav-link">Início</a></li>
-      <li><a href="/sobre" class="mobile-nav-link">Sobre</a></li>
-
-      <li><span class="mobile-section-label">Portfolio</span></li>
-      <li><a href="/dev" class="mobile-sub-link">Desenvolvimento</a></li>
-      <li><a href="/design" class="mobile-sub-link">Design</a></li>
-      <li><a href="/photo" class="mobile-sub-link">Fotografia</a></li>
-      <li><a href="/video" class="mobile-sub-link">Vídeo</a></li>
-      <li><a href="/feedback" class="mobile-sub-link">Feedback</a></li>
-
-      <li><span class="mobile-section-label">Preços</span></li>
-      <li><a href="/precos/dev" class="mobile-sub-link">Desenvolvimento</a></li>
-      <li><a href="/precos/design" class="mobile-sub-link">Design</a></li>
-
-      <li><a href="/contacto" class="mobile-nav-link">Contacto</a></li>
-    </ul>
-  </nav>
 
   <script>
     (function(){
@@ -77,9 +53,41 @@
       if (path.match(/^\/precos/)) {
         if (btns[1]) btns[1].classList.add('active');
       }
-      document.querySelectorAll('#mobile-sidebar-nav a').forEach(function(el){
+      document.querySelectorAll('#mobile-menu .mm-link').forEach(function(el){
         if (el.getAttribute('href') === path) el.classList.add('active');
       });
     })();
   </script>
 </header>
+
+<div id="mobile-menu" aria-hidden="true">
+  <div class="mm-window">
+    <div class="mm-titlebar">
+      <span class="mm-dot r"></span>
+      <span class="mm-dot y"></span>
+      <span class="mm-dot g"></span>
+      <span class="mm-title">makyneta@studio — menu</span>
+    </div>
+    <div class="mm-body">
+      <div class="mm-line"><span class="mm-prompt">$</span><span class="mm-cmd">./makyneta --menu</span></div>
+      <ul class="mm-list">
+        <li><a href="/" class="mm-link"><span class="mm-path">~/</span><span class="mm-name">Início</span></a></li>
+        <li><a href="/sobre" class="mm-link"><span class="mm-path">~/</span><span class="mm-name">Sobre</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>portfolio</span></li>
+        <li><a href="/dev" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Desenvolvimento</span></a></li>
+        <li><a href="/design" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Design</span></a></li>
+        <li><a href="/photo" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Fotografia</span></a></li>
+        <li><a href="/video" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Vídeo</span></a></li>
+        <li><a href="/feedback" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Feedback</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>preços</span></li>
+        <li><a href="/precos/dev" class="mm-link"><span class="mm-path">~/precos/</span><span class="mm-name">Desenvolvimento</span></a></li>
+        <li><a href="/precos/design" class="mm-link"><span class="mm-path">~/precos/</span><span class="mm-name">Design</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>contacto</span></li>
+        <li><a href="/contacto" class="mm-link"><span class="mm-path">~/</span><span class="mm-name">Contacto</span></a></li>
+      </ul>
+      <div class="mm-status">
+        <span class="mm-prompt">$</span><span class="mm-cmd">exit — ESC fecha</span><span class="mm-cursor"></span>
+      </div>
+    </div>
+  </div>
+</div>

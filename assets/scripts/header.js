@@ -1,35 +1,40 @@
-document.addEventListener('click', function (e) {
+(function () {
   const btn = document.getElementById('mobile-menu-toggle-btn');
-  const sidebar = document.getElementById('mobile-sidebar-nav');
-  const backdrop = document.getElementById('mobile-menu-backdrop');
-  if (!btn || !sidebar || !backdrop) return;
+  const menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
 
   const close = () => {
     btn.classList.remove('active');
-    sidebar.classList.remove('active');
-    backdrop.classList.remove('active');
+    menu.classList.remove('active');
+    menu.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('menu-open');
+    btn.setAttribute('aria-expanded', 'false');
   };
 
   const open = () => {
     btn.classList.add('active');
-    sidebar.classList.add('active');
-    backdrop.classList.add('active');
+    menu.classList.add('active');
+    menu.setAttribute('aria-hidden', 'false');
     document.body.classList.add('menu-open');
+    btn.setAttribute('aria-expanded', 'true');
   };
 
-  // Toggle on hamburger click
-  if (e.target.closest('#mobile-menu-toggle-btn')) {
-    return sidebar.classList.contains('active') ? close() : open();
-  }
+  const isOpen = () => menu.classList.contains('active');
 
-  // Close on backdrop click
-  if (e.target.closest('#mobile-menu-backdrop')) {
-    return close();
-  }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('#mobile-menu-toggle-btn')) {
+      isOpen() ? close() : open();
+      return;
+    }
+    if (e.target.closest('#mobile-menu a')) return close();
+    if (e.target === menu) return close();
+  });
 
-  // Close on link click
-  if (e.target.closest('#mobile-sidebar-nav a')) {
-    close();
-  }
-});
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen()) close();
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768 && isOpen()) close();
+  });
+})();
