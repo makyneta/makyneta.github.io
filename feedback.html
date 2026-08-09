@@ -150,7 +150,7 @@
 </head>
 <body>
   <div id="loader-overlay"></div>
-  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(196,164,80,.15);border-top-color:#c8a450;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
+  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(0,255,136,.15);border-top-color:#00ff88;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
   <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div id="bar"></div>
   <div id="header"></div>
@@ -159,68 +159,83 @@
 
     <!-- ══ HERO ══════════════════════════════════════════════════════ -->
     <section id="feedback-hero">
-      <div class="hero-bg-word">CONFIANÇA</div>
-      <div class="page-eyebrow"><span>Feedback de Clientes</span></div>
-      <h1 class="hero-title">CLIENTES<br><span class="outline">FEEDBACK</span></h1>
-      <p class="hero-lead">
-        O que as pessoas e organizações com quem trabalhei têm a dizer
-        sobre a experiência — palavras honestas que me mantêm a avançar.
-      </p>
+      <div class="test-head">
+        <div class="test-head-text">
+          <span class="test-eye">feedback de clientes</span>
+          <h1 class="test-heading">
+            FEEDBACK<br>
+            <span class="outline">DE CLIENTES</span>
+          </h1>
+        </div>
+        <p class="test-sub">O que as pessoas e organizações com quem trabalhei têm a dizer — palavras honestas que me mantêm a avançar.</p>
+      </div>
     </section>
 
     <!-- ══ FEEDBACK GRID ═══════════════════════════════════════════ -->
     <section id="feedback-grid">
-      <div class="test-grid">
+      <div class="fb-grid">
 
-        <div class="test-card">
-          <div class="test-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <div class="fb-card">
+          <div class="fb-card-head">
+            <span class="fb-id">01</span>
+            <span class="fb-file">~/clients/nicholas-moraes.txt</span>
           </div>
-          <p class="test-quote">"Tomás fez um trabalho muito bom, bonito, rápida entrega e design moderno no site.
+          <div class="fb-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="fb-quote">"Tomás fez um trabalho muito bom, bonito, rápida entrega e design moderno no site.
           Colocou todas as informações corretas e deixou tudo muito bem estruturado.
           Gostei demais!"</p>
-          <div class="test-author">
-            <img class="test-avatar" src="assets/images/feedback/nicholas-moraes.webp" alt="Avatar do Cliente">
-            <div class="test-info">
-              <span class="test-name">Nicholas Moraes</span>
-              <span class="test-role">Influenciador & Músico</span>
+          <div class="fb-author">
+            <img class="fb-avatar" src="assets/images/clients/nicholas-moraes.webp" alt="Avatar do Cliente">
+            <div class="fb-meta">
+              <span class="fb-name">Nicholas Moraes</span>
+              <span class="fb-role">Influenciador & Músico</span>
             </div>
-            <span class="test-cat">Website</span>
+            <span class="fb-cat">website</span>
           </div>
         </div>
 
-        <div class="test-card">
-          <div class="test-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <div class="fb-card">
+          <div class="fb-card-head">
+            <span class="fb-id">02</span>
+            <span class="fb-file">~/clients/nicholas-simoes.txt</span>
           </div>
-          <p class="test-quote">"Cara, tomás, ta incrivel!!! Já imaginava que você fosse um puta profissional pelo que você tinha
+          <div class="fb-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="fb-quote">"Cara, tomás, ta incrivel!!! Já imaginava que você fosse um puta profissional pelo que você tinha
             mostrado do seu site e do seu trabalho. Mas nao tenho palavras pra te agradecer. Muito, muito obrigado pelo carinho e
             muito obrigado pela oportunidade. Isso que você fez por mim ja vai ser um diferencial e tanto para meus trabalhos
             futuros! Espero que futuramente tenhamos a oportunidade de colaborar novamente, e dessa vez eu possa retribuir esse
             trabalho incrivel que você fez pra mim."</p>
-          <div class="test-author">
-            <img class="test-avatar" src="assets/images/feedback/nicholas-simoes.webp" alt="Avatar do Cliente">
-            <div class="test-info">
-              <span class="test-name">Nicholas Simões</span>
-              <span class="test-role">Fotógrafo</span>
+          <div class="fb-author">
+            <img class="fb-avatar" src="assets/images/clients/nicholas-simoes.webp" alt="Avatar do Cliente">
+            <div class="fb-meta">
+              <span class="fb-name">Nicholas Simões</span>
+              <span class="fb-role">Fotógrafo</span>
             </div>
-            <span class="test-cat">Website</span>
+            <span class="fb-cat">website</span>
           </div>
         </div>
 
-        <div class="test-card">
-          <div class="test-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <div class="fb-card">
+          <div class="fb-card-head">
+            <span class="fb-id">03</span>
+            <span class="fb-file">~/clients/gabriel-sousa.txt</span>
           </div>
-          <p class="test-quote">"Tomás eu amei o website ele estar no Instagram como link e só estou esperando a conta
+          <div class="fb-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="fb-quote">"Tomás eu amei o website ele estar no Instagram como link e só estou esperando a conta
           crescer pra começar a fazer o que eu desejo e eu agradeço por você ter feito esse website."</p>
-          <div class="test-author">
-            <img class="test-avatar" src="assets/images/feedback/gabriel-sousa.webp" alt="Avatar do Cliente">
-            <div class="test-info">
-              <span class="test-name">Gabriel Sousa</span>
-              <span class="test-role">Fotógrafo</span>
+          <div class="fb-author">
+            <img class="fb-avatar" src="assets/images/clients/gabriel-sousa.webp" alt="Avatar do Cliente">
+            <div class="fb-meta">
+              <span class="fb-name">Gabriel Sousa</span>
+              <span class="fb-role">Fotógrafo</span>
             </div>
-            <span class="test-cat">Website</span>
+            <span class="fb-cat">website</span>
           </div>
         </div>
 
