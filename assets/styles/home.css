@@ -843,6 +843,7 @@
       .test-card { flex: 0 0 100%; }
     }
     @media (max-width: 768px) {
+      .term-line-status { display: none; }
       .sys-grid { grid-template-columns: 1fr 1fr; }
       #portfolio-showcase, #disciplines, #testimonials, #cta-strip { padding: 4rem 2rem; }
       .hero-text { padding: 1rem 1.5rem 5rem; }
