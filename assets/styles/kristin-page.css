@@ -3,10 +3,14 @@
   --bg2:     #ffffff;
   --bg3:     #f0efe9;
   --accent:  #31d094;
+  --primary: #0052cc;
+  --dark:    #111111;
   --fg:      #111111;
   --dim:     #6b6b6b;
   --dim2:    #999999;
   --border:  rgba(17,17,17,0.08);
+  --shadow:  0 6px 24px rgba(17,17,17,0.06);
+  --safety-top: 60px;
   --font-display: 'Bebas Neue', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
   --font-mono:    'Fira Code', monospace;
@@ -106,7 +110,7 @@ code { display: block; font-size: 1.3rem; color: var(--accent); margin: 15px 0; 
 
 /* RESPONSIVIDADE MOBILE */
 @media (max-width: 900px) {
-    :root { --safety-top: 30px; }
+    :root { --safety-top: 56px; }
     .grid-main { grid-template-columns: 1fr; }
     .sidebar { position: relative; top: 0; display: flex; gap: 15px; padding: 12px; }
     .v-slider { width: 200px; height: 320px; margin-bottom: 0; flex-shrink: 0; }
