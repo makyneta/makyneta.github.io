@@ -6,7 +6,7 @@
     jsonUrl:    '/assets/data/photo/nacional-clubes-2026.json',
     imgBase:    '/assets/images/projects/photo/2026/nacional-de-clubes-atletismo-ar-livre-coimbra',
     project:    'Nacional de Clubes Ar Livre 2025/26',
-    phone:      '351933338431',
+    email:      'makyneta@tutamail.com',
     batchSize:  30,            // images loaded per batch
     selectAll:  false,         // start in selection mode
   };
@@ -56,10 +56,10 @@
 
     // Action bar buttons
     document.querySelectorAll('[data-action="watermark"]').forEach(btn => {
-      btn.addEventListener('click', (e) => { e.preventDefault(); sendWhatsApp('watermark'); });
+      btn.addEventListener('click', (e) => { e.preventDefault(); sendEmail('watermark'); });
     });
     document.querySelectorAll('[data-action="buy"]').forEach(btn => {
-      btn.addEventListener('click', (e) => { e.preventDefault(); sendWhatsApp('buy'); });
+      btn.addEventListener('click', (e) => { e.preventDefault(); sendEmail('buy'); });
     });
   }
 
@@ -199,8 +199,8 @@
     }
   }
 
-  /* ══ WhatsApp ════════════════════════════════════════════ */
-  function sendWhatsApp(action) {
+  /* ══ Email ═══════════════════════════════════════════════ */
+  function sendEmail(action) {
     if (selected.size === 0) {
       showToast('Select at least one photo');
       return;
@@ -212,6 +212,8 @@
     const isWatermark = action === 'watermark';
     const selectedCount = selected.size;
     const totalPrice = selectedCount * 2;
+
+    const subject = 'Photos from "' + CONFIG.project + '"';
 
     const msgEN = [
       'Hi! I\'m interested in the following photos from "' + CONFIG.project + '":',
@@ -233,11 +235,11 @@
       'Obrigado!'
     ].join('\n');
 
-    const fullMsg = msgEN + '\n\n---\n\n' + msgPT;
+    const body = msgEN + '\n\n---\n\n' + msgPT;
 
-    // WhatsApp link limit ~4096 chars; truncate if needed
-    let truncated = fullMsg;
-    if (fullMsg.length > 3800) {
+    // Mailto URLs have practical length limits; keep the body reasonable
+    let truncated = body;
+    if (body.length > 3800) {
       const header = [
         'Hi! I\'m interested in ' + selectedCount + ' photos from "' + CONFIG.project + '":',
         '',
@@ -245,11 +247,11 @@
         '',
         'Photo list:',
       ].join('\n');
-      truncated = header + '\n' + fileList.slice(0, 2500) + '\n\n... and ' + (fullMsg.length - 2500) + ' more characters';
+      truncated = header + '\n' + fileList.slice(0, 2500) + '\n\n... and ' + (body.length - 2500) + ' more characters';
     }
 
-    const url = 'https://wa.me/' + CONFIG.phone + '?text=' + encodeURIComponent(truncated);
-    window.open(url, '_blank');
+    const url = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(truncated);
+    window.location.href = url;
   }
 
   /* ══ Toast ═══════════════════════════════════════════════ */
