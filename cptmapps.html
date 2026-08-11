@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Makyneta Unipessoal, Lda."/>
+    <meta name="description" content="Descarrega as aplicações necessárias para o Curso Profissional Técnico de Multimédia — Photoshop, Illustrator, Premiere Pro, Blender e mais." />
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/styles/cptm-apps.css" />
+    <!-- Script -->
+    <script src="assets/scripts/cptm-apps.js" defer></script>
+    <script src="assets/scripts/cptm-media.js" defer></script>
+    <!-- Título_Favicon -->
+    <title>Software do Curso de Multimédia | Makyneta por Tomás Mota</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+<body>
+
+  <div class="term">
+    <div class="smpte" aria-hidden="true"></div>
+
+    <div class="term-bar">
+      <span class="t-dot t-dot-g"></span>
+      <span class="t-dot"></span>
+      <span class="t-dot"></span>
+      <span class="term-title">tomas@makyneta: ~/software</span>
+    </div>
+
+    <div class="term-body">
+      <div class="head-row">
+      <header>
+        <p class="badge">Curso Profissional · Técnico de Multimédia</p>
+        <h1>Software <span class="outline">do Curso</span></h1>
+        <p class="sub">Descarrega as aplicações necessárias para o curso</p>
+      </header>
+
+      <div class="cam-wall" aria-hidden="true">
+        <canvas id="camStatic" class="cam-static" width="800" height="450"></canvas>
+        <div class="cam s1 active">
+          <video class="cam-video" src="assets/videos/cctv/cam1.mp4" muted loop playsinline preload="auto"></video>
+          <span class="cam-reticle"></span>
+          <span class="cam-label">CAM 01 · RECEÇÃO</span>
+          <span class="cam-rec">REC</span>
+          <span class="cam-tc">--:--:--</span>
+        </div>
+        <div class="cam s2">
+          <video class="cam-video" src="assets/videos/cctv/cam2.mp4" muted loop playsinline preload="auto"></video>
+          <span class="cam-reticle"></span>
+          <span class="cam-label">CAM 02 · ESTAÇÃO</span>
+          <span class="cam-rec">REC</span>
+          <span class="cam-tc">--:--:--</span>
+        </div>
+        <div class="cam s3">
+          <video class="cam-video" src="assets/videos/cctv/cam3.mp4" muted loop playsinline preload="auto"></video>
+          <span class="cam-reticle"></span>
+          <span class="cam-label">CAM 03 · EXTERIOR</span>
+          <span class="cam-rec">REC</span>
+          <span class="cam-tc">--:--:--</span>
+        </div>
+        <div class="cam s4">
+          <video class="cam-video" src="assets/videos/cctv/cam4.mp4" muted loop playsinline preload="auto"></video>
+          <span class="cam-reticle"></span>
+          <span class="cam-label">CAM 04 · VIA RÁPIDA</span>
+          <span class="cam-rec">REC</span>
+          <span class="cam-tc">--:--:--</span>
+        </div>
+        <span class="cam-index">01/04</span>
+      </div>
+      </div>
+
+      <div class="search-wrap">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="search" placeholder="Procurar aplicação..." autocomplete="off" />
+        </div>
+      </div>
+
+      <main>
+        <p class="count" id="count"></p>
+
+        <div class="app-list" id="appList">
+
+          <!-- Adobe Photoshop -->
+          <a class="app-card" href="/photoshop" target="_blank" rel="noopener" data-name="photoshop edição imagem editar image editing">
+            <div class="app-icon">
+              <img src="assets/images/apps/photoshop.svg" alt="Adobe Photoshop" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Adobe Photoshop</span>
+              <span class="app-desc">Edição e composição de imagem</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Adobe Illustrator -->
+          <a class="app-card" href="/illustrator" target="_blank" rel="noopener" data-name="illustrator vetor ilustração vector illustration">
+            <div class="app-icon">
+              <img src="assets/images/apps/illustrator.svg" alt="Adobe Illustrator" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Adobe Illustrator</span>
+              <span class="app-desc">Ilustração vetorial e tipografia</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Adobe Lightroom -->
+          <a class="app-card" href="/lightroom" target="_blank" rel="noopener" data-name="lightroom fotografia edição photography editing">
+            <div class="app-icon">
+              <img src="assets/images/apps/lightroom.svg" alt="Adobe Lightroom" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Adobe Lightroom</span>
+              <span class="app-desc">Edição e organização de fotografia</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Adobe Premiere Pro -->
+          <a class="app-card" href="/premiere" target="_blank" rel="noopener" data-name="premiere vídeo edição video editing">
+            <div class="app-icon">
+              <img src="assets/images/apps/premiere.svg" alt="Adobe Premiere Pro" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Adobe Premiere Pro</span>
+              <span class="app-desc">Edição de vídeo profissional</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Adobe After Effects -->
+          <a class="app-card" href="/aftereffects" target="_blank" rel="noopener" data-name="after effects motion graphics efeitos visuais visual">
+            <div class="app-icon">
+              <img src="assets/images/apps/aftereffects.svg" alt="Adobe After Effects" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Adobe After Effects</span>
+              <span class="app-desc">Motion graphics e efeitos visuais</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Adobe Animate -->
+          <a class="app-card" href="/animate" target="_blank" rel="noopener" data-name="animate animação 2d animation flash interativo">
+            <div class="app-icon">
+              <img src="assets/images/apps/animate.svg" alt="Adobe Animate" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Adobe Animate</span>
+              <span class="app-desc">Animação 2D e conteúdo interativo</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- 3ds Max -->
+          <a class="app-card" href="/3dsmax" target="_blank" rel="noopener" data-name="3ds max autodesk 3d modelação render renderização">
+            <div class="app-icon" style="background:#1E3A5F;">
+              <img src="assets/images/apps/3dsmax.svg" alt="Autodesk 3ds Max" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">3ds Max</span>
+              <span class="app-desc">Modelação 3D, animação e renderização</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Blender -->
+          <a class="app-card" href="/blender" target="_blank" rel="noopener" data-name="blender 3d modelação modeling rendering renderização vfx open source">
+            <div class="app-icon" style="background:#16181C;">
+              <img src="assets/images/apps/blender.svg" alt="Blender" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Blender</span>
+              <span class="app-desc">3D open-source — modelação, renderização e VFX</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+          <!-- Audacity -->
+          <a class="app-card" href="/audacity" target="_blank" rel="noopener" data-name="audacity áudio gravação edição som audio recording editing">
+            <div class="app-icon">
+              <img src="assets/images/apps/audacity.svg" alt="Audacity" />
+            </div>
+            <div class="app-info">
+              <span class="app-name">Audacity</span>
+              <span class="app-desc">Gravação e edição de áudio gratuitas</span>
+            </div>
+            <span class="app-arrow">→</span>
+          </a>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+          Nenhuma aplicação encontrada para "<span id="searchTerm"></span>"
+        </div>
+      </main>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <span class="tick-label">SIGNAL</span>
+      <div class="ticker-track">
+        <div class="ticker-inner">
+          <span>FOTOGRAFIA ▸ VÍDEO ▸ MOTION GRAPHICS ▸ ÁUDIO ▸ ANIMAÇÃO 2D ▸ MODELAGEM 3D ▸ DESIGN ▸ PÓS-PRODUÇÃO ▸</span>
+          <span>FOTOGRAFIA ▸ VÍDEO ▸ MOTION GRAPHICS ▸ ÁUDIO ▸ ANIMAÇÃO 2D ▸ MODELAGEM 3D ▸ DESIGN ▸ PÓS-PRODUÇÃO ▸</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="term-footer">
+      <p>
+        Copyright &copy; <span id="year"></span> Makyneta Unipessoal, Lda.<br>
+        Todos os direitos reservados — software de terceiros sujeito às respetivas licenças.
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>
