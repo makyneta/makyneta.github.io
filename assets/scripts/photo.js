@@ -75,7 +75,7 @@
         cover:"/assets/images/projects/photo/penetras-estrelas-ao-sabado.webp",
         slug:"https://www.behance.net/gallery/232190989/Music-OP-Live-Performance-at-Estrelas-ao-Sabado", photoCount:83 },
 
-      { id:4, title:"Os Penetras @ RTP",
+      { id:4, title:"Os Penetras",
         category:"session", year:"2024", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/penetras.webp",
         slug:"https://www.behance.net/gallery/232210639/Music-OP-Photoshoot", photoCount:43 },
