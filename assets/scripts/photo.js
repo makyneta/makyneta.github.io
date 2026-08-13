@@ -3,27 +3,27 @@
         category:"sport", year:"2026", location:"Coimbra", desc:"",
         cover:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp",
         info:"/info/photo/fpa-nc26",
-        slug:"https://banlek.com/album/235f08-nacional-de-clubes-ao-ar-livre", photoCount:670 },
+        slug:"https://banlek.com/album/235f08", photoCount:670 },
 
       { id:19, title:"Sala de Espera by Libélula Teatro",
         category:"event", year:"2026", location:"Leiria", desc:"",
         cover:"/assets/images/projects/photo/IMG_1712.webp",
-        slug:"https://makyneta.pixieset.com/saladeespera", photoCount:132 },
+        slug:"hhttps://banlek.com/album/258ffd", photoCount:132 },
 
       { id:18, title:"50º Aniversário da Constituição da República Portuguesa",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/50th-anniversary-constitution.webp",
-        slug:"https://makyneta.pixieset.com/50thanniversaryoftheconstitutionoftheportugueserepublic", photoCount:127 },
+        slug:"https://banlek.com/album/258e41", photoCount:127 },
 
       { id:17, title:"XI Café com Livros",
         category:"event", year:"2026", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/IMG_0115.webp",
-        slug:"https://makyneta.pixieset.com/xicafecomlivros", photoCount:145 },
+        slug:"https://banlek.com/album/258e57", photoCount:145 },
 
       { id:16, title:"30º Fair Play Calazans",
         category:"sport", year:"2026", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/fair-play-calazans.webp",
-        slug:"https://makyneta.pixieset.com/fairplaycalazans", photoCount:1129 },
+        slug:"https://banlek.com/album/258e71", photoCount:1129 },
 
       { id:15, title:"ESEACD @ Futurália",
         category:"event", year:"2026", location:"Lisboa", desc:"",
@@ -43,12 +43,12 @@
       { id:11, title:"18 de Janeiro de 1934",
         category:"teather", year:"2026", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/IMG_0678.webp",
-        slug:"https://makyneta.pixieset.com/18janeiro1934", photoCount:247 },
+        slug:"https://banlek.com/album/258e65", photoCount:247 },
 
       { id:10, title:"Festa Final ACMarinhense",
         category:"sport", year:"2025", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/6cc3c7231760081.688f7cb2419b8.webp",
-        slug:"https://www.behance.net/gallery/231760081/festa-acmarinhense", photoCount:434 },
+        slug:"https://banlek.com/album/258ed6", photoCount:434 },
 
       { id:9, title:"SLMarinha VS UDBatalha",
         category:"sport", year:"2025", location:"Marinha Grande", desc:"",
@@ -58,17 +58,17 @@
       { id:8, title:"Treinos ACMarinhense U-13",
         category:"sport", year:"2025", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/5dccfd231756789.688f6d74b5b34.webp",
-        slug:"https://www.behance.net/gallery/231756789/Sport-ACM-U-13-Trainings", photoCount:280 },
+        slug:"https://banlek.com/album/258f6a", photoCount:280 },
 
       { id:7, title:"XIV Mediateca com Vida",
         category:"event", year:"2025", location:"Marinha Grande", desc:"",
         cover:"/assets/images/projects/photo/xiv-mediateca-com-vida.webp",
-        slug:"https://www.behance.net/gallery/227368587/Music-CDSS-XIV-Edition-Of-Mediateca-Com-Vida", photoCount:90 },
+        slug:"https://banlek.com/album/258fdb", photoCount:89 },
 
       { id:6, title:"ACMarinhense @ PombalCup",
         category:"sport", year:"2025", location:"Pombal", desc:"",
         cover:"/assets/images/projects/photo/pombalcup.webp",
-        slug:"https://www.behance.net/gallery/231754863/Sport-ACM-PombalCup", photoCount:90 },
+        slug:"https://banlek.com/album/258f1d", photoCount:288 },
 
       { id:5, title:"Os Penetras @ RTP",
         category:"event", year:"2024", location:"Lisboa", desc:"",
