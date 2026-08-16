@@ -6,22 +6,22 @@
 
     /* ── Projects data ── */
     const projects = [
-      { id:17, title:"Nicholas Moraes", type:"frontend",
+      { id:17, title:"Mayday", type:"frontend",
+        img:"/assets/images/projects/dev/mayday-grupo-v2.webp",
+        desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
+        demo:"https://makyneta.github.io/mayday",
+        info:"" },
+
+      { id:16, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
         desc:"Professional and minimalist website for influencer and musician, Nicholas Moraes.",
         demo:"https://makyneta.github.io/m0rwes",
         info:"/info/dev/m0rwes" },
 
-      { id:16, title:"Libélula Teatro", type:"frontend",
+      { id:15, title:"Libélula Teatro", type:"frontend",
         img:"/assets/images/projects/dev/libelula-teatro.webp",
         desc:"Professional and minimalist website for the theater company Libélula Teatro.",
         demo:"https://libelulateatro.lovable.app",
-        info:"" },
-
-      { id:15, title:"Mayday", type:"frontend",
-        img:"/assets/images/projects/dev/mayday-grupo-v2.webp",
-        desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
-        demo:"https://makyneta.github.io/mayday",
         info:"" },
 
       { id:14, title:"Mr. Devix", type:"frontend",
