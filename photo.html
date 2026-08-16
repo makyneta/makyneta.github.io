@@ -6,7 +6,6 @@
   <title>Fotografia | Makyneta by Tomás Mota</title>
   <meta name="description" content="Portfolio de fotografia de Tomás Mota. Eventos, desporto, retratos e fotografia documental em Leiria, Coimbra e todo o território nacional.">
   <link rel="canonical" href="https://makyneta.github.io/photo">
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Fotografia | Makyneta by Tomás Mota">
@@ -15,13 +14,11 @@
   <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
   <meta property="og:site_name" content="Makyneta">
   <meta property="og:locale" content="pt_PT">
-
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fotografia | Makyneta by Tomás Mota">
   <meta name="twitter:description" content="Portfolio de fotografia de Tomás Mota. Eventos, desporto, retratos e fotografia documental em Leiria, Coimbra e todo o território nacional.">
   <meta name="twitter:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
-
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
 [
@@ -84,41 +81,11 @@
       "@type": "OfferCatalog",
       "name": "Serviços",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desenvolvimento Web"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Fotografia"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Design Gráfico"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Produção de Vídeo"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Suporte Informático"
-          }
-        }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento Web" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotografia" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design Gráfico" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Produção de Vídeo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Suporte Informático" } }
       ]
     },
     "address": {
@@ -129,17 +96,17 @@
   }
 ]
 </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Makyneta Unipessoal, Lda."/>
     <!-- Styles -->
     <link rel="stylesheet" href="assets/styles/photo.css">
     <link rel="stylesheet" href="assets/styles/geral.css">
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="assets/scripts/photo.js" defer></script>
+    <script defer src="assets/scripts/photo.js"></script>
     <script src="assets/scripts/script.js" defer></script>
     <!-- Title -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -147,44 +114,66 @@
 <body>
   <div id="bar"></div>
   <div id="header"></div>
- 
+
   <main>
- 
+
     <!-- HERO -->
     <section id="hero">
       <div class="hero-bg">
         <img id="hero-bg" src="assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp" alt=""/>
         <div class="hero-overlay"></div>
       </div>
+
+      <div class="h-exif" aria-hidden="true">RAW&nbsp;&middot;&nbsp;24&ndash;70MM&nbsp;&middot;&nbsp;GRAIN&nbsp;400</div>
+
       <div class="hero-inner">
-        <div class="h-eye"><span>Fotografia</span></div>
+        <div class="h-eye">
+          <span class="term-prompt">
+            <span class="tp-user">tomas@makyneta</span><span class="tp-sep">:~$</span>
+            <span class="tp-cmd" id="typecmd"></span><span class="tp-cursor">&#9615;</span>
+          </span>
+        </div>
         <h1 class="h-title">FOTOGRAFIA</h1>
-        <p class="h-lead">Eventos · Desporto · Retratos · Documentário</p>
+        <p class="h-lead">Eventos &middot; Desporto &middot; Retratos &middot; Documentário</p>
         <div class="h-actions">
-          <a href="contact" class="btn-gold">Agendar sessão</a>
-          <a href="https://banlek.com/makyneta" target="_blank" class="btn-ghost">banlek.com/makyneta</a>
+          <a href="contact" class="btn-gold">
+            <span>Agendar sessão</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://banlek.com/makyneta" target="_blank" rel="noopener" class="btn-ghost">banlek.com/makyneta</a>
         </div>
       </div>
+
       <div class="h-scroll">
         <div class="scroll-bar"></div>
         <span class="scroll-txt">Deslizar</span>
       </div>
     </section>
- 
+
     <!-- TICKER -->
-    <div id="ticker"><div class="ticker-t" id="tt"></div></div>
- 
-    <!-- FILTER -->
+    <div id="ticker">
+      <span class="tk-live"><span class="tk-live-dot"></span>LIVE</span>
+      <div class="tk-track"><div class="ticker-t" id="tt"></div></div>
+    </div>
+
+    <!-- FILTER / TERMINAL -->
     <nav id="fbar">
-      <div class="ftabs" id="ftabs"></div>
-      <span class="fc"><strong id="vc">—</strong>&nbsp;projetos</span>
+      <div class="term-chrome">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="term-path">~/makyneta/photography/filter.sh</span>
+      </div>
+      <div class="term-body">
+        <span class="term-inline-prompt">$ ls --category</span>
+        <div class="ftabs" id="ftabs"></div>
+        <span class="fc"><strong id="vc">&mdash;</strong>&nbsp;projetos</span>
+      </div>
     </nav>
- 
+
     <!-- GRID -->
     <section id="grid-section" class="reveal">
       <div class="grid" id="grid"></div>
     </section>
- 
+
     <!-- HIRE -->
     <section id="hire" class="reveal">
       <div class="hire-l">
@@ -193,11 +182,11 @@
           Procura um fotógrafo<br>que entrega <em>mais</em><br>do que apenas imagens?
         </h2>
         <div class="svc-list">
-          <div class="svc">Eventos &amp; Concertos<span class="svc-arr">→</span></div>
-          <div class="svc">Fotografia Desportiva<span class="svc-arr">→</span></div>
-          <div class="svc">Retratos &amp; Fotografias de Perfil<span class="svc-arr">→</span></div>
-          <div class="svc">Rua &amp; Documentário<span class="svc-arr">→</span></div>
-          <div class="svc">Cobertura Institucional<span class="svc-arr">→</span></div>
+          <div class="svc">Eventos &amp; Concertos<span class="svc-arr">&rarr;</span></div>
+          <div class="svc">Fotografia Desportiva<span class="svc-arr">&rarr;</span></div>
+          <div class="svc">Retratos &amp; Fotografias de Perfil<span class="svc-arr">&rarr;</span></div>
+          <div class="svc">Rua &amp; Documentário<span class="svc-arr">&rarr;</span></div>
+          <div class="svc">Cobertura Institucional<span class="svc-arr">&rarr;</span></div>
         </div>
         <a href="contact" class="btn-gold">
           <span>Entrar em contacto</span>
@@ -207,31 +196,24 @@
       <div class="hire-r">
         <div class="avail">
           <span class="avail-dot"></span>
-          Disponível — Portugal
+          Disponível &mdash; Portugal
         </div>
         <blockquote class="hire-quote">
-          "Cada projeto é abordado com a mesma disciplina — a precisão técnica encontra o instinto, e o instinto encontra a história."
+          &ldquo;Cada projeto é abordado com a mesma disciplina &mdash; a precisão técnica encontra o instinto, e o instinto encontra a história.&rdquo;
         </blockquote>
-        <div class="contact-block">
-          <div class="contact-row">
-            <span class="c-key">Email</span>
-            <span class="c-val">makyneta@tutamail.com</span>
-          </div>
-          <div class="contact-row">
-            <span class="c-key">Localização</span>
-            <span class="c-val">Leiria · Portugal</span>
-          </div>
-          <div class="contact-row">
-            <span class="c-key">Disponibilidade</span>
-            <span class="c-val" style="color:#44e09a">Nacional</span>
-          </div>
+
+        <div class="json-block" aria-label="Informações de contacto">
+          <div class="jb-line"><span class="jb-brace">{</span></div>
+          <div class="jb-line jb-indent"><span class="jb-key">&quot;email&quot;</span><span class="jb-colon">:</span> <span class="jb-str">&quot;makyneta@tutamail.com&quot;</span><span class="jb-comma">,</span></div>
+          <div class="jb-line jb-indent"><span class="jb-key">&quot;location&quot;</span><span class="jb-colon">:</span> <span class="jb-str">&quot;Leiria, Portugal&quot;</span><span class="jb-comma">,</span></div>
+          <div class="jb-line jb-indent"><span class="jb-key">&quot;availability&quot;</span><span class="jb-colon">:</span> <span class="jb-str jb-mint">&quot;nacional&quot;</span></div>
+          <div class="jb-line"><span class="jb-brace">}</span></div>
         </div>
       </div>
     </section>
- 
-  </main>
- 
-  <div id="footer"></div>
 
+  </main>
+
+  <div id="footer"></div>
 </body>
 </html>
