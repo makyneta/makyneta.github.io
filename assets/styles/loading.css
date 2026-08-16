@@ -1,0 +1,18 @@
+  #loader-overlay{
+    position:fixed;inset:0;background:#070707;z-index:99999;
+    display:flex;align-items:center;justify-content:center;
+    transition:opacity .4s;
+  }
+  .lo-term{
+    font-family:'Fira Code', monospace;
+    font-size:.85rem;
+    letter-spacing:.02em;
+    display:flex;align-items:center;gap:.5rem;
+  }
+  .lo-prompt{color:#565f5a !important}
+  .lo-text{color:#00ff88 !important}
+  .lo-cursor{
+    color:#00ff88 !important;
+    animation:lo-blink 1s step-end infinite;
+  }
+  @keyframes lo-blink{0%,49%{opacity:1}50%,100%{opacity:0}}

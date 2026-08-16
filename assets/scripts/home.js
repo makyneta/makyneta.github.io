@@ -14,25 +14,25 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 /* ── Testimonials slider ── */
 (function(){
   const slider = document.getElementById('tslider');
-  
+
   // Verifica se slider existe
   if (!slider) return;
-  
+
   const cards  = slider.querySelectorAll('.test-card');
   const dotsWrap = document.getElementById('test-dots');
   const prevBtn = document.getElementById('t-prev');
   const nextBtn = document.getElementById('t-next');
   const total = cards.length;
-  
+
   // Se não há cards, sair
   if (total === 0) return;
-  
+
   // Calcula quantos cards por página
   function getPerView() {
     if (window.innerWidth >= 900) return 2;
     return 1;
   }
-  
+
   let perView = getPerView();
   let current = 0;
   let pages = Math.ceil(total / perView);
@@ -56,7 +56,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     const offset = current * offsetPerPage;
     slider.style.transform = `translateX(-${offset}%)`;
     slider.style.transition = 'transform 0.5s cubic-bezier(0.77,0,0.175,1)';
-    
+
     if (dotsWrap) {
       dotsWrap.querySelectorAll('.test-dot').forEach((d,i)=>d.classList.toggle('on',i===current));
     }
@@ -78,7 +78,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     touchStarted = true;
     slider.style.transition = 'none';
   }, {passive:true});
-  
+
   slider.addEventListener('touchmove', e=>{
     if (!touchStarted || e.touches.length === 0) return;
     const currentX = e.touches[0].clientX;
@@ -88,15 +88,15 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     const movePercent = (diffX / slider.offsetWidth) * offsetPerPage;
     slider.style.transform = `translateX(calc(-${offset}% - ${movePercent}%))`;
   }, {passive:true});
-  
+
   slider.addEventListener('touchend', e=>{
     if (!touchStarted || e.changedTouches.length === 0) return;
     touchStarted = false;
-    
+
     const currentX = e.changedTouches[0].clientX;
     const diffX = tx - currentX;
     const diffY = ty - e.changedTouches[0].clientY;
-    
+
     // Só navegar se for swipe horizontal significativo
     if(Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
       if(diffX > 0) {
@@ -132,29 +132,32 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const VIEW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`;
 
   const devData = [
-    { title:"Nicholas Moraes", desc:"", tags:["HTML","CSS","JS"],
-      img:"assets/images/projects/dev/nicholas-moraes.webp",
-      demo:"https://makyneta.github.io/m0rwes", info:"/info/dev/m0rwes" },
+    { title:"MAYDAY", desc:"Website profissional para a banda músical, MAYDAY.", tags:["HTML","CSS","JS"],
+      img:"assets/images/projects/dev/mayday-grupo-v2.webp",
+      demo:"https://makyneta.github.io/mayday", info:"/info/dev/mayday" },
 
-    { title:"Clube Atletismo de Marinha Grande", desc:"", tags:["HTML","CSS","JS"],
+    { title:"Clube Atletismo de Marinha Grande", desc:"Website para o Clube Atletismo de Marinha Grande.", tags:["HTML","CSS","JS"],
       img:"assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
       demo:"https://www.catletismomg.pt", info:"/info/dev/camg" },
-    
-    { title:"Nicholas Simões", desc:"", tags:["HTML","CSS","JS"],
-      img:"assets/images/projects/dev/nicholas-simoes.webp",
-      demo:"https://makyneta.github.io/nico", info:"/info/dev/nico" },
+
+    { title:"Tiago Pedro", desc:"Website para o fotógrafo de casamentos, Tiago Pedro.", tags:["HTML","CSS","JS"],
+      img:"assets/images/projects/dev/tiago-pedro.webp",
+      demo:"https://makyneta.github.io/tiagopedro", info:"/info/dev/tiagopedro" },
   ];
 
   const photoData = [
     { title:"Nacional de Clubes ao Ar Livre", cat:"Sport",
-      img:"assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp",
-      info:"/info/photo/fpa-nc26" },
+      img:"assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp",
+      info:"/info/photo/fpa-nc26",
+      view:"https://banlek.com/album/235f08" },
 
-    { title:"50th Anniversary of the Constitution", cat:"Event",
-      img:"assets/images/projects/photo/50th-anniversary-constitution.webp" },
+    { title:"50º Aniversário da Constituição da República Portuguesa", cat:"Event",
+      img:"assets/images/projects/photo/50th-anniversary-constitution.webp",
+      view:"https://banlek.com/album/258e41" },
 
-    { title:"Fair Play Calazans", cat:"Sport",
-      img:"assets/images/projects/photo/fair-play-calazans.webp" },
+    { title:"30º Fair Play Calazans", cat:"Sport",
+      img:"assets/images/projects/photo/fair-play-calazans.webp",
+      view:"https://banlek.com/album/258e71" },
   ];
 
   const designData = [
@@ -195,15 +198,22 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     });
   }
 
-  function buildLabelCards(gridId, data, viewLink) {
+  // useExternalView = true → o botão "Ver" abre p.view num separador novo (site exterior)
+  // useExternalView = false → o botão "Ver" abre a lightbox interna (galeria própria)
+  function buildLabelCards(gridId, data, useExternalView) {
     const grid = document.getElementById(gridId);
     if (!grid) return;
     data.forEach((p, i) => {
       const slug = p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
       const full = p.full || p.img.replace(/thumb\//, 'preview/');
-      const ver = viewLink
-        ? `<a href="${viewLink}" class="pfd-btn pfd-view">${VIEW_ICON} Ver</a>`
-        : `<button type="button" class="pfd-btn pfd-view" data-src="${full}" data-title="${p.title}">${VIEW_ICON} Ver</button>`;
+
+      let ver;
+      if (useExternalView && p.view) {
+        ver = `<a href="${p.view}" class="pfd-btn pfd-view" target="_blank" rel="noopener">${VIEW_ICON} Ver</a>`;
+      } else {
+        ver = `<button type="button" class="pfd-btn pfd-view" data-src="${full}" data-title="${p.title}">${VIEW_ICON} Ver</button>`;
+      }
+
       grid.insertAdjacentHTML('beforeend', `
         <div class="pf-card-design">
           <div class="pf-dev-filepath">
@@ -225,10 +235,10 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
       `);
     });
   }
-  buildLabelCards('pf-grid-photo', photoData, 'photo.html');
-  buildLabelCards('pf-grid-design', designData);
+  buildLabelCards('pf-grid-photo', photoData, true);    // fotografia → links externos
+  buildLabelCards('pf-grid-design', designData, false); // design → lightbox interna
 
-  /* ── Lightbox (popup de imagem) ── */
+  /* ── Lightbox (popup de imagem) — usado apenas para design ── */
   const lb = document.createElement('div');
   lb.className = 'lightbox';
   lb.setAttribute('aria-hidden', 'true');

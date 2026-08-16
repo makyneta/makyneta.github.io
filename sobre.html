@@ -149,9 +149,6 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div id="loader-overlay"></div>
-  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(0,255,136,.15);border-top-color:#00ff88;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
-  <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div id="progress"></div>
   <div class="noise"></div>
   <div id="header"></div>
@@ -163,97 +160,46 @@
         <div class="intro-text">
           <p class="intro-label">quem sou</p>
           <h1>TOMÁS <span class="outline">MOTA</span></h1>
-          <div class="intro-brand">makyneta@studio — fullstack &amp; criativo<span class="brand-cur">▊</span></div>
-          <p class="intro-desc">
-            A construir experiências digitais e físicas em seis disciplinas —
-            desde aplicações web e fotografia a eventos ao vivo e além.
-          </p>
-          <p class="intro-location">leiria, portugal</p>
-          <div class="intro-actions"> 
-            <a href="/#portfolio-showcase" class="hero-btn hero-btn-primary">Ver Portfólio</a>
-            <a href="/contacto" class="hero-btn hero-btn-secondary">Contactar</a>
+    
+          <!-- code-editor card: substitui a linha "makyneta@studio" simples -->
+          <div class="intro-code">
+            <div class="code-bar">
+              <span class="cb-dot"></span>
+              <span class="cb-dot"></span>
+              <span class="cb-dot cb-dot-g"></span>
+              <span class="code-file">tomas.mota.dev</span>
+            </div>
+            <pre class="code-body"><code><span class="c-kw">const</span> <span class="c-var">tomas</span> <span class="c-op">=</span> {
+      <span class="c-key">role</span><span class="c-op">:</span> <span class="c-str">"Fullstack Developer &amp; Diretor Criativo"</span>,
+      <span class="c-key">base</span><span class="c-op">:</span> <span class="c-str">"Leiria, Portugal"</span>,
+      <span class="c-key">disciplinas</span><span class="c-op">:</span> [<span class="c-str">"web"</span>, <span class="c-str">"foto"</span>, <span class="c-str">"design"</span>, <span class="c-str">"eventos"</span>, <span class="c-str">"vídeo"</span>],
+      <span class="c-key">estado</span><span class="c-op">:</span> <span class="c-str">"disponível para projetos"</span><span class="code-cur">▊</span>
+    };</code></pre>
           </div>
-          <div class="intro-socials">
-            <a href="https://instagram.com/tomasmota.eu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://github.com/makyneta" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <div class="intro-photo">
-          <img src="assets/images/profile/tomas-mota-2026-3.webp" alt="Tomás Mota"/>
-        </div>
+ 
+      <p class="intro-desc">
+        A construir experiências digitais e físicas em seis disciplinas —
+        desde aplicações web e fotografia a eventos ao vivo e além.
+      </p>
+      <p class="intro-location"> leiria, portugal</p>
+      <div class="intro-actions">
+        <a href="/#portfolio-showcase" class="hero-btn hero-btn-primary">Ver Portfólio</a>
+        <a href="/contacto" class="hero-btn hero-btn-secondary">Contactar</a>
       </div>
-    </section>
-
-    <!-- ══ STATS ══════════════════════════════════════════════════════ -->
-    <section id="stats-strip" class="reveal">
-      <div class="strip-head">./makyneta --stats</div>
-      <div class="stats-grid">
-        <div class="stat-cell">
-          <span class="stat-num">2<sup>+</sup></span>
-          <span class="stat-label">Anos de atividade</span>
-        </div>
-        <div class="stat-cell">
-          <span class="stat-num">10<sup>+</sup></span>
-          <span class="stat-label">Clientes &amp; parceiros</span>
-        </div>
-        <div class="stat-cell">
-          <span class="stat-num">6<sup>+</sup></span>
-          <span class="stat-label">Certificados</span>
-        </div>
-        <div class="stat-cell">
-          <span class="stat-num">6<sup>×</sup></span>
-          <span class="stat-label">Disciplinas</span>
-        </div>
+      <div class="intro-socials">
+        <a href="https://instagram.com/tomasmota.eu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/makyneta" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
       </div>
-    </section>
-
-    <!-- ══ SERVICES ═══════════════════════════════════════════════════ -->
-    <section class="section-wrap reveal">
-      <div class="section-label"><span>Disciplinas</span></div>
-      <div class="sec-term">ls ~/disciplinas</div>
-      <div class="services-grid">
-        <div class="service-card">
-          <span class="serv-index">01</span>
-          <i class="fa-solid fa-code"></i>
-          <h3 class="serv-title">Desenvolvimento Web</h3>
-          <p class="serv-desc">Websites fullstack, apps web e ferramentas digitais construídas de raiz</p>
-        </div>
-        <div class="service-card">
-          <span class="serv-index">02</span>
-          <i class="fa-solid fa-camera"></i>
-          <h3 class="serv-title">Fotografia</h3>
-          <p class="serv-desc">Fotografia de eventos, desporto e retrato com edição profissional</p>
-        </div>
-        <div class="service-card">
-          <span class="serv-index">03</span>
-          <i class="fa-solid fa-pen-nib"></i>
-          <h3 class="serv-title">Design Gráfico</h3>
-          <p class="serv-desc">Identidade visual, design print e digital para marcas e eventos</p>
-        </div>
-        <div class="service-card">
-          <span class="serv-index">04</span>
-          <i class="fa-solid fa-server"></i>
-          <h3 class="serv-title">Suporte Informático</h3>
-          <p class="serv-desc">Configuração de infraestrutura, redes e assistência técnica no local</p>
-        </div>
-        <div class="service-card">
-          <span class="serv-index">05</span>
-          <i class="fa-solid fa-lightbulb"></i>
-          <h3 class="serv-title">Eventos Ao Vivo</h3>
-          <p class="serv-desc">Engenharia de som, design de iluminação e apoio técnico backstage</p>
-        </div>
-        <div class="service-card">
-          <span class="serv-index">06</span>
-          <i class="fa-solid fa-film"></i>
-          <h3 class="serv-title">Produção de Vídeo</h3>
-          <p class="serv-desc">Captação, edição e pós-produção de vídeo para eventos e conteúdos digitais</p>
-        </div>
-      </div>
-    </section>
+    </div>
+    <div class="intro-photo">
+      <img src="assets/images/profile/tomas-mota-2026-3.webp" alt="Tomás Mota"/>
+    </div>
+  </div>
+</section>
 
     <!-- ══ EXPERIENCE ═════════════════════════════════════════════════ -->
     <section class="section-wrap reveal">
@@ -304,7 +250,7 @@
         </div>
         <div class="cc-row">
           <img src="assets/images/clients/escola-secundaria-engenheiro-acacio-calazans-duarte.webp" alt="ESEACD" class="cc-logo"/>
-          <span class="cc-name">ESEACD</span>
+          <span class="cc-name">ES Engº. Acácio Calazans Duarte</span>
           <span class="cc-role">Técnico de Som e Luz</span>
         </div>
         <div class="cc-row">
@@ -482,24 +428,29 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-left">
-            <span class="tl-date">Feb — Mar 2026</span>
-            <span class="tl-org">ESEACD</span>
+            <span class="tl-date">Set '25 — Mar '26</span>
+            <span class="tl-org">E.S. Calazans Duarte</span>
           </div>
           <div class="timeline-right">
-            <h3 class="tl-title">Escola Secundária Eng.<br>Acácio Calazans Duarte</h3>
-            <p class="tl-body">
+            <!-- <h3 class="tl-title">Escola Secundária Eng.<br>Acácio Calazans Duarte</h3> -->
+            <ul class="vol-list">
+              <li>Técnico de som e iluminação para um ciclo de palestras dirigidas à comunidade escolar</li>
+              <li>Captação de imagens de eventos escolares e desportivos</li>
+              <li>Técnico de informática para suporte técnico em aulas e sessões</li>
+            </ul>
+            <!-- <p class="tl-body">
               Técnico de som, iluminação e informática para um ciclo de palestras de sensibilização
               dirigidas a toda a comunidade escolar — coordenando todos os aspetos técnicos ao longo de várias sessões.
-            </p>
+            </p> -->
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-left">
             <span class="tl-date">Jan — Feb 2026</span>
-            <span class="tl-org">Câmara Municipal</span>
+            <span class="tl-org">Kristin @ Marinha Grande</span>
           </div>
           <div class="timeline-right">
-            <h3 class="tl-title">Município de<br>Marinha Grande</h3>
+            <!-- <h3 class="tl-title">Município de<br>Marinha Grande</h3> -->
             <ul class="vol-list">
               <li>Carregador e coordenador de entregas de telha</li>
               <li>Distribuição de lonas, mangas e cordas</li>

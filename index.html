@@ -142,18 +142,24 @@
     <link rel="stylesheet" href="assets/styles/geral.css">
     <link rel="stylesheet" href="assets/styles/home.css">
     <link rel="stylesheet" href="assets/styles/cookies.css">
+    <link rel="stylesheet" href="assets/styles/loading.css">
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/scripts/home.js" defer></script>
     <script src="assets/scripts/script.js" defer></script>
     <script src="assets/scripts/cookies.js" defer></script>
+    <!-- <script src="assets/scripts/loading.js" defer></script> -->
     <!-- Title_Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div id="loader-overlay"></div>
-  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(196,164,80,.15);border-top-color:#c8a450;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
-  <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
+<div id="loader-overlay">
+  <div class="lo-term">
+    <span class="lo-prompt">&gt;</span>
+    <span class="lo-text" id="lo-text"></span><span class="lo-cursor">_</span>
+  </div>
+</div>
+
   <div class="noise"></div>
   <div id="bar"></div>
   
@@ -353,7 +359,7 @@
               <img class="fb-avatar" src="assets/images/clients/nicholas-moraes.webp" alt="Cliente">
               <div class="fb-meta">
                 <span class="fb-name">Nicholas Moraes</span>
-                <span class="fb-role">Fotógrafo</span>
+                <span class="fb-role">Influenciador & Músico</span>
               </div>
               <span class="fb-cat">website</span>
             </div>
@@ -418,5 +424,31 @@
   </main>
 
 <div id="footer"></div>
+
+<script>
+(function(){
+  var LO = document.getElementById('loader-overlay');
+  if (!LO) return;
+ 
+  var txt = document.getElementById('lo-text');
+  var full = 'a carregar makyneta.dev';
+  var i = 0;
+  var HOLD_MS = 500; // tempo a manter depois de acabar de escrever
+ 
+  var hide = function(){
+    LO.style.opacity = '0';
+    setTimeout(function(){ LO.remove(); }, 500);
+  };
+ 
+  var typer = setInterval(function(){
+    i++;
+    txt.textContent = full.slice(0, i);
+    if (i >= full.length) {
+      clearInterval(typer);
+      setTimeout(hide, HOLD_MS);
+    }
+  }, 90);
+})();
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
     const PROJECTS = [
       { id:20, title:"Nacional de Clubes ao Ar Livre",
         category:"sport", year:"2026", location:"Coimbra", desc:"",
-        cover:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra.webp",
+        cover:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp",
         info:"/info/photo/fpa-nc26",
         slug:"https://banlek.com/album/235f08", photoCount:670 },
 

@@ -116,9 +116,6 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div id="loader-overlay"></div>
-  <style>#loader-overlay{position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .4s}#loader-overlay::after{content:'';width:22px;height:22px;border:2px solid rgba(196,164,80,.15);border-top-color:#c8a450;border-radius:50%;animation:lspin .7s linear infinite}@keyframes lspin{to{transform:rotate(360deg)}}</style>
-  <script>var LO=document.getElementById('loader-overlay');if(LO){var R=function(){if(R.d)return;R.d=1;LO.style.opacity='0';setTimeout(function(){LO.remove()},500)};window.addEventListener('load',R);setTimeout(R,5000)}</script>
   <div id="bar"></div>
   <div id="header"></div>
 
@@ -126,7 +123,7 @@
 
     <!-- ══ HEADER ══════════════════════════════════════════════ -->
     <header id="contact-into">
-      <p class="ci-eyebrow">Contacto</p>
+      <!-- <p class="ci-eyebrow">Contacto</p> -->
       <h1>Vamos trabalhar juntos</h1>
       <p class="ci-lead">
         Fala-me sobre o teu projeto, ideia ou o problema que estás a tentar resolver.
@@ -148,7 +145,7 @@
             </div>
             <div class="cf-group">
               <label class="cf-label" for="f-email">Email</label>
-              <input class="cf-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="o teu email" autocomplete="email"/>
+              <input class="cf-input" id="f-email" type="email" name="TM.Makyneta_Email" required placeholder="exemplo@exemplo.com" autocomplete="email"/>
             </div>
           </div>
 
@@ -221,7 +218,7 @@
             </div>
             <div class="ci-item">
               <span class="ci-key">Tempo de resposta</span>
-              <span class="ci-value">&lt; 24 horas</span>
+              <span class="ci-value">&lt; 48 horas</span>
             </div>
             <div class="ci-item">
               <span class="ci-key">Idiomas</span>
