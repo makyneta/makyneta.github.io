@@ -19,8 +19,10 @@
   --line2:   rgba(234,230,222,0.13);
 
   /* brand accent — editorial gold */
-  --gold:    #c6a24e;
-  --gold-l:  #dfc077;
+  --gold:    #00ff88;
+  --gold-l:  #5effb4;
+  /* --gold:    #c6a24e;
+  --gold-l:  #dfc077; */
   --gold2:   rgba(198,162,78,0.1);
 
   /* dev accent — terminal mint, used sparingly for "system" states */
