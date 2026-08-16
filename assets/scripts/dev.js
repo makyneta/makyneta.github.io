@@ -10,7 +10,7 @@
         img:"/assets/images/projects/dev/mayday-grupo-v2.webp",
         desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
         demo:"https://makyneta.github.io/mayday",
-        info:"" },
+        info:"/info/fev/mayday" },
 
       { id:16, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
