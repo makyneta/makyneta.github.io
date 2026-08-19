@@ -10,4 +10,7 @@ Allow: /
 # Block archive copy (duplicate)
 Disallow: /archive/index%20copy.html
 
+# Private invoice drafts
+Disallow: /invoices/
+
 Sitemap: https://makyneta.github.io/sitemap.xml
