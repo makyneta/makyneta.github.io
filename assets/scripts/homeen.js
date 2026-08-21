@@ -132,43 +132,43 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const VIEW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`;
 
   const devData = [
-    { title:"MAYDAY", desc:"Website profissional para a banda músical, MAYDAY.", tags:["HTML","CSS","JS"],
+    { title:"MAYDAY", desc:"Professional website for the musical band, MAYDAY.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/mayday-grupo-v2.webp",
       demo:"https://makyneta.github.io/mayday", info:"info/dev/mayday" },
 
-    { title:"Clube Atletismo de Marinha Grande", desc:"Website para o Clube Atletismo de Marinha Grande.", tags:["HTML","CSS","JS"],
+    { title:"Clube Atletismo de Marinha Grande", desc:"Website for the Marinha Grande Athletics Club.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
       demo:"https://www.catletismomg.pt", info:"info/dev/camg" },
 
-    { title:"Tiago Pedro", desc:"Website para o fotógrafo de casamentos, Tiago Pedro.", tags:["HTML","CSS","JS"],
+    { title:"Tiago Pedro", desc:"Website for wedding photographer, Tiago Pedro.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/tiago-pedro.webp",
       demo:"https://makyneta.github.io/tiagopedro", info:"info/dev/tiagopedro" },
   ];
 
   const photoData = [
-    { title:"Nacional de Clubes ao Ar Livre", cat:"Sport",
-      img:"assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp",
-      info:"/info/photo/fpa-nc26",
+    { title:"National Club Championship in Open Air", cat:"Sport",
+      img:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp",
+      info:"info/photo/fpa-nc26",
       view:"https://banlek.com/album/235f08" },
 
-    { title:"50º Aniversário da Constituição da República Portuguesa", cat:"Event",
-      img:"assets/images/projects/photo/50th-anniversary-constitution.webp",
+    { title:"50th Anniversary of the Constitution of the Portuguese Republic", cat:"Event",
+      img:"/assets/images/projects/photo/50th-anniversary-constitution.webp",
       view:"https://banlek.com/album/258e41" },
 
-    { title:"30º Fair Play Calazans", cat:"Sport",
-      img:"assets/images/projects/photo/fair-play-calazans.webp",
+    { title:"30th Fair Play Calazans", cat:"Sport",
+      img:"/assets/images/projects/photo/fair-play-calazans.webp",
       view:"https://banlek.com/album/258e71" },
   ];
 
   const designData = [
-    { title:"Dia Internacional do Trabalhador", cat:"Social",
-      img:"assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
+    { title:"International Workers' Day", cat:"Social",
+      img:"/assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
 
     { title:"Lecture Advertising Poster", cat:"Print",
-      img:"assets/images/projects/design/thumb/bullying-lecture.webp" },
+      img:"/assets/images/projects/design/thumb/bullying-lecture.webp" },
 
     { title:"Francisco Ferreira", cat:"Social",
-      img:"assets/images/projects/design/thumb/francisco-ferreira.webp" },
+      img:"/assets/images/projects/design/thumb/francisco-ferreira.webp" },
   ];
 
   const devGrid = document.getElementById('pf-grid-dev');
@@ -190,7 +190,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
             <div class="pf-dev-tags">${p.tags.map(t => `<span class="pf-dev-tag">${t}</span>`).join('')}</div>
             <div class="pf-dev-actions">
               ${p.info ? `<a href="${p.info}">${INFO_ICON} Info</a>` : ''}
-              <a href="${p.demo}" target="_blank" rel="noopener">${EXT} Visitar</a>
+              <a href="${p.demo}" target="_blank" rel="noopener">${EXT} Visit</a>
             </div>
           </div>
         </div>
@@ -209,9 +209,9 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
       let ver;
       if (useExternalView && p.view) {
-        ver = `<a href="${p.view}" class="pfd-btn pfd-view" target="_blank" rel="noopener">${VIEW_ICON} Ver</a>`;
+        ver = `<a href="${p.view}" class="pfd-btn pfd-view" target="_blank" rel="noopener">${VIEW_ICON} View</a>`;
       } else {
-        ver = `<button type="button" class="pfd-btn pfd-view" data-src="${full}" data-title="${p.title}">${VIEW_ICON} Ver</button>`;
+        ver = `<button type="button" class="pfd-btn pfd-view" data-src="${full}" data-title="${p.title}">${VIEW_ICON} View</button>`;
       }
 
       grid.insertAdjacentHTML('beforeend', `

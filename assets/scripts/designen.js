@@ -1,6 +1,6 @@
     /* ── Data ── */
     const PROJECTS = [
-      { id:15, title:"JSMG x TUMG @ Dia do Estudante",
+      { id:15, title:"JSMG x TUMG @ Student Day",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
         client:"JS Marinha Grande",
@@ -8,7 +8,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-tumg.webp",
         link:"" },
 
-      { id:14, title:"2 Anos de Governo - O Governo Falha",
+      { id:14, title:"2 Years of Government - The Government Fails",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
         client:"PS Leiria",
@@ -16,7 +16,7 @@
         preview:"/assets/images/projects/design/preview/2-anos-de-governo-o-governo-falha-ps-leiria.webp",
         link:"" },
 
-      { id:13, title:"Afirmar Leiria",
+      { id:13, title:"Affirm Leiria",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
         client:"PS Leiria",
@@ -24,7 +24,7 @@
         preview:"/assets/images/projects/design/preview/afirmar-leiria.webp",
         link:"" },
 
-      { id:12, title:"Quem Sou Eu?",
+      { id:12, title:"Who I Am?",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
         client:"Emanuel OLiveira",
@@ -46,7 +46,7 @@
         preview:"/assets/images/projects/design/preview/emanuel-oliveira.webp",
         link:"" },
 
-      { id:9, title:"Quinta-feira da Ascensão",
+      { id:9, title:"Thursday of the Ascension",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
         client:"JS Marinha Grande",
@@ -54,7 +54,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-quintafeiraascensao.webp",
         link:"" },
 
-      { id:8, title:"Dia Internacional do Trabalhador",
+      { id:8, title:"International Worker's Day",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
         client:"JS Marinha Grande",
@@ -62,7 +62,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-diatrabalhador.webp",
         link:"" },
 
-      { id:7, title:"Dia da Revolução dos Cravos",
+      { id:7, title:"Thursday of the Revolution of the Carnations",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
         client:"JS Marinha Grande",
@@ -70,7 +70,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-revolucaocravos.webp",
         link:"" },
 
-      { id:5, title:"Dia Nacional do Estudante",
+      { id:5, title:"National Day of Student",
         category:"social", tags:["Illustrator","Photoshop"],
         desc:"",
         client:"JS Marinha Grande",
@@ -78,7 +78,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-diaestudante.webp",
         link:"" },
 
-      { id:4, title:"JS Visita Sede PS",
+      { id:4, title:"JS Visits PS Head Office",
         category:"social", tags:["Illustrator"],
         desc:"",
         client:"JS Marinha Grande",
@@ -86,7 +86,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-visitaps.webp",
         link:"" },
 
-      { id:3, title:"JS Visita Parlamento",
+      { id:3, title:"JS Visits Parliament",
         category:"social", tags:["Illustrator"],
         desc:"",
         client:"JS Marinha Grande",
@@ -94,7 +94,7 @@
         preview:"/assets/images/projects/design/preview/jsmg-visitaparl.webp",
         link:"" },
 
-      { id:2, title:"Cartaz de Divulgação da Palestra",
+      { id:2, title:"Lecture Advertising Poster",
         category:"print", tags:["Illustrator","Photoshop"],
         desc:"",
         client:"AE Marinha Grande Poente",
@@ -112,12 +112,12 @@
     ];
  
     const CATS = [
-      {id:'all',label:'Todas'},
+      {id:'all',label:'All'},
       {id:'branding',label:'Branding'},
       {id:'ui',label:'UI / Digital'},
-      {id:'print',label:'Impress\u00e3o'},
-      {id:'social',label:'Redes Sociais'},
-      {id:'event',label:'Evento'},
+      {id:'print',label:'Print'},
+      {id:'social',label:'Social Media'},
+      {id:'event',label:'Event'},
     ];
  
     /* Stats */
@@ -150,8 +150,8 @@
       const tools   = (p.tags||[]).map(t=>`<span class="tool-pill">${t}</span>`).join('');
       const imgHtml = p.image
         ? `<img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.closest('.card-visual').innerHTML='<div class=\\'card-placeholder\\'>[sem pré-visualização]</div>'">`
-        : `<div class="card-placeholder">[sem pré-visualização]</div>`;
-      const arrow   = p.link ? 'Ver →' : 'Pré-visualização →';
+        : `<div class="card-placeholder">[without preview]</div>`;
+      const arrow   = p.link ? 'View →' : 'Preview →';
       return `
         <a ${clickA} class="project-card" data-cat="${p.category}">
           <div class="card-visual">

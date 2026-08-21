@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <!-- Metadados -->
   <meta charset="UTF-8">
-  <title>Design | Makyneta by Tomás Mota</title>
-  <meta name="description" content="Portfolio de design gráfico e branding pela Makyneta. Logótipos, redes sociais, design impresso e identidade visual.">
-  <link rel="canonical" href="https://makyneta.github.io/design">
+  <title>Web Development | Makyneta by Tomás Mota</title>
+  <meta name="description" content="Portfolio of web development projects by Makyneta. Projects in React, Node.js, TypeScript, Python developed for real clients.">
+  <link rel="canonical" href="https://makyneta.github.io/develop">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Makyneta Unipessoal, Lda."/>
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Design | Makyneta by Tomás Mota">
-  <meta property="og:description" content="Portfolio de design gráfico e branding pela Makyneta. Logótipos, redes sociais, design impresso e identidade visual.">
-  <meta property="og:url" content="https://makyneta.github.io/design">
+  <meta property="og:title" content="Web Development | Makyneta by Tomás Mota">
+  <meta property="og:description" content="Portfolio of web development projects by Makyneta. Projects in React, Node.js, TypeScript, Python developed for real clients.">
+  <meta property="og:url" content="https://makyneta.github.io/develop">
   <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
   <meta property="og:site_name" content="Makyneta">
   <meta property="og:locale" content="pt_PT">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Design | Makyneta by Tomás Mota">
-  <meta name="twitter:description" content="Portfolio de design gráfico e branding pela Makyneta. Logótipos, redes sociais, design impresso e identidade visual.">
+  <meta name="twitter:title" content="Web Development | Makyneta by Tomás Mota">
+  <meta name="twitter:description" content="Portfolio of web development projects by Makyneta. Projects in React, Node.js, TypeScript, Python developed for real clients.">
   <meta name="twitter:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
 
   <!-- JSON-LD Structured Data -->
@@ -132,111 +132,94 @@
     }
   }
 ]
-  </script>
+</script>
 
   <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   
-  <!-- Style -->
-  <link rel="stylesheet" href="/assets/styles/design.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/styles/geral.css">
+  <link rel="stylesheet" href="/assets/styles/dev.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet" />
   
   <!-- Scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/assets/scripts/design.js" defer></script>
-  <script src="/assets/scripts/script.js"></script>
+  <script src="/assets/scripts/deven.js" defer></script>
+  <script src="/assets/scripts/scripten.js"></script>
   
   <!-- Favicon -->
   <link rel="icon" href="/favicon-black.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
   <link rel="icon" href="/favicon.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
 </head>
 <body>
-  <div id="bar"></div>
+  <div id="progress"></div>
+  <div class="noise"></div>
   <div id="header"></div>
  
   <main>
- 
     <!-- ══ HERO ══════════════════════════════════════════════════════ -->
     <section id="page-hero">
-      <div class="hero-ghost">DESIGN</div>
-      <div class="eyebrow"><span>Portfólio — Design</span></div>
-      <h1 class="hero-title">DE<span class="outline">SIGN</span></h1>
+      <div class="about-eyebrow page-eyebrow"><span>Portfolio — Development</span></div>
+ 
+      <!-- Terminal widget -->
+      <div class="terminal-window">
+        <div class="term-bar">
+          <span class="term-dot r"></span>
+          <span class="term-dot y"></span>
+          <span class="term-dot g"></span>
+          <span class="term-title">makyneta — zsh</span>
+        </div>
+        <div class="term-body">
+          <div class="term-line"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> ls projects/</span></div>
+          <div class="term-line term-out"><span class="hi-g">frontend/</span>&nbsp;&nbsp;<span class="hi-c">fullstack/</span>&nbsp;&nbsp;<span class="hi-y">backend/</span></div>
+          <div class="term-line" style="margin-top:0.3rem"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> git log --oneline -3</span></div>
+          <div class="term-line term-out"><span class="hi-c">a3f9c2d</span> feat: launch makyneta portfolio</div>
+          <div class="term-line term-out"><span class="hi-c">b8e1f0a</span> feat: add mayday site</div>
+          <div class="term-line term-out"><span class="hi-c">d4c7891</span> feat: ship donut-man fullstack</div>
+          <div class="term-line" style="margin-top:0.3rem"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> npm run build</span></div>
+          <div class="term-line term-out" style="color:var(--green)">✓ Built successfully in 1.2s</div>
+          <div class="term-line"><span class="term-prompt">~/makyneta $</span><span class="term-cursor"></span></div>
+        </div>
+      </div>
+ 
+      <h1 class="page-title">
+        DEV<br>
+        <!-- <span class="outline">MENT</span> -->
+      </h1>
+ 
       <div class="hero-foot">
         <div class="hero-left">
           <p class="hero-lead">
-            Identidade visual, sistemas de marca, layouts impressos e digitais —
-            construídos com <em>intenção</em>. Design que comunica
-            antes de decorar.
+            <span class="comment">/* Building robust and scalable systems —</span><br>
+            <span class="comment">&nbsp;&nbsp;&nbsp;from front-end interfaces to full-stack platforms.</span><br>
+            <span class="comment">&nbsp;&nbsp;&nbsp;Clean code, real implementation. */</span>
           </p>
-          <a href="precos/design" class="group mt-6 inline-flex items-center gap-2 bg-[#c8a450] px-5 py-3 text-[0.48rem] uppercase tracking-[0.24em] text-black no-underline transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(200,164,80,0.4)]">Ver preços <span class="transition-transform duration-300 group-hover:translate-x-1">→</span></a>
+          <a href="prices/dev" class="group mt-6 inline-flex items-center gap-2 bg-[#00ff88] px-5 py-3 text-[0.5rem] uppercase tracking-[0.22em] text-black no-underline transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(0,255,136,0.4)]">View Prices <span class="transition-transform duration-300 group-hover:translate-x-1">→</span></a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="st-n" id="stat-projects">—</span>
-            <span class="st-l">Projetos</span>
-          </div>
-          <div class="stat">
-            <span class="st-n" id="stat-types">—</span>
-            <span class="st-l">Categorias</span>
-          </div>
+        <div class="project-count">
+          <span class="num" id="count-num">12</span>
+          <span id="count-label">projects indexed</span>
         </div>
-      </div>
-      <div class="h-scroll">
-        <div class="scroll-bar"></div>
-        <span class="scroll-txt">Deslizar</span>
       </div>
     </section>
- 
-    <!-- ══ PROCESS ════════════════════════════════════════════════════ -->
-    <!-- <div id="process" class="reveal">
-      <div class="proc-cell">
-        <span class="proc-n">01</span>
-        <div class="proc-t">Briefing</div>
-        <p class="proc-b">Compreender o contexto, o público e o propósito antes de abrir qualquer ferramenta.</p>
-      </div>
-      <div class="proc-cell">
-        <span class="proc-n">02</span>
-        <div class="proc-t">Conceito</div>
-        <p class="proc-b">Traduzir a estratégia em direção visual — tipografia, cor, forma e tom.</p>
-      </div>
-      <div class="proc-cell">
-        <span class="proc-n">03</span>
-        <div class="proc-t">Execução</div>
-        <p class="proc-b">Fabrico preciso no Illustrator, Photoshop e além — detalhes que resistem a qualquer escala.</p>
-      </div>
-      <div class="proc-cell">
-        <span class="proc-n">04</span>
-        <div class="proc-t">Entrega</div>
-        <p class="proc-b">Ficheiros prontos para impressão, otimizados para ecrã e com formatos completos — a tempo, sempre.</p>
-      </div>
-    </div> -->
  
     <!-- ══ FILTER BAR ══════════════════════════════════════════════ -->
     <nav id="filter-bar">
-      <div class="filter-tabs" id="filter-tabs"></div>
-      <span class="proj-counter"><strong id="visible-count">—</strong>&nbsp;projetos</span>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Front-end</button>
+      <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+      <button class="filter-btn" data-filter="backend">Back-end</button>
     </nav>
  
-    <!-- ══ GRID ═══════════════════════════════════════════════════ -->
-    <section id="projects" class="reveal">
+    <!-- ══ PROJECTS ════════════════════════════════════════════════ -->
+    <section id="projects-section" class="reveal">
       <div class="projects-grid" id="projects-grid"></div>
     </section>
- 
   </main>
  
-  <!-- LIGHTBOX -->
-  <div id="lightbox">
-    <button id="lightbox-close">✕ Fechar</button>
-    <img id="lightbox-img" src="" alt=""/>
-    <span id="lightbox-caption"></span>
-  </div>
+  <div id="footer"></div>
 
-
-<div id="footer"></div>
-
-<script>
-
-</script>
 </body>
+
 </html>

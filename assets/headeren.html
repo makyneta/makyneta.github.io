@@ -1,0 +1,96 @@
+<header id="main-header">
+  <a href="/en" class="header-logo">
+    <img src="/assets/images/ui/header_old.webp" alt="Makyneta" class="header-logo-img">
+  </a>
+
+  <nav class="header-nav">
+    <a href="/en/about" class="nav-link">About</a>
+
+    <div class="dropdown-wrapper">
+      <button class="nav-btn">
+        Portfolio
+        <i class="fa-solid fa-chevron-down" style="font-size:.4rem;opacity:.5"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="/en/dev"><i class="fa-solid fa-code"></i> Development</a>
+        <a href="/en/design"><i class="fa-solid fa-paint-brush"></i> Design</a>
+        <a href="/en/photo"><i class="fa-solid fa-camera"></i> Photography</a>
+        <a href="/en/video"><i class="fa-solid fa-video"></i> VVideo</a>
+        <a href="/en/feedback"><i class="fa-solid fa-star"></i> Feedback</a>
+      </div>
+    </div>
+
+    <div class="dropdown-wrapper">
+      <button class="nav-btn">
+        Prices
+        <i class="fa-solid fa-chevron-down" style="font-size:.4rem;opacity:.5"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="/en/prices/dev"><i class="fa-solid fa-code"></i> Development</a>
+        <a href="/en/prices/design"><i class="fa-solid fa-paint-brush"></i> Design</a>
+      </div>
+    </div>
+
+    <a href="/en/contact" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">PT 🇵🇹</a>
+  </nav>
+
+  <button id="mobile-menu-toggle-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <script>
+    (function(){
+      var path = window.location.pathname;
+      document.querySelectorAll('#main-header .nav-link').forEach(function(el){
+        if (el.getAttribute('href') === path) el.classList.add('active');
+      });
+      var btns = document.querySelectorAll('#main-header .nav-btn');
+      if (path.match(/^\/(develop|design|photo|video|feedback)/)) {
+        if (btns[0]) btns[0].classList.add('active');
+      }
+      if (path.match(/^\/precos/)) {
+        if (btns[1]) btns[1].classList.add('active');
+      }
+      document.querySelectorAll('#mobile-menu .mm-link').forEach(function(el){
+        if (el.getAttribute('href') === path) el.classList.add('active');
+      });
+    })();
+  </script>
+</header>
+
+<div id="mobile-menu" aria-hidden="true">
+  <div class="mm-window">
+    <div class="mm-titlebar">
+      <span class="mm-dot r"></span>
+      <span class="mm-dot y"></span>
+      <span class="mm-dot g"></span>
+      <span class="mm-title">makyneta@studio — menu</span>
+    </div>
+    <div class="mm-body">
+      <div class="mm-line"><span class="mm-prompt">$</span><span class="mm-cmd">./makyneta --menu</span></div>
+      <ul class="mm-list">
+        <li><a href="/en" class="mm-link"><span class="mm-path">~/</span><span class="mm-name">Home</span></a></li>
+        <li><a href="/en/about" class="mm-link"><span class="mm-path">~/</span><span class="mm-name">About</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>portfolio</span></li>
+        <li><a href="/en/dev" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Development</span></a></li>
+        <li><a href="/en/design" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Design</span></a></li>
+        <li><a href="/en/photo" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Photography</span></a></li>
+        <li><a href="/en/video" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">VVideo</span></a></li>
+        <li><a href="/en/feedback" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Feedback</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>prices</span></li>
+        <li><a href="/en/prices/dev" class="mm-link"><span class="mm-path">~/prices/</span><span class="mm-name">Development</span></a></li>
+        <li><a href="/en/prices/design" class="mm-link"><span class="mm-path">~/prices/</span><span class="mm-name">Design</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>contact</span></li>
+        <li><a href="/en/contact" class="mm-link"><span class="mm-path">~/</span><span class="mm-name">Contact</span></a></li>
+        <li class="mm-sep" aria-hidden="true"><span>language</span></li>
+        <li><a href="/" class="mm-link"><span class="mm-path">~/lang/</span><span class="mm-name">PT 🇵🇹</span></a></li>
+      </ul>
+      <div class="mm-status">
+        <span class="mm-prompt">$</span><span class="mm-cmd">exit — ESC close</span><span class="mm-cursor"></span>
+      </div>
+    </div>
+  </div>
+</div>
