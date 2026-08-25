@@ -147,16 +147,16 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const photoData = [
     { title:"National Club Championship in Open Air", cat:"Sport",
-      img:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp",
+      img:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
       info:"info/photo/fpa-nc26",
       view:"https://banlek.com/album/235f08" },
 
     { title:"50th Anniversary of the Constitution of the Portuguese Republic", cat:"Event",
-      img:"/assets/images/projects/photo/50th-anniversary-constitution.webp",
+      img:"/assets/images/projects/photo/cmmg-aniversarioconstituicao.webp",
       view:"https://banlek.com/album/258e41" },
 
     { title:"30th Fair Play Calazans", cat:"Sport",
-      img:"/assets/images/projects/photo/fair-play-calazans.webp",
+      img:"/assets/images/projects/photo/eseacd-fairplay.webp",
       view:"https://banlek.com/album/258e71" },
   ];
 
@@ -168,7 +168,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
       img:"/assets/images/projects/design/thumb/bullying-lecture.webp" },
 
     { title:"Francisco Ferreira", cat:"Social",
-      img:"/assets/images/projects/design/thumb/francisco-ferreira.webp" },
+      img:"/assets/images/projects/design/thumb/remax-fmf.webp" },
   ];
 
   const devGrid = document.getElementById('pf-grid-dev');

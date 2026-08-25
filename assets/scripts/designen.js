@@ -12,16 +12,16 @@
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
         client:"PS Leiria",
-        image:"/assets/images/projects/design/thumb/2-anos-de-governo-o-governo-falha-ps-leiria.webp",
-        preview:"/assets/images/projects/design/preview/2-anos-de-governo-o-governo-falha-ps-leiria.webp",
+        image:"/assets/images/projects/design/thumb/pslra-2ygov.webp",
+        preview:"/assets/images/projects/design/preview/pslra-2ygov.webp",
         link:"" },
 
       { id:13, title:"Affirm Leiria",
         category:"social", tags:["Illustrator","Photoshop","Canva"],
         desc:"",
         client:"PS Leiria",
-        image:"/assets/images/projects/design/thumb/afirmar-leiria.webp",
-        preview:"/assets/images/projects/design/preview/afirmar-leiria.webp",
+        image:"/assets/images/projects/design/thumb/pslra-afirmarleiria.webp",
+        preview:"/assets/images/projects/design/preview/pslra-afirmarleiria.webp",
         link:"" },
 
       { id:12, title:"Who I Am?",
@@ -106,8 +106,8 @@
         category:"social", tags:["Canva","Remax"],
         desc:"",
         client:"RE/MAX Grupo Visão",
-        image:"/assets/images/projects/design/thumb/francisco-ferreira.webp",
-        preview:"/assets/images/projects/design/preview/francisco-ferreira.webp",
+        image:"/assets/images/projects/design/thumb/remax-fmf.webp",
+        preview:"/assets/images/projects/design/preview/remax-fmf.webp",
         link:"" },
     ];
  
