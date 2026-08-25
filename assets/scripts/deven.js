@@ -7,7 +7,7 @@
     /* ── Projects data ── */
     const projects = [
       { id:17, title:"Mayday", type:"frontend",
-        img:"/assets/images/projects/dev/mayday-grupo-v2.webp",
+        img:"/assets/images/projects/dev/mayday.webp",
         desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
         demo:"https://makyneta.github.io/mayday",
         info:"/en/info/dev/mayday" },
@@ -37,7 +37,7 @@
         info:"/en/info/dev/camg" },
 
       { id:12, title:"António Pedro", type:"frontend",
-        img:"/assets/images/projects/dev/antonio-pedro-2.webp",
+        img:"/assets/images/projects/dev/antonio-pedro.webp",
         desc:"Professional landing page for a personal trainer. Includes service cards, testimonials, and a booking CTA.",
         demo:"https://makyneta.github.io/antoniorpedro",
         info:"" },
@@ -55,7 +55,7 @@
         info:"/en/info/dev/nico" },
 
       { id:9, title:"Juventude Socialista Marinha Grande", type:"frontend",
-        img:"/assets/images/projects/dev/juventude-socialista-marinha-grande-v2.webp",
+        img:"/assets/images/projects/dev/js-marinhagrande.webp",
         desc:"Political youth movement website with event promotion, manifesto pages, and membership sign-up forms.",
         demo:"https://makyneta.github.io/jsmarinhagrande",
         info:"" },
@@ -85,13 +85,13 @@
         info:"" },
 
       { id:4, title:"Donut-Man", type:"fullstack",
-        img:"/assets/images/projects/dev/personal/donut-man.webp",
+        img:"/assets/images/projects/dev/donut-man.webp",
         desc:"Fullstack browser game with a Node.js backend, real-time leaderboard, and persistent player profiles.",
         demo:"https://makyneta.github.io/donutman",
         info:"" },
 
       { id:3, title:"Ice J (I Love You)", type:"frontend",
-        img:"/assets/images/projects/dev/ice-j-i-love-you.webp",
+        img:"/assets/images/projects/dev/ice-j.webp",
         desc:"Music promotional site with embedded tracks, lyric pages, merch store, and tour schedule.",
         demo:"https://makyneta.github.io/icejiloveyou",
         info:"/en/info/dev/icej" },

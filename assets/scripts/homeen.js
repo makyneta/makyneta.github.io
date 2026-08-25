@@ -133,7 +133,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const devData = [
     { title:"MAYDAY", desc:"Professional website for the musical band, MAYDAY.", tags:["HTML","CSS","JS"],
-      img:"/assets/images/projects/dev/mayday-grupo-v2.webp",
+      img:"/assets/images/projects/dev/mayday.webp",
       demo:"https://makyneta.github.io/mayday", info:"info/dev/mayday" },
 
     { title:"Clube Atletismo de Marinha Grande", desc:"Website for the Marinha Grande Athletics Club.", tags:["HTML","CSS","JS"],

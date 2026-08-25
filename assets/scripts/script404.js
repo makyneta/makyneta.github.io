@@ -5,7 +5,7 @@ document.querySelectorAll('.year').forEach(el => {
 
 var v = Date.now();
 
-fetch("/assets/404/header.html?v=" + v)
+fetch("/assets/ui/header/404.html?v=" + v)
   .then(function(r) { return r.text(); })
   .then(function(data) {
     document.getElementById("header").innerHTML = data;
@@ -93,7 +93,7 @@ fetch("/assets/404/header.html?v=" + v)
 
 //
 // Footer
-fetch("/assets/404/footer.html?v=" + v)
+fetch("/assets/ui/footer/404.html?v=" + v)
   .then(response => response.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;

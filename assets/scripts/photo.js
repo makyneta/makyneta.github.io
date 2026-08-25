@@ -4,78 +4,97 @@ const PROJECTS = [
     cover:"/assets/images/projects/photo/nacional-de-clubes-ao-ar-livre-coimbra-v2.webp",
     info:"/info/photo/fpa-nc26",
     slug:"https://banlek.com/album/235f08", photoCount:670 },
+    
   { id:19, title:"Sala de Espera by Libélula Teatro",
     category:"event", year:"2026", location:"Leiria", desc:"",
     cover:"/assets/images/projects/photo/IMG_1712.webp",
     slug:"https://banlek.com/album/258ffd", photoCount:132 },
+
   { id:18, title:"50º Aniversário da Constituição da República Portuguesa",
     category:"event", year:"2026", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/50th-anniversary-constitution.webp",
     slug:"https://banlek.com/album/258e41", photoCount:127 },
+
   { id:17, title:"XI Café com Livros",
     category:"event", year:"2026", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/IMG_0115.webp",
     slug:"https://banlek.com/album/258e57", photoCount:145 },
+
   { id:16, title:"30º Fair Play Calazans",
     category:"sport", year:"2026", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/fair-play-calazans.webp",
     slug:"https://banlek.com/album/258e71", photoCount:1129 },
+
   { id:15, title:"ESEACD @ Futurália",
     category:"event", year:"2026", location:"Lisboa", desc:"",
     cover:"/assets/images/projects/photo/IMG_0141.webp",
     slug:"https://banlek.com/album/258881", photoCount:97 },
+
   { id:14, title:"ESEACD @ Centimfe",
     category:"event", year:"2026", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/IMG_20260311_143904.webp",
     slug:"https://banlek.com/album/258881", photoCount:187 },
+
   { id:13, title:"ESEACD @ Rádio e Televisão Portuguesa",
     category:"event", year:"2026", location:"Lisboa", desc:"",
     cover:"/assets/images/projects/photo/694840340_18021059897822525_7492885807106114398_n.webp",
     slug:"https://banlek.com/album/2588df", photoCount:42 },
+
   { id:12, title:"18 de Janeiro de 1934",
     category:"teather", year:"2026", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/IMG_0678.webp",
     slug:"https://banlek.com/album/258e65", photoCount:247 },
+
   { id:11, title:"Festa Final ACMarinhense",
     category:"sport", year:"2025", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/6cc3c7231760081.688f7cb2419b8.webp",
     slug:"https://banlek.com/album/258ed6", photoCount:434 },
+
   { id:10, title:"SLMarinha VS UDBatalha",
     category:"sport", year:"2025", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/af7c62216616067.6782fa4ac440f.webp",
     slug:"https://www.behance.net/gallery/216616067/SLMarinha-VS-UDBatalha", photoCount:99 },
+
   { id:9, title:"Treinos ACMarinhense U-13",
     category:"sport", year:"2025", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/5dccfd231756789.688f6d74b5b34.webp",
     slug:"https://banlek.com/album/258f6a", photoCount:280 },
+
   { id:8, title:"XIV Mediateca com Vida",
     category:"event", year:"2025", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/xiv-mediateca-com-vida.webp",
     slug:"https://banlek.com/album/258fdb", photoCount:89 },
+
   { id:7, title:"ACMarinhense @ PombalCup",
     category:"sport", year:"2025", location:"Pombal", desc:"",
     cover:"/assets/images/projects/photo/pombalcup.webp",
     slug:"https://banlek.com/album/258f1d", photoCount:288 },
+
   { id:6, title:"Os Penetras @ RTP",
     category:"event", year:"2024", location:"Lisboa", desc:"",
     cover:"/assets/images/projects/photo/penetras-estrelas-ao-sabado.webp",
     slug:"https://www.behance.net/gallery/232190989/Music-OP-Live-Performance-at-Estrelas-ao-Sabado", photoCount:83 },
+
   { id:5, title:"Os Penetras",
     category:"session", year:"2024", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/penetras.webp",
     slug:"https://www.behance.net/gallery/232210639/Music-OP-Photoshoot", photoCount:43 },
+
   { id:4, title:"Grupo Desportivo de Pescadores da Costa da Caparica @ SLMarinha",
     category:"sport", year:"2024", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/gdpcc.webp",
     slug:"https://www.behance.net/gallery/232285927/Sport-GDPCC-Impor4mill-Sumer-Cup", photoCount:67 },
+
   { id:3, title:"IberoAlpla @ Torneio Inter-Empresas",
     category:"sport", year:"2024", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/iberoalpla.webp",
     slug:"https://www.behance.net/gallery/231766181/Sport-IA-Inter-Company-Tournament", photoCount:50 },
+
   { id:2, title:"Song Raiders",
     category:"event", year:"2024", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/song-raiders.webp",
     slug:"https://www.behance.net/gallery/231746927/Music-SR-LIve-Performance-at-MG2024CF", photoCount:74 },
+
   { id:1, title:"Swee",
     category:"session", year:"2024", location:"", desc:"",
     cover:"/assets/images/projects/photo/1eb341227516617.6841597ee202d.webp",
