@@ -7,43 +7,53 @@
     <script>
       (function () {
         var REDIRECTS = {
+          // Socials
           'mail': { url: 'mailto:makyneta@tutamail.com' },
-          'instagram': { url: 'https://www.instagram.com/makynetadev' },
-          'facebook': { url: 'https://www.facebook.com/makynetadev' },
           'github': { url: 'https://github.com/makyneta' },
-          'jsmg-instagram': { url: 'https://www.instagram.com/js.marinhagrande' },
-          'jsmg-facebook': { url: 'https://www.facebook.com/jsocialistamg' },
-          'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande' },
-          'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande' },
-          'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande' },
-          'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542' },
-          'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade' },
-          'todospelamarinha': { url: 'https://www.instagram.com/p/DXZ8pq6DZ-h/' },
-          'cuco': { url: 'https://cuco.inforlandia.pt/ucode/' },
-          'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/' },
-          'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN' },
-          'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view' },
-          'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view' },
-          'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view' },
-          'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view' },
-          'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view' },
-          'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view' },
-          'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view' },
-          '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview' },
-          'blender': { url: 'https://www.blender.org/download/' },
-          'audacity': { url: 'https://www.audacityteam.org/download/' },
-          'download': { url: 'https://mega.nz/folder/06JRwYJY#PcEXZZ-dltqD6tTHhNQv8A' },
-          'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA' },
-          'tempestade-kristin': { url: '/kristin' },
+
+          // Invoices
+          'FT.2026.002': { url: '/fatura/FT.2026.002' },
+          'FT.2026.001': { url: '/fatura/FT.2026.001' },
+
+          // Redirect
+          'tour': { url: '/music/tour' },
+          'releases': { url: '/music/releases' },
+
+          // Clients
+
+          // Externals Links
+            // JS Marinha Grande
+            'jsmg-instagram': { url: 'https://www.instagram.com/js.marinhagrande' },
+            'jsmg-facebook': { url: 'https://www.facebook.com/jsocialistamg' },
+            // CM Marinha Grande
+            'cmmg-facebook': { url: 'https://www.facebook.com/municipiomarinhagrande' },
+            'cmmg-instagram': { url: 'https://www.instagram.com/municipiomarinhagrande' },
+            'cmmg-youtube': { url: 'https://www.youtube.com/c/C%C3%A2maraMunicipalMarinhaGrande' },
+            'cmmg-kristin': { url: 'https://www.cm-mgrande.pt/pages/1542' },
+            'cmmg-form': { url: 'https://www.cm-mgrande.pt/p/tempestade' },
+            'todospelamarinha': { url: 'https://www.instagram.com/p/DXZ8pq6DZ-h/' },
+            'tempestade-kristin': { url: '/kristin' },
+            // AE Marinha Grande Poente
+            'aemgp_toolkit': { url: 'https://mega.nz/folder/M7pi0ZhY#ckUio5cGXR8crOmSX7AhsA' },
+            'cuco': { url: 'https://cuco.inforlandia.pt/ucode/' },
+            'cuco-update': { url: 'https://cuco.inforlandia.pt/updates/' },
+            'adobe': { url: 'https://drive.google.com/drive/folders/1YuGFR7UCbF_2IRQiVvhfwbbZv3ae5joN' },
+            'lightroom': { url: 'https://drive.google.com/file/d/1jwmnAvkwMLK2E4T1ZTIiHVJzEAkGsisf/view' },
+            'photoshop': { url: 'https://drive.google.com/file/d/1lKULeuY8b62BmOXmRTLsu20CWMkqtpFQ/view' },
+            'aftereffects': { url: 'https://drive.google.com/file/d/197lbZindOZrGMQAZc9WisjBzDGAgGumy/view' },
+            'animate': { url: 'https://drive.google.com/file/d/1m-hTEnLffBGjnhiiQCrXcgDFUX-3CClV/view' },
+            'premiere': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view' },
+            'premierepro': { url: 'https://drive.google.com/file/d/1Yph4tx6KDW4qsYdCdxglHd9NhIxxfr0y/view' },
+            'illustrator': { url: 'https://drive.google.com/file/d/1HQD8d1qbprdPcM2tfA5Yri08M7Bq3UgO/view' },
+            '3dsmax': { url: 'https://www.autodesk.com/products/3ds-max/overview' },
+            'blender': { url: 'https://www.blender.org/download/' },
+            'audacity': { url: 'https://www.audacityteam.org/download/' },
+
+          // Archive
           'mj': { url: 'https://www.imdb.com/title/tt11378946/' },
           'investir-imobiliario': { url: 'https://www.youtube.com/watch?v=beb7NagI7Y4' },
           'emanueloliveira-download': { url: 'https://mega.nz/folder/1yIgWDrL#tvbcJt00p-DyeSu-3f0Nyg' },
           'mayday_design': { url: 'https://mega.nz/folder/RzIEkTBY#1viPYyuFvJ-XSPdMwelhKw' },
-          'contact': { url: '/contacto' },
-          'about': { url: '/sobre' },
-          'develop': { url: '/dev' },
-          'tour': { url: '/music/tour' },
-          'releases': { url: '/music/releases' },
         };
 
         var slug = window.location.pathname.split('/').filter(Boolean).pop();
