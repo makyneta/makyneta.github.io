@@ -148,16 +148,16 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const photoData = [
     { title:"National Club Championship in Open Air", cat:"Sport",
       img:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
-      info:"info/photo/fpa-nc26",
-      view:"https://banlek.com/album/235f08" },
+      info:"info/photo/fpa-nacionalclubes",
+      view:"/fpa-nacionalclubes" },
 
     { title:"50th Anniversary of the Constitution of the Portuguese Republic", cat:"Event",
       img:"/assets/images/projects/photo/cmmg-aniversarioconstituicao.webp",
-      view:"https://banlek.com/album/258e41" },
+      view:"/cmmg-aniversarioconstituicao" },
 
     { title:"30th Fair Play Calazans", cat:"Sport",
       img:"/assets/images/projects/photo/eseacd-fairplay.webp",
-      view:"https://banlek.com/album/258e71" },
+      view:"/eseacd-fairplay" },
   ];
 
   const designData = [

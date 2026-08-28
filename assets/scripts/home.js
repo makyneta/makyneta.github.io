@@ -147,17 +147,17 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const photoData = [
     { title:"Nacional de Clubes ao Ar Livre", cat:"Sport",
-      img:"assets/images/projects/photo/fpa-nacionalclubes.webp",
-      info:"/info/photo/fpa-nc26",
-      view:"https://banlek.com/album/235f08" },
+      img:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
+      info:"/info/photo/fpa-nacionalclubes",
+      view:"/fpa-nacionalclubes" },
 
     { title:"50º Aniversário da Constituição da República Portuguesa", cat:"Event",
-      img:"assets/images/projects/photo/cmmg-aniversarioconstituicao.webp",
-      view:"https://banlek.com/album/258e41" },
+      img:"/assets/images/projects/photo/cmmg-aniversarioconstituicao.webp",
+      view:"/cmmg-aniversarioconstituicao" },
 
     { title:"30º Fair Play Calazans", cat:"Sport",
-      img:"assets/images/projects/photo/eseacd-fairplay.webp",
-      view:"https://banlek.com/album/258e71" },
+      img:"/assets/images/projects/photo/eseacd-fairplay.webp",
+      view:"/eseacd-fairplay" },
   ];
 
   const designData = [
