@@ -50,25 +50,25 @@ const PROJECTS = [
     cover:"/assets/images/projects/photo/acmarinhense-festa.webp",
     slug:"/acmarinhense-festa", photoCount:434 },
 
-  { id:10, title:"SLMarinha VS UDBatalha",
-    category:"sport", year:"2025", location:"Marinha Grande", desc:"",
-    cover:"/assets/images/projects/photo/slmarinha-vs-udbatalha.webp",
-    slug:"/slmarinha-vs-udbatalha", photoCount:99 },
-
-  { id:9, title:"Treinos ACMarinhense U-13",
+  { id:10, title:"Treinos ACMarinhense U-13",
     category:"sport", year:"2025", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/acmarinhense-u13.webp",
     slug:"/acmarinhense-u13", photoCount:280 },
+
+  { id:9, title:"ACMarinhense @ PombalCup",
+    category:"sport", year:"2025", location:"Pombal", desc:"",
+    cover:"/assets/images/projects/photo/acmarinhense-pombalcup.webp",
+    slug:"/acmarinhense-pombalcup", photoCount:288 },
 
   { id:8, title:"XIV Mediateca com Vida",
     category:"event", year:"2025", location:"Marinha Grande", desc:"",
     cover:"/assets/images/projects/photo/aemgp-mediatecacomvida.webp",
     slug:"/aemgp-mediatecacomvida", photoCount:89 },
 
-  { id:7, title:"ACMarinhense @ PombalCup",
-    category:"sport", year:"2025", location:"Pombal", desc:"",
-    cover:"/assets/images/projects/photo/acmarinhense-pombalcup.webp",
-    slug:"/acmarinhense-pombalcup", photoCount:288 },
+  { id:7, title:"SLMarinha VS UDBatalha",
+    category:"sport", year:"2025", location:"Marinha Grande", desc:"",
+    cover:"/assets/images/projects/photo/slmarinha-vs-udbatalha.webp",
+    slug:"/slmarinha-vs-udbatalha", photoCount:99 },
 
   { id:6, title:"Os Penetras @ RTP",
     category:"event", year:"2024", location:"Lisboa", desc:"",
