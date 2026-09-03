@@ -6,11 +6,17 @@
 
     /* ── Projects data ── */
     const projects = [
-      { id:15, title:"Mayday", type:"frontend",
+      { id:16, title:"Mayday", type:"frontend",
         img:"/assets/images/projects/dev/mayday.webp",
         desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
         demo:"https://makyneta.github.io/mayday",
         info:"/info/dev/mayday" },
+
+      { id:15, title:"Math For Teens", type:"fullstack",
+        img:"/assets/images/projects/dev/mathforteens.webp",
+        desc:"Educational website for teaching mathematics to teenagers.",
+        demo:"https://mathforteens.pt",
+        info:"" },
 
       { id:14, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
