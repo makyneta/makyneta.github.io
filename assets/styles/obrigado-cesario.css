@@ -1,0 +1,384 @@
+		:root {
+		    --bg: #111211;
+		    --paper: #e9e5dc;
+		    --muted: #aaa79f;
+		    --line: rgba(233, 229, 220, .2);
+		    --accent: #b59b72;
+		    --serif: 'Cormorant Garamond', Georgia, serif;
+		    --sans: 'Fira Sans', sans-serif;
+		}
+
+		* {
+		    box-sizing: border-box;
+		}
+
+		html {
+		    height: 100%;
+		    overflow: hidden;
+		    background: var(--bg);
+		}
+
+		body {
+		    margin: 0;
+		}
+
+		body {
+		    display: flex;
+		    flex-direction: column;
+		    height: 100%;
+		    padding: 0;
+		    overflow: hidden;
+		    color: var(--paper);
+		    background: var(--bg);
+		    font-family: var(--sans);
+		}
+
+		#header,
+		#footer {
+		    width: 100%;
+		    flex: none;
+		}
+
+		#header {
+		    position: relative;
+		    z-index: 10;
+		}
+
+		#footer {
+		    margin-top: auto;
+		}
+
+		/* ===== Layout geral ===== */
+		.memorial-main {
+		    position: relative;
+		    flex: 1;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    overflow-y: auto;
+		    width: min(1100px, calc(100% - 3rem));
+		    margin: 0 auto;
+		    padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 4vw, 3rem);
+		}
+
+		.memorial-eyebrow {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    gap: .9rem;
+		    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+		    color: var(--accent);
+		    font-family: var(--sans);
+		    font-size: .62rem;
+		    font-weight: 400;
+		    letter-spacing: .38em;
+		    text-transform: uppercase;
+		}
+
+		.memorial-eyebrow::before,
+		.memorial-eyebrow::after {
+		    content: '';
+		    width: 34px;
+		    height: 1px;
+		    background: rgba(181, 155, 114, .55);
+		}
+
+		/* ===== Portrait / left column ===== */
+		.memorial-portrait {
+		    position: relative;
+		    width: 100%;
+		    padding: .65rem;
+		    border: 1px solid rgba(181, 155, 114, .4);
+		    background: rgba(233, 229, 220, .025);
+		}
+
+		.memorial-portrait::before,
+		.memorial-portrait::after {
+		    content: '';
+		    position: absolute;
+		    width: 40px;
+		    height: 40px;
+		    border-color: rgba(181, 155, 114, .7);
+		    border-style: solid;
+		    pointer-events: none;
+		}
+
+		.memorial-portrait::before {
+		    top: -.35rem;
+		    left: -.35rem;
+		    border-width: 1px 0 0 1px;
+		}
+
+		.memorial-portrait::after {
+		    right: -.35rem;
+		    bottom: -.35rem;
+		    border-width: 0 1px 1px 0;
+		}
+
+		.memorial-photo {
+		    display: block;
+		    width: 100%;
+		    aspect-ratio: 4 / 5;
+		    object-fit: cover;
+		    object-position: center top;
+		    filter: saturate(.68) contrast(1.02);
+		    box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
+		}
+
+		.memorial-caption {
+		    display: flex;
+		    justify-content: space-between;
+		    gap: 1rem;
+		    padding: .8rem .25rem .1rem;
+		    color: rgba(233, 229, 220, .42);
+		    font-family: var(--sans);
+		    font-size: .56rem;
+		    letter-spacing: .16em;
+		    text-transform: uppercase;
+		}
+
+		.memorial-title {
+		    margin: 2rem 0 0;
+		    color: var(--paper);
+		    font-family: var(--serif);
+		    font-size: clamp(2.4rem, 3.6vw, 3.4rem);
+		    font-weight: 500;
+		    line-height: 1.05;
+		    letter-spacing: .005em;
+		}
+
+		.memorial-dates {
+		    margin: .9rem 0 0;
+		    color: var(--muted);
+		    font-family: var(--sans);
+		    font-size: .78rem;
+		    letter-spacing: .08em;
+		}
+
+		.memorial-divider {
+		    display: none;
+		}
+
+		/* ===== Message / right column ===== */
+		.memorial-message {
+		    position: relative;
+		    padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.4rem, 3vw, 2.75rem);
+		    border: 1px solid rgba(233, 229, 220, .14);
+		    background: rgba(233, 229, 220, .025);
+		    color: rgba(233, 229, 220, .85);
+		    font-family: var(--serif);
+		    font-size: clamp(1.2rem, 1.6vw, 1.42rem);
+		    line-height: 1.75;
+		    text-align: justify;
+		    text-justify: inter-word;
+		}
+
+		.memorial-message::before {
+		    content: '\201C';
+		    position: absolute;
+		    top: .5rem;
+		    left: 1.5rem;
+		    color: rgba(181, 155, 114, .6);
+		    font-family: Georgia, serif;
+		    font-size: 3.6rem;
+		    line-height: 1;
+		}
+
+		.memorial-message p {
+		    margin: 0 0 1.35rem;
+		}
+
+		.memorial-message p:last-child {
+		    margin-bottom: 0;
+		}
+
+		.memorial-signature {
+		    display: flex;
+		    align-items: center;
+		    gap: .85rem;
+		    margin-top: clamp(2.25rem, 4vw, 3rem);
+		    padding-top: clamp(1.5rem, 3vw, 2rem);
+		    border-top: 1px solid rgba(233, 229, 220, .14);
+		    color: var(--accent);
+		    font-family: var(--serif);
+		    font-size: 1.05rem;
+		    font-style: italic;
+		}
+
+		.memorial-signature::before {
+		    content: '✦';
+		    font-family: var(--sans);
+		    font-style: normal;
+		    font-size: .85rem;
+		    color: rgba(181, 155, 114, .65);
+		}
+
+		/* ===== Grid: desktop ===== */
+		.memorial-hero {
+		    display: grid;
+		    grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+		    align-items: start;
+		    gap: clamp(3rem, 6vw, 5.5rem);
+		}
+
+		.memorial-visual {
+		    position: sticky;
+		    top: clamp(2rem, 6vh, 4rem);
+		}
+
+		/* ===== Mobile ===== */
+		@media (max-width: 860px) {
+		    .memorial-main {
+		        width: 100%;
+		        padding: clamp(.5rem, 2vh, 1rem) 1rem;
+		    }
+
+		    .memorial-eyebrow {
+		        margin-bottom: clamp(.5rem, 1.6vh, 1rem);
+		        font-size: .52rem;
+		    }
+
+		    .memorial-hero {
+		        grid-template-columns: 1fr;
+		        gap: 0;
+		        text-align: center;
+		    }
+
+		    .memorial-visual {
+		        position: static;
+		    }
+
+		    .memorial-portrait {
+		        width: 100%;
+		        margin: 0 auto;
+		        padding: .4rem;
+		    }
+
+		    .memorial-photo {
+		        aspect-ratio: auto;
+		        height: clamp(6rem, 22vh, 11rem);
+		        box-shadow: 0 14px 30px rgba(0, 0, 0, .4);
+		    }
+
+		    .memorial-caption {
+		        padding: .45rem .2rem 0;
+		        font-size: .44rem;
+		        letter-spacing: .08em;
+		    }
+
+		    .memorial-title {
+		        margin-top: clamp(.6rem, 1.8vh, 1.1rem);
+		        font-size: clamp(1.5rem, 6.5vh, 2.3rem);
+		        line-height: 1;
+		    }
+
+		    .memorial-dates {
+		        text-align: center;
+		    }
+
+		    .memorial-divider {
+		        display: block;
+		        width: 30px;
+		        height: 1px;
+		        margin: clamp(.6rem, 1.8vh, 1.1rem) auto 0;
+		        background: rgba(181, 155, 114, .6);
+		    }
+
+		    .memorial-message {
+		        margin-top: clamp(.75rem, 2vh, 1.25rem);
+		        padding: clamp(1.35rem, 3.6vh, 2rem) 1.1rem clamp(1rem, 2.6vh, 1.4rem);
+		        text-align: left;
+		        font-size: clamp(.82rem, 2.3vh, 1.02rem);
+		        line-height: 1.48;
+		    }
+
+		    .memorial-message p {
+		        margin: 0 0 .85em;
+		    }
+
+		    .memorial-message::before {
+		        top: .3rem;
+		        left: 1rem;
+		        font-size: 2.2rem;
+		    }
+
+		    .memorial-signature {
+		        margin-top: clamp(.75rem, 1.8vh, 1.15rem);
+		        padding-top: clamp(.6rem, 1.4vh, .9rem);
+		        justify-content: center;
+		        font-size: .82rem;
+		    }
+		}
+
+		@media (max-width: 860px) and (max-height: 620px) {
+
+		    .memorial-eyebrow,
+		    .memorial-caption {
+		        display: none;
+		    }
+
+		    .memorial-photo {
+		        height: clamp(4.5rem, 16vh, 8rem);
+		    }
+		}
+
+		/* ===== Desktop: caber tudo no ecrã, sem scroll ===== */
+		@media (min-width: 861px) {
+		    .memorial-main {
+		        padding: clamp(1rem, 3vh, 2rem) clamp(1.5rem, 4vw, 3rem);
+		    }
+
+		    .memorial-eyebrow {
+		        margin-bottom: clamp(1rem, 3vh, 1.75rem);
+		    }
+
+		    .memorial-hero {
+		        grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+		        align-items: center;
+		        gap: clamp(2rem, 4vw, 4rem);
+		    }
+
+		    .memorial-visual {
+		        position: static;
+		    }
+
+		    .memorial-portrait {
+		        padding: .5rem;
+		    }
+
+		    .memorial-photo {
+		        aspect-ratio: auto;
+		        height: clamp(13rem, 40vh, 20rem);
+		    }
+
+		    .memorial-caption {
+		        padding: clamp(.5rem, 1.2vh, .8rem) .25rem .1rem;
+		    }
+
+		    .memorial-title {
+		        margin-top: clamp(1rem, 2.4vh, 1.5rem);
+		        font-size: clamp(1.9rem, 4vh, 2.6rem);
+		    }
+
+		    .memorial-message {
+		        padding: clamp(1.5rem, 3.2vh, 2.25rem) clamp(1.5rem, 2.4vw, 2.25rem);
+		        font-size: clamp(.95rem, 1.9vh, 1.15rem);
+		        line-height: 1.55;
+		    }
+
+		    .memorial-message p {
+		        margin: 0 0 .9em;
+		    }
+
+		    .memorial-message::before {
+		        top: .3rem;
+		        left: 1.1rem;
+		        font-size: clamp(2rem, 4vh, 2.8rem);
+		    }
+
+		    .memorial-signature {
+		        margin-top: clamp(1rem, 2vh, 1.5rem);
+		        padding-top: clamp(.75rem, 1.6vh, 1.25rem);
+		        font-size: .95rem;
+		    }
+		}

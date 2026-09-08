@@ -109,3 +109,23 @@ fetch("/assets/ui/footer/portuguese.html?v=" + v)
     script.src = "/assets/scripts/footer.js?v=" + v;
     document.body.appendChild(script);
   });
+
+
+//
+// Footer out cta
+fetch("/assets/ui/footer/portuguese-outcta.html?v=" + v)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-outcta").innerHTML = data;
+
+    // CSS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/styles/footer.css?v=" + v;
+    document.head.appendChild(link);
+
+    // JS
+    const script = document.createElement("script");
+    script.src = "/assets/scripts/footer.js?v=" + v;
+    document.body.appendChild(script);
+  });

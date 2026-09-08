@@ -4,6 +4,50 @@ window.addEventListener('scroll', () => {
     Math.min(window.scrollY / (document.documentElement.scrollHeight - innerHeight) * 100, 100) + '%';
 });
 
+/* ── Cesario message popup ── */
+(function(){
+  const popup = document.getElementById('cesario-popup');
+  if (!popup) return;
+
+  const closeButton = popup.querySelector('.cesario-popup-close');
+  const cta = popup.querySelector('.cesario-popup-cta');
+  let lastFocusedElement;
+
+  function closePopup(){
+    popup.classList.remove('open');
+    popup.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  function openPopup(){
+    lastFocusedElement = document.activeElement;
+    popup.classList.add('open');
+    popup.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus();
+  }
+
+  closeButton.addEventListener('click', closePopup);
+  popup.addEventListener('click', event => {
+    if (event.target === popup) closePopup();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && popup.classList.contains('open')) closePopup();
+  });
+  cta.addEventListener('click', () => { document.body.style.overflow = ''; });
+
+  function schedulePopup(){
+    window.setTimeout(openPopup, 2800);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedulePopup, { once: true });
+  } else {
+    schedulePopup();
+  }
+})();
+
 /* ── Reveal ── */
 const ro = new IntersectionObserver(
   entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }),
