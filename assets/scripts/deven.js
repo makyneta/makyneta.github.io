@@ -6,17 +6,23 @@
 
     /* ── Projects data ── */
     const projects = [
-      { id:16, title:"Mayday", type:"frontend",
+      { id:17, title:"Mayday", type:"frontend",
         img:"/assets/images/projects/dev/mayday.webp",
         desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
         demo:"https://makyneta.github.io/mayday",
         info:"/en/info/dev/mayday" },
 
+      { id:16, title:"Victor Campos", type:"frontend",
+        img:"/assets/images/projects/dev/victor-campos.webp",
+        desc:"Website para o influenciador, Victor Campos.",
+        demo:"https://makyneta.github.io/victor",
+        info:"/en/info/dev/victor" },
+
       { id:15, title:"Math For Teens", type:"fullstack",
-        img:"/assets/images/projects/dev/mathforteens.webp",
+        img:"/assets/images/projects/dev/math-for-teens.webp",
         desc:"Educational website for teaching mathematics to teenagers.",
         demo:"https://mathforteens.pt",
-        info:"" },
+        info:"/en/info/dev/mathforteens" },
 
       { id:14, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
