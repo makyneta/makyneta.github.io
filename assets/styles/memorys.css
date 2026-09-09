@@ -1,0 +1,159 @@
+:root {
+    --bg: #111211;
+    --paper: #e9e5dc;
+    --muted: #aaa79f;
+    --line: rgba(233, 229, 220, 0.18);
+    --accent: #b59b72;
+    --accent-soft: rgba(181, 155, 114, 0.18);
+    --shadow: rgba(0, 0, 0, 0.45);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Fira Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--paper);
+    font-family: var(--sans);
+}
+
+#header,
+#footer {
+    width: 100%;
+    flex: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.memorys-page {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+    flex: 1;
+}
+
+.memorys-header {
+    text-align: center;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.memorys-kicker {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+}
+
+.memorys-title {
+    margin: clamp(0.8rem, 2vw, 1.2rem) 0 0;
+    color: var(--paper);
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.memorys-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(1.2rem, 2vw, 2rem);
+}
+
+.memory-card {
+    position: relative;
+    display: block;
+    padding: 0.85rem;
+    border: 1px solid var(--line);
+    background: rgba(233, 229, 220, 0.02);
+    box-shadow: 0 22px 45px var(--shadow);
+    text-decoration: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.memory-card:hover,
+.memory-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: rgba(181, 155, 114, 0.7);
+    box-shadow: 0 28px 50px rgba(0, 0, 0, 0.52);
+}
+
+.memory-card::before,
+.memory-card::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-color: rgba(181, 155, 114, 0.55);
+    border-style: solid;
+    pointer-events: none;
+}
+
+.memory-card::before {
+    top: -0.45rem;
+    left: -0.45rem;
+    border-width: 1px 0 0 1px;
+}
+
+.memory-card::after {
+    right: -0.45rem;
+    bottom: -0.45rem;
+    border-width: 0 1px 1px 0;
+}
+
+.memory-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.72) contrast(1.04);
+    background: #1b1b1b;
+}
+
+.memory-card span {
+    display: block;
+    padding-top: 1rem;
+    color: var(--paper);
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 640px) {
+    .memorys-page {
+        width: calc(100% - 1rem);
+        padding-top: 1.1rem;
+        padding-bottom: 2rem;
+    }
+
+    .memorys-kicker {
+        letter-spacing: 0.22em;
+        font-size: 0.62rem;
+    }
+
+    .memorys-title {
+        font-size: clamp(1.9rem, 8vw, 2.8rem);
+    }
+
+    .memorys-grid {
+        grid-template-columns: 1fr;
+    }
+}
