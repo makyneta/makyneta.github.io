@@ -839,7 +839,7 @@
     .cesario-popup-card {
       position: relative; display: flex; align-items: flex-end;
       width: min(760px, 100%); min-height: 460px; aspect-ratio: 16 / 10; overflow: hidden;
-      background-image: linear-gradient(0deg, rgba(5,7,9,.97) 0%, rgba(5,7,9,.76) 30%, rgba(5,7,9,.04) 72%), url('/assets/images/cesario-silva.webp');
+      background-image: linear-gradient(0deg, rgba(5,7,9,.97) 0%, rgba(5,7,9,.76) 30%, rgba(5,7,9,.04) 72%), url('/assets/images/memory/cesario-silva.webp');
       background-size: cover; background-position: center;
       border: 1px solid var(--brd2);
       box-shadow: 0 30px 100px rgba(0,0,0,.65), 0 0 50px rgba(0,255,136,.07);
