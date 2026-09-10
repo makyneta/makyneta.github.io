@@ -58,7 +58,11 @@ body::after {
   background-size: 128px;
 }
 
-p { text-align: justify; }
+.hero-lead,
+.detail-header p,
+.interview-body p {
+  text-align: justify;
+}
 
 #header { position: relative; z-index: 100; }
 #footer { position: relative; z-index: 2; }
@@ -354,9 +358,9 @@ p { text-align: justify; }
 }
 
 .interview-shell {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem 6rem;
+  padding: 4.5rem 2rem 6rem;
 }
 
 .detail-header {
@@ -382,10 +386,10 @@ p { text-align: justify; }
 }
 
 .detail-header p {
-  max-width: 760px;
+  max-width: 820px;
   font-family: var(--font-m);
-  font-size: 0.72rem;
-  line-height: 1.9;
+  font-size: 0.78rem;
+  line-height: 2;
   color: var(--white2);
 }
 
@@ -394,6 +398,7 @@ p { text-align: justify; }
   background: var(--terminal);
   padding: 1rem;
   margin-bottom: 2rem;
+  box-shadow: 0 22px 40px rgba(0,0,0,0.18);
 }
 
 .video-frame video {
@@ -427,8 +432,8 @@ p { text-align: justify; }
 .interview-body {
   max-width: 860px;
   font-family: var(--font-m);
-  font-size: 0.72rem;
-  line-height: 2;
+  font-size: 0.76rem;
+  line-height: 2.05;
   color: var(--white2);
 }
 
