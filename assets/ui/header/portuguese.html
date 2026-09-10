@@ -16,6 +16,7 @@
         <a href="/design"><i class="fa-solid fa-paint-brush"></i> Design</a>
         <a href="/photo"><i class="fa-solid fa-camera"></i> Fotografia</a>
         <a href="/video"><i class="fa-solid fa-video"></i> Vídeo</a>
+        <a href="/entrevistas"><i class="fa-solid fa-microphone-lines"></i> Entrevistas</a>
         <a href="/feedback"><i class="fa-solid fa-star"></i> Feedback</a>
       </div>
     </div>
@@ -62,7 +63,7 @@
         if (el.getAttribute('href') === path) el.classList.add('active');
       });
       var btns = document.querySelectorAll('#main-header .nav-btn');
-      if (path.match(/^\/(develop|design|photo|video|feedback)/)) {
+      if (path.match(/^\/(develop|design|photo|video|interviews|feedback)/)) {
         if (btns[0]) btns[0].classList.add('active');
       }
       if (path.match(/^\/precos/)) {
@@ -93,6 +94,7 @@
         <li><a href="/design" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Design</span></a></li>
         <li><a href="/photo" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Fotografia</span></a></li>
         <li><a href="/video" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Vídeo</span></a></li>
+        <li><a href="/entrevistas" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Entrevistas</span></a></li>
         <li><a href="/feedback" class="mm-link"><span class="mm-path">~/portfolio/</span><span class="mm-name">Feedback</span></a></li>
         <li class="mm-sep" aria-hidden="true"><span>preços</span></li>
         <li><a href="/precos/dev" class="mm-link"><span class="mm-path">~/precos/</span><span class="mm-name">Desenvolvimento</span></a></li>

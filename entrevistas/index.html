@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Makyneta Unipessoal, Lda." />
+  <meta name="description" content="Entrevistas e peças em vídeo da Makyneta, com foco em temas de voluntariado, comunidade e comunicação." />
+  <meta name="robots" content="index, follow">
+  <title>Entrevistas | Makyneta by Tomás Mota</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Entrevistas | Makyneta by Tomás Mota">
+  <meta property="og:description" content="Entrevistas e peças em vídeo da Makyneta, com foco em temas de voluntariado, comunidade e comunicação.">
+  <meta property="og:url" content="https://makyneta.github.io/interviews">
+  <meta property="og:image" content="https://makyneta.github.io/assets/images/ui/og-image.webp">
+
+  <link rel="stylesheet" href="/assets/styles/geral.css">
+  <link rel="stylesheet" href="/assets/styles/interviews.css">
+  <link rel="icon" href="/favicon-black.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/scripts/interviews.js" defer></script>
+  <script src="/assets/scripts/script.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section id="page-hero">
+      <div class="page-eyebrow"><span>media — entrevistas</span></div>
+
+      <div class="terminal-window">
+        <div class="term-bar">
+          <span class="term-dot r"></span>
+          <span class="term-dot y"></span>
+          <span class="term-dot g"></span>
+          <span class="term-title">makyneta — media</span>
+        </div>
+        <div class="term-body">
+          <div class="term-line"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> ls interviews/</span></div>
+          <div class="term-line term-out"><span class="hi-g">featured/</span>&nbsp;&nbsp;<span class="hi-c">stories/</span>&nbsp;&nbsp;<span class="hi-y">video/</span></div>
+          <div class="term-line" style="margin-top:0.3rem"><span class="term-prompt">~/makyneta $</span><span class="term-cmd"> cat index.md</span></div>
+          <div class="term-line term-out">Conjunto de entrevistas e reportagens em vídeo.</div>
+          <div class="term-line term-out">Temas relevantes, contexto e narrativa visual.</div>
+        </div>
+      </div>
+
+      <h1 class="page-title">INTERVIEWS</h1>
+
+      <div class="hero-foot">
+        <p class="hero-lead">
+          <span class="comment">/* Uma seleção de entrevistas e momentos em vídeo —</span><br>
+          <span class="comment">&nbsp;&nbsp;&nbsp;com a mesma abordagem profissional e visual</span><br>
+          <span class="comment">&nbsp;&nbsp;&nbsp;que marca o restante trabalho da Makyneta. */</span>
+        </p>
+
+        <div class="project-count">
+          <span class="num" id="count-num">1</span>
+          <span id="count-label">entrevista disponível</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="interviews-section" class="reveal">
+      <div class="interviews-grid" id="interviews-grid">
+        <a class="interview-card reveal" href="/entrevistas/kristin.html" aria-label="Abrir entrevista Tempestade Kristin">
+          <div class="card-thumb-wrap">
+            <img src="/assets/images/interview/18fev26-sicnoticias.webp" alt="Tempestade Kristin" loading="lazy" />
+            <span class="card-badge">Entrevista</span>
+            <div class="card-overlay">
+              <div class="card-play"></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">SIC Notícias · 2026</div>
+            <h3 class="card-title">Tempestade Kristin</h3>
+            <p class="card-text">Durante a passagem da Tempestade Kristin, partilho a minha experiência como voluntário a apoiar populações afetadas e a responder às consequências imediatas do evento climático.</p>
+            <span class="card-link">Ver entrevista →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
