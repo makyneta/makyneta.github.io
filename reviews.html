@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Metadados -->
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Reviews | Makyneta by Tomás Mota</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Makyneta Unipessoal, Lda."/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/styles/geral.css">
+  <link rel="stylesheet" href="/assets/styles/reviews.css">
+
+  <!-- Scripts -->
+  <script src="/assets/scripts/script.js"></script>
+</head>
+  <div id="header"></div>
+  <body>
+    <main class="page-shell">
+      <section class="card" aria-labelledby="reviews-title">
+        <header class="card-header">
+          <p class="eyebrow"><span class="dot"></span> v1.0</p>
+          <h1 id="reviews-title">Feedback de clientes</h1>
+          <p class="lead">
+            Escreve o teu <i>feedback</i> sobre o projeto que foi realizado pelo Tomás.
+          </p>
+        </header>
+
+        <div class="card-body">
+          <p id="form-success" class="success-message" hidden aria-live="polite">
+            Obrigado! O teu feedback foi enviado com sucesso.
+          </p>
+
+          <form id="feedback-form" action="https://formspree.io/f/xvgbagja" method="POST">
+            <div class="grid">
+              <div class="field">
+                <label for="nome_feedback">Nome do cliente</label>
+                <input id="nome_feedback" name="nome_feedback" type="text" placeholder="O teu nome" required />
+              </div>
+
+              <div class="field">
+                <label for="projeto_feedback">Projeto / website realizado</label>
+                <input id="projeto_feedback" name="projeto_feedback" type="text" placeholder="Nome do projeto" required />
+              </div>
+
+              <div class="field">
+                <label for="avaliacao_feedback">Avaliação</label>
+                <div class="select-wrap">
+                  <select id="avaliacao_feedback" name="avaliacao_feedback" required>
+                    <option value="" selected disabled>Seleciona a tua avaliação</option>
+                    <option value="5">5 — excelente</option>
+                    <option value="4">4 — muito bom</option>
+                    <option value="3">3 — bom</option>
+                    <option value="2">2 — aceitável</option>
+                    <option value="1">1 — fraco</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email_feedback">Email <span class="label-meta">(opcional)</span></label>
+                <input id="email_feedback" name="email_feedback" type="email" placeholder="seu@email.com" />
+              </div>
+
+              <div class="field full">
+                <label for="mensagem_feedback">Mensagem de feedback</label>
+                <textarea id="mensagem_feedback" name="mensagem_feedback" placeholder="Partilha como foi a experiência, o que correu bem e o que poderia melhorar..." required></textarea>
+              </div>
+            </div>
+
+            <div class="actions">
+              <div class="helper">
+              </div>
+              <button class="submit-btn" type="submit">&gt; enviar feedback</button>
+            </div>
+
+            <div class="footer-note">
+              <strong>Nota:</strong> o teu email é opcional e serve apenas para resposta ou contacto em caso de necessidade.
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  <div id="footer-outcta"></div>
+
+    <script>
+      const form = document.getElementById('feedback-form');
+      const successMessage = document.getElementById('form-success');
+
+      if (form && successMessage) {
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalText = submitButton ? submitButton.textContent : '> enviar feedback';
+
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'A enviar...';
+          }
+
+          successMessage.classList.remove('error');
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: new FormData(form),
+              headers: {
+                Accept: 'application/json'
+              }
+            });
+
+            if (!response.ok) {
+              throw new Error('Falha ao enviar o feedback.');
+            }
+
+            form.reset();
+            form.style.display = 'none';
+            successMessage.hidden = false;
+            successMessage.textContent = 'Obrigado! O teu feedback foi enviado com sucesso.';
+          } catch (error) {
+            successMessage.hidden = false;
+            successMessage.textContent = 'Ocorreu um erro ao enviar o feedback. Tenta novamente.';
+            successMessage.classList.add('error');
+          } finally {
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = originalText;
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
