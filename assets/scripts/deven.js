@@ -14,7 +14,7 @@
 
       { id:16, title:"Victor Campos", type:"frontend",
         img:"/assets/images/projects/dev/victor-campos.webp",
-        desc:"Website para o influenciador, Victor Campos.",
+        desc:"Sell website for the influencer, Victor Campos.",
         demo:"https://makyneta.github.io/victor",
         info:"/en/info/dev/victor" },
 
