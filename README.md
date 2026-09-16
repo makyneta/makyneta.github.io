@@ -96,7 +96,7 @@ Makyneta Unipessoal, Lda.
 
 - Website: [makyneta.github.io](https://makyneta.github.io)
 - Email: [makyneta@tutamail.com](mailto:makyneta@tutamail.com)
-- Instagram: [@tomasmota.eu](https://instagram.com/tomasmota.eu)
+- Instagram: [@makynetadev](https://instagram.com/makynetadev)
 - GitHub: [@makyneta](https://github.com/makyneta)
 
 ---
