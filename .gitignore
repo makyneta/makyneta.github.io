@@ -29,6 +29,3 @@ build/
 *.tmp
 *.bak
 *.orig
-
-# Other
-archive/

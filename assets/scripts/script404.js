@@ -93,7 +93,7 @@ fetch("/assets/ui/header/404.html?v=" + v)
 
 //
 // Footer
-fetch("/assets/ui/footer/404.html?v=" + v)
+fetch("/assets/ui/footer/outcta.html?v=" + v)
   .then(response => response.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;

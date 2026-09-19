@@ -113,7 +113,7 @@ fetch("/assets/ui/footer/portuguese.html?v=" + v)
 
 //
 // Footer out cta
-fetch("/assets/ui/footer/portuguese-outcta.html?v=" + v)
+fetch("/assets/ui/footer/outcta.html?v=" + v)
   .then(response => response.text())
   .then(data => {
     document.getElementById("footer-outcta").innerHTML = data;

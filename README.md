@@ -55,22 +55,14 @@ makyneta.github.io/
 ├── 404.html                  # Página de erro
 ├── robots.txt
 ├── sitemap.xml
-├── assets/
-│   ├── styles/               # Folhas de estilo
-│   ├── scripts/              # Scripts JavaScript
-│   ├── images/               # Imagens e media
-│   │   ├── clients/          # Logos de clientes
-│   │   ├── profile/          # Foto de perfil e CV
-│   │   └── ui/               # Elementos de interface
-│   └── data/                 # Ficheiros JSON
-├── news/                     # Artigos do blog
+├── assets/                   # Styles, JS, ect.
 ├── archive/                  # Conteúdo arquivado
+├── en/                       # Versão em inglês
 ├── info/                     # Páginas informativas
 ├── legal/                    # Políticas legais
 │   ├── privacy-policy.html
 │   ├── cookies-policy.html
-│   └── terms-of-service.html
-└── client/                   # Área de cliente
+└── └── terms-of-service.html
 ```
 
 ## Deploy
