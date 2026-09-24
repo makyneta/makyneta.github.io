@@ -6,59 +6,59 @@
 
     /* ── Projects data ── */
     const projects = [
-      { id:17, title:"Mayday", type:"frontend",
-        img:"/assets/images/projects/dev/mayday.webp",
-        desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
-        demo:"https://makyneta.github.io/mayday",
-        info:"/en/info/dev/mayday" },
-
-      { id:16, title:"Victor Campos", type:"frontend",
+        { id:17, title:"Victor Campos", type:"frontend",
         img:"/assets/images/projects/dev/victor-campos.webp",
         desc:"Sell website for the influencer, Victor Campos.",
         demo:"https://makyneta.github.io/victor",
         info:"/en/info/dev/victor" },
 
-      { id:15, title:"Math For Teens", type:"fullstack",
+      { id:16, title:"Math For Teens", type:"fullstack",
         img:"/assets/images/projects/dev/math-for-teens.webp",
         desc:"Educational website for teaching mathematics to teenagers.",
         demo:"https://mathforteens.pt",
         info:"/en/info/dev/mathforteens" },
 
-      { id:14, title:"Nicholas Moraes", type:"frontend",
+      { id:15, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
         desc:"Professional and minimalist website for influencer and musician, Nicholas Moraes.",
         demo:"https://makyneta.github.io/m0rwes",
         info:"/en/info/dev/m0rwes" },
 
-      { id:13, title:"Libélula Teatro", type:"frontend",
+      { id:14, title:"Libélula Teatro", type:"frontend",
         img:"/assets/images/projects/dev/libelula-teatro.webp",
         desc:"Professional and minimalist website for the theater company Libélula Teatro.",
         demo:"https://libelulateatro.lovable.app",
         info:"" },
 
-      { id:12, title:"Mr. Devix", type:"frontend",
+      { id:11, title:"Mr. Devix", type:"frontend",
         img:"/assets/images/projects/dev/mr-devix.webp",
         desc:"Personal brand portfolio for a digital creator. Minimalist design with smooth scroll animations and a dark theme.",
         demo:"https://makyneta.github.io/mrdevix",
         info:"/en/info/dev/mrdevix" },
 
-      { id:11, title:"Clube Atletismo de Marinha Grande", type:"frontend",
+      { id:12, title:"Clube Atletismo de Marinha Grande", type:"fullstack",
         img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
         desc:"Institutional website for an athletics club featuring event calendars, athlete profiles, and news sections.",
         demo:"https://makyneta.github.io/catletismomg",
         info:"/en/info/dev/camg" },
 
-      { id:10, title:"Nicholas Simões", type:"frontend",
+      { id:11, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-simoes.webp",
         desc:"Personal website for a photographer and videographer, featuring a masonry gallery and lightbox viewer.",
         demo:"https://makyneta.github.io/nico",
         info:"/en/info/dev/nico" },
 
-      { id:9, title:"Juventude Socialista Marinha Grande", type:"frontend",
+      { id:10, title:"Juventude Socialista Marinha Grande", type:"frontend",
         img:"/assets/images/projects/dev/js-marinhagrande.webp",
         desc:"Political youth movement website with event promotion, manifesto pages, and membership sign-up forms.",
         demo:"https://makyneta.github.io/jsmarinhagrande",
         info:"" },
+
+      { id:9, title:"Mayday", type:"frontend",
+        img:"/assets/images/projects/dev/mayday.webp",
+        desc:"Event landing page with countdown timer, artist lineup, ticket purchase flow, and venue info.",
+        demo:"https://makyneta.github.io/mayday",
+        info:"/en/info/dev/mayday" },
 
       { id:8, title:"Amalias", type:"frontend",
         img:"/assets/images/projects/dev/amalias.webp",

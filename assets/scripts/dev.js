@@ -6,59 +6,59 @@
 
     /* ── Projects data ── */
     const projects = [
-      { id:17, title:"Mayday", type:"frontend",
-        img:"/assets/images/projects/dev/mayday.webp",
-        desc:"Landing page do evento com cronómetro de contagem decrescente, line-up, fluxo de compra de bilhetes e informações sobre o local.",
-        demo:"https://makyneta.github.io/mayday",
-        info:"/info/dev/mayday" },
-
-      { id:16, title:"Victor Campos", type:"frontend",
+      { id:17, title:"Victor Campos", type:"frontend",
         img:"/assets/images/projects/dev/victor-campos.webp",
         desc:"Website de vendas para o influenciador, Victor Campos.",
         demo:"https://makyneta.github.io/victor",
         info:"/info/dev/victor" },
 
-      { id:15, title:"Math For Teens", type:"fullstack",
+      { id:16, title:"Math For Teens", type:"fullstack",
         img:"/assets/images/projects/dev/math-for-teens.webp",
         desc:"Website educacional para ensinar matemática a adolescentes.",
         demo:"https://mathforteens.pt",
         info:"/info/dev/mathforteens" },
 
-      { id:14, title:"Nicholas Moraes", type:"frontend",
+      { id:15, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
         desc:"Website profissional e minimalista para o influenciador e músico, Nicholas Moraes.",
         demo:"https://makyneta.github.io/m0rwes",
         info:"/info/dev/m0rwes" },
 
-      { id:13, title:"Libélula Teatro", type:"frontend",
+      { id:14, title:"Libélula Teatro", type:"frontend",
         img:"/assets/images/projects/dev/libelula-teatro.webp",
         desc:"Website profissional e minimalista para a companhia de teatro Libélula Teatro.",
         demo:"https://libelulateatro.lovable.app",
         info:"" },
 
-      { id:12, title:"Mr. Devix", type:"frontend",
+      { id:13, title:"Mr. Devix", type:"frontend",
         img:"/assets/images/projects/dev/mr-devix.webp",
         desc:"Portfólio de marca pessoal para um criador de conteúdos digitais. Design minimalista com animações de scroll suave e tema escuro.",
         demo:"https://makyneta.github.io/mrdevix",
         info:"/info/dev/mrdevix" },
 
-      { id:11, title:"Clube Atletismo de Marinha Grande", type:"frontend",
+      { id:12, title:"Clube Atletismo de Marinha Grande", type:"fullstack",
         img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
         desc:"Website institucional para um clube de atletismo com calendário de eventos, perfis de atletas e seções de notícias.",
         demo:"https://makyneta.github.io/catletismomg",
         info:"/info/dev/camg" },
 
-      { id:10, title:"Nicholas Simões", type:"frontend",
+      { id:11, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-simoes.webp",
         desc:"Website pessoal para um fotógrafo e videógrafo, apresentando uma galeria de alvenaria e um visualizador de caixa de luz.",
         demo:"https://makyneta.github.io/nico",
         info:"/info/dev/nico" },
 
-      { id:9, title:"Juventude Socialista Marinha Grande", type:"frontend",
+      { id:10, title:"Juventude Socialista Marinha Grande", type:"frontend",
         img:"/assets/images/projects/dev/js-marinhagrande.webp",
         desc:"Website de movimento juvenil político com promoção de eventos, páginas de manifesto e formulários de inscrição de membros.",
         demo:"https://makyneta.github.io/jsmarinhagrande",
         info:"" },
+
+      { id:9, title:"Mayday", type:"frontend",
+        img:"/assets/images/projects/dev/mayday.webp",
+        desc:"Landing page do evento com cronómetro de contagem decrescente, line-up, fluxo de compra de bilhetes e informações sobre o local.",
+        demo:"https://makyneta.github.io/mayday",
+        info:"/info/dev/mayday" },
 
       { id:8, title:"Amalias", type:"frontend",
         img:"/assets/images/projects/dev/amalias.webp",

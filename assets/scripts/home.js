@@ -176,17 +176,17 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const VIEW_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`;
 
   const devData = [
-    { title:"MAYDAY", desc:"Website profissional para a banda músical, MAYDAY.", tags:["HTML","CSS","JS"],
-      img:"/assets/images/projects/dev/mayday.webp",
-      demo:"https://makyneta.github.io/mayday", info:"info/dev/mayday" },
+    { title:"Victor Campos", desc:"Website para o influenciador, Victor Campos.", tags:["HTML","CSS","JS"],
+      img:"/assets/images/projects/dev/victor-campos.webp",
+      demo:"https://makyneta.github.io/victor", info:"info/dev/victor" },
+
+    { title:"Nicholas Moraes", desc:"Website portfólio para o influenciador e músico, Nicholas Moraes.", tags:["HTML","CSS","JS"],
+      img:"/assets/images/projects/dev/nicholas-moraes.webp",
+      demo:"https://makyneta.github.io/m0rwes", info:"info/dev/m0rwes" },
 
     { title:"Clube Atletismo de Marinha Grande", desc:"Website para o Clube Atletismo de Marinha Grande.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
       demo:"https://www.catletismomg.pt", info:"info/dev/camg" },
-
-    { title:"Tiago Pedro", desc:"Website para o fotógrafo de casamentos, Tiago Pedro.", tags:["HTML","CSS","JS"],
-      img:"/assets/images/projects/dev/tiago-pedro.webp",
-      demo:"https://makyneta.github.io/tiagopedro", info:"info/dev/tiagopedro" },
   ];
 
   const photoData = [
@@ -205,11 +205,11 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   ];
 
   const designData = [
+    { title:"Dia do Estudante", cat:"Social",
+      img:"assets/images/projects/design/thumb/jsmg-tumg.webp" },
+
     { title:"Dia Internacional do Trabalhador", cat:"Social",
       img:"assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
-
-    { title:"Lecture Advertising Poster", cat:"Print",
-      img:"assets/images/projects/design/thumb/bullying-lecture.webp" },
 
     { title:"Francisco Ferreira", cat:"Social",
       img:"assets/images/projects/design/thumb/remax-fmf.webp" },
