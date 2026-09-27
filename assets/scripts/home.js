@@ -206,13 +206,13 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const designData = [
     { title:"Dia do Estudante", cat:"Social",
-      img:"assets/images/projects/design/thumb/jsmg-tumg.webp" },
+      img:"/assets/images/projects/design/thumb/jsmg-tumg.webp" },
 
     { title:"Dia Internacional do Trabalhador", cat:"Social",
-      img:"assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
+      img:"/assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
 
     { title:"Francisco Ferreira", cat:"Social",
-      img:"assets/images/projects/design/thumb/remax-fmf.webp" },
+      img:"/assets/images/projects/design/thumb/remax-fmf.webp" },
   ];
 
   const devGrid = document.getElementById('pf-grid-dev');

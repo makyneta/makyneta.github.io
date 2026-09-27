@@ -162,7 +162,7 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
   const designData = [
     { title:"Student Day", cat:"Social",
-      img:"assets/images/projects/design/thumb/jsmg-tumg.webp" },
+      img:"/assets/images/projects/design/thumb/jsmg-tumg.webp" },
 
     { title:"International Workers' Day", cat:"Social",
       img:"/assets/images/projects/design/thumb/jsmg-diatrabalhador.webp" },
