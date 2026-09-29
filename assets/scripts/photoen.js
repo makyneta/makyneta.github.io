@@ -2,7 +2,6 @@ const PROJECTS = [
   { id:20, title:"National Club Championship in Open Air",
     category:"sport", year:"2026", location:"Coimbra", desc:"",
     cover:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
-    info:"/en/info/photo/fpa-nacionalclubes",
     slug:"/fpa-nacionalclubes", photoCount:670 },
 
   { id:19, title:"Waiting Room by Libélula Teatro",

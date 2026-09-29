@@ -10,19 +10,19 @@
         img:"/assets/images/projects/dev/victor-campos.webp",
         desc:"Website de vendas para o influenciador, Victor Campos.",
         demo:"https://makyneta.github.io/victor",
-        info:"/info/dev/victor" },
+        info:"/dev/victor" },
 
       { id:16, title:"Math For Teens", type:"fullstack",
         img:"/assets/images/projects/dev/math-for-teens.webp",
         desc:"Website educacional para ensinar matemática a adolescentes.",
         demo:"https://mathforteens.pt",
-        info:"/info/dev/mathforteens" },
+        info:"/dev/mathforteens" },
 
       { id:15, title:"Nicholas Moraes", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-moraes.webp",
         desc:"Website profissional e minimalista para o influenciador e músico, Nicholas Moraes.",
         demo:"https://makyneta.github.io/m0rwes",
-        info:"/info/dev/m0rwes" },
+        info:"/dev/m0rwes" },
 
       { id:14, title:"Libélula Teatro", type:"frontend",
         img:"/assets/images/projects/dev/libelula-teatro.webp",
@@ -34,19 +34,19 @@
         img:"/assets/images/projects/dev/mr-devix.webp",
         desc:"Portfólio de marca pessoal para um criador de conteúdos digitais. Design minimalista com animações de scroll suave e tema escuro.",
         demo:"https://makyneta.github.io/mrdevix",
-        info:"/info/dev/mrdevix" },
+        info:"/dev/mrdevix" },
 
       { id:12, title:"Clube Atletismo de Marinha Grande", type:"fullstack",
         img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
         desc:"Website institucional para um clube de atletismo com calendário de eventos, perfis de atletas e seções de notícias.",
         demo:"https://makyneta.github.io/catletismomg",
-        info:"/info/dev/camg" },
+        info:"/dev/camg" },
 
       { id:11, title:"Nicholas Simões", type:"frontend",
         img:"/assets/images/projects/dev/nicholas-simoes.webp",
         desc:"Website pessoal para um fotógrafo e videógrafo, apresentando uma galeria de alvenaria e um visualizador de caixa de luz.",
         demo:"https://makyneta.github.io/nico",
-        info:"/info/dev/nico" },
+        info:"/dev/nico" },
 
       { id:10, title:"Juventude Socialista Marinha Grande", type:"frontend",
         img:"/assets/images/projects/dev/js-marinhagrande.webp",
@@ -58,7 +58,7 @@
         img:"/assets/images/projects/dev/mayday.webp",
         desc:"Landing page do evento com cronómetro de contagem decrescente, line-up, fluxo de compra de bilhetes e informações sobre o local.",
         demo:"https://makyneta.github.io/mayday",
-        info:"/info/dev/mayday" },
+        info:"/dev/mayday" },
 
       { id:8, title:"Amalias", type:"frontend",
         img:"/assets/images/projects/dev/amalias.webp",
@@ -100,13 +100,13 @@
         img:"/assets/images/projects/dev/ice-j.webp",
         desc:"Site promocional de música com faixas incorporadas, páginas de letras, loja de mercadorias e agenda de turnês.",
         demo:"https://makyneta.github.io/icejiloveyou",
-        info:"/info/dev/icej" },
+        info:"/dev/icej" },
 
       { id:1, title:"Tiago Pedro", type:"frontend",
         img:"/assets/images/projects/dev/tiago-pedro.webp",
         desc:"Website de currículo pessoal com linha do tempo de habilidades, portfólio de projetos e um currículo baixável em PDF.",
         demo:"https://makyneta.github.io/tiagopedro",
-        info:"/info/dev/tiagopedro" },
+        info:"/dev/tiagopedro" },
     ];
 
     /* ── Build cards ── */

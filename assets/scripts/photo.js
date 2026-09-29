@@ -2,7 +2,6 @@ const PROJECTS = [
   { id:20, title:"Nacional de Clubes ao Ar Livre",
     category:"sport", year:"2026", location:"Coimbra", desc:"",
     cover:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
-    info:"/info/photo/fpa-nacionalclubes",
     slug:"/fpa-nacionalclubes", photoCount:670 },
     
   { id:19, title:"Sala de Espera by Libélula Teatro",

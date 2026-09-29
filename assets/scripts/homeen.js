@@ -134,21 +134,20 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   const devData = [
     { title:"Victor Campos", desc:"Website for the influencer, Victor Campos.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/victor-campos.webp",
-      demo:"https://makyneta.github.io/victor", info:"info/dev/victor" },
+      demo:"https://makyneta.github.io/victor", info:"/en/dev/victor" },
 
     { title:"Nicholas Moraes", desc:"Portfolio website for the influencer and musician, Nicholas Moraes.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/nicholas-moraes.webp",
-      demo:"https://makyneta.github.io/m0rwes", info:"info/dev/m0rwes" },
+      demo:"https://makyneta.github.io/m0rwes", info:"/en/dev/m0rwes" },
 
     { title:"Clube Atletismo de Marinha Grande", desc:"Website for the Marinha Grande Athletics Club.", tags:["HTML","CSS","JS"],
       img:"/assets/images/projects/dev/clube-atletismo-de-marinha-grande.webp",
-      demo:"https://www.catletismomg.pt", info:"info/dev/camg" },
+      demo:"https://www.catletismomg.pt", info:"/en/dev/camg" },
   ];
 
   const photoData = [
     { title:"National Club Championship in Open Air", cat:"Sport",
       img:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
-      info:"info/photo/fpa-nacionalclubes",
       view:"/fpa-nacionalclubes" },
 
     { title:"50th Anniversary of the Constitution of the Portuguese Republic", cat:"Event",
