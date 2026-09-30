@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#101513">
+	<meta name="description" content="Planeamento das avaliações do 1.º ano do CTeSP em Programação de Sistemas de Informação.">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Avaliações | CTeSP PSI · ULO</title>
+	<link rel="stylesheet" href="/assets/styles/geral.css">
+	<link rel="stylesheet" href="/assets/styles/uloevaluations.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="/assets/scripts/script.js" defer></script>
+	<script src="/assets/scripts/uloevaluations.js" defer></script>
+</head>
+<body>
+	<div id="progress"></div>
+	<div class="noise"></div>
+	<div id="header"></div>
+
+	<main class="planner" data-theme="dark">
+		<section class="planner-topline" aria-label="Identificação do curso">
+			<div class="school-brand">
+				<svg class="school-logo" viewBox="0 0 1208.95 302.24" role="img" aria-labelledby="school-logo-title">
+					<title id="school-logo-title">Logótipo da Universidade de Leiria e Oeste</title>
+					<path d="M604.48 302.24V151.12H453.36V0H176.31v100.75h-50.37V0H0v151.12c0 83.46 67.66 151.12 151.12 151.12s151.12-67.66 151.12-151.12v151.12h302.24z" />
+					<circle cx="755.6" cy="151.12" r="50.37" />
+					<circle cx="1057.83" cy="151.12" r="151.12" />
+				</svg>
+				<div class="school-copy">
+					<strong>Universidade de Leiria e Oeste</strong>
+					<span>CTeSP · Programação de Sistemas de Informação</span>
+				</div>
+			</div>
+			<!-- <div class="heading-actions">
+				<button class="icon-button theme-toggle" type="button" aria-label="Mudar para tema claro" title="Mudar tema">
+					<span class="theme-icon" aria-hidden="true">☼</span>
+				</button>
+				<button class="action-button print-button" type="button" title="Imprimir avaliações"><span aria-hidden="true">⤓</span> Imprimir</button>
+			</div> -->
+		</section>
+
+		<header class="planner-heading">
+			<div>
+				<p class="eyebrow"><span></span> 1.º ano · Ano letivo 2026/27</p>
+				<h1>Calendário de <span>avaliações</span></h1>
+				<p class="subtitle">Consulta das datas, regimes e conteúdos de avaliação da turma.</p>
+			</div>
+		</header>
+
+		<section class="sheet" aria-label="Avaliações da turma">
+			<div class="sheet-toolbar">
+				<div class="sheet-title"><span class="sheet-mark" aria-hidden="true">01</span><span>Calendário académico</span></div>
+				<span class="entry-count">0 avaliações</span>
+			</div>
+			<p class="example-note" hidden>Dados demonstrativos: datas, disciplinas e conteúdos não correspondem ao calendário oficial.</p>
+			<div class="table-wrap">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col" class="date-column">Data</th>
+							<th scope="col" class="subject-column">Disciplina</th>
+							<th scope="col" class="regime-column">Regime</th>
+						</tr>
+					</thead>
+					<tbody class="assessment-rows"></tbody>
+				</table>
+			</div>
+			<!-- <div class="empty-state" hidden>
+				<span class="empty-mark" aria-hidden="true">—</span>
+				<p>Sem avaliações publicadas</p>
+				<span>As datas e os conteúdos serão apresentados aqui.</span>
+			</div> -->
+			<footer class="sheet-footer">
+				<span><span class="status-dot"></span> Informação da turma</span>
+				<span id="updated-label">Atualizado em 30.09.2026</span>
+			</footer>
+		</section>
+		<p class="page-note"><span aria-hidden="true">&lt;/&gt;</span> Planeamento académico · PSI</p>
+	</main>
+
+	<div id="footer"></div>
+</body>
+</html>
