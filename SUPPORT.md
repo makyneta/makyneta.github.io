@@ -4,9 +4,8 @@
 
 | Canal | Detalhes |
 |-------|----------|
-| **Email** | [makyneta@tutamail.com](mailto:makyneta@tutamail.com) |
-| **Instagram** | [@tomasmota.eu](https://instagram.com/tomasmota.eu) |
-| **Website** | [makyneta.github.io](https://makyneta.github.io) |
+| **Email** | [tomas@makyneta.dev](mailto:tomas@makyneta.dev) |
+| **Website** | [www.makyneta.dev](https://www.makyneta.dev) |
 
 ## Horário de Atendimento
 

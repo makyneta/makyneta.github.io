@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://makyneta.github.io">
-    <img src="https://img.shields.io/badge/Site-makyneta.github.io-080808?style=for-the-badge&logo=github&logoColor=white" alt="Website"/>
+  <a href="https://www.makyneta.dev">
+    <img src="https://img.shields.io/badge/Site-www.makyneta.dev-080808?style=for-the-badge&logo=github&logoColor=white" alt="Website"/>
   </a>
   <img src="https://img.shields.io/badge/Licença-Restrita-cc0000?style=for-the-badge" alt="License"/>
 </p>
@@ -47,10 +47,8 @@ makyneta.github.io/
 ├── index.html                # Página principal
 ├── sobre.html                # Sobre / Portfolio
 ├── contacto.html             # Contacto
-├── design.html               # Portfolio de Design
 ├── dev.html                  # Portfolio de Desenvolvimento
 ├── photo.html                # Portfolio de Fotografia
-├── video.html                # Portfolio de Vídeo
 ├── feedback.html             # Feedback
 ├── 404.html                  # Página de erro
 ├── robots.txt
@@ -58,7 +56,6 @@ makyneta.github.io/
 ├── assets/                   # Styles, JS, ect.
 ├── archive/                  # Conteúdo arquivado
 ├── en/                       # Versão em inglês
-├── info/                     # Páginas informativas
 ├── legal/                    # Políticas legais
 │   ├── privacy-policy.html
 │   ├── cookies-policy.html
@@ -86,8 +83,8 @@ Consulte o ficheiro [LICENSE](LICENSE) para detalhes completos.
 **Tomás Mota**
 Makyneta Unipessoal, Lda.
 
-- Website: [makyneta.github.io](https://makyneta.github.io)
-- Email: [makyneta@tutamail.com](mailto:makyneta@tutamail.com)
+- Website: [www.makyneta.dev](https://www.makyneta.dev)
+- Email: [tomas@makyneta.dev](mailto:tomas@makyneta.dev)
 - Instagram: [@makynetadev](https://instagram.com/makynetadev)
 - GitHub: [@makyneta](https://github.com/makyneta)
 

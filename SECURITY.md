@@ -3,7 +3,7 @@
 ## Reporting Vulnerabilities
 
 Se descobrires uma vulnerabilidade de segurança neste site, por favor **não** a tornes pública. Em vez disso, contacta diretamente:
-- **Email**: [makyneta@tutamail.com](mailto:makyneta@tutamail.com)
+- **Email**: [tomas@makyneta.dev](mailto:tomas@makyneta.dev)
 
 Inclui na tua mensagem:
 - Descrição da vulnerabilidade
@@ -18,7 +18,7 @@ Comprometo-me a responder dentro de **48 horas**.
 ## Scope
 
 Esta política aplica-se a:
-- O website [makyneta.github.io](https://makyneta.github.io)
+- O website [www.makyneta.dev](https://www.makyneta.dev)
 - Todo o código fonte neste repositório
 - Assets e configurações relacionadas
 
