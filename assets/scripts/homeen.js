@@ -146,6 +146,10 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   ];
 
   const photoData = [
+    { title:"Volta aos 7 - Vidrala", cat:"Sport",
+      img:"/assets/images/projects/photo/camg-voltaaos7.webp",
+      view:"/camg-voltaaos7" },
+
     { title:"National Club Championship in Open Air", cat:"Sport",
       img:"/assets/images/projects/photo/fpa-nacionalclubes.webp",
       view:"/fpa-nacionalclubes" },
@@ -153,10 +157,6 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
     { title:"50th Anniversary of the Constitution of the Portuguese Republic", cat:"Event",
       img:"/assets/images/projects/photo/cmmg-aniversarioconstituicao.webp",
       view:"/cmmg-aniversarioconstituicao" },
-
-    { title:"30th Fair Play Calazans", cat:"Sport",
-      img:"/assets/images/projects/photo/eseacd-fairplay.webp",
-      view:"/eseacd-fairplay" },
   ];
 
   const designData = [
