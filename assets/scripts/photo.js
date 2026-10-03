@@ -1,4 +1,9 @@
 const PROJECTS = [
+  { id:21, title:"Volta aos 7 - Vidrala",
+    category:"sport", year:"2026", location:"Marinha Grande", desc:"",
+    cover:"/assets/images/projects/photo/camg-voltaaos7.webp",
+    slug:"/camg-voltaaos7", photoCount:143 },
+
   { id:20, title:"Nacional de Clubes ao Ar Livre",
     category:"sport", year:"2026", location:"Coimbra", desc:"",
     cover:"/assets/images/projects/photo/fpa-nacionalclubes.webp",

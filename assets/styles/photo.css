@@ -89,8 +89,8 @@ body::after {
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(to right, rgba(8,9,10,.92) 0%, rgba(8,9,10,.32) 55%, transparent 100%),
-    linear-gradient(to top, rgba(8,9,10,.98) 0%, rgba(8,9,10,.15) 38%, transparent 60%);
+    linear-gradient(to right, rgba(8,9,10,.92) 0%, rgba(8,9,10,.32) 5%, transparent 80%),
+    linear-gradient(to top, rgba(8,9,10,.98) 0%, rgba(8,9,10,.15) 8%, transparent 40%);
 }
 
 /* EXIF corner tag — dev + camera metadata fused */
