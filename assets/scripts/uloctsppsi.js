@@ -53,10 +53,8 @@
 
 	document.addEventListener('click', (event) => {
 		const provisionalLink = event.target.closest('a[data-provisional]');
-		if (!provisionalLink) return;
+		if (!provisionalLink || !toast) return;
 
-		event.preventDefault();
-		if (!toast) return;
 		toast.hidden = false;
 		window.clearTimeout(toastTimeout);
 		toastTimeout = window.setTimeout(() => {
